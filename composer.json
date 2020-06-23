@@ -1,0 +1,15 @@
+{
+  "name": "osu-wams/madrone",
+  "description": "Drupal Theme for OSU",
+  "minimum-stability": "stable",
+  "license": "GPL-2.0-or-later",
+  "type": "drupal-custom-theme",
+  "authors": [
+    {
+      "name": "Matthew Brabham",
+      "email": "matthew.brabham@oregonstate.edu"
+    }
+  ],
+  "require": {
+  }
+}
