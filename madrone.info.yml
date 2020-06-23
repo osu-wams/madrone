@@ -1,0 +1,18 @@
+name: Madrone
+type: theme
+description: Oregon State Drupal theme for the future.
+core_version_requirement: ^8 || ^9
+base theme: stable
+regions:
+  header: Header
+  help: Help
+  primary_menu: Main Menu
+  breadcrumb: Breadcrumb
+  page_top: Page Top
+  content: Content
+  right_sidebar: Right Sidebar
+  page_bottom: Page Bottom
+  footer: Footer
+
+libraries:
+  - madrone/global-css

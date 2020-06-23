@@ -1,0 +1,8 @@
+global-css:
+  version: VERSION
+  css:
+    theme:
+      css/base.css: {}
+      css/elements.css: {}
+      css/layout.css: {}
+      css/print.css: { media: print }
