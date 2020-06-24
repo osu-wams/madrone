@@ -6,6 +6,7 @@ base theme: stable
 regions:
   header: Header
   help: Help
+  highlighted: Highlighted
   primary_menu: Main Menu
   breadcrumb: Breadcrumb
   page_top: Page Top

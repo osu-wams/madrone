@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_preprocess().
+ */
+function madrone_preprocess(&$variables, $hook) {
+  try {
+    $variables['is_front'] = Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $exception) {
+    $variables['is_front'] = FALSE;
+  }
+  $variables['#cache']['contexts'][] = 'url.path.is_front';
+}

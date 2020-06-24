@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  drupal:
+    image: library/drupal:8.9-apache
+    ports:
+      - 80:80
+    volumes:
+      - drupal-files:/var/www/html/sites/default/files
+      - ./:/var/www/html/themes/madrone
+    restart: unless-stopped
+  database:
+    image: library/mariadb:10.4
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+volumes:
+  drupal-files
