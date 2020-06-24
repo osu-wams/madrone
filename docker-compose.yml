@@ -10,6 +10,8 @@ services:
     restart: unless-stopped
   database:
     image: library/mariadb:10.4
+    volumes:
+      - drupal-db:/var/lib/mysql/drupal
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: drupal
@@ -17,3 +19,4 @@ services:
       MYSQL_PASSWORD: drupal
 volumes:
   drupal-files:
+  drupal-db:
