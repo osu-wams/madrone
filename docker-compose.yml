@@ -16,4 +16,4 @@ services:
       MYSQL_USER: drupal
       MYSQL_PASSWORD: drupal
 volumes:
-  drupal-files
+  drupal-files:
