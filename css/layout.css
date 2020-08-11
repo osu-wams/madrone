@@ -4,14 +4,26 @@
 }
 
 .region-header {
-  display: inline-flex;
+  flex: 0 1 1400px;
+}
+
+.region-header-wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 0 1 1400px;
 }
 
 #block-madrone-branding {
   display: flex;
+}
+
+.site-name-link {
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.site-slogan {
+  align-self: flex-end;
 }
 
 .main-content {
@@ -39,6 +51,7 @@
   flex: 0 1 1400px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .region-primary-menu > .region-primary-menu-wrapper #block-sitebranding {
@@ -52,11 +65,11 @@
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-content: space-around;
+  gap: 2rem;
 }
 
 .region-primary-menu nav ul.menu li.menu-item {
   list-style: none;
-  margin: 0 1rem;
 }
 
 .region-primary-menu nav ul.menu li.menu-item a {
@@ -64,15 +77,28 @@
   color: #7B746F;
 }
 
+.region-primary-menu nav ul.menu li.menu-item a.is-active {
+  font-weight: bolder;
+}
+
 .region-highlighted {
   display: flex;
   justify-content: center;
 }
 
-.region-highlighted.region-highlighted-wrapper {
+.region-highlighted-wrapper {
   flex: 0 1 1400px;
   display: flex;
   flex-direction: column;
+}
+
+.region-breadcrumb {
+  display: flex;
+  justify-content: center;
+}
+
+.region-breadcrumb-wrapper {
+  flex: 0 1 1400px;
 }
 
 .primary-tabs {
@@ -106,7 +132,34 @@ li.local-task-item > a.is-active {
   display: flex;
   justify-content: center;
 }
+
 .region-footer-wrapper {
   flex: 0 1 1400px;
   display: inline-block;
+}
+
+.breadcrumb > ol {
+  list-style: none;
+  display: inline-flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.breadcrumb > ol > li {
+  margin: 0 0.5rem;
+}
+
+.breadcrumb > ol > li:nth-child(n+2)::before {
+  display: inline-block;
+  position: relative;
+  content: '\203A';
+  color: white;
+  right: 0.9rem;
+  font-size: 2rem;
+  line-height: 0.4rem;
+  top: 0.22rem;
+}
+
+.breadcrumb > ol > li > a {
+  text-decoration: none;
 }

@@ -22,5 +22,7 @@
   {% if site_name %}
     <a {{ attributes.addClass('site-name-link') }} href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
   {% endif %}
-  {{ site_slogan }}
+  <div {{ attributes.removeClass('site-name-link').addClass('site-slogan') }}>
+    {{ site_slogan }}
+  </div>
 {% endblock %}

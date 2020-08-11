@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   box-sizing: border-box;
   background-color: #fff;
@@ -33,4 +36,11 @@ main {
 
 .region-highlighted {
   background-color: #E5E5E5;
+}
+
+.breadcrumb > ol{
+  background-color: #D73F09;
+}
+.breadcrumb > ol > li > a {
+  color: white;
 }
