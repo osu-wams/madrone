@@ -5,7 +5,6 @@ services:
     ports:
       - 80:80
     volumes:
-      - drupal-files:/var/www/html/sites/default/files
       - ./:/var/www/html/themes/madrone
     restart: unless-stopped
   database:
