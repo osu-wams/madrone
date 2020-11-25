@@ -49,16 +49,15 @@
     </header>
 
     {{ page.primary_menu }}
-    {{ page.secondary_menu }}
-
-    {{ page.breadcrumb }}
 
     {{ page.highlighted }}
 
     {{ page.help }}
 
+    {{ page.breadcrumb }}
+
     <main {{ attributes.addClass('main-content').removeClass('site-header') }} role="main">
-        <div {{ attributes.addClass('content-wrapper') }}>
+        <div {{ attributes.addClass('main-content-wrapper') }}>
             <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
             <div class="layout-content">

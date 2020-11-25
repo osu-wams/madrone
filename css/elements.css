@@ -1,0 +1,91 @@
+/**
+Heading levels
+ */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+/**
+Colors
+ */
+h1,
+h2,
+h4,
+h6 {
+  color: var(--beaver-orange);
+}
+
+h3,
+h5 {
+  color: var(--paddletail-black);
+}
+
+/**
+Font types
+ */
+h1,
+h2,
+h3 {
+  font-family: 'Stratum2WebBold', sans-serif;;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 2.45rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+
+input[type="search"] {
+  border-radius: 8px;
+  border: 1px solid rgb(183, 177, 175);
+  color: var(--font-color);
+  background-color: var(--bucktooth-white);
+  padding: 5px;
+  font-size: 16px;
+}
+
+a {
+  color: var(--paddletail-black);
+  text-decoration-color: var(--beaver-orange);
+  /* Only in FF */
+  text-decoration-thickness: .125rem;
+  text-underline-offset: .2rem;
+}
+
+ul {
+  list-style: initial;
+  color: var(--beaver-orange);
+}

@@ -1,13 +1,25 @@
+@font-face {
+  font-family: 'Stratum2WebBold';
+  src: url("../fonts/Stratum2WebBold.woff2") format("woff2"), url("../fonts/Stratum2WebBold.woff") format("woff");
+}
+
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --beaver-orange: #d73f09;
+  --paddletail-black: #000;
+  --bucktooth-white: #fff;
+  --font-color: #423E3C;
+}
+
 body {
-  box-sizing: border-box;
-  background-color: #fff;
+  color: var(--font-color);
+  background-color: var(--bucktooth-white);
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  color: #423E3C;
 }
 
 header {
@@ -20,27 +32,22 @@ header.site-header img {
 }
 
 a.site-name-link {
-  color: #D73F09;
+  color: var(--beaver-orange);
   text-decoration: none;
   font-size: 1.6rem;
 }
 
-h1 {
-  color: #D73F09;
-  text-transform: uppercase;
-}
-
-main {
-  background-color: #E5E5E5;
-}
-
+main,
+.region-help,
+.region-breadcrumb,
 .region-highlighted {
   background-color: #E5E5E5;
 }
 
-.breadcrumb > ol{
-  background-color: #D73F09;
+.breadcrumb ol {
+  background-color: var(--beaver-orange);
 }
-.breadcrumb > ol > li > a {
-  color: white;
+
+.breadcrumb a {
+  color: var(--bucktooth-white);
 }
