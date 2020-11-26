@@ -1,0 +1,10 @@
+name: Madrone
+description: OSU Theme of the future
+core: 8.x
+core_version_requirement: ^8 || ^9
+type: theme
+base theme: stable
+libraries:
+  - madrone/fonts
+  - madrone/global-styling
+
