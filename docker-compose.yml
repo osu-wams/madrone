@@ -2,14 +2,20 @@ version: '3.7'
 
 services:
   drupal:
-    image: library/drupal:8.9-apache
+    image: docker.io/osuwams/drupal:8-apache-dev
+    environment:
+      - DRUPAL_DBHOST=database
+      - DRUPAL_DBUSER=drupal
+      - DRUPAL_DBPASS=drupal
+      - DRUPAL_DBNAME=drupal
+      - DRUPAL_THEME_DEVEL=true
     ports:
       - 8080:80
     volumes:
       - ./:/var/www/html/themes/custom/madrone
     restart: unless-stopped
   database:
-    image: library/mariadb:10.4
+    image: docker.io/library/mariadb:10.4
     volumes:
       - drupal-db:/var/lib/mysql/drupal
     environment:
