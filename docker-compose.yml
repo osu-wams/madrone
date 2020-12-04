@@ -6,7 +6,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./:/var/www/html/themes/madrone
+      - ./:/var/www/html/themes/custom/madrone
     restart: unless-stopped
   database:
     image: library/mariadb:10.4
