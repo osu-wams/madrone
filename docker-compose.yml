@@ -12,7 +12,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./:/var/www/html/themes/custom/madrone
+      - ./:/var/www/html/docroot/themes/custom/madrone
     restart: unless-stopped
   database:
     image: docker.io/library/mariadb:10.4
