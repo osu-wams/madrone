@@ -14,7 +14,93 @@
  */
 #}
 {% block content %}
+    <div id="osu-menu"
+         class="tw-absolute tw-top-24 tw-h-screen tw-overflow-y-hidden tw-z-10 tw-bg-neutral-100 tw-w-81.5 tw-px-6">
+        <div class="tw-mt-4">
+            <a class="tw-text-2xl" href="https://oregonstate.edu"><i class="fa fa-home tw-text-osuorange tw-pr-2"
+                                                                     aria-hidden="true"></i>OSU Homepage</a>
+        </div>
+        <div class="">
+            <ul class="tw-border-b-2 tw-border-neutral-300 tw-my-2 tw-py-2">
+                <li>
+                    <span class="tw-font-bold tw-text-neutral-700">Tools and Services</span>
+                    <ul class="tw-text-2xl">
+                        <li>
+                            <a href="https://my.oregonstate.edu"><img
+                                        class="tw-w-8 tw-inline-block tw-mr-2"
+                                        src="{{ base_path }}{{ active_theme_path() }}/assets/myosu-profile.png"
+                                        aria-hidden="true" alt=""/><span class="tw-text-base">MyOregonState</span></a>
+                        </li>
+                        <li>
+                            <a href="https://canvas.oregonstate.edu"><img
+                                        class="tw-w-8 tw-inline-block tw-mr-2"
+                                        src="{{ base_path }}{{ active_theme_path() }}/assets/canvas-logo.png" alt=""
+                                        aria-hidden="true"/><span class="tw-text-base">Canvas</span></a>
+                        </li>
+                        <li>
+                            <a href="http://is.oregonstate.edu/google"><img
+                                        class="tw-w-8 tw-inline-block tw-mr-2"
+                                        src="{{ base_path }}{{ active_theme_path() }}/assets/thegoogs.png" alt=""
+                                        aria-hidden="true"/><span class="tw-text-base">G Suite</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tw-border-b-2 tw-border-neutral-300 tw-my-2 tw-py-2">
+                <li>
+                    <span class="tw-font-bold tw-text-neutral-700">Audiences</span>
+                    <ul>
+                        <li>
+                            <a href="https://oregonstate.edu/future">Future Students - Apply</a>
+                        </li>
+                        <li>
+                            <a href="https://oregonstate.edu/current">Current Students</a>
+                        </li>
+                        <li>
+                            <a href="http://ecampus.oregonstate.edu/">Online Students</a>
+                        </li>
+                        <li>
+                            <a href="https://oregonstate.edu/faculty">Faculty and Staff</a>
+                        </li>
+                        <li>
+                            <a href="http://www.osualum.com/s/359/16/home.aspx?gid=1001&pgid=312">Alumni</a>
+                        </li>
+                        <li>
+                            <a href="https://www.osufoundation.org/s/359/foundation/start.aspx?sid=359&gid=34&pgid=61">Donors
+                                and Friends</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="tw-font-bold tw-text-neutral-700">Our Locations</span>
+                    <ul>
+                        <li>
+                            <a href="https://admissions.oregonstate.edu/corvallis">Corvallis</a>
+                        </li>
+                        <li>
+                            <a href="https://osucascades.edu/">OSU-Cascades</a>
+                        </li>
+                        <li>
+                            <a href="https://portland.oregonstate.edu/">OSU in Portland</a>
+                        </li>
+                        <li>
+                            <a href="https://hmsc.oregonstate.edu/">Hatfield Marine Science Center</a>
+                        </li>
+                        <li>
+                            <a href="https://extension.oregonstate.edu/">Extension Service</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="tw-flex tw-items-center">
+        <div class="tw-mx-4">
+            <img class="tw-max-w-none tw-h-4 tw-w-4"
+                 src="{{ base_path }}{{ active_theme_path() }}/assets/bento-icon.svg" alt=""/>
+        </div>
         {% if site_logo %}
             <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home"
                class="site-logo tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex ">

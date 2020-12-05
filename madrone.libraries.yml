@@ -10,3 +10,4 @@ fonts:
     theme:
       '//fonts.googleapis.com/css?family=Open Sans:300,400,500,600,700': { type: external }
       '//cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css': { type: external }
+      '//s3.amazonaws.com/icomoon.io/155267/OregonStateBrandIcons/style.css?hsbwya': { type: external }
