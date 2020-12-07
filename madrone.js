@@ -2,6 +2,7 @@ let megaMenuParent = document.getElementsByClassName('mega-menu-parent');
 
 for (i = 0; i < megaMenuParent.length; i++) {
   megaMenuParent[i].addEventListener('click', (e) => {
+    let headerHeight = document.getElementsByTagName("header")[0].getBoundingClientRect().bottom;
     // If the parent is active ignore the class swap.
     if (!e.target.parentElement.classList.contains('is-active')) {
       if (e.target.parentElement.classList.contains('tw-font-normal')) {
@@ -17,6 +18,7 @@ for (i = 0; i < megaMenuParent.length; i++) {
       if (childMenuItem[0].classList.contains('lg-tw-flex')) {
         childMenuItem[0].classList.remove('lg-tw-flex');
       } else {
+        childMenuItem[0].style.top = (headerHeight + 5) / 16 + 'rem';
         childMenuItem[0].classList.add('lg-tw-flex');
       }
     }
