@@ -42,7 +42,7 @@ We call a macro which calls itself to render the full tree.
                 item.in_active_trail ? 'tw-text-osuorange tw-font-bold hover-tw-text-osuorange' : 'tw-font-normal tw-text-neutral-550 hover-tw-text-neutral-700',
             ] %}
             <li{{ item.attributes.addCLass(liClasses) }}>
-                {{ link(item.title, item.url) }}
+                {{ link(item.title, item.url, item.attributes.addClass('tw-no-underline')) }}
                 {% if item.below %}
                     {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
                 {% endif %}
