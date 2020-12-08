@@ -619,10 +619,35 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 1.875rem;
+  font-family: Stratum2WebBold, sans-serif;
+  --text-opacity: 1;
+  color: #d73f09;
+  color: rgba(215, 63, 9, var(--text-opacity));
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: Stratum2WebBold, sans-serif;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  text-transform: uppercase;
+}
+
 body {
   --bg-opacity: 1;
   background-color: #f7f5f5;
-  background-color: rgba(247, 245, 245, var(--bg-opacity))
+  background-color: rgba(247, 245, 245, var(--bg-opacity));
+}
+
+a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #d73f09;
+          text-decoration-color: #d73f09;
+  text-decoration-thickness: .125rem;
 }
 
 /**
@@ -20741,6 +20766,10 @@ input {
   width: 100vw;
 }
 
+.tw-w-81\.2 {
+  width: 21.2rem;
+}
+
 .tw-w-81\.5 {
   width: 21.5rem;
 }
@@ -23603,6 +23632,66 @@ input {
   transition-property: transform;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .motion-safe-tw-transition-none {
+    transition-property: none;
+  }
+
+  .motion-safe-tw-transition-all {
+    transition-property: all;
+  }
+
+  .motion-safe-tw-transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  }
+
+  .motion-safe-tw-transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+  }
+
+  .motion-safe-tw-transition-opacity {
+    transition-property: opacity;
+  }
+
+  .motion-safe-tw-transition-shadow {
+    transition-property: box-shadow;
+  }
+
+  .motion-safe-tw-transition-transform {
+    transition-property: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduce-tw-transition-none {
+    transition-property: none;
+  }
+
+  .motion-reduce-tw-transition-all {
+    transition-property: all;
+  }
+
+  .motion-reduce-tw-transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  }
+
+  .motion-reduce-tw-transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+  }
+
+  .motion-reduce-tw-transition-opacity {
+    transition-property: opacity;
+  }
+
+  .motion-reduce-tw-transition-shadow {
+    transition-property: box-shadow;
+  }
+
+  .motion-reduce-tw-transition-transform {
+    transition-property: transform;
+  }
+}
+
 .tw-ease-linear {
   transition-timing-function: linear;
 }
@@ -23772,6 +23861,15 @@ input {
 .tw-animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.tw-underline-osuorange {
+  -webkit-text-decoration-color: #d73f09;
+          text-decoration-color: #d73f09;
+}
+
+.tw-underline-thin {
+  text-decoration-thickness: .125rem;
 }
 
 /**
@@ -43854,6 +43952,10 @@ input {
     width: 100vw;
   }
 
+  .sm-tw-w-81\.2 {
+    width: 21.2rem;
+  }
+
   .sm-tw-w-81\.5 {
     width: 21.5rem;
   }
@@ -46714,6 +46816,66 @@ input {
 
   .sm-tw-transition-transform {
     transition-property: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sm-motion-safe-tw-transition-none {
+      transition-property: none;
+    }
+
+    .sm-motion-safe-tw-transition-all {
+      transition-property: all;
+    }
+
+    .sm-motion-safe-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .sm-motion-safe-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .sm-motion-safe-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .sm-motion-safe-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .sm-motion-safe-tw-transition-transform {
+      transition-property: transform;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sm-motion-reduce-tw-transition-none {
+      transition-property: none;
+    }
+
+    .sm-motion-reduce-tw-transition-all {
+      transition-property: all;
+    }
+
+    .sm-motion-reduce-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .sm-motion-reduce-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .sm-motion-reduce-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .sm-motion-reduce-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .sm-motion-reduce-tw-transition-transform {
+      transition-property: transform;
+    }
   }
 
   .sm-tw-ease-linear {
@@ -66887,6 +67049,10 @@ input {
     width: 100vw;
   }
 
+  .md-tw-w-81\.2 {
+    width: 21.2rem;
+  }
+
   .md-tw-w-81\.5 {
     width: 21.5rem;
   }
@@ -69747,6 +69913,66 @@ input {
 
   .md-tw-transition-transform {
     transition-property: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .md-motion-safe-tw-transition-none {
+      transition-property: none;
+    }
+
+    .md-motion-safe-tw-transition-all {
+      transition-property: all;
+    }
+
+    .md-motion-safe-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .md-motion-safe-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .md-motion-safe-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .md-motion-safe-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .md-motion-safe-tw-transition-transform {
+      transition-property: transform;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .md-motion-reduce-tw-transition-none {
+      transition-property: none;
+    }
+
+    .md-motion-reduce-tw-transition-all {
+      transition-property: all;
+    }
+
+    .md-motion-reduce-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .md-motion-reduce-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .md-motion-reduce-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .md-motion-reduce-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .md-motion-reduce-tw-transition-transform {
+      transition-property: transform;
+    }
   }
 
   .md-tw-ease-linear {
@@ -89920,6 +90146,10 @@ input {
     width: 100vw;
   }
 
+  .lg-tw-w-81\.2 {
+    width: 21.2rem;
+  }
+
   .lg-tw-w-81\.5 {
     width: 21.5rem;
   }
@@ -92780,6 +93010,66 @@ input {
 
   .lg-tw-transition-transform {
     transition-property: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lg-motion-safe-tw-transition-none {
+      transition-property: none;
+    }
+
+    .lg-motion-safe-tw-transition-all {
+      transition-property: all;
+    }
+
+    .lg-motion-safe-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .lg-motion-safe-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .lg-motion-safe-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .lg-motion-safe-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .lg-motion-safe-tw-transition-transform {
+      transition-property: transform;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lg-motion-reduce-tw-transition-none {
+      transition-property: none;
+    }
+
+    .lg-motion-reduce-tw-transition-all {
+      transition-property: all;
+    }
+
+    .lg-motion-reduce-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .lg-motion-reduce-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .lg-motion-reduce-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .lg-motion-reduce-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .lg-motion-reduce-tw-transition-transform {
+      transition-property: transform;
+    }
   }
 
   .lg-tw-ease-linear {
@@ -112953,6 +113243,10 @@ input {
     width: 100vw;
   }
 
+  .xl-tw-w-81\.2 {
+    width: 21.2rem;
+  }
+
   .xl-tw-w-81\.5 {
     width: 21.5rem;
   }
@@ -115813,6 +116107,66 @@ input {
 
   .xl-tw-transition-transform {
     transition-property: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .xl-motion-safe-tw-transition-none {
+      transition-property: none;
+    }
+
+    .xl-motion-safe-tw-transition-all {
+      transition-property: all;
+    }
+
+    .xl-motion-safe-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .xl-motion-safe-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .xl-motion-safe-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .xl-motion-safe-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .xl-motion-safe-tw-transition-transform {
+      transition-property: transform;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .xl-motion-reduce-tw-transition-none {
+      transition-property: none;
+    }
+
+    .xl-motion-reduce-tw-transition-all {
+      transition-property: all;
+    }
+
+    .xl-motion-reduce-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .xl-motion-reduce-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .xl-motion-reduce-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .xl-motion-reduce-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .xl-motion-reduce-tw-transition-transform {
+      transition-property: transform;
+    }
   }
 
   .xl-tw-ease-linear {

@@ -40,10 +40,14 @@ module.exports = {
         'menu': '11.125rem'
       },
       width: {
+        '81.2': '21.2rem',
         '81.5': '21.5rem'
-      }
+      },
+      height: {}
     },
   },
-  variants: {},
+  variants: {
+    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce']
+  },
   plugins: []
 }

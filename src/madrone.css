@@ -37,18 +37,18 @@
  */
 
 input {
-  @apply border border-gray-500
+    @apply border border-gray-500
 }
 
 .block,
 .node {
-  @apply mb-4
+    @apply mb-4
 }
 
 .node__content p,
 .node__content ul,
 .node__content ol {
-  @apply mb-4 leading-normal
+    @apply mb-4 leading-normal
 }
 
 /**
@@ -75,21 +75,40 @@ input {
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
-
+@layer utilities {
+    .tw-underline-osuorange {
+        text-decoration-color: #d73f09;
+    }
+    .tw-underline-thin {
+        text-decoration-thickness: .125rem;
+    }
+}
 @layer base {
-  @font-face {
-    font-family: 'Stratum2WebBold';
-    src: url("../fonts/Stratum2WebBold.woff2") format('woff2'), url("../fonts/Stratum2WebBold.woff") format('woff');
-  }
-  header {
-    @apply tw-bg-bucktoothwhite;
-  }
+    @font-face {
+        font-family: 'Stratum2WebBold';
+        src: url("../fonts/Stratum2WebBold.woff2") format('woff2'), url("../fonts/Stratum2WebBold.woff") format('woff');
+    }
+    header {
+        @apply tw-bg-bucktoothwhite;
+    }
 
-  h1 {
-    @apply tw-text-4xl tw-font-stratum2web tw-text-osuorange uppercase;
-  }
+    h1 {
+        @apply tw-text-4xl tw-font-stratum2web tw-text-osuorange tw-uppercase;
+    }
 
-  body {
-    @apply tw-bg-neutral-100
-  }
+    h2 {
+        @apply tw-text-3xl tw-font-stratum2web tw-text-osuorange tw-uppercase;
+    }
+
+    h3 {
+        @apply tw-text-2xl tw-font-stratum2web tw-text-black tw-uppercase;
+    }
+
+    body {
+        @apply tw-bg-neutral-100;
+    }
+
+    a {
+        @apply tw-underline tw-underline-osuorange tw-underline-thin;
+    }
 }

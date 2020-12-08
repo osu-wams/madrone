@@ -93,3 +93,10 @@ function madrone_theme_suggestions_form_alter(array &$suggestions, array $variab
     $suggestions[] = 'form__search_block_form';
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function madrone_preprocess_menu_local_task(&$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'tw-no-underline';
+}
