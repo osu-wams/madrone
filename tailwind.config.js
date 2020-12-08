@@ -33,12 +33,21 @@ module.exports = {
       inset: {
         '4': '1rem',
         '16': '4rem',
+        '20': '5rem',
+        '24': '6rem',
         '25': '25%',
         '20vw': '20vw',
         'menu': '11.125rem'
-      }
+      },
+      width: {
+        '81.2': '21.2rem',
+        '81.5': '21.5rem'
+      },
+      height: {}
     },
   },
-  variants: {},
+  variants: {
+    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce']
+  },
   plugins: []
 }

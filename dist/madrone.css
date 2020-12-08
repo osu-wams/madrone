@@ -619,10 +619,35 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 1.875rem;
+  font-family: Stratum2WebBold, sans-serif;
+  --text-opacity: 1;
+  color: #d73f09;
+  color: rgba(215, 63, 9, var(--text-opacity));
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: Stratum2WebBold, sans-serif;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  text-transform: uppercase;
+}
+
 body {
   --bg-opacity: 1;
   background-color: #f7f5f5;
-  background-color: rgba(247, 245, 245, var(--bg-opacity))
+  background-color: rgba(247, 245, 245, var(--bg-opacity));
+}
+
+a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #d73f09;
+          text-decoration-color: #d73f09;
+  text-decoration-thickness: .125rem;
 }
 
 /**
@@ -17879,6 +17904,20 @@ input {
   left: 4rem;
 }
 
+.tw-inset-20 {
+  top: 5rem;
+  right: 5rem;
+  bottom: 5rem;
+  left: 5rem;
+}
+
+.tw-inset-24 {
+  top: 6rem;
+  right: 6rem;
+  bottom: 6rem;
+  left: 6rem;
+}
+
 .tw-inset-25 {
   top: 25%;
   right: 25%;
@@ -17935,6 +17974,26 @@ input {
 .tw-inset-x-16 {
   right: 4rem;
   left: 4rem;
+}
+
+.tw-inset-y-20 {
+  top: 5rem;
+  bottom: 5rem;
+}
+
+.tw-inset-x-20 {
+  right: 5rem;
+  left: 5rem;
+}
+
+.tw-inset-y-24 {
+  top: 6rem;
+  bottom: 6rem;
+}
+
+.tw-inset-x-24 {
+  right: 6rem;
+  left: 6rem;
 }
 
 .tw-inset-y-25 {
@@ -18023,6 +18082,38 @@ input {
 
 .tw-left-16 {
   left: 4rem;
+}
+
+.tw-top-20 {
+  top: 5rem;
+}
+
+.tw-right-20 {
+  right: 5rem;
+}
+
+.tw-bottom-20 {
+  bottom: 5rem;
+}
+
+.tw-left-20 {
+  left: 5rem;
+}
+
+.tw-top-24 {
+  top: 6rem;
+}
+
+.tw-right-24 {
+  right: 6rem;
+}
+
+.tw-bottom-24 {
+  bottom: 6rem;
+}
+
+.tw-left-24 {
+  left: 6rem;
 }
 
 .tw-top-25 {
@@ -20673,6 +20764,14 @@ input {
 
 .tw-w-screen {
   width: 100vw;
+}
+
+.tw-w-81\.2 {
+  width: 21.2rem;
+}
+
+.tw-w-81\.5 {
+  width: 21.5rem;
 }
 
 .tw-z-0 {
@@ -23533,6 +23632,66 @@ input {
   transition-property: transform;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .motion-safe-tw-transition-none {
+    transition-property: none;
+  }
+
+  .motion-safe-tw-transition-all {
+    transition-property: all;
+  }
+
+  .motion-safe-tw-transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  }
+
+  .motion-safe-tw-transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+  }
+
+  .motion-safe-tw-transition-opacity {
+    transition-property: opacity;
+  }
+
+  .motion-safe-tw-transition-shadow {
+    transition-property: box-shadow;
+  }
+
+  .motion-safe-tw-transition-transform {
+    transition-property: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduce-tw-transition-none {
+    transition-property: none;
+  }
+
+  .motion-reduce-tw-transition-all {
+    transition-property: all;
+  }
+
+  .motion-reduce-tw-transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  }
+
+  .motion-reduce-tw-transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+  }
+
+  .motion-reduce-tw-transition-opacity {
+    transition-property: opacity;
+  }
+
+  .motion-reduce-tw-transition-shadow {
+    transition-property: box-shadow;
+  }
+
+  .motion-reduce-tw-transition-transform {
+    transition-property: transform;
+  }
+}
+
 .tw-ease-linear {
   transition-timing-function: linear;
 }
@@ -23702,6 +23861,15 @@ input {
 .tw-animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.tw-underline-osuorange {
+  -webkit-text-decoration-color: #d73f09;
+          text-decoration-color: #d73f09;
+}
+
+.tw-underline-thin {
+  text-decoration-thickness: .125rem;
 }
 
 /**
@@ -40922,6 +41090,20 @@ input {
     left: 4rem;
   }
 
+  .sm-tw-inset-20 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .sm-tw-inset-24 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
   .sm-tw-inset-25 {
     top: 25%;
     right: 25%;
@@ -40978,6 +41160,26 @@ input {
   .sm-tw-inset-x-16 {
     right: 4rem;
     left: 4rem;
+  }
+
+  .sm-tw-inset-y-20 {
+    top: 5rem;
+    bottom: 5rem;
+  }
+
+  .sm-tw-inset-x-20 {
+    right: 5rem;
+    left: 5rem;
+  }
+
+  .sm-tw-inset-y-24 {
+    top: 6rem;
+    bottom: 6rem;
+  }
+
+  .sm-tw-inset-x-24 {
+    right: 6rem;
+    left: 6rem;
   }
 
   .sm-tw-inset-y-25 {
@@ -41066,6 +41268,38 @@ input {
 
   .sm-tw-left-16 {
     left: 4rem;
+  }
+
+  .sm-tw-top-20 {
+    top: 5rem;
+  }
+
+  .sm-tw-right-20 {
+    right: 5rem;
+  }
+
+  .sm-tw-bottom-20 {
+    bottom: 5rem;
+  }
+
+  .sm-tw-left-20 {
+    left: 5rem;
+  }
+
+  .sm-tw-top-24 {
+    top: 6rem;
+  }
+
+  .sm-tw-right-24 {
+    right: 6rem;
+  }
+
+  .sm-tw-bottom-24 {
+    bottom: 6rem;
+  }
+
+  .sm-tw-left-24 {
+    left: 6rem;
   }
 
   .sm-tw-top-25 {
@@ -43716,6 +43950,14 @@ input {
 
   .sm-tw-w-screen {
     width: 100vw;
+  }
+
+  .sm-tw-w-81\.2 {
+    width: 21.2rem;
+  }
+
+  .sm-tw-w-81\.5 {
+    width: 21.5rem;
   }
 
   .sm-tw-z-0 {
@@ -46574,6 +46816,66 @@ input {
 
   .sm-tw-transition-transform {
     transition-property: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sm-motion-safe-tw-transition-none {
+      transition-property: none;
+    }
+
+    .sm-motion-safe-tw-transition-all {
+      transition-property: all;
+    }
+
+    .sm-motion-safe-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .sm-motion-safe-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .sm-motion-safe-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .sm-motion-safe-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .sm-motion-safe-tw-transition-transform {
+      transition-property: transform;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sm-motion-reduce-tw-transition-none {
+      transition-property: none;
+    }
+
+    .sm-motion-reduce-tw-transition-all {
+      transition-property: all;
+    }
+
+    .sm-motion-reduce-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .sm-motion-reduce-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .sm-motion-reduce-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .sm-motion-reduce-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .sm-motion-reduce-tw-transition-transform {
+      transition-property: transform;
+    }
   }
 
   .sm-tw-ease-linear {
@@ -63885,6 +64187,20 @@ input {
     left: 4rem;
   }
 
+  .md-tw-inset-20 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .md-tw-inset-24 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
   .md-tw-inset-25 {
     top: 25%;
     right: 25%;
@@ -63941,6 +64257,26 @@ input {
   .md-tw-inset-x-16 {
     right: 4rem;
     left: 4rem;
+  }
+
+  .md-tw-inset-y-20 {
+    top: 5rem;
+    bottom: 5rem;
+  }
+
+  .md-tw-inset-x-20 {
+    right: 5rem;
+    left: 5rem;
+  }
+
+  .md-tw-inset-y-24 {
+    top: 6rem;
+    bottom: 6rem;
+  }
+
+  .md-tw-inset-x-24 {
+    right: 6rem;
+    left: 6rem;
   }
 
   .md-tw-inset-y-25 {
@@ -64029,6 +64365,38 @@ input {
 
   .md-tw-left-16 {
     left: 4rem;
+  }
+
+  .md-tw-top-20 {
+    top: 5rem;
+  }
+
+  .md-tw-right-20 {
+    right: 5rem;
+  }
+
+  .md-tw-bottom-20 {
+    bottom: 5rem;
+  }
+
+  .md-tw-left-20 {
+    left: 5rem;
+  }
+
+  .md-tw-top-24 {
+    top: 6rem;
+  }
+
+  .md-tw-right-24 {
+    right: 6rem;
+  }
+
+  .md-tw-bottom-24 {
+    bottom: 6rem;
+  }
+
+  .md-tw-left-24 {
+    left: 6rem;
   }
 
   .md-tw-top-25 {
@@ -66679,6 +67047,14 @@ input {
 
   .md-tw-w-screen {
     width: 100vw;
+  }
+
+  .md-tw-w-81\.2 {
+    width: 21.2rem;
+  }
+
+  .md-tw-w-81\.5 {
+    width: 21.5rem;
   }
 
   .md-tw-z-0 {
@@ -69537,6 +69913,66 @@ input {
 
   .md-tw-transition-transform {
     transition-property: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .md-motion-safe-tw-transition-none {
+      transition-property: none;
+    }
+
+    .md-motion-safe-tw-transition-all {
+      transition-property: all;
+    }
+
+    .md-motion-safe-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .md-motion-safe-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .md-motion-safe-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .md-motion-safe-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .md-motion-safe-tw-transition-transform {
+      transition-property: transform;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .md-motion-reduce-tw-transition-none {
+      transition-property: none;
+    }
+
+    .md-motion-reduce-tw-transition-all {
+      transition-property: all;
+    }
+
+    .md-motion-reduce-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .md-motion-reduce-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .md-motion-reduce-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .md-motion-reduce-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .md-motion-reduce-tw-transition-transform {
+      transition-property: transform;
+    }
   }
 
   .md-tw-ease-linear {
@@ -86848,6 +87284,20 @@ input {
     left: 4rem;
   }
 
+  .lg-tw-inset-20 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .lg-tw-inset-24 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
   .lg-tw-inset-25 {
     top: 25%;
     right: 25%;
@@ -86904,6 +87354,26 @@ input {
   .lg-tw-inset-x-16 {
     right: 4rem;
     left: 4rem;
+  }
+
+  .lg-tw-inset-y-20 {
+    top: 5rem;
+    bottom: 5rem;
+  }
+
+  .lg-tw-inset-x-20 {
+    right: 5rem;
+    left: 5rem;
+  }
+
+  .lg-tw-inset-y-24 {
+    top: 6rem;
+    bottom: 6rem;
+  }
+
+  .lg-tw-inset-x-24 {
+    right: 6rem;
+    left: 6rem;
   }
 
   .lg-tw-inset-y-25 {
@@ -86992,6 +87462,38 @@ input {
 
   .lg-tw-left-16 {
     left: 4rem;
+  }
+
+  .lg-tw-top-20 {
+    top: 5rem;
+  }
+
+  .lg-tw-right-20 {
+    right: 5rem;
+  }
+
+  .lg-tw-bottom-20 {
+    bottom: 5rem;
+  }
+
+  .lg-tw-left-20 {
+    left: 5rem;
+  }
+
+  .lg-tw-top-24 {
+    top: 6rem;
+  }
+
+  .lg-tw-right-24 {
+    right: 6rem;
+  }
+
+  .lg-tw-bottom-24 {
+    bottom: 6rem;
+  }
+
+  .lg-tw-left-24 {
+    left: 6rem;
   }
 
   .lg-tw-top-25 {
@@ -89642,6 +90144,14 @@ input {
 
   .lg-tw-w-screen {
     width: 100vw;
+  }
+
+  .lg-tw-w-81\.2 {
+    width: 21.2rem;
+  }
+
+  .lg-tw-w-81\.5 {
+    width: 21.5rem;
   }
 
   .lg-tw-z-0 {
@@ -92500,6 +93010,66 @@ input {
 
   .lg-tw-transition-transform {
     transition-property: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lg-motion-safe-tw-transition-none {
+      transition-property: none;
+    }
+
+    .lg-motion-safe-tw-transition-all {
+      transition-property: all;
+    }
+
+    .lg-motion-safe-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .lg-motion-safe-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .lg-motion-safe-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .lg-motion-safe-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .lg-motion-safe-tw-transition-transform {
+      transition-property: transform;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lg-motion-reduce-tw-transition-none {
+      transition-property: none;
+    }
+
+    .lg-motion-reduce-tw-transition-all {
+      transition-property: all;
+    }
+
+    .lg-motion-reduce-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .lg-motion-reduce-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .lg-motion-reduce-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .lg-motion-reduce-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .lg-motion-reduce-tw-transition-transform {
+      transition-property: transform;
+    }
   }
 
   .lg-tw-ease-linear {
@@ -109811,6 +110381,20 @@ input {
     left: 4rem;
   }
 
+  .xl-tw-inset-20 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .xl-tw-inset-24 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
   .xl-tw-inset-25 {
     top: 25%;
     right: 25%;
@@ -109867,6 +110451,26 @@ input {
   .xl-tw-inset-x-16 {
     right: 4rem;
     left: 4rem;
+  }
+
+  .xl-tw-inset-y-20 {
+    top: 5rem;
+    bottom: 5rem;
+  }
+
+  .xl-tw-inset-x-20 {
+    right: 5rem;
+    left: 5rem;
+  }
+
+  .xl-tw-inset-y-24 {
+    top: 6rem;
+    bottom: 6rem;
+  }
+
+  .xl-tw-inset-x-24 {
+    right: 6rem;
+    left: 6rem;
   }
 
   .xl-tw-inset-y-25 {
@@ -109955,6 +110559,38 @@ input {
 
   .xl-tw-left-16 {
     left: 4rem;
+  }
+
+  .xl-tw-top-20 {
+    top: 5rem;
+  }
+
+  .xl-tw-right-20 {
+    right: 5rem;
+  }
+
+  .xl-tw-bottom-20 {
+    bottom: 5rem;
+  }
+
+  .xl-tw-left-20 {
+    left: 5rem;
+  }
+
+  .xl-tw-top-24 {
+    top: 6rem;
+  }
+
+  .xl-tw-right-24 {
+    right: 6rem;
+  }
+
+  .xl-tw-bottom-24 {
+    bottom: 6rem;
+  }
+
+  .xl-tw-left-24 {
+    left: 6rem;
   }
 
   .xl-tw-top-25 {
@@ -112605,6 +113241,14 @@ input {
 
   .xl-tw-w-screen {
     width: 100vw;
+  }
+
+  .xl-tw-w-81\.2 {
+    width: 21.2rem;
+  }
+
+  .xl-tw-w-81\.5 {
+    width: 21.5rem;
   }
 
   .xl-tw-z-0 {
@@ -115463,6 +116107,66 @@ input {
 
   .xl-tw-transition-transform {
     transition-property: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .xl-motion-safe-tw-transition-none {
+      transition-property: none;
+    }
+
+    .xl-motion-safe-tw-transition-all {
+      transition-property: all;
+    }
+
+    .xl-motion-safe-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .xl-motion-safe-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .xl-motion-safe-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .xl-motion-safe-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .xl-motion-safe-tw-transition-transform {
+      transition-property: transform;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .xl-motion-reduce-tw-transition-none {
+      transition-property: none;
+    }
+
+    .xl-motion-reduce-tw-transition-all {
+      transition-property: all;
+    }
+
+    .xl-motion-reduce-tw-transition {
+      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    }
+
+    .xl-motion-reduce-tw-transition-colors {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+
+    .xl-motion-reduce-tw-transition-opacity {
+      transition-property: opacity;
+    }
+
+    .xl-motion-reduce-tw-transition-shadow {
+      transition-property: box-shadow;
+    }
+
+    .xl-motion-reduce-tw-transition-transform {
+      transition-property: transform;
+    }
   }
 
   .xl-tw-ease-linear {

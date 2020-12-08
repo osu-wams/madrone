@@ -30,14 +30,14 @@ We call a macro which calls itself to render the full tree.
   {% import _self as menus %}
   {% if items %}
 {% set ulClasses = [
-    'hidden',
+    'tw-hidden',
     'lg-tw-flex',
     'tw-space-x-10',
     'tw-items-center'
 ] %}
 {% set childUlClasses = [
     'mega-menu',
-    'hidden',
+    'tw-hidden',
     'tw-flex-col',
     'tw-fixed',
     'tw-bg-bucktoothwhite',
@@ -53,6 +53,12 @@ We call a macro which calls itself to render the full tree.
 <ul{{ attributes.addClass(ulClasses) }}>
     {% else %}
     <ul{{ attributes.removeClass(ulClasses).addClass(childUlClasses) }}>
+        {% endif %}
+        {% if menu_level == 1 %}
+            <div class="tw-absolute tw-m-16 tw-right-20vw tw-text-neutral-550 hover-tw-text-neutral-700">
+                <span class="tw-text-2xl tw-cursor-pointer" onclick="closeMegaMenu();"><i
+                            class="fa fa-times"></i></span>
+            </div>
         {% endif %}
         {% for item in items %}
             {% if menu_level == 0 %}
@@ -70,7 +76,7 @@ We call a macro which calls itself to render the full tree.
                 ] %}
             {% endif %}
             <li{{ item.attributes.addCLass(liClasses) }}>
-                {{ link(item.title, item.url) }}
+                {{ link(item.title, item.url, { 'class': 'tw-no-underline' }) }}
                 {% if item.below %}
                     {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
                 {% endif %}

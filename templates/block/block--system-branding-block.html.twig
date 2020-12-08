@@ -14,16 +14,115 @@
  */
 #}
 {% block content %}
-    <div class="tw-flex tw-items-center">
+    <div id="osu-menu"
+         class="tw-hidden tw-absolute tw-top-24 tw-h-screen tw-overflow-y-auto tw-z-20 tw-bg-neutral-100 tw-w-screen md-tw-w-81.2 tw-px-6">
+        <div class="tw-mt-4">
+            <a class="tw-text-2xl tw-no-underline" href="https://oregonstate.edu"><i class="fa fa-home tw-text-osuorange tw-pr-2"
+                                                                     aria-hidden="true"></i>OSU Homepage</a>
+        </div>
+        <div class="">
+            <ul class="tw-border-b-2 tw-border-neutral-300 tw-my-2 tw-py-2">
+                <li>
+                    <span class="tw-font-bold tw-text-neutral-700">Tools and Services</span>
+                    <ul class="tw-text-2xl">
+                        <li>
+                            <a class="tw-no-underline" href="https://my.oregonstate.edu"><img
+                                        class="tw-w-8 tw-inline-block tw-mr-2"
+                                        src="{{ base_path }}{{ active_theme_path() }}/assets/myosu-profile.png"
+                                        aria-hidden="true" alt=""/><span class="tw-text-base">MyOregonState</span></a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="https://canvas.oregonstate.edu"><img
+                                        class="tw-w-8 tw-inline-block tw-mr-2"
+                                        src="{{ base_path }}{{ active_theme_path() }}/assets/canvas-logo.png" alt=""
+                                        aria-hidden="true"/><span class="tw-text-base">Canvas</span></a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="http://is.oregonstate.edu/google"><img
+                                        class="tw-w-8 tw-inline-block tw-mr-2"
+                                        src="{{ base_path }}{{ active_theme_path() }}/assets/thegoogs.png" alt=""
+                                        aria-hidden="true"/><span class="tw-text-base">G Suite</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tw-border-b-2 tw-border-neutral-300 tw-my-2 tw-py-2">
+                <li>
+                    <span class="tw-font-bold tw-text-neutral-700">Audiences</span>
+                    <ul>
+                        <li>
+                            <a class="tw-no-underline" href="https://oregonstate.edu/future">Future Students - Apply</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="https://oregonstate.edu/current">Current Students</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="http://ecampus.oregonstate.edu/">Online Students</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="https://oregonstate.edu/faculty">Faculty and Staff</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="http://www.osualum.com/s/359/16/home.aspx?gid=1001&pgid=312">Alumni</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="https://www.osufoundation.org/s/359/foundation/start.aspx?sid=359&gid=34&pgid=61">Donors
+                                and Friends</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="tw-font-bold tw-text-neutral-700">Our Locations</span>
+                    <ul>
+                        <li>
+                            <a class="tw-no-underline" href="https://admissions.oregonstate.edu/corvallis">Corvallis</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="https://osucascades.edu/">OSU-Cascades</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="https://portland.oregonstate.edu/">OSU in Portland</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="https://hmsc.oregonstate.edu/">Hatfield Marine Science Center</a>
+                        </li>
+                        <li>
+                            <a class="tw-no-underline" href="https://extension.oregonstate.edu/">Extension Service</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {# <div class="tw-flex tw-flex-wrap tw-items-center lg-tw-flex-no-wrap"> #}
+    <div class="tw-grid tw-grid-cols-8 lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-no-wrap">
+        <div class="tw-mx-4">
+            <span class="tw-cursor-pointer" onclick="toggleOSUMenu()">
+                <span id="osu-menu-close"
+                      class="tw-hidden tw-inline-block tw-text-center tw-text-xl tw-max-w-none tw-h-4 tw-w-4"><i
+                            class="fa fa-times"></i></span>
+                <img id="osu-menu-beno" class="tw-max-w-none tw-h-4 tw-w-4"
+                     src="{{ base_path }}{{ active_theme_path() }}/assets/bento-icon.svg" alt=""/>
+            </span>
+        </div>
         {% if site_logo %}
             <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home"
-               class="site-logo tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex ">
-                <img class="tw-items-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
+               class="site-logo tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex tw-no-underline">
+                <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
             </a>
+            <div class="tw-flex tw-flex-col tw-justify-self-center tw-justify-center tw-items-center lg-tw-hidden">
+                <div class="tw-cursor-pointer tw-justify-self-center tw-flex tw-flex-col tw-justify-center tw-items-center"
+                     onclick="">
+                    <i class="fa fa-bars"></i><span>Menu</span>
+                </div>
+            </div>
         {% endif %}
         {% if site_name %}
-            <div class="site-name tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-flex">
-                <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+            <div class="site-name tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 tw-flex">
+                <a class="tw-no-underline" href="{{ path('<front>') }}" title="{{ 'Home'|t }}"
+                   rel="home">{{ site_name }}</a>
             </div>
         {% endif %}
         {% if site_slogan %}
