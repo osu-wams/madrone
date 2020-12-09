@@ -9,10 +9,12 @@
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
+    "autoprefixer": "^9",
     "cross-env": "^5.2.0",
     "laravel-mix": "^5.0.1",
     "laravel-mix-purgecss": "^5.0.0",
-    "tailwindcss": "^1.0.1"
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
     "glob-all": "^3.2.1"
