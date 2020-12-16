@@ -27,32 +27,32 @@ We call a macro which calls itself to render the full tree.
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-  {% import _self as menus %}
-  {% if items %}
-{% set ulClasses = [
-    'tw-hidden',
-    'lg-tw-flex',
-    'tw-space-x-10',
-    'tw-items-center'
-] %}
-{% set childUlClasses = [
-    'mega-menu',
-    'tw-hidden',
-    'tw-flex-col',
-    'tw-fixed',
-    'tw-bg-bucktoothwhite',
-    'tw-gap-4',
-    'tw-z-10',
-    'tw-w-full',
-    'tw-h-full',
-    'tw-left-0',
-    'tw-top-menu',
-    'tw-cursor-auto'
-] %}
-    {% if menu_level == 0 %}
-<ul{{ attributes.addClass(ulClasses) }}>
-    {% else %}
-    <ul{{ attributes.removeClass(ulClasses).addClass(childUlClasses) }}>
+    {% import _self as menus %}
+    {% if items %}
+        {% set ulClasses = [
+            'tw-hidden',
+            'lg-tw-flex',
+            'tw-space-x-10',
+            'tw-items-center'
+        ] %}
+        {% set childUlClasses = [
+            'mega-menu',
+            'tw-hidden',
+            'tw-flex-col',
+            'tw-fixed',
+            'tw-bg-bucktoothwhite',
+            'tw-gap-4',
+            'tw-z-10',
+            'tw-w-full',
+            'tw-h-full',
+            'tw-left-0',
+            'tw-top-menu',
+            'tw-cursor-auto'
+        ] %}
+        {% if menu_level == 0 %}
+            <ul{{ attributes.addClass(ulClasses) }}>
+        {% else %}
+            <ul{{ attributes.removeClass(ulClasses).addClass(childUlClasses) }}>
         {% endif %}
         {% if menu_level == 1 %}
             <div class="tw-absolute tw-m-16 tw-right-20vw tw-text-neutral-550 hover-tw-text-neutral-700">
@@ -82,6 +82,10 @@ We call a macro which calls itself to render the full tree.
                 {% endif %}
             </li>
         {% endfor %}
-    </ul>
+        {% if menu_level == 0 %}
+            </ul>
+        {% else %}
+            </ul>
+        {% endif %}
     {% endif %}
-    {% endmacro %}
+{% endmacro %}

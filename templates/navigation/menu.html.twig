@@ -27,15 +27,15 @@ We call a macro which calls itself to render the full tree.
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-  {% import _self as menus %}
-  {% if items %}
-{% set ulClasses = [
+    {% import _self as menus %}
+    {% if items %}
+        {% set ulClasses = [
 
-] %}
-    {% if menu_level == 0 %}
-<ul{{ attributes.addClass(ulClasses) }}>
-    {% else %}
-    <ul{{ attributes.addClass(ulClasses) }}>
+        ] %}
+        {% if menu_level == 0 %}
+            <ul{{ attributes.addClass(ulClasses) }}>
+        {% else %}
+            <ul{{ attributes.addClass(ulClasses) }}>
         {% endif %}
         {% for item in items %}
             {% set liClasses = [
@@ -48,6 +48,10 @@ We call a macro which calls itself to render the full tree.
                 {% endif %}
             </li>
         {% endfor %}
-    </ul>
+        {% if menu_level == 0 %}
+            </ul>
+        {% else %}
+            </ul>
+        {% endif %}
     {% endif %}
-    {% endmacro %}
+{% endmacro %}
