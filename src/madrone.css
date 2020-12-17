@@ -112,7 +112,8 @@ input {
   a {
     @apply tw-underline tw-underline-osuorange tw-underline-thin;
   }
-  /* Header Search Styles */
+
+  /* Global Search Styles */
   .header-search-form {
     @apply tw-relative;
   }
@@ -121,7 +122,7 @@ input {
   }
   .header-search-form .form-search {
     /* search input */
-    @apply tw-h-full tw-pr-8;
+    @apply tw-h-full tw-pl-2 tw-pr-8;
   }
   .header-search-form .form-actions {
     /* search icon/submit wrapper */
@@ -129,5 +130,10 @@ input {
   }
   .header-search-form .form-actions .form-submit {
     @apply tw-h-full;
+  }
+
+  /* OSU MENU (left hand side global) */
+  #osu-menu a {
+    @apply tw-no-underline tw-py-1 tw-block;
   }
 }
