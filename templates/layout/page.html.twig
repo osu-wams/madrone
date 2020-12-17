@@ -58,12 +58,14 @@
   {{ page.help }}
 
   <main role="main">
-    <a class="text-font-500" id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <a class="text-font-500" id="main-content" tabindex="-1"></a>
+    {# link is in html.html.twig #}
 
     <div class="md-tw-flex md-tw-justify-center tw-mx-auto">
       <div class="md-tw-flex-1 tw-p-4">
         {{ page.content }}
-      </div>{# /.layout-content #}
+      </div>
+      {# /.layout-content #}
 
       {% if page.sidebar_first %}
         <aside class="md-tw-w-1/4 tw-p-4" role="complementary">
@@ -85,4 +87,5 @@
     </footer>
   {% endif %}
 
-</div>{# /.layout-container #}
+</div>
+{# /.layout-container #}

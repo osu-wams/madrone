@@ -12,13 +12,11 @@
  * @see template_preprocess_region()
  */
 #}
-{%
-  set tailwindFlexy = [
-    'lg-tw-flex',
-    'tw-justify-between',
-    'tw-items-center'
-  ]
-%}
+{% set tailwindFlexy = [
+  'lg-tw-flex',
+  'tw-justify-between',
+  'tw-items-center'
+] %}
 
 {% if content %}
   <div{{ attributes.addClass(tailwindFlexy) }}>
