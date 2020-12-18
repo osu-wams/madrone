@@ -87,7 +87,7 @@ input {
   @font-face {
     font-family: 'Stratum2WebBold';
     src: url('../fonts/Stratum2WebBold.woff2') format('woff2'),
-      url('../fonts/Stratum2WebBold.woff') format('woff');
+    url('../fonts/Stratum2WebBold.woff') format('woff');
   }
   header {
     @apply tw-bg-bucktoothwhite;
@@ -135,5 +135,10 @@ input {
   /* OSU MENU (left hand side global) */
   #osu-menu a {
     @apply tw-no-underline tw-py-1 tw-block;
+  }
+
+  /* Site Branding Block title */
+  #block-madrone-branding .site-name a {
+    @apply tw-no-underline;
   }
 }
