@@ -1,0 +1,20 @@
+uuid: f82910d4-4141-4177-bf94-fc1cb34f0791
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - madrone
+id: madrone_messages
+theme: madrone
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status Messages'
+  provider: system
+  label_display: '0'
+visibility: { }
