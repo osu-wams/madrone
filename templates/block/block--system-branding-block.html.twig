@@ -98,7 +98,7 @@
     {% endif %}
     {% if site_name %}
       <div class="site-name tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 tw-flex">
-        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+        <a class="tw-no-underline" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
       </div>
     {% endif %}
     {% if site_slogan %}
