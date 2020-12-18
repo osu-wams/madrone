@@ -27,31 +27,31 @@ We call a macro which calls itself to render the full tree.
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-    {% import _self as menus %}
-    {% if items %}
-        {% set ulClasses = [
+  {% import _self as menus %}
+  {% if items %}
+    {% set ulClasses = [
 
         ] %}
-        {% if menu_level == 0 %}
-            <ul{{ attributes.addClass(ulClasses) }}>
-        {% else %}
-            <ul{{ attributes.addClass(ulClasses) }}>
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass(ulClasses) }}>
+      {% else %}
+        <ul{{ attributes.addClass(ulClasses) }}>
         {% endif %}
         {% for item in items %}
-            {% set liClasses = [
-                item.in_active_trail ? 'tw-text-osuorange tw-font-bold hover-tw-text-osuorange' : 'tw-font-normal tw-text-neutral-550 hover-tw-text-neutral-700',
-            ] %}
-            <li{{ item.attributes.addCLass(liClasses) }}>
-                {{ link(item.title, item.url, item.attributes.addClass('tw-no-underline')) }}
-                {% if item.below %}
-                    {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-                {% endif %}
-            </li>
+          {% set liClasses = [
+            item.in_active_trail ? 'tw-text-osuorange tw-font-bold hover-tw-text-osuorange' : 'tw-font-normal tw-text-neutral-550 hover-tw-text-neutral-700',
+          ] %}
+          <li{{ item.attributes.addCLass(liClasses) }}>
+            {{ link(item.title, item.url, item.attributes.addClass('tw-no-underline')) }}
+            {% if item.below %}
+              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            {% endif %}
+          </li>
         {% endfor %}
         {% if menu_level == 0 %}
-            </ul>
-        {% else %}
-            </ul>
-        {% endif %}
+        </ul>
+    {% else %}
+      </ul>
     {% endif %}
+  {% endif %}
 {% endmacro %}

@@ -17,6 +17,8 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-drupal": "^5.0.2",
     "glob-all": "^3.2.1"
   }
 }

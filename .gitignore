@@ -1,7 +1,8 @@
 /*.log
 /mix-manifest.json
 /node_modules/
-
+composer.lock
+/vendor/
 # Ignore compiled assets.
 # /dist/
 
