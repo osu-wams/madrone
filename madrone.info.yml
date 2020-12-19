@@ -4,6 +4,17 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 type: theme
 base theme: stable
+regions:
+  header: Header
+  secondary_menu: Secondary Navigation
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  page_top: Page Top
+  content: Content
+  right_sidebar: Right Sidebar
+  page_bottom: Page Bottom
+  footer: Footer
 libraries:
   - madrone/fonts
   - madrone/global-styling

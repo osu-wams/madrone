@@ -50,8 +50,7 @@
   <header role="banner">
     {{ page.header }}
   </header>
-
-  {{ page.primary_menu }}
+  
   {{ page.secondary_menu }}
   {{ page.breadcrumb }}
   {{ page.highlighted }}
@@ -67,15 +66,9 @@
       </div>
       {# /.layout-content #}
 
-      {% if page.sidebar_first %}
-        <aside class="md-tw-w-1/4 tw-p-4" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
+      {% if page.right_sidebar %}
         <aside class="md-tw-w-1/4" role="complementary">
-          {{ page.sidebar_second }}
+          {{ page.right_sidebar }}
         </aside>
       {% endif %}
     </div>
