@@ -14,79 +14,103 @@
  */
 #}
 {% block content %}
-  <div id="osu-menu" class="tw-hidden tw-absolute tw-top-24 tw-h-screen tw-overflow-y-auto tw-z-20 tw-bg-neutral-100 tw-w-screen md-tw-w-81.2 tw-px-6">
-    <div class="tw-mt-4">
-      <a class="tw-text-2xl tw-no-underline" href="https://oregonstate.edu">
-        <i class="fa fa-home tw-text-osuorange tw-pr-2" aria-hidden="true"></i>
-        OSU Homepage
-      </a>
+  <!--Modal-->
+  <div class="modal-overlay tw-pointer-events-auto tw-hidden tw-absolute tw-w-screen tw-z-20 tw-h-screen tw-bg-gray-900 tw-opacity-50"></div>
+
+  <div
+    id="osu-menu" class="modal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-overflow-y-auto tw-z-20 tw-bg-neutral-100 tw-w-screen md-tw-w-81.2">
+    <!-- This is almost identical to chunk below, but there are a few differences that make it hard to extract into 1 file -->
+    <div class="tw-grid tw-grid-cols-8 lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap tw-pt-1 tw-bg-white">
+      <div class="tw-mx-4 modal-open">
+        <span class="tw-cursor-pointer">
+          <span id="osu-menu-close" class="tw-inline-block tw-text-center tw-text-xl tw-max-w-none tw-h-4 tw-w-4">
+            <i class="fa fa-times"></i>
+          </span>
+        </span>
+      </div>
+      {% if site_logo %}
+        <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex tw-no-underline">
+          <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
+        </a>
+        <div class="tw-flex tw-flex-col tw-justify-self-center tw-justify-center tw-items-center lg-tw-hidden">
+          <div class="tw-cursor-pointer tw-justify-self-center tw-flex tw-flex-col tw-justify-center tw-items-center" onclick="">
+            <i class="fa fa-bars"></i>
+            <span>Menu</span>
+          </div>
+        </div>
+      {% endif %}
     </div>
-    <div class="">
-      <ul class="tw-border-b-2 tw-border-neutral-300 tw-my-2 tw-py-1">
-        <li>
-          <span class="tw-font-bold tw-text-neutral-700">Tools and Services</span>
-          <ul class="tw-text-2xl tw-pt-2">
-            <li>
-              <a href="https://my.oregonstate.edu">
-                <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/myosu-profile.png" aria-hidden="true" alt=""/>
-                <span class="tw-text-base">MyOregonState</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://canvas.oregonstate.edu">
-                <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/canvas-logo.png" alt="" aria-hidden="true"/>
-                <span class="tw-text-base">Canvas</span>
-              </a>
-            </li>
-            <li>
-              <a href="http://is.oregonstate.edu/google">
-                <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/thegoogs.png" alt="" aria-hidden="true"/>
-                <span class="tw-text-base">G Suite</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="tw-border-b-2 tw-border-neutral-300 tw-my-2 tw-py-2">
-        <li>
-          <span class="tw-font-bold tw-text-neutral-700">Audiences</span>
-          <ul>
-            <li><a href="https://oregonstate.edu/future">Future Students - Apply</a></li>
-            <li><a href="https://oregonstate.edu/current">Current Students</a></li>
-            <li><a href="http://ecampus.oregonstate.edu/">Online Students</a></li>
-            <li><a href="https://oregonstate.edu/faculty">Faculty and Staff</a></li>
-            <li><a href="http://www.osualum.com/s/359/16/home.aspx?gid=1001&pgid=312">Alumni</a></li>
-            <li><a href="https://www.osufoundation.org/s/359/foundation/start.aspx?sid=359&gid=34&pgid=61">Donors
-                                                                                                                                                                                                                                                    																																																																																																																																					                                and Friends</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <span class="tw-font-bold tw-text-neutral-700">Our Locations</span>
-          <ul>
-            <li><a href="https://admissions.oregonstate.edu/corvallis">Corvallis</a></li>
-            <li><a href="https://osucascades.edu/">OSU-Cascades</a></li>
-            <li><a href="https://portland.oregonstate.edu/">OSU in Portland</a></li>
-            <li><a href="https://hmsc.oregonstate.edu/">Hatfield Marine Science Center</a></li>
-            <li><a href="https://extension.oregonstate.edu/">Extension Service</a></li>
-          </ul>
-        </li>
-      </ul>
+    <div class="modal-container tw-mx-auto tw-z-50 tw-overflow-y-auto tw-px-6">
+      <div class="tw-pt-4">
+        <a class="tw-text-2xl" href="https://oregonstate.edu">
+          <i class="fa fa-home tw-text-osuorange tw-pr-2" aria-hidden="true"></i>
+          OSU Homepage
+        </a>
+      </div>
+      <div class="">
+        <ul class="tw-border-b-2 tw-border-neutral-300 tw-my-2 tw-py-1">
+          <li>
+            <span class="tw-font-bold tw-text-neutral-700">Tools and Services</span>
+            <ul class="tw-text-2xl tw-pt-2">
+              <li>
+                <a href="https://my.oregonstate.edu">
+                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/myosu-profile.png" aria-hidden="true" alt=""/>
+                  <span class="tw-text-base">MyOregonState</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://canvas.oregonstate.edu">
+                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/canvas-logo.png" alt="" aria-hidden="true"/>
+                  <span class="tw-text-base">Canvas</span>
+                </a>
+              </li>
+              <li>
+                <a href="http://is.oregonstate.edu/google">
+                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/thegoogs.png" alt="" aria-hidden="true"/>
+                  <span class="tw-text-base">G Suite</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="tw-border-b-2 tw-border-neutral-300 tw-my-2 tw-py-2">
+          <li>
+            <span class="tw-font-bold tw-text-neutral-700">Audiences</span>
+            <ul>
+              <li><a href="https://oregonstate.edu/future">Future Students - Apply</a></li>
+              <li><a href="https://oregonstate.edu/current">Current Students</a></li>
+              <li><a href="http://ecampus.oregonstate.edu/">Online Students</a></li>
+              <li><a href="https://oregonstate.edu/faculty">Faculty and Staff</a></li>
+              <li><a href="http://www.osualum.com/s/359/16/home.aspx?gid=1001&pgid=312">Alumni</a></li>
+              <li><a href="https://www.osufoundation.org/s/359/foundation/start.aspx?sid=359&gid=34&pgid=61">Donors
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              																																																																																																																																					                                and Friends</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="tw-py-2">
+          <li>
+            <span class="tw-font-bold tw-text-neutral-700">Our Locations</span>
+            <ul>
+              <li><a href="https://admissions.oregonstate.edu/corvallis">Corvallis</a></li>
+              <li><a href="https://osucascades.edu/">OSU-Cascades</a></li>
+              <li><a href="https://portland.oregonstate.edu/">OSU in Portland</a></li>
+              <li><a href="https://hmsc.oregonstate.edu/">Hatfield Marine Science Center</a></li>
+              <li><a href="https://extension.oregonstate.edu/">Extension Service</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  {# <div class="tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap"> #}
+  <!-- This is almost identical to chunk in modal above, but there are a few differences that make it hard to extract into 1 file -->
   <div class="tw-grid tw-grid-cols-8 lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap">
-    <div class="tw-mx-4">
-      <span class="tw-cursor-pointer" onclick="toggleOSUMenu()">
-        <span id="osu-menu-close" class="tw-hidden tw-inline-block tw-text-center tw-text-xl tw-max-w-none tw-h-4 tw-w-4">
-          <i class="fa fa-times"></i>
-        </span>
-        <img id="osu-menu-beno" class="tw-max-w-none tw-h-4 tw-w-4" src="{{ base_path }}{{ active_theme_path() }}/assets/bento-icon.svg" alt=""/>
+    <div class="tw-mx-4 modal-open">
+      <span class="tw-cursor-pointer">
+        <img class="tw-max-w-none tw-h-4 tw-w-4" src="{{ base_path }}{{ active_theme_path() }}/assets/bento-icon.svg" alt=""/>
       </span>
     </div>
     {% if site_logo %}
-      <a href="#" onclick="toggleOSUMenu()" title="{{ 'Home'|t }}" rel="home" class="site-logo tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex tw-no-underline">
+      <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex tw-no-underline">
         <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
       </a>
       <div class="tw-flex tw-flex-col tw-justify-self-center tw-justify-center tw-items-center lg-tw-hidden">
