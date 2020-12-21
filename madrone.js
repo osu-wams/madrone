@@ -1,9 +1,7 @@
-window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    closeMegaMenu();
-  }
-});
-
+/**
+ * Add Event Listeners to the Main navigation level 0.
+ * @type {HTMLCollectionOf<Element>}
+ */
 let megaMenuParent = document.getElementsByClassName('mega-menu-parent');
 for (i = 0; i < megaMenuParent.length; i++) {
   megaMenuParent[i].addEventListener('click', e => {
@@ -54,7 +52,7 @@ for (i = 0; i < megaMenuParent.length; i++) {
  */
 var openmodal = document.querySelectorAll('.modal-open');
 for (var i = 0; i < openmodal.length; i++) {
-  openmodal[i].addEventListener('click', function(event) {
+  openmodal[i].addEventListener('click', function (event) {
     event.preventDefault();
     toggleModal();
   });
@@ -67,19 +65,19 @@ var closemodal = document.querySelectorAll('.modal-close');
 for (var i = 0; i < closemodal.length; i++) {
   closemodal[i].addEventListener('click', toggleModal);
 }
-
-document.onkeydown = function(evt) {
-  evt = evt || window.event;
-  var isEscape = false;
-  if ('key' in evt) {
-    isEscape = evt.key === 'Escape' || evt.key === 'Esc';
-  } else {
-    isEscape = evt.keyCode === 27;
+/**
+ * Add an event listener on the whole window for escape and close the Mega Menu and toggle to modal if open.
+ */
+document.addEventListener('keydown', e => {
+  // keyCode is deprecated but left in for legacy browsers.
+  var key = e.key || e.keyCode;
+  if (key === 'Escape' || key === 'Esc' || key === 27) {
+    closeMegaMenu();
+    if (document.body.classList.contains('modal-active')) {
+      toggleModal();
+    }
   }
-  if (isEscape && document.body.classList.contains('modal-active')) {
-    toggleModal();
-  }
-};
+});
 
 function toggleModal() {
   const body = document.querySelector('body');
@@ -90,4 +88,21 @@ function toggleModal() {
   modal.classList.toggle('tw-hidden');
   body.classList.toggle('modal-active');
   main.classList.toggle('tw-pointer-events-none');
+}
+
+/**
+ * Close mega menu items.
+ */
+function closeMegaMenu() {
+  let openMegaMenus = document.getElementsByClassName('mega-menu');
+  for (i = 0; i < openMegaMenus.length; i++) {
+    openMegaMenus[i]?.classList.remove('lg-tw-flex');
+  }
+  let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
+  for (i = 0; i < openMegaMenuParents.length; i++) {
+    if (!openMegaMenuParents[i].classList.contains('is-active')) {
+      openMegaMenuParents[i].classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
+      openMegaMenuParents[i].classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
+    }
+  }
 }
