@@ -1,0 +1,20 @@
+uuid: da615430-1384-47ff-8527-0029aec1173a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - madrone
+id: madrone_local_tasks
+theme: madrone
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

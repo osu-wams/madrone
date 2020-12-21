@@ -1,0 +1,18 @@
+uuid: 0bda85aa-7cbf-4411-915a-1ce1db4a49f2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - madrone
+id: madrone_page_title
+theme: madrone
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
