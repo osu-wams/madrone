@@ -108,12 +108,15 @@ input {
   body {
     @apply tw-bg-neutral-100;
   }
+  body.modal-active {
+    @apply tw-overflow-x-hidden tw-overflow-y-visible;
+  }
 
   a {
     @apply tw-underline tw-underline-osuorange tw-underline-thin;
   }
 
-  /* Global Search Styles */
+  /** Global Search Styles */
   .header-search-form {
     @apply tw-relative;
   }
@@ -121,18 +124,18 @@ input {
     @apply tw-h-full;
   }
   .header-search-form .form-search {
-    /* search input */
+    /** search input */
     @apply tw-h-full tw-pl-2 tw-pr-8;
   }
   .header-search-form .form-actions {
-    /* search icon/submit wrapper */
+    /** search icon/submit wrapper */
     @apply tw-absolute tw-p-2 tw-right-0 tw-flex;
   }
   .header-search-form .form-actions .form-submit {
     @apply tw-h-full;
   }
 
-  /* OSU MENU (left hand side global) */
+  /** OSU MENU (left hand side global) */
   #osu-menu a {
     @apply tw-no-underline tw-py-1 tw-block;
   }
