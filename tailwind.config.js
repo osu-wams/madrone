@@ -2,6 +2,7 @@ module.exports = {
   prefix: 'tw-',
   separator: '-',
   important: false,
+  purge: false,
   theme: {
     extend: {
       colors: {
