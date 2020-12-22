@@ -5,6 +5,12 @@
 let megaMenuParent = document.getElementsByClassName('mega-menu-parent');
 for (i = 0; i < megaMenuParent.length; i++) {
   megaMenuParent[i].addEventListener('click', e => {
+    /*
+      looks like child elements are getting this click event. this makes sure that the code
+      is only firing if the parent element has the class mega-menu-parent
+     */
+    if (!e.target.parentElement.classList.contains('mega-menu-parent')) return;
+
     // Remove any active menu items
     let headerHeight = document
       .getElementsByTagName('header')[0]
