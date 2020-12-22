@@ -35,6 +35,8 @@ We call a macro which calls itself to render the full tree.
       'tw-space-x-10',
       'tw-items-center'
     ] %}
+    {% set ulClassesString = ulClasses|join(' ') %}
+
     {% set childUlClasses = [
       'mega-menu',
       'tw-hidden',
@@ -49,6 +51,7 @@ We call a macro which calls itself to render the full tree.
       'tw-top-menu',
       'tw-cursor-auto'
     ] %}
+    {% set childUlClassesString = childUlClasses|join(' ') %}
 
     {% set nestedUlClasses = [
       'tw-grid',
@@ -57,6 +60,7 @@ We call a macro which calls itself to render the full tree.
       'tw-grid-cols-2',
       'tw-grid-rows-layout',
     ] %}
+    {% set nestedUlClassesString = nestedUlClasses|join(' ') %}
 
     {% set megaMenuDivClasses = [
       'mega-menu',
@@ -72,12 +76,13 @@ We call a macro which calls itself to render the full tree.
       'tw-left-0',
       'tw-top-menu',
     ] %}
+    {% set megaMenuDivClassesString = megaMenuDivClasses|join(' ') %}
 
     {% if menu_level == 0 %}
-      <ul{{ attributes.removeClass(ulClasses).addClass(ulClasses) }}>
+      <ul class="{{ ulClassesString }}">
     {% else %}
-      <div{{ attributes.removeClass(ulClasses).addClass(megaMenuDivClasses) }}>
-      <ul{{ attributes.removeClass(megaMenuDivClasses).addClass(nestedUlClasses) }}>
+      <div class="{{ megaMenuDivClassesString }}">
+      <ul class="{{ nestedUlClassesString }}">
     {% endif %}
 
     {% for item in items %}
