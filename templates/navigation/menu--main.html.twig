@@ -49,44 +49,114 @@ We call a macro which calls itself to render the full tree.
       'tw-top-menu',
       'tw-cursor-auto'
     ] %}
+
+    {% set nestedUlClasses = [
+      'tw-grid',
+      'tw-col-start-2',
+      'tw-col-span-2',
+      'tw-grid-cols-2',
+      'tw-grid-rows-layout',
+    ] %}
+
+    {% set megaMenuDivClasses = [
+      'mega-menu',
+      'tw-hidden',
+      'tw-grid',
+      'tw-fixed',
+      'tw-grid-cols-3',
+      'tw-bg-bucktoothwhite',
+      'tw-gap-4',
+      'tw-z-10',
+      'tw-w-full',
+      'tw-h-full',
+      'tw-left-0',
+      'tw-top-menu',
+    ] %}
+
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass(ulClasses) }}>
+      <ul{{ attributes.removeClass(ulClasses).addClass(ulClasses) }}>
+    {% else %}
+      <div{{ attributes.removeClass(ulClasses).addClass(megaMenuDivClasses) }}>
+      <ul{{ attributes.removeClass(megaMenuDivClasses).addClass(nestedUlClasses) }}>
+    {% endif %}
+
+    {% for item in items %}
+      {% if menu_level == 0 %}
+        {% set liClasses = item.in_active_trail ? [
+          'mega-menu-parent',
+          'is-active',
+          'tw-cursor-pointer',
+          'tw-text-osuorange',
+          'tw-font-bold',
+          'hover-tw-text-osuoranage',
+        ] : [
+          'mega-menu-parent',
+          'tw-cursor-pointer',
+          'tw-font-normal',
+          'tw-text-neutral-550',
+          'hover-tw-text-neutral-700',
+        ] %}
       {% else %}
-        <ul{{ attributes.removeClass(ulClasses).addClass(childUlClasses) }}>
+        {% set liClasses = [
+          'tw-font-normal',
+          'tw-text-neutral-550',
+          'hover-tw-text-neutral-700',
+          'tw-relative',
+        ] %}
+      {% endif %}
+      <li{{ item.attributes.addClass(liClasses) }}>
+        {{ link(item.title, item.url, {'class':'tw-no-underline'}) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level+1) }}
         {% endif %}
-        {% if menu_level == 1 %}
-          <div class="tw-absolute tw-m-16 tw-right-20vw tw-text-neutral-550 hover-tw-text-neutral-700">
-            <span class="tw-text-2xl tw-cursor-pointer" onclick="closeMegaMenu();">
-              <i class="fa fa-times"></i>
-            </span>
-          </div>
-        {% endif %}
-        {% for item in items %}
-          {% if menu_level == 0 %}
-            {% set liClasses = [
-              item.in_active_trail ? 'mega-menu-parent is-active tw-cursor-pointer tw-text-osuorange tw-font-bold hover-tw-text-osuorange' : 'mega-menu-parent tw-cursor-pointer tw-font-normal tw-text-neutral-550 hover-tw-text-neutral-700',
-            ] %}
-          {% else %}
-            {% set liClasses = [
-              'tw-font-normal',
-              'tw-text-neutral-550',
-              'hover-tw-text-neutral-700',
-              'tw-relative',
-              'tw-top-25',
-              'tw-left-20vw'
-            ] %}
-          {% endif %}
-          <li{{ item.attributes.addCLass(liClasses) }}>
-            {{ link(item.title, item.url, { 'class': 'tw-no-underline' }) }}
-            {% if item.below %}
-              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-            {% endif %}
-          </li>
-        {% endfor %}
-        {% if menu_level == 0 %}
-        </ul>
+      </li>
+    {% endfor %}
+
+    {% if menu_level != 0 %}
+      </ul>
+      </div>
     {% else %}
       </ul>
     {% endif %}
+
+    {# {% if menu_level == 0 %} #}
+    {# <ul{{ attributes.addClass(ulClasses) }}> #}
+    {# {% else %} #}
+    {# <ul{{ attributes.removeClass(ulClasses).addClass(childUlClasses) }}> #}
+    {# {% endif %} #}
+    {# {% if menu_level == 1 %} #}
+    {# <div class="tw-absolute tw-m-16 tw-right-20vw tw-text-neutral-550 hover-tw-text-neutral-700"> #}
+    {# <span class="tw-text-2xl tw-cursor-pointer" onclick="closeMegaMenu();"> #}
+    {# <i class="fa fa-times"></i> #}
+    {# </span> #}
+    {# </div> #}
+    {# {% endif %} #}
+    {# {% for item in items %} #}
+    {# {% if menu_level == 0 %} #}
+    {# {% set liClasses = [ #}
+    {# item.in_active_trail ? 'mega-menu-parent is-active tw-cursor-pointer tw-text-osuorange tw-font-bold hover-tw-text-osuorange' : 'mega-menu-parent tw-cursor-pointer tw-font-normal tw-text-neutral-550 hover-tw-text-neutral-700', #}
+    {# ] %} #}
+    {# {% else %} #}
+    {# {% set liClasses = [ #}
+    {# 'tw-font-normal', #}
+    {# 'tw-text-neutral-550', #}
+    {# 'hover-tw-text-neutral-700', #}
+    {# 'tw-relative', #}
+    {# 'tw-top-25', #}
+    {# 'tw-left-20vw' #}
+    {# ] %} #}
+    {# {% endif %} #}
+    {# <li{{ item.attributes.addCLass(liClasses) }}> #}
+    {# {{ link(item.title, item.url, { 'class': 'tw-no-underline' }) }} #}
+    {# {% if item.below %} #}
+    {# {{ menus.menu_links(item.below, attributes, menu_level + 1) }} #}
+    {# {% endif %} #}
+    {# </li> #}
+    {# {% endfor %} #}
+    {# {% if menu_level == 0 %} #}
+    {# </ul> #}
+    {# {% else %} #}
+    {# </ul> #}
+    {# {% endif %} #}
   {% endif %}
 {% endmacro %}

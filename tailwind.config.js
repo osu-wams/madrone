@@ -31,6 +31,9 @@ module.exports = {
         '3': '3 1 0%',
         '4': '4 1 0%'
       },
+      gridTemplateRows: {
+        'layout':'repeat(10, minmax(0, 100px))',
+      },
       inset: {
         '25': '25%',
         '20vw': '20vw',

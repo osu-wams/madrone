@@ -6,8 +6,6 @@ let megaMenuParent = document.getElementsByClassName('mega-menu-parent');
 for (i = 0; i < megaMenuParent.length; i++) {
   megaMenuParent[i].addEventListener('click', e => {
     // Remove any active menu items
-    // Close any open menu items.
-    closeMegaMenu();
     let headerHeight = document
       .getElementsByTagName('header')[0]
       .getBoundingClientRect().bottom;
@@ -40,9 +38,19 @@ for (i = 0; i < megaMenuParent.length; i++) {
     let childMenuItem = e.target.parentElement.getElementsByClassName(
       'mega-menu'
     );
+    /*
+      Only close all the mega menus if we are trying to open a NEW mega menu. Otherwise
+      just close what is already open first. This fixes an issue we were having where
+      you couldn't reselect a menu item to close the mega menu.
+     */
     if (childMenuItem.length > 0) {
       childMenuItem[0].style.top = (headerHeight + 5) / 16 + 'rem';
-      childMenuItem[0].classList.toggle('lg-tw-flex');
+      if (!childMenuItem[0].classList.contains('lg-tw-grid')) {
+        closeMegaMenu();
+      }
+      childMenuItem[0].classList.toggle('lg-tw-grid');
+    } else {
+      closeMegaMenu();
     }
   });
 }
@@ -96,7 +104,7 @@ function toggleModal() {
 function closeMegaMenu() {
   let openMegaMenus = document.getElementsByClassName('mega-menu');
   for (i = 0; i < openMegaMenus.length; i++) {
-    openMegaMenus[i]?.classList.remove('lg-tw-flex');
+    openMegaMenus[i]?.classList.remove('lg-tw-grid');
   }
   let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
   for (i = 0; i < openMegaMenuParents.length; i++) {
