@@ -159,7 +159,7 @@ document.addEventListener('keydown', e => {
   // keyCode is deprecated but left in for legacy browsers.
   var key = e.key || e.keyCode;
   if (key === 'Escape' || key === 'Esc' || key === 27) {
-    toggleMegaMenu();
+    closeMegaMenu();
     if (document.body.classList.contains('modal-active')) {
       toggleModal();
     }
@@ -180,18 +180,13 @@ function toggleModal() {
 /**
  * Close mega menu items.
  */
-function toggleMegaMenu(arg1 = null, willOpen = false) {
-
-  // arg1 = e.target.parentElement
-
+function closeMegaMenu() {
+  // closes all the mega menus
   let openMegaMenus = document.getElementsByClassName('mega-menu');
-
   for (i = 0; i < openMegaMenus.length; i++) {
     openMegaMenus[i]?.classList.remove('lg-tw-grid');
   }
-
   let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
-
   // resets color on all non active mega menu parent items
   for (i = 0; i < openMegaMenuParents.length; i++) {
     if (!openMegaMenuParents[i].parentElement.classList.contains('is-active')) {
@@ -199,57 +194,4 @@ function toggleMegaMenu(arg1 = null, willOpen = false) {
       openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
     }
   }
-
-  if (willOpen) {
-    arg1.classList.remove(
-      'tw-font-normal',
-      'tw-text-neutral-550',
-      'hover-tw-text-neutral-700',
-    );
-    arg1.classList.add(
-      'tw-text-osuorange',
-      'tw-font-bold',
-      'hover-tw-text-osuorange',
-    );
-  } else {
-    arg1.classList.remove(
-      'tw-text-osuorange',
-      'tw-font-bold',
-      'hover-tw-text-osuorange',
-    );
-    arg1.classList.add(
-      'tw-font-normal',
-      'tw-text-neutral-550',
-      'hover-tw-text-neutral-700',
-    );
-  }
-
-
-
-
-    //   if (e.target.parentElement.classList.contains('tw-font-normal')) {
-    //     e.target.parentElement.classList.remove(
-    //       'tw-font-normal',
-    //       'tw-text-neutral-550',
-    //       'hover-tw-text-neutral-700'
-    //     );
-    //     e.target.parentElement.classList.add(
-    //       'tw-text-osuorange',
-    //       'tw-font-bold',
-    //       'hover-tw-text-osuorange'
-    //     );
-    //   } else {
-    //     e.target.parentElement.classList.remove(
-    //       'tw-text-osuorange',
-    //       'tw-font-bold',
-    //       'hover-tw-text-osuorange'
-    //     );
-    //     e.target.parentElement.classList.add(
-    //       'tw-font-normal',
-    //       'tw-text-neutral-550',
-    //       'hover-tw-text-neutral-700'
-    //     );
-    //   }
-
-
 }
