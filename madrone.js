@@ -9,57 +9,130 @@ for (i = 0; i < megaMenuParent.length; i++) {
       looks like child elements are getting this click event. this makes sure that the code
       is only firing if the parent element has the class mega-menu-parent
      */
-    if (!e.target.parentElement.classList.contains('mega-menu-parent')) return;
+    //if (!e.target.parentElement.classList.contains('mega-menu-parent')) return;
 
     // Remove any active menu items
     let headerHeight = document
       .getElementsByTagName('header')[0]
       .getBoundingClientRect().bottom;
     // If the parent is active ignore the class swap.
-    if (!e.target.parentElement.classList.contains('is-active')) {
-      if (e.target.parentElement.classList.contains('tw-font-normal')) {
-        e.target.parentElement.classList.remove(
-          'tw-font-normal',
-          'tw-text-neutral-550',
-          'hover-tw-text-neutral-700'
-        );
-        e.target.parentElement.classList.add(
-          'tw-text-osuorange',
-          'tw-font-bold',
-          'hover-tw-text-osuorange'
-        );
-      } else {
-        e.target.parentElement.classList.remove(
-          'tw-text-osuorange',
-          'tw-font-bold',
-          'hover-tw-text-osuorange'
-        );
-        e.target.parentElement.classList.add(
-          'tw-font-normal',
-          'tw-text-neutral-550',
-          'hover-tw-text-neutral-700'
-        );
-      }
-    }
+    // if (!e.target.parentElement.classList.contains('is-active')) {
+    //   if (e.target.parentElement.classList.contains('tw-font-normal')) {
+    //     e.target.parentElement.classList.remove(
+    //       'tw-font-normal',
+    //       'tw-text-neutral-550',
+    //       'hover-tw-text-neutral-700'
+    //     );
+    //     e.target.parentElement.classList.add(
+    //       'tw-text-osuorange',
+    //       'tw-font-bold',
+    //       'hover-tw-text-osuorange'
+    //     );
+    //   } else {
+    //     e.target.parentElement.classList.remove(
+    //       'tw-text-osuorange',
+    //       'tw-font-bold',
+    //       'hover-tw-text-osuorange'
+    //     );
+    //     e.target.parentElement.classList.add(
+    //       'tw-font-normal',
+    //       'tw-text-neutral-550',
+    //       'hover-tw-text-neutral-700'
+    //     );
+    //   }
+    // }
+
+    // e.target == <span>
+    // e.target.parentElement = <li>
     let childMenuItem = e.target.parentElement.getElementsByClassName(
       'mega-menu'
     );
+    console.log(childMenuItem);
+
+    let megaMenuExists = childMenuItem.length > 0;
+
+
+
+    // fix the lighting
+
+
+
+    // fix the menu opening/closing
+
+
+
+
     /*
       Only close all the mega menus if we are trying to open a NEW mega menu. Otherwise
       just close what is already open first. This fixes an issue we were having where
       you couldn't reselect a menu item to close the mega menu.
      */
-    if (childMenuItem.length > 0) {
-      childMenuItem[0].style.top = (headerHeight + 5) / 16 + 'rem';
-      if (!childMenuItem[0].classList.contains('lg-tw-grid')) {
-        closeMegaMenu();
-      }
-      childMenuItem[0].classList.toggle('lg-tw-grid');
-    } else {
-      closeMegaMenu();
+    if (megaMenuExists) {
+      let megaMenuDiv = childMenuItem[0];
+      let megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
+      megaMenuDiv.style.top = (headerHeight + 5) / 16 + 'rem';
+
+      setActiveColors(e.target.parentElement, megaMenuIsOpen);
+      setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
     }
   });
 }
+/**
+ * new functions
+ */
+function setActiveMegaMenu(arg1, arg2) {
+  let openMegaMenus = document.getElementsByClassName('mega-menu');
+
+  for (i = 0; i < openMegaMenus.length; i++) {
+    openMegaMenus[i]?.classList.remove('lg-tw-grid');
+  }
+
+  if (arg2) {
+    // mega menu currently open and is going to close
+  } else {
+    arg1.classList.add('lg-tw-grid');
+  }
+
+
+}
+
+function setActiveColors(arg1, arg2) {
+  // arg1 == e.target.parentElement | <li>
+  // arg2 == megaMenuIsOpen | bool
+
+  let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
+
+  // resets color on all non active mega menu parent items
+  for (i = 0; i < openMegaMenuParents.length; i++) {
+    if (!openMegaMenuParents[i].parentElement.classList.contains('is-active')) {
+      openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
+      openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
+    } else {
+      openMegaMenuParents[i].parentElement.classList.remove('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
+      openMegaMenuParents[i].parentElement.classList.add('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
+    }
+  }
+
+  if (arg2) {
+    // mega menu currently open and is going to close | don't highlight selection
+  } else {
+    arg1.classList.remove(
+      'tw-font-normal',
+      'tw-text-neutral-550',
+      'hover-tw-text-neutral-700',
+    );
+    arg1.classList.add(
+      'tw-text-osuorange',
+      'tw-font-bold',
+      'hover-tw-text-osuorange',
+    );
+  }
+}
+
+
+/**
+ * End of new crap
+ */
 
 /**
  * Modal for OSU Menu
@@ -86,7 +159,7 @@ document.addEventListener('keydown', e => {
   // keyCode is deprecated but left in for legacy browsers.
   var key = e.key || e.keyCode;
   if (key === 'Escape' || key === 'Esc' || key === 27) {
-    closeMegaMenu();
+    toggleMegaMenu();
     if (document.body.classList.contains('modal-active')) {
       toggleModal();
     }
@@ -107,16 +180,76 @@ function toggleModal() {
 /**
  * Close mega menu items.
  */
-function closeMegaMenu() {
+function toggleMegaMenu(arg1 = null, willOpen = false) {
+
+  // arg1 = e.target.parentElement
+
   let openMegaMenus = document.getElementsByClassName('mega-menu');
+
   for (i = 0; i < openMegaMenus.length; i++) {
     openMegaMenus[i]?.classList.remove('lg-tw-grid');
   }
+
   let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
+
+  // resets color on all non active mega menu parent items
   for (i = 0; i < openMegaMenuParents.length; i++) {
-    if (!openMegaMenuParents[i].classList.contains('is-active')) {
-      openMegaMenuParents[i].classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
-      openMegaMenuParents[i].classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
+    if (!openMegaMenuParents[i].parentElement.classList.contains('is-active')) {
+      openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
+      openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
     }
   }
+
+  if (willOpen) {
+    arg1.classList.remove(
+      'tw-font-normal',
+      'tw-text-neutral-550',
+      'hover-tw-text-neutral-700',
+    );
+    arg1.classList.add(
+      'tw-text-osuorange',
+      'tw-font-bold',
+      'hover-tw-text-osuorange',
+    );
+  } else {
+    arg1.classList.remove(
+      'tw-text-osuorange',
+      'tw-font-bold',
+      'hover-tw-text-osuorange',
+    );
+    arg1.classList.add(
+      'tw-font-normal',
+      'tw-text-neutral-550',
+      'hover-tw-text-neutral-700',
+    );
+  }
+
+
+
+
+    //   if (e.target.parentElement.classList.contains('tw-font-normal')) {
+    //     e.target.parentElement.classList.remove(
+    //       'tw-font-normal',
+    //       'tw-text-neutral-550',
+    //       'hover-tw-text-neutral-700'
+    //     );
+    //     e.target.parentElement.classList.add(
+    //       'tw-text-osuorange',
+    //       'tw-font-bold',
+    //       'hover-tw-text-osuorange'
+    //     );
+    //   } else {
+    //     e.target.parentElement.classList.remove(
+    //       'tw-text-osuorange',
+    //       'tw-font-bold',
+    //       'hover-tw-text-osuorange'
+    //     );
+    //     e.target.parentElement.classList.add(
+    //       'tw-font-normal',
+    //       'tw-text-neutral-550',
+    //       'hover-tw-text-neutral-700'
+    //     );
+    //   }
+
+
 }
