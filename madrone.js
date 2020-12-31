@@ -5,22 +5,21 @@
 let megaMenuParent = document.getElementsByClassName('mega-menu-parent');
 for (i = 0; i < megaMenuParent.length; i++) {
   megaMenuParent[i].addEventListener('click', e => {
+    let megaMenuParentLi = e.target.closest("li");
     // Remove any active menu items
     let headerHeight = document
       .getElementsByTagName('header')[0]
       .getBoundingClientRect().bottom;
-    // e.target == <span>
-    // e.target.parentElement = <li>
-    let childMenuItem = e.target.parentElement.getElementsByClassName(
+    let childMenuItem = megaMenuParentLi.getElementsByClassName(
       'mega-menu'
     );
+    console.log(childMenuItem)
     let megaMenuExists = childMenuItem.length > 0;
     if (megaMenuExists) {
       let megaMenuDiv = childMenuItem[0];
       let megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
       megaMenuDiv.style.top = (headerHeight + 5) / 16 + 'rem';
-
-      setActiveColors(e.target.parentElement, megaMenuIsOpen);
+      setActiveColors(megaMenuParentLi, megaMenuIsOpen);
       setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
     }
   });
