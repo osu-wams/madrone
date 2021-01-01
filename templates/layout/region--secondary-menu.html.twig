@@ -12,8 +12,8 @@
  * @see template_preprocess_region()
  */
 #}
-{% if content %}
-  <div{{ attributes }}>
+{% if content|striptags|trim|length > 0 %}
+  <div{{ attributes.addClass('tw-bg-neutral-700', 'tw-text-bucktoothwhite', 'tw-py-2', 'lg-tw-grid', 'lg-tw-grid-cols-secondary-nav').setAttribute('id', 'secondary-menu-container') }}>
     {{ content }}
   </div>
 {% endif %}

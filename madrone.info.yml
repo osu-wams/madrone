@@ -3,6 +3,11 @@ description: OSU Theme of the future
 core: 8.x
 core_version_requirement: ^8 || ^9
 type: theme
+dependencies:
+  - drupal:views
+  - group:group
+  - group_content_menu:group_content_menu
+  - entitygroupfield:entitygroupfield
 base theme: stable
 regions:
   header: Header
