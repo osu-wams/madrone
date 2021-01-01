@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override for page titles.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *   is_front:
+ */
+#}
+{{ title_prefix }}
+{% if title %}
+  {% if is_front and hide_title_front %}
+    <h1{{ title_attributes.addClass('visually-hidden') }}>{{ title }}</h1>
+  {% else %}
+    <h1{{ title_attributes }}>{{ title }}</h1>
+  {% endif %}
+{% endif %}
+{{ title_suffix }}

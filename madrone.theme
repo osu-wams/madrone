@@ -29,6 +29,7 @@ function madrone_preprocess(&$variables, $hook) {
   } catch (Exception $exception) {
     $variables['is_front'] = FALSE;
   }
+  $variables['hide_title_front'] = theme_get_setting('madrone_front_title') ? TRUE : FALSE;
   $variables['#cache']['contexts'][] = 'url.path.is_front';
 }
 
