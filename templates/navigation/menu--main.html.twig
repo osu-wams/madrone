@@ -51,7 +51,7 @@ We call a macro which calls itself to render the full tree.
     {% set childUlClassesString = childUlClasses|join(' ') %}
     {% set nestedUlClasses = [
       'tw-grid',
-      'tw-col-start-2',
+      'tw-col-start-3',
       'tw-col-span-2',
       'tw-grid-cols-2',
       'tw-grid-rows-layout',
@@ -62,7 +62,7 @@ We call a macro which calls itself to render the full tree.
       'tw-hidden',
       'tw-grid',
       'tw-fixed',
-      'tw-grid-cols-3',
+      'tw-grid-cols-5',
       'tw-bg-bucktoothwhite',
       'tw-gap-4',
       'tw-z-10',
@@ -76,8 +76,21 @@ We call a macro which calls itself to render the full tree.
       <ul class="{{ ulClassesString }}">
     {% else %}
       <div class="{{ megaMenuDivClassesString }}">
+
+      {% if menu_level == 1 %}
+        <div class="tw-absolute tw-text-neutral-550 hover-tw-text-neutral-700 tw-col-start-5">
+            <span class="tw-text-2xl tw-cursor-pointer" onclick="closeMegaMenu();">
+              <i class="fa fa-times"></i>
+            </span>
+        </div>
+      {% endif %}
+
       <ul class="{{ nestedUlClassesString }}">
     {% endif %}
+
+
+
+
     {% for item in items %}
       {% if menu_level == 0 %}
         {% set liClasses = item.in_active_trail ? [

@@ -13,7 +13,6 @@ for (i = 0; i < megaMenuParent.length; i++) {
     let childMenuItem = megaMenuParentLi.getElementsByClassName(
       'mega-menu'
     );
-    console.log(childMenuItem)
     let megaMenuExists = childMenuItem.length > 0;
     if (megaMenuExists) {
       let megaMenuDiv = childMenuItem[0];
