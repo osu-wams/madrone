@@ -24,19 +24,19 @@ for (i = 0; i < megaMenuParent.length; i++) {
   });
 }
 
-function setActiveMegaMenu(arg1, arg2) {
+function setActiveMegaMenu(arg1 = null, arg2 = null) {
   let openMegaMenus = document.getElementsByClassName('mega-menu');
   for (i = 0; i < openMegaMenus.length; i++) {
     openMegaMenus[i]?.classList.remove('lg-tw-grid');
   }
   if (arg2) {
     // mega menu currently open and is going to close
-  } else {
+  } else if (arg1 != null) {
     arg1.classList.add('lg-tw-grid');
   }
 }
 
-function setActiveColors(arg1, arg2) {
+function setActiveColors(arg1 = null, arg2 = null) {
   // arg1 == e.target.parentElement | <li>
   // arg2 == megaMenuIsOpen | bool
   let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
@@ -53,7 +53,7 @@ function setActiveColors(arg1, arg2) {
   }
   if (arg2) {
     // mega menu currently open and is going to close | don't highlight selection
-  } else {
+  } else if (arg1 != null) {
     arg1.classList.remove(
       'tw-font-normal',
       'tw-text-neutral-550',
@@ -115,17 +115,6 @@ function toggleModal() {
  * Close mega menu items.
  */
 function closeMegaMenu() {
-  // closes all the mega menus
-  let openMegaMenus = document.getElementsByClassName('mega-menu');
-  for (i = 0; i < openMegaMenus.length; i++) {
-    openMegaMenus[i]?.classList.remove('lg-tw-grid');
-  }
-  let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
-  // resets color on all non active mega menu parent items
-  for (i = 0; i < openMegaMenuParents.length; i++) {
-    if (!openMegaMenuParents[i].parentElement.classList.contains('is-active')) {
-      openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
-      openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
-    }
-  }
+  setActiveColors();
+  setActiveMegaMenu();
 }
