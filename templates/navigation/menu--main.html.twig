@@ -94,14 +94,12 @@ We call a macro which calls itself to render the full tree.
     {% for item in items %}
       {% if menu_level == 0 %}
         {% set liClasses = item.in_active_trail ? [
-
           'is-active',
           'tw-cursor-pointer',
           'tw-text-osuorange',
           'tw-font-bold',
           'hover-tw-text-osuoranage',
         ] : [
-
           'tw-cursor-pointer',
           'tw-font-normal',
           'tw-text-neutral-550',

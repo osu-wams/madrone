@@ -82,6 +82,9 @@ input {
   .tw-underline-thin {
     text-decoration-thickness: 0.125rem;
   }
+  .tw-border-bot-custom {
+    border-bottom: 5px solid #d73f09;
+  }
 }
 @layer base {
   @font-face {

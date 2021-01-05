@@ -42,6 +42,7 @@ function setActiveColors(arg1, arg2) {
   let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
   // resets color on all non active mega menu parent items
   for (i = 0; i < openMegaMenuParents.length; i++) {
+    openMegaMenuParents[i].classList.remove('tw-border-bot-custom')
     if (!openMegaMenuParents[i].parentElement.classList.contains('is-active')) {
       openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
       openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
@@ -63,6 +64,7 @@ function setActiveColors(arg1, arg2) {
       'tw-font-bold',
       'hover-tw-text-osuorange',
     );
+    arg1.getElementsByClassName('mega-menu-parent')[0].classList.add('tw-border-bot-custom')
   }
 }
 
