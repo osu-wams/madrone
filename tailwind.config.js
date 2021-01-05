@@ -31,6 +31,9 @@ module.exports = {
         '3': '3 1 0%',
         '4': '4 1 0%'
       },
+      gridAutoRows: {
+        'minmax100': 'minmax(0, 100px)',
+      },
       gridTemplateRows: {
         'layout':'repeat(10, minmax(0, 100px))',
       },
