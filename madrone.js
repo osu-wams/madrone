@@ -43,13 +43,8 @@ function setActiveColors(arg1 = null, arg2 = null) {
   // resets color on all non active mega menu parent items
   for (i = 0; i < openMegaMenuParents.length; i++) {
     openMegaMenuParents[i].classList.remove('tw-border-bot-custom')
-    if (!openMegaMenuParents[i].parentElement.classList.contains('is-active')) {
-      openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
-      openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
-    } else {
-      openMegaMenuParents[i].parentElement.classList.remove('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
-      openMegaMenuParents[i].parentElement.classList.add('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
-    }
+    openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
+    openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
   }
   if (arg2) {
     // mega menu currently open and is going to close | don't highlight selection

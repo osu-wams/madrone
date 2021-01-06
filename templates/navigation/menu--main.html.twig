@@ -15,7 +15,6 @@
  *     menu tree.
  *   - is_collapsed: TRUE if the link has children within the current menu tree
  *     that are not currently visible.
- *   - in_active_trail: TRUE if the link is in the active trail.
  */
 #}
 {% import _self as menus %}
@@ -76,7 +75,6 @@ We call a macro which calls itself to render the full tree.
       <ul class="{{ ulClassesString }}">
     {% else %}
       <div class="{{ megaMenuDivClassesString }}">
-
       {% if menu_level == 1 %}
         <div class="tw-absolute tw-text-neutral-550 hover-tw-text-neutral-700 tw-col-start-5">
             <span class="tw-text-2xl tw-cursor-pointer" onclick="closeMegaMenu();">
@@ -84,27 +82,16 @@ We call a macro which calls itself to render the full tree.
             </span>
         </div>
       {% endif %}
-
       <ul class="{{ nestedUlClassesString }}">
     {% endif %}
-
-
-
-
     {% for item in items %}
       {% if menu_level == 0 %}
-        {% set liClasses = item.in_active_trail ? [
-          'is-active',
-          'tw-cursor-pointer',
-          'tw-text-osuorange',
-          'tw-font-bold',
-          'hover-tw-text-osuoranage',
-        ] : [
-          'tw-cursor-pointer',
-          'tw-font-normal',
-          'tw-text-neutral-550',
-          'hover-tw-text-neutral-700',
-        ] %}
+          {% set liClasses = [
+            'tw-cursor-pointer',
+            'tw-font-normal',
+            'tw-text-neutral-550',
+            'hover-tw-text-neutral-700',
+          ] %}
         {% set linkClasses = 'tw-no-underline mega-menu-parent' %}
       {% else %}
         {% set liClasses = [
