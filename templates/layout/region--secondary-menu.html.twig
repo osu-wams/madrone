@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% if content|striptags|trim|length > 0 %}
+  <div{{ attributes.addClass('tw-bg-neutral-700', 'tw-text-bucktoothwhite', 'tw-py-2', 'lg-tw-grid', 'lg-tw-grid-cols-secondary-nav').setAttribute('id', 'secondary-menu-container') }}>
+    {{ content }}
+  </div>
+{% endif %}

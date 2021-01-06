@@ -139,4 +139,11 @@ input {
   #osu-menu a {
     @apply tw-no-underline tw-py-1 tw-block;
   }
+
+  #secondary-menu-container #block-madrone-views-block-group-name-block {
+    @apply lg-tw-col-start-2
+  }
+  #secondary-menu-container #block-madrone-groupmenu {
+    @apply lg-tw-col-start-3 tw-whitespace-nowrap
+  }
 }
