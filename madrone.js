@@ -94,59 +94,58 @@ function closeMegaMenu() {
  * Resets all the colors on the mega menu parents. If the mega menu is being opened, will change the color of the
  * corresponding mega menu parent item to orange. Also flips the cheveron.
  */
-function setActiveColors(arg1 = null, arg2 = null) {
+function setActiveColors(megaMenuParentLi= null, menuIsOpen = null) {
 
-  // arg1 == e.target.parentElement | <li>
-  // arg2 == megaMenuIsOpen | bool
+  // megaMenuParentLi == e.target.parentElement | <li>
+  // menuIsOpen == megaMenuIsOpen | bool
   let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
 
   // resets color on all non active mega menu parent items
   for (i = 0; i < openMegaMenuParents.length; i++) {
-
-    // openMegaMenuParents[i].parentElement.classList.remove('tw-border-bot-custom')
-    openMegaMenuParents[i].parentElement.classList.remove('tw-border-osuorange')
-    openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'hover-tw-text-osuorange');
-    openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
+    let parentLi = openMegaMenuParents[i].parentElement
+    parentLi.classList.remove('tw-border-osuorange')
+    parentLi.classList.remove('tw-text-osuorange', 'hover-tw-text-osuorange');
+    parentLi.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
 
     // Checks to see if there is a chevron. If so, reset it to down
-    if (openMegaMenuParents[i].parentElement.children[1]) {
-      openMegaMenuParents[i].parentElement.children[1].setAttribute('data-icon', 'caret-down')
+    if (parentLi.children[1]) {
+      parentLi.children[1].setAttribute('data-icon', 'caret-down')
     }
   }
-  if (arg2) {
+  if (menuIsOpen) {
 
     // mega menu currently open and is going to close | don't highlight selection
-  } else if (arg1 != null) {
+  } else if (megaMenuParentLi != null) {
 
     // If this function was invoked from our click event on the mega menu parent, we want to highlight it
-    arg1.classList.remove(
+    megaMenuParentLi.classList.remove(
       'tw-font-normal',
       'tw-text-neutral-550',
       'hover-tw-text-neutral-700',
     );
-    arg1.classList.add(
+    megaMenuParentLi.classList.add(
       'tw-text-osuorange',
       'hover-tw-text-osuorange',
     );
 
     // Sets a orange border on the mega menu parent LI that was selected
-    arg1.getElementsByClassName('mega-menu-parent')[0].parentElement.classList.add('tw-border-osuorange')
-    arg1.children[1].setAttribute('data-icon', 'caret-up')
+    megaMenuParentLi.getElementsByClassName('mega-menu-parent')[0].parentElement.classList.add('tw-border-osuorange')
+    megaMenuParentLi.children[1].setAttribute('data-icon', 'caret-up')
   }
 }
 
 /**
- * Hides all the mega menus. Will then add lg-tw-grid to arg1 IFF arg2 is true and arg1 is not null
+ * Hides all the mega menus. Will then add lg-tw-grid to megaMenuDiv IFF menuIsOpen is true and megaMenuDiv is not null
  */
-function setActiveMegaMenu(arg1 = null, arg2 = null) {
+function setActiveMegaMenu(megaMenuDiv = null, menuIsOpen = null) {
   let openMegaMenus = document.getElementsByClassName('mega-menu');
   for (i = 0; i < openMegaMenus.length; i++) {
     openMegaMenus[i]?.classList.remove('lg-tw-grid');
   }
-  if (arg2) {
+  if (menuIsOpen) {
     // mega menu currently open and is going to close
-  } else if (arg1 != null) {
-    arg1.classList.add('lg-tw-grid');
+  } else if (megaMenuDiv != null) {
+    megaMenuDiv.classList.add('lg-tw-grid');
   }
 }
 
