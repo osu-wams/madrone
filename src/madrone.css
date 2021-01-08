@@ -167,7 +167,6 @@ input {
 
   .mega-menu-parent::before {
     display: block;
-    /*content: attr(title);*/
     font-weight: bold;
     height: 0;
     overflow: hidden;
