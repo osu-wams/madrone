@@ -82,7 +82,6 @@ input {
   .tw-underline-thin {
     text-decoration-thickness: 0.125rem;
   }
-
 }
 @layer base {
   @font-face {
@@ -141,11 +140,13 @@ input {
     @apply tw-no-underline tw-py-1 tw-block;
   }
 
-  .mega-menu-child i, .mega-menu-child svg {
+  .mega-menu-child i,
+  .mega-menu-child svg {
     @apply tw-absolute tw--left-6 tw-text-osuorange tw-mt-1;
   }
 
-  .mega-menu-child i, .mega-menu-child svg:before {
+  .mega-menu-child i,
+  .mega-menu-child svg:before {
     @apply tw-bg-osuorange;
   }
 
@@ -161,15 +162,10 @@ input {
     @apply tw-self-stretch tw-items-stretch tw-flex;
   }
 
-  nav > ul > li {
+  .madrone-mega-menu-main > li {
     border-bottom: 2px solid transparent;
   }
-
-  .mega-menu-parent::before {
-    display: block;
-    font-weight: bold;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
+  .madrone-mega-menu-main .madrone-active-trail {
+    @apply tw-border-osuorange;
   }
 }
