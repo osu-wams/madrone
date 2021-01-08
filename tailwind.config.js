@@ -46,11 +46,14 @@ module.exports = {
         '20vw': '20vw',
         menu: '11.125rem'
       },
+      height: {},
       width: {
         '81.2': '21.2rem',
         '81.5': '21.5rem'
       },
-      height: {}
+      gridTemplateColumns: {
+        'secondary-nav': '23rem [group-title-start] 1fr [group-title-end group-menu-start] 1fr [group-menu-end] 12rem'
+      }
     }
   },
   variants: {

@@ -23,6 +23,7 @@ services:
       MYSQL_DATABASE: drupal
       MYSQL_USER: drupal
       MYSQL_PASSWORD: drupal
+    restart: unless-stopped
 
 volumes:
   drupal-db:

@@ -168,4 +168,11 @@ input {
   .madrone-mega-menu-main .madrone-active-trail {
     @apply tw-border-osuorange;
   }
+
+  #secondary-menu-container #block-madrone-views-block-group-name-block {
+    @apply lg-tw-col-start-2;
+  }
+  #secondary-menu-container #block-madrone-groupmenu {
+    @apply lg-tw-col-start-3 tw-whitespace-nowrap;
+  }
 }
