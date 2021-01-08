@@ -82,9 +82,7 @@ input {
   .tw-underline-thin {
     text-decoration-thickness: 0.125rem;
   }
-  .tw-border-bot-custom {
-    border-bottom: 5px solid #d73f09;
-  }
+
 }
 @layer base {
   @font-face {
@@ -141,5 +139,38 @@ input {
   /** OSU MENU (left hand side global) */
   #osu-menu a {
     @apply tw-no-underline tw-py-1 tw-block;
+  }
+
+  .mega-menu-child i, .mega-menu-child svg {
+    @apply tw-absolute tw--left-6 tw-text-osuorange tw-mt-1;
+  }
+
+  .mega-menu-child i, .mega-menu-child svg:before {
+    @apply tw-bg-osuorange;
+  }
+
+  .mega-menu-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: 'ellipsis';
+  }
+
+  #block-madrone-main-menu {
+    @apply tw-self-stretch tw-items-stretch tw-flex;
+  }
+
+  nav > ul > li {
+    border-bottom: 2px solid transparent;
+  }
+
+  .mega-menu-parent::before {
+    display: block;
+    /*content: attr(title);*/
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
 }

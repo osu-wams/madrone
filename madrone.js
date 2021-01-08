@@ -42,9 +42,14 @@ function setActiveColors(arg1 = null, arg2 = null) {
   let openMegaMenuParents = document.getElementsByClassName('mega-menu-parent');
   // resets color on all non active mega menu parent items
   for (i = 0; i < openMegaMenuParents.length; i++) {
-    openMegaMenuParents[i].classList.remove('tw-border-bot-custom')
-    openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'tw-font-bold', 'hover-tw-text-osuorange');
+    // openMegaMenuParents[i].parentElement.classList.remove('tw-border-bot-custom')
+    openMegaMenuParents[i].parentElement.classList.remove('tw-border-osuorange')
+    openMegaMenuParents[i].parentElement.classList.remove('tw-text-osuorange', 'hover-tw-text-osuorange');
     openMegaMenuParents[i].parentElement.classList.add('tw-font-normal', 'tw-text-neutral-550', 'hover-tw-text-neutral-700');
+    // console.log(openMegaMenuParents[i].parentElement.children[1])
+    if (openMegaMenuParents[i].parentElement.children[1]) {
+      openMegaMenuParents[i].parentElement.children[1].setAttribute('data-icon', 'caret-down')
+    }
   }
   if (arg2) {
     // mega menu currently open and is going to close | don't highlight selection
@@ -56,10 +61,15 @@ function setActiveColors(arg1 = null, arg2 = null) {
     );
     arg1.classList.add(
       'tw-text-osuorange',
-      'tw-font-bold',
       'hover-tw-text-osuorange',
     );
-    arg1.getElementsByClassName('mega-menu-parent')[0].classList.add('tw-border-bot-custom')
+    arg1.getElementsByClassName('mega-menu-parent')[0].parentElement.classList.add('tw-border-osuorange')
+    // console.log(arg1.children[1])
+
+    // console.log(arg1.querySelector('[data-icon="caret-down"]'))
+
+    arg1.children[1].setAttribute('data-icon', 'caret-up')
+    // arg1.children[1].
   }
 }
 
