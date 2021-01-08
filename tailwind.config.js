@@ -26,10 +26,20 @@ module.exports = {
         sans: ['Open Sans', 'sans-serif'],
         stratum2web: ['Stratum2WebBold', 'sans-serif']
       },
+      fontSize: {
+        'xxs':'11px',
+        'med':'16px',
+      },
       flex: {
         '2': '2 1 0%',
         '3': '3 1 0%',
         '4': '4 1 0%'
+      },
+      gridAutoRows: {
+        'minmax100': 'minmax(0, 100px)',
+      },
+      gridTemplateRows: {
+        'layout':'repeat(10, minmax(0, 100px))',
       },
       inset: {
         '25': '25%',

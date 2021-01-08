@@ -140,10 +140,39 @@ input {
     @apply tw-no-underline tw-py-1 tw-block;
   }
 
+  .mega-menu-child i,
+  .mega-menu-child svg {
+    @apply tw-absolute tw--left-6 tw-text-osuorange tw-mt-1;
+  }
+
+  .mega-menu-child i,
+  .mega-menu-child svg:before {
+    @apply tw-bg-osuorange;
+  }
+
+  .mega-menu-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: 'ellipsis';
+  }
+
+  #block-madrone-main-menu {
+    @apply tw-self-stretch tw-items-stretch tw-flex;
+  }
+
+  .madrone-mega-menu-main > li {
+    border-bottom: 2px solid transparent;
+  }
+  .madrone-mega-menu-main .madrone-active-trail {
+    @apply tw-border-osuorange;
+  }
+
   #secondary-menu-container #block-madrone-views-block-group-name-block {
-    @apply lg-tw-col-start-2
+    @apply lg-tw-col-start-2;
   }
   #secondary-menu-container #block-madrone-groupmenu {
-    @apply lg-tw-col-start-3 tw-whitespace-nowrap
+    @apply lg-tw-col-start-3 tw-whitespace-nowrap;
   }
 }

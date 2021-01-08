@@ -15,17 +15,14 @@
  *     menu tree.
  *   - is_collapsed: TRUE if the link has children within the current menu tree
  *     that are not currently visible.
- *   - in_active_trail: TRUE if the link is in the active trail.
  */
 #}
 {% import _self as menus %}
-
 {#
 We call a macro which calls itself to render the full tree.
 @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
 {{ menus.menu_links(items, attributes, 0) }}
-
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
@@ -33,15 +30,18 @@ We call a macro which calls itself to render the full tree.
       'tw-hidden',
       'lg-tw-flex',
       'tw-space-x-10',
-      'tw-items-center'
+      'tw-items-center',
+      'madrone-mega-menu-main'
     ] %}
+    {% set ulClassesString = ulClasses|join(' ') %}
     {% set childUlClasses = [
       'mega-menu',
       'tw-hidden',
       'tw-flex-col',
       'tw-fixed',
       'tw-bg-bucktoothwhite',
-      'tw-gap-4',
+      'tw-gap-x-20',
+      'tw-gap-y-5',
       'tw-z-10',
       'tw-w-full',
       'tw-h-full',
@@ -49,42 +49,93 @@ We call a macro which calls itself to render the full tree.
       'tw-top-menu',
       'tw-cursor-auto'
     ] %}
+    {% set childUlClassesString = childUlClasses|join(' ') %}
+    {% set nestedUlClasses = [
+      'tw-grid',
+      'tw-col-start-2',
+      'tw-col-span-3',
+      'tw-grid-cols-3',
+      'tw-auto-rows-minmax100',
+      'tw-gap-x-20',
+      'tw-gap-y-5',
+      'tw-mt-10',
+    ] %}
+    {% set nestedUlClassesString = nestedUlClasses|join(' ') %}
+    {% set megaMenuDivClasses = [
+      'mega-menu',
+      'tw-hidden',
+      'tw-grid',
+      'tw-fixed',
+      'tw-grid-cols-5',
+      'tw-bg-bucktoothwhite',
+      'tw-gap-4',
+      'tw-z-10',
+      'tw-w-full',
+      'tw-h-full',
+      'tw-left-0',
+      'tw-top-menu',
+      'tw-cursor-default',
+    ] %}
+    {% set megaMenuDivClassesString = megaMenuDivClasses|join(' ') %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass(ulClasses) }}>
+      <ul class="{{ ulClassesString }}">
       {% else %}
-        <ul{{ attributes.removeClass(ulClasses).addClass(childUlClasses) }}>
-        {% endif %}
-        {% if menu_level == 1 %}
-          <div class="tw-absolute tw-m-16 tw-right-20vw tw-text-neutral-550 hover-tw-text-neutral-700">
-            <span class="tw-text-2xl tw-cursor-pointer" onclick="closeMegaMenu();">
-              <i class="fa fa-times"></i>
-            </span>
-          </div>
-        {% endif %}
-        {% for item in items %}
-          {% if menu_level == 0 %}
-            {% set liClasses = [
-              item.in_active_trail ? 'mega-menu-parent is-active tw-cursor-pointer tw-text-osuorange tw-font-bold hover-tw-text-osuorange' : 'mega-menu-parent tw-cursor-pointer tw-font-normal tw-text-neutral-550 hover-tw-text-neutral-700',
-            ] %}
-          {% else %}
-            {% set liClasses = [
-              'tw-font-normal',
-              'tw-text-neutral-550',
-              'hover-tw-text-neutral-700',
-              'tw-relative',
-              'tw-top-25',
-              'tw-left-20vw'
-            ] %}
+        <div class="{{ megaMenuDivClassesString }}">
+          {% if menu_level == 1 %}
+            <div class="tw-absolute tw-text-neutral-400 tw-col-start-5 tw-mt-5">
+              <span class="tw-text-2xl tw-cursor-pointer" onclick="closeMegaMenu();">
+                <i class="fa fa-times"></i>
+              </span>
+            </div>
           {% endif %}
-          <li{{ item.attributes.addCLass(liClasses) }}>
-            {{ link(item.title, item.url, { 'class': 'tw-no-underline' }) }}
-            {% if item.below %}
-              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          <ul class="{{ nestedUlClassesString }}">
+          {% endif %}
+          {% for item in items %}
+            {% if menu_level == 0 %}
+              {% set liClasses = [
+            'tw-font-normal',
+            'tw-text-neutral-550',
+            'tw-flex',
+            'tw-self-stretch',
+            'tw-items-center',
+            'tw-text-med',
+          ] %}
+              {% set linkClasses = 'tw-no-underline mega-menu-parent tw-cursor-pointer' %}
+            {% else %}
+              {% set liClasses = [
+          'tw-font-normal',
+          'tw-text-neutral-700',
+          'tw-relative',
+          'mega-menu-child',
+        ] %}
+              {% set linkClasses = 'tw-no-underline' %}
             {% endif %}
-          </li>
-        {% endfor %}
-        {% if menu_level == 0 %}
-        </ul>
+            <li{{item.attributes.addClass(liClasses)}}>
+              {{ link(item.title, item.url, {'class':linkClasses}) }}
+
+              {# adding the chevron #}
+              {% if menu_level == 0 and item.below %}
+                <i class="fas fa-fw fa-caret-down"></i>
+              {% endif %}
+
+              {# content description for mega menu items #}
+              {% if menu_level == 1 %}
+                <p class="tw-text-xxs tw-mt-1 mega-menu-description">
+                  {{ item.url.options.attributes.title }}
+                </p>
+              {% endif %}
+
+              {# looks to see if there are child links to the menu item #}
+              {% if item.below %}
+                {{ menus.menu_links(item.below, attributes, menu_level+1) }}
+              {% endif %}
+            </li>
+          {% endfor %}
+
+          {# written this way because php storm cries if you write the IF statement as == 0 #}
+          {% if menu_level != 0 %}
+          </ul>
+        </div>
     {% else %}
       </ul>
     {% endif %}
