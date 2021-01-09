@@ -77,7 +77,7 @@ input {
  */
 @layer utilities {
   .tw-underline-osuorange {
-    text-decoration-color: #d73f09;
+    text-decoration-color: theme('colors.osuorange');
   }
   .tw-underline-thin {
     text-decoration-thickness: 0.125rem;
