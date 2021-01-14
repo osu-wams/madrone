@@ -4,6 +4,8 @@ global-styling:
       dist/madrone.css: { }
   js:
     madrone.js: { }
+  dependencies:
+    - core/jquery
 
 fonts:
   css:
