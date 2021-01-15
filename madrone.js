@@ -39,7 +39,7 @@ for (i = 0; i < megaMenuParent.length; i++) {
  */
 var openmodal = document.querySelectorAll('.modal-open');
 for (var i = 0; i < openmodal.length; i++) {
-  openmodal[i].addEventListener('click', function(event) {
+  openmodal[i].addEventListener('click', function (event) {
     event.preventDefault();
     toggleModal();
   });
@@ -150,3 +150,67 @@ function setActiveMegaMenu(megaMenuDiv = null, menuIsOpen = false) {
     megaMenuDiv.classList.add('lg-tw-grid');
   }
 }
+
+// More Menu for the Main Menu in header.
+const menuContainer = document.querySelector('#block-madrone-main-menu');
+const menuPrimary = menuContainer.querySelector('.madrone-mega-menu-main');
+const menuPrimaryItems = menuContainer.querySelectorAll('.madrone-mega-menu-main > li:not(.madrone-mega-menu-main-more)');
+menuContainer.classList.add('--jsfield');
+menuPrimary.insertAdjacentHTML('beforeend', `
+<li class="madrone-mega-menu-main-more">
+    <button type="button" aria-haspopup="true" aria-expanded="false">
+        More &darr;
+    </button>
+    <ul class="madrone-mega-menu-main-secondary">
+        ${menuPrimary.innerHTML}
+    </ul>
+    </button>
+</li>
+`);
+const menuSecondary = menuContainer.querySelector('.madrone-mega-menu-main-secondary');
+const menuSecondaryItems = menuSecondary.querySelectorAll('li');
+const allItems = menuContainer.querySelectorAll('li');
+const moreLi = menuPrimary.querySelector('.madrone-mega-menu-main-more');
+const moreButton = moreLi.querySelector('button');
+moreButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  menuContainer.classList.toggle('madrone-mega-menu-main-show-secondary');
+  moreButton.setAttribute('aria-expanded', menuContainer.classList.contains('madrone-mega-menu-main-show-secondary'));
+});
+
+/**
+ * "Move" items from main menu into more menu.
+ */
+function doAdapt() {
+  allItems.forEach((item) => {
+    item.classList.remove('tw-hidden');
+  });
+  let stopWidth = moreButton.offsetWidth;
+  let hiddenItems = [];
+  const primaryWidth = menuPrimary.offsetWidth;
+  menuPrimaryItems.forEach((item, i) => {
+    console.log(primaryWidth, stopWidth + item.offsetWidth);
+    if (primaryWidth >= stopWidth + item.offsetWidth) {
+      stopWidth += item.offsetWidth;
+    } else {
+      item.classList.add('tw-hidden');
+      hiddenItems.push(i);
+    }
+  });
+  if (!hiddenItems.length) {
+    moreLi.classList.add('tw-hidden');
+    menuContainer.classList.remove('madrone-mega-menu-main-show-secondary');
+    moreButton.setAttribute('aria-expanded', false);
+  } else {
+    menuSecondaryItems.forEach((item, i) => {
+      if (!hiddenItems.includes(i)) {
+        item.classList.add('tw-hidden');
+      }
+    });
+  }
+}
+
+// Adapt immediately on load.
+doAdapt();
+// Adapt on window resize.
+window.addEventListener('resize', doAdapt);
