@@ -157,14 +157,39 @@ input {
     overflow: hidden;
     text-overflow: 'ellipsis';
   }
+  .madrone-mega-menu-main {
+    flex-wrap: wrap;
+  }
 
+  /* potientiall only do this between 1024 and 1440 or something */
+  .site-name {
+    max-width: 400px;
+  }
   #block-madrone-main-menu:not(.--jsfield) {
     @apply tw-overflow-x-auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
   }
-  #block-madrone-main-menu .madrone-mega-menu-main-secondary {
-    @apply tw-hidden tw-absolute tw-top-full tw-right-0;
+  #block-madrone-main-menu .--hidden {
+    display: none;
   }
-  #block-madrone-main-menu.madrone-mega-menu-main-show-secondary .madrone-mega-menu-main-secondary {
+  .madrone-mega-menu-main-secondary {
+    @apply tw-hidden tw-absolute tw-top-full tw-right-0 tw-bg-white tw-shadow-sm;
+    max-width: 100%;
+    min-width: 10em;
+    z-index: 999;
+    padding: 10px 10px 20px;
+    border: 1px solid #999;
+  }
+  .madrone-mega-menu-main-secondary a,
+  .madrone-mega-menu-main-secondary span {
+    padding: 8px 5px;
+  }
+  /* Secondary Menu we want text to wrap */
+  .madrone-mega-menu-main-secondary .tw-font-normal.tw-whitespace-nowrap {
+    /* white-space: wrap !important; */
+  }
+  .madrone-mega-menu-main-show-secondary .madrone-mega-menu-main-secondary {
     @apply tw-block;
   }
   .madrone-mega-menu-main > li {
@@ -172,6 +197,10 @@ input {
   }
   .madrone-mega-menu-main .madrone-active-trail {
     @apply tw-border-osuorange;
+  }
+
+  .madrone-mega-menu-main-more {
+    @apply tw-flex tw-self-stretch tw-relative tw-items-center tw-text-neutral-550;
   }
 
   #secondary-menu-container #block-madrone-views-block-group-name-block {

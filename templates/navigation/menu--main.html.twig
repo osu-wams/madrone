@@ -83,9 +83,9 @@ We call a macro which calls itself to render the full tree.
         <div class="{{ megaMenuDivClassesString }}">
           {% if menu_level == 1 %}
             <div class="tw-absolute tw-text-neutral-400 tw-col-start-5 tw-mt-5">
-              <span class="tw-text-2xl tw-cursor-pointer" onclick="closeMegaMenu();">
+              <button class="closeMegaMenu tw-text-2xl tw-cursor-pointer">
                 <i class="fa fa-times"></i>
-              </span>
+              </button>
             </div>
           {% endif %}
           <ul class="{{ nestedUlClassesString }}">
@@ -99,6 +99,7 @@ We call a macro which calls itself to render the full tree.
             'tw-self-stretch',
             'tw-items-center',
             'tw-text-med',
+            'tw-whitespace-nowrap',
           ] %}
               {% set linkClasses = 'tw-no-underline mega-menu-parent tw-cursor-pointer' %}
             {% else %}
