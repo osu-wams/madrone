@@ -19,8 +19,6 @@ const megaMenuParent = document.getElementsByClassName('mega-menu-parent');
 /**
  * Adds click event that toggles the Mega Menu to mega menu parent items
  */
-console.log('Megamenu fount' + megaMenuParent.length);
-
 for (i = 0; i < megaMenuParent.length; i++) {
   megaMenuParent[i].addEventListener('click', e => {
     let megaMenuParentLi = e.target.closest('li');
