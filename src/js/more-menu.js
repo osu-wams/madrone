@@ -5,24 +5,24 @@ const menuPrimaryItems = menuContainer.querySelectorAll(
 );
 
 const createMoreMenu = () => {
-  menuPrimaryItems.forEach((item, index) => {
-    item.setAttribute('data-index', index);
-  });
+  // menuPrimaryItems.forEach((item, index) => {
+  //   item.setAttribute('data-index', index);
+  // });
   menuContainer.classList.add('--jsfield');
-  menuPrimary.insertAdjacentHTML(
-    'beforeend',
-    `
-  <li class="madrone-mega-menu-main-more">
-      <button type="button" aria-haspopup="true" aria-expanded="false">
-          More <i class="fas fa-fw fa-ellipsis-h"></i>
-      </button>
-      <ul class="madrone-mega-menu-main-secondary">
-          ${menuPrimary.innerHTML}
-      </ul>
-      </button>
-  </li>
-  `
-  );
+  // menuPrimary.insertAdjacentHTML(
+  //   'beforeend',
+  //   `
+  // <li class="madrone-mega-menu-main-more tw-hidden">
+  //     <button type="button" aria-haspopup="true" aria-expanded="false">
+  //         More <i class="fas fa-fw fa-ellipsis-h"></i>
+  //     </button>
+  //     <ul class="madrone-mega-menu-main-secondary">
+  //         ${menuPrimary.innerHTML}
+  //     </ul>
+  //     </button>
+  // </li>
+  // `
+  // );
 
   const moreLi = menuPrimary.querySelector('.madrone-mega-menu-main-more');
   const moreButton = moreLi.querySelector('button');
