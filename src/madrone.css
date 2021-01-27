@@ -170,9 +170,6 @@ input {
     position: relative;
     -webkit-overflow-scrolling: touch;
   }
-  #block-madrone-main-menu .--hidden {
-    display: none;
-  }
   .madrone-mega-menu-main-secondary {
     @apply tw-hidden tw-absolute tw-top-full tw-right-0 tw-bg-white tw-shadow-sm;
     max-width: 100%;
