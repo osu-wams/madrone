@@ -35,23 +35,6 @@ We call a macro which calls itself to render the full tree.
       'tw-items-center',
       'madrone-mega-menu-main'
     ] %}
-    {% set ulClassesString = ulClasses|join(' ') %}
-    {% set childUlClasses = [
-      'mega-menu',
-      'tw-hidden',
-      'tw-flex-col',
-      'tw-fixed',
-      'tw-bg-bucktoothwhite',
-      'tw-gap-x-20',
-      'tw-gap-y-5',
-      'tw-z-10',
-      'tw-w-full',
-      'tw-h-full',
-      'tw-left-0',
-      'tw-top-menu',
-      'tw-cursor-auto'
-    ] %}
-    {% set childUlClassesString = childUlClasses|join(' ') %}
     {% set nestedUlClasses = [
       'tw-grid',
       'tw-col-start-2',
@@ -62,7 +45,6 @@ We call a macro which calls itself to render the full tree.
       'tw-gap-y-5',
       'tw-mt-10',
     ] %}
-    {% set nestedUlClassesString = nestedUlClasses|join(' ') %}
     {% set megaMenuDivClasses = [
       'mega-menu',
       'tw-hidden',
@@ -78,11 +60,10 @@ We call a macro which calls itself to render the full tree.
       'tw-top-menu',
       'tw-cursor-default',
     ] %}
-    {% set megaMenuDivClassesString = megaMenuDivClasses|join(' ') %}
     {% if menu_level == 0 %}
-      <ul class="{{ ulClassesString }}">
+      <ul class="{{ ulClasses|join(' ') }}">
     {% else %}
-      <div class="{{ megaMenuDivClassesString }}">
+      <div class="{{ megaMenuDivClasses|join(' ') }}">
       {% if menu_level == 1 %}
         <div class="tw-absolute tw-text-neutral-400 tw-col-start-5 tw-mt-5">
           <button class="closeMegaMenu tw-text-2xl tw-cursor-pointer">
@@ -90,7 +71,7 @@ We call a macro which calls itself to render the full tree.
           </button>
         </div>
       {% endif %}
-      <ul class="{{ nestedUlClassesString }}">
+      <ul class="{{ nestedUlClasses|join(' ') }}">
     {% endif %}
     {# Craete variable to store the data-index and increment at the end of the loop. #}
     {% set dataIndex = 0 %}
@@ -139,23 +120,6 @@ We call a macro which calls itself to render the full tree.
       </ul>
       </div>
     {% else %}
-      {# More Menu Button #}
-      <li class="madrone-mega-menu-main-more tw-hidden">
-        <button type="button" aria-haspopup="true" aria-expanded="false">
-          More <i class="fas fa-fw fa-ellipsis-h"></i>
-        </button>
-        <ul class="madrone-mega-menu-main-secondary">
-          {% for item in items %}
-            {% set linkClasses = 'tw-no-underline mega-menu-parent tw-cursor-pointer' %}
-            <li {{ item.attributes }}>
-              {{ link(item.title, item.url, {'class':linkClasses}) }}
-              {% if item.below %}
-                <i class="fas fa-fw fa-caret-down"></i>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
       </ul>
     {% endif %}
   {% endif %}

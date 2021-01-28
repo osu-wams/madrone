@@ -165,7 +165,7 @@ input {
   .site-name {
     max-width: 400px;
   }
-  #block-madrone-main-menu:not(.--jsfield) {
+  #block-madrone-main-menu:not(.--jsfied) {
     @apply tw-overflow-x-auto;
     position: relative;
     -webkit-overflow-scrolling: touch;
