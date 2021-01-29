@@ -22,20 +22,20 @@
 We call a macro which calls itself to render the full tree.
 @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
-{{ menus.menu_links(items, attributes, 0) }}
-{% macro menu_links(items, attributes, menu_level) %}
+{{ menus.menu_links(items, attributes, 0, menu_name) }}
+{% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
   {% if items %}
-    {% set ulClasses = [
+    {% set menu_classes = [
       'tw-hidden',
       'lg-tw-flex',
       'lg-tw-flex-grow',
       'lg-tw-justify-end',
       'tw-space-x-10',
       'tw-items-center',
-      'madrone-mega-menu-main'
+      'madrone-mega-menu-' ~ menu_name|clean_class
     ] %}
-    {% set nestedUlClasses = [
+    {% set submenu_classes = [
       'tw-grid',
       'tw-col-start-2',
       'tw-col-span-3',
@@ -45,8 +45,7 @@ We call a macro which calls itself to render the full tree.
       'tw-gap-y-5',
       'tw-mt-10',
     ] %}
-    {% set megaMenuDivClasses = [
-      'mega-menu',
+    {% set mega_menu_container_classes = [
       'tw-hidden',
       'tw-grid',
       'tw-fixed',
@@ -59,11 +58,14 @@ We call a macro which calls itself to render the full tree.
       'tw-left-0',
       'tw-top-menu',
       'tw-cursor-default',
+      'mega-menu',
     ] %}
     {% if menu_level == 0 %}
-      <ul class="{{ ulClasses|join(' ') }}">
+      <ul {{ attributes.addClass(menu_classes) }}>
     {% else %}
-      <div class="{{ megaMenuDivClasses|join(' ') }}">
+      {# Reset attributes variable. #}
+      {% set attributes = attributes.removeClass(menu_classes, mega_menu_container_classes, submenu_classes) %}
+      <div {{ attributes.addClass(mega_menu_container_classes) }}>
       {% if menu_level == 1 %}
         <div class="tw-absolute tw-text-neutral-400 tw-col-start-5 tw-mt-5">
           <button class="closeMegaMenu tw-text-2xl tw-cursor-pointer">
@@ -71,13 +73,13 @@ We call a macro which calls itself to render the full tree.
           </button>
         </div>
       {% endif %}
-      <ul class="{{ nestedUlClasses|join(' ') }}">
+      <ul {{ attributes.removeClass(mega_menu_container_classes).addClass(submenu_classes) }}>
     {% endif %}
     {# Craete variable to store the data-index and increment at the end of the loop. #}
     {% set dataIndex = 0 %}
     {% for item in items %}
       {% if menu_level == 0 %}
-        {% set liClasses = [
+        {% set list_item_classes = [
           'tw-font-normal',
           'tw-text-neutral-550',
           'tw-flex',
@@ -86,18 +88,22 @@ We call a macro which calls itself to render the full tree.
           'tw-text-med',
           'tw-whitespace-nowrap',
         ] %}
-        {% set linkClasses = 'tw-no-underline mega-menu-parent tw-cursor-pointer' %}
+        {% set link_classes = [
+          'tw-no-underline',
+          'tw-cursor-pointer',
+          'mega-menu-parent'
+        ] %}
       {% else %}
-        {% set liClasses = [
+        {% set list_item_classes = [
           'tw-font-normal',
           'tw-text-neutral-700',
           'tw-relative',
           'mega-menu-child',
         ] %}
-        {% set linkClasses = 'tw-no-underline' %}
+        {% set link_classes = 'tw-no-underline' %}
       {% endif %}
-      <li{{ item.attributes.addClass(liClasses).setAttribute('data-index', dataIndex) }}>
-        {{ link(item.title, item.url, {'class':linkClasses}) }}
+      <li{{ item.attributes.addClass(list_item_classes).setAttribute('data-index', dataIndex) }}>
+        {{ link(item.title, item.url, {'class':link_classes}) }}
         {# adding the chevron #}
         {% if menu_level == 0 and item.below %}
           <i class="fas fa-fw fa-caret-down"></i>
@@ -110,12 +116,11 @@ We call a macro which calls itself to render the full tree.
         {% endif %}
         {# looks to see if there are child links to the menu item #}
         {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level+1) }}
+          {{ menus.menu_links(item.below, attributes, menu_level+1, menu_name) }}
         {% endif %}
       </li>
       {% set dataIndex = dataIndex + 1 %}
     {% endfor %}
-    {# written this way because php storm cries if you write the IF statement as == 0 #}
     {% if menu_level != 0 %}
       </ul>
       </div>
