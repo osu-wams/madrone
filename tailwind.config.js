@@ -72,8 +72,8 @@ module.exports = {
         stratum2web: ['Stratum2WebBold', 'sans-serif']
       },
       fontSize: {
-        'xxs':'11px',
-        'med':'16px',
+        'xxs': '11px',
+        'med': '16px',
       },
       flex: {
         '2': '2 1 0%',
@@ -84,7 +84,7 @@ module.exports = {
         'minmax100': 'minmax(0, 100px)',
       },
       gridTemplateRows: {
-        'layout':'repeat(10, minmax(0, 100px))',
+        'layout': 'repeat(10, minmax(0, 100px))',
       },
       inset: {
         '25': '25%',
