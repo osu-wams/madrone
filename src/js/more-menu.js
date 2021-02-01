@@ -1,7 +1,10 @@
 /**
+ * Create a more Menu at the provided Block ID and navigation class.
  *
  * @param blockId
+ *   The Drupal Block HTML ID.
  * @param navClass
+ *   The CSS Class applied to the Navigation Menu.
  */
 const createMoreMenu = (blockId, navClass) => {
   const menuContainer = document.querySelector('#' + blockId);
@@ -37,9 +40,12 @@ const createMoreMenu = (blockId, navClass) => {
   }
 };
 /**
+ * Adjust more menu to show/hide items when screen resizes.
  *
  * @param blockId
+ *  The Drupal Block HTML ID.
  * @param navClass
+ *  The CSS Class applied to the Navigation Menu.
  */
 const adjustMoreMenu = (blockId, navClass) => {
   const menuContainer = document.querySelector('#' + blockId);
