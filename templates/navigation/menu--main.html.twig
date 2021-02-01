@@ -76,7 +76,7 @@ We call a macro which calls itself to render the full tree.
       <ul {{ attributes.removeClass(mega_menu_container_classes).addClass(submenu_classes) }}>
     {% endif %}
     {# Craete variable to store the data-index and increment at the end of the loop. #}
-    {% set dataIndex = 0 %}
+    {% set data_index = 0 %}
     {% for item in items %}
       {% if menu_level == 0 %}
         {% set list_item_classes = [
@@ -102,7 +102,7 @@ We call a macro which calls itself to render the full tree.
         ] %}
         {% set link_classes = 'tw-no-underline' %}
       {% endif %}
-      <li{{ item.attributes.addClass(list_item_classes).setAttribute('data-index', dataIndex) }}>
+      <li{{ item.attributes.addClass(list_item_classes).setAttribute('data-index', data_index) }}>
         {{ link(item.title, item.url, {'class':link_classes}) }}
         {# adding the chevron #}
         {% if menu_level == 0 and item.below %}
@@ -119,7 +119,7 @@ We call a macro which calls itself to render the full tree.
           {{ menus.menu_links(item.below, attributes, menu_level+1, menu_name) }}
         {% endif %}
       </li>
-      {% set dataIndex = dataIndex + 1 %}
+      {% set data_index = data_index + 1 %}
     {% endfor %}
     {% if menu_level != 0 %}
       </ul>
