@@ -49,12 +49,12 @@ module.exports = {
           700: '#142e0c'
         },
         rogue_wave: {
-          100: '#ECF5F6',
-          200: '#B8DDE1',
-          300: '#20A6BD',
-          400: '#00859B',
+          100: '#ecf5f6',
+          200: '#b8dde1',
+          300: '#20a6bd',
+          400: '#00859b',
           500: '#007082',
-          600: '#0D5257',
+          600: '#0d5257',
           700: '#043033'
         },
         stratosphere: {
@@ -72,8 +72,8 @@ module.exports = {
         stratum2web: ['Stratum2WebBold', 'sans-serif']
       },
       fontSize: {
-        'xxs':'11px',
-        'med':'16px',
+        'xxs': '11px',
+        'med': '16px',
       },
       flex: {
         '2': '2 1 0%',
@@ -84,7 +84,7 @@ module.exports = {
         'minmax100': 'minmax(0, 100px)',
       },
       gridTemplateRows: {
-        'layout':'repeat(10, minmax(0, 100px))',
+        'layout': 'repeat(10, minmax(0, 100px))',
       },
       inset: {
         '25': '25%',
@@ -97,7 +97,8 @@ module.exports = {
         '81.5': '21.5rem'
       },
       gridTemplateColumns: {
-        'secondary-nav': '23rem [group-title-start] 1fr [group-title-end group-menu-start] 1fr [group-menu-end] 12rem'
+        'header': '[site-branding-start] 1fr [site-branding-end main-menu start] 1.2fr [main-menu-end search start] auto [search-end]',
+        'secondary-nav': '23rem [group-title-start] 1fr [group-title-end group-menu-start] 2fr [group-menu-end] 12.8rem'
       }
     }
   },

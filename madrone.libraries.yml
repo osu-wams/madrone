@@ -3,7 +3,7 @@ global-styling:
     base:
       dist/madrone.css: { }
   js:
-    madrone.js: { }
+    dist/madrone.js: { }
 
 fonts:
   css:

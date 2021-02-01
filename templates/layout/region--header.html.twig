@@ -18,8 +18,10 @@
   'tw-items-center'
 ] %}
 
+{% set headerGrid = ['lg-tw-grid', 'lg-tw-grid-cols-header'] %}
+
 {% if content %}
-  <div{{ attributes.addClass(tailwindFlexy) }}>
+  <div{{ attributes.addClass(headerGrid) }}>
     {{ content }}
   </div>
 {% endif %}
