@@ -87,7 +87,7 @@ input {
   @font-face {
     font-family: 'Stratum2WebBold';
     src: url('../fonts/Stratum2WebBold.woff2') format('woff2'),
-      url('../fonts/Stratum2WebBold.woff') format('woff');
+    url('../fonts/Stratum2WebBold.woff') format('woff');
   }
   header {
     @apply tw-bg-bucktoothwhite;
@@ -139,7 +139,7 @@ input {
   #osu-menu a {
     @apply tw-no-underline tw-py-1 tw-block;
   }
-
+  /* Start Main Menu */
   .mega-menu-child i,
   .mega-menu-child svg {
     @apply tw-absolute tw--left-6 tw-text-osuorange tw-mt-1;
@@ -161,7 +161,7 @@ input {
     flex-wrap: wrap;
   }
 
-  /* potientiall only do this between 1024 and 1440 or something */
+  /* potential only do this between 1024 and 1440 or something */
   .site-name {
     max-width: 400px;
   }
@@ -171,10 +171,8 @@ input {
     -webkit-overflow-scrolling: touch;
   }
   .madrone-mega-menu-main-secondary {
-    @apply tw-hidden tw-absolute tw-top-full tw-right-0 tw-bg-white tw-shadow-sm;
-    max-width: 100%;
+    @apply tw-hidden tw-absolute tw-max-w-full tw-top-full tw-right-0 tw-bg-bucktoothwhite tw-shadow-sm tw-z-20;
     min-width: 10em;
-    z-index: 999;
     padding: 10px 10px 20px;
     border: 1px solid #999;
   }
@@ -199,11 +197,25 @@ input {
   .madrone-mega-menu-main-more {
     @apply tw-flex tw-self-stretch tw-relative tw-items-center tw-text-neutral-550;
   }
-
+  /* End Main menu */
+  /* Group Menu */
   #secondary-menu-container #block-madrone-views-block-group-name-block {
     @apply lg-tw-col-start-2;
   }
   #secondary-menu-container #block-madrone-groupmenu {
     @apply lg-tw-col-start-3 tw-whitespace-nowrap;
   }
+  .madrone-mega-menu-group-more {
+    @apply tw-self-stretch tw-relative;
+  }
+  .madrone-mega-menu-group-secondary {
+    @apply tw-hidden tw-absolute tw-max-w-full tw-top-full tw-right-0 tw-bg-neutral-700 tw-text-bucktoothwhite tw-shadow-sm tw-z-30;
+    min-width: 10em;
+    padding: 10px 10px 20px;
+    border: 1px solid #999;
+  }
+  .madrone-mega-menu-group-show-secondary .madrone-mega-menu-group-secondary {
+    @apply tw-block;
+  }
+  /* End Group Menu */
 }

@@ -1,25 +1,32 @@
-import { adjustMoreMenu, createMoreMenu } from './js/more-menu';
+import {adjustMoreMenu, createMoreMenu} from './js/more-menu';
 /**
  * Add Event Listeners to the Main navigation level 0.
  * @type {HTMLCollectionOf<Element>}
  */
 
-createMoreMenu();
-
+createMoreMenu('block-madrone-main-menu', 'madrone-mega-menu-main');
+createMoreMenu('block-madrone-groupmenu','madrone-mega-menu-group');
 // Adapt immediately on load.
 // Set a width on the site title to better calculate the space of the menu items
 const siteTitle = document.querySelector('.site-name');
 siteTitle.style.width = `${siteTitle.innerText.length * 11}px`;
-adjustMoreMenu();
+// adjustMoreMenu();
+window.addEventListener('load', () => {
+  adjustMoreMenu('block-madrone-main-menu', 'madrone-mega-menu-main');
+  adjustMoreMenu('block-madrone-groupmenu', 'madrone-mega-menu-group');
+});
 // Adapt on window resize.
-window.addEventListener('resize', adjustMoreMenu);
+window.addEventListener('resize', () => {
+  adjustMoreMenu('block-madrone-main-menu', 'madrone-mega-menu-main');
+  adjustMoreMenu('block-madrone-groupmenu', 'madrone-mega-menu-group');
+});
 
 const megaMenuParent = document.getElementsByClassName('mega-menu-parent');
 
 /**
  * Adds click event that toggles the Mega Menu to mega menu parent items
  */
-for (i = 0; i < megaMenuParent.length; i++) {
+for (var i = 0; i < megaMenuParent.length; i++) {
   megaMenuParent[i].addEventListener('click', e => {
     let megaMenuParentLi = e.target.closest('li');
 
@@ -51,7 +58,7 @@ for (i = 0; i < megaMenuParent.length; i++) {
  */
 var openmodal = document.querySelectorAll('.modal-open');
 for (var i = 0; i < openmodal.length; i++) {
-  openmodal[i].addEventListener('click', function(event) {
+  openmodal[i].addEventListener('click', function (event) {
     event.preventDefault();
     toggleModal();
   });
