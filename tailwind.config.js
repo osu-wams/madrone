@@ -98,7 +98,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         'header': '[site-branding-start] 1fr [site-branding-end main-menu start] 1.2fr [main-menu-end search start] auto [search-end]',
-        'secondary-nav': '23rem [group-title-start] 1fr [group-title-end group-menu-start] 1fr [group-menu-end] 12rem'
+        'secondary-nav': '23rem [group-title-start] 1fr [group-title-end group-menu-start] 2fr [group-menu-end] 12.8rem'
       }
     }
   },
