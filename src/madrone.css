@@ -87,7 +87,7 @@ input {
   @font-face {
     font-family: 'Stratum2WebBold';
     src: url('../fonts/Stratum2WebBold.woff2') format('woff2'),
-    url('../fonts/Stratum2WebBold.woff') format('woff');
+      url('../fonts/Stratum2WebBold.woff') format('woff');
   }
   header {
     @apply tw-bg-bucktoothwhite;
@@ -171,10 +171,10 @@ input {
     -webkit-overflow-scrolling: touch;
   }
   .madrone-mega-menu-main-secondary {
-    @apply tw-hidden tw-absolute tw-max-w-full tw-top-full tw-right-0 tw-bg-bucktoothwhite tw-shadow-sm tw-z-20;
-    min-width: 10em;
+    @apply tw-hidden tw-absolute tw-max-w-full tw-right-0 tw-bg-bucktoothwhite tw-shadow-sm tw-z-20 tw-border-neutral-200;
+    min-width: 320px;
     padding: 10px 10px 20px;
-    border: 1px solid #999;
+    top: 97px; /* header is 96px height, so we add one more */
   }
   .madrone-mega-menu-main-secondary a,
   .madrone-mega-menu-main-secondary span {
