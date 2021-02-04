@@ -18,7 +18,12 @@
   'tw-items-center'
 ] %}
 
-{% set headerGrid = ['lg-tw-grid', 'lg-tw-grid-cols-header'] %}
+{% set headerGrid = [
+  'lg-tw-grid',
+  'lg-tw-grid-cols-header',
+  'tw-border-b',
+  'tw-border-neutral-200'
+] %}
 
 {% if content %}
   <div{{ attributes.addClass(headerGrid) }}>
