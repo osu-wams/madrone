@@ -176,9 +176,29 @@ input {
     padding: 10px 10px 20px;
     top: 97px; /* header is 96px height, so we add one more */
   }
+  /* Sets 36px left padding regardless of icon to leave space on the left for text */
+  .madrone-mega-menu-main-secondary li > span,
+  .madrone-mega-menu-main-secondary li > a {
+    padding: 8px 5px 8px 36px;
+    position: relative;
+  }
+
+  /* If icon is present we set it further left (ignoring the padding set above) */
+  .madrone-mega-menu-main-secondary li > a > svg,
+  .madrone-mega-menu-main-secondary li > span > svg {
+    position: absolute;
+    left: 5px;
+  }
+
+  .madrone-mega-menu-main-secondary li svg + span {
+    width: 240px;
+    padding-left: 0;
+  }
+
   .madrone-mega-menu-main-secondary a,
   .madrone-mega-menu-main-secondary span {
     padding: 8px 5px;
+    width: 100%;
   }
   /* Secondary Menu we want text to wrap */
   .madrone-mega-menu-main-secondary .tw-font-normal.tw-whitespace-nowrap {
@@ -197,6 +217,9 @@ input {
   .madrone-mega-menu-main-more {
     @apply tw-flex tw-self-stretch tw-relative tw-items-center tw-text-neutral-550;
   }
+  .madrone-mega-menu-main-more button {
+    height: 100%; /* more button */
+  }
   /* End Main menu */
   /* Group Menu */
   #secondary-menu-container #block-madrone-views-block-group-name-block {
@@ -209,10 +232,10 @@ input {
     @apply tw-self-stretch tw-relative;
   }
   .madrone-mega-menu-group-secondary {
-    @apply tw-hidden tw-absolute tw-max-w-full tw-top-full tw-right-0 tw-bg-neutral-700 tw-text-bucktoothwhite tw-shadow-sm tw-z-30;
-    min-width: 10em;
+    @apply tw-hidden tw-absolute tw-max-w-full tw-right-0 tw-bg-neutral-700 tw-text-bucktoothwhite tw-shadow-sm tw-z-30 tw-border-neutral-200;
+    min-width: 320px;
     padding: 10px 10px 20px;
-    border: 1px solid #999;
+    top: 33px;
   }
   .madrone-mega-menu-group-show-secondary .madrone-mega-menu-group-secondary {
     @apply tw-block;
