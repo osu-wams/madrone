@@ -1,11 +1,11 @@
-import {adjustMoreMenu, createMoreMenu} from './js/more-menu';
+import { adjustMoreMenu, createMoreMenu } from './js/more-menu';
 /**
  * Add Event Listeners to the Main navigation level 0.
  * @type {HTMLCollectionOf<Element>}
  */
 
 createMoreMenu('block-madrone-main-menu', 'madrone-mega-menu-main');
-createMoreMenu('block-madrone-groupmenu','madrone-mega-menu-group');
+createMoreMenu('block-madrone-groupmenu', 'madrone-mega-menu-group');
 // Adapt immediately on load.
 // Set a width on the site title to better calculate the space of the menu items
 const siteTitle = document.querySelector('.site-name');
@@ -36,17 +36,19 @@ for (var i = 0; i < megaMenuParent.length; i++) {
       .getBoundingClientRect().bottom;
 
     // Gets all the child pages
-    let childMenuItem = megaMenuParentLi.getElementsByClassName('mega-menu');
-    let megaMenuExists = childMenuItem.length > 0;
+    const megaMenus = megaMenuParentLi.getElementsByClassName(
+      'madrone-mega-menu-container'
+    );
+    let megaMenuExists = megaMenus.length > 0;
 
     /**
      * Checks to see if a mega menu should exist. If so, we determine if we are opening/closing the
      * menu and pass that information into the functions that handle it.
      */
     if (megaMenuExists) {
-      let megaMenuDiv = childMenuItem[0];
+      let megaMenuDiv = megaMenus[0];
       let megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
-      megaMenuDiv.style.top = (headerHeight + 5) / 16 + 'rem';
+      megaMenuDiv.style.top = headerHeight / 16 + 'rem';
       setActiveColors(megaMenuParentLi, megaMenuIsOpen);
       setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
     }
@@ -58,7 +60,7 @@ for (var i = 0; i < megaMenuParent.length; i++) {
  */
 var openmodal = document.querySelectorAll('.modal-open');
 for (var i = 0; i < openmodal.length; i++) {
-  openmodal[i].addEventListener('click', function (event) {
+  openmodal[i].addEventListener('click', function(event) {
     event.preventDefault();
     toggleModal();
   });
@@ -164,7 +166,9 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
  * Hides all the mega menus. Will then add lg-tw-grid to megaMenuDiv IFF menuIsOpen is true and megaMenuDiv is not null
  */
 function setActiveMegaMenu(megaMenuDiv = null, menuIsOpen = false) {
-  let openMegaMenus = document.getElementsByClassName('mega-menu');
+  let openMegaMenus = document.getElementsByClassName(
+    'madrone-mega-menu-container'
+  );
   for (i = 0; i < openMegaMenus.length; i++) {
     openMegaMenus[i]?.classList.remove('lg-tw-grid');
   }
