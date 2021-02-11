@@ -18,7 +18,7 @@ const createMoreMenu = (blockId, navClass) => {
       <button type="button" aria-haspopup="true" aria-expanded="false">
           More <i class="fas fa-fw fa-ellipsis-h"></i>
       </button>
-      <ul class="${navClass}-secondary">
+      <ul class="${navClass}-secondary madrone-more-menu">
           ${menuPrimary.innerHTML}
       </ul>
       </button>
@@ -85,7 +85,6 @@ const adjustMoreMenu = (blockId, navClass) => {
       );
       const menuSecondaryItems = menuSecondary.querySelectorAll(':scope > li');
       menuSecondaryItems.forEach((item, i) => {
-        item.classList.remove('tw-whitespace-nowrap'); // "more menu" items should wrap to multiple lines if needed
         if (!primaryHiddenItems.includes(item.getAttribute('data-index'))) {
           item.classList.add('tw-hidden');
         }
@@ -94,4 +93,4 @@ const adjustMoreMenu = (blockId, navClass) => {
   }
 };
 
-export {createMoreMenu, adjustMoreMenu};
+export { createMoreMenu, adjustMoreMenu };

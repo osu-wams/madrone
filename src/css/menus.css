@@ -12,12 +12,19 @@
   .mega-menu-parent-li {
     @apply tw-font-normal tw-text-neutral-550 tw-flex tw-self-stretch tw-items-center tw-text-med;
   }
+
+  /* The menu items (not inside the more menu or mega menu) don't wrap */
+  .madrone-mega-menu-group > .mega-menu-parent-li,
   .madrone-mega-menu-main > .mega-menu-parent-li {
     @apply tw-whitespace-nowrap;
   }
 
   .mega-menu-parent {
     @apply tw-no-underline tw-cursor-pointer tw-inline-flex tw-items-center tw-h-full;
+  }
+
+  .mega-menu-parent > svg:first-child {
+    margin-right: 4px;
   }
 
   .mega-menu-child {
@@ -58,38 +65,39 @@
     position: relative;
     -webkit-overflow-scrolling: touch;
   }
-  .madrone-mega-menu-main-secondary {
+  /* More menu (madrone-more-menu) applies to both the group and main more menu dropdowns */
+  .madrone-more-menu {
     @apply tw-hidden tw-absolute tw-max-w-full tw-right-0 tw-bg-bucktoothwhite tw-shadow-sm tw-z-20 tw-border-neutral-200;
     min-width: 320px;
     padding: 10px 10px 20px;
     top: 97px; /* header is 96px height, so we add one more */
   }
   /* Sets 36px left padding regardless of icon to leave space on the left for text */
-  .madrone-mega-menu-main-secondary li > span,
-  .madrone-mega-menu-main-secondary li > a {
-    padding: 2px 0 2px 36px;
+  .madrone-more-menu li > span,
+  .madrone-more-menu li > a {
+    padding: 2px 0 8px 36px;
     position: relative;
   }
 
   /* If icon is present we set it further left (ignoring the padding set above) */
-  .madrone-mega-menu-main-secondary li > a > svg,
-  .madrone-mega-menu-main-secondary li > span > svg {
+  .madrone-more-menu li > a > svg,
+  .madrone-more-menu li > span > svg {
     position: absolute;
     left: 5px;
   }
 
-  .madrone-mega-menu-main-secondary li svg + span {
+  .madrone-more-menu li svg + span {
     width: 240px;
     padding-left: 0;
   }
 
-  .madrone-mega-menu-main-secondary a,
-  .madrone-mega-menu-main-secondary span {
+  .madrone-more-menu a,
+  .madrone-more-menu span {
     padding: 8px 5px;
     width: 100%;
   }
 
-  .madrone-mega-menu-main-show-secondary .madrone-mega-menu-main-secondary {
+  .madrone-mega-menu-main-show-secondary .madrone-more-menu {
     @apply tw-block;
   }
   .madrone-mega-menu-main > li {
@@ -111,7 +119,7 @@
     @apply lg-tw-col-start-2;
   }
   #secondary-menu-container #block-madrone-groupmenu {
-    @apply lg-tw-col-start-3 tw-whitespace-nowrap;
+    @apply lg-tw-col-start-3;
   }
   .madrone-mega-menu-group-more {
     @apply tw-self-stretch tw-relative;
