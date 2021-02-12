@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Create a more Menu at the provided Block ID and navigation class.
  *
@@ -15,7 +16,7 @@ const createMoreMenu = (blockId, navClass) => {
       'beforeend',
       `
   <li class="${navClass}-more tw-hidden">
-      <button type="button" aria-haspopup="true" aria-expanded="false">
+      <button type="button" class="more-button" aria-haspopup="true" aria-expanded="false">
           More <i class="fas fa-fw fa-ellipsis-h"></i>
       </button>
       <ul class="${navClass}-secondary madrone-more-menu">
@@ -26,17 +27,30 @@ const createMoreMenu = (blockId, navClass) => {
   `
     );
 
-    const moreLi = menuPrimary.querySelector('.' + navClass + '-more');
-    const moreButton = moreLi.querySelector('button');
+    const moreButton = menuPrimary.querySelector('.more-button');
 
     moreButton.addEventListener('click', event => {
       event.preventDefault();
+      closeMoreMenu(navClass);
+
       menuContainer.classList.toggle(navClass + '-show-secondary');
       moreButton.setAttribute(
         'aria-expanded',
         menuContainer.classList.contains(navClass + '-show-secondary')
       );
     });
+  }
+};
+
+const closeMoreMenu = (navClass = '') => {
+  const moreMenus = document.querySelectorAll(
+    `div[class*='-show-secondary'], nav[class*='-show-secondary']`
+  );
+
+  for (let i = 0; i < moreMenus.length; i++) {
+    if (!moreMenus[i].classList.contains(navClass + '-show-secondary')) {
+      moreMenus[i].querySelector('.more-button').click();
+    }
   }
 };
 /**
@@ -93,4 +107,4 @@ const adjustMoreMenu = (blockId, navClass) => {
   }
 };
 
-export { createMoreMenu, adjustMoreMenu };
+export { createMoreMenu, adjustMoreMenu, closeMoreMenu };
