@@ -37,8 +37,7 @@ const megaMenuParent = document.getElementsByClassName('mega-menu-parent');
 for (var i = 0; i < megaMenuParent.length; i++) {
   megaMenuParent[i].addEventListener('click', e => {
     // closes all more menus if a mege menu is toggled
-    e.preventDefault();
-    closeMoreMenu();
+    // e.preventDefault();
     let megaMenuParentLi = e.target.closest('li');
 
     // Determines the height that the mega menu should open at
@@ -56,20 +55,14 @@ for (var i = 0; i < megaMenuParent.length; i++) {
      * Checks to see if a mega menu should exist. If so, we determine if we are opening/closing the
      * menu and pass that information into the functions that handle it.
      */
-    // megaMenus.map(m => {
-    //   console.log('Clicked ' + m);
-    // });
+
     if (megaMenuExists) {
       let megaMenuDiv = megaMenus[0];
       let megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
       megaMenuDiv.style.top = headerHeight / 16 + 'rem';
 
-      console.log(megaMenuParentLi, megaMenuDiv, megaMenuIsOpen);
-
       setActiveColors(megaMenuParentLi, megaMenuIsOpen);
       setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
-
-      console.log(megaMenuParentLi, megaMenuDiv, megaMenuIsOpen);
     }
   });
 }
@@ -91,9 +84,15 @@ document.addEventListener('keyup', e => {
 
 /**
  * Closes more menus whenever there is a click anywhere
+ * Except something that toggles the mega menu, and the more button itself
  */
 document.addEventListener('click', e => {
-  if (e.target && !e.target.classList.contains('more-button')) {
+  e.stopPropagation();
+  if (
+    e.target &&
+    !e.target.classList.contains('more-button') &&
+    !e.target.classList.contains('mega-menu-parent')
+  ) {
     closeMoreMenu();
   }
 });

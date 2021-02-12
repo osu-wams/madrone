@@ -1,4 +1,7 @@
 'use strict';
+
+import { closeMegaMenu } from './mega-menu';
+
 /**
  * Create a more Menu at the provided Block ID and navigation class.
  *
@@ -32,6 +35,7 @@ const createMoreMenu = (blockId, navClass) => {
     moreButton.addEventListener('click', event => {
       event.preventDefault();
       closeMoreMenu(navClass);
+      closeMegaMenu();
 
       menuContainer.classList.toggle(navClass + '-show-secondary');
       moreButton.setAttribute(
