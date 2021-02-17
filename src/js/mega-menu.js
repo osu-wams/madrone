@@ -1,12 +1,15 @@
 /**
- * Hides all the mega menus. Will then add lg-tw-grid to megaMenuDiv IFF menuIsOpen is true and megaMenuDiv is not null
+ * Hides all the mega menus. Will then add lg-tw-grid to megaMenuDiv if menuIsOpen is true and megaMenuDiv is not null
  */
 function setActiveMegaMenu(megaMenuDiv = null, menuIsOpen = false) {
-  let openMegaMenus = document.getElementsByClassName(
-    'madrone-mega-menu-container'
+  const openMegaMenus = document.getElementsByClassName(
+    'madrone-mega-menu-container lg-tw-grid'
   );
-  for (let i = 0; i < openMegaMenus.length; i++) {
-    openMegaMenus[i]?.classList.remove('lg-tw-grid');
+
+  if (openMegaMenus) {
+    for (let i = 0; i < openMegaMenus.length; i++) {
+      openMegaMenus[i].classList.remove('lg-tw-grid');
+    }
   }
 
   if (megaMenuDiv && !menuIsOpen) {
@@ -64,6 +67,57 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
 }
 
 /**
+ * Add click events to all link items with mega menus
+ */
+function megaMenuToggle() {
+  const megaMenuParent = document.getElementsByClassName('mega-menu-parent');
+
+  // Adds event listener to close MegaMenu
+  const closeButton = document.querySelectorAll('.closeMegaMenu');
+  if (closeButton) {
+    for (let i = 0; i < closeButton.length; i++) {
+      closeButton[i].addEventListener('click', closeMegaMenu);
+    }
+  }
+
+  // Determines the height that the mega menu should open at
+  const headerHeight = document
+    .getElementsByTagName('header')[0]
+    .getBoundingClientRect().bottom;
+
+  /**
+   * Adds click event that toggles the Mega Menu to mega menu parent items
+   */
+  for (let i = 0; i < megaMenuParent.length; i++) {
+    megaMenuParent[i].addEventListener('click', e => {
+      // closes all more menus if a mege menu is toggled
+      // e.preventDefault();
+      const megaMenuParentLi = e.target.closest('li');
+
+      // Gets all the child pages
+      const megaMenus = megaMenuParentLi.getElementsByClassName(
+        'madrone-mega-menu-container'
+      );
+      const megaMenuExists = megaMenus.length > 0;
+
+      /**
+       * Checks to see if a mega menu should exist. If so, we determine if we are opening/closing the
+       * menu and pass that information into the functions that handle it.
+       */
+
+      if (megaMenuExists) {
+        let megaMenuDiv = megaMenus[0];
+        let megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
+        megaMenuDiv.style.top = headerHeight + 'px';
+
+        setActiveColors(megaMenuParentLi, megaMenuIsOpen);
+        setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
+      }
+    });
+  }
+}
+
+/**
  * Close mega menu items.
  */
 function closeMegaMenu() {
@@ -71,4 +125,4 @@ function closeMegaMenu() {
   setActiveMegaMenu();
 }
 
-export { setActiveColors, setActiveMegaMenu, closeMegaMenu };
+export { setActiveColors, setActiveMegaMenu, closeMegaMenu, megaMenuToggle };

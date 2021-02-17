@@ -6,7 +6,7 @@
 
   /* Start Main Menu */
   .madrone-mega-menu-container {
-    @apply tw-hidden tw-grid tw-fixed tw-grid-cols-5 tw-bg-bucktoothwhite tw-gap-4 tw-z-10 tw-w-full tw-h-full tw-left-0 tw-top-menu tw-cursor-default;
+    @apply tw-hidden tw-grid tw-fixed tw-grid-cols-5 tw-bg-bucktoothwhite tw-gap-4 tw-z-50 tw-w-full tw-h-full tw-left-0 tw-top-menu tw-cursor-default;
   }
 
   .mega-menu-parent-li {

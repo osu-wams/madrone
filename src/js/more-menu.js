@@ -50,7 +50,6 @@ const closeMoreMenu = (navClass = '') => {
   const moreMenus = document.querySelectorAll(
     `div[class*='-show-secondary'], nav[class*='-show-secondary']`
   );
-
   for (let i = 0; i < moreMenus.length; i++) {
     if (!moreMenus[i].classList.contains(navClass + '-show-secondary')) {
       moreMenus[i].querySelector('.more-button').click();
