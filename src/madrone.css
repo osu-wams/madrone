@@ -134,6 +134,16 @@ input {
   .header-search-form .form-actions .form-submit {
     @apply tw-h-full;
   }
+
+  .site-name {
+    @apply tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 tw-flex;
+    width: 400px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: 'ellipsis';
+  }
 }
 
 @import 'css/menus.css';
