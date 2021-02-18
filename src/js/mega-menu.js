@@ -34,11 +34,7 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
       'madrone-active-trail',
       'hover-tw-text-osuorange'
     );
-    parentLi.classList.add(
-      'tw-font-normal',
-      'tw-text-neutral-550',
-      'hover-tw-text-neutral-700'
-    );
+    parentLi.classList.add('tw-font-normal', 'tw-text-neutral-550');
 
     // Checks to see if there is a chevron. If so, reset it to down
     if (parentLi.children[1]) {
@@ -48,11 +44,7 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
 
   // If this function was invoked from our click event on the mega menu parent, we want to highlight it
   if (megaMenuParentLi && !menuIsOpen) {
-    megaMenuParentLi.classList.remove(
-      'tw-font-normal',
-      'tw-text-neutral-550',
-      'hover-tw-text-neutral-700'
-    );
+    megaMenuParentLi.classList.remove('tw-font-normal', 'tw-text-neutral-550');
     megaMenuParentLi.classList.add(
       'tw-text-osuorange',
       'hover-tw-text-osuorange'
@@ -80,18 +72,11 @@ function megaMenuToggle() {
     }
   }
 
-  // Determines the height that the mega menu should open at
-  const headerHeight = document
-    .getElementsByTagName('header')[0]
-    .getBoundingClientRect().bottom;
-
   /**
    * Adds click event that toggles the Mega Menu to mega menu parent items
    */
   for (let i = 0; i < megaMenuParent.length; i++) {
     megaMenuParent[i].addEventListener('click', e => {
-      // closes all more menus if a mege menu is toggled
-      // e.preventDefault();
       const megaMenuParentLi = e.target.closest('li');
 
       // Gets all the child pages
@@ -106,9 +91,13 @@ function megaMenuToggle() {
        */
 
       if (megaMenuExists) {
-        let megaMenuDiv = megaMenus[0];
-        let megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
-        megaMenuDiv.style.top = headerHeight + 'px';
+        const megaMenuDiv = megaMenus[0];
+        const megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
+        // This needs to be calculated here, calculating it outside causes problems when logged in with admin toolbar
+        const bottomHeader = document
+          .querySelector('[role=banner]')
+          .getBoundingClientRect().bottom;
+        megaMenuDiv.style.top = bottomHeader + 'px';
 
         setActiveColors(megaMenuParentLi, megaMenuIsOpen);
         setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
