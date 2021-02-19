@@ -1,0 +1,29 @@
+name: Build Frontend Assets
+
+on:
+  push:
+    branches: [ 1.x ]
+  pull_request:
+    branches: [ 1.x ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Build Frontend assets
+        run: |
+          yarn install
+          yarn prod
+      - name: Commit assets
+        run: |
+          git config --global user.name 'Matthew Brabham'
+          git config --global user.email 'brabham.matthew@gmail.com'
+          git add -f dist
+          git commit -m "Adding asets"
+          git push
