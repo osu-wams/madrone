@@ -115,12 +115,7 @@
   }
   /* End Main menu */
   /* Group Menu */
-  #secondary-menu-container #block-madrone-views-block-group-name-block {
-    @apply lg-tw-col-start-2;
-  }
-  #secondary-menu-container #block-madrone-groupmenu {
-    @apply lg-tw-col-start-3;
-  }
+
   .madrone-mega-menu-group-more {
     @apply tw-self-stretch tw-relative;
   }
@@ -134,4 +129,12 @@
     @apply tw-block;
   }
   /* End Group Menu */
+
+  /* Secondary /Navigation */
+  .secondary-nav {
+    @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-py-2 tw-grid;
+    padding-left: 370px;
+    padding-right: 200px;
+    grid-template-columns: 400px 1fr;
+  }
 }
