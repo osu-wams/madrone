@@ -11,6 +11,7 @@
  * - site_logo: Logo for site as defined in Appearance or theme settings.
  * - site_name: Name for site as defined in Site information settings.
  * - site_slogan: Slogan for site as defined in Site information settings.
+ * - crest_logo: Mobile logo for site as defined in block preprocess function.
  */
 #}
 {% block content %}
@@ -104,29 +105,45 @@
   </div>
   <!-- This is almost identical to chunk in modal above, but there are a few differences that make it hard to extract into 1 file -->
   <div class="tw-grid tw-grid-cols-8 lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap">
-    <div class="tw-mx-4 modal-open">
+    <div class="tw-hidden lg-tw-block tw-mx-4 modal-open">
       <span class="tw-cursor-pointer">
         <img class="tw-max-w-none tw-h-4 tw-w-4" src="{{ base_path }}{{ active_theme_path() }}/assets/bento-icon.svg" alt=""/>
       </span>
     </div>
     {% if site_logo %}
-      <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex tw-no-underline">
+
+      <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 lg-tw-flex tw-no-underline tw-hidden">
         <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
       </a>
-      <div class="tw-flex tw-flex-col tw-justify-self-center tw-justify-center tw-items-center lg-tw-hidden">
-        <div class="tw-cursor-pointer tw-justify-self-center tw-flex tw-flex-col tw-justify-center tw-items-center" onclick="">
-          <i class="fas fa-bars"></i>
-          <span>Menu</span>
-        </div>
-      </div>
+
+      <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex tw-no-underline lg-tw-hidden">
+        <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ crest_logo }}" alt="{{ 'Home'|t }}"/>
+      </a>
+
+
     {% endif %}
     {% if site_name %}
-      <div class="site-name tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 tw-flex">
+      <div class="site-name tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 lg-tw-flex tw-hidden">
         <a class="tw-no-underline" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
       </div>
+
+      {# Added a mobile title separate from the normal title. I didn't want to mess with the JS being applied to the original title. #}
+
+      <div class="site-name-mobile tw-self-stretch tw-col-span-6 tw-text-xl tw-font-bold tw-text-osuorange tw-border-neutral-200 tw-flex lg-tw-hidden">
+        <a class="tw-no-underline tw-self-center" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+      </div>
+
     {% endif %}
     {% if site_slogan %}
       <div class="site-slogan">{{ site_slogan }}</div>
     {% endif %}
+
+    <div class="tw-flex tw-self-stretch tw-flex-col tw-justify-self-center tw-justify-center tw-items-center lg-tw-hidden tw-border-l-2 tw-border-neutral-200">
+      <div class="tw-cursor-pointer tw-justify-self-center tw-flex tw-flex-col tw-justify-center tw-items-center" onclick="">
+        <i class="fas fa-bars"></i>
+        <span>Menu</span>
+      </div>
+    </div>
+
   </div>
 {% endblock %}

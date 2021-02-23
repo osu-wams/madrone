@@ -51,6 +51,14 @@ function madrone_preprocess_block(&$variables) {
         $variables['content']['keys']['#madrone_is_header_search_submit'] = TRUE;
         $variables['content']['actions']['submit']['#madrone_is_header_search_submit'] = TRUE;
       }
+      //PIATTN
+      if ($variables['base_plugin_id'] == 'system_branding_block') {
+        $themeCrestPath = '/' . Drupal::theme()
+          ->getActiveTheme()
+          ->getPath() . '/assets/osu-logo-crest-only.svg';
+        $variables['crest_logo'] = $themeCrestPath;
+//        kint($themeCrestPath);
+      }
     }
   }
 }
