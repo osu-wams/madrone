@@ -12,21 +12,9 @@
  * @see template_preprocess_region()
  */
 #}
-{% set tailwindFlexy = [
-  'lg-tw-flex',
-  'tw-justify-between',
-  'tw-items-center'
-] %}
-
-{% set headerGrid = [
-  'lg-tw-grid',
-  'lg-tw-grid-cols-header',
-  'tw-border-b',
-  'tw-border-neutral-200'
-] %}
 
 {% if content %}
-  <div{{ attributes.addClass(headerGrid) }}>
+  <div{{attributes.addClass('madrone-header')}}>
     {{ content }}
   </div>
 {% endif %}

@@ -116,25 +116,6 @@ input {
     @apply tw-underline tw-underline-osuorange tw-underline-thin;
   }
 
-  /** Global Search Styles */
-  .header-search-form {
-    @apply tw-relative;
-  }
-  .header-search-form div {
-    @apply tw-h-full;
-  }
-  .header-search-form .form-search {
-    /** search input */
-    @apply tw-h-full tw-pl-2 tw-pr-8;
-  }
-  .header-search-form .form-actions {
-    /** search icon/submit wrapper */
-    @apply tw-absolute tw-p-2 tw-right-0 tw-flex;
-  }
-  .header-search-form .form-actions .form-submit {
-    @apply tw-h-full;
-  }
-
   .site-name {
     @apply tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 tw-flex;
     width: 400px;
@@ -144,6 +125,17 @@ input {
     overflow: hidden;
     text-overflow: 'ellipsis';
   }
+
+  .madrone-header {
+    @apply lg-tw-grid tw-border-b tw-border-neutral-200;
+  }
+  /* Important and just for desktop. 750 width of logo and title, 170 width of searchbox */
+  @media (min-width: 1024px) {
+    .madrone-header {
+      grid-template-columns: 750px 1fr 170px;
+    }
+  }
 }
 
 @import 'css/menus.css';
+@import 'css/search.css';
