@@ -13,10 +13,7 @@ createMoreMenu('block-madrone-groupmenu', 'madrone-mega-menu-group');
 
 megaMenuToggle();
 // Adapt immediately on load.
-// Set a width on the site title to better calculate the space of the menu items
-const siteTitle = document.querySelector('.site-name');
-siteTitle.style.width = `${siteTitle.innerText.length * 11}px`;
-// adjustMoreMenu();
+
 window.addEventListener('load', () => {
   adjustMoreMenu('block-madrone-main-menu', 'madrone-mega-menu-main');
   adjustMoreMenu('block-madrone-groupmenu', 'madrone-mega-menu-group');
