@@ -10,7 +10,7 @@
   }
 
   .mega-menu-parent-li {
-    @apply tw-font-normal tw-text-neutral-550 tw-flex tw-self-stretch tw-items-center tw-text-med;
+    @apply tw-font-normal tw-flex tw-self-stretch tw-items-center tw-text-med;
   }
 
   /* The menu items (not inside the more menu or mega menu) don't wrap */
@@ -50,16 +50,12 @@
   }
   .madrone-mega-menu-main,
   .madrone-mega-menu-group {
-    @apply tw-flex-wrap tw-hidden lg-tw-flex lg-tw-flex-grow lg-tw-justify-end tw-space-x-10 tw-items-center;
+    @apply tw-hidden lg-tw-flex tw-flex-wrap tw-flex-grow tw-justify-end tw-space-x-10 tw-items-center tw-pr-8;
   }
   .madrone-mega-menu {
     @apply tw-grid tw-col-start-2 tw-col-span-3 tw-grid-cols-3 tw-auto-rows-minmax100 tw-gap-x-20 tw-gap-y-5 tw-mt-10;
   }
 
-  /* potential only do this between 1024 and 1440 or something */
-  .site-name {
-    max-width: 400px;
-  }
   #block-madrone-main-menu:not(.--jsfied) {
     @apply tw-overflow-x-auto;
     position: relative;
@@ -67,7 +63,7 @@
   }
   /* More menu (madrone-more-menu) applies to both the group and main more menu dropdowns */
   .madrone-more-menu {
-    @apply tw-hidden tw-absolute tw-max-w-full tw-right-0 tw-bg-bucktoothwhite tw-shadow-sm tw-z-20 tw-border-neutral-200;
+    @apply md-tw-hidden tw-hidden tw-absolute tw-max-w-full tw-right-0 tw-bg-bucktoothwhite tw-shadow-sm tw-z-20 tw-border-neutral-200;
     min-width: 320px;
     padding: 10px 10px 20px;
     top: 97px; /* header is 96px height, so we add one more */
@@ -134,7 +130,8 @@
   .secondary-nav {
     @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-py-2 tw-grid;
     padding-left: 370px;
-    padding-right: 200px;
+    padding-right: 170px;
+    height: 40px;
     grid-template-columns: 400px 1fr;
   }
 }

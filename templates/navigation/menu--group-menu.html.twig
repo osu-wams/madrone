@@ -57,20 +57,25 @@ We call a macro which calls itself to render the full tree.
           {% for item in items %}
             {% if menu_level == 0 %}
               {% set list_item_classes = [
-          'mega-menu-parent-li'
-        ] %}
+                'mega-menu-parent-li'
+              ] %}
               {% set link_classes = [
-          'mega-menu-parent',
-          'tw-text-neutral-100',
-        ] %}
+                'mega-menu-parent',
+                'tw-text-neutral-100',
+              ] %}
             {% else %}
               {% set list_item_classes = [
-          'mega-menu-child',
-        ] %}
+                'mega-menu-child',
+              ] %}
               {% set link_classes = 'tw-no-underline' %}
             {% endif %}
             <li{{item.attributes.addClass(list_item_classes).setAttribute('data-index',data_index)}}>
-              {{ link(item.title, item.url, item.attributes.removeClass(list_item_classes).addClass(link_classes).setAttribute('tabindex', 0)) }}
+              {# Set accessibility featues to tab through menu and span to act as a button #}
+              {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
+                {{ link(item.title, item.url, item.attributes.addClass(link_classes, 'act-as-button').setAttribute('tabindex',0)) }}
+              {% else %}
+                {{ link(item.title, item.url, {'class':link_classes}) }}
+              {% endif %}
               {% if menu_level == 0 and item.below %}
                 <i class="fas fa-fw fa-caret-down"></i>
               {% endif %}

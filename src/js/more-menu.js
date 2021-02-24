@@ -79,19 +79,23 @@ const adjustMoreMenu = (blockId, navClass) => {
     allItems.forEach(item => {
       item.classList.remove('tw-hidden');
     });
-    let stopWidth = moreButton.offsetWidth + 45;
+    let stopWidth = moreButton.offsetWidth + 50;
 
     let primaryHiddenItems = [];
-    const primaryWidth = menuPrimary.offsetWidth - stopWidth;
-    menuPrimary.style.width = primaryWidth;
+
+    const viewPortWidth = window.innerWidth;
+    const titlePlusSearchWidth = 950; // rough width of our logo, site name and search
+    const menuSpace = viewPortWidth - titlePlusSearchWidth;
+
     menuPrimaryItems.forEach((item, i) => {
-      if (primaryWidth >= stopWidth + item.offsetWidth) {
+      if (menuSpace >= stopWidth + item.offsetWidth) {
         stopWidth += item.offsetWidth + 45;
       } else {
         item.classList.add('tw-hidden');
         primaryHiddenItems.push(item.getAttribute('data-index'));
       }
     });
+
     if (!primaryHiddenItems.length) {
       moreLi.classList.add('tw-hidden');
       menuContainer.classList.remove(navClass + '-show-secondary');
