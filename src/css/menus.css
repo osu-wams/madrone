@@ -56,6 +56,15 @@
     @apply tw-grid tw-col-start-2 tw-col-span-3 tw-grid-cols-3 tw-auto-rows-minmax100 tw-gap-x-20 tw-gap-y-5 tw-mt-10;
   }
 
+  /* Adds marginright to elements that are not hidden including first item, the first two overwrite some tailwind */
+  .madrone-mega-menu-main > :not([hidden]) ~ :not([hidden]),
+  .madrone-mega-menu-group > :not([hidden]) ~ :not([hidden]),
+  .madrone-mega-menu-main > :not([hidden]),
+  .madrone-mega-menu-group > :not([hidden]) {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
   #block-madrone-main-menu:not(.--jsfied) {
     @apply tw-overflow-x-auto;
     position: relative;
@@ -132,6 +141,7 @@
     padding-left: 370px;
     padding-right: 170px;
     height: 40px;
-    grid-template-columns: 400px 1fr;
+    /* 377: width of site title without left padding */
+    grid-template-columns: 380px 1fr;
   }
 }

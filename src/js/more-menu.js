@@ -79,7 +79,7 @@ const adjustMoreMenu = (blockId, navClass) => {
     allItems.forEach(item => {
       item.classList.remove('tw-hidden');
     });
-    let stopWidth = moreButton.offsetWidth + 50;
+    let stopWidth = moreButton.offsetWidth + 45;
 
     let primaryHiddenItems = [];
 
