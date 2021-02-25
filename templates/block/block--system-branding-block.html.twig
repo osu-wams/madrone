@@ -19,24 +19,24 @@
   <div class="modal-overlay tw-pointer-events-auto tw-hidden tw-absolute tw-w-screen tw-z-20 tw-h-screen tw-bg-gray-900 tw-opacity-50"></div>
 
   <div
-    id="osu-menu" class="modal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-overflow-y-auto tw-z-20 tw-bg-neutral-100 tw-w-screen md-tw-w-81.2">
+    id="osu-menu" class="modal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-overflow-y-auto tw-z-20 tw-bg-neutral-100 tw-w-screen lg-tw-w-81.2">
     <!-- This is almost identical to chunk below, but there are a few differences that make it hard to extract into 1 file -->
     <div class="tw-grid tw-grid-cols-8 lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap tw-pt-1 tw-bg-white">
-      <div class="tw-mx-4 modal-open">
-        <span class="tw-cursor-pointer">
-          <span id="osu-menu-close" class="tw-inline-block tw-text-center tw-text-xl tw-max-w-none tw-h-4 tw-w-4">
-            <i class="fas fa-times"></i>
-          </span>
-        </span>
-      </div>
+{#      <div class="tw-mx-4 modal-open">#}
+{#        <span class="tw-cursor-pointer">#}
+{#          <span id="osu-menu-close" class="tw-inline-block tw-text-center tw-text-xl tw-max-w-none tw-h-4 tw-w-4">#}
+{#            <i class="fas fa-times"></i>#}
+{#          </span>#}
+{#        </span>#}
+{#      </div>#}
       {% if site_logo %}
-        <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 tw-flex tw-no-underline">
+        <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-7 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-flex tw-no-underline">
           <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
         </a>
         <div class="tw-flex tw-flex-col tw-justify-self-center tw-justify-center tw-items-center lg-tw-hidden">
-          <div class="tw-cursor-pointer tw-justify-self-center tw-flex tw-flex-col tw-justify-center tw-items-center" onclick="">
-            <i class="fa fa-bars"></i>
-            <span>Menu</span>
+          <div class="modal-open tw-text-neutral-400 tw-cursor-pointer tw-justify-self-center tw-flex tw-flex-col tw-justify-center tw-items-center" onclick="">
+            <i class="fa fa-times tw-text-xl"></i>
+            <span class="tw-text-xs">Close</span>
           </div>
         </div>
       {% endif %}
