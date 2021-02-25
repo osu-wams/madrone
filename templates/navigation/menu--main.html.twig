@@ -69,7 +69,7 @@ We call a macro which calls itself to render the full tree.
             <li{{item.attributes.addClass(list_item_classes).setAttribute('data-index',data_index)}}>
               {# Set accessibility featues to tab through menu and span to act as a button #}
               {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
-                {{ link(item.title, item.url, item.attributes.addClass(link_classes, 'act-as-button').setAttribute('tabindex',0)) }}
+                {{ link(item.title, item.url, item.attributes.addClass(link_classes).setAttribute('tabindex',0).setAttribute('role', 'button')) }}
               {% else %}
                 {{ link(item.title, item.url, {'class':link_classes}) }}
               {% endif %}

@@ -1,3 +1,4 @@
+import { actAsButton } from './utils';
 /**
  * Hides all the mega menus. Will then add lg-tw-grid to megaMenuDiv if menuIsOpen is true and megaMenuDiv is not null
  */
@@ -103,6 +104,9 @@ function megaMenuToggle() {
         setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
       }
     });
+
+    // Spans can now be clicked with keyboard and spacebar
+    actAsButton(megaMenuParent[i]);
   }
 }
 
