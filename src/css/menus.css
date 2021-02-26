@@ -27,6 +27,20 @@
     margin-right: 4px;
   }
 
+  /** These are tweaks to make the carets clickable for the mega menu */
+  .mega-menu-parent-li {
+    position: relative;
+  }
+  .mega-menu-parent[role='button'] {
+    padding-right: 20px;
+  }
+  .mega-menu-parent + .fa-caret-down,
+  .mega-menu-parent + .fa-caret-up {
+    position: absolute;
+    right: 0px;
+    pointer-events: none;
+  }
+
   .mega-menu-child {
     @apply tw-font-normal tw-text-neutral-700 tw-relative tw-whitespace-normal;
   }
@@ -106,6 +120,7 @@
     @apply tw-block;
   }
   .madrone-mega-menu-main > li {
+    @apply tw-text-neutral-600;
     border-bottom: 2px solid transparent;
   }
   .madrone-mega-menu-main .madrone-active-trail {
