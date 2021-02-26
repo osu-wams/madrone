@@ -29,16 +29,14 @@
 
   /** These are tweaks to make the carets clickable for the mega menu */
   .mega-menu-parent-li {
-    position: relative;
+    @apply tw-relative;
   }
   .mega-menu-parent[role='button'] {
     padding-right: 20px;
   }
   .mega-menu-parent + .fa-caret-down,
   .mega-menu-parent + .fa-caret-up {
-    position: absolute;
-    right: 0px;
-    pointer-events: none;
+    @apply tw-absolute tw-right-0 tw-pointer-events-none;
   }
 
   .mega-menu-child {
@@ -75,13 +73,12 @@
   .madrone-mega-menu-group > :not([hidden]) ~ :not([hidden]),
   .madrone-mega-menu-main > :not([hidden]),
   .madrone-mega-menu-group > :not([hidden]) {
-    margin-left: 0;
+    @apply tw-ml-0;
     margin-right: 20px;
   }
 
   #block-madrone-main-menu:not(.--jsfied) {
-    @apply tw-overflow-x-auto;
-    position: relative;
+    @apply tw-overflow-x-auto tw-relative;
     -webkit-overflow-scrolling: touch;
   }
   /* More menu (madrone-more-menu) applies to both the group and main more menu dropdowns */
@@ -94,34 +91,33 @@
   /* Sets 36px left padding regardless of icon to leave space on the left for text */
   .madrone-more-menu li > span,
   .madrone-more-menu li > a {
+    @apply tw-relative;
     padding: 2px 0 8px 36px;
-    position: relative;
   }
 
   /* If icon is present we set it further left (ignoring the padding set above) */
   .madrone-more-menu li > a > svg,
   .madrone-more-menu li > span > svg {
-    position: absolute;
+    @apply tw-absolute;
     left: 5px;
   }
 
   .madrone-more-menu li svg + span {
+    @apply tw-pl-0;
     width: 240px;
-    padding-left: 0;
   }
 
   .madrone-more-menu a,
   .madrone-more-menu span {
+    @apply tw-w-full;
     padding: 8px 5px;
-    width: 100%;
   }
 
   .madrone-mega-menu-main-show-secondary .madrone-more-menu {
     @apply tw-block;
   }
   .madrone-mega-menu-main > li {
-    @apply tw-text-neutral-600;
-    border-bottom: 2px solid transparent;
+    @apply tw-text-neutral-600 tw-border-b-2 tw-border-transparent tw-border-solid;
   }
   .madrone-mega-menu-main .madrone-active-trail {
     @apply tw-border-osuorange;
@@ -131,7 +127,7 @@
     @apply tw-flex tw-self-stretch tw-relative tw-items-center tw-text-neutral-550;
   }
   .madrone-mega-menu-main-more button {
-    height: 100%; /* more button */
+    @apply tw-h-full; /* more button */
   }
   /* End Main menu */
   /* Group Menu */
