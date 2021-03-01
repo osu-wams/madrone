@@ -47,7 +47,11 @@
 
 ## Tailwind Configuration
 
-Configuration changes to how tailwind builds the asset file can be found in `tailwind.config.js`. Tailwind styles are assembled along with our changes and additions from `src/madrone.css`. If there is no Drupal Twig Template for a component to style, we can add our CSS targeting in the source madrone.css file. Look to the bottom of the file for examples of how we achieve this.
+Configuration changes to how tailwind builds the asset file can be found
+in `tailwind.config.js`. Tailwind styles are assembled along with our changes
+and additions from `src/madrone.css`. If there is no Drupal Twig Template for a
+component to style, we can add our CSS targeting in the source madrone.css file.
+Look to the bottom of the file for examples of how we achieve this.
 
 ### Rebuilding TailwindCSS assets
 
@@ -57,5 +61,8 @@ For minified `yarn prod`
 
 ## Developer Experience
 
-- Run `yarn watch` this task will automatically compile madrone.css (unminified) when you make changes.
-- When logged in, you typically need to run admin -> flush all caches when changing template files. This menu shows up under the drupal icon of nice menus
+- Run `yarn watch` this task will automatically compile madrone.css (unminified)
+  when you make changes.
+- When logged in, you typically need to run admin -> flush all caches when
+  changing template files. This menu shows up under the drupal icon of nice
+  menus
