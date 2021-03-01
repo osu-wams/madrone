@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Theme settings can be found here.
+ */
+
+/**
  * Implements hook_form_system_theme_settings_alter().
  */
 function madrone_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id = NULL) {
