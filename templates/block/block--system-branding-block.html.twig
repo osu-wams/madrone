@@ -22,11 +22,19 @@
     id="osu-menu" class="modal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-overflow-y-auto tw-z-20 tw-bg-neutral-100 tw-w-screen lg-tw-w-81.2">
     <!-- This is almost identical to chunk below, but there are a few differences that make it hard to extract into 1 file -->
     <div class="tw-grid tw-grid-cols-8 lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap tw-pt-1 tw-bg-white">
+      <!--Close Button Mobile-->
+      <div class="tw-hidden lg-tw-block tw-mx-4 modal-open">
+        <span class="tw-cursor-pointer">
+          <button id="osu-menu-close" class="tw-inline-block tw-text-center tw-text-xl tw-max-w-none tw-h-4 tw-w-4">
+            <i class="fas fa-times"></i>
+          </button>
+        </span>
+      </div>
       {% if site_logo %}
-{#        <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-pl-2.5 tw-border-r tw-border-neutral-200 tw-flex tw-no-underline">#}
-        <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-py-2 tw-pr-10 tw-pl-2.5 tw-flex tw-no-underline">
+        <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-py-2 tw-pr-10 tw-pl-2.5 tw-flex tw-no-underline lg-tw-pl-0">
           <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
         </a>
+        <!--Close Button Non Mobile-->
         <div class="tw-flex tw-flex-col tw-justify-self-right tw-items-center lg-tw-hidden tw-col-span-2 tw-pr-6">
           <button class="modal-open tw-text-neutral-400 tw-cursor-pointer tw-flex tw-flex-col tw-items-center tw-self-end" onclick="">
             <i class="fa fa-times tw-text-xl"></i>
