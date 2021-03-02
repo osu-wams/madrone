@@ -13,6 +13,17 @@ function toggleModal() {
   main.classList.toggle('tw-pointer-events-none');
 }
 
+function toggleNavModal() {
+  const navModal = document.querySelector('.navModal');
+  navModal.classList.toggle('tw-hidden');
+}
+
+function closeNavModal() {
+  const navModal = document.querySelector('.navModal');
+  navModal.classList.add('tw-hidden');
+}
+
+
 /**
  * Modal for OSU Menu
  */
@@ -32,6 +43,12 @@ function modalSetup() {
   for (let i = 0; i < closemodal.length; i++) {
     closemodal[i].addEventListener('click', toggleModal);
   }
+
+  // Modal for navigation menu
+  const openMobileNavMenu = document.querySelectorAll('.modal-nav-open');
+  for (let i = 0; i < openMobileNavMenu.length; i++) {
+    openMobileNavMenu[i].addEventListener('click', toggleNavModal);
+  }
 }
 
-export { toggleModal, modalSetup };
+export { toggleModal, modalSetup, toggleNavModal, closeNavModal };
