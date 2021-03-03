@@ -12,14 +12,12 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'media',
-    'media--type-' ~ media.bundle()|clean_class,
-    not media.isPublished() ? 'media--unpublished',
-    view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
+{% set classes = [
+  'media',
+  'media--type-' ~ media.bundle()|clean_class,
+  not media.isPublished() ? 'media--unpublished',
+  view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+] %}
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix.contextual_links }}
   {% if content %}

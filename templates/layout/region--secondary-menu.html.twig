@@ -13,7 +13,7 @@
  */
 #}
 {% if content|striptags|trim|length > 0 %}
-  <div{{attributes.addClass('secondary-nav').setAttribute('id','secondary-menu-container')}}>
+  <div{{ attributes.addClass('secondary-nav').setAttribute('id','secondary-menu-container') }}>
     {{ content }}
   </div>
 {% endif %}

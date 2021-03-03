@@ -26,7 +26,8 @@ function madrone_preprocess(&$variables, $hook) {
   }
   try {
     $variables['is_front'] = Drupal::service('path.matcher')->isFrontPage();
-  } catch (Exception $exception) {
+  }
+  catch (Exception $exception) {
     $variables['is_front'] = FALSE;
   }
   $variables['hide_title_front'] = theme_get_setting('madrone_front_title') ? TRUE : FALSE;
@@ -51,6 +52,13 @@ function madrone_preprocess_block(&$variables) {
         $variables['content']['keys']['#madrone_is_header_search_submit'] = TRUE;
         $variables['content']['actions']['submit']['#madrone_is_header_search_submit'] = TRUE;
       }
+
+      if ($variables['base_plugin_id'] == 'system_branding_block') {
+        $themeCrestPath = '/' . Drupal::theme()
+          ->getActiveTheme()
+          ->getPath() . '/assets/osu-logo-crest-only.svg';
+        $variables['crest_logo'] = $themeCrestPath;
+      }
     }
   }
 }
@@ -63,6 +71,7 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     case 'search_block_form':
       $form['keys']['#attributes']['placeholder'] = t('Search');
       break;
+
     case 'search_form':
       $form['basic']['keys']['#attributes']['placeholder'] = t('Search');
       break;

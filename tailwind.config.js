@@ -85,6 +85,12 @@ module.exports = {
       },
       gridTemplateRows: {
         'layout': 'repeat(10, minmax(0, 100px))',
+        'header-mobile': '96px',
+      },
+      gridTemplateColumns: {
+        'header': '[site-branding-start] 1fr [site-branding-end main-menu start] 1.2fr [main-menu-end search start] auto [search-end]',
+        'secondary-nav': '23rem [group-title-start] 1fr [group-title-end group-menu-start] 2fr [group-menu-end] 12.8rem',
+        'header-mobile': '5.5rem repeat(6, minmax(0, 1fr)) 5rem',
       },
       inset: {
         '25': '25%',
@@ -96,10 +102,6 @@ module.exports = {
         '81.2': '21.2rem',
         '81.5': '21.5rem'
       },
-      gridTemplateColumns: {
-        'header': '[site-branding-start] 1fr [site-branding-end main-menu start] 1.2fr [main-menu-end search start] auto [search-end]',
-        'secondary-nav': '23rem [group-title-start] 1fr [group-title-end group-menu-start] 2fr [group-menu-end] 12.8rem'
-      }
     }
   },
   variants: {

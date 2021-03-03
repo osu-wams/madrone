@@ -5,6 +5,7 @@ composer.lock
 /vendor/
 # Ignore compiled assets.
 # /dist/
+.DS_Store
 
 # Ignore lock files.
 /package-lock.json
