@@ -16,12 +16,15 @@
 #}
 {% block content %}
   <!--Modal-->
-  <div class="modal-overlay tw-pointer-events-auto tw-hidden tw-absolute tw-w-screen tw-z-20 tw-h-screen tw-bg-gray-900 tw-opacity-50"></div>
+  <div
+    class="modal-overlay tw-pointer-events-auto tw-hidden tw-absolute tw-w-screen tw-z-20 tw-h-screen tw-bg-gray-900 tw-opacity-50"></div>
 
   <div
-    id="osu-menu" class="modal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-h-24 tw-overflow-y-auto tw-z-20 tw-bg-neutral-100 tw-w-screen lg-tw-w-81.2">
+    id="osu-menu"
+    class="modal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-overflow-y-auto tw-z-20 tw-bg-neutral-100 tw-w-screen lg-tw-w-81.2">
     <!-- This is almost identical to chunk below, but there are a few differences that make it hard to extract into 1 file -->
-    <div class="tw-grid tw-grid-cols-8 lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap tw-pt-1 tw-bg-white tw-h-24">
+    <div
+      class="tw-grid tw-grid-cols-8 lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap tw-pt-1 tw-bg-white tw-h-24">
       <!--Close Button Mobile-->
       <div class="tw-hidden lg-tw-block tw-mx-4 modal-open">
         <span class="tw-cursor-pointer">
@@ -31,12 +34,15 @@
         </span>
       </div>
       {% if site_logo %}
-        <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-py-2 tw-pr-10 tw-pl-2.5 tw-flex tw-no-underline lg-tw-pl-0">
+        <a href="#" title="{{ 'Home'|t }}" rel="home"
+           class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-py-2 tw-pr-10 tw-pl-2.5 tw-flex tw-no-underline lg-tw-pl-0">
           <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
         </a>
         <!--Close Button Non Mobile-->
         <div class="tw-flex tw-flex-col tw-justify-self-right tw-items-center lg-tw-hidden tw-col-span-2 tw-pr-6">
-          <button class="modal-open tw-text-neutral-400 tw-cursor-pointer tw-flex tw-flex-col tw-items-center tw-self-end" onclick="">
+          <button
+            class="modal-open tw-text-neutral-400 tw-cursor-pointer tw-flex tw-flex-col tw-items-center tw-self-end"
+            onclick="">
             <i class="fa fa-times tw-text-xl"></i>
             <span class="tw-text-xs">Close</span>
           </button>
@@ -57,19 +63,23 @@
             <ul class="tw-text-2xl tw-pt-2">
               <li>
                 <a href="https://my.oregonstate.edu">
-                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/myosu-profile.png" aria-hidden="true" alt=""/>
+                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1"
+                       src="{{ base_path }}{{ active_theme_path() }}/assets/myosu-profile.png" aria-hidden="true"
+                       alt=""/>
                   <span class="tw-text-base">MyOregonState</span>
                 </a>
               </li>
               <li>
                 <a href="https://canvas.oregonstate.edu">
-                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/canvas-logo.png" alt="" aria-hidden="true"/>
+                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1"
+                       src="{{ base_path }}{{ active_theme_path() }}/assets/canvas-logo.png" alt="" aria-hidden="true"/>
                   <span class="tw-text-base">Canvas</span>
                 </a>
               </li>
               <li>
                 <a href="http://is.oregonstate.edu/google">
-                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1" src="{{ base_path }}{{ active_theme_path() }}/assets/thegoogs.png" alt="" aria-hidden="true"/>
+                  <img class="tw-w-8 tw-inline-block tw-mr-2 tw-py-1"
+                       src="{{ base_path }}{{ active_theme_path() }}/assets/thegoogs.png" alt="" aria-hidden="true"/>
                   <span class="tw-text-base">G Suite</span>
                 </a>
               </li>
@@ -86,7 +96,7 @@
               <li><a href="https://oregonstate.edu/faculty">Faculty and Staff</a></li>
               <li><a href="http://www.osualum.com/s/359/16/home.aspx?gid=1001&pgid=312">Alumni</a></li>
               <li><a href="https://www.osufoundation.org/s/359/foundation/start.aspx?sid=359&gid=34&pgid=61">Donors
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              																																																																																																																																					                                and Friends</a></li>
+                  and Friends</a></li>
             </ul>
           </li>
         </ul>
@@ -106,45 +116,48 @@
     </div>
   </div>
   <!-- This is almost identical to chunk in modal above, but there are a few differences that make it hard to extract into 1 file -->
-  <div class="tw-grid tw-grid-cols-header-mobile tw-grid-rows-header-mobile lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap">
+  <div
+    class="tw-grid tw-grid-cols-header-mobile tw-grid-rows-header-mobile lg-tw-flex tw-flex-wrap tw-items-center lg-tw-flex-nowrap">
     <div class="tw-hidden lg-tw-block tw-mx-4 modal-open">
       <span class="tw-cursor-pointer">
-        <img class="tw-max-w-none tw-h-4 tw-w-4" src="{{ base_path }}{{ active_theme_path() }}/assets/bento-icon.svg" alt=""/>
+        <img class="tw-max-w-none tw-h-4 tw-w-4" src="{{ base_path }}{{ active_theme_path() }}/assets/bento-icon.svg"
+             alt=""/>
       </span>
     </div>
     {% if site_logo %}
-      <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 lg-tw-flex tw-no-underline tw-hidden">
+      <a href="#" title="{{ 'Home'|t }}" rel="home"
+         class="site-logo modal-open tw-col-span-6 tw-self-stretch tw-mr-2 tw-py-2 tw-pr-10 tw-border-r-2 tw-border-neutral-200 lg-tw-flex tw-no-underline tw-hidden">
         <img class="tw-self-center tw-max-w-none tw-h-20" src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
       </a>
-
-      <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-self-stretch tw-flex tw-no-underline lg-tw-hidden tw-border-r-2 tw-border-neutral-200 tw-justify-center">
-        <img class="tw-self-center tw-max-w-none tw-h-20 tw-p-0.5 tw--ml-0.5" src="{{ crest_logo }}" alt="{{ 'Home'|t }}"/>
+      <a href="#" title="{{ 'Home'|t }}" rel="home"
+         class="site-logo modal-open tw-self-stretch tw-flex tw-no-underline lg-tw-hidden tw-border-r-2 tw-border-neutral-200 tw-justify-center">
+        <img class="tw-self-center tw-max-w-none tw-h-20 tw-p-0.5 tw--ml-0.5" src="{{ crest_logo }}"
+             alt="{{ 'Home'|t }}"/>
       </a>
-
-
     {% endif %}
     {% if site_name %}
-      <div class="site-name tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 lg-tw-flex tw-hidden">
+      <div
+        class="site-name tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 lg-tw-flex tw-hidden">
         <a class="tw-no-underline" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
       </div>
-
       {# Added a mobile title separate from the normal title. I didn't want to mess with the JS being applied to the original title. #}
-
-      <div class="site-name-mobile tw-self-stretch tw-col-span-6 tw-text-sm tw-font-bold tw-text-osuorange tw-border-neutral-200 tw-flex lg-tw-hidden tw-pl-3">
-        <a class="tw-no-underline tw-self-center" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+      <div
+        class="site-name-mobile tw-self-stretch tw-col-span-6 tw-text-sm tw-font-bold tw-text-osuorange tw-border-neutral-200 tw-flex lg-tw-hidden tw-pl-3">
+        <a class="tw-no-underline tw-self-center" href="{{ path('<front>') }}" title="{{ 'Home'|t }}"
+           rel="home">{{ site_name }}</a>
       </div>
-
     {% endif %}
     {% if site_slogan %}
       <div class="site-slogan">{{ site_slogan }}</div>
     {% endif %}
-
-    <div class="tw-flex tw-self-stretch tw-flex-col tw-justify-self-center tw-justify-center tw-items-center lg-tw-hidden tw-border-l-2 tw-border-neutral-200">
-      <div class="tw-cursor-pointer tw-justify-self-center tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-neutral-400 tw-pl-6 tw-pr-6" onclick="">
+    <div
+      class="tw-flex tw-self-stretch tw-flex-col tw-justify-self-center tw-justify-center tw-items-center lg-tw-hidden tw-border-l-2 tw-border-neutral-200">
+      <div
+        class="tw-cursor-pointer tw-justify-self-center tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-neutral-400 tw-pl-6 tw-pr-6"
+        onclick="">
         <i class="fas fa-bars"></i>
         <span class="tw-text-xs">Menu</span>
       </div>
     </div>
-
   </div>
 {% endblock %}

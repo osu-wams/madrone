@@ -39,24 +39,24 @@ We call a macro which calls itself to render the full tree.
   ] %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{attributes.addClass(menu_classes,menu_levels)}}>
-      {% else %}
-        <ul{{attributes.removeCLass(menu_classes).addClass(submenu_classes,menu_levels)}}>
-        {% endif %}
-        {% set attributes = attributes.removeClass(menu_levels) %}
-        {% for item in items %}
-          {% set liClasses = [
+      <ul{{ attributes.addClass(menu_classes,menu_levels) }}>
+    {% else %}
+      <ul{{ attributes.removeCLass(menu_classes).addClass(submenu_classes,menu_levels) }}>
+    {% endif %}
+    {% set attributes = attributes.removeClass(menu_levels) %}
+    {% for item in items %}
+      {% set liClasses = [
         item.in_active_trail ? 'tw-text-osuorange tw-font-bold hover-tw-text-osuorange' : 'tw-font-normal tw-text-neutral-550',
       ] %}
-          <li{{item.attributes.addCLass(liClasses)}}>
-            {{ link(item.title, item.url, item.attributes.addClass('tw-no-underline')) }}
-            {% if item.below %}
-              {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
-            {% endif %}
-          </li>
-        {% endfor %}
-        {% if menu_level == 0 %}
-        </ul>
+      <li{{ item.attributes.addCLass(liClasses) }}>
+        {{ link(item.title, item.url, item.attributes.addClass('tw-no-underline')) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    {% if menu_level == 0 %}
+      </ul>
     {% else %}
       </ul>
     {% endif %}
