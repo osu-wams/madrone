@@ -42,13 +42,6 @@ We call a macro which calls itself to render the full tree.
       {# Reset attributes variable. #}
       {% set attributes = attributes.removeClass(menu_classes, mega_menu_container_classes, submenu_classes) %}
       <div {{ attributes.addClass(mega_menu_container_classes) }}>
-      {% if menu_level == 1 %}
-        <div class="tw-absolute tw-text-neutral-400 tw-col-start-5 tw-mt-5">
-          <button class="closeMegaMenu tw-text-2xl tw-cursor-pointer">
-            <i class="fa fa-times"></i>
-          </button>
-        </div>
-      {% endif %}
       <ul {{ attributes.removeClass(mega_menu_container_classes).addClass(submenu_classes) }}>
     {% endif %}
     {% set data_index = 0 %}
@@ -91,6 +84,13 @@ We call a macro which calls itself to render the full tree.
     {% endfor %}
     {% if menu_level != 0 %}
       </ul>
+      {% if menu_level == 1 %}
+        <div class="tw-absolute tw-text-neutral-400 tw-col-start-5 tw-mt-5">
+          <button class="closeMegaMenu tw-text-2xl tw-cursor-pointer">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+      {% endif %}
       </div>
     {% else %}
       </ul>
