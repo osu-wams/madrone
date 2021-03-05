@@ -71,6 +71,13 @@ function modalSetup() {
   for (let i = 0; i < openMobileNavMenu.length; i++) {
     openMobileNavMenu[i].addEventListener('click', toggleNavModal);
   }
+  // copying the search into the menu
+  const searchBlockForm = document.getElementById('block-madrone-search');
+  const mobileNavSearch = document.getElementById('mobile-nav-search');
+  mobileNavSearch.innerHTML = searchBlockForm.innerHTML;
+
+
+
 }
 
 export { toggleModal, modalSetup, toggleNavModal, closeNavModal, openNavModal };

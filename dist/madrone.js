@@ -217,7 +217,12 @@ function modalSetup() {
 
   for (var _i2 = 0; _i2 < openMobileNavMenu.length; _i2++) {
     openMobileNavMenu[_i2].addEventListener('click', toggleNavModal);
-  }
+  } // copying the search into the menu
+
+
+  var searchBlockForm = document.getElementById('block-madrone-search');
+  var mobileNavSearch = document.getElementById('mobile-nav-search');
+  mobileNavSearch.innerHTML = searchBlockForm.innerHTML;
 }
 
 
