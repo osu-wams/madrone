@@ -16,11 +16,33 @@ function toggleModal() {
 function toggleNavModal() {
   const navModal = document.querySelector('.navModal');
   navModal.classList.toggle('tw-hidden');
+  if (navModal.classList.contains('tw-hidden')) {
+    closeNavModal();
+  } else {
+    openNavModal();
+  }
 }
 
 function closeNavModal() {
   const navModal = document.querySelector('.navModal');
+  const menuButton = document.querySelector('.modal-nav-open');
+  // I'm heavily relying on the order of the children not changing. We may want to consider using ID or Class
+  const menuButtonIcon = menuButton.children[0];
+  const menuButtonText = menuButton.children[1];
   navModal.classList.add('tw-hidden');
+  menuButtonIcon.setAttribute('data-icon', 'bars');
+  menuButtonText.innerText = 'Menu';
+}
+
+function openNavModal() {
+  const navModal = document.querySelector('.navModal');
+  const menuButton = document.querySelector('.modal-nav-open');
+  // I'm heavily relying on the order of the children not changing. We may want to consider using ID or Class
+  const menuButtonIcon = menuButton.children[0];
+  const menuButtonText = menuButton.children[1];
+  navModal.classList.remove('tw-hidden');
+  menuButtonIcon.setAttribute('data-icon', 'times');
+  menuButtonText.innerText = 'Close';
 }
 
 
@@ -51,4 +73,4 @@ function modalSetup() {
   }
 }
 
-export { toggleModal, modalSetup, toggleNavModal, closeNavModal };
+export { toggleModal, modalSetup, toggleNavModal, closeNavModal, openNavModal };
