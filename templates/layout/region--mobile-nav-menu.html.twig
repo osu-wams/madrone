@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+{% if content %}
+
+  <!--Need to reapply tw-bg-neutral-100 and remove bg-blue-100-->
+  <div id="osu-nav-menu" class="navModal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-overflow-y-auto tw-z-20 tw-bg-blue-100 tw-w-screen lg-tw-hidden">
+    {{ content }}
+  </div>
+
+{% endif %}

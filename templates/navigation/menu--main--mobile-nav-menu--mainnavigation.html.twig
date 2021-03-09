@@ -27,9 +27,9 @@ We call a macro which calls itself to render the full tree.
 {% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
   {% if items %}
-    {% set menu_classes = [
-      'madrone-mega-menu-' ~ menu_name|clean_class
-    ] %}
+{#    {% set menu_classes = [#}
+{#      'madrone-mega-menu-' ~ menu_name|clean_class#}
+{#    ] %}#}
     {% set submenu_classes = [
       'madrone-mega-menu'
     ] %}
@@ -37,37 +37,38 @@ We call a macro which calls itself to render the full tree.
       'madrone-mega-menu-container',
     ] %}
     {% if menu_level == 0 %}
-      <ul {{ attributes.addClass(menu_classes) }}>
+      <ul>
       {% else %}
         {# Reset attributes variable. #}
         {% set attributes = attributes.removeClass(menu_classes, mega_menu_container_classes, submenu_classes) %}
         <div {{ attributes.addClass(mega_menu_container_classes) }}>
-          {% if menu_level == 1 %}
-            <div class="tw-absolute tw-text-neutral-400 tw-col-start-5 tw-mt-5">
-              <button class="closeMegaMenu tw-text-2xl tw-cursor-pointer">
-                <i class="fa fa-times"></i>
-              </button>
-            </div>
-          {% endif %}
+{#          {% if menu_level == 1 %}#}
+{#            <div class="tw-absolute tw-text-neutral-400 tw-col-start-5 tw-mt-5">#}
+{#              <button class="closeMegaMenu tw-text-2xl tw-cursor-pointer">#}
+{#                <i class="fa fa-times"></i>#}
+{#              </button>#}
+{#            </div>#}
+{#          {% endif %}#}
           <ul {{ attributes.removeClass(mega_menu_container_classes).addClass(submenu_classes) }}>
           {% endif %}
           {# Craete variable to store the data-index and increment at the end of the loop. #}
-          {% set data_index = 0 %}
+{#          {% set data_index = 0 %}#}
           {% for item in items %}
-            {% if menu_level == 0 %}
-              {% set list_item_classes = [
-                'mega-menu-parent-li',
-              ] %}
-              {% set link_classes = [
-                'mega-menu-parent',
-              ] %}
-            {% else %}
-              {% set list_item_classes = [
-                'mega-menu-child'
-              ] %}
-              {% set link_classes = 'tw-no-underline' %}
-            {% endif %}
-            <li{{item.attributes.addClass(list_item_classes).setAttribute('data-index',data_index)}}>
+{#            {% if menu_level == 0 %}#}
+{#              {% set list_item_classes = [#}
+{#                'mega-menu-parent-li',#}
+{#              ] %}#}
+{#              {% set link_classes = [#}
+{#                'mega-menu-parent',#}
+{#              ] %}#}
+{#            {% else %}#}
+{#              {% set list_item_classes = [#}
+{#                'mega-menu-child'#}
+{#              ] %}#}
+{#              {% set link_classes = 'tw-no-underline' %}#}
+{#            {% endif %}#}
+{#            <li{{item.attributes.addClass(list_item_classes).setAttribute('data-index',data_index)}}>#}
+            <li>
               {# Set accessibility featues to tab through menu and span to act as a button #}
               {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
                 {{ link(item.title, item.url, item.attributes.addClass(link_classes).setAttribute('tabindex',0).setAttribute('role', 'button')) }}
@@ -79,17 +80,17 @@ We call a macro which calls itself to render the full tree.
                 <i class="fas fa-fw fa-caret-down"></i>
               {% endif %}
               {# content description for mega menu items #}
-              {% if menu_level == 1 %}
-                <p class="tw-text-xxs tw-mt-1 mega-menu-description">
-                  {{ item.url.options.attributes.title }}
-                </p>
-              {% endif %}
+{#              {% if menu_level == 1 %}#}
+{#                <p class="tw-text-xxs tw-mt-1 mega-menu-description">#}
+{#                  {{ item.url.options.attributes.title }}#}
+{#                </p>#}
+{#              {% endif %}#}
               {# looks to see if there are child links to the menu item #}
-              {% if item.below %}
-                {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
-              {% endif %}
+{#              {% if item.below %}#}
+{#                {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}#}
+{#              {% endif %}#}
             </li>
-            {% set data_index = data_index + 1 %}
+{#            {% set data_index = data_index + 1 %}#}
           {% endfor %}
           {% if menu_level != 0 %}
           </ul>
