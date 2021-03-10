@@ -42,18 +42,11 @@
   .mega-menu-child {
     @apply tw-font-normal tw-text-neutral-700 tw-relative tw-whitespace-normal;
     i, svg {
-      color: red;
+      @apply tw-absolute tw--left-6 tw-text-osuorange tw-mt-1;
     }
-  }
-
-  .mega-menu-child i,
-  .mega-menu-child svg {
-    @apply tw-absolute tw--left-6 tw-text-osuorange tw-mt-1;
-  }
-
-  .mega-menu-child i,
-  .mega-menu-child svg:before {
-    @apply tw-bg-osuorange;
+    i, svg:before {
+      @apply tw-bg-osuorange;
+    }
   }
 
   .mega-menu-description {
@@ -90,30 +83,27 @@
     min-width: 320px;
     padding: 10px 10px 20px;
     top: 97px; /* header is 96px height, so we add one more */
-  }
-  /* Sets 36px left padding regardless of icon to leave space on the left for text */
-  .madrone-more-menu li > span,
-  .madrone-more-menu li > a {
-    @apply tw-relative;
-    padding: 2px 0 8px 36px;
-  }
-
-  /* If icon is present we set it further left (ignoring the padding set above) */
-  .madrone-more-menu li > a > svg,
-  .madrone-more-menu li > span > svg {
-    @apply tw-absolute;
-    left: 5px;
-  }
-
-  .madrone-more-menu li svg + span {
-    @apply tw-pl-0;
-    width: 240px;
-  }
-
-  .madrone-more-menu a,
-  .madrone-more-menu span {
-    @apply tw-w-full;
-    padding: 8px 5px;
+   & a, & span {
+      @apply tw-w-full;
+      padding: 8px 5px;
+    }
+    & li {
+      & > span,
+      & > a {
+        /* Sets 36px left padding regardless of icon to leave space on the left for text */
+        @apply tw-relative;
+        padding: 2px 0 8px 36px;
+        & > svg {
+          /* If icon is present we set it further left (ignoring the padding set above) */
+          @apply tw-absolute;
+          left: 5px;
+        }
+      }
+      & svg + span {
+        @apply tw-pl-0;
+        width: 240px;
+      }
+    }
   }
 
   .madrone-mega-menu-main-show-secondary .madrone-more-menu {
