@@ -91,11 +91,9 @@ function toggleMobileNavAccordion(ele) {
   const parentId = ele.currentTarget.id;
   const rowsToToggle = document.querySelectorAll(`[data-pid=${CSS.escape(parentId)}]`);
   for (let i = 0; i < rowsToToggle.length; i++) {
-    rowsToToggle[i].hidden = !rowsToToggle[i].hidden;
-    console.log(ele.currentTarget);
+    rowsToToggle[i].classList.toggle('tw-hidden');
     const liSvgs = ele.currentTarget.getElementsByTagName('svg');
     const chevron = liSvgs[liSvgs.length - 1];
-
     if (rowsToToggle[i].hidden) {
       chevron.setAttribute('data-icon', 'caret-down');
     } else {

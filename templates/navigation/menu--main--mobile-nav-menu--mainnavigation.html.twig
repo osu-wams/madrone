@@ -56,7 +56,7 @@ We call a macro which calls itself to render the full tree.
           {% set data_index = data_index + 1 %}
           <li class="mobile-nav-li-1" id={{ data_index }}>
         {% else %}
-          <li class="tw-ml-4" data-pid={{ data_pid }}>
+          <li class="tw-ml-4 tw-hidden" data-pid={{ data_pid }}>
         {% endif %}
 
           {# Set accessibility featues to tab through menu and span to act as a button #}

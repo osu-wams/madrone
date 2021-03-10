@@ -239,8 +239,7 @@ function toggleMobileNavAccordion(ele) {
   var rowsToToggle = document.querySelectorAll("[data-pid=".concat(CSS.escape(parentId), "]"));
 
   for (var i = 0; i < rowsToToggle.length; i++) {
-    rowsToToggle[i].hidden = !rowsToToggle[i].hidden;
-    console.log(ele.currentTarget);
+    rowsToToggle[i].classList.toggle('tw-hidden');
     var liSvgs = ele.currentTarget.getElementsByTagName('svg');
     var chevron = liSvgs[liSvgs.length - 1];
 
