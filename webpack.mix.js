@@ -2,9 +2,10 @@ const mix = require('laravel-mix');
 
 mix
   .js('src/madrone.js', 'dist')
-  .postCss('src/madrone.css', 'dist', [
+  .postCss('src/madrone.pcss', 'dist', [
+    require('postcss-import'),
     require('tailwindcss'),
-    require('autoprefixer')
+    require('postcss-preset-env')({ stage: 1 }),
   ])
   .options({
     processCssUrls: false

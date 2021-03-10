@@ -10,16 +10,17 @@
     "watch-poll": "mix watch -- --watch-options-poll=1000"
   },
   "dependencies": {
-    "autoprefixer": "^10.1.0",
     "cross-env": "^5.2.0",
-    "laravel-mix": "^6.0.6",
-    "laravel-mix-purgecss": "^6.0.0",
-    "postcss": "^8.2.2",
-    "tailwindcss": "^2.0.2"
+    "laravel-mix": "^6.0.6",    
+    "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
     "eslint": "^7.15.0",
     "eslint-config-drupal": "^5.0.2",
-    "glob-all": "^3.2.1"
+    "glob-all": "^3.2.1",
+    "postcss": "^8.2.2",
+    "postcss-import": "^14.0.0",
+    "stylelint-config-recommended": "^4.0.0",
+    "postcss-preset-env": "^6.7.0"
   }
 }
