@@ -243,7 +243,7 @@ function toggleMobileNavAccordion(ele) {
     var liSvgs = ele.currentTarget.getElementsByTagName('svg');
     var chevron = liSvgs[liSvgs.length - 1];
 
-    if (rowsToToggle[i].hidden) {
+    if (rowsToToggle[i].classList.contains('tw-hidden')) {
       chevron.setAttribute('data-icon', 'caret-down');
     } else {
       chevron.setAttribute('data-icon', 'caret-up');
