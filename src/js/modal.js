@@ -80,6 +80,22 @@ function modalSetup() {
   // const mobileNavMenuLinks = document.getElementById('mobile-nav-menu-links');
   // mobileNavMenuLinks.innerHTML = madroneMegaMenuMain.innerHTML;
 
+  const allMobileNavParentLi = document.querySelectorAll('.mobile-nav-li-1');
+  for (let i = 0; i < allMobileNavParentLi.length; i++) {
+    allMobileNavParentLi[i].addEventListener('click', toggleMobileNavAccordion);
+  }
+
+}
+
+function toggleMobileNavAccordion(ele) {
+  console.log(ele.currentTarget.id);
+  const parentId = ele.currentTarget.id;
+  const rowsToHide = document.querySelectorAll(`[data-pid=${CSS.escape(parentId)}]`);
+
+  for (let i=0; i<rowsToHide.length; i++) {
+    rowsToHide[i].hidden = !rowsToHide[i].hidden;
+  }
+  console.log(rowsToHide);
 }
 
 export { toggleModal, modalSetup, toggleNavModal, closeNavModal, openNavModal };

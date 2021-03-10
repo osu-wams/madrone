@@ -226,6 +226,24 @@ function modalSetup() {
   // const mobileNavMenuLinks = document.getElementById('mobile-nav-menu-links');
   // mobileNavMenuLinks.innerHTML = madroneMegaMenuMain.innerHTML;
 
+
+  var allMobileNavParentLi = document.querySelectorAll('.mobile-nav-li-1');
+
+  for (var _i3 = 0; _i3 < allMobileNavParentLi.length; _i3++) {
+    allMobileNavParentLi[_i3].addEventListener('click', toggleMobileNavAccordion);
+  }
+}
+
+function toggleMobileNavAccordion(ele) {
+  console.log(ele.currentTarget.id);
+  var parentId = ele.currentTarget.id;
+  var rowsToHide = document.querySelectorAll("[data-pid=".concat(CSS.escape(parentId), "]"));
+
+  for (var i = 0; i < rowsToHide.length; i++) {
+    rowsToHide[i].hidden = !rowsToHide[i].hidden;
+  }
+
+  console.log(rowsToHide);
 }
 
 
