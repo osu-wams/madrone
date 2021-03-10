@@ -88,14 +88,11 @@ function modalSetup() {
 }
 
 function toggleMobileNavAccordion(ele) {
-  console.log(ele.currentTarget.id);
   const parentId = ele.currentTarget.id;
-  const rowsToHide = document.querySelectorAll(`[data-pid=${CSS.escape(parentId)}]`);
-
-  for (let i=0; i<rowsToHide.length; i++) {
-    rowsToHide[i].hidden = !rowsToHide[i].hidden;
+  const rowsToToggle = document.querySelectorAll(`[data-pid=${CSS.escape(parentId)}]`);
+  for (let i=0; i<rowsToToggle.length; i++) {
+    rowsToToggle[i].hidden = !rowsToToggle[i].hidden;
   }
-  console.log(rowsToHide);
 }
 
 export { toggleModal, modalSetup, toggleNavModal, closeNavModal, openNavModal };

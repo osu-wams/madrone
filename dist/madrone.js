@@ -235,15 +235,12 @@ function modalSetup() {
 }
 
 function toggleMobileNavAccordion(ele) {
-  console.log(ele.currentTarget.id);
   var parentId = ele.currentTarget.id;
-  var rowsToHide = document.querySelectorAll("[data-pid=".concat(CSS.escape(parentId), "]"));
+  var rowsToToggle = document.querySelectorAll("[data-pid=".concat(CSS.escape(parentId), "]"));
 
-  for (var i = 0; i < rowsToHide.length; i++) {
-    rowsToHide[i].hidden = !rowsToHide[i].hidden;
+  for (var i = 0; i < rowsToToggle.length; i++) {
+    rowsToToggle[i].hidden = !rowsToToggle[i].hidden;
   }
-
-  console.log(rowsToHide);
 }
 
 
