@@ -240,6 +240,15 @@ function toggleMobileNavAccordion(ele) {
 
   for (var i = 0; i < rowsToToggle.length; i++) {
     rowsToToggle[i].hidden = !rowsToToggle[i].hidden;
+    console.log(ele.currentTarget);
+    var liSvgs = ele.currentTarget.getElementsByTagName('svg');
+    var chevron = liSvgs[liSvgs.length - 1];
+
+    if (rowsToToggle[i].hidden) {
+      chevron.setAttribute('data-icon', 'caret-down');
+    } else {
+      chevron.setAttribute('data-icon', 'caret-up');
+    }
   }
 }
 
