@@ -41,6 +41,9 @@
 
   .mega-menu-child {
     @apply tw-font-normal tw-text-neutral-700 tw-relative tw-whitespace-normal;
+    i, svg {
+      color: red;
+    }
   }
 
   .mega-menu-child i,
@@ -68,7 +71,7 @@
     @apply tw-grid tw-col-start-2 tw-col-span-3 tw-grid-cols-3 tw-auto-rows-minmax100 tw-gap-x-20 tw-gap-y-5 tw-mt-10;
   }
 
-  /* Adds marginright to elements that are not hidden including first item, the first two overwrite some tailwind */
+  /* Adds margin-right to elements that are not hidden including first item, the first two overwrite some tailwind */
   .madrone-mega-menu-main > :not([hidden]) ~ :not([hidden]),
   .madrone-mega-menu-group > :not([hidden]) ~ :not([hidden]),
   .madrone-mega-menu-main > :not([hidden]),

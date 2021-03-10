@@ -7,8 +7,8 @@ module.exports = {
     content: [
       'config/**/*.yml',
       'templates/**/*.twig',
-      'src/*.css',
-      'src/**/*.css'
+      'src/*.pcss',
+      'src/**/*.pcss'
     ]
   },
   theme: {
