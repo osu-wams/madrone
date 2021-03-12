@@ -178,9 +178,9 @@ function toggleMobileNavAccordion(ele) {
     var chevron = liSvgs[liSvgs.length - 1];
 
     if (rowsToToggle[i].classList.contains('tw-hidden')) {
-      chevron.setAttribute('data-icon', 'caret-down');
+      chevron.setAttribute('data-icon', 'chevron-down');
     } else {
-      chevron.setAttribute('data-icon', 'caret-up');
+      chevron.setAttribute('data-icon', 'chevron-up');
     }
   }
 }
