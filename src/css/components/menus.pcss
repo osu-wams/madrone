@@ -31,9 +31,11 @@
   .mega-menu-parent-li {
     @apply tw-relative;
   }
+
   .mega-menu-parent[role='button'] {
     padding-right: 20px;
   }
+
   .mega-menu-parent + .fa-caret-down,
   .mega-menu-parent + .fa-caret-up {
     @apply tw-absolute tw-right-0 tw-pointer-events-none;
@@ -41,9 +43,11 @@
 
   .mega-menu-child {
     @apply tw-font-normal tw-text-neutral-700 tw-relative tw-whitespace-normal;
+
     i, svg {
       @apply tw-absolute tw--left-6 tw-text-osuorange tw-mt-1;
     }
+
     i, svg:before {
       @apply tw-bg-osuorange;
     }
@@ -56,10 +60,12 @@
     overflow: hidden;
     text-overflow: 'ellipsis';
   }
+
   .madrone-mega-menu-main,
   .madrone-mega-menu-group {
     @apply tw-hidden lg-tw-flex tw-flex-wrap tw-flex-grow tw-justify-end tw-space-x-10 tw-items-center tw-pr-8;
   }
+
   .madrone-mega-menu {
     @apply tw-grid tw-col-start-2 tw-col-span-3 tw-grid-cols-3 tw-auto-rows-minmax100 tw-gap-x-20 tw-gap-y-5 tw-mt-10;
   }
@@ -77,28 +83,33 @@
     @apply tw-overflow-x-auto tw-relative;
     -webkit-overflow-scrolling: touch;
   }
+
   /* More menu (madrone-more-menu) applies to both the group and main more menu dropdowns */
   .madrone-more-menu {
     @apply md-tw-hidden tw-hidden tw-absolute tw-max-w-full tw-right-0 tw-bg-bucktoothwhite tw-shadow-sm tw-z-20 tw-border-neutral-200;
     min-width: 320px;
     padding: 10px 10px 20px;
     top: 97px; /* header is 96px height, so we add one more */
-   & a, & span {
+
+    & a, & span {
       @apply tw-w-full;
       padding: 8px 5px;
     }
+
     & li {
       & > span,
       & > a {
         /* Sets 36px left padding regardless of icon to leave space on the left for text */
         @apply tw-relative;
         padding: 2px 0 8px 36px;
+
         & > svg {
           /* If icon is present we set it further left (ignoring the padding set above) */
           @apply tw-absolute;
           left: 5px;
         }
       }
+
       & svg + span {
         @apply tw-pl-0;
         width: 240px;
@@ -109,9 +120,11 @@
   .madrone-mega-menu-main-show-secondary .madrone-more-menu {
     @apply tw-block;
   }
+
   .madrone-mega-menu-main > li {
     @apply tw-text-neutral-600 tw-border-b-2 tw-border-transparent tw-border-solid;
   }
+
   .madrone-mega-menu-main .madrone-active-trail {
     @apply tw-border-osuorange;
   }
@@ -119,26 +132,30 @@
   .madrone-mega-menu-main-more {
     @apply tw-flex tw-self-stretch tw-relative tw-items-center tw-text-neutral-550;
   }
+
   .madrone-mega-menu-main-more button {
-    @apply tw-h-full; /* more button */
+    /* more button */
+    @apply tw-h-full;
   }
+
   /* End Main menu */
   /* Group Menu */
-
   .madrone-mega-menu-group-more {
     @apply tw-self-stretch tw-relative;
   }
+
   .madrone-mega-menu-group-secondary {
     @apply tw-hidden tw-absolute tw-max-w-full tw-right-0 tw-bg-neutral-700 tw-text-bucktoothwhite tw-shadow-sm tw-z-30 tw-border-neutral-200;
     min-width: 320px;
     padding: 10px 10px 20px;
     top: 33px;
   }
+
   .madrone-mega-menu-group-show-secondary .madrone-mega-menu-group-secondary {
     @apply tw-block;
   }
-  /* End Group Menu */
 
+  /* End Group Menu */
   /* Secondary /Navigation */
   .secondary-nav {
     @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-py-2 tw-grid;
