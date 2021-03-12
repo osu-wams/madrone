@@ -34,6 +34,9 @@ We call a macro which calls itself to render the full tree.
     {% set mega_menu_container_classes = [
       'madrone-mega-menu-container',
     ] %}
+    {% set link_classes = [
+      'tw-no-underline'
+    ] %}
 
 
     {% if menu_level == 0 %}
@@ -46,7 +49,7 @@ We call a macro which calls itself to render the full tree.
 
 
     {% if menu_level == 0 %}
-      <ul>
+      <ul class="tw-w-full">
     {% endif %}
 
       {% set data_index = 0 %}
@@ -54,9 +57,9 @@ We call a macro which calls itself to render the full tree.
 
         {% if menu_level == 0 %}
           {% set data_index = data_index + 1 %}
-          <li class="mobile-nav-li-1" id={{ data_index }}>
+          <li class="mobile-nav-li-1 tw-ml-4 tw-pb-7 tw-flex tw-justify-between tw-pr-8" id={{ data_index }}>
         {% else %}
-          <li class="tw-ml-4 tw-hidden" data-pid={{ data_pid }}>
+          <li class="tw-ml-12 tw-pb-7 tw-hidden" data-pid={{ data_pid }}>
         {% endif %}
 
           {# Set accessibility featues to tab through menu and span to act as a button #}

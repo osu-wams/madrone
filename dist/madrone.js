@@ -168,6 +168,23 @@ function toggleNavModal() {
   }
 }
 
+function toggleMobileNavAccordion(ele) {
+  var parentId = ele.currentTarget.id;
+  var rowsToToggle = document.querySelectorAll("[data-pid=".concat(CSS.escape(parentId), "]"));
+
+  for (var i = 0; i < rowsToToggle.length; i++) {
+    rowsToToggle[i].classList.toggle('tw-hidden');
+    var liSvgs = ele.currentTarget.getElementsByTagName('svg');
+    var chevron = liSvgs[liSvgs.length - 1];
+
+    if (rowsToToggle[i].classList.contains('tw-hidden')) {
+      chevron.setAttribute('data-icon', 'caret-down');
+    } else {
+      chevron.setAttribute('data-icon', 'caret-up');
+    }
+  }
+}
+
 function closeNavModal() {
   var navModal = document.querySelector('.navModal');
   var menuButton = document.querySelector('.modal-nav-open'); // I'm heavily relying on the order of the children not changing. We may want to consider using ID or Class
@@ -217,37 +234,12 @@ function modalSetup() {
 
   for (var _i2 = 0; _i2 < openMobileNavMenu.length; _i2++) {
     openMobileNavMenu[_i2].addEventListener('click', toggleNavModal);
-  } // // copying the search into the menu
-  // const searchBlockForm = document.getElementById('block-madrone-search');
-  // const mobileNavSearch = document.getElementById('mobile-nav-search');
-  // mobileNavSearch.innerHTML = searchBlockForm.innerHTML;
-  // //copying the mega menu links into the menu
-  // const madroneMegaMenuMain = document.querySelector('.madrone-mega-menu-main');
-  // const mobileNavMenuLinks = document.getElementById('mobile-nav-menu-links');
-  // mobileNavMenuLinks.innerHTML = madroneMegaMenuMain.innerHTML;
-
+  }
 
   var allMobileNavParentLi = document.querySelectorAll('.mobile-nav-li-1');
 
   for (var _i3 = 0; _i3 < allMobileNavParentLi.length; _i3++) {
     allMobileNavParentLi[_i3].addEventListener('click', toggleMobileNavAccordion);
-  }
-}
-
-function toggleMobileNavAccordion(ele) {
-  var parentId = ele.currentTarget.id;
-  var rowsToToggle = document.querySelectorAll("[data-pid=".concat(CSS.escape(parentId), "]"));
-
-  for (var i = 0; i < rowsToToggle.length; i++) {
-    rowsToToggle[i].classList.toggle('tw-hidden');
-    var liSvgs = ele.currentTarget.getElementsByTagName('svg');
-    var chevron = liSvgs[liSvgs.length - 1];
-
-    if (rowsToToggle[i].classList.contains('tw-hidden')) {
-      chevron.setAttribute('data-icon', 'caret-down');
-    } else {
-      chevron.setAttribute('data-icon', 'caret-up');
-    }
   }
 }
 
