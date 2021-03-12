@@ -2,7 +2,15 @@ module.exports = {
   prefix: 'tw-',
   separator: '-',
   important: false,
-  purge: false,
+  purge: {
+    enabled: true,
+    content: [
+      'config/**/*.yml',
+      'templates/**/*.twig',
+      'src/*.pcss',
+      'src/**/*.pcss'
+    ]
+  },
   theme: {
     extend: {
       colors: {
@@ -72,8 +80,8 @@ module.exports = {
         stratum2web: ['Stratum2WebBold', 'sans-serif']
       },
       fontSize: {
-        'xxs': '11px',
-        'med': '16px',
+        xxs: '11px',
+        med: '16px'
       },
       flex: {
         '2': '2 1 0%',
@@ -81,16 +89,16 @@ module.exports = {
         '4': '4 1 0%'
       },
       gridAutoRows: {
-        'minmax100': 'minmax(0, 100px)',
+        minmax100: 'minmax(0, 100px)'
       },
       gridTemplateRows: {
-        'layout': 'repeat(10, minmax(0, 100px))',
-        'header-mobile': '96px',
+        layout: 'repeat(10, minmax(0, 100px))',
+        'header-mobile': '96px'
       },
       gridTemplateColumns: {
-        'header': '[site-branding-start] 1fr [site-branding-end main-menu start] 1.2fr [main-menu-end search start] auto [search-end]',
+        header: '[site-branding-start] 1fr [site-branding-end main-menu start] 1.2fr [main-menu-end search start] auto [search-end]',
         'secondary-nav': '23rem [group-title-start] 1fr [group-title-end group-menu-start] 2fr [group-menu-end] 12.8rem',
-        'header-mobile': '5.5rem repeat(6, minmax(0, 1fr)) 5rem',
+        'header-mobile': '5.5rem repeat(6, minmax(0, 1fr)) 5rem'
       },
       inset: {
         '25': '25%',
@@ -101,7 +109,7 @@ module.exports = {
       width: {
         '81.2': '21.2rem',
         '81.5': '21.5rem'
-      },
+      }
     }
   },
   variants: {

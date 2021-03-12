@@ -1,0 +1,55 @@
+@layer base {
+  @font-face {
+    font-family: 'Stratum2WebBold';
+    src: url('../fonts/Stratum2WebBold.woff2') format('woff2'),
+      url('../fonts/Stratum2WebBold.woff') format('woff');
+  }
+  header {
+    @apply tw-bg-bucktoothwhite;
+  }
+
+  h1 {
+    @apply tw-text-4xl tw-font-stratum2web tw-text-osuorange tw-uppercase;
+  }
+
+  h2 {
+    @apply tw-text-3xl tw-font-stratum2web tw-text-osuorange tw-uppercase;
+  }
+
+  h3 {
+    @apply tw-text-2xl tw-font-stratum2web tw-text-black tw-uppercase;
+  }
+
+  body {
+    @apply tw-bg-neutral-100;
+  }
+
+  body.modal-active {
+    @apply tw-overflow-x-hidden tw-overflow-y-visible;
+  }
+
+  a {
+    @apply tw-underline tw-underline-osuorange tw-underline-thin;
+  }
+
+  .site-name {
+    @apply tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 tw-flex;
+    width: 400px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: 'ellipsis';
+  }
+
+  .madrone-header {
+    @apply lg-tw-grid tw-border-b tw-border-neutral-200;
+  }
+
+  /* Important and just for desktop. 750 width of logo and title, 170 width of searchbox */
+  @media (min-width: 1024px) {
+    .madrone-header {
+      grid-template-columns: 750px 1fr 170px;
+    }
+  }
+}
