@@ -22,69 +22,41 @@
 We call a macro which calls itself to render the full tree.
 @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
-
-
 {{ menus.menu_links(items, attributes, 0, menu_name) }}
 {% macro menu_links(items, attributes, menu_level, menu_name, data_pid=0) %}
   {% import _self as menus %}
   {% if items %}
-    {% set submenu_classes = [
-      'madrone-mega-menu'
-    ] %}
-    {% set mega_menu_container_classes = [
-      'madrone-mega-menu-container',
-    ] %}
     {% set link_classes = [
       'tw-no-underline',
     ] %}
-
-
-    {% if menu_level == 0 %}
-
-    {% else %}
-
-    {% endif %}
-
-
-
-
     {% if menu_level == 0 %}
       <ul class="tw-w-full">
     {% endif %}
-
       {% set data_index = 0 %}
       {% for item in items %}
-
         {% if menu_level == 0 %}
           {% set data_index = data_index + 1 %}
           <li class="mobile-nav-li-1 tw-ml-4 tw-pb-7 tw-flex tw-justify-between tw-pr-8 tw-text-neutral-700" id={{ data_index }}>
         {% else %}
           <li class="tw-ml-12 tw-pb-7 tw-hidden tw-text-neutral-700" data-pid={{ data_pid }}>
         {% endif %}
-
           {# Set accessibility featues to tab through menu and span to act as a button #}
           {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
             {{ link(item.title, item.url, item.attributes.addClass(link_classes).setAttribute('tabindex',0).setAttribute('role', 'button')) }}
           {% else %}
             {{ link(item.title, item.url, {'class':link_classes}) }}
           {% endif %}
-
           {# adding the chevron #}
           {% if menu_level == 0 and item.below %}
             <i class="fas fa-fw fa-chevron-down"></i>
           {% endif %}
-
         </li>
-
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name, data_index) }}
         {% endif %}
-
       {% endfor %}
-
     {% if menu_level == 0 %}
       <ul>
     {% endif %}
-
   {% endif %}
 {% endmacro %}
