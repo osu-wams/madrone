@@ -42,9 +42,9 @@ We call a macro which calls itself to render the full tree.
         {% endif %}
           {# Set accessibility featues to tab through menu and span to act as a button #}
           {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
-            {{ link(item.title, item.url, item.attributes.addClass(link_classes).setAttribute('tabindex',0).setAttribute('role', 'button')) }}
+            {{ link(item.title, item.url, item.attributes.addClass(link_classes).setAttribute('tabindex', 0).setAttribute('role', 'button')) }}
           {% else %}
-            {{ link(item.title, item.url, {'class':link_classes}) }}
+            {{ link(item.title, item.url, {'class': link_classes}) }}
           {% endif %}
           {# adding the chevron #}
           {% if menu_level == 0 and item.below %}
@@ -56,7 +56,7 @@ We call a macro which calls itself to render the full tree.
         {% endif %}
       {% endfor %}
     {% if menu_level == 0 %}
-      <ul>
+      </ul>
     {% endif %}
   {% endif %}
 {% endmacro %}
