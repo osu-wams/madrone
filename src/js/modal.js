@@ -67,7 +67,7 @@ function openNavModal() {
 function modalSetup() {
   const openmodal = document.querySelectorAll('.modal-open');
   for (let i = 0; i < openmodal.length; i++) {
-    openmodal[i].addEventListener('click', function(event) {
+    openmodal[i].addEventListener('click', function (event) {
       event.preventDefault();
       toggleModal();
     });
@@ -89,4 +89,4 @@ function modalSetup() {
   }
 }
 
-export { toggleModal, modalSetup, toggleNavModal, closeNavModal, openNavModal };
+export { toggleModal, modalSetup, closeNavModal };
