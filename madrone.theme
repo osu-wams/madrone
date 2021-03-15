@@ -7,6 +7,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\group\Entity\GroupContent;
+use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_preprocess().
@@ -83,7 +84,6 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function madrone_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-
   if (!empty($variables['elements']['#id'])) {
     /** @var \Drupal\block\BlockInterface $block */
     $block = Drupal::entityTypeManager()
@@ -117,14 +117,14 @@ function madrone_theme_suggestions_form_alter(array &$suggestions, array $variab
     $suggestions[] = 'form__search_block_form';
   }
 
-  if(key_exists('block', $variables['element']['#attributes'])) {
+  if (array_key_exists('block', $variables['element']['#attributes'])) {
     /** @var \Drupal\block\BlockInterface $block */
     $block = Drupal::entityTypeManager()
       ->getStorage('block')
       ->load($variables['element']['#attributes']['block']);
     if ($block) {
       $region = $block->getRegion();
-      $suggestions[] = 'form__'. $region . '__search_block_form';
+      $suggestions[] = 'form__' . $region . '__search_block_form';
     }
   }
 }
@@ -136,8 +136,8 @@ function madrone_theme_suggestions_menu_alter(array &$suggestions, array $variab
   // Remove the block and replace dashes with underscores in the block ID to
   // use for the hook name.
   if (isset($variables['attributes']['block'])) {
-    $hook = str_replace(array('block-', '-'), array('', '_'), $variables['attributes']['block']);
-    $block = \Drupal\block\Entity\Block::load($hook);
+    $hook = str_replace(['block-', '-'], ['', '_'], $variables['attributes']['block']);
+    $block = Block::load($hook);
     $region = $block->getRegion();
     $suggestions[] = $variables['theme_hook_original'] . '__' . $region . '__' . $hook;
   }
@@ -149,4 +149,3 @@ function madrone_theme_suggestions_menu_alter(array &$suggestions, array $variab
 function madrone_preprocess_menu_local_task(&$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'tw-no-underline';
 }
-
