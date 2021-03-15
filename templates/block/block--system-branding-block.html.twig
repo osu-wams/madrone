@@ -86,7 +86,7 @@
               <li><a href="https://oregonstate.edu/faculty">Faculty and Staff</a></li>
               <li><a href="http://www.osualum.com/s/359/16/home.aspx?gid=1001&pgid=312">Alumni</a></li>
               <li><a href="https://www.osufoundation.org/s/359/foundation/start.aspx?sid=359&gid=34&pgid=61">Donors
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              																																																																																																																																					                                and Friends</a></li>
+                  and Friends</a></li>
             </ul>
           </li>
         </ul>
@@ -120,20 +120,16 @@
       <a href="#" title="{{ 'Home'|t }}" rel="home" class="site-logo modal-open tw-self-stretch tw-flex tw-no-underline lg-tw-hidden tw-border-r-2 tw-border-neutral-200 tw-justify-center">
         <img class="tw-self-center tw-max-w-none tw-h-20 tw-p-0.5 tw--ml-0.5" src="{{ crest_logo }}" alt="{{ 'Home'|t }}"/>
       </a>
-
-
     {% endif %}
     {% if site_name %}
       <div class="site-name tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 lg-tw-flex tw-hidden">
         <a class="tw-no-underline" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
       </div>
-
       {# Added a mobile title separate from the normal title. I didn't want to mess with the JS being applied to the original title. #}
 
       <div class="site-name-mobile tw-self-stretch tw-col-span-6 tw-text-sm tw-font-bold tw-text-osuorange tw-border-neutral-200 tw-flex lg-tw-hidden tw-pl-3">
         <a class="tw-no-underline tw-self-center" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
       </div>
-
     {% endif %}
     {% if site_slogan %}
       <div class="site-slogan">{{ site_slogan }}</div>
@@ -145,6 +141,5 @@
         <span class="tw-text-xs">Menu</span>
       </button>
     </div>
-
   </div>
 {% endblock %}
