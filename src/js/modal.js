@@ -70,6 +70,7 @@ function modalSetup() {
     openmodal[i].addEventListener('click', function (event) {
       event.preventDefault();
       toggleModal();
+      closeNavModal();
     });
   }
   const overlay = document.querySelector('.modal-overlay');
