@@ -10,6 +10,18 @@
  * @see template_preprocess_form()
  */
 #}
-<form class="tw-flex tw-text-lg tw-h-16 tw-items-center tw-justify-between tw-pr-8 tw-pl-4 tw-border-neutral-200 tw-border-b">
+{% set mobile_nav_forms = [
+  'tw-h-16',
+  'tw-pr-8',
+  'tw-pl-4',
+  'tw-text-lg',
+  'tw-flex',
+  'tw-items-center',
+  'tw-justify-between',
+  'tw-border-b',
+  'tw-border-neutral-200',
+  'mobile-search'
+] %}
+<form {{ attributes.addClass(mobile_nav_forms) }}>
   {{ children }}
 </form>
