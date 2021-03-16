@@ -10,3 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: guix77/phpcs-drupal-action@v1.0.0
+      - uses: DirtDiglett/actions-twigcs@v1
