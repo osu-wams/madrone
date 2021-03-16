@@ -57,7 +57,7 @@ function madrone_preprocess_block(&$variables) {
           $variables['content']['keys']['#madrone_is_header_search_submit'] = TRUE;
           $variables['content']['actions']['submit']['#madrone_is_header_search_submit'] = TRUE;
         }
-        elseif ($region == 'mobile_nav_menu') {
+        elseif ($region == 'mobile_header') {
           $variables['content']['keys']['#madrone_is_mobile_search_submit'] = TRUE;
           $variables['content']['actions']['submit']['#madrone_is_mobile_search_submit'] = TRUE;
         }
