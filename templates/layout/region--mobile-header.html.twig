@@ -11,9 +11,23 @@
  *
  * @see template_preprocess_region()
  */
+  id="osu-nav-menu" class="navModal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-z-20 tw-bg-bucktoothwhite tw-w-full lg-tw-hidden"
 #}
-{% if content %}
-  <div id="osu-nav-menu" class="navModal tw-pointer-events-auto tw-hidden tw-absolute tw-h-screen tw-z-20 tw-bg-bucktoothwhite tw-w-full lg-tw-hidden">
+{% set region_id = 'madrone-' ~ region|clean_class ~ '-container' %}
+{% set region_class = [
+  'madrone-' ~ region|clean_class,
+  'nav-modal',
+  'tw-pointer-events-auto',
+  'tw-hidden',
+  'tw-absolute',
+  'tw-h-screen',
+  'tw-z-20',
+  'tw-bg-bucktoothwhite',
+  'tw-w-full',
+  'lg-tw-hidden'
+] %}
+{% if content|striptags|trim|length > 0 %}
+  <div{{ attributes.setAttribute('id', region_id).addClass(region_class) }}>
     {{ content }}
   </div>
 {% endif %}
