@@ -8,7 +8,6 @@
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\group\Entity\GroupContent;
-use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_preprocess().
@@ -69,9 +68,10 @@ function madrone_preprocess_block(&$variables) {
           ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
       }
+      $variables['content']['#attributes']['block'] = $variables['elements']['#id'];
+      $variables['content']['#attributes']['region'] = $region;
     }
   }
-  $variables['content']['#attributes']['block'] = $variables['elements']['#id'];
 }
 
 /**
@@ -145,13 +145,10 @@ function madrone_theme_suggestions_form_alter(array &$suggestions, array $variab
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function madrone_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
-  // Remove the block and replace dashes with underscores in the block ID to
-  // use for the hook name.
-  if (isset($variables['attributes']['block'])) {
-    $hook = str_replace(['block-', '-'], ['', '_'], $variables['attributes']['block']);
-    $block = Block::load($hook);
-    $region = $block->getRegion();
-    $suggestions[] = $variables['theme_hook_original'] . '__' . $region . '__' . $hook;
+  if (isset($variables['attributes']['region'])) {
+    $region = str_replace('-', '_', $variables['attributes']['region']);
+    $suggestions[] = 'menu__' . $region;
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $region;
   }
 }
 

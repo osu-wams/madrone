@@ -14,7 +14,7 @@ function toggleModal() {
 }
 
 function toggleNavModal() {
-  const navModal = document.querySelector('.navModal');
+  const navModal = document.querySelector('.nav-modal');
   navModal.classList.toggle('tw-hidden');
   if (navModal.classList.contains('tw-hidden')) {
     closeNavModal();
@@ -39,7 +39,7 @@ function toggleMobileNavAccordion(ele) {
 }
 
 function closeNavModal() {
-  const navModal = document.querySelector('.navModal');
+  const navModal = document.querySelector('.nav-modal');
   const menuButton = document.querySelector('.modal-nav-open');
   // I'm heavily relying on the order of the children not changing. We may want to consider using ID or Class
   const menuButtonIcon = menuButton.children[0];
@@ -50,7 +50,7 @@ function closeNavModal() {
 }
 
 function openNavModal() {
-  const navModal = document.querySelector('.navModal');
+  const navModal = document.querySelector('.nav-modal');
   const menuButton = document.querySelector('.modal-nav-open');
   // I'm heavily relying on the order of the children not changing. We may want to consider using ID or Class
   const menuButtonIcon = menuButton.children[0];
