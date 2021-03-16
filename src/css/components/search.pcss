@@ -2,28 +2,44 @@
   /** Global Search Styles */
   .header-search-form {
     @apply tw-relative tw-flex tw-items-center tw-h-full tw-w-full;
-  }
 
-  .header-search-form div {
-    @apply tw-h-full;
-  }
+    & div {
+      @apply tw-h-full;
+    }
 
-  .header-search-form .form-search {
-    /** search input */
-    @apply tw-h-full tw-pl-2;
-  }
+    & .form-search {
+      /** search input */
+      @apply tw-h-full tw-pl-2;
+    }
 
-  .header-search-form .form-actions {
-    /** search icon/submit wrapper */
-    @apply tw-absolute tw-p-2 tw-right-0 tw-flex;
-  }
+    & .form-actions {
+      /** search icon/submit wrapper */
+      @apply tw-absolute tw-p-2 tw-right-0 tw-flex;
 
-  .header-search-form .form-actions .form-submit {
-    @apply tw-h-full;
+      & .form-submit {
+        @apply tw-h-full;
+      }
+    }
   }
 
   .madrone-search {
     @apply tw-hidden lg-tw-flex tw-items-center tw-self-stretch tw-border-l tw-border-neutral-200;
     width: 170px;
+  }
+
+  .mobile-search {
+    @apply tw-relative;
+
+    & .form-item {
+      @apply tw-w-full tw-h-full;
+    }
+
+    & .form-search {
+      @apply tw-h-full tw-w-full tw-pl-2;
+    }
+
+    & .form-actions {
+      @apply tw-absolute tw-right-9 tw-h-full;
+    }
   }
 }

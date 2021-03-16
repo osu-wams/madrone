@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{% set mobile_nav_forms = [
+  'tw-h-16',
+  'tw-pr-8',
+  'tw-pl-4',
+  'tw-text-lg',
+  'tw-flex',
+  'tw-items-center',
+  'tw-justify-between',
+  'tw-border-b',
+  'tw-border-neutral-200',
+  'mobile-search'
+] %}
+<form {{ attributes.addClass(mobile_nav_forms) }}>
+  {{ children }}
+</form>
