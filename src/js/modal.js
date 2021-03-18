@@ -25,7 +25,8 @@ function toggleNavModal() {
 
 function toggleMobileNavAccordion(ele) {
   const parentId = ele.currentTarget.id;
-  const rowsToToggle = document.querySelectorAll(`[data-pid=${CSS.escape(parentId)}]`);
+  const container = document.querySelector('#mobile-header-ul')
+  const rowsToToggle = container.querySelectorAll(`[data-pid=${CSS.escape(parentId)}]`);
   for (let i = 0; i < rowsToToggle.length; i++) {
     rowsToToggle[i].classList.toggle('tw-hidden');
     const liSvgs = ele.currentTarget.getElementsByTagName('svg');
@@ -37,6 +38,24 @@ function toggleMobileNavAccordion(ele) {
     }
   }
 }
+
+function toggleMobileGroupMenuAccordion(ele) {
+  const parentId = ele.currentTarget.id;
+  const container = document.querySelector('#mobile-secondary-menu-div');
+  const rowsToToggle = container.querySelectorAll(`[data-pid=${CSS.escape(parentId)}]`);
+  for (let i = 0; i < rowsToToggle.length; i++) {
+    rowsToToggle[i].classList.toggle('tw-hidden');
+    const liSvgs = ele.currentTarget.getElementsByTagName('svg');
+    const chevron = liSvgs[liSvgs.length - 1];
+    if (rowsToToggle[i].classList.contains('tw-hidden')) {
+      chevron.setAttribute('data-icon', 'chevron-down');
+    } else {
+      chevron.setAttribute('data-icon', 'chevron-up');
+    }
+  }
+}
+
+
 
 function closeNavModal() {
   const navModal = document.querySelector('.nav-modal');
@@ -87,6 +106,10 @@ function modalSetup() {
   const allMobileNavParentLi = document.querySelectorAll('.mobile-nav-li-1');
   for (let i = 0; i < allMobileNavParentLi.length; i++) {
     allMobileNavParentLi[i].addEventListener('click', toggleMobileNavAccordion);
+  }
+  const allMobileGroupMenuParentLi = document.querySelectorAll('.mobile-secondary-menu-li-0');
+  for (let i = 0; i < allMobileGroupMenuParentLi.length; i++) {
+    allMobileGroupMenuParentLi[i].addEventListener('click', toggleMobileGroupMenuAccordion);
   }
 }
 

@@ -30,7 +30,7 @@ We call a macro which calls itself to render the full tree.
       'tw-no-underline',
     ] %}
     {% if menu_level == 0 %}
-      <ul class="tw-w-full">
+      <ul id="mobile-header-ul" class="tw-w-full">
     {% endif %}
       {% set data_index = 0 %}
       {% for item in items %}

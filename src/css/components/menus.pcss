@@ -156,13 +156,24 @@
   }
 
   /* End Group Menu */
-  /* Secondary /Navigation */
+  /* Secondary Navigation */
   .madrone-secondary-menu {
-    @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-py-2 tw-grid;
+    @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-py-2 tw-hidden lg-tw-grid;
     padding-left: 370px;
     padding-right: 170px;
     height: 40px;
     /* 377: width of site title without left padding */
     grid-template-columns: 380px 1fr;
+  }
+
+  /* End Secondary Navigation */
+  /* Mobile Secondary Navigation */
+  .madrone-mobile-secondary-menu {
+    @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-grid lg-tw-hidden;
+    //padding-left: 370px;
+    //padding-right: 170px;
+    //height: 40px;
+    /* 377: width of site title without left padding */
+    //grid-template-rows: 380px 1fr;
   }
 }
