@@ -18,6 +18,9 @@
  *     that are not currently visible.
  */
 #}
+
+
+
 {% import _self as menus %}
 {#
 We call a macro which calls itself to render the full tree.
@@ -28,16 +31,21 @@ We call a macro which calls itself to render the full tree.
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <div id="mobile-secondary-menu-div" class="tw-w-full tw-bg-bucktoothwhite tw-hidden tw-absolute tw-z-50">
-      <ul class="mobile-secondary-menu-ul tw-w-full">
+      <div id="mobile-secondary-menu-div" class="tw-w-full tw-bg-neutral-700 tw-hidden tw-absolute tw-z-50 tw-h-screen">
+      <ul class="mobile-secondary-menu-ul tw-w-full tw-items-center">
     {% endif %}
     {% set data_index = 0 %}
     {% for item in items %}
       {% if menu_level == 0 %}
         {% set data_index = data_index + 1 %}
-        <li class="mobile-secondary-menu-li-0 tw-ml-4 tw-pb-7 tw-flex tw-justify-between tw-pr-8 tw-text-neutral-700" id={{ data_index }}>
+        {% if loop.first %}
+          <li class="mobile-secondary-menu-li-0 tw-ml-4 tw-pt-4 tw-pb-7 tw-flex tw-justify-between tw-pr-8 tw-text-bucktoothwhite" id={{ data_index }}>
+        {% else %}
+          <li class="mobile-secondary-menu-li-0 tw-ml-4 tw-pb-7 tw-flex tw-justify-between tw-pr-8 tw-text-bucktoothwhite" id={{ data_index }}>
+        {% endif %}
       {% else %}
-        <li class="tw-ml-12 tw-pb-7 tw-hidden tw-text-neutral-700" data-pid={{ data_pid }}>
+        <li class="tw-ml-12 tw-pb-7 tw-hidden tw-text-bucktoothwhite" data-pid={{ data_pid }}>
+        {% set link_classes = ['tw-no-underline'] %}
       {% endif %}
       {# Set accessibility featues to tab through menu and span to act as a button #}
       {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
