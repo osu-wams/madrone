@@ -202,6 +202,12 @@ function toggleMobileGroupMenuAccordion(ele) {
   }
 }
 
+function toggleMobileGroupMenu() {
+  console.log('toggleMobileGroupMenu');
+  var mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
+  mobileGroupMenuDiv.classList.toggle('tw-hidden');
+}
+
 function closeNavModal() {
   var navModal = document.querySelector('.nav-modal');
   var menuButton = document.querySelector('.modal-nav-open'); // I'm heavily relying on the order of the children not changing. We may want to consider using ID or Class
@@ -264,6 +270,13 @@ function modalSetup() {
 
   for (var _i4 = 0; _i4 < allMobileGroupMenuParentLi.length; _i4++) {
     allMobileGroupMenuParentLi[_i4].addEventListener('click', toggleMobileGroupMenuAccordion);
+  }
+
+  var mobileGroupMenuDiv = document.querySelector('.mobile-group-menu');
+
+  if (mobileGroupMenuDiv != null) {
+    console.log("we in there");
+    mobileGroupMenuDiv.addEventListener('click', toggleMobileGroupMenu);
   }
 }
 

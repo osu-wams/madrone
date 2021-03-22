@@ -55,6 +55,12 @@ function toggleMobileGroupMenuAccordion(ele) {
   }
 }
 
+function toggleMobileGroupMenu() {
+  console.log('toggleMobileGroupMenu');
+  const mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
+  mobileGroupMenuDiv.classList.toggle('tw-hidden');
+}
+
 
 
 function closeNavModal() {
@@ -110,6 +116,12 @@ function modalSetup() {
   const allMobileGroupMenuParentLi = document.querySelectorAll('.mobile-secondary-menu-li-0');
   for (let i = 0; i < allMobileGroupMenuParentLi.length; i++) {
     allMobileGroupMenuParentLi[i].addEventListener('click', toggleMobileGroupMenuAccordion);
+  }
+
+  const mobileGroupMenuDiv = document.querySelector('.mobile-group-menu');
+  if (mobileGroupMenuDiv != null) {
+    console.log("we in there");
+    mobileGroupMenuDiv.addEventListener('click', toggleMobileGroupMenu);
   }
 }
 

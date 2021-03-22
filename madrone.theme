@@ -158,8 +158,3 @@ function madrone_theme_suggestions_menu_alter(array &$suggestions, array $variab
 function madrone_preprocess_menu_local_task(&$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'tw-no-underline';
 }
-
-function madrone_theme_suggestions_views_view_fields_alter(array &$suggestions, array $variables) {
-  $myView = $variables['view'];
-  kint($myView->id());
-}
