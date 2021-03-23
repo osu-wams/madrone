@@ -203,9 +203,18 @@ function toggleMobileGroupMenuAccordion(ele) {
 }
 
 function toggleMobileGroupMenu() {
-  console.log('toggleMobileGroupMenu');
   var mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
   mobileGroupMenuDiv.classList.toggle('tw-hidden');
+  var mobileGroupMenuDropdown = document.querySelector('.madrone-mobile-group-menu-dropdown');
+  var svg = mobileGroupMenuDropdown.getElementsByTagName('svg');
+
+  if (svg.length > 0) {
+    if (mobileGroupMenuDiv.classList.contains('tw-hidden')) {
+      svg[0].setAttribute('data-icon', 'chevron-down');
+    } else {
+      svg[0].setAttribute('data-icon', 'chevron-up');
+    }
+  }
 }
 
 function closeNavModal() {
@@ -272,7 +281,7 @@ function modalSetup() {
     allMobileGroupMenuParentLi[_i4].addEventListener('click', toggleMobileGroupMenuAccordion);
   }
 
-  var mobileGroupMenuDiv = document.querySelector('.mobile-group-menu');
+  var mobileGroupMenuDiv = document.querySelector('.madrone-mobile-group-menu-dropdown');
 
   if (mobileGroupMenuDiv != null) {
     console.log("we in there");

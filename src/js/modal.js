@@ -56,12 +56,18 @@ function toggleMobileGroupMenuAccordion(ele) {
 }
 
 function toggleMobileGroupMenu() {
-  console.log('toggleMobileGroupMenu');
   const mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
   mobileGroupMenuDiv.classList.toggle('tw-hidden');
+  const mobileGroupMenuDropdown = document.querySelector('.madrone-mobile-group-menu-dropdown');
+  const svg = mobileGroupMenuDropdown.getElementsByTagName('svg');
+  if (svg.length > 0) {
+    if (mobileGroupMenuDiv.classList.contains('tw-hidden')) {
+      svg[0].setAttribute('data-icon', 'chevron-down');
+    } else {
+      svg[0].setAttribute('data-icon', 'chevron-up');
+    }
+  }
 }
-
-
 
 function closeNavModal() {
   const navModal = document.querySelector('.nav-modal');
@@ -118,7 +124,7 @@ function modalSetup() {
     allMobileGroupMenuParentLi[i].addEventListener('click', toggleMobileGroupMenuAccordion);
   }
 
-  const mobileGroupMenuDiv = document.querySelector('.mobile-group-menu');
+  const mobileGroupMenuDiv = document.querySelector('.madrone-mobile-group-menu-dropdown');
   if (mobileGroupMenuDiv != null) {
     console.log("we in there");
     mobileGroupMenuDiv.addEventListener('click', toggleMobileGroupMenu);
