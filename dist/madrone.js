@@ -156,6 +156,7 @@ function toggleModal() {
 }
 
 function toggleNavModal() {
+  closeMobileGroupMenuDropdown();
   var navModal = document.querySelector('.nav-modal');
   navModal.classList.toggle('tw-hidden');
 
@@ -210,8 +211,11 @@ function toggleMobileGroupMenu() {
 
 function closeMobileGroupMenuDropdown() {
   var mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
-  mobileGroupMenuDiv.classList.add('tw-hidden');
-  setMobileGroupMenuIcon();
+
+  if (mobileGroupMenuDiv != null) {
+    mobileGroupMenuDiv.classList.add('tw-hidden');
+    setMobileGroupMenuIcon();
+  }
 }
 
 function openMobileGroupMenuDropdown() {
@@ -221,6 +225,7 @@ function openMobileGroupMenuDropdown() {
 }
 
 function setMobileGroupMenuIcon() {
+  var mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
   var mobileGroupMenuDropdown = document.querySelector('.madrone-mobile-group-menu-dropdown');
   var svg = mobileGroupMenuDropdown.getElementsByTagName('svg');
 
