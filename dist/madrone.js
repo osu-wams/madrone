@@ -205,6 +205,22 @@ function toggleMobileGroupMenuAccordion(ele) {
 function toggleMobileGroupMenu() {
   var mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
   mobileGroupMenuDiv.classList.toggle('tw-hidden');
+  setMobileGroupMenuIcon();
+}
+
+function closeMobileGroupMenuDropdown() {
+  var mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
+  mobileGroupMenuDiv.classList.add('tw-hidden');
+  setMobileGroupMenuIcon();
+}
+
+function openMobileGroupMenuDropdown() {
+  var mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
+  mobileGroupMenuDiv.classList.remove('tw-hidden');
+  setMobileGroupMenuIcon();
+}
+
+function setMobileGroupMenuIcon() {
   var mobileGroupMenuDropdown = document.querySelector('.madrone-mobile-group-menu-dropdown');
   var svg = mobileGroupMenuDropdown.getElementsByTagName('svg');
 
@@ -251,6 +267,7 @@ function modalSetup() {
       event.preventDefault();
       toggleModal();
       closeNavModal();
+      closeMobileGroupMenuDropdown();
     });
   }
 

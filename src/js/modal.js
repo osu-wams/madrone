@@ -58,6 +58,22 @@ function toggleMobileGroupMenuAccordion(ele) {
 function toggleMobileGroupMenu() {
   const mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
   mobileGroupMenuDiv.classList.toggle('tw-hidden');
+  setMobileGroupMenuIcon();
+}
+
+function closeMobileGroupMenuDropdown() {
+  const mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
+  mobileGroupMenuDiv.classList.add('tw-hidden');
+  setMobileGroupMenuIcon();
+}
+
+function openMobileGroupMenuDropdown() {
+  const mobileGroupMenuDiv = document.querySelector('#mobile-secondary-menu-div');
+  mobileGroupMenuDiv.classList.remove('tw-hidden');
+  setMobileGroupMenuIcon();
+}
+
+function setMobileGroupMenuIcon() {
   const mobileGroupMenuDropdown = document.querySelector('.madrone-mobile-group-menu-dropdown');
   const svg = mobileGroupMenuDropdown.getElementsByTagName('svg');
   if (svg.length > 0) {
@@ -92,6 +108,8 @@ function openNavModal() {
 }
 
 
+
+
 /**
  * Modal for OSU Menu
  */
@@ -102,6 +120,7 @@ function modalSetup() {
       event.preventDefault();
       toggleModal();
       closeNavModal();
+      closeMobileGroupMenuDropdown();
     });
   }
   const overlay = document.querySelector('.modal-overlay');
