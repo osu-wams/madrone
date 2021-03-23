@@ -138,7 +138,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "toggleModal": () => (/* binding */ toggleModal),
 /* harmony export */   "modalSetup": () => (/* binding */ modalSetup),
-/* harmony export */   "closeNavModal": () => (/* binding */ closeNavModal)
+/* harmony export */   "closeNavModal": () => (/* binding */ closeNavModal),
+/* harmony export */   "closeMobileGroupMenuDropdown": () => (/* binding */ closeMobileGroupMenuDropdown)
 /* harmony export */ });
 /**
  * Adds a modal with opacity around the whole site
@@ -507,6 +508,7 @@ document.addEventListener('keyup', function (e) {
 
     (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.closeMoreMenu)();
     (0,_js_modal__WEBPACK_IMPORTED_MODULE_2__.closeNavModal)();
+    (0,_js_modal__WEBPACK_IMPORTED_MODULE_2__.closeMobileGroupMenuDropdown)();
   }
 });
 /**

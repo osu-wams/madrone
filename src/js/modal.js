@@ -156,4 +156,4 @@ function modalSetup() {
   }
 }
 
-export { toggleModal, modalSetup, closeNavModal };
+export { toggleModal, modalSetup, closeNavModal, closeMobileGroupMenuDropdown };
