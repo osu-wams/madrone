@@ -18,7 +18,6 @@
 ] %}
 {% if content|striptags|trim|length > 0 %}
   <div{{ attributes.setAttribute('id', region_id).addClass(region_class) }}>
-{#  <div{{ attributes.setAttribute('id', region_id).addClass(region_class) }}>#}
     {{ content }}
   </div>
 {% endif %}

@@ -14,9 +14,7 @@ function toggleModal() {
 }
 
 function toggleNavModal() {
-
   closeMobileGroupMenuDropdown();
-
   const navModal = document.querySelector('.nav-modal');
   navModal.classList.toggle('tw-hidden');
   if (navModal.classList.contains('tw-hidden')) {
@@ -113,9 +111,6 @@ function openNavModal() {
   menuButtonText.innerText = 'Close';
 }
 
-
-
-
 /**
  * Modal for OSU Menu
  */
@@ -148,7 +143,6 @@ function modalSetup() {
   for (let i = 0; i < allMobileGroupMenuParentLi.length; i++) {
     allMobileGroupMenuParentLi[i].addEventListener('click', toggleMobileGroupMenuAccordion);
   }
-
   const mobileGroupMenuDiv = document.querySelector('.madrone-mobile-group-menu-dropdown');
   if (mobileGroupMenuDiv != null) {
     console.log("we in there");

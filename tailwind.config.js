@@ -3,7 +3,7 @@ module.exports = {
   separator: '-',
   important: false,
   purge: {
-    enabled: false,
+    enabled: true,
     content: [
       'config/**/*.yml',
       'templates/**/*.twig',
