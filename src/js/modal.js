@@ -60,7 +60,6 @@ function openNavModal() {
   menuButtonText.innerText = 'Close';
 }
 
-
 /**
  * Modal for OSU Menu
  */

@@ -31,31 +31,59 @@ const createMoreMenu = (blockId, navClass) => {
     );
 
     const moreButton = menuPrimary.querySelector('.more-button');
-
+    const moreMenu = menuPrimary.querySelector('.' + navClass + '-secondary');
     moreButton.addEventListener('click', event => {
       event.preventDefault();
-      closeMoreMenu(navClass);
+      // close all other but this one
+      const otherMoreMenus = document.querySelectorAll('.madrone-more-menu-expanded:not(.' + navClass + '-secondary)');
+      if (otherMoreMenus.length > 0) {
+        for (let i = 0; i < otherMoreMenus.length; i++) {
+          otherMoreMenus[i].classList.forEach((className) => {
+            if (className.includes('-secondary')) {
+              closeMoreMenu(className);
+            }
+          });
+        }
+      }
       closeMegaMenu();
 
-      menuContainer.classList.toggle(navClass + '-show-secondary');
+      moreMenu.classList.toggle('madrone-more-menu-expanded');
       moreButton.setAttribute(
         'aria-expanded',
-        menuContainer.classList.contains(navClass + '-show-secondary')
+        moreMenu.classList.contains('madrone-more-menu-expanded')
       );
     });
   }
-};
+}
 
-const closeMoreMenu = (navClass = '') => {
-  const moreMenus = document.querySelectorAll(
-    `div[class*='-show-secondary'], nav[class*='-show-secondary']`
-  );
-  for (let i = 0; i < moreMenus.length; i++) {
-    if (!moreMenus[i].classList.contains(navClass + '-show-secondary')) {
-      moreMenus[i].querySelector('.more-button').click();
-    }
+/**
+ * Close a more menu with the provided secondary class name.
+ *
+ * @param secondaryClass
+ *  The More Menus class name, usually mega-menu-secondary.
+ */
+const closeMoreMenu = (secondaryClass = '') => {
+  const openMoreMenu = document.querySelectorAll('.' + secondaryClass + '.madrone-more-menu-expanded');
+  for (let i = 0; i < openMoreMenu.length; i++) {
+    const openMoreButton = openMoreMenu[i].parentElement.querySelector('.more-button');
+    openMoreMenu[i].classList.toggle('madrone-more-menu-expanded');
+    openMoreButton.setAttribute('aria-expanded', openMoreMenu[i].classList.contains('madrone-more-menu-expanded'))
   }
-};
+}
+
+/**
+ * Find any open more menu and close it.
+ */
+const closeAllMoreMenus = () => {
+  document.querySelectorAll('.madrone-more-menu-expanded').forEach((openMoreMenus) => {
+    openMoreMenus.classList.forEach((openMoreMenuClass) => {
+      if (openMoreMenuClass.includes('-secondary')) {
+        closeMoreMenu(openMoreMenuClass);
+      }
+    });
+  });
+}
+
 /**
  * Adjust more menu to show/hide items when screen resizes.
  *
@@ -112,6 +140,6 @@ const adjustMoreMenu = (blockId, navClass) => {
       });
     }
   }
-};
+}
 
-export { createMoreMenu, adjustMoreMenu, closeMoreMenu };
+export { createMoreMenu, adjustMoreMenu, closeMoreMenu, closeAllMoreMenus };

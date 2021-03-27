@@ -61,14 +61,12 @@ function madrone_preprocess_block(&$variables) {
           $variables['content']['actions']['submit']['#madrone_is_mobile_search_submit'] = TRUE;
         }
       }
-
       if ($variables['base_plugin_id'] == 'system_branding_block') {
         $themeCrestPath = '/' . Drupal::theme()
           ->getActiveTheme()
           ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
       }
-      $variables['content']['#attributes']['block'] = $variables['elements']['#id'];
       $variables['content']['#attributes']['region'] = $region;
     }
   }

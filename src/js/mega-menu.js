@@ -1,4 +1,5 @@
 import { actAsButton } from './utils';
+
 /**
  * Hides all the mega menus. Will then add lg-tw-grid to megaMenuDiv if menuIsOpen is true and megaMenuDiv is not null
  */
@@ -90,7 +91,6 @@ function megaMenuToggle() {
        * Checks to see if a mega menu should exist. If so, we determine if we are opening/closing the
        * menu and pass that information into the functions that handle it.
        */
-
       if (megaMenuExists) {
         const megaMenuDiv = megaMenus[0];
         const megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
