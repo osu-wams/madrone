@@ -968,6 +968,17 @@ a {
 
 /* End Mobile Group Menu Dropdown */
 
+/* Mobile Secondary Menu */
+
+.madrone-mobile-secondary-menu {
+  --tw-bg-opacity: 1;
+  background-color: rgba(66, 62, 60, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+/* End Secondary Menu */
+
 /** Global Search Styles */
 
 .header-search-form {
