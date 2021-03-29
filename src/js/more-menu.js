@@ -112,6 +112,10 @@ const adjustMoreMenu = (blockId, navClass) => {
       });
     }
   }
+  console.log('fin');
+  const madroneMegaMenuMain = document.getElementsByClassName('madrone-mega-menu-main');
+  madroneMegaMenuMain[0].classList.remove('tw-opacity-0');
+  madroneMegaMenuMain[0].classList.remove('tw-absolute');
 };
 
 export { createMoreMenu, adjustMoreMenu, closeMoreMenu };

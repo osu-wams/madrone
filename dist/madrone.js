@@ -420,6 +420,11 @@ var adjustMoreMenu = function adjustMoreMenu(blockId, navClass) {
       });
     }
   }
+
+  console.log('fin');
+  var madroneMegaMenuMain = document.getElementsByClassName('madrone-mega-menu-main');
+  madroneMegaMenuMain[0].classList.remove('tw-opacity-0');
+  madroneMegaMenuMain[0].classList.remove('tw-absolute');
 };
 
 
