@@ -156,13 +156,26 @@
   }
 
   /* End Group Menu */
-  /* Secondary /Navigation */
+  /* Secondary Navigation */
   .madrone-secondary-menu {
-    @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-py-2 tw-grid;
+    @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-py-2 tw-hidden lg-tw-grid;
     padding-left: 370px;
     padding-right: 170px;
     height: 40px;
     /* 377: width of site title without left padding */
     grid-template-columns: 380px 1fr;
   }
+
+  /* End Secondary Navigation */
+  /* Mobile Group Menu Dropdown */
+  .madrone-mobile-group-menu-dropdown {
+    @apply tw-font-semibold tw-flex tw-h-14 tw-items-center tw-justify-between tw-pl-4 tw-pr-5 tw-border-b tw-border-neutral-600 tw-justify-between;
+  }
+  /* End Mobile Group Menu Dropdown */
+
+  /* Mobile Secondary Menu */
+  .madrone-mobile-secondary-menu {
+    @apply tw-bg-neutral-700 tw-text-bucktoothwhite;
+  }
+  /* End Secondary Menu */
 }

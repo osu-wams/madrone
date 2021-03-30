@@ -1,6 +1,6 @@
 import { adjustMoreMenu, closeMoreMenu, createMoreMenu } from './js/more-menu';
 import { closeMegaMenu, megaMenuToggle } from './js/mega-menu';
-import { toggleModal, modalSetup, closeNavModal } from './js/modal';
+import { toggleModal, modalSetup, closeNavModal, closeMobileGroupMenuDropdown } from './js/modal';
 /**
  * Add Event Listeners to the Main navigation level 0.
  * @type {HTMLCollectionOf<Element>}
@@ -37,6 +37,7 @@ document.addEventListener('keyup', e => {
     }
     closeMoreMenu();
     closeNavModal();
+    closeMobileGroupMenuDropdown();
   }
 });
 

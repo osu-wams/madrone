@@ -11,8 +11,9 @@ dependencies:
 base theme: stable
 regions:
   header: Header
-  mobile_header: Mobile Sub-Header
-  secondary_menu: Secondary Navigation
+  mobile_header: Mobile Header
+  secondary_menu: Group Header
+  mobile_secondary_menu: Mobile Group Header
   breadcrumb: Breadcrumb
   highlighted: Highlighted
   help: Help
