@@ -421,10 +421,19 @@ var adjustMoreMenu = function adjustMoreMenu(blockId, navClass) {
     }
   }
 
-  console.log('fin');
   var madroneMegaMenuMain = document.getElementsByClassName('madrone-mega-menu-main');
-  madroneMegaMenuMain[0].classList.remove('tw-opacity-0');
-  madroneMegaMenuMain[0].classList.remove('tw-absolute');
+
+  if (madroneMegaMenuMain.length > 0) {
+    madroneMegaMenuMain[0].classList.remove('tw-opacity-0');
+    madroneMegaMenuMain[0].classList.remove('tw-absolute');
+  }
+
+  var madroneMegaMenuGroup = document.getElementsByClassName('madrone-mega-menu-group');
+
+  if (madroneMegaMenuGroup.length > 0) {
+    madroneMegaMenuGroup[0].classList.remove('tw-opacity-0');
+    madroneMegaMenuGroup[0].classList.remove('tw-absolute');
+  }
 };
 
 
