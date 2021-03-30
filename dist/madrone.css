@@ -758,6 +758,7 @@ a {
 
 .madrone-mega-menu-main, .madrone-mega-menu-group {
   display: none;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   flex-grow: 1;
@@ -768,10 +769,6 @@ a {
   .madrone-mega-menu-main, .madrone-mega-menu-group {
     display: flex;
   }
-}
-
-.madrone-mega-menu-main, .madrone-mega-menu-group {
-  flex-wrap: wrap;
 }
 
 .madrone-mega-menu {
