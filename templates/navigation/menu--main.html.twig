@@ -28,7 +28,9 @@ We call a macro which calls itself to render the full tree.
   {% import _self as menus %}
   {% if items %}
     {% set menu_classes = [
-      'madrone-mega-menu-' ~ menu_name|clean_class
+      'madrone-mega-menu-' ~ menu_name|clean_class,
+      'tw-opacity-0',
+      'tw-absolute',
     ] %}
     {% set submenu_classes = [
       'madrone-mega-menu'

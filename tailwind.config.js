@@ -106,6 +106,10 @@ module.exports = {
         menu: '11.125rem'
       },
       height: {},
+      opacity: {
+        '0': '0',
+        '100': '1',
+      },
       width: {
         '81.2': '21.2rem',
         '81.5': '21.5rem'

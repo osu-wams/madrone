@@ -26,7 +26,9 @@ We call a macro which calls itself to render the full tree.
 {{ menus.menu_links(items, attributes, 0, menu_name) }}
 {% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% set menu_classes = [
-    'madrone-mega-menu-group'
+    'madrone-mega-menu-group',
+    'tw-opacity-0',
+    'tw-absolute',
   ] %}
   {% set submenu_classes = [
     'madrone-mega-menu'
