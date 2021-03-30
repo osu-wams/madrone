@@ -187,7 +187,7 @@ function toggleMobileNavAccordion(ele) {
 }
 
 function toggleMobileGroupMenuAccordion(ele) {
-  var parentId = ele.currentTarget.id;
+  var parentId = ele.target.closest('li').getAttribute('data-id');
   var container = document.querySelector('#mobile-secondary-menu-div');
   var rowsToToggle = container.querySelectorAll("[data-pid=".concat(CSS.escape(parentId), "]"));
 
