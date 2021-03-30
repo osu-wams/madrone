@@ -307,7 +307,6 @@ function modalSetup() {
   var mobileGroupMenuDiv = document.querySelector('.madrone-mobile-group-menu-dropdown');
 
   if (mobileGroupMenuDiv != null) {
-    console.log("we in there");
     mobileGroupMenuDiv.addEventListener('click', toggleMobileGroupMenu);
   }
 }
