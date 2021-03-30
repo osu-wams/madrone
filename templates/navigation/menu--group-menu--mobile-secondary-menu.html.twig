@@ -36,16 +36,17 @@ We call a macro which calls itself to render the full tree.
     {% endif %}
     {% set data_index = 0 %}
     {% for item in items %}
+      {% set link_classes = ['tw-no-underline'] %}
       {% if menu_level == 0 %}
-        {% set data_index = data_index + 1 %}
         {% if loop.first %}
-          <li class="mobile-secondary-menu-li-0 tw-ml-4 tw-pt-4 tw-pb-7 tw-flex tw-justify-between tw-pr-8 tw-text-bucktoothwhite" data-id={{ data_index }}>
+        <li
+          class="mobile-secondary-menu-li-0 tw-ml-4 tw-pt-4 tw-pb-7 tw-flex tw-justify-between tw-pr-8 tw-text-bucktoothwhite"
+          data-id={{ data_index }}>
         {% else %}
           <li class="mobile-secondary-menu-li-0 tw-ml-4 tw-pb-7 tw-flex tw-justify-between tw-pr-8 tw-text-bucktoothwhite" data-id={{ data_index }}>
         {% endif %}
       {% else %}
         <li class="tw-ml-12 tw-pb-7 tw-hidden tw-text-bucktoothwhite" data-pid={{ data_pid }}>
-        {% set link_classes = ['tw-no-underline'] %}
       {% endif %}
       {# Set accessibility featues to tab through menu and span to act as a button #}
       {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
@@ -55,12 +56,13 @@ We call a macro which calls itself to render the full tree.
       {% endif %}
       {# adding the chevron #}
       {% if menu_level == 0 and item.below %}
-        <i class="fas fa-fw fa-chevron-down"></i>
+        <i class="fas fa-fw fa-chevron-down" data-id={{ data_index }}></i>
       {% endif %}
       </li>
       {% if item.below %}
         {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name, data_index) }}
       {% endif %}
+      {% set data_index = data_index + 1 %}
     {% endfor %}
     {% if menu_level == 0 %}
       </ul>
