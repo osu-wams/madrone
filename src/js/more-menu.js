@@ -140,16 +140,16 @@ const adjustMoreMenu = (blockId, navClass) => {
       });
     }
   }
-}
-const madroneMegaMenuMain = document.getElementsByClassName('madrone-mega-menu-main');
-if (madroneMegaMenuMain.length > 0) {
-  madroneMegaMenuMain[0].classList.remove('tw-opacity-0');
-  madroneMegaMenuMain[0].classList.remove('tw-absolute');
-}
-const madroneMegaMenuGroup = document.getElementsByClassName('madrone-mega-menu-group');
-if (madroneMegaMenuGroup.length > 0) {
-  madroneMegaMenuGroup[0].classList.remove('tw-opacity-0');
-  madroneMegaMenuGroup[0].classList.remove('tw-absolute');
+  const madroneMegaMenuMain = document.getElementsByClassName('madrone-mega-menu-main');
+  if (madroneMegaMenuMain.length > 0) {
+    madroneMegaMenuMain[0].classList.remove('tw-opacity-0');
+    madroneMegaMenuMain[0].classList.remove('tw-absolute');
+  }
+  const madroneMegaMenuGroup = document.getElementsByClassName('madrone-mega-menu-group');
+  if (madroneMegaMenuGroup.length > 0) {
+    madroneMegaMenuGroup[0].classList.remove('tw-opacity-0');
+    madroneMegaMenuGroup[0].classList.remove('tw-absolute');
+  }
 }
 
 export { createMoreMenu, adjustMoreMenu, closeMoreMenu, closeAllMoreMenus };
