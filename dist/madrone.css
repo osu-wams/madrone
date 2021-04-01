@@ -827,32 +827,32 @@ a {
   top: 97px; /* header is 96px height, so we add one more */
 }
 
-.madrone-more-menu a, .madrone-more-menu span {
+.madrone-more-menu > a, .madrone-more-menu > span {
     width: 100%;
     padding: 8px 5px;
   }
 
-.madrone-more-menu li > span,
-      .madrone-more-menu li > a {
+.madrone-more-menu > li > span,
+      .madrone-more-menu > li > a {
       /* Sets 36px left padding regardless of icon to leave space on the left for text */
     }
 
-.madrone-more-menu li > span, .madrone-more-menu li > a {
+.madrone-more-menu > li > span, .madrone-more-menu > li > a {
       position: relative;
     }
 
-.madrone-more-menu li > span,
-      .madrone-more-menu li > a {
+.madrone-more-menu > li > span,
+      .madrone-more-menu > li > a {
       padding: 2px 0 8px 36px;
     }
 
-.madrone-more-menu li > span > svg, .madrone-more-menu li > a > svg {
+.madrone-more-menu > li > span > svg, .madrone-more-menu > li > a > svg {
         /* If icon is present we set it further left (ignoring the padding set above) */
         position: absolute;
         left: 5px;
       }
 
-.madrone-more-menu li svg + span {
+.madrone-more-menu > li svg + span {
       padding-left: 0px;
       width: 240px;
     }
