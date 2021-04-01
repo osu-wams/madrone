@@ -50,9 +50,10 @@ document.addEventListener('click', e => {
     e.target &&
     !e.target.classList.contains('more-button') &&
     !e.target.classList.contains('fa-ellipsis-h') &&
+    !e.target.closest('ul')?.classList.contains('madrone-more-menu') &&
     !e.target.parentElement.classList.contains('more-button') &&
-    !e.target.parentElement.classList.contains('mega-menu-parent') &&
-    !e.target.parentElement.classList.contains('fa-ellipsis-h')
+    !e.target.parentElement.classList.contains('fa-ellipsis-h') ||
+    e.target.closest('button')?.classList.contains('closeMegaMenu')
   ) {
     closeAllMoreMenus();
   }
