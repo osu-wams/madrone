@@ -13,7 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "setActiveColors": () => (/* binding */ setActiveColors),
 /* harmony export */   "setActiveMegaMenu": () => (/* binding */ setActiveMegaMenu),
 /* harmony export */   "closeMegaMenu": () => (/* binding */ closeMegaMenu),
-/* harmony export */   "megaMenuToggle": () => (/* binding */ megaMenuToggle)
+/* harmony export */   "megaMenuToggle": () => (/* binding */ megaMenuToggle),
+/* harmony export */   "megaMenuChildSetTitle": () => (/* binding */ megaMenuChildSetTitle)
 /* harmony export */ });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./src/js/utils.js");
 
@@ -122,6 +123,51 @@ function megaMenuToggle() {
 function closeMegaMenu() {
   setActiveColors();
   setActiveMegaMenu();
+}
+
+function megaMenuChildSetTitle() {
+  var megaMenuChildArr = document.querySelectorAll('.mega-menu-child');
+  console.log('found ' + megaMenuChildArr.length + ' children');
+  var mmca2 = document.querySelectorAll('.mega-menu-child > a');
+  console.log(mmca2);
+
+  for (var i = 0; i < mmca2.length; i++) {
+    var v1 = mmca2[i];
+
+    if (v1.children.length > 1) {
+      var parent = v1.parentElement;
+      var removed = v1.removeChild(v1.firstChild);
+      removed.classList.add('tw-absolute', 'tw--left-6', 'tw-top-1');
+      parent.insertBefore(removed, parent.firstChild);
+    } //   var item = megaMenuChildArr[i];
+    //
+    //   var titles = item.getElementsByTagName('a');
+    //
+    //   if (titles.length > 0) {
+    //     var aTag = titles[0];
+    //     var children = aTag.childNodes;
+    //     if (children.length > 1) {
+    //       console.log(children);
+    //       // console.log(aTag);
+    //
+    //       var t1 = aTag.getElementsByTagName('svg');
+    //       aTag.childNodes.removeChild(t1);
+    //
+    //
+    //       console.log(children)
+    //     }
+    //
+    //   }
+    //
+    //
+
+  }
+}
+
+function reverseChildren(parent) {
+  for (var i = 1; i < parent.childNodes.length; i++) {
+    parent.insertBefore(parent.childNodes[i], parent.firstChild);
+  }
 }
 
 
@@ -493,7 +539,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,_js_modal__WEBPACK_IMPORTED_MODULE_2__.modalSetup)();
 (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.createMoreMenu)('block-madrone-main-menu', 'madrone-mega-menu-main');
 (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.createMoreMenu)('block-madrone-groupmenu', 'madrone-mega-menu-group');
-(0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_1__.megaMenuToggle)(); // Adapt immediately on load.
+(0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_1__.megaMenuToggle)();
+(0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_1__.megaMenuChildSetTitle)(); // Adapt immediately on load.
 
 window.addEventListener('load', function () {
   (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.adjustMoreMenu)('block-madrone-main-menu', 'madrone-mega-menu-main');
