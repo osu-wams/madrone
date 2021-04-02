@@ -119,62 +119,15 @@ function closeMegaMenu() {
 }
 
 function megaMenuChildSetTitle() {
-  var megaMenuChildArr = document.querySelectorAll('.mega-menu-child');
-  console.log('found ' + megaMenuChildArr.length + ' children');
-
-  var mmca2 = document.querySelectorAll('.mega-menu-child > a')
-
-  console.log(mmca2);
-
-  for (let i = 0; i < mmca2.length; i++) {
-
-    var v1 = mmca2[i];
+  const megaMenuChildArr = document.querySelectorAll('.mega-menu-child > a')
+  for (let i = 0; i < megaMenuChildArr.length; i++) {
+    const v1 = megaMenuChildArr[i];
     if (v1.children.length > 1) {
-      var parent = v1.parentElement;
-      var removed = v1.removeChild(v1.firstChild);
-
+      const parent = v1.parentElement;
+      const removed = v1.removeChild(v1.firstChild);
       removed.classList.add('tw-absolute', 'tw--left-6', 'tw-top-1');
-
       parent.insertBefore(removed, parent.firstChild);
     }
-
-
-
-
-  //   var item = megaMenuChildArr[i];
-  //
-  //   var titles = item.getElementsByTagName('a');
-  //
-  //   if (titles.length > 0) {
-  //     var aTag = titles[0];
-  //     var children = aTag.childNodes;
-  //     if (children.length > 1) {
-  //       console.log(children);
-  //       // console.log(aTag);
-  //
-  //       var t1 = aTag.getElementsByTagName('svg');
-  //       aTag.childNodes.removeChild(t1);
-  //
-  //
-  //       console.log(children)
-  //     }
-  //
-  //   }
-  //
-  //
-  }
-
-
-
-
-
-
-
-}
-
-function reverseChildren(parent) {
-  for (var i = 1; i < parent.childNodes.length; i++){
-    parent.insertBefore(parent.childNodes[i], parent.firstChild);
   }
 }
 
