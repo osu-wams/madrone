@@ -103,7 +103,6 @@ function megaMenuToggle() {
          * need to push it another 40px so we don't cover the group menu
          */
         if (megaMenuDiv.closest('.madrone-mega-menu-group')) {
-          console.log('helloworld')
           bottomHeader += 40;
         }
         megaMenuDiv.style.top = bottomHeader + 'px';

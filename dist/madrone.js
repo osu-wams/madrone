@@ -110,7 +110,6 @@ function megaMenuToggle() {
          */
 
         if (megaMenuDiv.closest('.madrone-mega-menu-group')) {
-          console.log('helloworld');
           bottomHeader += 40;
         }
 
