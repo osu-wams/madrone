@@ -22,6 +22,6 @@
   'tw-border-neutral-200',
   'mobile-search'
 ] %}
-<form {{ attributes.addClass(mobile_nav_forms) }}>
+<form {{ attributes.addClass(mobile_nav_forms).removeAttribute('region') }}>
   {{ children }}
 </form>
