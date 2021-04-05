@@ -95,11 +95,18 @@ function megaMenuToggle() {
         const megaMenuDiv = megaMenus[0];
         const megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
         // This needs to be calculated here, calculating it outside causes problems when logged in with admin toolbar
-        const bottomHeader = document
+        var bottomHeader = document
           .querySelector('[role=banner]')
           .getBoundingClientRect().bottom;
+        /**
+         * Check to see if the mega-menu is a child of a madrone-mega-menu-group class, which means we
+         * need to push it another 40px so we don't cover the group menu
+         */
+        if (megaMenuDiv.closest('.madrone-mega-menu-group')) {
+          console.log('helloworld')
+          bottomHeader += 40;
+        }
         megaMenuDiv.style.top = bottomHeader + 'px';
-
         setActiveColors(megaMenuParentLi, megaMenuIsOpen);
         setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
       }
