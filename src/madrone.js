@@ -1,4 +1,4 @@
-import { adjustMoreMenu, closeMoreMenu, createMoreMenu } from './js/more-menu';
+import { adjustMoreMenu, closeAllMoreMenus, createMoreMenu } from './js/more-menu';
 import { closeMegaMenu, megaMenuToggle } from './js/mega-menu';
 import { toggleModal, modalSetup, closeNavModal, closeMobileGroupMenuDropdown } from './js/modal';
 /**
@@ -35,7 +35,7 @@ document.addEventListener('keyup', e => {
     if (document.body.classList.contains('modal-active')) {
       toggleModal();
     }
-    closeMoreMenu();
+    closeAllMoreMenus();
     closeNavModal();
     closeMobileGroupMenuDropdown();
   }
@@ -49,12 +49,12 @@ document.addEventListener('click', e => {
   if (
     e.target &&
     !e.target.classList.contains('more-button') &&
-    !e.target.parentElement.classList.contains('more-button') &&
-    !e.target.parentElement.classList.contains('mega-menu-parent') &&
-    !e.target.classList.contains('mega-menu-parent') &&
     !e.target.classList.contains('fa-ellipsis-h') &&
-    !e.target.parentElement.classList.contains('fa-ellipsis-h')
+    !e.target.closest('ul')?.classList.contains('madrone-more-menu') &&
+    !e.target.parentElement.classList.contains('more-button') &&
+    !e.target.parentElement.classList.contains('fa-ellipsis-h') ||
+    e.target.closest('button')?.classList.contains('closeMegaMenu')
   ) {
-    closeMoreMenu();
+    closeAllMoreMenus();
   }
 });
