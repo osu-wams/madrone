@@ -939,30 +939,6 @@ a {
 
 /* Secondary Navigation */
 
-.madrone-secondary-menu-backup {
-  --tw-bg-opacity: 1;
-  background-color: rgba(66, 62, 60, var(--tw-bg-opacity));
-  display: none;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  .madrone-secondary-menu-backup {
-    display: grid;
-  }
-}
-
-.madrone-secondary-menu-backup {
-  padding-left: 370px;
-  padding-right: 170px;
-  height: 40px;
-  /* 377: width of site title without left padding */
-  grid-template-columns: 380px 1fr;
-}
-
 .madrone-secondary-menu {
   --tw-bg-opacity: 1;
   background-color: rgba(66, 62, 60, var(--tw-bg-opacity));
