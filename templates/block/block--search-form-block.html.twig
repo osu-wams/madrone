@@ -32,7 +32,7 @@
   'container-inline',
 ] %}
 
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes).removeAttribute('region') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>

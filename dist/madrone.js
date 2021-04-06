@@ -341,7 +341,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "createMoreMenu": () => (/* binding */ createMoreMenu),
 /* harmony export */   "adjustMoreMenu": () => (/* binding */ adjustMoreMenu),
-/* harmony export */   "closeMoreMenu": () => (/* binding */ closeMoreMenu)
+/* harmony export */   "closeMoreMenu": () => (/* binding */ closeMoreMenu),
+/* harmony export */   "closeAllMoreMenus": () => (/* binding */ closeAllMoreMenus)
 /* harmony export */ });
 /* harmony import */ var _mega_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mega-menu */ "./src/js/mega-menu.js");
 
@@ -364,25 +365,59 @@ var createMoreMenu = function createMoreMenu(blockId, navClass) {
     menuContainer.classList.add('--jsfied');
     menuPrimary.insertAdjacentHTML('beforeend', "\n  <li class=\"".concat(navClass, "-more tw-hidden\">\n      <button type=\"button\" class=\"more-button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          More <i class=\"fas fa-fw fa-ellipsis-h\"></i>\n      </button>\n      <ul class=\"").concat(navClass, "-secondary madrone-more-menu\">\n          ").concat(menuPrimary.innerHTML, "\n      </ul>\n      </button>\n  </li>\n  "));
     var moreButton = menuPrimary.querySelector('.more-button');
+    var moreMenu = menuPrimary.querySelector('.' + navClass + '-secondary');
     moreButton.addEventListener('click', function (event) {
-      event.preventDefault();
-      closeMoreMenu(navClass);
+      event.preventDefault(); // close all other but this one
+
+      var otherMoreMenus = document.querySelectorAll('.madrone-more-menu-expanded:not(.' + navClass + '-secondary)');
+
+      if (otherMoreMenus.length > 0) {
+        for (var i = 0; i < otherMoreMenus.length; i++) {
+          otherMoreMenus[i].classList.forEach(function (className) {
+            if (className.includes('-secondary')) {
+              closeMoreMenu(className);
+            }
+          });
+        }
+      }
+
       (0,_mega_menu__WEBPACK_IMPORTED_MODULE_0__.closeMegaMenu)();
-      menuContainer.classList.toggle(navClass + '-show-secondary');
-      moreButton.setAttribute('aria-expanded', menuContainer.classList.contains(navClass + '-show-secondary'));
+      moreMenu.classList.toggle('madrone-more-menu-expanded');
+      moreButton.setAttribute('aria-expanded', moreMenu.classList.contains('madrone-more-menu-expanded'));
     });
   }
 };
+/**
+ * Close a more menu with the provided secondary class name.
+ *
+ * @param secondaryClass
+ *  The More Menus class name, usually mega-menu-secondary.
+ */
+
 
 var closeMoreMenu = function closeMoreMenu() {
-  var navClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-  var moreMenus = document.querySelectorAll("div[class*='-show-secondary'], nav[class*='-show-secondary']");
+  var secondaryClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  var openMoreMenu = document.querySelectorAll('.' + secondaryClass + '.madrone-more-menu-expanded');
 
-  for (var i = 0; i < moreMenus.length; i++) {
-    if (!moreMenus[i].classList.contains(navClass + '-show-secondary')) {
-      moreMenus[i].querySelector('.more-button').click();
-    }
+  for (var i = 0; i < openMoreMenu.length; i++) {
+    var openMoreButton = openMoreMenu[i].parentElement.querySelector('.more-button');
+    openMoreMenu[i].classList.toggle('madrone-more-menu-expanded');
+    openMoreButton.setAttribute('aria-expanded', openMoreMenu[i].classList.contains('madrone-more-menu-expanded'));
   }
+};
+/**
+ * Find any open more menu and close it.
+ */
+
+
+var closeAllMoreMenus = function closeAllMoreMenus() {
+  document.querySelectorAll('.madrone-more-menu-expanded').forEach(function (openMoreMenus) {
+    openMoreMenus.classList.forEach(function (openMoreMenuClass) {
+      if (openMoreMenuClass.includes('-secondary')) {
+        closeMoreMenu(openMoreMenuClass);
+      }
+    });
+  });
 };
 /**
  * Adjust more menu to show/hide items when screen resizes.
@@ -495,8 +530,8 @@ function actAsButton(element) {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _js_more_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/more-menu */ "./src/js/more-menu.js");
-/* harmony import */ var _js_mega_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/mega-menu */ "./src/js/mega-menu.js");
+/* harmony import */ var _js_mega_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/mega-menu */ "./src/js/mega-menu.js");
+/* harmony import */ var _js_more_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/more-menu */ "./src/js/more-menu.js");
 /* harmony import */ var _js_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/modal */ "./src/js/modal.js");
 
 
@@ -507,19 +542,19 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 (0,_js_modal__WEBPACK_IMPORTED_MODULE_2__.modalSetup)();
-(0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.createMoreMenu)('block-madrone-main-menu', 'madrone-mega-menu-main');
-(0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.createMoreMenu)('block-madrone-groupmenu', 'madrone-mega-menu-group');
-(0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_1__.megaMenuToggle)();
-(0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_1__.megaMenuChildSetTitle)(); // Adapt immediately on load.
+(0,_js_more_menu__WEBPACK_IMPORTED_MODULE_1__.createMoreMenu)('block-madrone-main-menu', 'madrone-mega-menu-main');
+(0,_js_more_menu__WEBPACK_IMPORTED_MODULE_1__.createMoreMenu)('block-madrone-groupmenu', 'madrone-mega-menu-group');
+(0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_0__.megaMenuToggle)();
+(0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_0__.megaMenuChildSetTitle)(); // Adapt immediately on load.
 
 window.addEventListener('load', function () {
-  (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.adjustMoreMenu)('block-madrone-main-menu', 'madrone-mega-menu-main');
-  (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.adjustMoreMenu)('block-madrone-groupmenu', 'madrone-mega-menu-group');
+  (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_1__.adjustMoreMenu)('block-madrone-main-menu', 'madrone-mega-menu-main');
+  (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_1__.adjustMoreMenu)('block-madrone-groupmenu', 'madrone-mega-menu-group');
 }); // Adapt on window resize.
 
 window.addEventListener('resize', function () {
-  (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.adjustMoreMenu)('block-madrone-main-menu', 'madrone-mega-menu-main');
-  (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.adjustMoreMenu)('block-madrone-groupmenu', 'madrone-mega-menu-group');
+  (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_1__.adjustMoreMenu)('block-madrone-main-menu', 'madrone-mega-menu-main');
+  (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_1__.adjustMoreMenu)('block-madrone-groupmenu', 'madrone-mega-menu-group');
 });
 /**
  * Add an event listener on the whole window for escape and close the Mega Menu and toggle to modal if open.
@@ -530,13 +565,13 @@ document.addEventListener('keyup', function (e) {
   var key = e.key || e.keyCode;
 
   if (key === 'Escape' || key === 'Esc' || key === 27) {
-    (0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_1__.closeMegaMenu)();
+    (0,_js_mega_menu__WEBPACK_IMPORTED_MODULE_0__.closeMegaMenu)();
 
     if (document.body.classList.contains('modal-active')) {
       (0,_js_modal__WEBPACK_IMPORTED_MODULE_2__.toggleModal)();
     }
 
-    (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.closeMoreMenu)();
+    (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_1__.closeAllMoreMenus)();
     (0,_js_modal__WEBPACK_IMPORTED_MODULE_2__.closeNavModal)();
     (0,_js_modal__WEBPACK_IMPORTED_MODULE_2__.closeMobileGroupMenuDropdown)();
   }
@@ -547,8 +582,10 @@ document.addEventListener('keyup', function (e) {
  */
 
 document.addEventListener('click', function (e) {
-  if (e.target && !e.target.classList.contains('more-button') && !e.target.parentElement.classList.contains('more-button') && !e.target.parentElement.classList.contains('mega-menu-parent') && !e.target.classList.contains('mega-menu-parent') && !e.target.classList.contains('fa-ellipsis-h') && !e.target.parentElement.classList.contains('fa-ellipsis-h')) {
-    (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_0__.closeMoreMenu)();
+  var _e$target$closest, _e$target$closest2;
+
+  if (e.target && !e.target.classList.contains('more-button') && !e.target.classList.contains('fa-ellipsis-h') && !((_e$target$closest = e.target.closest('ul')) !== null && _e$target$closest !== void 0 && _e$target$closest.classList.contains('madrone-more-menu')) && !e.target.parentElement.classList.contains('more-button') && !e.target.parentElement.classList.contains('fa-ellipsis-h') || (_e$target$closest2 = e.target.closest('button')) !== null && _e$target$closest2 !== void 0 && _e$target$closest2.classList.contains('closeMegaMenu')) {
+    (0,_js_more_menu__WEBPACK_IMPORTED_MODULE_1__.closeAllMoreMenus)();
   }
 });
 

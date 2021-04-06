@@ -23,7 +23,8 @@ We call a macro which calls itself to render the full tree.
 @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
 
-{{ menus.menu_links(items, attributes, 0, menu_name) }}
+{{ menus.menu_links(items, attributes.removeAttribute('region'), 0, menu_name) }}
+
 {% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
   {% if items %}
@@ -65,7 +66,7 @@ We call a macro which calls itself to render the full tree.
       <li{{ item.attributes.addClass(list_item_classes).setAttribute('data-index', data_index) }}>
         {# Set accessibility featues to tab through menu and span to act as a button #}
         {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
-          {{ link(item.title, item.url, item.attributes.addClass(link_classes).setAttribute('tabindex', 0).setAttribute('role', 'button')) }}
+          {{ link(item.title, item.url, item.attributes.addClass(link_classes).removeClass(list_item_classes).setAttribute('tabindex', 0).setAttribute('role', 'button')) }}
         {% else %}
           {{ link(item.title, item.url, {'class': link_classes}) }}
         {% endif %}

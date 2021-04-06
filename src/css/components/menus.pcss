@@ -117,7 +117,7 @@
     }
   }
 
-  .madrone-mega-menu-main-show-secondary .madrone-more-menu {
+  .madrone-more-menu.madrone-more-menu-expanded {
     @apply tw-block;
   }
 
@@ -135,7 +135,13 @@
 
   .madrone-mega-menu-main-more button {
     /* more button */
-    @apply tw-h-full;
+    @apply tw-h-full tw-grid tw-items-center tw-justify-items-center;
+    grid-template-columns: 1fr auto;
+    gap: 4px;
+
+    & svg {
+      margin-top: 2px;
+    }
   }
 
   /* End Main menu */
@@ -144,15 +150,16 @@
     @apply tw-self-stretch tw-relative;
   }
 
+  .madrone-mega-menu-group-secondary.madrone-more-menu-expanded {
+    @apply tw-block;
+  }
+
+
   .madrone-mega-menu-group-secondary {
     @apply tw-hidden tw-absolute tw-max-w-full tw-right-0 tw-bg-neutral-700 tw-text-bucktoothwhite tw-shadow-sm tw-z-30 tw-border-neutral-200;
     min-width: 320px;
     padding: 10px 10px 20px;
     top: 33px;
-  }
-
-  .madrone-mega-menu-group-show-secondary .madrone-mega-menu-group-secondary {
-    @apply tw-block;
   }
 
   /* End Group Menu */

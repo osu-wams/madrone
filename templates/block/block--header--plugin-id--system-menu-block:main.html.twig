@@ -32,6 +32,9 @@
  */
 #}
 {% set nav_classes = [
+  'block',
+  'block-menu',
+  'menu--' ~ derivative_plugin_id|clean_class,
   'tw-flex',
   'tw-items-stretch',
   'tw-self-stretch',
