@@ -64,7 +64,9 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
  * Add click events to all link items with mega menus
  */
 function megaMenuToggle() {
-  const megaMenuParent = document.getElementsByClassName('mega-menu-parent');
+  // Only elements with both classes mega-menu-parent and no-link should be able to open a mega menu
+  // There are cases where the parent item can have children, but not be configured with a no link, and this stops us from trying to open a mega menu we shouldn't
+  const megaMenuParent = document.getElementsByClassName('mega-menu-parent no-link');
 
   // Adds event listener to close MegaMenu
   const closeButton = document.querySelectorAll('.closeMegaMenu');
