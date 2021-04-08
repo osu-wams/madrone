@@ -59,7 +59,7 @@ We call a macro which calls itself to render the full tree.
         ] %}
         {# The no-link class is used by the javascript to determine if this parent item is a drupal <nolink> which we treat differently #}
         {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') %}
-          {% set link_classes = link_classes|merge(['no-link'])  %}
+          {% set link_classes = link_classes|merge(['no-link']) %}
         {% endif %}
       {% else %}
         {% set list_item_classes = [
