@@ -1,4 +1,8 @@
 @layer base {
+  *, :after, :before {
+    @apply tw-border-neutral-300;
+  }
+
   @font-face {
     font-family: 'Stratum2WebBold';
     src: url('../fonts/Stratum2WebBold.woff2') format('woff2'),
@@ -9,7 +13,7 @@
   }
 
   h1 {
-    @apply tw-text-4xl tw-font-stratum2web tw-text-osuorange tw-uppercase;
+    @apply tw-subpixel-antialiased tw-text-4xl tw-font-stratum2web tw-text-osuorange tw-uppercase;
   }
 
   h2 {
@@ -17,11 +21,11 @@
   }
 
   h3 {
-    @apply tw-text-2xl tw-font-stratum2web tw-text-black tw-uppercase;
+    @apply tw-text-2xl tw-font-stratum2web tw-text-paddletailblack tw-uppercase;
   }
 
   body {
-    @apply tw-bg-neutral-100;
+    @apply tw-bg-neutral-100 tw-h-screen;
   }
 
   body.modal-active {
@@ -40,6 +44,46 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: 'ellipsis';
+  }
+
+  table {
+    @apply tw-min-w-full tw-divide-y tw-divide-neutral-200 tw-bg-bucktoothwhite tw-rounded tw-mb-4;
+  }
+
+  thead {
+    @apply tw-text-neutral-550 tw-font-semibold;
+
+    & tr {
+      @apply tw-divide-x tw-divide-neutral-200;
+
+      & th {
+        @apply tw-py-5 tw-px-4 tw-text-left;
+      }
+    }
+  }
+
+  tbody {
+    @apply tw-divide-y tw-divide-neutral-200 tw-text-neutral-700 tw-font-normal;
+
+    & tr {
+      @apply tw-divide-x tw-divide-neutral-200;
+
+      & td {
+        @apply tw-p-4;
+      }
+    }
+  }
+
+  tfoot {
+    @apply tw-divide-y tw-divide-neutral-200 tw-text-neutral-550 tw-font-semibold;
+
+    & tr {
+      @apply tw-divide-x tw-divide-neutral-200;
+
+      & td {
+        @apply tw-p-4;
+      }
+    }
   }
 
   .madrone-header {

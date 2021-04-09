@@ -13,3 +13,5 @@ composer.lock
 
 # Ignore IDE settings
 /.idea
+# Docker composer overrides
+docker-compose.override.yml
