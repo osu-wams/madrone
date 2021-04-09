@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.group
+  module:
+    - group_content_menu
+  theme:
+    - madrone
+id: madrone_mobile_groupmenu
+theme: madrone
+region: mobile_secondary_menu
+weight: -6
+provider: null
+plugin: 'group_content_menu:group'
+settings:
+  id: 'group_content_menu:group'
+  label: 'Mobile Group Menu'
+  provider: group_content_menu
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: true
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility: {  }

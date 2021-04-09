@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_name
+  module:
+    - views
+  theme:
+    - madrone
+id: madrone_mobile_group_name
+theme: madrone
+region: mobile_secondary_menu
+weight: -7
+provider: null
+plugin: 'views_block:group_name-block_1'
+settings:
+  id: 'views_block:group_name-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }
