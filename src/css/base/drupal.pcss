@@ -1,15 +1,32 @@
 @layer base {
-  body {
-    @apply tw-h-screen;
-  }
-
   .node {
     @apply tw-mb-4;
   }
 
   .node__content p,
   .node__content ul,
-  .node__content ol {
+  .node__content ol,
+  .node__content dl {
     @apply tw-mb-4 tw-leading-normal;
+  }
+
+  .node__content {
+    & ul {
+      @apply tw-list-disc tw-list-inside tw-pl-4;
+    }
+
+    & ol {
+      @apply tw-list-decimal tw-list-inside tw-pl-4;
+    }
+
+    & dl {
+      & dt {
+        @apply tw-pl-2;
+      }
+
+      & dd {
+        @apply tw-pl-4;
+      }
+    }
   }
 }
