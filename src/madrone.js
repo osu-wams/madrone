@@ -1,5 +1,5 @@
+import { closeMegaMenu, megaMenuToggle, megaMenuChildSetTitle } from './js/mega-menu';
 import { adjustMoreMenu, closeAllMoreMenus, createMoreMenu } from './js/more-menu';
-import { closeMegaMenu, megaMenuToggle } from './js/mega-menu';
 import { toggleModal, modalSetup, closeNavModal, closeMobileGroupMenuDropdown } from './js/modal';
 /**
  * Add Event Listeners to the Main navigation level 0.
@@ -12,6 +12,7 @@ createMoreMenu('block-madrone-main-menu', 'madrone-mega-menu-main');
 createMoreMenu('block-madrone-groupmenu', 'madrone-mega-menu-group');
 
 megaMenuToggle();
+megaMenuChildSetTitle();
 // Adapt immediately on load.
 
 window.addEventListener('load', () => {

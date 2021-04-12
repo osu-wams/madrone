@@ -58,7 +58,7 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: 'ellipsis';
+    text-overflow: ellipsis;
   }
 
   .madrone-mega-menu-main,
@@ -91,12 +91,12 @@
     padding: 10px 10px 20px;
     top: 97px; /* header is 96px height, so we add one more */
 
-    & a, & span {
+    & > a, & > span {
       @apply tw-w-full;
       padding: 8px 5px;
     }
 
-    & li {
+    & > li {
       & > span,
       & > a {
         /* Sets 36px left padding regardless of icon to leave space on the left for text */
@@ -166,11 +166,18 @@
   /* Secondary Navigation */
   .madrone-secondary-menu {
     @apply tw-bg-neutral-700 tw-text-bucktoothwhite tw-py-2 tw-hidden lg-tw-grid;
-    padding-left: 370px;
+    padding-left: 20px;
     padding-right: 170px;
     height: 40px;
     /* 377: width of site title without left padding */
-    grid-template-columns: 380px 1fr;
+    grid-template-columns: minmax(0, 1fr) 1fr;
+  }
+
+  .madrone-secondary-menu span {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   /* End Secondary Navigation */

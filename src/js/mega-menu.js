@@ -64,7 +64,9 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
  * Add click events to all link items with mega menus
  */
 function megaMenuToggle() {
-  const megaMenuParent = document.getElementsByClassName('mega-menu-parent');
+  // Only elements with both classes mega-menu-parent and no-link should be able to open a mega menu
+  // There are cases where the parent item can have children, but not be configured with a no link, and this stops us from trying to open a mega menu we shouldn't
+  const megaMenuParent = document.getElementsByClassName('mega-menu-parent no-link');
 
   // Adds event listener to close MegaMenu
   const closeButton = document.querySelectorAll('.closeMegaMenu');
@@ -95,11 +97,17 @@ function megaMenuToggle() {
         const megaMenuDiv = megaMenus[0];
         const megaMenuIsOpen = megaMenuDiv.classList.contains('lg-tw-grid');
         // This needs to be calculated here, calculating it outside causes problems when logged in with admin toolbar
-        const bottomHeader = document
+        var bottomHeader = document
           .querySelector('[role=banner]')
           .getBoundingClientRect().bottom;
+        /**
+         * Check to see if the mega-menu is a child of a madrone-mega-menu-group class, which means we
+         * need to push it another 40px so we don't cover the group menu
+         */
+        if (megaMenuDiv.closest('.madrone-mega-menu-group')) {
+          bottomHeader += 40;
+        }
         megaMenuDiv.style.top = bottomHeader + 'px';
-
         setActiveColors(megaMenuParentLi, megaMenuIsOpen);
         setActiveMegaMenu(megaMenuDiv, megaMenuIsOpen);
       }
@@ -118,4 +126,17 @@ function closeMegaMenu() {
   setActiveMegaMenu();
 }
 
-export { setActiveColors, setActiveMegaMenu, closeMegaMenu, megaMenuToggle };
+function megaMenuChildSetTitle() {
+  const megaMenuChildArr = document.querySelectorAll('.mega-menu-child > a')
+  for (let i = 0; i < megaMenuChildArr.length; i++) {
+    const v1 = megaMenuChildArr[i];
+    if (v1.children.length > 1) {
+      const parent = v1.parentElement;
+      const removed = v1.removeChild(v1.firstChild);
+      removed.classList.add('tw-absolute', 'tw--left-6', 'tw-top-1');
+      parent.insertBefore(removed, parent.firstChild);
+    }
+  }
+}
+
+export { setActiveColors, setActiveMegaMenu, closeMegaMenu, megaMenuToggle, megaMenuChildSetTitle };

@@ -57,35 +57,39 @@ We call a macro which calls itself to render the full tree.
         {% set link_classes = [
           'mega-menu-parent',
         ] %}
+        {# The no-link class is used by the javascript to determine if this parent item is a drupal <nolink> which we treat differently #}
+        {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') %}
+          {% set link_classes = link_classes|merge(['no-link']) %}
+        {% endif %}
       {% else %}
         {% set list_item_classes = [
           'mega-menu-child'
         ] %}
         {% set link_classes = 'tw-no-underline' %}
       {% endif %}
-      <li{{ item.attributes.addClass(list_item_classes).setAttribute('data-index', data_index) }}>
-        {# Set accessibility featues to tab through menu and span to act as a button #}
-        {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
-          {{ link(item.title, item.url, item.attributes.addClass(link_classes).removeClass(list_item_classes).setAttribute('tabindex', 0).setAttribute('role', 'button')) }}
-        {% else %}
-          {{ link(item.title, item.url, {'class': link_classes}) }}
-        {% endif %}
-        {# adding the chevron #}
-        {% if menu_level == 0 and item.below %}
-          <i class="fas fa-fw fa-caret-down"></i>
-        {% endif %}
-        {# content description for mega menu items #}
-        {% if menu_level == 1 %}
-          <p class="tw-text-xxs tw-mt-1 mega-menu-description">
-            {{ item.url.options.attributes.title }}
-          </p>
-        {% endif %}
-        {# looks to see if there are child links to the menu item #}
-        {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
-        {% endif %}
-      </li>
-      {% set data_index = data_index + 1 %}
+        <li{{ item.attributes.addClass(list_item_classes).setAttribute('data-index', data_index) }}>
+          {# Set accessibility featues to tab through menu and span to act as a button #}
+          {% if not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>') and item.below %}
+            {{ link(item.title, item.url, item.attributes.addClass(link_classes).removeClass(list_item_classes).setAttribute('tabindex', 0).setAttribute('role', 'button')) }}
+          {% else %}
+            {{ link(item.title, item.url, {'class': link_classes}) }}
+          {% endif %}
+          {# adding the chevron #}
+          {% if menu_level == 0 and item.below and 'no-link' in link_classes %}
+            <i class="fas fa-fw fa-caret-down"></i>
+          {% endif %}
+          {# content description for mega menu items #}
+          {% if menu_level == 1 %}
+            <p class="tw-text-xxs tw-mt-1 mega-menu-description">
+              {{ item.url.options.attributes.title }}
+            </p>
+          {% endif %}
+          {# looks to see if there are child links to the menu item #}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
+          {% endif %}
+        </li>
+        {% set data_index = data_index + 1 %}
     {% endfor %}
     {% if menu_level != 0 %}
       </ul>
