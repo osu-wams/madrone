@@ -75,7 +75,6 @@ We call a macro which calls itself to render the full tree.
             {{ link(item.title, item.url, {'class': link_classes}) }}
           {% endif %}
           {# adding the chevron #}
-{#          {% if menu_level == 0 and item.below and not item.url.isExternal() and item.url.getRouteName() is same as('<nolink>')%}#}
           {% if menu_level == 0 and item.below and 'no-link' in link_classes %}
             <i class="fas fa-fw fa-caret-down"></i>
           {% endif %}
