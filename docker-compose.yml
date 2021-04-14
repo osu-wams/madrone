@@ -12,6 +12,7 @@ services:
     ports:
       - 8080:80
     volumes:
+      - drupal-files:/var/www/html/docroot/sites/default/files
       - ./:/var/www/html/docroot/themes/custom/madrone
     restart: unless-stopped
   database:
@@ -27,3 +28,4 @@ services:
 
 volumes:
   drupal-db:
+  drupal-files:
