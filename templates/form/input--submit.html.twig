@@ -9,7 +9,25 @@
  *
  * @see template_preprocess_input()
 #}
-<button{{ attributes.addClass('tw-text-2xl', 'tw-text-neutral-400') }}>
+{% set class = [
+  'tw-text-2xl',
+  'tw-ring-4',
+  'tw-py-1',
+  'tw-px-3',
+  'tw-m-2',
+] %}
+{% if attributes.hasClass('button--primary') %}
+  {% set class = class|merge([
+    'tw-ring-osuorange',
+    'tw-text-osuorange'
+  ]) %}
+{% else %}
+  {% set class = class|merge([
+    'tw-ring-rogue_wave-300',
+    'tw-text-rogue_wave-700'
+  ]) %}
+{% endif %}
+<button{{ attributes.addClass(class) }}>
   <span>{{ attributes.value }}</span>
 </button>
 {{ children }}
