@@ -13,7 +13,16 @@
     "scripts": {
         "cs": "phpcs",
         "cbf": "phpcbf",
-        "twigcs": "twigcs --twig-version=1"
+        "twigcs": "twigcs --twig-version=1",
+        "post-install-cmd": [
+            "vendor/bin/cghooks add"
+        ],
+        "post-update-cmd": [
+            "vendor/bin/cghooks update"
+        ]
+    },
+    "config": {
+        "sort-packages": true
     },
     "scripts-descriptions": {
         "cs": "Check code for Drupal Standards.",
@@ -21,9 +30,30 @@
         "twigcs": "Check Twig templates for Standards"
     },
     "require-dev": {
+        "brainmaestro/composer-git-hooks": "^2.8",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
         "drupal/coder": "^8.3",
-        "squizlabs/php_codesniffer": "^3.5",
-        "friendsoftwig/twigcs": "^5.0"
+        "friendsoftwig/twigcs": "^5.0",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "extra": {
+        "hooks": {
+            "config": {
+                "stop-on-failture": [
+                    "pre-commit",
+                    "pre-push"
+                ]
+            },
+            "pre-push": [
+                "vendor/bin/twigcs --twig-version=1",
+                "vendor/bin/phpcs"
+            ],
+            "pre-commit": [
+                "vendor/bin/twigcs --twig-version=1",
+                "vendor/bin/phpcbf",
+                "yarn prod",
+                "git add dist"
+            ]
+        }
     }
 }
