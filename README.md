@@ -68,8 +68,8 @@ For minified ```shell yarn prod```
 
 ## Developer Experience
 
-- Run ```shell yarn watch``` this task will automatically compile madrone.css (unminified)
-  when you make changes.
+- Run ```shell yarn watch``` this task will automatically compile madrone.css
+  (unminified) when you make changes.
 - When logged in, you typically need to run admin -> flush all caches when
   changing template files. This menu shows up under the drupal icon of nice
   menus
