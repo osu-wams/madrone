@@ -987,9 +987,6 @@ tfoot tr td {
 }
 
 .madrone-mega-menu-main > li {
-  border-color: transparent;
-  border-style: solid;
-  border-bottom-width: 2px;
   --tw-text-opacity: 1;
   color: rgba(105, 99, 97, var(--tw-text-opacity));
 }
@@ -1854,11 +1851,6 @@ tfoot tr td {
 .tw-text-neutral-550 {
   --tw-text-opacity: 1;
   color: rgba(123, 116, 111, var(--tw-text-opacity));
-}
-
-.tw-text-neutral-600 {
-  --tw-text-opacity: 1;
-  color: rgba(105, 99, 97, var(--tw-text-opacity));
 }
 
 .tw-text-neutral-700 {

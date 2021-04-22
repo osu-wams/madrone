@@ -71,18 +71,8 @@ function setActiveColors() {
   if (megaMenuParentLi && !menuIsOpen) {
     megaMenuParentLi.classList.remove('tw-font-normal', 'tw-text-neutral-550');
     megaMenuParentLi.classList.add('tw-text-osuorange', 'hover-tw-text-osuorange'); // Sets a orange border on the mega menu parent LI's first span that was selected
-    // megaMenuParentLi
-    //   .getElementsByClassName('mega-menu-parent')[0]
-    //   .parentElement.classList.add('madrone-active-trail');
-    // let tarSpan = parentLi.getElementsByTagName('span')[0];
-    // if (typeof tarSpan !== "undefined") {
-    //   tarSpan.classList.remove(
-    //     'madrone-active-trail',
-    //   );
-    // }
 
-    var firstSpan = megaMenuParentLi.getElementsByTagName('span')[0]; // let firstSpan = nestedSpans[0];
-    // console.log(test01)
+    var firstSpan = megaMenuParentLi.getElementsByTagName('span')[0];
 
     if (typeof firstSpan !== "undefined") {
       firstSpan.classList.add('madrone-active-trail');
