@@ -1,3 +1,5 @@
+import { closeMegaMenu } from './mega-menu.js';
+
 /**
  * Adds a modal with opacity around the whole site
  * Currently used for the home left menu "OSU Menu"
@@ -11,6 +13,7 @@ function toggleModal() {
   modal.classList.toggle('tw-hidden');
   body.classList.toggle('modal-active');
   main.classList.toggle('tw-pointer-events-none');
+  closeMegaMenu();
 }
 
 function toggleNavModal() {
