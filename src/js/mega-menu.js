@@ -31,13 +31,18 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
   // resets color on all non active mega menu parent items
   for (let i = 0; i < openMegaMenuParents.length; i++) {
     let parentLi = openMegaMenuParents[i].parentElement;
+    // The bottom border got moved from the <li> to the span inside so we check to see if a span is present to reset
+    let tarSpan = parentLi.getElementsByTagName('span')[0];
+    if (typeof tarSpan !== "undefined") {
+      tarSpan.classList.remove(
+        'madrone-active-trail',
+      );
+    }
     parentLi.classList.remove(
       'tw-text-osuorange',
-      'madrone-active-trail',
       'hover-tw-text-osuorange'
     );
     parentLi.classList.add('tw-font-normal', 'tw-text-neutral-550');
-
     // Checks to see if there is a chevron. If so, reset it to down
     if (parentLi.children[1]) {
       parentLi.children[1].setAttribute('data-icon', 'caret-down');
@@ -52,10 +57,11 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
       'hover-tw-text-osuorange'
     );
 
-    // Sets a orange border on the mega menu parent LI that was selected
-    megaMenuParentLi
-      .getElementsByClassName('mega-menu-parent')[0]
-      .parentElement.classList.add('madrone-active-trail');
+    // Sets a orange border on the mega menu parent LI's first span that was selected
+    let firstSpan = megaMenuParentLi.getElementsByTagName('span')[0];
+    if (typeof firstSpan !== "undefined") {
+      firstSpan.classList.add('madrone-active-trail');
+    }
     megaMenuParentLi.children[1].setAttribute('data-icon', 'caret-up');
   }
 }
