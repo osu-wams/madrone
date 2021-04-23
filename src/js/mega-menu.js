@@ -38,11 +38,14 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
         'madrone-active-trail',
       );
     }
-    parentLi.classList.remove(
-      'tw-text-osuorange',
-      'hover-tw-text-osuorange'
-    );
-    parentLi.classList.add('tw-font-normal', 'tw-text-neutral-550');
+    let isMenuMain = parentLi.closest(".madrone-mega-menu-main")
+    if (isMenuMain) {
+      parentLi.classList.remove(
+        'tw-text-osuorange',
+        'hover-tw-text-osuorange'
+      );
+      parentLi.classList.add('tw-font-normal', 'tw-text-neutral-550');
+    }
     // Checks to see if there is a chevron. If so, reset it to down
     if (parentLi.children[1]) {
       parentLi.children[1].setAttribute('data-icon', 'caret-down');
@@ -51,11 +54,14 @@ function setActiveColors(megaMenuParentLi = null, menuIsOpen = false) {
 
   // If this function was invoked from our click event on the mega menu parent, we want to highlight it
   if (megaMenuParentLi && !menuIsOpen) {
-    megaMenuParentLi.classList.remove('tw-font-normal', 'tw-text-neutral-550');
-    megaMenuParentLi.classList.add(
-      'tw-text-osuorange',
-      'hover-tw-text-osuorange'
-    );
+    let isMenuMain = megaMenuParentLi.closest(".madrone-mega-menu-main")
+    if (isMenuMain) {
+      megaMenuParentLi.classList.remove('tw-font-normal', 'tw-text-neutral-550');
+      megaMenuParentLi.classList.add(
+        'tw-text-osuorange',
+        'hover-tw-text-osuorange'
+      );
+    }
 
     // Sets a orange border on the mega menu parent LI's first span that was selected
     let firstSpan = megaMenuParentLi.getElementsByTagName('span')[0];
