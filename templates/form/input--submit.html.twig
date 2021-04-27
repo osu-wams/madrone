@@ -12,19 +12,25 @@
 {% set class = [
   'tw-text-2xl',
   'tw-ring-4',
-  'tw-py-1',
-  'tw-px-3',
-  'tw-m-2',
+  'tw-py-3',
+  'tw-px-5',
+  'tw-my-2.5',
+  'tw-mx-1',
+  'tw-ring-inset',
+  'focus-tw-outline-none',
 ] %}
 {% if attributes.hasClass('button--primary') %}
   {% set class = class|merge([
     'tw-ring-osuorange',
-    'tw-text-osuorange'
+    'tw-text-osuorange',
+    'focus-tw-bg-osuorange',
+    'focus-tw-text-bucktoothwhite',
   ]) %}
 {% else %}
   {% set class = class|merge([
     'tw-ring-rogue_wave-300',
-    'tw-text-rogue_wave-700'
+    'tw-text-rogue_wave-700',
+    'focus-tw-bg-rogue_wave-300',
   ]) %}
 {% endif %}
 <button{{ attributes.addClass(class) }}>

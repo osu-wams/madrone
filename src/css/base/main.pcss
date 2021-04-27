@@ -48,6 +48,12 @@
     @apply tw-underline tw-underline-osuorange tw-underline-thin;
   }
 
+  p {
+    & a {
+      @apply tw-font-extrabold;
+    }
+  }
+
   .site-name {
     @apply tw-col-span-full tw-text-xl tw-font-bold tw-text-osuorange tw-pl-5 tw-border-t-2 tw-border-neutral-200 lg-tw-border-t-0 tw-flex;
     width: 400px;
@@ -98,13 +104,9 @@
     }
   }
 
-  .madrone-header {
-    @apply lg-tw-grid tw-border-b tw-border-neutral-200;
-  }
-
   /* Important and just for desktop. 750 width of logo and title, 170 width of searchbox */
-  @media (min-width: 1024px) {
-    .madrone-header {
+  .madrone-header {
+    @media screen and (min-width: 1024px) {
       grid-template-columns: 750px 1fr 170px;
       grid-template-rows: 96px;
     }

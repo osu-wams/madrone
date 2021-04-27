@@ -1,5 +1,13 @@
-@layer base {
+@layer components {
   input {
     @apply tw-border tw-border-neutral-550;
+  }
+
+  .button {
+    @apply tw-text-2xl tw-ring-4 tw-py-3 tw-px-5 tw-my-2.5 tw-mx-1 tw-no-underline focus-tw-outline-none tw-ring-rogue_wave-300 tw-ring-inset tw-text-rogue_wave-700 focus-tw-bg-rogue_wave-300;
+  }
+
+  .button--primary {
+    @apply tw-ring-osuorange tw-text-osuorange focus-tw-bg-osuorange focus-tw-text-bucktoothwhite;
   }
 }
