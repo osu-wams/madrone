@@ -1,0 +1,24 @@
+name: Madrone
+description: OSU Theme of the future
+core_version_requirement: ^8 || ^9
+type: theme
+dependencies:
+
+base theme: stable9
+regions:
+  header: Header
+  primary_menu: Primary menu
+  secondary_menu: Secondary Menu
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  page_top: Page Top
+  content: Content
+  sidebar_first: Sidebar First
+  page_bottom: Page Bottom
+  pre_footer: Full width above the Footer
+  footer: Footer
+libraries:
+  - madrone/fonts
+  - madrone/bootstrap
+  - madrone/global-styling

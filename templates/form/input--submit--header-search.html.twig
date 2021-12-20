@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% set classes = [
+  'fs-2',
+  'text-neutral-400',
+  'border-0',
+  'bg-transparent',
+  'd-flex',
+  'justify-content-center',
+  'align-items-center'
+] %}
+<button{{ attributes.addClass(classes) }}>
+  <i class="fa fa-search" aria-hidden="true"></i>
+  <span class="visually-hidden">{{ attributes.value }}</span>
+</button>
+{{ children }}

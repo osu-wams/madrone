@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Theme override for status messages.
+ *
+ * Displays status, error, and warning messages, grouped by type.
+ *
+ * An invisible heading identifies the messages for assistive technology.
+ * Sighted users see a colored box. See http://www.w3.org/TR/WCAG-TECHS/H69.html
+ * for info.
+ *
+ * Add an ARIA label to the contentinfo area so that assistive technology
+ * user agents will better describe this landmark.
+ *
+ * Available variables:
+ * - message_list: List of messages to be displayed, grouped by type.
+ * - status_headings: List of all status types.
+ * - attributes: HTML attributes for the element, including:
+ *   - class: HTML classes.
+ */
+#}
+<div data-drupal-messages>
+  {% for type, messages in message_list %}
+    {% set status_classes = [
+      'messages',
+      'messages--' ~ type,
+    ] %}
+    {% set role = {
+      'status': 'status',
+      'error': 'alert',
+      'warning': 'alert',
+    } %}
+    {% set status_colors = {
+      'status': 'alert alert-success',
+      'warning': 'alert alert-warning',
+      'error': 'alert alert-danger',
+    } %}
+    {% set dismiss_class = [
+      'alert-dismissible',
+      'fade',
+      'show'] %}
+    {% set icon_classes = {
+      'status': 'fas fa-check',
+      'warning': 'fas fa-exclamation',
+      'error': 'fas fa-times',
+    } %}
+    {% set icon_wrapper_classes = {
+      'status': 'd-flex align-items-center',
+      'warning': 'd-flex align-items-center',
+      'error': 'd-flex align-items-center',
+    } %}
+    <div
+      aria-label="{{ status_headings[type] }}"{{ attributes.addClass(status_classes, status_colors[type], dismiss_class)|without('role', 'aria-label').setAttribute('role', role[type]) }}>
+      {% if status_headings[type] %}
+        <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
+      {% endif %}
+      <div
+        class="{{ icon_wrapper_classes[type] }}">
+        <i class="{{ icon_classes[type] }}"></i>
+
+        {% if messages|length > 1 %}
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="mb-0 ms-2">{{ messages|first }}</p>
+        {% endif %}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+    {# Remove type specific classes. #}
+    {% set attributes = attributes.removeClass(status_classes, status_colors[type]) %}
+  {% endfor %}
+</div>

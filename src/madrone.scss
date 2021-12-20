@@ -1,0 +1,227 @@
+@import "../node_modules/bootstrap/scss/functions";
+// Import of User Variables.
+@import "scss/osu_variables";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@font-face {
+  font-family: "Stratum2Web";
+  src: url("../fonts/Stratum2WebThin.woff") format("woff"),
+  url("../fonts/Stratum2WebThin.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stratum2Web";
+  src: url("../fonts/Stratum2WebLight.woff") format("woff"),
+  url("../fonts/Stratum2WebLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stratum2Web";
+  src: url("../fonts/Stratum2WebRegular.woff") format("woff"),
+  url("../fonts/Stratum2WebRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stratum2Web";
+  src: url("../fonts/Stratum2WebMedium.woff") format("woff"),
+  url("../fonts/Stratum2WebMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stratum2Web";
+  src: url("../fonts/Stratum2WebBold.woff") format("woff"),
+  url("../fonts/Stratum2WebBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stratum2Web";
+  src: url("../fonts/Stratum2WebBlack.woff") format("woff"),
+  url("../fonts/Stratum2WebBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+$theme-colors: map-merge($theme-colors, $osu-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+/** Custom Mixins **/
+.btn-osu-gray {
+  @include button-variant(
+      $neutral-300,
+      $neutral-300,
+      $paddletailblack,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $bucktoothwhite,
+      $osuorange,
+      $paddletailblack
+  );
+}
+
+.btn-osu-black {
+  @include button-variant(
+      $paddletailblack,
+      $paddletailblack,
+      $bucktoothwhite,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $paddletailblack,
+      $osuorange,
+      $bucktoothwhite
+  );
+}
+
+.btn-osu-orange {
+  @include button-variant(
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $paddletailblack,
+      $paddletailblack,
+      $bucktoothwhite,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite
+  );
+}
+
+@include table-variant('osuorange', $osuorange);
+
+/** Theme Defaults **/
+h1 {
+  color: rgba($paddletailblack, 1);
+  font-family: 'Stratum2Web', serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  color: rgba($osuorange, 1);
+  font-family: 'Stratum2Web', serif;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: rgba($paddletailblack, 1);
+  font-family: 'Stratum2Web', serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+h4 {
+  color: rgba($osuorange, 1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h5 {
+  color: rgba($paddletailblack, 1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h6 {
+  color: rgba($osuorange, 1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.block-system-branding-block a {
+  @include font-size(1.5rem);
+
+  img {
+    height: 80px;
+  }
+}
+
+a {
+  color: $stratosphere-400;
+
+  &:hover {
+    color: $stratosphere-600;
+  }
+
+  &.button {
+    @extend .btn;
+    @extend .rounded-pill;
+    @extend .px-5;
+    @extend .my-3;
+    @extend .btn-osu-gray;
+  }
+}
+
+.header-search-block-form > div {
+  height: 100%;
+
+  &.form-actions {
+    display: flex;
+    height: 100%;
+    padding: .5em;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.layout-builder__message--overrides .messages {
+  background-image: none !important;
+}
+
+.block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu) > li {
+
+  &::marker {
+    color: $osuorange;
+    content: '\f054   ';
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    letter-spacing: normal;
+  }
+}
+
+em.placeholder {
+  background-color: unset;
+  cursor: unset;
+  display: unset;
+  min-height: unset;
+  opacity: unset;
+  vertical-align: unset;
+}
+
+blockquote {
+  border: 5px solid $neutral-200;
+  padding: 1.5em 2em;
+}
+
+table {
+  @extend .table;
+  @extend .table-bordered;
+  @extend .table-hover;
+  @extend .table-striped;
+
+  thead {
+    @extend .table-dark;
+  }
+}

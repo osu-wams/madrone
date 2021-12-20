@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{% set search_header_class = [
+  attributes.region|clean_class ~ '-' ~ attributes.id|clean_class,
+  'd-flex',
+  'h-100',
+  'position-relative',
+  'align-items-center',
+  'justify-content-center'
+] %}
+<form{{ attributes.removeAttribute('region').addClass(search_header_class) }}>
+  {{ children }}
+</form>

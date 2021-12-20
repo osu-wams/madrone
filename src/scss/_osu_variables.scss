@@ -1,0 +1,110 @@
+$osuorange: #d73f09;
+$bucktoothwhite: #fff;
+$paddletailblack: #000;
+$neutral-100: #f7f5f5;
+$neutral-200: #e9e5e4;
+$neutral-300: #d4cfcd;
+$neutral-400: #b7b1af;
+$neutral-500: #8f8582;
+$neutral-550: #7b746f;
+$neutral-600: #696361;
+$neutral-700: #423e3c;
+$neutral-800: #2e2b2a;
+$neutral-900: #1f1d1c;
+$lava-100: #ffdedf;
+$lava-200: #ee878a;
+$lava-300: #e54349;
+$lava-400: #c72127;
+$lava-500: #a7262b;
+$lava-600: #8c0e13;
+$lava-700: #590003;
+$luminance-100: #fff2d5;
+$luminance-200: #fddb8b;
+$luminance-300: #ffce57;
+$luminance-400: #ffb500;
+$luminance-500: #e59900;
+$luminance-600: #d3832b;
+$luminance-700: #915513;
+$pine-100: #edf3e3;
+$pine-200: #c4d6a4;
+$pine-300: #73a663;
+$pine-400: #4a773c;
+$pine-500: #3c692e;
+$pine-600: #254a1a;
+$pine-700: #142e0c;
+$rogue_wave-100: #ecf5f6;
+$rogue_wave-200: #b8dde1;
+$rogue_wave-300: #20a6bd;
+$rogue_wave-400: #00859b;
+$rogue_wave-500: #007082;
+$rogue_wave-600: #0d5257;
+$rogue_wave-700: #043033;
+$stratosphere-100: #ecf1f4;
+$stratosphere-200: #c6dae7;
+$stratosphere-300: #2490b5;
+$stratosphere-400: #006a8e;
+$stratosphere-500: #005875;
+$stratosphere-600: #003b5c;
+$stratosphere-700: #002235;
+
+$osu-colors: (
+  "osuorange": $osuorange,
+  "paddletailblack": $paddletailblack,
+  "bucktoothwhite": $bucktoothwhite,
+  "neutral-100": $neutral-100,
+  "neutral-200": $neutral-200,
+  "neutral-300": $neutral-300,
+  "neutral-400": $neutral-400,
+  "neutral-500": $neutral-500,
+  "neutral-550": $neutral-550,
+  "neutral-600": $neutral-600,
+  "neutral-700": $neutral-700,
+  "neutral-800": $neutral-800,
+  "neutral-900": $neutral-900,
+  "lava-100": $lava-100,
+  "lava-200": $lava-200,
+  "lava-300": $lava-300,
+  "lava-400": $lava-400,
+  "lava-500": $lava-500,
+  "lava-600": $lava-600,
+  "lava-700": $lava-700,
+  "luminance-100": $luminance-100,
+  "luminance-200": $luminance-200,
+  "luminance-300": $luminance-300,
+  "luminance-400": $luminance-400,
+  "luminance-500": $luminance-500,
+  "luminance-600": $luminance-600,
+  "luminance-700": $luminance-700,
+  "pine-100": $pine-100,
+  "pine-200": $pine-200,
+  "pine-300": $pine-300,
+  "pine-400": $pine-400,
+  "pine-500": $pine-500,
+  "pine-600": $pine-600,
+  "pine-700": $pine-700,
+  "rogue_wave-100": $rogue_wave-100,
+  "rogue_wave-200": $rogue_wave-200,
+  "rogue_wave-300": $rogue_wave-300,
+  "rogue_wave-400": $rogue_wave-400,
+  "rogue_wave-500": $rogue_wave-500,
+  "rogue_wave-600": $rogue_wave-600,
+  "rogue_wave-700": $rogue_wave-700,
+  "stratosphere-100": $stratosphere-100,
+  "stratosphere-200": $stratosphere-200,
+  "stratosphere-300": $stratosphere-300,
+  "stratosphere-400": $stratosphere-400,
+  "stratosphere-500": $stratosphere-500,
+  "stratosphere-600": $stratosphere-600,
+  "stratosphere-700": $stratosphere-700,
+);
+//$primary: $osuorange;
+// Change base form component focus color.
+$input-btn-focus-box-shadow: 0 0 0 .25rem rgba($osuorange, .25);
+$input-focus-border-color: $osuorange;
+
+$form-check-input-checked-bg-color: $osuorange;
+
+$font-family-base: 'Open Sans', sans-serif;
+$table-bg: $bucktoothwhite;
+$table-striped-bg: $neutral-100;
+$table-border-color: $neutral-200;
