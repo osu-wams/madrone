@@ -1,0 +1,17 @@
+/*.log
+/mix-manifest.json
+/node_modules/
+composer.lock
+/vendor/
+# Ignore compiled assets.
+# /dist/
+.DS_Store
+
+# Ignore lock files.
+/package-lock.json
+/yarn.lock
+
+# Ignore IDE settings
+/.idea
+# Docker composer overrides
+docker-compose.override.yml
