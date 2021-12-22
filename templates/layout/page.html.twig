@@ -60,19 +60,17 @@
     {% endif %}
     {% set content_classes = [
       'layout-content',
-      page.sidebar_first and page.sidebar_second ? 'col-xxl-6',
-      page.sidebar_first is empty or page.sidebar_second is empty ? 'col-xxl-9',
-      page.sidebar_first is empty and page.sidebar_second is empty ? 'col-xxl-12'
+      page.sidebar_first ? 'col-xxl-9' : 'col-xxl-12'
     ] %}
     <main role="main" class="container">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-      <div class="row g-0 mx-4 justify-content-center">
+      <div class="row g-0 mx-4 gap-2">
         <div{{ content_attributes.addClass(content_classes) }}>
           {{ page.content }}
         </div>{# /.layout-content #}
 
         {% if page.sidebar_first %}
-          <aside class="layout-sidebar-first col-xxl-3" role="complementary">
+          <aside class="layout-sidebar-first col-xxl-2 flex-fill" role="complementary">
             {{ page.sidebar_first }}
           </aside>
         {% endif %}
