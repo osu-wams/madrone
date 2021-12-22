@@ -16,8 +16,7 @@
 {% set region_class = [
   'madrone-' ~ region|clean_class,
   'row',
-  'g-0',
-  'justify-content-center'
+  'g-0'
 ] %}
 {% if content %}
   <div{{ attributes.setAttribute('id', region_id).addClass(region_class) }}>
