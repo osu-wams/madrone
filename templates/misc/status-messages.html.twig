@@ -40,9 +40,9 @@
       'fade',
       'show'] %}
     {% set icon_classes = {
-      'status': 'fas fa-check',
-      'warning': 'fas fa-exclamation',
-      'error': 'fas fa-times',
+      'status': 'fas fa-2x fa-check-circle',
+      'warning': 'fas fa-2x fa-exclamation-circle',
+      'error': 'fas fa-2x fa-times-circle',
     } %}
     {% set icon_wrapper_classes = {
       'status': 'd-flex align-items-center',
@@ -67,8 +67,8 @@
         {% else %}
           <p class="mb-0 ms-2">{{ messages|first }}</p>
         {% endif %}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {# Remove type specific classes. #}
     {% set attributes = attributes.removeClass(status_classes, status_colors[type]) %}
