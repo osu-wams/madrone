@@ -16136,6 +16136,12 @@ textarea.form-control-lg {
   border-color: #d73f09;
 }
 
+/** Bootstrap v4 shim class for layout builder. */
+.no-gutters {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
 .table-osuorange {
   --bs-table-bg: #d73f09;
   --bs-table-striped-bg: #d94915;
@@ -16221,7 +16227,15 @@ a:hover {
   right: 0;
 }
 
-.layout-builder__message--overrides .messages {
+.layout-builder-form {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 5rem);
+  padding-left: var(--bs-gutter-x, 5rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+.layout-builder-form .layout-builder__message .messages,
+.layout-builder-form .layout-builder__message--overrides .messages {
   background-image: none !important;
 }
 

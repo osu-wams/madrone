@@ -43,41 +43,52 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container g-0">
+<div class="layout-container">
 
-  <header class="container-fluid bg-bucktoothwhite" role="banner">
+  <header class="container-fluid bg-bucktoothwhite g-0" role="banner">
     {{ page.header }}
   </header>
-  <div class="container">
-    {{ page.primary_menu }}
-    {{ page.secondary_menu }}
-    {{ page.breadcrumb }}
-    {% if page.highlighted %}
+  {% if page.primary_menu %}
+    <div class="container-fluid">
+      {{ page.primary_menu }}
+    </div>
+  {% endif %}
+  {% if page.secondary_menu %}
+    <div class="container-fluid">
+      {{ page.secondary_menu }}
+    </div>
+  {% endif %}
+  {% if page.breadcrumb %}
+    <div class="container-fluid">
+      {{ page.breadcrumb }}
+    </div>
+  {% endif %}
+  {% if page.highlighted %}
+    <div class="container-fluid">
       {{ page.highlighted }}
-    {% endif %}
-    {% if page.help %}
+    </div>
+  {% endif %}
+  {% if page.help %}
+    <div class="container-fluid">
       {{ page.help }}
+    </div>
+  {% endif %}
+  {% set content_classes = [
+    'layout-content',
+    page.sidebar_first ? 'col-xxl-9' : 'col-xxl-12'
+  ] %}
+  <main class="row g-0" role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div{{ content_attributes.addClass(content_classes) }}>
+      {{ page.content }}
+    </div>
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar col-xxl-2 flex-fill" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
     {% endif %}
-    {% set content_classes = [
-      'layout-content',
-      page.sidebar_first ? 'col-xxl-9' : 'col-xxl-12'
-    ] %}
-    <main role="main" class="container">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-      <div class="row g-0 mx-4 gap-2">
-        <div{{ content_attributes.addClass(content_classes) }}>
-          {{ page.content }}
-        </div>{# /.layout-content #}
-
-        {% if page.sidebar_first %}
-          <aside class="layout-sidebar-first col-xxl-2 flex-fill" role="complementary">
-            {{ page.sidebar_first }}
-          </aside>
-        {% endif %}
-
-      </div>
-    </main>
-  </div>
+  </main>
   {% if page.pre_footer %}
     <div class="container-fluid">
       {{ page.pre_footer }}

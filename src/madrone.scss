@@ -103,6 +103,12 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
   );
 }
 
+/** Bootstrap v4 shim class for layout builder. */
+.no-gutters {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
 @include table-variant('osuorange', $osuorange);
 
 /** Theme Defaults **/
@@ -185,8 +191,12 @@ a {
   }
 }
 
-.layout-builder__message--overrides .messages {
-  background-image: none !important;
+.layout-builder-form {
+
+  .layout-builder__message .messages,
+  .layout-builder__message--overrides .messages {
+    background-image: none !important;
+  }
 }
 
 .block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu) > li {
