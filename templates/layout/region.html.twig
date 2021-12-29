@@ -14,7 +14,8 @@
 #}
 {% set region_id = 'madrone-' ~ region|clean_class ~ '-container' %}
 {% set region_class = [
-  'madrone-' ~ region|clean_class
+  'madrone-' ~ region|clean_class,
+  'mb-2'
 ] %}
 {% if content %}
   <div{{ attributes.setAttribute('id', region_id).addClass(region_class) }}>
