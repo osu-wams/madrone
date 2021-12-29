@@ -30,7 +30,9 @@ We call a macro which calls itself to render the full tree.
   {% set menu_classes = [
     'menu',
     'menu--' ~ menu_name|clean_class,
-    'nav'
+    'nav',
+    'flex-column',
+    'flex-md-row',
   ] %}
   {% set submenu_classes = [
     'menu--' ~ menu_name|clean_class ~ '__submenu'
@@ -47,7 +49,7 @@ We call a macro which calls itself to render the full tree.
     {% set attributes = attributes.removeClass(menu_levels) %}
     {% for item in items %}
       {% set li_classes = [
-        item.in_active_trail ? 'nav-item active' : 'nav-item',
+        item.in_active_trail ? 'nav-item active border-bottom border-4 border-osuorange' : 'nav-item',
       ] %}
       <li{{ item.attributes.addCLass(li_classes) }}>
         {{ link(item.title, item.url, item.attributes.addClass('nav-link', 'text-paddletailblack').removeClass(li_classes)) }}

@@ -30,38 +30,30 @@ We call a macro which calls itself to render the full tree.
   {% set menu_classes = [
     'menu',
     'menu--' ~ menu_name|clean_class,
-    'navbar-nav',
-  ] %}
-  {% set submenu_classes = [
-    'menu--' ~ menu_name|clean_class ~ '__submenu'
-  ] %}
-  {% set menu_levels = [
-    'menu--level-' ~ (menu_level + 1)
+    menu_level == 0 ? 'nav' : 'dropdown-menu'
   ] %}
   {% if items %}
-    <div class="container">
-      {% if menu_level == 0 %}
-      <ul{{ attributes.addClass(menu_classes, menu_levels) }}>
-        {% else %}
-        <ul{{ attributes.removeCLass(menu_classes).addClass(submenu_classes, menu_levels) }}>
+    <ul{{ attributes.addClass(menu_classes) }}>
+      {% for item in items %}
+        {% set li_classes = [
+          item.in_active_trail ? 'nav-item active active-trail bg-transparent border-bottom border-4 border-osuorange' : 'nav-item',
+          item.below ? 'dropdown',
+          menu_level > 0 ? 'dropdown-item',
+        ] %}
+        <li{{ item.attributes.addCLass(li_classes) }}>
+          {% set link_title = item.title %}
+          {% set link_attributes = item.attributes.removeClass(li_classes) %}
+          {% if menu_level == 0 and item.below %}
+            {% set link_title %}{{ link_title }} <span class="caret"></span> {% endset %}
+            {% set link_attributes = link_attributes.addClass('dropdown-toggle').setAttribute('data-bs-toggle', 'dropdown') %}
           {% endif %}
-          {% set attributes = attributes.removeClass(menu_levels) %}
-          {% for item in items %}
-            {% set li_classes = [
-              item.in_active_trail ? 'nav-item active' : 'nav-item',
-            ] %}
-            <li{{ item.attributes.addCLass(li_classes) }}>
-              {{ link(item.title, item.url, item.attributes.addClass('nav-link', 'text-paddletailblack').removeClass(li_classes)) }}
-              {% if item.below %}
-                {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
-              {% endif %}
-            </li>
-          {% endfor %}
-          {% if menu_level == 0 %}
-        </ul>
-        {% else %}
-      </ul>
-      {% endif %}
-    </div>
+          {{ link(link_title, item.url, link_attributes.addClass('nav-link', 'text-paddletailblack')) }}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes.removeCLass('nav'), menu_level + 1, menu_name) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
   {% endif %}
 {% endmacro %}

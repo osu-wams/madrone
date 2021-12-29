@@ -1,0 +1,63 @@
+.madrone-primary-menu > .block-superfish {
+  .sf-accordion-toggle > a {
+    @extend .btn;
+    @extend .btn-osu-gray;
+    @extend .px-5;
+    @extend .my-3;
+    @extend .rounded-pill;
+    @extend .w-100;
+  }
+
+  ul {
+    background-color: $neutral-100;
+
+    &.sf-menu {
+      line-height: 1.5;
+
+      &.sf-horizontal {
+        @extend .nav;
+
+        li.active-trail {
+          border-bottom: 4px solid $osuorange;
+
+          ul li {
+            padding: 0 1rem;
+          }
+        }
+      }
+
+      &.sf-accordion {
+        float: unset;
+        display: flex;
+        flex-direction: column;
+
+        $sf-depth: 0;
+        @for $i from 1 through 9 {
+          li.sf-depth-#{$i} {
+            left: #{$sf-depth}rem;
+            $sf-depth: $sf-depth +.25;
+          }
+        }
+
+        li.active-trail {
+          border-bottom: 4px solid $osuorange;
+        }
+      }
+
+      li {
+        @extend .nav-item;
+
+        a {
+          @extend .nav-link;
+          @extend .text-paddletailblack;
+
+          span.sf-sub-indicator {
+            right: 0;
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+}
