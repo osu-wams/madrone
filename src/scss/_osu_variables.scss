@@ -46,8 +46,12 @@ $stratosphere-400: #006a8e;
 $stratosphere-500: #005875;
 $stratosphere-600: #003b5c;
 $stratosphere-700: #002235;
-
-$osu-colors: (
+$osu-colors-text: (
+  "osuorange": $osuorange,
+  "paddletailblack": $paddletailblack,
+  "bucktoothwhite": $bucktoothwhite,
+);
+$osu-colors-all: (
   "osuorange": $osuorange,
   "paddletailblack": $paddletailblack,
   "bucktoothwhite": $bucktoothwhite,

@@ -3,6 +3,7 @@
 @import "scss/osu_variables";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/root";
 
 @font-face {
@@ -53,11 +54,42 @@
   font-style: normal;
 }
 
-$theme-colors: map-merge($theme-colors, $osu-colors);
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
-$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
-$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
-$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+$utilities: map-merge-multiple(
+    $utilities,
+    (
+      "color": map-merge(
+          map-get($utilities, "color"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "color"), "values"),
+                $osu-colors-text
+            )
+          )
+      )
+    ),
+    (
+      "background-color": (
+        property: background-color,
+        class: bg,
+        values: map-merge-multiple(
+            $utilities-bg-colors,
+            $osu-colors-all,
+            ("transparent": transparent)
+        )
+      )
+    ),
+    (
+      "border-color": (
+        property: border-color,
+        class: border,
+        values: map-merge(
+            $theme-colors,
+            $osu-colors-all
+        )
+      )
+    )
+);
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 /** Custom Mixins **/

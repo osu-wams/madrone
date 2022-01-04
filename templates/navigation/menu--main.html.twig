@@ -30,13 +30,14 @@ We call a macro which calls itself to render the full tree.
   {% set menu_classes = [
     'menu',
     'menu--' ~ menu_name|clean_class,
-    menu_level == 0 ? 'nav' : 'dropdown-menu'
+    menu_level == 0 ? 'nav' : 'dropdown-menu',
+    'gap-1'
   ] %}
   {% if items %}
     <ul{{ attributes.addClass(menu_classes) }}>
       {% for item in items %}
         {% set li_classes = [
-          item.in_active_trail ? 'nav-item active active-trail bg-transparent border-bottom border-4 border-osuorange' : 'nav-item',
+          item.in_active_trail ? 'nav-item active active-trail bg-transparent' : 'nav-item',
           item.below ? 'dropdown',
           menu_level > 0 ? 'dropdown-item',
         ] %}

@@ -12,16 +12,19 @@
     background-color: $neutral-100;
 
     &.sf-menu {
-      line-height: 1.5;
+      line-height: 1.75rem;
 
       &.sf-horizontal {
         @extend .nav;
+        @extend .gap-1;
 
-        li.active-trail {
-          border-bottom: 4px solid $osuorange;
+        li {
+          ul {
+            border-radius: 5px;
 
-          ul li {
-            padding: 0 1rem;
+            li {
+              padding: .5rem;
+            }
           }
         }
       }
@@ -39,22 +42,44 @@
           }
         }
 
-        li.active-trail {
-          border-bottom: 4px solid $osuorange;
-        }
       }
 
       li {
+        float: none;
         @extend .nav-item;
+
+        &.sf-depth-1.menuparent > a::after {
+          color: $paddletailblack;
+          content: '\2000\f0d7';
+          display: inline-block;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          letter-spacing: normal;
+        }
+
+        ul li.menuparent > a::after {
+          color: $paddletailblack;
+          content: '\2000\f0da';
+          display: inline-block;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          letter-spacing: normal;
+        }
 
         a {
           @extend .nav-link;
           @extend .text-paddletailblack;
 
+          &.is-active {
+            @extend .text-osuorange;
+            @extend .fw-bold;
+            border-bottom: 4px solid $osuorange;
+          }
+
           span.sf-sub-indicator {
-            right: 0;
-            height: 15px;
-            width: 15px;
+            display: none;
+            width: 0;
+            height: 0;
           }
         }
       }
