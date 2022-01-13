@@ -118,6 +118,10 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     case 'node_page_layout_builder_form':
       $form['#attributes']['class'][] = 'container';
       break;
+
+    case 'layout_builder_revert_overrides':
+      $form['#attributes']['class'][] = 'container';
+      break;
   }
 }
 
@@ -131,7 +135,6 @@ function madrone_theme_suggestions_block_alter(array &$suggestions, array $varia
       ->getStorage('block')
       ->load($variables['elements']['#id']);
     if ($block) {
-
       // Get the region the block is in.
       $region = $block->getRegion();
       $suggestions[] = 'block__' . $region;
