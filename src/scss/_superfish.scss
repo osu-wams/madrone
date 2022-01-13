@@ -68,12 +68,18 @@
 
         a {
           @extend .nav-link;
-          @extend .text-paddletailblack;
+
+          &:hover,
+          &:active,
+          &:focus {
+            &::after {
+              color: $bucktoothwhite !important;
+            }
+          }
 
           &.is-active {
-            @extend .text-osuorange;
             @extend .fw-bold;
-            border-bottom: 4px solid $osuorange;
+            border-bottom: 2px solid $osuorange;
           }
 
           span.sf-sub-indicator {
