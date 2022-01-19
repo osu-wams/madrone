@@ -87,6 +87,16 @@ $utilities: map-merge-multiple(
             $osu-colors-all
         )
       )
+    ),
+    (
+      "font-family": (
+        property: font-family,
+        class: font,
+        values: map-merge(
+            map-get(map-get($utilities, "font-family"), "values"),
+            ("stratum2web": Stratum2Web)
+        )
+      )
     )
 );
 
