@@ -94,7 +94,7 @@ $utilities: map-merge-multiple(
         class: font,
         values: map-merge(
             map-get(map-get($utilities, "font-family"), "values"),
-            ("stratum2web": Stratum2Web)
+            ("stratum2web": ('Stratum2Web', serif))
         )
       )
     )
