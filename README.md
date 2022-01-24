@@ -17,19 +17,17 @@
   - You should get gulp-cli, best option is to install it globally
     - ```npm install -g gulp-cli```
 - docker-compose up -d (If using docker)
-
   - wait for the Database to be up ready.
-
     ```shell
     docker-compose logs database --follow
     ```
 
 - Install Drupal
   - http://localhost.oregonstate.edu:8080/install.php
-    - This will default to the OSU install profile. If you need to install
-      Drupal Standard you will have to use drush to install a different profile.
   - Select the OSU Standard Installation profile (should already be used as it's
     a distribution now.)
+    - If you need to install
+      Drupal Standard you will have to use drush to install a different profile.
 - Disable css/js aggregation and page cache.
   - In Web Interface
     - http://localhost.oregonstate.edu:8080/admin/config/development/performance
@@ -55,6 +53,8 @@
   - ```gulp watch```
 - Just build CSS
   - ```gulp buildStyles```
+- Just build JS
+  - ```gulp buildScripts```
 - When logged in, you typically need to run admin -> flush all caches when
   changing template files. This menu shows up under the drupal icon of nice
   menus
