@@ -54,6 +54,7 @@
             "pre-commit": [
                 "vendor/bin/twigcs --twig-version=1",
                 "vendor/bin/phpcbf",
+                "node_modules/gulp-cli/bin/gulp.js",
                 "git add dist"
             ]
         }
