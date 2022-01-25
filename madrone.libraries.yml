@@ -4,6 +4,8 @@ global-styling:
       dist/madrone.css: { }
   js:
     dist/madrone.js: { }
+  dependencies:
+    - core/jquery.once
 
 bootstrap:
   js:
