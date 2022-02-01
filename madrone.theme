@@ -94,8 +94,8 @@ function madrone_preprocess_block(&$variables) {
       }
       if ($variables['base_plugin_id'] == 'system_branding_block') {
         $themeCrestPath = '/' . Drupal::theme()
-            ->getActiveTheme()
-            ->getPath() . '/assets/osu-logo-crest-only.svg';
+          ->getActiveTheme()
+          ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
       }
       $variables['content']['#attributes']['region'] = $region;
@@ -129,7 +129,7 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $form['#attributes']['class'][] = 'container';
       break;
 
-    // For new sections setup some defaults for spacing
+    // For new sections setup some defaults for spacing.
     case 'layout_builder_configure_section':
       $is_new_section = $form['actions']['submit']['#value']->getUntranslatedString() === 'Add section';
       if ($is_new_section) {
@@ -228,4 +228,3 @@ function madrone_theme_suggestions_image_style_alter(array &$suggestions, array 
 function madrone_theme_suggestions_image_alter(array &$suggestions, array $variables) {
   $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['style_name'];
 }
-
