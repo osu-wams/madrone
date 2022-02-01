@@ -48,7 +48,7 @@ We call a macro which calls itself to render the full tree.
             {% set link_title %}{{ link_title }} <span class="caret"></span> {% endset %}
             {% set link_attributes = link_attributes.addClass('dropdown-toggle').setAttribute('data-bs-toggle', 'dropdown') %}
           {% endif %}
-          {{ link(link_title, item.url, link_attributes.addClass('nav-link', 'text-paddletailblack')) }}
+          {{ link(link_title, item.url, link_attributes.addClass('nav-link')) }}
           {% if item.below %}
             {{ menus.menu_links(item.below, attributes.removeCLass('nav'), menu_level + 1, menu_name) }}
           {% endif %}
