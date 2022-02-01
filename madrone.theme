@@ -128,6 +128,26 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     case 'layout_builder_revert_overrides':
       $form['#attributes']['class'][] = 'container';
       break;
+
+    // For new sections setup some defaults for spacing.
+    case 'layout_builder_configure_section':
+      $is_new_section = $form['actions']['submit']['#value']->getUntranslatedString() === 'Add section';
+      if ($is_new_section) {
+        $form['layout_settings']['ui']['tab_content']['layout']['container_type']['#default_value'] = 'container-fluid';
+        $form['layout_settings']['ui']['tab_content']['layout']['remove_gutters']['#default_value'] = 0;
+        $form['layout_settings']['ui']['tab_content']['appearance']['spacing']['padding']['#default_value'] = 2;
+        $form['layout_settings']['ui']['tab_content']['appearance']['spacing']['margin_top']['#default_value'] = 1;
+        $form['layout_settings']['ui']['tab_content']['appearance']['spacing']['margin_bottom']['#default_value'] = 1;
+      }
+      break;
+
+    // For New Blocks.
+    case 'layout_builder_add_block':
+      $form['ui']['tab_content']['appearance']['spacing']['padding_top']['#default_value'] = 1;
+      $form['ui']['tab_content']['appearance']['spacing']['padding_bottom']['#default_value'] = 1;
+      $form['ui']['tab_content']['appearance']['spacing']['margin_bottom']['#default_value'] = 1;
+      break;
+
   }
 }
 
@@ -193,4 +213,18 @@ function madrone_preprocess_menu_local_task(&$variables) {
   if (!empty($variables['element']['#active'])) {
     $variables['link']['#options']['attributes']['class'][] = 'active';
   }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function madrone_theme_suggestions_image_style_alter(array &$suggestions, array $variables) {
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['style_name'];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function madrone_theme_suggestions_image_alter(array &$suggestions, array $variables) {
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['style_name'];
 }
