@@ -11765,20 +11765,22 @@ textarea.form-control-lg {
 
 /** Theme Defaults **/
 h1, .h1 {
+  color: #d73f09;
   font-family: "Stratum2Web", serif;
   font-size: 48px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
   font-family: "Stratum2Web", serif;
   font-size: 36px;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 h3, .h3 {
-  font-family: "Stratum2Web", serif;
+  color: #d73f09;
+  font-family: "Open Sans", sans-serif;
   font-size: 28px;
   font-weight: 500;
 }
@@ -11910,7 +11912,7 @@ blockquote {
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent > a::after {
   color: #000;
-  content: " \f0d7";
+  content: " \f078";
   display: inline-block;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -11934,5 +11936,9 @@ blockquote {
   display: none;
   width: 0;
   height: 0;
+}
+
+.container-fluid .block-page-title-block, .container-sm .block-page-title-block, .container-md .block-page-title-block, .container-lg .block-page-title-block, .container-xl .block-page-title-block, .container-xxl .block-page-title-block {
+  padding-left: 1.5rem;
 }
 /*# sourceMappingURL=madrone.css.map */
