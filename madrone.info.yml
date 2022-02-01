@@ -8,7 +8,7 @@ base theme: stable9
 regions:
   header: Header
   primary_menu: Primary menu
-  secondary_menu: Secondary Menu
+  full_top: Full width below Primary menu
   breadcrumb: Breadcrumb
   highlighted: Highlighted
   help: Help
