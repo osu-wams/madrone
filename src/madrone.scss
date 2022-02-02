@@ -155,29 +155,27 @@ $utilities: map-merge-multiple(
 
 /** Theme Defaults **/
 h1 {
-  //color: rgba($paddletailblack, 1);
+  color: rgba($osuorange, 1);
   font-family: 'Stratum2Web', serif;
   font-size: 48px;
   font-weight: 700;
-}
-
-h2 {
-  //color: rgba($osuorange, 1);
-  font-family: 'Stratum2Web', serif;
-  font-size: 36px;
-  font-weight: 500;
   text-transform: uppercase;
 }
 
-h3 {
-  //color: rgba($paddletailblack, 1);
+h2 {
   font-family: 'Stratum2Web', serif;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+h3 {
+  color: rgba($osuorange, 1);
+  font-family: 'Open Sans', sans-serif;
   font-size: 28px;
   font-weight: 500;
 }
 
 h4 {
-  //color: rgba($osuorange, 1);
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
   font-weight: 600;
@@ -244,6 +242,10 @@ a {
   .layout-builder__message--overrides .messages {
     background-image: none !important;
   }
+}
+
+.container-fluid .block-page-title-block {
+  padding-inline: 1.5rem;
 }
 
 .block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li {

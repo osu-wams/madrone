@@ -11840,6 +11840,10 @@ a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover
   background-image: none !important;
 }
 
+.container-fluid .block-page-title-block, .container-sm .block-page-title-block, .container-md .block-page-title-block, .container-lg .block-page-title-block, .container-xl .block-page-title-block, .container-xxl .block-page-title-block {
+  padding-inline: 1.5rem;
+}
+
 .block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li::marker {
   color: #d73f09;
   content: "\f054   ";
@@ -11920,7 +11924,7 @@ blockquote {
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li ul li.menuparent > a::after {
   color: #000;
-  content: " \f0da";
+  content: " \f054";
   display: inline-block;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -11936,9 +11940,5 @@ blockquote {
   display: none;
   width: 0;
   height: 0;
-}
-
-.container-fluid .block-page-title-block, .container-sm .block-page-title-block, .container-md .block-page-title-block, .container-lg .block-page-title-block, .container-xl .block-page-title-block, .container-xxl .block-page-title-block {
-  padding-left: 1.5rem;
 }
 /*# sourceMappingURL=madrone.css.map */
