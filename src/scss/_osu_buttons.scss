@@ -1,0 +1,9 @@
+// Disable focus box shadows on custom buttons.
+.btn-osu-gray:focus,
+.btn-osu-gray:active:focus,
+.btn-osu-black:focus,
+.btn-osu-black:active:focus,
+.btn-osu-orange:focus,
+.btn-osu-orange:active:focus {
+  box-shadow: none;
+}

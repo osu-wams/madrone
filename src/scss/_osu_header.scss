@@ -1,0 +1,19 @@
+.block-system-branding-block a {
+  @include font-size(1.5rem);
+
+  img {
+    height: 80px;
+  }
+}
+
+.header-search-block-form > div {
+  height: 100%;
+
+  &.form-actions {
+    display: flex;
+    height: 100%;
+    padding: .5em;
+    position: absolute;
+    right: 0;
+  }
+}

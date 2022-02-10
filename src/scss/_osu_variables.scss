@@ -46,11 +46,26 @@ $stratosphere-400: #006a8e;
 $stratosphere-500: #005875;
 $stratosphere-600: #003b5c;
 $stratosphere-700: #002235;
+$table-alt-row: #f9f9f9;
+
+$page-bg-default: $neutral-100;
+$page-bg-alt-1: $bucktoothwhite;
+$page-bg-alt-2: #212529;
+
 $osu-colors-text: (
+  "body": $neutral-700,
   "osuorange": $osuorange,
-  "paddletailblack": $paddletailblack,
   "bucktoothwhite": $bucktoothwhite,
+  "paddletailblack": $paddletailblack,
+  "icon": $neutral-550,
 );
+
+$osu-bg-colors: (
+  "page-default": $page-bg-default,
+  "page-alt-1": $page-bg-alt-1,
+  "page-alt-2": $page-bg-alt-2,
+);
+
 $osu-colors-all: (
   "osuorange": $osuorange,
   "paddletailblack": $paddletailblack,
@@ -101,30 +116,49 @@ $osu-colors-all: (
   "stratosphere-600": $stratosphere-600,
   "stratosphere-700": $stratosphere-700,
 );
-//$primary: $osuorange;
+//$primary: $neutral-700;
+$danger: $lava-400;
+$body-color: $neutral-700;
+$body-bg: $page-bg-default;
+
 // Link Defaults
+$link-color: $body-color;
+$link-decoration: underline $osuorange;
 $nav-link-color: $neutral-700;
 $nav-link-hover-color: $bucktoothwhite;
+
+// Input Updates
+$input-bg: $bucktoothwhite;
+$input-border-color: $neutral-200;
+$input-border-radius: 0px;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-btn-focus-box-shadow: none;
+$input-focus-border-color: $osuorange;
 
 // Pagination defaults
 $pagination-active-bg: $osuorange;
 $pagination-active-border-color: $osuorange;
 $pagination-active-color: $bucktoothwhite;
-
 $pagination-focus-bg: $paddletailblack;
-$pagination-focus-box-shadow: 0 0 0 .25rem rgba($paddletailblack, .25);
 $pagination-focus-color: $bucktoothwhite;
-
 $pagination-hover-bg: $paddletailblack;
 $pagination-hover-color: $bucktoothwhite;
 
-// Change base form component focus color.
-$input-btn-focus-box-shadow: 0 0 0 .25rem rgba($osuorange, .25);
-$input-focus-border-color: $osuorange;
-
+// Form updates.
 $form-check-input-checked-bg-color: $osuorange;
+$form-select-box-shadow: none;
+$form-select-focus-box-shadow: none;
+
+// Disable Box shadows on buttons
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
 
 $font-family-base: 'Open Sans', sans-serif;
 $table-bg: $bucktoothwhite;
-$table-striped-bg: $neutral-100;
+$table-striped-bg: $table-alt-row;
 $table-border-color: $neutral-200;
+
+$breadcrumb-divider: quote("|");
+$breadcrumb-divider-color: $neutral-700;

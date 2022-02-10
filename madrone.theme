@@ -13,7 +13,8 @@ use Drupal\Core\Form\FormStateInterface;
 function madrone_preprocess(&$variables, $hook) {
   // Check if node is set
   // and that it is an instance of Content Entity Interface.
-  /*  if (isset($variables['node']) && $variables['node'] instanceof ContentEntityInterface) {
+  /*  if (isset($variables['node']) && $variables['node']
+  instanceof ContentEntityInterface) {
   $nodeGroups = GroupContent::loadByEntity($variables['node']);
   if (!empty($nodeGroups)) {
   foreach ($nodeGroups as $group) {
@@ -107,6 +108,9 @@ function madrone_preprocess_block(&$variables) {
  * Implements hook_form_alter().
  */
 function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['actions']['submit']) && (count($form['actions'] <= 2))) {
+    $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
+  }
   switch ($form_id) {
     case 'search_block_form':
       $form['keys']['#attributes']['placeholder'] = t('Search');
@@ -115,6 +119,8 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
     case 'search_form':
       $form['basic']['keys']['#attributes']['placeholder'] = t('Search');
+      $form['basic']['submit']['#attributes']['class'][] = 'button--primary';
+      $form['advanced']['submit']['#attributes']['class'][] = 'button--primary';
       break;
 
     case 'entity_view_display_layout_builder_form':

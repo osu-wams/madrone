@@ -1,0 +1,11 @@
+@include table-variant('osuorange', $osuorange);
+table {
+  @extend .table;
+  @extend .table-bordered;
+  @extend .table-hover;
+  @extend .table-striped;
+
+  thead {
+    @extend .table-dark;
+  }
+}

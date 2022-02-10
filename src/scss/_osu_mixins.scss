@@ -1,0 +1,42 @@
+/** Custom Mixins **/
+.btn-osu-gray {
+  @include button-variant(
+      $neutral-300,
+      $neutral-300,
+      $body-color,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $bucktoothwhite,
+      $osuorange,
+      $body-color
+  );
+}
+
+.btn-osu-black {
+  @include button-variant(
+      $paddletailblack,
+      $paddletailblack,
+      $bucktoothwhite,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $paddletailblack,
+      $osuorange,
+      $bucktoothwhite
+  );
+}
+
+.btn-osu-orange {
+  @include button-variant(
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $paddletailblack,
+      $paddletailblack,
+      $bucktoothwhite,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite
+  );
+}

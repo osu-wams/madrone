@@ -65,6 +65,11 @@ $utilities: map-merge-multiple(
                 $osu-colors-text
             )
           )
+      ),
+      "osu-text-colors": (
+        property: color,
+        class: osu-text,
+        values: $osu-colors-text
       )
     ),
     (
@@ -76,6 +81,11 @@ $utilities: map-merge-multiple(
             $osu-colors-all,
             ("transparent": transparent)
         )
+      ),
+      "osu-background-color": (
+        property: background-color,
+        class: osu-bg,
+        values: $osu-bg-colors,
       )
     ),
     (
@@ -100,50 +110,8 @@ $utilities: map-merge-multiple(
     )
 );
 
-
 @import "../node_modules/bootstrap/scss/bootstrap";
-/** Custom Mixins **/
-.btn-osu-gray {
-  @include button-variant(
-      $neutral-300,
-      $neutral-300,
-      $paddletailblack,
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite,
-      $bucktoothwhite,
-      $osuorange,
-      $paddletailblack
-  );
-}
-
-.btn-osu-black {
-  @include button-variant(
-      $paddletailblack,
-      $paddletailblack,
-      $bucktoothwhite,
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite,
-      $paddletailblack,
-      $osuorange,
-      $bucktoothwhite
-  );
-}
-
-.btn-osu-orange {
-  @include button-variant(
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite,
-      $paddletailblack,
-      $paddletailblack,
-      $bucktoothwhite,
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite
-  );
-}
+@import "scss/osu_mixins";
 
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
@@ -151,21 +119,19 @@ $utilities: map-merge-multiple(
   --bs-gutter-y: 0;
 }
 
-@include table-variant('osuorange', $osuorange);
-
 /** Theme Defaults **/
 h1 {
   color: rgba($osuorange, 1);
   font-family: 'Stratum2Web', serif;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: 'Stratum2Web', serif;
   font-size: 36px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h3 {
@@ -182,32 +148,26 @@ h4 {
 }
 
 h5 {
-  //color: rgba($paddletailblack, 1);
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
 
 h6 {
-  //color: rgba($osuorange, 1);
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: 600;
 }
 
-.block-system-branding-block a {
-  @include font-size(1.5rem);
-
-  img {
-    height: 80px;
-  }
-}
 
 a {
-  color: $stratosphere-400;
+  color: $body-color;
+  text-decoration-color: $osuorange;
+  text-decoration-thickness: 13%;
 
   &:hover {
-    color: $stratosphere-600;
+    color: $body-color;
+    text-decoration-color: $osuorange;
   }
 
   &.nav-link:hover,
@@ -224,24 +184,9 @@ a {
   }
 }
 
-.header-search-block-form > div {
-  height: 100%;
-
-  &.form-actions {
-    display: flex;
-    height: 100%;
-    padding: .5em;
-    position: absolute;
-    right: 0;
-  }
-}
-
-.layout-builder-form {
-
-  .layout-builder__message .messages,
-  .layout-builder__message--overrides .messages {
-    background-image: none !important;
-  }
+.osu-bg-page-alt-2 a:not(.layout-builder__link--add) {
+  color: $bucktoothwhite;
+  text-decoration-color: $bucktoothwhite;
 }
 
 .container-fluid .block-page-title-block {
@@ -252,7 +197,7 @@ a {
 
   &::marker {
     color: $osuorange;
-    content: '\f054   ';
+    content: '\f054  ';
     display: inline-block;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -271,18 +216,16 @@ em.placeholder {
 
 blockquote {
   border: 5px solid $neutral-200;
-  padding: 1.5em 2em;
+  padding: 2.5em 3.75em;
+  font-family: 'Georgia', 'DejaVu Serif', serif;
 }
 
-table {
-  @extend .table;
-  @extend .table-bordered;
-  @extend .table-hover;
-  @extend .table-striped;
-
-  thead {
-    @extend .table-dark;
-  }
+.node-preview-container {
+  background-color: $bucktoothwhite;
 }
 
+@import "scss/osu_header";
 @import "scss/superfish";
+@import "scss/osu_forms";
+@import "scss/osu_buttons";
+@import "scss/osu_tables";
