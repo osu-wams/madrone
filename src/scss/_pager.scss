@@ -1,0 +1,9 @@
+nav.pager {
+  ul.pager__items {
+    gap: 0.5em;
+
+    li.pager__item a {
+      border-radius: 5px;
+    }
+  }
+}

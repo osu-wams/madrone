@@ -4854,10 +4854,10 @@ textarea.form-control-lg {
 .page-link {
   position: relative;
   display: block;
-  color: #423e3c;
+  color: #d73f09;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #dee2e6;
+  border: 1px solid #d73f09;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4868,13 +4868,13 @@ textarea.form-control-lg {
 .page-link:hover {
   z-index: 2;
   color: #fff;
-  background-color: #000;
-  border-color: #dee2e6;
+  background-color: #d73f09;
+  border-color: #d73f09;
 }
 .page-link:focus {
   z-index: 3;
   color: #fff;
-  background-color: #000;
+  background-color: #d73f09;
   outline: 0;
   box-shadow: none;
 }
@@ -4889,10 +4889,10 @@ textarea.form-control-lg {
   border-color: #d73f09;
 }
 .page-item.disabled .page-link {
-  color: #6c757d;
+  color: #423e3c;
   pointer-events: none;
-  background-color: #fff;
-  border-color: #dee2e6;
+  background-color: #e9e5e4;
+  border-color: #d4cfcd;
 }
 
 .page-link {
@@ -4900,12 +4900,12 @@ textarea.form-control-lg {
 }
 
 .page-item:first-child .page-link {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .page-item:last-child .page-link {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .pagination-lg .page-link {
@@ -11786,6 +11786,38 @@ textarea.form-control-lg {
   border-color: #d73f09;
 }
 
+.osu-min-h-100 {
+  min-height: 100px;
+}
+
+.osu-min-h-200 {
+  min-height: 200px;
+}
+
+.osu-min-h-300 {
+  min-height: 300px;
+}
+
+.osu-min-h-400 {
+  min-height: 400px;
+}
+
+.osu-min-h-500 {
+  min-height: 500px;
+}
+
+.osu-min-h-600 {
+  min-height: 600px;
+}
+
+.osu-min-h-700 {
+  min-height: 700px;
+}
+
+.osu-min-h-800 {
+  min-height: 800px;
+}
+
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
@@ -11996,6 +12028,13 @@ select option:checked {
 .layout-builder-form .layout-builder__message .messages,
 .layout-builder-form .layout-builder__message--overrides .messages {
   background-image: none !important;
+}
+
+nav.pager ul.pager__items {
+  gap: 0.5em;
+}
+nav.pager ul.pager__items li.pager__item a {
+  border-radius: 5px;
 }
 
 .btn-osu-gray:focus, a.button:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:focus,

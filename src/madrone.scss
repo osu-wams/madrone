@@ -112,6 +112,7 @@ $utilities: map-merge-multiple(
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "scss/osu_mixins";
+@import "scss/osu_utilities";
 
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
@@ -227,5 +228,6 @@ blockquote {
 @import "scss/osu_header";
 @import "scss/superfish";
 @import "scss/osu_forms";
+@import "scss/pager";
 @import "scss/osu_buttons";
 @import "scss/osu_tables";
