@@ -1,0 +1,23 @@
+.form-item {
+  .form-label.form-required::after {
+    content: '*';
+    color: $lava-400;
+    position: relative;
+    left: .5em;
+  }
+
+  & > .required:focus {
+    border-color: $lava-400;
+  }
+}
+select {
+  option:checked {
+    background-color: $neutral-200;
+  }
+}
+.layout-builder-form {
+  .layout-builder__message .messages,
+  .layout-builder__message--overrides .messages {
+    background-image: none !important;
+  }
+}
