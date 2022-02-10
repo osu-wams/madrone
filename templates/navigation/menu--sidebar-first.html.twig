@@ -51,7 +51,7 @@ We call a macro which calls itself to render the full tree.
         item.in_active_trail ? 'nav-item active' : 'nav-item',
       ] %}
       <li{{ item.attributes.addCLass(li_classes) }}>
-        {{ link(item.title, item.url, item.attributes.addClass('nav-link', 'text-paddletailblack').removeClass(li_classes)) }}
+        {{ link(item.title, item.url, item.attributes.addClass('nav-link', 'osu-text-body').removeClass(li_classes)) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
         {% endif %}

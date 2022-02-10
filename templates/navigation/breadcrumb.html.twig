@@ -14,7 +14,7 @@
     {% for item in breadcrumb %}
       <li class="breadcrumb-item">
         {% if item.url %}
-          <a class="text-paddletailblack" href="{{ item.url }}">{{ item.text }}</a>
+          <a class="osu-text-body" href="{{ item.url }}">{{ item.text }}</a>
         {% else %}
           {{ item.text }}
         {% endif %}
