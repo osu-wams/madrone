@@ -77,7 +77,6 @@ $utilities: map-merge-multiple(
         property: background-color,
         class: bg,
         values: map-merge-multiple(
-            $utilities-bg-colors,
             $osu-colors-all,
             ("transparent": transparent)
         )
@@ -85,7 +84,11 @@ $utilities: map-merge-multiple(
       "osu-background-color": (
         property: background-color,
         class: osu-bg,
-        values: $osu-bg-colors,
+        values: map-merge-multiple(
+            $osu-bg-colors,
+            ("menu": $neutral-200),
+            ("transparent": transparent)
+        ),
       )
     ),
     (
@@ -112,6 +115,7 @@ $utilities: map-merge-multiple(
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "scss/osu_mixins";
+@import "scss/osu_utilities";
 
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
@@ -162,12 +166,12 @@ h6 {
 
 a {
   color: $body-color;
-  text-decoration-color: $osuorange;
+  text-decoration-color: rgba($osuorange, 1);
   text-decoration-thickness: 13%;
 
   &:hover {
     color: $body-color;
-    text-decoration-color: $osuorange;
+    text-decoration-color: rgba($osuorange, 1);
   }
 
   &.nav-link:hover,
@@ -196,7 +200,7 @@ a {
 .block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li {
 
   &::marker {
-    color: $osuorange;
+    color: rgba($osuorange, 1);
     content: '\f054  ';
     display: inline-block;
     font-family: "Font Awesome 5 Free";
@@ -227,5 +231,7 @@ blockquote {
 @import "scss/osu_header";
 @import "scss/superfish";
 @import "scss/osu_forms";
+@import "scss/pager";
 @import "scss/osu_buttons";
+@import "scss/osu_messages";
 @import "scss/osu_tables";

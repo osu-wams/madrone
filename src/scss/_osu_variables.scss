@@ -66,6 +66,17 @@ $osu-bg-colors: (
   "page-alt-2": $page-bg-alt-2,
 );
 
+$osu-border-colors: (
+  "neutral": $neutral-100,
+  "white": $bucktoothwhite,
+  "dark": $page-bg-alt-2,
+  "osu": $osuorange,
+  "pine": $pine-400,
+  "rogue-wave": $rogue_wave-400,
+  "luminance": $luminance-400,
+  "stratosphere": $stratosphere-400,
+);
+
 $osu-colors-all: (
   "osuorange": $osuorange,
   "paddletailblack": $paddletailblack,
@@ -136,14 +147,25 @@ $input-focus-box-shadow: none;
 $input-btn-focus-box-shadow: none;
 $input-focus-border-color: $osuorange;
 
-// Pagination defaults
+// Pagination settings.
+$pagination-bg: $bucktoothwhite;
+$pagination-color: $osuorange;
+$pagination-border-color: $osuorange;
+$pagination-border-width: 1px;
+$pagination-border-radius: 5px;
 $pagination-active-bg: $osuorange;
 $pagination-active-border-color: $osuorange;
 $pagination-active-color: $bucktoothwhite;
-$pagination-focus-bg: $paddletailblack;
+$pagination-focus-bg: $osuorange;
+$pagination-focus-box-shadow: none;
 $pagination-focus-color: $bucktoothwhite;
-$pagination-hover-bg: $paddletailblack;
+$pagination-hover-bg: $osuorange;
+$pagination-hover-border-color: $osuorange;
 $pagination-hover-color: $bucktoothwhite;
+$pagination-disabled-bg: $neutral-200;
+$pagination-disabled-color: $body-color;
+$pagination-disabled-border-color: $neutral-300;
+
 
 // Form updates.
 $form-check-input-checked-bg-color: $osuorange;
