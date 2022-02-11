@@ -8010,50 +8010,6 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
 }
 
-.bg-primary {
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-secondary {
-  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-success {
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-info {
-  background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-warning {
-  background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-danger {
-  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-light {
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-dark {
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-black {
-  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-white {
-  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-body {
-  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
-}
-
 .bg-osuorange {
   background-color: #d73f09 !important;
 }
@@ -8380,6 +8336,14 @@ textarea.form-control-lg {
 
 .osu-bg-page-alt-2 {
   background-color: #212529 !important;
+}
+
+.osu-bg-menu {
+  background-color: #e9e5e4 !important;
+}
+
+.osu-bg-transparent {
+  background-color: transparent !important;
 }
 
 @media (min-width: 576px) {
@@ -11786,6 +11750,33 @@ textarea.form-control-lg {
   border-color: #d73f09;
 }
 
+.osu-alert-success {
+  color: #fff;
+  background-color: #4a773c;
+  border-color: #4a773c;
+}
+.osu-alert-success .alert-link {
+  color: #cccccc;
+}
+
+.osu-alert-warning {
+  color: #423e3c;
+  background-color: #ffb500;
+  border-color: #ffb500;
+}
+.osu-alert-warning .alert-link {
+  color: #353230;
+}
+
+.osu-alert-danger {
+  color: #fff;
+  background-color: #c72127;
+  border-color: #c72127;
+}
+.osu-alert-danger .alert-link {
+  color: #cccccc;
+}
+
 .osu-min-h-100 {
   min-height: 100px;
 }
@@ -11816,6 +11807,166 @@ textarea.form-control-lg {
 
 .osu-min-h-800 {
   min-height: 800px;
+}
+
+.osu-border-neutral {
+  border-color: #f7f5f5 !important;
+}
+
+.osu-border-neutral-left {
+  border-left-color: #f7f5f5 !important;
+}
+
+.osu-border-neutral-top {
+  border-top-color: #f7f5f5 !important;
+}
+
+.osu-border-neutral-right {
+  border-right-color: #f7f5f5 !important;
+}
+
+.osu-border-neutral-bottom {
+  border-bottom-color: #f7f5f5 !important;
+}
+
+.osu-border-white {
+  border-color: #fff !important;
+}
+
+.osu-border-white-left {
+  border-left-color: #fff !important;
+}
+
+.osu-border-white-top {
+  border-top-color: #fff !important;
+}
+
+.osu-border-white-right {
+  border-right-color: #fff !important;
+}
+
+.osu-border-white-bottom {
+  border-bottom-color: #fff !important;
+}
+
+.osu-border-dark {
+  border-color: #212529 !important;
+}
+
+.osu-border-dark-left {
+  border-left-color: #212529 !important;
+}
+
+.osu-border-dark-top {
+  border-top-color: #212529 !important;
+}
+
+.osu-border-dark-right {
+  border-right-color: #212529 !important;
+}
+
+.osu-border-dark-bottom {
+  border-bottom-color: #212529 !important;
+}
+
+.osu-border-osu {
+  border-color: #d73f09 !important;
+}
+
+.osu-border-osu-left {
+  border-left-color: #d73f09 !important;
+}
+
+.osu-border-osu-top {
+  border-top-color: #d73f09 !important;
+}
+
+.osu-border-osu-right {
+  border-right-color: #d73f09 !important;
+}
+
+.osu-border-osu-bottom {
+  border-bottom-color: #d73f09 !important;
+}
+
+.osu-border-pine {
+  border-color: #4a773c !important;
+}
+
+.osu-border-pine-left {
+  border-left-color: #4a773c !important;
+}
+
+.osu-border-pine-top {
+  border-top-color: #4a773c !important;
+}
+
+.osu-border-pine-right {
+  border-right-color: #4a773c !important;
+}
+
+.osu-border-pine-bottom {
+  border-bottom-color: #4a773c !important;
+}
+
+.osu-border-rogue-wave {
+  border-color: #00859b !important;
+}
+
+.osu-border-rogue-wave-left {
+  border-left-color: #00859b !important;
+}
+
+.osu-border-rogue-wave-top {
+  border-top-color: #00859b !important;
+}
+
+.osu-border-rogue-wave-right {
+  border-right-color: #00859b !important;
+}
+
+.osu-border-rogue-wave-bottom {
+  border-bottom-color: #00859b !important;
+}
+
+.osu-border-luminance {
+  border-color: #ffb500 !important;
+}
+
+.osu-border-luminance-left {
+  border-left-color: #ffb500 !important;
+}
+
+.osu-border-luminance-top {
+  border-top-color: #ffb500 !important;
+}
+
+.osu-border-luminance-right {
+  border-right-color: #ffb500 !important;
+}
+
+.osu-border-luminance-bottom {
+  border-bottom-color: #ffb500 !important;
+}
+
+.osu-border-stratosphere {
+  border-color: #006a8e !important;
+}
+
+.osu-border-stratosphere-left {
+  border-left-color: #006a8e !important;
+}
+
+.osu-border-stratosphere-top {
+  border-top-color: #006a8e !important;
+}
+
+.osu-border-stratosphere-right {
+  border-right-color: #006a8e !important;
+}
+
+.osu-border-stratosphere-bottom {
+  border-bottom-color: #006a8e !important;
 }
 
 /** Bootstrap v4 shim class for layout builder. */
@@ -12044,6 +12195,10 @@ nav.pager ul.pager__items li.pager__item a {
 .btn-osu-orange:focus,
 .btn-osu-orange:active:focus {
   box-shadow: none;
+}
+
+.messages.messages--status.osu-alert-success a {
+  color: #fff;
 }
 
 .table-osuorange {

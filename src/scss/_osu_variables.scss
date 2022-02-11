@@ -66,6 +66,17 @@ $osu-bg-colors: (
   "page-alt-2": $page-bg-alt-2,
 );
 
+$osu-border-colors: (
+  "neutral": $neutral-100,
+  "white": $bucktoothwhite,
+  "dark": $page-bg-alt-2,
+  "osu": $osuorange,
+  "pine": $pine-400,
+  "rogue-wave": $rogue_wave-400,
+  "luminance": $luminance-400,
+  "stratosphere": $stratosphere-400,
+);
+
 $osu-colors-all: (
   "osuorange": $osuorange,
   "paddletailblack": $paddletailblack,
