@@ -9,18 +9,15 @@
   }
 
   ul {
-    background-color: $neutral-100;
-
     &.sf-menu {
       line-height: 1.75rem;
 
       &.sf-horizontal {
         @extend .nav;
-        @extend .gap-1;
 
         li {
           ul {
-            border-radius: 5px;
+            background-color: $bucktoothwhite;
 
             li {
               padding: .5rem;
@@ -48,22 +45,55 @@
         float: none;
         @extend .nav-item;
 
-        &.sf-depth-1.menuparent > a::after {
-          color: $paddletailblack;
-          content: '\2000\f078';
-          display: inline-block;
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          letter-spacing: normal;
+        // chevron top level
+        &.sf-depth-1.menuparent {
+          &.sfHover > a {
+            background-color: $bucktoothwhite;
+          }
+          &> a::after {
+            color: $neutral-700;
+            content: '\2000\f078';
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            letter-spacing: normal;
+            font-size: 12px;
+          }
         }
 
-        ul li.menuparent > a::after {
-          color: $paddletailblack;
-          content: '\2000\f054';
-          display: inline-block;
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          letter-spacing: normal;
+        // chevron lower levels
+        ul li:not(.sf-depth-1) {
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: $osuorange;
+            > a {
+              color: $bucktoothwhite;
+            }
+            a.menuparent::after {
+              color: $bucktoothwhite;
+            }
+          }
+          a.menuparent::after {
+            color: $neutral-700;
+            content: '\2000\f054';
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            letter-spacing: normal;
+            font-size: 12px;
+            float: right;
+          }
+        }
+
+        a:not(.sf-depth-1) {
+          @extend .nav-link;
+
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: transparent;
+          }
         }
 
         a {
@@ -72,14 +102,8 @@
           &:hover,
           &:active,
           &:focus {
-            &::after {
-              color: $bucktoothwhite !important;
-            }
-          }
-
-          &.is-active {
-            @extend .fw-bold;
-            border-bottom: 2px solid $osuorange;
+            background-color: $bucktoothwhite;
+            color: $neutral-700;
           }
 
           span.sf-sub-indicator {
