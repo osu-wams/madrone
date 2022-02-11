@@ -108,7 +108,7 @@ function madrone_preprocess_block(&$variables) {
  * Implements hook_form_alter().
  */
 function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (isset($form['actions']['submit']) && (count($form['actions'] <= 2))) {
+  if (isset($form['actions']['submit']) && (count($form['actions'])) <= 2) {
     $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
   }
   switch ($form_id) {
@@ -133,6 +133,10 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
     case 'layout_builder_revert_overrides':
       $form['#attributes']['class'][] = 'container';
+      break;
+
+    case 'views_exposed_form':
+      $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
       break;
 
     // For new sections setup some defaults for spacing.
