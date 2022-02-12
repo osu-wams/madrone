@@ -2998,9 +2998,9 @@ textarea.form-control-lg {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 3rem;
   font-size: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 50rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3473,15 +3473,15 @@ textarea.form-control-lg {
 }
 
 .btn-lg, .btn-group-lg > .btn, .madrone-primary-menu > .block-superfish .sf-accordion-toggle.btn-group-lg > a, .btn-group-lg > a.button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 3rem;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 50rem;
 }
 
 .btn-sm, .btn-group-sm > .btn, .madrone-primary-menu > .block-superfish .sf-accordion-toggle.btn-group-sm > a, .btn-group-sm > a.button {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 3rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 50rem;
 }
 
 .fade {
@@ -3909,8 +3909,8 @@ textarea.form-control-lg {
 }
 
 .dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
+  padding-right: 2.25rem;
+  padding-left: 2.25rem;
 }
 .dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
   margin-left: 0;
@@ -3920,13 +3920,13 @@ textarea.form-control-lg {
 }
 
 .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .madrone-primary-menu > .block-superfish .sf-accordion-toggle.btn-group-sm > a + .dropdown-toggle-split, .btn-group-sm > a.button + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
+  padding-right: 2.25rem;
+  padding-left: 2.25rem;
 }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .madrone-primary-menu > .block-superfish .sf-accordion-toggle.btn-group-lg > a + .dropdown-toggle-split, .btn-group-lg > a.button + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding-right: 2.25rem;
+  padding-left: 2.25rem;
 }
 
 .btn-group-vertical {
@@ -4131,7 +4131,7 @@ textarea.form-control-lg {
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 50rem;
   transition: box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -6915,7 +6915,7 @@ textarea.form-control-lg {
 }
 
 .border-paddletailblack {
-  border-color: #000 !important;
+  border-color: #212529 !important;
 }
 
 .border-bucktoothwhite {
@@ -7984,11 +7984,6 @@ textarea.form-control-lg {
   color: #fff !important;
 }
 
-.text-paddletailblack {
-  --bs-text-opacity: 1;
-  color: #000 !important;
-}
-
 .text-icon {
   --bs-text-opacity: 1;
   color: #7b746f !important;
@@ -8015,7 +8010,7 @@ textarea.form-control-lg {
 }
 
 .bg-paddletailblack {
-  background-color: #000 !important;
+  background-color: #212529 !important;
 }
 
 .bg-bucktoothwhite {
@@ -8316,10 +8311,6 @@ textarea.form-control-lg {
 
 .osu-text-bucktoothwhite {
   color: #fff !important;
-}
-
-.osu-text-paddletailblack {
-  color: #000 !important;
 }
 
 .osu-text-icon {
@@ -11660,94 +11651,94 @@ textarea.form-control-lg {
   }
 }
 /** Custom Mixins **/
-.btn-osu-gray, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a, a.button {
+.osu-btn-primary, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a, a.button {
+  color: #fff;
+  background-color: #d73f09;
+  border-color: #d73f09;
+}
+.osu-btn-primary:hover, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:hover, a.button:hover {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+.btn-check:focus + .osu-btn-primary, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:focus + a, .btn-check:focus + a.button, .osu-btn-primary:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:focus, a.button:focus {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+  box-shadow: 0 0 0 0.25rem rgba(221, 92, 46, 0.5);
+}
+.btn-check:checked + .osu-btn-primary, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:checked + a, .btn-check:checked + a.button, .btn-check:active + .osu-btn-primary, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:active + a, .btn-check:active + a.button, .osu-btn-primary:active, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:active, a.button:active, .osu-btn-primary.active, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a.active, a.active.button, .show > .osu-btn-primary.dropdown-toggle, .madrone-primary-menu > .block-superfish .sf-accordion-toggle.show > a.dropdown-toggle, .show > a.dropdown-toggle.button {
+  color: #fff;
+  background-color: #d73f09;
+  border-color: #d73f09;
+}
+.btn-check:checked + .osu-btn-primary:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:checked + a:focus, .btn-check:checked + a.button:focus, .btn-check:active + .osu-btn-primary:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:active + a:focus, .btn-check:active + a.button:focus, .osu-btn-primary:active:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:active:focus, a.button:active:focus, .osu-btn-primary.active:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a.active:focus, a.active.button:focus, .show > .osu-btn-primary.dropdown-toggle:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle.show > a.dropdown-toggle:focus, .show > a.dropdown-toggle.button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(221, 92, 46, 0.5);
+}
+.osu-btn-primary:disabled, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:disabled, a.button:disabled, .osu-btn-primary.disabled, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a.disabled, a.disabled.button {
+  color: #fff;
+  background-color: #d73f09;
+  border-color: #d73f09;
+}
+
+.osu-btn-light {
   color: #423e3c;
-  background-color: #d4cfcd;
-  border-color: #d4cfcd;
+  background-color: #f7f5f5;
+  border-color: #f7f5f5;
 }
-.btn-osu-gray:hover, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:hover, a.button:hover {
+.osu-btn-light:hover {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
 }
-.btn-check:focus + .btn-osu-gray, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:focus + a, .btn-check:focus + a.button, .btn-osu-gray:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:focus, a.button:focus {
+.btn-check:focus + .osu-btn-light, .osu-btn-light:focus {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
-  box-shadow: 0 0 0 0.25rem rgba(190, 185, 183, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(220, 218, 217, 0.5);
 }
-.btn-check:checked + .btn-osu-gray, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:checked + a, .btn-check:checked + a.button, .btn-check:active + .btn-osu-gray, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:active + a, .btn-check:active + a.button, .btn-osu-gray:active, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:active, a.button:active, .btn-osu-gray.active, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a.active, a.active.button, .show > .btn-osu-gray.dropdown-toggle, .madrone-primary-menu > .block-superfish .sf-accordion-toggle.show > a.dropdown-toggle, .show > a.dropdown-toggle.button {
+.btn-check:checked + .osu-btn-light, .btn-check:active + .osu-btn-light, .osu-btn-light:active, .osu-btn-light.active, .show > .osu-btn-light.dropdown-toggle {
   color: #423e3c;
   background-color: #fff;
   border-color: #d73f09;
 }
-.btn-check:checked + .btn-osu-gray:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:checked + a:focus, .btn-check:checked + a.button:focus, .btn-check:active + .btn-osu-gray:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > .btn-check:active + a:focus, .btn-check:active + a.button:focus, .btn-osu-gray:active:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:active:focus, a.button:active:focus, .btn-osu-gray.active:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a.active:focus, a.active.button:focus, .show > .btn-osu-gray.dropdown-toggle:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle.show > a.dropdown-toggle:focus, .show > a.dropdown-toggle.button:focus {
-  box-shadow: 0 0 0 0.25rem rgba(190, 185, 183, 0.5);
+.btn-check:checked + .osu-btn-light:focus, .btn-check:active + .osu-btn-light:focus, .osu-btn-light:active:focus, .osu-btn-light.active:focus, .show > .osu-btn-light.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 218, 217, 0.5);
 }
-.btn-osu-gray:disabled, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:disabled, a.button:disabled, .btn-osu-gray.disabled, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a.disabled, a.disabled.button {
+.osu-btn-light:disabled, .osu-btn-light.disabled {
   color: #000;
-  background-color: #d4cfcd;
-  border-color: #d4cfcd;
+  background-color: #f7f5f5;
+  border-color: #f7f5f5;
 }
 
-.btn-osu-black {
+.osu-btn-dark {
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #212529;
+  border-color: #212529;
 }
-.btn-osu-black:hover {
-  color: #fff;
-  background-color: #d73f09;
-  border-color: #d73f09;
-}
-.btn-check:focus + .btn-osu-black, .btn-osu-black:focus {
-  color: #fff;
-  background-color: #d73f09;
-  border-color: #d73f09;
-  box-shadow: 0 0 0 0.25rem rgba(38, 38, 38, 0.5);
-}
-.btn-check:checked + .btn-osu-black, .btn-check:active + .btn-osu-black, .btn-osu-black:active, .btn-osu-black.active, .show > .btn-osu-black.dropdown-toggle {
-  color: #fff;
-  background-color: #000;
-  border-color: #d73f09;
-}
-.btn-check:checked + .btn-osu-black:focus, .btn-check:active + .btn-osu-black:focus, .btn-osu-black:active:focus, .btn-osu-black.active:focus, .show > .btn-osu-black.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(38, 38, 38, 0.5);
-}
-.btn-osu-black:disabled, .btn-osu-black.disabled {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-}
-
-.btn-osu-orange {
+.osu-btn-dark:hover {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
 }
-.btn-osu-orange:hover {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-}
-.btn-check:focus + .btn-osu-orange, .btn-osu-orange:focus {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-  box-shadow: 0 0 0 0.25rem rgba(221, 92, 46, 0.5);
-}
-.btn-check:checked + .btn-osu-orange, .btn-check:active + .btn-osu-orange, .btn-osu-orange:active, .btn-osu-orange.active, .show > .btn-osu-orange.dropdown-toggle {
+.btn-check:focus + .osu-btn-dark, .osu-btn-dark:focus {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
+  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
 }
-.btn-check:checked + .btn-osu-orange:focus, .btn-check:active + .btn-osu-orange:focus, .btn-osu-orange:active:focus, .btn-osu-orange.active:focus, .show > .btn-osu-orange.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(221, 92, 46, 0.5);
-}
-.btn-osu-orange:disabled, .btn-osu-orange.disabled {
+.btn-check:checked + .osu-btn-dark, .btn-check:active + .osu-btn-dark, .osu-btn-dark:active, .osu-btn-dark.active, .show > .osu-btn-dark.dropdown-toggle {
   color: #fff;
-  background-color: #d73f09;
+  background-color: #212529;
   border-color: #d73f09;
+}
+.btn-check:checked + .osu-btn-dark:focus, .btn-check:active + .osu-btn-dark:focus, .osu-btn-dark:active:focus, .osu-btn-dark.active:focus, .show > .osu-btn-dark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+}
+.osu-btn-dark:disabled, .osu-btn-dark.disabled {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
 }
 
 .osu-alert-success {
@@ -12135,7 +12126,7 @@ blockquote {
   float: none;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent > a::after {
-  color: #000;
+  color: #212529;
   content: " \f078";
   display: inline-block;
   font-family: "Font Awesome 5 Free";
@@ -12143,7 +12134,7 @@ blockquote {
   letter-spacing: normal;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li ul li.menuparent > a::after {
-  color: #000;
+  color: #212529;
   content: " \f054";
   display: inline-block;
   font-family: "Font Awesome 5 Free";
@@ -12188,12 +12179,14 @@ nav.pager ul.pager__items li.pager__item a {
   border-radius: 5px;
 }
 
-.btn-osu-gray:focus, a.button:focus, .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:focus,
-.btn-osu-gray:active:focus,
-.btn-osu-black:focus,
-.btn-osu-black:active:focus,
-.btn-osu-orange:focus,
-.btn-osu-orange:active:focus {
+.osu-btn-light:focus,
+.osu-btn-light:active:focus,
+.osu-btn-dark:focus,
+.osu-btn-dark:active:focus,
+.osu-btn-primary:focus,
+a.button:focus,
+.madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:focus,
+.osu-btn-primary:active:focus {
   box-shadow: none;
 }
 

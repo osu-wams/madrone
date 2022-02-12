@@ -1,8 +1,22 @@
 /** Custom Mixins **/
-.btn-osu-gray {
+.osu-btn-primary {
   @include button-variant(
-      $neutral-300,
-      $neutral-300,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $paddletailblack,
+      $paddletailblack,
+      $bucktoothwhite,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite
+  );
+}
+
+.osu-btn-light {
+  @include button-variant(
+      $neutral-100,
+      $neutral-100,
       $body-color,
       $osuorange,
       $osuorange,
@@ -13,7 +27,7 @@
   );
 }
 
-.btn-osu-black {
+.osu-btn-dark {
   @include button-variant(
       $paddletailblack,
       $paddletailblack,
@@ -27,19 +41,7 @@
   );
 }
 
-.btn-osu-orange {
-  @include button-variant(
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite,
-      $paddletailblack,
-      $paddletailblack,
-      $bucktoothwhite,
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite
-  );
-}
+
 
 .osu-alert-success {
   @include alert-variant($pine-400, $pine-400, $bucktoothwhite);
