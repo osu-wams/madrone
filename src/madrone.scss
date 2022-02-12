@@ -228,6 +228,10 @@ blockquote {
   background-color: $bucktoothwhite;
 }
 
+.osu-opacity-90 {
+  opacity: .9;
+}
+
 @import "scss/osu_header";
 @import "scss/superfish";
 @import "scss/osu_forms";
