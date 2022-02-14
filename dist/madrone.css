@@ -3965,7 +3965,7 @@ textarea.form-control-lg {
   list-style: none;
 }
 
-.nav-link, .madrone-primary-menu > .block-superfish ul.sf-menu li a {
+.nav-link, .madrone-primary-menu > .block-superfish ul.sf-menu li a, .madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1) {
   display: block;
   padding: 0.5rem 1rem;
   color: #423e3c;
@@ -3973,7 +3973,7 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .nav-link, .madrone-primary-menu > .block-superfish ul.sf-menu li a {
+  .nav-link, .madrone-primary-menu > .block-superfish ul.sf-menu li a, .madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1) {
     transition: none;
   }
 }
@@ -7238,7 +7238,7 @@ textarea.form-control-lg {
   gap: 0 !important;
 }
 
-.gap-1, .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal {
+.gap-1 {
   gap: 0.25rem !important;
 }
 
@@ -7824,7 +7824,7 @@ textarea.form-control-lg {
   font-weight: 400 !important;
 }
 
-.fw-bold, .madrone-primary-menu > .block-superfish ul.sf-menu li a.is-active {
+.fw-bold {
   font-weight: 700 !important;
 }
 
@@ -12087,14 +12087,11 @@ blockquote {
   right: 0;
 }
 
-.madrone-primary-menu > .block-superfish ul {
-  background-color: #f7f5f5;
-}
 .madrone-primary-menu > .block-superfish ul.sf-menu {
   line-height: 1.75rem;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li ul {
-  border-radius: 5px;
+  background-color: #fff;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li ul li {
   padding: 0.5rem;
@@ -12134,27 +12131,44 @@ blockquote {
 .madrone-primary-menu > .block-superfish ul.sf-menu li {
   float: none;
 }
+.madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent.sfHover > a {
+  background-color: #fff;
+}
 .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent > a::after {
-  color: #000;
+  color: #423e3c;
   content: " \f078";
   display: inline-block;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   letter-spacing: normal;
+  font-size: 12px;
 }
-.madrone-primary-menu > .block-superfish ul.sf-menu li ul li.menuparent > a::after {
-  color: #000;
+.madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):hover, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus {
+  background-color: #d73f09;
+}
+.madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):hover > a, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active > a, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus > a {
+  color: #fff;
+  transition: none !important;
+}
+.madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):hover > a.menuparent::after, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active > a.menuparent::after, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus > a.menuparent::after {
+  color: #fff;
+}
+.madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1) a.menuparent::after {
+  color: #423e3c;
   content: " \f054";
   display: inline-block;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   letter-spacing: normal;
+  font-size: 12px;
+  float: right;
 }
-.madrone-primary-menu > .block-superfish ul.sf-menu li a:hover::after, .madrone-primary-menu > .block-superfish ul.sf-menu li a:active::after, .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus::after {
-  color: #fff !important;
+.madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1):hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1):active, .madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1):focus {
+  background-color: transparent;
 }
-.madrone-primary-menu > .block-superfish ul.sf-menu li a.is-active {
-  border-bottom: 2px solid #d73f09;
+.madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:active, .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus {
+  background-color: #fff;
+  color: #423e3c;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li a span.sf-sub-indicator {
   display: none;
