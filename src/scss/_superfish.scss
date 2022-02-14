@@ -69,8 +69,9 @@
             background-color: $osuorange;
             > a {
               color: $bucktoothwhite;
+              transition: none !important;
             }
-            a.menuparent::after {
+            > a.menuparent::after {
               color: $bucktoothwhite;
             }
           }
