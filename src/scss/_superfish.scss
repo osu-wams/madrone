@@ -16,12 +16,12 @@
         @extend .nav;
 
         li {
+          a.sf-depth-1 {
+            padding: 1rem;
+          }
+
           ul {
             background-color: $bucktoothwhite;
-
-            li {
-              padding: .5rem;
-            }
           }
         }
       }
@@ -50,7 +50,8 @@
           &.sfHover > a {
             background-color: $bucktoothwhite;
           }
-          &> a::after {
+
+          & > a::after {
             color: $neutral-700;
             content: '\2000\f078';
             display: inline-block;
@@ -59,6 +60,11 @@
             letter-spacing: normal;
             font-size: 12px;
           }
+
+          // Push menu down on first child ul.
+          & > ul {
+            top: 4em;
+          }
         }
 
         // chevron lower levels
@@ -66,15 +72,17 @@
           &:hover,
           &:active,
           &:focus {
-            background-color: $osuorange;
             > a {
+              background-color: $osuorange;
               color: $bucktoothwhite;
               transition: none !important;
             }
+
             > a.menuparent::after {
               color: $bucktoothwhite;
             }
           }
+
           a.menuparent::after {
             color: $neutral-700;
             content: '\2000\f054';

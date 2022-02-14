@@ -12085,11 +12085,11 @@ blockquote {
 .madrone-primary-menu > .block-superfish ul.sf-menu {
   line-height: 1.75rem;
 }
+.madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li a.sf-depth-1 {
+  padding: 1rem;
+}
 .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li ul {
   background-color: #fff;
-}
-.madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li ul li {
-  padding: 0.5rem;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu.sf-accordion {
   float: unset;
@@ -12138,10 +12138,11 @@ blockquote {
   letter-spacing: normal;
   font-size: 12px;
 }
-.madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):hover, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus {
-  background-color: #d73f09;
+.madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent > ul {
+  top: 4em;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):hover > a, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active > a, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus > a {
+  background-color: #d73f09;
   color: #fff;
   transition: none !important;
 }
