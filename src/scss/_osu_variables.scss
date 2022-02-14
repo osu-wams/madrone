@@ -1,6 +1,7 @@
 $osuorange: #d73f09;
 $bucktoothwhite: #fff;
-$paddletailblack: #000;
+//$paddletailblack: #000;
+$paddletailblack: #212529;
 $neutral-100: #f7f5f5;
 $neutral-200: #e9e5e4;
 $neutral-300: #d4cfcd;
@@ -56,7 +57,6 @@ $osu-colors-text: (
   "body": $neutral-700,
   "osuorange": $osuorange,
   "bucktoothwhite": $bucktoothwhite,
-  "paddletailblack": $paddletailblack,
   "icon": $neutral-550,
 );
 
@@ -172,10 +172,16 @@ $form-check-input-checked-bg-color: $osuorange;
 $form-select-box-shadow: none;
 $form-select-focus-box-shadow: none;
 
-// Disable Box shadows on buttons
+// Button Changes
 $btn-box-shadow: none;
 $btn-focus-box-shadow: none;
 $btn-active-box-shadow: none;
+$btn-padding-x: 3rem;
+$btn-padding-x-lg: 3rem;
+$btn-padding-x-sm: 3rem;
+$btn-border-radius: 50rem;
+$btn-border-radius-lg: 50rem;
+$btn-border-radius-sm: 50rem;
 
 $font-family-base: 'Open Sans', sans-serif;
 $table-bg: $bucktoothwhite;

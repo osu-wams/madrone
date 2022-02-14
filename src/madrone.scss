@@ -184,7 +184,7 @@ a {
     @extend .rounded-pill;
     @extend .px-5;
     @extend .my-3;
-    @extend .btn-osu-gray;
+    @extend .osu-btn-primary;
   }
 }
 
@@ -226,6 +226,10 @@ blockquote {
 
 .node-preview-container {
   background-color: $bucktoothwhite;
+}
+
+.osu-opacity-90 {
+  opacity: .9;
 }
 
 @import "scss/osu_header";
