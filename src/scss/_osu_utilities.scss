@@ -8,7 +8,7 @@ $min-heights: (
   '700': 700px,
   '800': 800px,
 );
-
+/* Create osu-min-h-xx classes for min-height*/
 @each $height-name, $height-val in $min-heights {
   .osu-min-h-#{$height-name} {
     min-height: $height-val;
@@ -21,7 +21,7 @@ $border-color-sides: (
   "right",
   "bottom"
 );
-
+/* For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use*/
 @each $border-color-name, $border-color-value in $osu-border-colors {
   .osu-border-#{$border-color-name} {
     border-color: #{$border-color-value} !important;
@@ -31,4 +31,8 @@ $border-color-sides: (
       border-#{$border-color-side}-color: #{$border-color-value} !important;
     }
   }
+}
+
+.osu-opacity-90 {
+  opacity: .9;
 }
