@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/* Link Defaults */
+/* Input Updates */
+/* Pagination settings */
+/* Form updates */
+/* Button Changes */
+/* Typography */
+/* Tables */
+/* Breadcrumbs */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -661,7 +669,7 @@ progress {
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 .blockquote > :last-child {
   margin-bottom: 0;
@@ -8337,6 +8345,10 @@ textarea.form-control-lg {
   background-color: transparent !important;
 }
 
+.osu-shadow {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) !important;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -11768,6 +11780,7 @@ textarea.form-control-lg {
   color: #cccccc;
 }
 
+/* Create osu-min-h-xx classes for min-height*/
 .osu-min-h-100 {
   min-height: 100px;
 }
@@ -11800,6 +11813,7 @@ textarea.form-control-lg {
   min-height: 800px;
 }
 
+/* For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use*/
 .osu-border-neutral {
   border-color: #f7f5f5 !important;
 }
@@ -11960,6 +11974,10 @@ textarea.form-control-lg {
   border-bottom-color: #006a8e !important;
 }
 
+.osu-opacity-90 {
+  opacity: 0.9;
+}
+
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
@@ -12018,6 +12036,9 @@ a:hover {
 a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, a.nav-link:focus, .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus {
   background: rgba(0, 0, 0, 0.7);
 }
+.osu-bg-page-alt-2 {
+  color: #fff;
+}
 .osu-bg-page-alt-2 a:not(.layout-builder__link--add) {
   color: #fff;
   text-decoration-color: #fff;
@@ -12049,14 +12070,11 @@ blockquote {
   border: 5px solid #e9e5e4;
   padding: 2.5em 3.75em;
   font-family: "Georgia", "DejaVu Serif", serif;
+  font-size: 1.125rem;
 }
 
 .node-preview-container {
   background-color: #fff;
-}
-
-.osu-opacity-90 {
-  opacity: 0.9;
 }
 
 .block-system-branding-block a {
@@ -12209,6 +12227,20 @@ a.button:focus,
   box-shadow: none;
 }
 
+.media--view-mode-media-card,
+.media--view-mode-media-card-caption {
+  border-radius: 10px;
+  max-width: max-content;
+}
+
+.media--view-mode-media-card-caption .field--name-name {
+  padding-top: 1.5rem;
+}
+.media--view-mode-media-card-caption .field--name-name div.field__item::before {
+  content: "—";
+  padding-right: 1ch;
+}
+
 .messages.messages--status.osu-alert-success a {
   color: #fff;
 }
@@ -12223,5 +12255,11 @@ a.button:focus,
   --bs-table-hover-color: #000;
   color: #fff;
   border-color: #db5222;
+}
+
+/* Layout Builder updates */
+/* Remove background on block sections in Layout Builder */
+.layout-builder-block {
+  background-color: transparent;
 }
 /*# sourceMappingURL=madrone.css.map */
