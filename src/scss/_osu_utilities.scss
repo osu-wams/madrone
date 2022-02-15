@@ -32,3 +32,13 @@ $border-color-sides: (
     }
   }
 }
+
+.osu-v-align-bottom {
+  @extend .d-flex;
+  @extend .align-items-end;
+}
+
+.osu-v-align-middle {
+  @extend .d-flex;
+  @extend .align-items-center;
+}
