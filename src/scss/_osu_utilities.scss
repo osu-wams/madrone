@@ -36,3 +36,11 @@ $border-color-sides: (
 .osu-opacity-90 {
   opacity: .9;
 }
+
+.osu-v-align-bottom {
+  @extend .align-items-end;
+}
+
+.osu-v-align-middle {
+  @extend .align-items-center;
+}
