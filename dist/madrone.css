@@ -6730,7 +6730,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .osu-v-align-middle, .osu-v-align-bottom {
+.d-flex {
   display: flex !important;
 }
 
