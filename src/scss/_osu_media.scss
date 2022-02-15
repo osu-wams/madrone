@@ -1,0 +1,16 @@
+.media--view-mode-media-card,
+.media--view-mode-media-card-caption {
+  border-radius: 10px;
+  max-width: max-content;
+}
+
+.media--view-mode-media-card-caption {
+  .field--name-name {
+    padding-top: 1.5rem;
+
+    div.field__item::before {
+      content: "\2014";
+      padding-right: 1ch;
+    }
+  }
+}
