@@ -12242,6 +12242,7 @@ a.button:focus,
 }
 
 .media--view-mode-media-card-caption .field--name-name {
+  color: #423e3c !important;
   padding-top: 1.5rem;
 }
 .media--view-mode-media-card-caption .field--name-name div.field__item::before {

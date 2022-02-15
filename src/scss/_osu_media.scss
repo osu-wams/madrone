@@ -6,6 +6,7 @@
 
 .media--view-mode-media-card-caption {
   .field--name-name {
+    color: $body-color !important;
     padding-top: 1.5rem;
 
     div.field__item::before {
