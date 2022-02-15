@@ -7286,11 +7286,11 @@ textarea.form-control-lg {
   align-items: flex-start !important;
 }
 
-.align-items-end {
+.align-items-end, .osu-v-align-bottom {
   align-items: flex-end !important;
 }
 
-.align-items-center {
+.align-items-center, .osu-v-align-middle {
   align-items: center !important;
 }
 
