@@ -1,6 +1,5 @@
 $osuorange: #d73f09;
 $bucktoothwhite: #fff;
-//$paddletailblack: #000;
 $paddletailblack: #212529;
 $neutral-100: #f7f5f5;
 $neutral-200: #e9e5e4;
@@ -51,7 +50,7 @@ $table-alt-row: #f9f9f9;
 
 $page-bg-default: $neutral-100;
 $page-bg-alt-1: $bucktoothwhite;
-$page-bg-alt-2: #212529;
+$page-bg-alt-2: $paddletailblack;
 
 $osu-colors-text: (
   "body": $neutral-700,
@@ -69,7 +68,7 @@ $osu-bg-colors: (
 $osu-border-colors: (
   "neutral": $neutral-100,
   "white": $bucktoothwhite,
-  "dark": $page-bg-alt-2,
+  "dark": $paddletailblack,
   "osu": $osuorange,
   "pine": $pine-400,
   "rogue-wave": $rogue_wave-400,
@@ -132,13 +131,13 @@ $danger: $lava-400;
 $body-color: $neutral-700;
 $body-bg: $page-bg-default;
 
-// Link Defaults
+/* Link Defaults */
 $link-color: $body-color;
 $link-decoration: underline $osuorange;
 $nav-link-color: $neutral-700;
 $nav-link-hover-color: $bucktoothwhite;
 
-// Input Updates
+/* Input Updates */
 $input-bg: $bucktoothwhite;
 $input-border-color: $neutral-200;
 $input-border-radius: 0px;
@@ -147,7 +146,7 @@ $input-focus-box-shadow: none;
 $input-btn-focus-box-shadow: none;
 $input-focus-border-color: $osuorange;
 
-// Pagination settings.
+/* Pagination settings */
 $pagination-bg: $bucktoothwhite;
 $pagination-color: $osuorange;
 $pagination-border-color: $osuorange;
@@ -166,13 +165,12 @@ $pagination-disabled-bg: $neutral-200;
 $pagination-disabled-color: $body-color;
 $pagination-disabled-border-color: $neutral-300;
 
-
-// Form updates.
+/* Form updates */
 $form-check-input-checked-bg-color: $osuorange;
 $form-select-box-shadow: none;
 $form-select-focus-box-shadow: none;
 
-// Button Changes
+/* Button Changes */
 $btn-box-shadow: none;
 $btn-focus-box-shadow: none;
 $btn-active-box-shadow: none;
@@ -183,10 +181,15 @@ $btn-border-radius: 50rem;
 $btn-border-radius-lg: 50rem;
 $btn-border-radius-sm: 50rem;
 
+/* Typography */
 $font-family-base: 'Open Sans', sans-serif;
+$blockquote-font-size: 1.125rem;
+
+/* Tables */
 $table-bg: $bucktoothwhite;
 $table-striped-bg: $table-alt-row;
 $table-border-color: $neutral-200;
 
+/* Breadcrumbs */
 $breadcrumb-divider: quote("|");
 $breadcrumb-divider-color: $neutral-700;
