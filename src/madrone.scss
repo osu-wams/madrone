@@ -213,7 +213,7 @@ a {
 .block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li {
 
   &::marker {
-    color: rgba($osuorange, 1);
+    color: rgba($body-color, 1);
     content: '\f054  ';
     display: inline-block;
     font-family: "Font Awesome 5 Free";
