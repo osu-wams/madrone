@@ -15,60 +15,6 @@
 /* Typography */
 /* Tables */
 /* Breadcrumbs */
-:root {
-  --bs-blue: #0d6efd;
-  --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
-  --bs-pink: #d63384;
-  --bs-red: #dc3545;
-  --bs-orange: #fd7e14;
-  --bs-yellow: #ffc107;
-  --bs-green: #198754;
-  --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
-  --bs-white: #fff;
-  --bs-gray: #6c757d;
-  --bs-gray-dark: #343a40;
-  --bs-gray-100: #f8f9fa;
-  --bs-gray-200: #e9ecef;
-  --bs-gray-300: #dee2e6;
-  --bs-gray-400: #ced4da;
-  --bs-gray-500: #adb5bd;
-  --bs-gray-600: #6c757d;
-  --bs-gray-700: #495057;
-  --bs-gray-800: #343a40;
-  --bs-gray-900: #212529;
-  --bs-primary: #d73f09;
-  --bs-secondary: #fff;
-  --bs-success: #4a773c;
-  --bs-info: #006a8e;
-  --bs-warning: #ffb500;
-  --bs-danger: #c72127;
-  --bs-light: #f7f5f5;
-  --bs-dark: #212529;
-  --bs-primary-rgb: 215, 63, 9;
-  --bs-secondary-rgb: 255, 255, 255;
-  --bs-success-rgb: 74, 119, 60;
-  --bs-info-rgb: 0, 106, 142;
-  --bs-warning-rgb: 255, 181, 0;
-  --bs-danger-rgb: 199, 33, 39;
-  --bs-light-rgb: 247, 245, 245;
-  --bs-dark-rgb: 33, 37, 41;
-  --bs-white-rgb: 255, 255, 255;
-  --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 66, 62, 60;
-  --bs-body-bg-rgb: 247, 245, 245;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Open Sans, sans-serif;
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.5;
-  --bs-body-color: #423e3c;
-  --bs-body-bg: #f7f5f5;
-}
-
 @font-face {
   font-family: "Stratum2Web";
   src: url("../fonts/Stratum2WebThin.woff") format("woff"), url("../fonts/Stratum2WebThin.woff2") format("woff2");
@@ -11867,8 +11813,9 @@ textarea.form-control-lg {
   border-color: #ffb500;
 }
 
+/* Button has to have black text for WCAG AA */
 .osu-btn-rogue-wave {
-  color: #423e3c;
+  color: #000;
   background-color: #00859b;
   border-color: #00859b;
 }
@@ -11881,7 +11828,7 @@ textarea.form-control-lg {
   color: #000;
   background-color: #2697aa;
   border-color: #1a91a5;
-  box-shadow: 0 0 0 0 rgba(10, 122, 141, 0.5);
+  box-shadow: 0 0 0 0 rgba(0, 113, 132, 0.5);
 }
 .btn-check:checked + .osu-btn-rogue-wave, .btn-check:active + .osu-btn-rogue-wave, .osu-btn-rogue-wave:active, .osu-btn-rogue-wave.active, .show > .osu-btn-rogue-wave.dropdown-toggle {
   color: #000;
@@ -11889,7 +11836,7 @@ textarea.form-control-lg {
   border-color: #1a91a5;
 }
 .btn-check:checked + .osu-btn-rogue-wave:focus, .btn-check:active + .osu-btn-rogue-wave:focus, .osu-btn-rogue-wave:active:focus, .osu-btn-rogue-wave.active:focus, .show > .osu-btn-rogue-wave.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0 rgba(10, 122, 141, 0.5);
+  box-shadow: 0 0 0 0 rgba(0, 113, 132, 0.5);
 }
 .osu-btn-rogue-wave:disabled, .osu-btn-rogue-wave.disabled {
   color: #000;

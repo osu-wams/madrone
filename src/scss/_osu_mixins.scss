@@ -82,11 +82,11 @@
   );
 }
 
+/* Button has to have black text for WCAG AA */
 .osu-btn-rogue-wave {
   @include button-variant(
       $rogue_wave-400,
-      $rogue_wave-400,
-      $body-color
+      $rogue_wave-400
   );
 }
 
