@@ -92,6 +92,15 @@ $utilities: map-merge-multiple(
       )
     ),
     (
+      "osu-shadows": (
+        property: box-shadow,
+        class: osu-shadow,
+        values: (
+          null: 0 2px 3px rgba(0, 0, 0, 0.25)
+        ),
+      )
+    ),
+    (
       "border-color": (
         property: border-color,
         class: border,
@@ -188,9 +197,13 @@ a {
   }
 }
 
-.osu-bg-page-alt-2 a:not(.layout-builder__link--add) {
+.osu-bg-page-alt-2 {
   color: $bucktoothwhite;
-  text-decoration-color: $bucktoothwhite;
+
+  a:not(.layout-builder__link--add) {
+    color: $bucktoothwhite;
+    text-decoration-color: $bucktoothwhite;
+  }
 }
 
 .container-fluid .block-page-title-block {
@@ -200,7 +213,7 @@ a {
 .block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li {
 
   &::marker {
-    color: rgba($osuorange, 1);
+    color: rgba($body-color, 1);
     content: '\f054  ';
     display: inline-block;
     font-family: "Font Awesome 5 Free";
@@ -222,14 +235,11 @@ blockquote {
   border: 5px solid $neutral-200;
   padding: 2.5em 3.75em;
   font-family: 'Georgia', 'DejaVu Serif', serif;
+  font-size: 1.125rem;
 }
 
 .node-preview-container {
   background-color: $bucktoothwhite;
-}
-
-.osu-opacity-90 {
-  opacity: .9;
 }
 
 @import "scss/osu_header";
@@ -237,5 +247,7 @@ blockquote {
 @import "scss/osu_forms";
 @import "scss/pager";
 @import "scss/osu_buttons";
+@import "scss/osu_media";
 @import "scss/osu_messages";
 @import "scss/osu_tables";
+@import "scss/osu_layout_builder";

@@ -1,6 +1,6 @@
+/* All OSU colors */
 $osuorange: #d73f09;
 $bucktoothwhite: #fff;
-//$paddletailblack: #000;
 $paddletailblack: #212529;
 $neutral-100: #f7f5f5;
 $neutral-200: #e9e5e4;
@@ -49,10 +49,12 @@ $stratosphere-600: #003b5c;
 $stratosphere-700: #002235;
 $table-alt-row: #f9f9f9;
 
+/* Setting other variable names for common colors */
 $page-bg-default: $neutral-100;
 $page-bg-alt-1: $bucktoothwhite;
-$page-bg-alt-2: #212529;
+$page-bg-alt-2: $paddletailblack;
 
+/* Map array for text color classes */
 $osu-colors-text: (
   "body": $neutral-700,
   "osuorange": $osuorange,
@@ -60,16 +62,18 @@ $osu-colors-text: (
   "icon": $neutral-550,
 );
 
+/* Map for Background Colors */
 $osu-bg-colors: (
   "page-default": $page-bg-default,
   "page-alt-1": $page-bg-alt-1,
   "page-alt-2": $page-bg-alt-2,
 );
 
+/* Map for border colors */
 $osu-border-colors: (
   "neutral": $neutral-100,
   "white": $bucktoothwhite,
-  "dark": $page-bg-alt-2,
+  "dark": $paddletailblack,
   "osu": $osuorange,
   "pine": $pine-400,
   "rogue-wave": $rogue_wave-400,
@@ -77,6 +81,7 @@ $osu-border-colors: (
   "stratosphere": $stratosphere-400,
 );
 
+/* Map for all colors */
 $osu-colors-all: (
   "osuorange": $osuorange,
   "paddletailblack": $paddletailblack,
@@ -127,18 +132,46 @@ $osu-colors-all: (
   "stratosphere-600": $stratosphere-600,
   "stratosphere-700": $stratosphere-700,
 );
-//$primary: $neutral-700;
-$danger: $lava-400;
+
+/* Map for minimum heights */
+$min-heights: (
+  '100': 100px,
+  '200': 200px,
+  '300': 300px,
+  '400': 400px,
+  '500': 500px,
+  '600': 600px,
+  '700': 700px,
+  '800': 800px,
+);
+
+/* Map for border sides */
+$border-color-sides: (
+  "left",
+  "top",
+  "right",
+  "bottom"
+);
+
+
 $body-color: $neutral-700;
 $body-bg: $page-bg-default;
+$primary: $osuorange;
+$secondary: $bucktoothwhite;
+$danger: $lava-400;
+$success: $pine-400;
+$warning: $luminance-400;
+$info: $stratosphere-400;
+$light: $neutral-100;
+$dark: $paddletailblack;
 
-// Link Defaults
+/* Link Defaults */
 $link-color: $body-color;
 $link-decoration: underline $osuorange;
 $nav-link-color: $neutral-700;
 $nav-link-hover-color: $bucktoothwhite;
 
-// Input Updates
+/* Input Updates */
 $input-bg: $bucktoothwhite;
 $input-border-color: $neutral-200;
 $input-border-radius: 0px;
@@ -147,7 +180,7 @@ $input-focus-box-shadow: none;
 $input-btn-focus-box-shadow: none;
 $input-focus-border-color: $osuorange;
 
-// Pagination settings.
+/* Pagination settings */
 $pagination-bg: $bucktoothwhite;
 $pagination-color: $osuorange;
 $pagination-border-color: $osuorange;
@@ -166,13 +199,12 @@ $pagination-disabled-bg: $neutral-200;
 $pagination-disabled-color: $body-color;
 $pagination-disabled-border-color: $neutral-300;
 
-
-// Form updates.
+/* Form updates */
 $form-check-input-checked-bg-color: $osuorange;
 $form-select-box-shadow: none;
 $form-select-focus-box-shadow: none;
 
-// Button Changes
+/* Button Changes */
 $btn-box-shadow: none;
 $btn-focus-box-shadow: none;
 $btn-focus-width: 0;
@@ -184,10 +216,15 @@ $btn-border-radius: 50rem;
 $btn-border-radius-lg: 50rem;
 $btn-border-radius-sm: 50rem;
 
+/* Typography */
 $font-family-base: 'Open Sans', sans-serif;
+$blockquote-font-size: 1.125rem;
+
+/* Tables */
 $table-bg: $bucktoothwhite;
 $table-striped-bg: $table-alt-row;
 $table-border-color: $neutral-200;
 
+/* Breadcrumbs */
 $breadcrumb-divider: quote("|");
 $breadcrumb-divider-color: $neutral-700;
