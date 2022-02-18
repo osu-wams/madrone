@@ -11,10 +11,9 @@
  */
 #}
 {% set classes = [
+  'input--' ~ type|clean_class,
   'btn',
   'button--primary' in attributes.class ? 'osu-btn-primary' : 'osu-btn-light',
-  'rounded-pill',
-  'px-5',
   'my-3'
 ] %}
 <input{{ attributes.addClass(classes) }}/>{{ children }}

@@ -105,6 +105,43 @@ function madrone_preprocess_block(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK().
+ */
+function madrone_preprocess_input(&$variables) {
+  $input_type = $variables['element']['#type'];
+  switch ($input_type) {
+    case 'color':
+      $variables['attributes']['class'][] = 'form-control';
+      $variables['attributes']['class'][] = 'form-control-color';
+      break;
+
+    case 'checkbox':
+    case 'radio':
+      $variables['attributes']['class'][] = 'form-check-input';
+      break;
+
+    case 'range':
+      $variables['attributes']['class'][] = 'form-range';
+      break;
+
+    case 'search':
+      $variables['attributes']['class'][] = 'form-control';
+      break;
+
+    // Intentionally leaving blank to not include classes.
+    case 'submit':
+      break;
+
+    default:
+      $variables['attributes']['class'][] = 'form-control';
+      $variables['attributes']['class'][] = 'my-3';
+      break;
+
+  }
+  $variables['type'] = $input_type;
+}
+
+/**
  * Implements hook_form_alter().
  */
 function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
