@@ -171,6 +171,18 @@ $link-decoration: underline $osuorange;
 $nav-link-color: $neutral-700;
 $nav-link-hover-color: $bucktoothwhite;
 
+/* Navigation Tabs */
+$nav-tabs-link-active-bg: $bucktoothwhite;
+$nav-tabs-link-active-border-color: transparent transparent $osuorange;
+$nav-tabs-link-active-color: $body-color;
+$nav-tabs-border-radius: 0;
+$nav-tabs-border-width: .15em;
+
+/* Navigation Pills */
+$nav-pills-border-radius: 0;
+$nav-pills-link-active-bg: $bucktoothwhite;
+$nav-pills-link-active-color: $body-color;
+
 /* Input Updates */
 $input-bg: $bucktoothwhite;
 $input-border-color: $neutral-200;
