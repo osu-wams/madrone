@@ -52,7 +52,7 @@ We call a macro which calls itself to render the full tree.
         item.in_active_trail ? 'nav-item active' : 'nav-item',
       ] %}
       {% set link_classes = [
-        item.in_active_trail ? 'nav-link active': 'nav-link',
+        item.in_active_trail ? 'nav-link active' : 'nav-link',
       ] %}
       <li{{ item.attributes.addCLass(li_classes) }}>
         {{ link(item.title, item.url, item.attributes.addClass(link_classes).removeClass(li_classes)) }}
