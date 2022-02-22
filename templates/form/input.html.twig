@@ -10,4 +10,7 @@
  * @see template_preprocess_input()
  */
 #}
-<input{{ attributes }}/>{{ children }}
+{% set classes = [
+  'input--' ~ type|clean_class
+] %}
+<input{{ attributes.addClass(classes) }}/>{{ children }}
