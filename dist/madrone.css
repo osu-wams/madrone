@@ -8,6 +8,8 @@
 /* Map for minimum heights */
 /* Map for border sides */
 /* Link Defaults */
+/* Navigation Tabs */
+/* Navigation Pills */
 /* Input Updates */
 /* Pagination settings */
 /* Form updates */
@@ -3950,14 +3952,14 @@ textarea.form-control-lg {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 0.15em solid #dee2e6;
 }
 .nav-tabs .nav-link, .nav-tabs .madrone-primary-menu > .block-superfish ul.sf-menu li a, .madrone-primary-menu > .block-superfish ul.sf-menu li .nav-tabs a {
-  margin-bottom: -1px;
+  margin-bottom: -0.15em;
   background: none;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border: 0.15em solid transparent;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li .nav-tabs a:hover, .nav-tabs .nav-link:focus, .nav-tabs .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus, .madrone-primary-menu > .block-superfish ul.sf-menu li .nav-tabs a:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
@@ -3976,12 +3978,12 @@ textarea.form-control-lg {
 .nav-tabs .madrone-primary-menu > .block-superfish ul.sf-menu li.show a,
 .madrone-primary-menu > .block-superfish ul.sf-menu .nav-tabs li.show .nav-link,
 .madrone-primary-menu > .block-superfish ul.sf-menu .nav-tabs li.show a {
-  color: #495057;
-  background-color: #f7f5f5;
-  border-color: #dee2e6 #dee2e6 #f7f5f5;
+  color: #423e3c;
+  background-color: #fff;
+  border-color: transparent transparent #d73f09;
 }
 .nav-tabs .dropdown-menu {
-  margin-top: -1px;
+  margin-top: -0.15em;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -3989,14 +3991,14 @@ textarea.form-control-lg {
 .nav-pills .nav-link, .nav-pills .madrone-primary-menu > .block-superfish ul.sf-menu li a, .madrone-primary-menu > .block-superfish ul.sf-menu li .nav-pills a {
   background: none;
   border: 0;
-  border-radius: 0.25rem;
+  border-radius: 0;
 }
 .nav-pills .nav-link.active, .nav-pills .madrone-primary-menu > .block-superfish ul.sf-menu li a.active, .madrone-primary-menu > .block-superfish ul.sf-menu li .nav-pills a.active,
 .nav-pills .show > .nav-link,
 .nav-pills .madrone-primary-menu > .block-superfish ul.sf-menu li .show > a,
 .madrone-primary-menu > .block-superfish ul.sf-menu li .nav-pills .show > a {
-  color: #fff;
-  background-color: #d73f09;
+  color: #423e3c;
+  background-color: #fff;
 }
 
 .nav-fill > .nav-link, .madrone-primary-menu > .block-superfish ul.sf-menu li .nav-fill > a,
@@ -4597,10 +4599,6 @@ textarea.form-control-lg {
   margin-bottom: -0.5rem;
   margin-left: -0.5rem;
   border-bottom: 0;
-}
-.card-header-tabs .nav-link.active, .card-header-tabs .madrone-primary-menu > .block-superfish ul.sf-menu li a.active, .madrone-primary-menu > .block-superfish ul.sf-menu li .card-header-tabs a.active {
-  background-color: #fff;
-  border-bottom-color: #fff;
 }
 
 .card-header-pills {
@@ -6693,7 +6691,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex {
+.d-flex, .osu-d-flex {
   display: flex !important;
 }
 
@@ -7221,15 +7219,15 @@ textarea.form-control-lg {
   gap: 3rem !important;
 }
 
-.justify-content-start {
+.justify-content-start, .osu-justify-content-start {
   justify-content: flex-start !important;
 }
 
-.justify-content-end {
+.justify-content-end, .osu-justify-content-end {
   justify-content: flex-end !important;
 }
 
-.justify-content-center {
+.justify-content-center, .osu-justify-content-center {
   justify-content: center !important;
 }
 
@@ -7245,15 +7243,15 @@ textarea.form-control-lg {
   justify-content: space-evenly !important;
 }
 
-.align-items-start {
+.align-items-start, .osu-align-items-start {
   align-items: flex-start !important;
 }
 
-.align-items-end, .osu-v-align-bottom {
+.align-items-end, .osu-align-items-end {
   align-items: flex-end !important;
 }
 
-.align-items-center, .osu-v-align-middle {
+.align-items-center, .osu-align-items-center {
   align-items: center !important;
 }
 
@@ -7293,15 +7291,15 @@ textarea.form-control-lg {
   align-self: auto !important;
 }
 
-.align-self-start {
+.align-self-start, .osu-align-self-start {
   align-self: flex-start !important;
 }
 
-.align-self-end {
+.align-self-end, .osu-align-self-end {
   align-self: flex-end !important;
 }
 
-.align-self-center {
+.align-self-center, .osu-align-self-center {
   align-self: center !important;
 }
 
@@ -12100,6 +12098,8 @@ textarea.form-control-lg {
   opacity: 0.9;
 }
 
+/* Display flex*/
+/* Wrapper classes for flex alignment */
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;

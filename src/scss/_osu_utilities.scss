@@ -21,10 +21,44 @@
   opacity: .9;
 }
 
-.osu-v-align-bottom {
+/* Display flex*/
+.osu-d-flex {
+  @extend .d-flex;
+}
+
+/* Wrapper classes for flex alignment */
+.osu-align-items-start {
+  @extend .align-items-start;
+}
+
+.osu-align-items-center {
+  @extend .align-items-center;
+}
+
+.osu-align-items-end {
   @extend .align-items-end;
 }
 
-.osu-v-align-middle {
-  @extend .align-items-center;
+.osu-align-self-start {
+  @extend .align-self-start;
+}
+
+.osu-align-self-center {
+  @extend .align-self-center;
+}
+
+.osu-align-self-end {
+  @extend .align-self-end;
+}
+
+.osu-justify-content-start {
+  @extend .justify-content-start;
+}
+
+.osu-justify-content-center {
+  @extend .justify-content-center;
+}
+
+.osu-justify-content-end {
+  @extend .justify-content-end;
 }
