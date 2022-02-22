@@ -191,6 +191,10 @@ $input-box-shadow: none;
 $input-focus-box-shadow: none;
 $input-btn-focus-box-shadow: none;
 $input-focus-border-color: $osuorange;
+$input-padding-x: 1rem;
+$input-padding-x-lg: 1.5rem;
+$input-padding-y: .5rem;
+$input-padding-y-lg: 1rem;
 
 /* Pagination settings */
 $pagination-bg: $bucktoothwhite;
@@ -213,6 +217,9 @@ $pagination-disabled-border-color: $neutral-300;
 
 /* Form updates */
 $form-check-input-checked-bg-color: $osuorange;
+/* Form Select updates */
+$form-select-padding-x: .25rem;
+$form-select-padding-y: .5rem;
 $form-select-box-shadow: none;
 $form-select-focus-box-shadow: none;
 
