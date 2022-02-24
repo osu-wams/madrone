@@ -2000,7 +2000,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-.table, table {
+.table, .osu-table-orange, .osu-table {
   --bs-table-bg: #fff;
   --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #423e3c;
@@ -2015,19 +2015,19 @@ progress {
   vertical-align: top;
   border-color: #e9e5e4;
 }
-.table > :not(caption) > * > *, table > :not(caption) > * > * {
+.table > :not(caption) > * > *, .osu-table-orange > :not(caption) > * > *, .osu-table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   background-color: var(--bs-table-bg);
   border-bottom-width: 1px;
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
-.table > tbody, table > tbody {
+.table > tbody, .osu-table-orange > tbody, .osu-table > tbody {
   vertical-align: inherit;
 }
-.table > thead, table > thead {
+.table > thead, .osu-table-orange > thead, .osu-table > thead {
   vertical-align: bottom;
 }
-.table > :not(:first-child), table > :not(:first-child) {
+.table > :not(:first-child), .osu-table-orange > :not(:first-child), .osu-table > :not(:first-child) {
   border-top: 2px solid currentColor;
 }
 
@@ -2039,10 +2039,10 @@ progress {
   padding: 0.25rem 0.25rem;
 }
 
-.table-bordered > :not(caption) > *, table > :not(caption) > * {
+.table-bordered > :not(caption) > *, .osu-table-orange > :not(caption) > *, .osu-table > :not(caption) > * {
   border-width: 1px 0;
 }
-.table-bordered > :not(caption) > * > *, table > :not(caption) > * > * {
+.table-bordered > :not(caption) > * > *, .osu-table-orange > :not(caption) > * > *, .osu-table > :not(caption) > * > * {
   border-width: 0 1px;
 }
 
@@ -2053,7 +2053,7 @@ progress {
   border-top-width: 0;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) > *, table > tbody > tr:nth-of-type(odd) > * {
+.table-striped > tbody > tr:nth-of-type(odd) > *, .osu-table-orange > tbody > tr:nth-of-type(odd) > *, .osu-table > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: var(--bs-table-striped-bg);
   color: var(--bs-table-striped-color);
 }
@@ -2063,7 +2063,7 @@ progress {
   color: var(--bs-table-active-color);
 }
 
-.table-hover > tbody > tr:hover > *, table > tbody > tr:hover > * {
+.table-hover > tbody > tr:hover > *, .osu-table-orange > tbody > tr:hover > *, .osu-table > tbody > tr:hover > * {
   --bs-table-accent-bg: var(--bs-table-hover-bg);
   color: var(--bs-table-hover-color);
 }
@@ -2152,7 +2152,7 @@ progress {
   border-color: #dedddd;
 }
 
-.table-dark, table thead {
+.table-dark, .osu-table > thead {
   --bs-table-bg: #212529;
   --bs-table-striped-bg: #2c3034;
   --bs-table-striped-color: #fff;
@@ -12170,7 +12170,7 @@ a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover
   padding-inline: 1.5rem;
 }
 
-.block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li::marker {
+.block-system-main-block ul:not(.nav):not(.navbar):not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li::marker {
   color: #423e3c;
   content: "\f054 ";
   display: inline-block;
@@ -12368,7 +12368,7 @@ a.button:focus,
   color: #fff;
 }
 
-.table-osuorange {
+.table-osuorange, .osu-table-orange > thead {
   --bs-table-bg: #d73f09;
   --bs-table-striped-bg: #d94915;
   --bs-table-striped-color: #000;
@@ -12384,5 +12384,14 @@ a.button:focus,
 /* Remove background on block sections in Layout Builder */
 .layout-builder-block {
   background-color: transparent;
+}
+
+/* only changes to ckeditor with the included styles. */
+body.cke_editable_themed {
+  padding: 1rem;
+}
+
+.cke_reset_all .cke_dialog_body * {
+  font: 0.8125rem/1.538em BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 /*# sourceMappingURL=madrone.css.map */

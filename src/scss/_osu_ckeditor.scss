@@ -1,0 +1,8 @@
+/* only changes to ckeditor with the included styles. */
+body.cke_editable_themed {
+  padding: 1rem;
+}
+
+.cke_reset_all .cke_dialog_body * {
+  font: 0.8125rem/1.538em BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}

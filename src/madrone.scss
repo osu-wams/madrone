@@ -209,7 +209,7 @@ a {
   padding-inline: 1.5rem;
 }
 
-.block-system-main-block ul:not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li {
+.block-system-main-block ul:not(.nav):not(.navbar):not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li {
 
   &::marker {
     color: rgba($body-color, 1);
@@ -250,3 +250,4 @@ blockquote {
 @import "scss/osu_messages";
 @import "scss/osu_tables";
 @import "scss/osu_layout_builder";
+@import "scss/osu_ckeditor";

@@ -1,11 +1,23 @@
+// Use only on thead for an orange table.
 @include table-variant('osuorange', $osuorange);
-table {
+.osu-table {
   @extend .table;
   @extend .table-bordered;
   @extend .table-hover;
   @extend .table-striped;
 
-  thead {
+  & > thead {
     @extend .table-dark;
+  }
+}
+
+.osu-table-orange {
+  @extend .table;
+  @extend .table-bordered;
+  @extend .table-hover;
+  @extend .table-striped;
+
+  & > thead {
+    @extend .table-osuorange;
   }
 }
