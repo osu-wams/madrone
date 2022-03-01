@@ -16,8 +16,28 @@
 {% set region_class = [
   'madrone-' ~ region|clean_class
 ] %}
-{% if content %}
-  <div{{ attributes.setAttribute('id', region_id).addClass(region_class) }}>
-    {{ content }}
-  </div>
-{% endif %}
+
+{%
+  set classes = [
+    'footer',
+    'region',
+    'region-' ~ region|clean_class,
+    'osu-min-h-300',
+    'bg-primary',
+  ]
+%}
+
+
+<div{{ attributes.addClass(classes) }}>
+    <div{{ attributes.setAttribute('id', region_id).addClass(region_class) }}>
+      {{ content }}
+    </div>
+</div>
+<div>
+    <p class="text-center">
+      <a target="_blank" href="https://oregonstate.edu/copyright">Copyright</a> &#169; {{ 'now' | date('Y')}} Oregon State University |
+      <a target="_blank" href="https://oregonstate.edu/official-web-disclaimer">{{'Privacy Disclaimer and Accibility Information'|t}}</a>
+    </p>
+</div>
+
+
