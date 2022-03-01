@@ -12229,13 +12229,22 @@ blockquote {
 }
 
 .footer {
-  background-image: url("../assets/footer-trees.png");
-  background-color: #2e2b2a;
+  background: #2e2b2a url("../assets/footer-trees.png") repeat-x scroll left bottom;
   color: white;
-  padding: 1em;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.madrone-footer {
+  margin-bottom: auto;
+}
+
+.madrone-copyright {
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  align-self: center;
 }
 
 .madrone-primary-menu > .block-superfish ul.sf-menu {
