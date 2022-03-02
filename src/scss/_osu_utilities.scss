@@ -62,3 +62,11 @@
 .osu-justify-content-end {
   @extend .justify-content-end;
 }
+
+.osu-hover-pop {
+  transition: all 250ms ease;
+
+  &:hover {
+    box-shadow: 0 0 9px rgb(0 0 0 / 25%) !important;
+  }
+}
