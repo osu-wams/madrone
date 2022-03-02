@@ -12100,6 +12100,13 @@ textarea.form-control-lg {
 
 /* Display flex*/
 /* Wrapper classes for flex alignment */
+.osu-hover-pop {
+  transition: all 250ms ease;
+}
+.osu-hover-pop:hover {
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.25) !important;
+}
+
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
