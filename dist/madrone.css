@@ -12222,12 +12222,6 @@ blockquote {
   right: 0;
 }
 
-.footer a {
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: white;
-}
-
 .footer {
   background: #2e2b2a url("../assets/footer-trees.png") repeat-x scroll left bottom;
   color: white;
@@ -12236,14 +12230,13 @@ blockquote {
   flex-direction: column;
 }
 
-.madrone-footer {
-  margin-bottom: auto;
+.footer a {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
 }
 
 .madrone-copyright {
-  margin-top: auto;
-  position: absolute;
-  bottom: 0;
   align-self: center;
 }
 
