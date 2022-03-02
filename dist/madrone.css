@@ -12236,7 +12236,12 @@ blockquote {
   text-decoration-color: white;
 }
 
+.madrone-footer {
+  margin-bottom: auto;
+}
+
 .madrone-copyright {
+  margin-top: auto;
   align-self: center;
 }
 
