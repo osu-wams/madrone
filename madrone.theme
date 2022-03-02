@@ -67,6 +67,15 @@ function madrone_preprocess_html(&$variables) {
   ];
 
   $variables['head_title'][] = 'Oregon State University';
+  if (empty($variables['page']['footer'])) {
+    $variables['page']['footer'] = [
+      'force-empty-display' => [
+        '#markup' => '',
+      ],
+      '#theme_wrappers' => ['region'],
+      '#region' => 'footer',
+    ];
+  }
 }
 
 /**

@@ -12107,6 +12107,10 @@ textarea.form-control-lg {
   box-shadow: 0 0 9px rgba(0, 0, 0, 0.25) !important;
 }
 
+.osu-text-decoration-bucktoothwhite {
+  text-decoration-color: #fff;
+}
+
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
@@ -12115,11 +12119,11 @@ textarea.form-control-lg {
 
 /** Theme Defaults **/
 h1, .h1 {
+  text-transform: uppercase;
   color: #d73f09;
   font-family: "Stratum2Web", serif;
   font-size: 48px;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 h2, .h2 {
@@ -12178,27 +12182,27 @@ a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover
 }
 
 .block-system-main-block ul:not(.nav):not(.navbar):not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li::marker {
-  color: #423e3c;
-  content: "\f054 ";
   display: inline-block;
+  content: "\f054 ";
+  letter-spacing: normal;
+  color: #423e3c;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  letter-spacing: normal;
 }
 
 em.placeholder {
-  background-color: unset;
-  cursor: unset;
   display: unset;
   min-height: unset;
-  opacity: unset;
+  cursor: unset;
   vertical-align: unset;
+  opacity: unset;
+  background-color: unset;
 }
 
 blockquote {
-  border: 5px solid #e9e5e4;
   padding: 2.5em 3.75em;
-  font-family: "Georgia", "DejaVu Serif", serif;
+  border: 5px solid #e9e5e4;
+  font-family: Georgia, "DejaVu Serif", serif;
   font-size: 1.125rem;
 }
 
@@ -12227,6 +12231,10 @@ blockquote {
   padding: 0.5em;
   position: absolute;
   right: 0;
+}
+
+footer .region-footer {
+  background: #2e2b2a url("../assets/footer-trees.png") repeat-x scroll left bottom;
 }
 
 .madrone-primary-menu > .block-superfish ul.sf-menu {
@@ -12345,6 +12353,7 @@ nav.pager ul.pager__items li.pager__item a {
   border-radius: 5px;
 }
 
+/* Disable focus box shadows on custom buttons. */
 .osu-btn-light:focus,
 .osu-btn-light:active:focus,
 .osu-btn-dark:focus,
