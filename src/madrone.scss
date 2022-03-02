@@ -1,54 +1,61 @@
-@import '../node_modules/bootstrap/scss/functions';
+@import "../node_modules/bootstrap/scss/functions";
+
 // Import of User Variables.
-@import 'scss/osu_variables';
-@import '../node_modules/bootstrap/scss/variables';
-@import '../node_modules/bootstrap/scss/mixins';
-@import '../node_modules/bootstrap/scss/utilities';
+@import "scss/osu_variables";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
 
 @font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebThin.woff') format('woff'),
-    url('../fonts/Stratum2WebThin.woff2') format('woff2');
+  font-family: "Stratum2Web";
+  src:
+    url("../fonts/Stratum2WebThin.woff") format("woff"),
+    url("../fonts/Stratum2WebThin.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebLight.woff') format('woff'),
-    url('../fonts/Stratum2WebLight.woff2') format('woff2');
+  font-family: "Stratum2Web";
+  src:
+    url("../fonts/Stratum2WebLight.woff") format("woff"),
+    url("../fonts/Stratum2WebLight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebRegular.woff') format('woff'),
-    url('../fonts/Stratum2WebRegular.woff2') format('woff2');
+  font-family: "Stratum2Web";
+  src:
+    url("../fonts/Stratum2WebRegular.woff") format("woff"),
+    url("../fonts/Stratum2WebRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebMedium.woff') format('woff'),
-    url('../fonts/Stratum2WebMedium.woff2') format('woff2');
+  font-family: "Stratum2Web";
+  src:
+    url("../fonts/Stratum2WebMedium.woff") format("woff"),
+    url("../fonts/Stratum2WebMedium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebBold.woff') format('woff'),
-    url('../fonts/Stratum2WebBold.woff2') format('woff2');
+  font-family: "Stratum2Web";
+  src:
+    url("../fonts/Stratum2WebBold.woff") format("woff"),
+    url("../fonts/Stratum2WebBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebBlack.woff') format('woff'),
-    url('../fonts/Stratum2WebBlack.woff2') format('woff2');
+  font-family: "Stratum2Web";
+  src:
+    url("../fonts/Stratum2WebBlack.woff") format("woff"),
+    url("../fonts/Stratum2WebBlack.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -56,87 +63,87 @@
 $utilities: map-merge-multiple(
   $utilities,
   (
-    'color':
-      map-merge(
-        map-get($utilities, 'color'),
-        (
-          values:
-            map-merge(
-              map-get(map-get($utilities, 'color'), 'values'),
-              $osu-colors-text
-            )
+    "color":
+    map-merge(
+      map-get($utilities, "color"),
+      (
+        values:
+        map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          $osu-colors-text
         )
-      ),
-    'osu-text-colors': (
+      )
+    ),
+    "osu-text-colors": (
       property: color,
       class: osu-text,
       values: $osu-colors-text
     )
   ),
   (
-    'background-color': (
+    "background-color": (
       property: background-color,
       class: bg,
       values:
-        map-merge-multiple(
-          $osu-colors-all,
-          (
-            'transparent': transparent
-          )
+      map-merge-multiple(
+        $osu-colors-all,
+        (
+          "transparent": transparent
         )
+      )
     ),
-    'osu-background-color': (
+    "osu-background-color": (
       property: background-color,
       class: osu-bg,
       values:
-        map-merge-multiple(
-          $osu-bg-colors,
-          (
-            'menu': $neutral-200
-          ),
-          (
-            'transparent': transparent
-          )
+      map-merge-multiple(
+        $osu-bg-colors,
+        (
+          "menu": $neutral-200
+        ),
+        (
+          "transparent": transparent
         )
-    )
-  ),
-  (
-    'osu-shadows': (
-      property: box-shadow,
-      class: osu-shadow,
-      values: (
-        null: 0 2px 3px rgba(0, 0, 0, 0.25)
       )
     )
   ),
   (
-    'border-color': (
+    "osu-shadows": (
+      property: box-shadow,
+      class: osu-shadow,
+      values: (
+        null: 0 2px 3px rgb(0 0 0 / 25%)
+      )
+    )
+  ),
+  (
+    "border-color": (
       property: border-color,
       class: border,
       values: map-merge($theme-colors, $osu-colors-all)
     )
   ),
   (
-    'font-family': (
+    "font-family": (
       property: font-family,
       class: font,
       values:
-        map-merge(
-          map-get(map-get($utilities, 'font-family'), 'values'),
-          (
-            'stratum2web': (
-              'Stratum2Web',
-              serif
-            )
+      map-merge(
+        map-get(map-get($utilities, "font-family"), "values"),
+        (
+          "stratum2web": (
+            "Stratum2Web",
+            serif
           )
         )
+      )
     )
   )
 );
 
-@import '../node_modules/bootstrap/scss/bootstrap';
-@import 'scss/osu_mixins';
-@import 'scss/osu_utilities';
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "scss/osu_mixins";
+@import "scss/osu_utilities";
 
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
@@ -146,40 +153,40 @@ $utilities: map-merge-multiple(
 
 /** Theme Defaults **/
 h1 {
+  text-transform: uppercase;
   color: rgba($osuorange, 1);
-  font-family: 'Stratum2Web', serif;
+  font-family: "Stratum2Web", serif;
   font-size: 48px;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 h2 {
-  font-family: 'Stratum2Web', serif;
+  font-family: "Stratum2Web", serif;
   font-size: 36px;
   font-weight: 400;
 }
 
 h3 {
   color: rgba($osuorange, 1);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 28px;
   font-weight: 500;
 }
 
 h4 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 22px;
   font-weight: 600;
 }
 
 h5 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
 
 h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 600;
 }
@@ -196,7 +203,7 @@ a {
 
   &.nav-link:hover,
   &.nav-link:focus {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgb(0 0 0 / 70%);
   }
 
   &.button {
@@ -221,32 +228,30 @@ a {
   padding-inline: 1.5rem;
 }
 
-.block-system-main-block
-  ul:not(.nav):not(.navbar):not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items)
-  > li {
+.block-system-main-block ul:not(.nav):not(.navbar):not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li {
   &::marker {
-    color: rgba($body-color, 1);
-    content: '\f054\2000';
     display: inline-block;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+    content: "\f054\2000";
     letter-spacing: normal;
+    color: rgba($body-color, 1);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
   }
 }
 
 em.placeholder {
-  background-color: unset;
-  cursor: unset;
   display: unset;
   min-height: unset;
-  opacity: unset;
+  cursor: unset;
   vertical-align: unset;
+  opacity: unset;
+  background-color: unset;
 }
 
 blockquote {
-  border: 5px solid $neutral-200;
   padding: 2.5em 3.75em;
-  font-family: 'Georgia', 'DejaVu Serif', serif;
+  border: 5px solid $neutral-200;
+  font-family: Georgia, "DejaVu Serif", serif;
   font-size: 1.125rem;
 }
 
@@ -254,14 +259,14 @@ blockquote {
   background-color: $bucktoothwhite;
 }
 
-@import 'scss/osu_header';
-@import 'scss/osu_footer';
-@import 'scss/superfish';
-@import 'scss/osu_forms';
-@import 'scss/pager';
-@import 'scss/osu_buttons';
-@import 'scss/osu_media';
-@import 'scss/osu_messages';
-@import 'scss/osu_tables';
-@import 'scss/osu_layout_builder';
-@import 'scss/osu_ckeditor';
+@import "scss/osu_header";
+@import "scss/osu_footer";
+@import "scss/superfish";
+@import "scss/osu_forms";
+@import "scss/pager";
+@import "scss/osu_buttons";
+@import "scss/osu_media";
+@import "scss/osu_messages";
+@import "scss/osu_tables";
+@import "scss/osu_layout_builder";
+@import "scss/osu_ckeditor";

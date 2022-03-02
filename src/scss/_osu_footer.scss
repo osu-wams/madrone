@@ -1,25 +1,5 @@
-.footer {
-  background: #2e2b2a url('../assets/footer-trees.png') repeat-x scroll left
-    bottom;
-  color: white;
-  padding: 2.5em;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer a {
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: white;
-}
-.madrone-footer {
-  margin-bottom: auto;
-}
-
-.madrone-copyright {
-  margin-top: auto;
-  align-self: center;
-}
-
-@media (min-width: 750px) {
+footer {
+  .region-footer {
+    background: $neutral-800 url('../assets/footer-trees.png') repeat-x scroll left bottom;
+  }
 }

@@ -12,33 +12,38 @@
  * @see template_preprocess_region()
  */
 #}
-{% set region_id = 'madrone-' ~ region|clean_class ~ '-container' %}
-{% set region_class = [
-  'madrone-' ~ region|clean_class
+{% set classes = [
+  'region',
+  'region-' ~ region|clean_class,
+  'osu-text-bucktoothwhite',
+  'osu-min-h-300',
+  'px-4',
+  'pt-5',
+  'pb-1',
+  'd-flex',
+  'flex-column',
+  'justify-content-between'
 ] %}
 
-{%
-  set classes = [
-    'footer',
-    'region',
-    'region-' ~ region|clean_class,
-    'osu-min-h-300',
-    'bg-primary',
-    'position-relative',
-  ]
-%}
-
+{% set region_id = 'madrone-' ~ region|clean_class ~ '-container' %}
+{% set region_class = [
+  'madrone-' ~ region|clean_class,
+  'mb-auto'
+] %}
 
 <div{{ attributes.addClass(classes) }}>
-    <div{{ attributes.setAttribute('id', region_id).addClass(region_class).removeClass(classes) }}>
-      {{ content }}
-    </div>
-    <div class="madrone-copyright" >
-      <p>
-        <a target="_blank" href="https://oregonstate.edu/copyright">{{ 'Copyright'|t }}</a> &#169; {{ 'now'|date('Y') }} Oregon State University |
-        <a target="_blank" href="https://oregonstate.edu/official-web-disclaimer">{{ 'Privacy Disclaimer and Accessibility Information'|t }}</a>
-      </p>
-    </div>
+  <div{{ attributes.setAttribute('id', region_id).addClass(region_class).removeClass(classes) }}>
+    {{ content }}
+  </div>
+  <div class="madrone-copyright align-self-center">
+    <p>
+      <a target="_blank" class="osu-text-bucktoothwhite osu-text-decoration-bucktoothwhite"
+         href="https://oregonstate.edu/copyright">{{ 'Copyright'|t }}</a> &#169; {{ 'now'|date('Y') }}
+      Oregon State University |
+      <a target="_blank" class="osu-text-bucktoothwhite osu-text-decoration-bucktoothwhite"
+         href="https://oregonstate.edu/official-web-disclaimer">{{ 'Privacy Disclaimer and Accessibility Information'|t }}</a>
+    </p>
+  </div>
 </div>
 
 
