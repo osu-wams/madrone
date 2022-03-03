@@ -12402,6 +12402,10 @@ a.button:focus,
   background-color: transparent;
 }
 
+#drupal-off-canvas div.form-item {
+  width: 100% !important;
+}
+
 /* only changes to ckeditor with the included styles. */
 body.cke_editable_themed {
   padding: 1rem;
