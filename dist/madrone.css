@@ -12411,7 +12411,7 @@ a.button:focus,
 }
 
 #drupal-off-canvas div.form-item {
-  width: 100% !important;
+  width: initial !important;
 }
 
 /* only changes to ckeditor with the included styles. */
