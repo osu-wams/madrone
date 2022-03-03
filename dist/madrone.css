@@ -12236,6 +12236,14 @@ blockquote {
 footer .region-footer {
   background: #2e2b2a url("../assets/footer-trees.png") repeat-x scroll left bottom;
 }
+footer a {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+footer a:hover {
+  color: #fff;
+  text-decoration-color: #fff;
+}
 
 .madrone-primary-menu > .block-superfish ul.sf-menu {
   line-height: 1.75rem;
