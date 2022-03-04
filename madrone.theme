@@ -172,13 +172,8 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       break;
 
     case 'entity_view_display_layout_builder_form':
-      $form['#attributes']['class'][] = 'container';
-      break;
-
     case 'node_page_layout_builder_form':
-      $form['#attributes']['class'][] = 'container';
-      break;
-
+    case 'layout_builder_discard_changes':
     case 'layout_builder_revert_overrides':
       $form['#attributes']['class'][] = 'container';
       break;
