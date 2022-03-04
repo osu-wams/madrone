@@ -118,6 +118,15 @@ function madrone_preprocess_block(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
+function madrone_preprocess_form_element(&$variables) {
+  if ($variables['element']['#madrone_is_header_search_submit']) {
+    $variables['full_width'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function madrone_preprocess_input(&$variables) {
   $input_type = $variables['element']['#type'];
   switch ($input_type) {

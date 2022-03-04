@@ -53,7 +53,7 @@
   title_display not in ['after', 'before'] ? 'form-no-label',
   disabled == 'disabled' ? 'form-disabled',
   errors ? 'form-item--error',
-  type in ['textarea', 'item', 'vertical_tabs']  ? 'col-12' : 'col-md-4 col-12'
+  type in ['textarea', 'item', 'vertical_tabs'] or full_width ? 'col-12' : 'col-md-4 col-12'
 ] %}
 {% set description_classes = [
   'description',
