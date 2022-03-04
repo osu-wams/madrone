@@ -71,6 +71,10 @@
   }
 }
 
+.osu-text-decoration {
+  text-decoration-color: $osuorange !important;
+}
+
 .osu-text-decoration-bucktoothwhite {
-  text-decoration-color: $bucktoothwhite;
+  text-decoration-color: $bucktoothwhite !important;
 }
