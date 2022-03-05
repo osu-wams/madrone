@@ -12418,6 +12418,10 @@ a.button:focus,
   width: initial !important;
 }
 
+#drupal-modal .form-item {
+  width: initial !important;
+}
+
 /* only changes to ckeditor with the included styles. */
 body.cke_editable_themed {
   padding: 1rem;
