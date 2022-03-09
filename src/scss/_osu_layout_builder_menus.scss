@@ -35,6 +35,7 @@ main {
   nav {
     // hide sub menus
     & ul.menu {
+      // negate !important class adding padding to the nav
       margin-top: -0.25rem;
       margin-bottom: -0.25rem;
       li a::after {
