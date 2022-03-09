@@ -1,0 +1,84 @@
+main {
+  // styles based on section colors
+  .osu-bg-page-default nav ul.menu {
+    li a {
+      color: $paddletailblack !important;
+      background-color: $page-bg-default !important;
+    }
+    li a:hover {
+      color: $bucktoothwhite !important;
+      background-color: $osuorange !important;
+    }
+  }
+
+  .osu-bg-page-alt-1 nav ul.menu {
+    li a {
+      color: $paddletailblack;
+    }
+    li a:hover {
+      color: $page-bg-default;
+      background-color: $osuorange;
+    }
+  }
+
+  .osu-bg-page-alt-2 nav ul.menu {
+    li a {
+      background-color: $paddletailblack !important;
+      color: $bucktoothwhite !important;
+    }
+    li a:hover {
+      color: $paddletailblack !important;
+      background-color: $page-bg-default !important;
+    }
+  }
+
+  nav {
+    // hide sub menus
+    & ul.menu {
+      margin-top: -0.25rem;
+      margin-bottom: -0.25rem;
+      li a::after {
+        display: none;
+      }
+      li ul {
+        display: none;
+      }
+    }
+
+    // style for osu-bg-page-default block background
+    &.osu-bg-page-default ul.menu {
+      li a {
+        color: $paddletailblack !important;
+        background-color: $page-bg-default !important;
+      }
+      li a:hover {
+        color: $bucktoothwhite !important;
+        background-color: $osuorange !important;
+      }
+    }
+
+    // style for osu-bg-page-alt-1 block background
+    &.osu-bg-page-alt-1 ul.menu {
+      li a {
+        color: $paddletailblack !important;
+        background-color: $bucktoothwhite !important;
+      }
+      li a:hover {
+        color: $bucktoothwhite !important;
+        background-color: $osuorange !important;
+      }
+    }
+
+    // style for osu-bg-page-alt-2 block background
+    &.osu-bg-page-alt-2 ul.menu {
+      li a {
+        background-color: $paddletailblack !important;
+        color: $bucktoothwhite !important;
+      }
+      li a:hover {
+        color: $paddletailblack !important;
+        background-color: $bucktoothwhite !important;
+      }
+    }
+  }
+}
