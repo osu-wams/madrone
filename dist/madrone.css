@@ -12422,6 +12422,64 @@ a.button:focus,
   width: initial !important;
 }
 
+main .osu-bg-page-default nav ul.menu li a {
+  color: #212529 !important;
+  background-color: #f7f5f5 !important;
+}
+main .osu-bg-page-default nav ul.menu li a:hover {
+  color: #fff !important;
+  background-color: #d73f09 !important;
+}
+main .osu-bg-page-alt-1 nav ul.menu li a {
+  color: #212529;
+}
+main .osu-bg-page-alt-1 nav ul.menu li a:hover {
+  color: #f7f5f5;
+  background-color: #d73f09;
+}
+main .osu-bg-page-alt-2 nav ul.menu li a {
+  background-color: #212529 !important;
+  color: #fff !important;
+}
+main .osu-bg-page-alt-2 nav ul.menu li a:hover {
+  color: #212529 !important;
+  background-color: #f7f5f5 !important;
+}
+main nav ul.menu {
+  margin-top: -0.25rem;
+  margin-bottom: -0.25rem;
+}
+main nav ul.menu li a::after {
+  display: none;
+}
+main nav ul.menu li ul {
+  display: none;
+}
+main nav.osu-bg-page-default ul.menu li a {
+  color: #212529 !important;
+  background-color: #f7f5f5 !important;
+}
+main nav.osu-bg-page-default ul.menu li a:hover {
+  color: #fff !important;
+  background-color: #d73f09 !important;
+}
+main nav.osu-bg-page-alt-1 ul.menu li a {
+  color: #212529 !important;
+  background-color: #fff !important;
+}
+main nav.osu-bg-page-alt-1 ul.menu li a:hover {
+  color: #fff !important;
+  background-color: #d73f09 !important;
+}
+main nav.osu-bg-page-alt-2 ul.menu li a {
+  background-color: #212529 !important;
+  color: #fff !important;
+}
+main nav.osu-bg-page-alt-2 ul.menu li a:hover {
+  color: #212529 !important;
+  background-color: #fff !important;
+}
+
 /* only changes to ckeditor with the included styles. */
 body.cke_editable_themed {
   padding: 1rem;
