@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
 });
 
 /**
- *
+ *  Update text next to menu name to Close when Opened.
  * @param sfToggle
  */
 function menuClickedText(sfToggle) {
