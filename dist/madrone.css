@@ -12221,11 +12221,11 @@ blockquote {
 footer .region-footer {
   background: #2e2b2a url("../assets/footer-trees.png") repeat-x scroll left bottom;
 }
-footer .region-footer a {
+footer a {
   color: #fff;
   text-decoration-color: #fff;
 }
-footer .region-footer a:hover {
+footer a:hover {
   color: #fff;
   text-decoration-color: #fff;
 }
@@ -12413,9 +12413,6 @@ a.button:focus,
   background-color: transparent;
 }
 
-#drupal-off-canvas .messages.messages.messages--error p {
-  color: #212529;
-}
 #drupal-off-canvas div.form-item {
   width: initial !important;
 }
