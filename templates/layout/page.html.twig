@@ -43,7 +43,7 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
+<div class="layout-container min-vh-100 d-flex flex-column">
 
   <header class="container-fluid osu-bg-page-alt-1 g-0" role="banner">
     {{ page.header }}
@@ -59,7 +59,7 @@
     'layout-content',
     page.sidebar ? 'col-lg-9 col-xxl-10' : 'col-xxl-12'
   ] %}
-  <div class="container-fluid gx-0 overflow-hidden">
+  <div class="container-fluid gx-0 overflow-hidden flex-fill">
     <main class="row gx-3 gx-lg-0" role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       <div{{ content_attributes.addClass(content_classes) }}>
@@ -76,7 +76,7 @@
   </div>
   {{ page.pre_footer }}
 
-  <footer class="container-fluid g-0" role="contentinfo">
+  <footer class="container-fluid g-0 mt-auto" role="contentinfo">
     {{ page.footer }}
   </footer>
 
