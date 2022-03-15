@@ -5,8 +5,14 @@
   background-color: transparent;
 }
 
-#drupal-off-canvas div.form-item {
-  width: initial !important;
+#drupal-off-canvas {
+  .messages.messages.messages--error p {
+    color: $paddletailblack;
+  }
+
+  div.form-item {
+    width: initial !important;
+  }
 }
 
 #drupal-modal .form-item {
