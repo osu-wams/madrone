@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   drupal:
-    image: docker.io/osuwams/drupal:8-apache-dev
+    image: docker.io/osuwams/drupal:9-apache-dev
     environment:
       - DRUPAL_DBHOST=database
       - DRUPAL_DBUSER=drupal
