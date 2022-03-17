@@ -35,6 +35,7 @@ function madrone_preprocess(&$variables, $hook) {
   }
   $variables['hide_title_front'] = theme_get_setting('madrone_front_title') ? TRUE : FALSE;
   $variables['#cache']['contexts'][] = 'url.path.is_front';
+  $variables['monsido_site_id'] = theme_get_setting('madrone_monsido_site_id');
 }
 
 /**
