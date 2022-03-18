@@ -62,7 +62,19 @@
 .osu-justify-content-end {
   @extend .justify-content-end;
 }
+/* Enhancements for Navigation Blocks */
+.osu-nav-column ul.nav-pills {
+  @extend .flex-column;
+}
 
+.osu-nav-fill ul.nav-pills {
+  @extend .nav-fill;
+}
+
+.osu-nav-justified ul.nav-pills {
+  @extend .nav-justified;
+}
+/* Shh, tis a secret */
 .osu-hover-pop {
   transition: all 250ms ease;
 

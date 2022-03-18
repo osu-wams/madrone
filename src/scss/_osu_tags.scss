@@ -1,0 +1,14 @@
+.field--name-field-tags {
+  .field__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .field__item {
+      a {
+        @extend .btn;
+        @extend .btn-primary;
+      }
+    }
+  }
+}

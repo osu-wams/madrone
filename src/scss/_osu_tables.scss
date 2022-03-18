@@ -21,3 +21,7 @@
     @extend .table-osuorange;
   }
 }
+
+.madrone-content table:not(.osu-table):not(.osu-table-orange) {
+  @extend .osu-table;
+}
