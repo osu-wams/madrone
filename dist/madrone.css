@@ -7235,11 +7235,11 @@ textarea.form-control-lg {
   justify-content: flex-start !important;
 }
 
-.justify-content-end, .osu-justify-content-end {
+.justify-content-end, .osu-nav-end ul.nav-pills, .osu-justify-content-end {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, .osu-justify-content-center {
+.justify-content-center, .osu-nav-centered ul.nav-pills, .osu-justify-content-center {
   justify-content: center !important;
 }
 

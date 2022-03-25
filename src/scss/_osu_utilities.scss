@@ -74,6 +74,16 @@
 .osu-nav-justified ul.nav-pills {
   @extend .nav-justified;
 }
+
+.osu-nav-centered ul.nav-pills {
+  @extend .justify-content-center;
+}
+
+.osu-nav-end ul.nav-pills {
+  @extend .justify-content-end;
+}
+
+
 /* Shh, tis a secret */
 .osu-hover-pop {
   transition: all 250ms ease;
