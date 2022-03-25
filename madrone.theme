@@ -85,7 +85,7 @@ function madrone_preprocess_html(&$variables) {
  */
 function madrone_preprocess_node(&$variables) {
   if (count($variables['elements']['_layout_builder']) == 1) {
-    $variables['attributes']['class'][] = 'container';
+    array_push($variables['attributes']['class'], 'container', 'mb-2');
   }
 }
 
