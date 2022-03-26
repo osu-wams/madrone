@@ -18,3 +18,7 @@
 #drupal-modal .form-item {
   width: initial !important;
 }
+
+.node-layout-builder-form {
+  @extend .container;
+}

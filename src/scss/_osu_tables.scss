@@ -8,6 +8,11 @@
 
   & > thead {
     @extend .table-dark;
+
+    a {
+      color: $bucktoothwhite;
+      text-decoration-color: $bucktoothwhite;
+    }
   }
 }
 
@@ -19,6 +24,11 @@
 
   & > thead {
     @extend .table-osuorange;
+
+    a {
+      color: $bucktoothwhite;
+      text-decoration-color: $bucktoothwhite;
+    }
   }
 }
 

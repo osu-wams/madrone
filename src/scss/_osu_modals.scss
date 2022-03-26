@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Styles for Drupal Modal Windows.
+ */
+
+.ui-widget-overlay {
+  background: $black;
+  opacity: 0.7;
+}
+
+.ui-dialog {
+  border-radius: 0;
+  z-index: 999;
+}
+
+.ui-dialog input,
+.ui-dialog select,
+.ui-dialog textarea {
+  font-size: $font-size-base;
+}
+
+.ui-dialog .button {
+  @extend .osu-btn-primary
+}
