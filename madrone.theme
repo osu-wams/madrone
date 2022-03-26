@@ -115,8 +115,8 @@ function madrone_preprocess_block(&$variables) {
       }
       if ($variables['base_plugin_id'] == 'system_branding_block') {
         $themeCrestPath = '/' . Drupal::theme()
-            ->getActiveTheme()
-            ->getPath() . '/assets/osu-logo-crest-only.svg';
+          ->getActiveTheme()
+          ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
       }
       $variables['content']['#attributes']['region'] = $region;
@@ -296,6 +296,7 @@ function madrone_preprocess_menu_local_action(&$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'btn';
   $variables['link']['#options']['attributes']['class'][] = 'osu-btn-primary';
 }
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
