@@ -11644,31 +11644,31 @@ textarea.form-control-lg {
     disabled border color,
     disabled color
  */
-.osu-btn-primary, a.button {
+.osu-btn-primary, .ui-dialog .button, a.button {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
 }
-.osu-btn-primary:hover, a.button:hover {
+.osu-btn-primary:hover, .ui-dialog .button:hover, a.button:hover {
   color: #fff;
   background-color: #212529;
   border-color: #212529;
 }
-.btn-check:focus + .osu-btn-primary, .btn-check:focus + a.button, .osu-btn-primary:focus, a.button:focus {
+.btn-check:focus + .osu-btn-primary, .ui-dialog .btn-check:focus + .button, .btn-check:focus + a.button, .osu-btn-primary:focus, .ui-dialog .button:focus, a.button:focus {
   color: #fff;
   background-color: #212529;
   border-color: #212529;
   box-shadow: 0 0 0 0 rgba(221, 92, 46, 0.5);
 }
-.btn-check:checked + .osu-btn-primary, .btn-check:checked + a.button, .btn-check:active + .osu-btn-primary, .btn-check:active + a.button, .osu-btn-primary:active, a.button:active, .osu-btn-primary.active, a.active.button, .show > .osu-btn-primary.dropdown-toggle, .show > a.dropdown-toggle.button {
+.btn-check:checked + .osu-btn-primary, .ui-dialog .btn-check:checked + .button, .btn-check:checked + a.button, .btn-check:active + .osu-btn-primary, .ui-dialog .btn-check:active + .button, .btn-check:active + a.button, .osu-btn-primary:active, .ui-dialog .button:active, a.button:active, .osu-btn-primary.active, .ui-dialog .active.button, a.active.button, .show > .osu-btn-primary.dropdown-toggle, .ui-dialog .show > .dropdown-toggle.button, .show > a.dropdown-toggle.button {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
 }
-.btn-check:checked + .osu-btn-primary:focus, .btn-check:checked + a.button:focus, .btn-check:active + .osu-btn-primary:focus, .btn-check:active + a.button:focus, .osu-btn-primary:active:focus, a.button:active:focus, .osu-btn-primary.active:focus, a.active.button:focus, .show > .osu-btn-primary.dropdown-toggle:focus, .show > a.dropdown-toggle.button:focus {
+.btn-check:checked + .osu-btn-primary:focus, .ui-dialog .btn-check:checked + .button:focus, .btn-check:checked + a.button:focus, .btn-check:active + .osu-btn-primary:focus, .ui-dialog .btn-check:active + .button:focus, .btn-check:active + a.button:focus, .osu-btn-primary:active:focus, .ui-dialog .button:active:focus, a.button:active:focus, .osu-btn-primary.active:focus, .ui-dialog .active.button:focus, a.active.button:focus, .show > .osu-btn-primary.dropdown-toggle:focus, .ui-dialog .show > .dropdown-toggle.button:focus, .show > a.dropdown-toggle.button:focus {
   box-shadow: 0 0 0 0 rgba(221, 92, 46, 0.5);
 }
-.osu-btn-primary:disabled, a.button:disabled, .osu-btn-primary.disabled, a.disabled.button {
+.osu-btn-primary:disabled, .ui-dialog .button:disabled, a.button:disabled, .osu-btn-primary.disabled, .ui-dialog .disabled.button, a.disabled.button {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
@@ -12404,6 +12404,7 @@ nav.pager ul.pager__items li.pager__item a {
 .osu-btn-dark:focus,
 .osu-btn-dark:active:focus,
 .osu-btn-primary:focus,
+.ui-dialog .button:focus,
 a.button:focus,
 .osu-btn-primary:active:focus {
   box-shadow: none;
@@ -12538,5 +12539,24 @@ body.cke_editable_themed {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+/**
+ * @file
+ * Styles for Drupal Modal Windows.
+ */
+.ui-widget-overlay {
+  background: #000;
+  opacity: 0.7;
+}
+
+.ui-dialog {
+  border-radius: 0;
+  z-index: 999;
+}
+
+.ui-dialog input,
+.ui-dialog select,
+.ui-dialog textarea {
+  font-size: 1rem;
 }
 /*# sourceMappingURL=madrone.css.map */
