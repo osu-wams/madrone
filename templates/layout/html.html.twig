@@ -30,6 +30,24 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
+
+    {% if monsido_site_id %}
+    <script type="text/javascript">
+      window._monsido = window._monsido || {
+          token: "{{ monsido_site_id }}",
+          statistics: {
+              enabled: true,
+              documentTracking: {
+                  enabled: false,
+                  documentCls: "monsido_download",
+                  documentIgnoreCls: "monsido_ignore_download",
+                  documentExt: ["pdf","doc","ppt","docx","pptx"],
+              },
+          },
+      };
+    </script>
+    <script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+    {% endif %}
   </head>
   <body{{ attributes.addClass('bg-neutral-100') }}>
     {#
