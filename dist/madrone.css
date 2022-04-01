@@ -12456,6 +12456,9 @@ a.button:focus,
 .layout-builder-block {
   background-color: transparent;
 }
+.layout-builder-block:not([class*=osu-min-h-]) {
+  min-height: 13rem;
+}
 
 #drupal-off-canvas .messages.messages.messages--error p {
   color: #212529;

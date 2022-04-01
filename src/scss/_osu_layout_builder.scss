@@ -3,6 +3,10 @@
 /* Remove background on block sections in Layout Builder */
 .layout-builder-block {
   background-color: transparent;
+
+  &:not([class*='osu-min-h-']) {
+    min-height: 13rem;
+  }
 }
 
 #drupal-off-canvas {
