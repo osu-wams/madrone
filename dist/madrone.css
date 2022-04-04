@@ -12421,6 +12421,10 @@ a.button:focus,
   width: initial !important;
 }
 
+.input-icon.fade-zoom-in {
+  background-image: url(themes/custom/madrone/assets/fade-zoom-in.svg);
+}
+
 main .osu-bg-page-default nav ul.menu li a {
   color: #212529 !important;
   background-color: #f7f5f5 !important;
