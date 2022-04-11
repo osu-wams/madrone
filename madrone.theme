@@ -208,18 +208,14 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
         $form['layout_settings']['ui']['tab_content']['layout']['container_type']['#default_value'] = 'container-fluid';
         $form['layout_settings']['ui']['tab_content']['layout']['remove_gutters']['#default_value'] = 0;
         $form['layout_settings']['ui']['tab_content']['appearance']['spacing']['padding']['#default_value'] = 2;
-        $form['layout_settings']['ui']['tab_content']['appearance']['spacing']['margin_top']['#default_value'] = 1;
-        $form['layout_settings']['ui']['tab_content']['appearance']['spacing']['margin_bottom']['#default_value'] = 1;
       }
       break;
 
     // For New Blocks.
     case 'layout_builder_add_block':
-      $form['ui']['tab_content']['appearance']['spacing']['padding_top']['#default_value'] = 1;
-      $form['ui']['tab_content']['appearance']['spacing']['padding_bottom']['#default_value'] = 1;
-      $form['ui']['tab_content']['appearance']['spacing']['margin_bottom']['#default_value'] = 1;
+      $form['ui']['tab_content']['appearance']['spacing']['padding']['#default_value'] = 1;
+      $form['ui']['tab_content']['appearance']['spacing']['margin']['#default_value'] = 1;
       break;
-
   }
 }
 
