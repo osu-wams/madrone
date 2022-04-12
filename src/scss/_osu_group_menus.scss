@@ -1,0 +1,40 @@
+.block-group-content-menu {
+  .menu--level-1 {
+    display: flex;
+    flex-direction: row;
+    background-color: $neutral-200;
+
+    // active class causes weird coloring
+    li a.active {
+      background-color: $neutral-200;
+    }
+
+    li a:hover {
+      background-color: $neutral-700 !important;
+      color: $bucktoothwhite;
+    }
+
+    ul {
+      flex-direction: column;
+      padding-left: 0px;
+      display: none;
+      position: absolute;
+      float: none;
+      min-width: 6rem;
+      z-index: 499;
+
+      li {
+        display: unset;
+        background-color: $bucktoothwhite;
+      }
+
+      li ul {
+        top: 0;
+      }
+    }
+
+    li:hover > ul {
+      display: flex;
+    }
+  }
+}
