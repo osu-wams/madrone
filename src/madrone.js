@@ -10,6 +10,17 @@ window.addEventListener('load', () => {
       })
     })
   });
+
+  // handle group menu horizontal spacing
+  const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul .menu--__submenu')];
+  // groupMenus.shift();
+  groupMenus.forEach(menu => {
+    if (!menu.classList.contains('menu--level-2')) {
+      menu.addEventListener("mouseenter", function(event) {
+        this.style.left = this.parentNode.offsetWidth + 'px';
+      });
+    }
+  });
 });
 
 /**
@@ -24,3 +35,5 @@ function menuClickedText(sfToggle) {
     sfToggle.textContent = sfToggle.textContent.replace('Close ', '');
   }
 }
+
+
