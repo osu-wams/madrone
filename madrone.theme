@@ -11,22 +11,6 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_preprocess().
  */
 function madrone_preprocess(&$variables, $hook) {
-  // Check if node is set
-  // and that it is an instance of Content Entity Interface.
-  /*  if (isset($variables['node']) && $variables['node']
-  instanceof ContentEntityInterface) {
-  $nodeGroups = GroupContent::loadByEntity($variables['node']);
-  if (!empty($nodeGroups)) {
-  foreach ($nodeGroups as $group) {
-  $variables['in_group'] = TRUE;
-  $variables['groups'][] = $group->getGroup()->label();
-  }
-  }
-  else {
-  $variables['in_group'] = FALSE;
-  }
-  }
-   */
   try {
     $variables['is_front'] = Drupal::service('path.matcher')->isFrontPage();
   }
@@ -85,7 +69,11 @@ function madrone_preprocess_html(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function madrone_preprocess_node(&$variables) {
-  if (count($variables['elements']['_layout_builder']) == 1) {
+  // Ran into an issue when using views with display as content view modes
+  // rather than using fields.
+  if ($variables['elements']['#view_mode'] === 'full'
+    && !array_key_exists('view', $variables)
+    && count($variables['elements']['_layout_builder']) == 1) {
     array_push($variables['attributes']['class'], 'container', 'mb-2');
   }
 }
@@ -119,6 +107,12 @@ function madrone_preprocess_block(&$variables) {
           ->getActiveTheme()
           ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
+        if (array_key_exists('site_path', $variables['content'])) {
+          $variables['site_path'] = $variables['content']['site_path']['#uri'];
+        }
+        else {
+          $variables['site_path'] = $variables['base_path'];
+        }
       }
       $variables['content']['#attributes']['region'] = $region;
     }
