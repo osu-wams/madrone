@@ -12446,6 +12446,7 @@ a.button:focus,
   background-color: #d73f09;
   color: #fff;
   padding: 0.25em 0.5em;
+  padding-right: 2.5em !important;
 }
 .dropbutton-wrapper .dropbutton-widget:hover, .dropbutton-wrapper .dropbutton-widget:focus-within, .dropbutton-wrapper .dropbutton-widget:focus {
   background-color: #fff;
