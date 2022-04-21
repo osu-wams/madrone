@@ -74,7 +74,12 @@ function madrone_preprocess_node(&$variables) {
   if ($variables['elements']['#view_mode'] === 'full'
     && !array_key_exists('view', $variables)
     && count($variables['elements']['_layout_builder']) == 1) {
-    array_push($variables['attributes']['class'], 'container', 'mb-2');
+    if (array_key_exists('class', $variables['attributes'])) {
+      array_push($variables['attributes']['class'], 'container', 'mb-2');
+    }
+    else {
+      $variables['attributes']['class'] = ['container', 'mb-2'];
+    }
   }
 }
 
