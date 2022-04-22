@@ -1,4 +1,5 @@
 .block-group-content-menu {
+  .menu--level-0,
   .menu--level-1 {
     display: flex;
     flex-direction: row;
@@ -9,19 +10,24 @@
       background-color: $neutral-200;
     }
 
-    li a:hover {
-      background-color: $neutral-700 !important;
-      color: $bucktoothwhite;
+    @media (hover: hover) and (pointer: fine) {
+      li a:hover {
+        background-color: $neutral-700;
+        color: $bucktoothwhite;
+      }
     }
 
     ul {
       flex-direction: column;
       padding-left: 0px;
       display: none;
-      position: absolute;
       float: none;
       min-width: 6rem;
       z-index: 499;
+
+      @media screen and (min-width:768px) {
+        position: absolute;
+      }
 
       li {
         display: unset;
@@ -33,8 +39,71 @@
       }
     }
 
-    li:hover > ul {
-      display: flex;
+    @media (hover: hover) and (pointer: fine) {
+      li:hover {
+        > ul {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .group-mobile-menu {
+
+    li a.group-mobile-main-a {
+      font-weight: 600;
+
+      // Main menu hamburger symbol
+      &::before {
+        content: "\f0c9";
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        letter-spacing: 1rem;
+      }
+    }
+
+    li {
+      width: 100%;
+      background-color: $neutral-200 !important;
+    }
+
+    $menu-depth: 0;
+    @for $i from 1 through 9 {
+      .menu--level-#{$i} {
+        padding-left: #{$menu-depth}px;
+        $menu-depth: $menu-depth +7.5;
+      }
+    }
+
+    // sub menu downward chevron
+    .group-sub-menu >a::after {
+      color: #423e3c;
+      content: " \f078";
+      display: inline-block;
+      font-family: "Font Awesome 5 Free";
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: normal;
+    }
+
+    .group-menu-clicked {
+      > ul {
+        display: flex;
+      }
+
+      > a {
+        background-color: $neutral-700 !important;
+        color: $bucktoothwhite !important;
+
+        &::after {
+          color: $bucktoothwhite !important;
+        }
+      }
+    }
+
+    > ul {
+      display: none;
     }
   }
 }
