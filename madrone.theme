@@ -312,7 +312,7 @@ function madrone_theme_suggestions_image_alter(array &$suggestions, array $varia
 }
 
 /**
- * Helper function to check if current page is associated with a group
+ * Helper function to check if current page is associated with a group.
  */
 function is_group_page() {
   if (\Drupal::service('module_handler')->moduleExists('osu_groups')) {
