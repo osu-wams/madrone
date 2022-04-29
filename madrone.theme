@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+use Drupal\osu_groups\OsuGroupsHandler;
 
 /**
  * Implements hook_preprocess().
@@ -87,6 +89,8 @@ function madrone_preprocess_node(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function madrone_preprocess_block(&$variables) {
+  // Variable true if current page is a group page. Used to hide main nav.
+  $variables['is_group_page'] = is_group_page();
   // Adding a base_path variable to block template.
   $variables['base_path'] = base_path();
   // Adding region specific templates.
@@ -305,4 +309,27 @@ function madrone_theme_suggestions_image_style_alter(array &$suggestions, array 
  */
 function madrone_theme_suggestions_image_alter(array &$suggestions, array $variables) {
   $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['style_name'];
+}
+
+/**
+ * Helper function to check if current page is associated with a group.
+ *
+ * @return bool
+ *   True if current page is in a group and false if not.
+ */
+function is_group_page() {
+  if (\Drupal::service('module_handler')->moduleExists('osu_groups')) {
+    $current_path = Drupal::service('path.current')->getPath();
+    $path = Drupal::service('path_alias.manager')->getPathByAlias($current_path);
+    if (preg_match('/node\/(\d+)/', $path, $matches)) {
+      $node = Node::load($matches[1]);
+      $osu_groups = new OsuGroupsHandler();
+      $group_content = $osu_groups->getGroupContentFromNode($node);
+      if ($group_content) {
+        return TRUE;
+      }
+    }
+  }
+
+  return FALSE;
 }
