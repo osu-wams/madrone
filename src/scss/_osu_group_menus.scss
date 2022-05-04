@@ -93,12 +93,7 @@
       }
 
       > a {
-        background-color: $neutral-700 !important;
-        color: $bucktoothwhite !important;
-
-        &::after {
-          color: $bucktoothwhite !important;
-        }
+        background-color: $bucktoothwhite !important;
       }
     }
 
