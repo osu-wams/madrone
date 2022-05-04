@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
   });
 
   // handle group menu horizontal spacing
-  const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul .menu--__submenu')];
+  const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul li ul')];
   groupMenus.forEach(menu => {
     if (!menu.classList.contains('menu--level-2')) {
       menu.addEventListener("mouseenter", function(event) {
