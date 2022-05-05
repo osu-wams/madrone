@@ -12,8 +12,8 @@
 
     @media (hover: hover) and (pointer: fine) {
       li a:hover {
-        background-color: $neutral-700;
-        color: $bucktoothwhite;
+        background-color: $bucktoothwhite;
+        color: $paddletailblack
       }
     }
 
@@ -61,8 +61,19 @@
 
   // sub menus level 2 and below greater than chevron >
   .menu--level-2 {
-    .group-sub-menu >a::after{
+    .group-sub-menu >a::after {
       content: " \f054";
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      li a:hover {
+        background-color: $osuorange;
+        color: $bucktoothwhite;
+
+        &::after {
+          color: $bucktoothwhite
+        }
+      }
     }
   }
 
