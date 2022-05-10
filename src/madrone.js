@@ -12,16 +12,34 @@ window.addEventListener('load', () => {
   });
 
   // handle group menu horizontal spacing
-  const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul .menu--__submenu')];
-  groupMenus.forEach(menu => {
-    if (!menu.classList.contains('menu--level-2')) {
-      menu.addEventListener("mouseenter", function(event) {
-        this.style.left = this.parentNode.offsetWidth + 'px';
-      });
-    }
-  });
+  if (!isMobile()) {
+    const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul li ul')];
+    groupMenus.forEach(menu => {
+      if (!menu.classList.contains('menu--level-2')) {
+        menu.style.left = menu.parentNode.offsetWidth + 'px';
+      }
+    });
+  }
 
   groupMobileMenu();
+
+  // this must come after groupMobileMenu() since .menu--level-1 changes there
+  const liList = [...document.querySelectorAll('#block-groupmenu .menu--level-1 li')];
+  liList.forEach(li => {
+    // if li has child ul element
+    if ([...(li.children)].some(e => e.tagName === 'UL')) {
+      // add class chevron icon
+      li.classList.add('group-sub-menu');
+    }
+
+    // add hover / focus logic
+    if (!isMobile()) {
+      li.addEventListener('mouseenter', menuItemHoverEvent);
+      li.addEventListener('focusin', menuItemFocusinEvent);
+      li.addEventListener('mouseleave', menuItemMouseLeaveEvent);
+      li.addEventListener('focusout', menuItemMouseLeaveEvent);
+    }
+  });
 });
 
 /**
@@ -50,9 +68,6 @@ function groupMobileMenu() {
       if ([...(li.children)].some(e => e.tagName === 'UL')) {
         cloneLi(li);
 
-        // add class chevron icon
-        li.classList.add('group-sub-menu');
-
         li.children[0].addEventListener('click', menuItemClickEvent);
       }
     });
@@ -71,7 +86,7 @@ function createMenuBucket(menu) {
   const topA = document.createElement('a');
   topA.classList = menu.children[0].children[0].classList;
   topA.classList.add('group-mobile-main-a');
-  topA.innerHTML = 'Group Menu';
+  topA.innerHTML = 'Group navigation';
 
   topLi.appendChild(topA);
   topUl.appendChild(topLi);
@@ -95,6 +110,30 @@ function menuItemClickEvent(event) {
 
     const menuToggleText = this.textContent;
     this.textContent = `Close ${menuToggleText}`;
+  }
+}
+
+let mouseLeaveTimeout;
+function menuItemHoverEvent(event) {
+  if (this.classList.contains('group-menu-hover')) {
+    // prevent menu from hiding if the mouse leaves only for a moment
+    clearTimeout(mouseLeaveTimeout);
+  } else {
+    this.classList.add('group-menu-hover');
+  }
+}
+
+function menuItemFocusinEvent(event) {
+  if (!this.classList.contains('group-menu-hover')) {
+    this.classList.add('group-menu-hover');
+  }
+}
+
+function menuItemMouseLeaveEvent(event) {
+  if (this.classList.contains('group-menu-hover') && !event.currentTarget.contains(event.relatedTarget)) {
+    mouseLeaveTimeout = setTimeout(() => {
+      this.classList.remove('group-menu-hover');
+    }, 800);
   }
 }
 

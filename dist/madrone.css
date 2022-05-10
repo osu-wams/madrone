@@ -12397,31 +12397,30 @@ select option:checked {
   flex-direction: row;
   background-color: #e9e5e4;
 }
+.block-group-content-menu .menu--level-0 li a,
+.block-group-content-menu .menu--level-1 li a {
+  padding: 1rem;
+}
 .block-group-content-menu .menu--level-0 li a.active,
 .block-group-content-menu .menu--level-1 li a.active {
   background-color: #e9e5e4;
 }
 @media (hover: hover) and (pointer: fine) {
-  .block-group-content-menu .menu--level-0 li a:hover,
-.block-group-content-menu .menu--level-1 li a:hover {
-    background-color: #423e3c;
-    color: #fff;
+  .block-group-content-menu .menu--level-0 .group-menu-hover a,
+.block-group-content-menu .menu--level-1 .group-menu-hover a {
+    background-color: #fff;
+    color: #212529;
   }
 }
 .block-group-content-menu .menu--level-0 ul,
 .block-group-content-menu .menu--level-1 ul {
   flex-direction: column;
   padding-left: 0px;
-  display: none;
+  transform: scaleY(0);
   float: none;
-  min-width: 6rem;
+  min-width: 6.5rem;
   z-index: 499;
-}
-@media screen and (min-width: 768px) {
-  .block-group-content-menu .menu--level-0 ul,
-.block-group-content-menu .menu--level-1 ul {
-    position: absolute;
-  }
+  position: absolute;
 }
 .block-group-content-menu .menu--level-0 ul li,
 .block-group-content-menu .menu--level-1 ul li {
@@ -12433,10 +12432,38 @@ select option:checked {
   top: 0;
 }
 @media (hover: hover) and (pointer: fine) {
-  .block-group-content-menu .menu--level-0 li:hover > ul,
-.block-group-content-menu .menu--level-1 li:hover > ul {
-    display: flex;
+  .block-group-content-menu .menu--level-0 .group-menu-hover > ul,
+.block-group-content-menu .menu--level-1 .group-menu-hover > ul {
+    background-color: #fff;
+    transition: transform 0.3s ease-out;
+    transform: scaleY(1);
+    transform-origin: top;
   }
+}
+.block-group-content-menu .group-sub-menu > a::after {
+  color: #423e3c;
+  content: " \f078";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: normal;
+}
+.block-group-content-menu .menu--level-2 .group-sub-menu > a::after {
+  content: " \f054";
+}
+@media (hover: hover) and (pointer: fine) {
+  .block-group-content-menu .menu--level-2 .group-menu-hover > a {
+    background-color: #d73f09;
+    color: #fff;
+  }
+  .block-group-content-menu .menu--level-2 .group-menu-hover > a::after {
+    color: #fff;
+  }
+}
+.block-group-content-menu .group-mobile-menu a.nav-link:hover, .block-group-content-menu .group-mobile-menu .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li .block-group-content-menu .group-mobile-menu a:hover {
+  background-color: #fff;
+  color: #212529;
 }
 .block-group-content-menu .group-mobile-menu li a.group-mobile-main-a {
   font-weight: 600;
@@ -12480,26 +12507,18 @@ select option:checked {
   padding-left: 60px;
 }
 .block-group-content-menu .group-mobile-menu .group-sub-menu > a::after {
-  color: #423e3c;
   content: " \f078";
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: normal;
 }
 .block-group-content-menu .group-mobile-menu .group-menu-clicked > ul {
   display: flex;
+  transition: transform 0.3s ease-out;
+  transform: scaleY(1);
+  transform-origin: top;
+  position: relative;
 }
 .block-group-content-menu .group-mobile-menu .group-menu-clicked > a {
-  background-color: #423e3c !important;
-  color: #fff !important;
-}
-.block-group-content-menu .group-mobile-menu .group-menu-clicked > a::after {
-  color: #fff !important;
-}
-.block-group-content-menu .group-mobile-menu > ul {
-  display: none;
+  background-color: #fff !important;
+  color: #212529 !important;
 }
 
 nav.pager ul.pager__items {
