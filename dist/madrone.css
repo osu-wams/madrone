@@ -12521,6 +12521,30 @@ select option:checked {
   color: #212529 !important;
 }
 
+.block-group-operations .dropbutton-multiple .dropbutton-widget {
+  background-color: transparent;
+  color: #423e3c;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
+    flex-direction: row;
+  }
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-toggle {
+  display: none;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action a {
+  color: #423e3c;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .secondary-action {
+  display: block;
+}
+
 nav.pager ul.pager__items {
   gap: 0.5em;
 }
@@ -12727,23 +12751,5 @@ body.cke_editable_themed {
 .ui-dialog select,
 .ui-dialog textarea {
   font-size: 1rem;
-}
-
-.block-group-operations .dropbutton-multiple .dropbutton-widget {
-  background-color: transparent;
-  color: #423e3c;
-}
-.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
-  display: flex;
-  flex-direction: column;
-}
-.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-toggle {
-  display: none;
-}
-.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action a {
-  color: #423e3c;
-}
-.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .secondary-action {
-  display: block;
 }
 /*# sourceMappingURL=madrone.css.map */

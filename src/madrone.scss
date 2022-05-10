@@ -258,6 +258,7 @@ blockquote {
 @import "scss/superfish";
 @import "scss/osu_forms";
 @import "scss/osu_group_menus";
+@import "scss/osu_group_operations";
 @import "scss/pager";
 @import "scss/osu_buttons";
 @import "scss/osu_dropbuttons";
@@ -269,27 +270,3 @@ blockquote {
 @import "scss/osu_ckeditor";
 @import "scss/osu_tags";
 @import "scss/osu_modals";
-
-.block-group-operations {
-  .dropbutton-multiple .dropbutton-widget {
-    background-color: transparent;
-    color: $body-color;
-
-    .dropbutton {
-      display: flex;
-      flex-direction: column;
-
-      .dropbutton-toggle {
-        display: none;
-      }
-
-      .dropbutton-action a {
-        color: $body-color;
-      }
-
-      .secondary-action {
-        display: block;
-      }
-    }
-  }
-}
