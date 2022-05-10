@@ -24,14 +24,11 @@
     ul {
       flex-direction: column;
       padding-left: 0px;
-      display: none;
+      transform: scaleY(0);
       float: none;
-      min-width: 6rem;
+      min-width: 6.5rem;
       z-index: 499;
-
-      @media screen and (min-width:768px) {
-        position: absolute;
-      }
+      position: absolute;
 
       li {
         display: unset;
@@ -46,7 +43,10 @@
     @media (hover: hover) and (pointer: fine) {
       li:hover {
         > ul {
-          display: flex;
+          background-color: $bucktoothwhite;
+          transition: transform 0.3s ease-out;
+          transform: scaleY(1);
+          transform-origin: top;
         }
       }
     }
@@ -122,16 +122,16 @@
     .group-menu-clicked {
       > ul {
         display: flex;
+        transition: transform 0.3s ease-out;
+        transform: scaleY(1);
+        transform-origin: top;
+        position: relative;
       }
 
       > a {
         background-color: $bucktoothwhite !important;
         color: $paddletailblack !important;
       }
-    }
-
-    > ul {
-      display: none;
     }
   }
 }
