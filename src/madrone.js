@@ -31,6 +31,14 @@ window.addEventListener('load', () => {
       // add class chevron icon
       li.classList.add('group-sub-menu');
     }
+
+    // add hover / focus logic
+    if (!isMobile()) {
+      li.addEventListener('mouseenter', menuItemHoverEvent);
+      li.addEventListener('focusin', menuItemFocusinEvent);
+      li.addEventListener('mouseleave', menuItemMouseLeaveEvent);
+      li.addEventListener('focusout', menuItemMouseLeaveEvent);
+    }
   });
 });
 
@@ -102,6 +110,30 @@ function menuItemClickEvent(event) {
 
     const menuToggleText = this.textContent;
     this.textContent = `Close ${menuToggleText}`;
+  }
+}
+
+let mouseLeaveTimeout;
+function menuItemHoverEvent(event) {
+  if (this.classList.contains('group-menu-hover')) {
+    // prevent menu from hiding if the mouse leaves only for a moment
+    clearTimeout(mouseLeaveTimeout);
+  } else {
+    this.classList.add('group-menu-hover');
+  }
+}
+
+function menuItemFocusinEvent(event) {
+  if (!this.classList.contains('group-menu-hover')) {
+    this.classList.add('group-menu-hover');
+  }
+}
+
+function menuItemMouseLeaveEvent(event) {
+  if (this.classList.contains('group-menu-hover') && !event.currentTarget.contains(event.relatedTarget)) {
+    mouseLeaveTimeout = setTimeout(() => {
+      this.classList.remove('group-menu-hover');
+    }, 800);
   }
 }
 

@@ -15,7 +15,7 @@
     }
 
     @media (hover: hover) and (pointer: fine) {
-      li a:hover {
+      .group-menu-hover a {
         background-color: $bucktoothwhite;
         color: $paddletailblack
       }
@@ -41,7 +41,7 @@
     }
 
     @media (hover: hover) and (pointer: fine) {
-      li:hover {
+      .group-menu-hover {
         > ul {
           background-color: $bucktoothwhite;
           transition: transform 0.3s ease-out;
@@ -70,7 +70,7 @@
     }
 
     @media (hover: hover) and (pointer: fine) {
-      li a:hover {
+      .group-menu-hover >a {
         background-color: $osuorange;
         color: $bucktoothwhite;
 
