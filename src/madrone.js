@@ -78,7 +78,7 @@ function createMenuBucket(menu) {
   const topA = document.createElement('a');
   topA.classList = menu.children[0].children[0].classList;
   topA.classList.add('group-mobile-main-a');
-  topA.innerHTML = 'Group Menu';
+  topA.innerHTML = 'Group navigation';
 
   topLi.appendChild(topA);
   topUl.appendChild(topLi);
