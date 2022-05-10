@@ -12,14 +12,14 @@ window.addEventListener('load', () => {
   });
 
   // handle group menu horizontal spacing
-  const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul li ul')];
-  groupMenus.forEach(menu => {
-    if (!menu.classList.contains('menu--level-2')) {
-      menu.addEventListener("mouseenter", function(event) {
-        this.style.left = this.parentNode.offsetWidth + 'px';
-      });
-    }
-  });
+  if (!isMobile()) {
+    const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul li ul')];
+    groupMenus.forEach(menu => {
+      if (!menu.classList.contains('menu--level-2')) {
+        menu.style.left = menu.parentNode.offsetWidth + 'px';
+      }
+    });
+  }
 
   groupMobileMenu();
 });
