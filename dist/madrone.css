@@ -12401,10 +12401,6 @@ select option:checked {
 .block-group-content-menu .menu--level-1 li a {
   padding: 1rem;
 }
-.block-group-content-menu .menu--level-0 li a.active,
-.block-group-content-menu .menu--level-1 li a.active {
-  background-color: #e9e5e4;
-}
 @media (hover: hover) and (pointer: fine) {
   .block-group-content-menu .menu--level-0 .group-menu-hover a,
 .block-group-content-menu .menu--level-1 .group-menu-hover a {
