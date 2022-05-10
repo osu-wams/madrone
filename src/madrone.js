@@ -22,6 +22,16 @@ window.addEventListener('load', () => {
   }
 
   groupMobileMenu();
+
+  // this must come after groupMobileMenu() since .menu--level-1 changes there
+  const liList = [...document.querySelectorAll('#block-groupmenu .menu--level-1 li')];
+  liList.forEach(li => {
+    // if li has child ul element
+    if ([...(li.children)].some(e => e.tagName === 'UL')) {
+      // add class chevron icon
+      li.classList.add('group-sub-menu');
+    }
+  });
 });
 
 /**
@@ -49,9 +59,6 @@ function groupMobileMenu() {
       // if li has child ul element
       if ([...(li.children)].some(e => e.tagName === 'UL')) {
         cloneLi(li);
-
-        // add class chevron icon
-        li.classList.add('group-sub-menu');
 
         li.children[0].addEventListener('click', menuItemClickEvent);
       }
