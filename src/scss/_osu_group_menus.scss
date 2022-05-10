@@ -5,6 +5,10 @@
     flex-direction: row;
     background-color: $neutral-200;
 
+    li a {
+      padding: 1rem;
+    }
+
     // active class causes weird coloring
     li a.active {
       background-color: $neutral-200;
