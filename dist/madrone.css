@@ -11677,7 +11677,7 @@ textarea.form-control-lg {
 .osu-btn-light {
   color: #423e3c;
   background-color: #f7f5f5;
-  border-color: #f7f5f5;
+  border-color: #212529;
 }
 .osu-btn-light:hover {
   color: #fff;
@@ -11688,7 +11688,7 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
-  box-shadow: 0 0 0 0 rgba(220, 218, 217, 0.5);
+  box-shadow: 0 0 0 0 rgba(38, 41, 44, 0.5);
 }
 .btn-check:checked + .osu-btn-light, .btn-check:active + .osu-btn-light, .osu-btn-light:active, .osu-btn-light.active, .show > .osu-btn-light.dropdown-toggle {
   color: #423e3c;
@@ -11696,12 +11696,12 @@ textarea.form-control-lg {
   border-color: #d73f09;
 }
 .btn-check:checked + .osu-btn-light:focus, .btn-check:active + .osu-btn-light:focus, .osu-btn-light:active:focus, .osu-btn-light.active:focus, .show > .osu-btn-light.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0 rgba(220, 218, 217, 0.5);
+  box-shadow: 0 0 0 0 rgba(38, 41, 44, 0.5);
 }
 .osu-btn-light:disabled, .osu-btn-light.disabled {
   color: #000;
   background-color: #f7f5f5;
-  border-color: #f7f5f5;
+  border-color: #212529;
 }
 
 .osu-btn-dark {
@@ -11737,31 +11737,31 @@ textarea.form-control-lg {
 .osu-btn-white {
   color: #423e3c;
   background-color: #fff;
-  border-color: #fff;
+  border-color: #212529;
 }
 .osu-btn-white:hover {
-  color: #000;
-  background-color: white;
-  border-color: white;
+  color: #423e3c;
+  background-color: #fff;
+  border-color: #d73f09;
 }
 .btn-check:focus + .osu-btn-white, .osu-btn-white:focus {
-  color: #000;
-  background-color: white;
-  border-color: white;
-  box-shadow: 0 0 0 0 rgba(227, 226, 226, 0.5);
+  color: #423e3c;
+  background-color: #fff;
+  border-color: #d73f09;
+  box-shadow: 0 0 0 0 rgba(38, 41, 44, 0.5);
 }
 .btn-check:checked + .osu-btn-white, .btn-check:active + .osu-btn-white, .osu-btn-white:active, .osu-btn-white.active, .show > .osu-btn-white.dropdown-toggle {
-  color: #000;
-  background-color: white;
-  border-color: white;
+  color: #fff;
+  background-color: #d73f09;
+  border-color: #d73f09;
 }
 .btn-check:checked + .osu-btn-white:focus, .btn-check:active + .osu-btn-white:focus, .osu-btn-white:active:focus, .osu-btn-white.active:focus, .show > .osu-btn-white.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0 rgba(227, 226, 226, 0.5);
+  box-shadow: 0 0 0 0 rgba(38, 41, 44, 0.5);
 }
 .osu-btn-white:disabled, .osu-btn-white.disabled {
   color: #000;
   background-color: #fff;
-  border-color: #fff;
+  border-color: #212529;
 }
 
 .osu-btn-pine {
@@ -12727,5 +12727,23 @@ body.cke_editable_themed {
 .ui-dialog select,
 .ui-dialog textarea {
   font-size: 1rem;
+}
+
+.block-group-operations .dropbutton-multiple .dropbutton-widget {
+  background-color: transparent;
+  color: #423e3c;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
+  display: flex;
+  flex-direction: column;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-toggle {
+  display: none;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action a {
+  color: #423e3c;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .secondary-action {
+  display: block;
 }
 /*# sourceMappingURL=madrone.css.map */

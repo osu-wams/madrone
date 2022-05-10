@@ -13,7 +13,7 @@
     "scripts": {
         "cs": "phpcs",
         "cbf": "phpcbf",
-        "twigcs": "twigcs --twig-version=1",
+        "twigcs": "twigcs --twig-version=2",
         "post-install-cmd": [
             "vendor/bin/cghooks add"
         ],

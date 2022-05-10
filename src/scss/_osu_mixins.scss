@@ -33,7 +33,7 @@
 .osu-btn-light {
   @include button-variant(
       $neutral-100,
-      $neutral-100,
+      $paddletailblack,
       $body-color,
       $osuorange,
       $osuorange,
@@ -61,8 +61,14 @@
 .osu-btn-white {
   @include button-variant(
       $bucktoothwhite,
+      $paddletailblack,
+      $body-color,
       $bucktoothwhite,
-      $body-color
+      $osuorange,
+      $body-color,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite
   );
 }
 
