@@ -9,11 +9,6 @@
       padding: 1rem;
     }
 
-    // active class causes weird coloring
-    li a.active {
-      background-color: $neutral-200;
-    }
-
     @media (hover: hover) and (pointer: fine) {
       .group-menu-hover a {
         background-color: $bucktoothwhite;
