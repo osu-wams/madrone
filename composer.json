@@ -42,7 +42,7 @@
     "extra": {
         "hooks": {
             "config": {
-                "stop-on-failture": [
+                "stop-on-failure": [
                     "pre-commit",
                     "pre-push"
                 ]
@@ -52,7 +52,7 @@
                 "vendor/bin/phpcs -n"
             ],
             "pre-commit": [
-                "vendor/bin/twigcs --twig-version=1",
+                "vendor/bin/twigcs --twig-version=2",
                 "vendor/bin/phpcbf",
                 "node_modules/gulp-cli/bin/gulp.js",
                 "git add dist"
