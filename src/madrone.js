@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
   groupMobileMenu();
 
   // this must come after groupMobileMenu() since .menu--level-1 changes there
-  const liList = [...document.querySelectorAll('#block-groupmenu .menu--level-1 li')];
+  const liList = [...document.querySelectorAll('.block-group-content-menu .menu--level-1 li')];
   liList.forEach(li => {
     // if li has child ul element
     if ([...(li.children)].some(e => e.tagName === 'UL')) {
@@ -62,7 +62,7 @@ function groupMobileMenu() {
     // Create menu top level bucket
     createMenuBucket(menu);
 
-    const liList = [...document.querySelectorAll('#block-groupmenu .menu--level-1 li')];
+    const liList = [...document.querySelectorAll('.block-group-content-menu .menu--level-1 li')];
     liList.forEach(li => {
       // if li has child ul element
       if ([...(li.children)].some(e => e.tagName === 'UL')) {
