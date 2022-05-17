@@ -12635,6 +12635,11 @@ a.button:focus,
 }
 
 /* Layout Builder updates */
+/* Remove background for Layout Builder - DRUP8-1012 */
+.layout-builder-block {
+  background-color: transparent;
+}
+
 /* Remove background on block sections in Layout Builder */
 .layout-builder-block {
   background-color: transparent;
