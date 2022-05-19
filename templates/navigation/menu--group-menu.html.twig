@@ -48,10 +48,10 @@ We call a macro which calls itself to render the full tree.
     {% set attributes = attributes.removeClass(menu_levels) %}
     {% for item in items %}
       {% set li_classes = [
-        item.in_active_trail ? 'nav-item active' : 'nav-item',
+        'nav-item',
       ] %}
       {% set link_classes = [
-        item.in_active_trail ? 'nav-link active' : 'nav-link',
+        'nav-link',
       ] %}
       <li{{ item.attributes.addCLass(li_classes) }}>
         {{ link(item.title, item.url, item.attributes.addClass(link_classes).removeClass(li_classes)) }}
