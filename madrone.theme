@@ -312,11 +312,11 @@ function madrone_theme_suggestions_image_alter(array &$suggestions, array $varia
 }
 
 /**
- * Helper function to check if current page is associated with a group
- * and that group has main nav hidden.
+ * Helper function to check if current page shows main nav menu or group menu.
  *
  * @return bool
- *   True if current page is in a group and that group has field_hide_global_navigation on 
+ *   True if current page is in a group
+ *   and that group has field_hide_global_navigation on
  *   False if any of the above conditions are false
  */
 function hide_main_navigation() {
