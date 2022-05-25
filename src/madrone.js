@@ -131,10 +131,17 @@ function menuItemFocusinEvent(event) {
 }
 
 function menuItemMouseLeaveEvent(event) {
+  const groupMenu = document.querySelectorAll('.block-group-content-menu')[0];
   if (this.classList.contains('group-menu-hover') && !event.currentTarget.contains(event.relatedTarget)) {
-    mouseLeaveTimeout = setTimeout(() => {
+    // remove hover immediately if next target is still in the menu
+    // otherwise wait a bit
+    if (groupMenu.contains(event.relatedTarget)) {
       this.classList.remove('group-menu-hover');
-    }, 800);
+    } else {
+      mouseLeaveTimeout = setTimeout(() => {
+        this.classList.remove('group-menu-hover');
+      }, 800);
+    }
   }
 }
 
