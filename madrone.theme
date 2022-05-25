@@ -90,7 +90,7 @@ function madrone_preprocess_node(&$variables) {
  */
 function madrone_preprocess_block(&$variables) {
   // Variable true if current page is a group page. Used to hide main nav.
-  $variables['is_group_page'] = is_group_page();
+  $variables['hide_main_navigation'] = hide_main_navigation();
   // Adding a base_path variable to block template.
   $variables['base_path'] = base_path();
   // Adding region specific templates.
@@ -312,12 +312,14 @@ function madrone_theme_suggestions_image_alter(array &$suggestions, array $varia
 }
 
 /**
- * Helper function to check if current page is associated with a group.
+ * Helper function to check if current page shows main nav menu or group menu.
  *
  * @return bool
- *   True if current page is in a group and false if not.
+ *   True if current page is in a group
+ *   and that group has field_hide_global_navigation on
+ *   False if any of the above conditions are false
  */
-function is_group_page() {
+function hide_main_navigation() {
   if (\Drupal::service('module_handler')->moduleExists('osu_groups')) {
     $current_path = Drupal::service('path.current')->getPath();
     $path = Drupal::service('path_alias.manager')->getPathByAlias($current_path);
@@ -326,7 +328,13 @@ function is_group_page() {
       $osu_groups = new OsuGroupsHandler();
       $group_content = $osu_groups->getGroupContentFromNode($node);
       if ($group_content) {
-        return TRUE;
+        $group = $group_content->getGroup();
+        if ($group->hasField('field_hide_global_navigation')) {
+          $hide_menu = (bool) $group->get('field_hide_global_navigation')->first()->getValue()['value'];
+          if ($hide_menu) {
+            return TRUE;
+          }
+        }
       }
     }
   }
