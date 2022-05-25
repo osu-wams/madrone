@@ -114,11 +114,10 @@ function menuItemClickEvent(event) {
   }
 }
 
-let mouseLeaveTimeout;
 function menuItemHoverEvent(event) {
-  if (this.classList.contains('group-menu-hover')) {
+  if (this.classList.contains('group-menu-hover') && this.mouseLeaveTimeout) {
     // prevent menu from hiding if the mouse leaves only for a moment
-    clearTimeout(mouseLeaveTimeout);
+    clearTimeout(this.mouseLeaveTimeout);
   } else {
     this.classList.add('group-menu-hover');
   }
@@ -138,7 +137,7 @@ function menuItemMouseLeaveEvent(event) {
     if (groupMenu.contains(event.relatedTarget)) {
       this.classList.remove('group-menu-hover');
     } else {
-      mouseLeaveTimeout = setTimeout(() => {
+      this.mouseLeaveTimeout = setTimeout(() => {
         this.classList.remove('group-menu-hover');
       }, 800);
     }
