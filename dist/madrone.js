@@ -87,7 +87,7 @@ function createMenuBucket(menu) {
   const topA = document.createElement('a');
   topA.classList = menu.children[0].children[0].classList;
   topA.classList.add('group-mobile-main-a');
-  topA.innerHTML = 'Group navigation';
+  topA.innerHTML = 'Menu';
 
   topLi.appendChild(topA);
   topUl.appendChild(topLi);
@@ -114,11 +114,10 @@ function menuItemClickEvent(event) {
   }
 }
 
-let mouseLeaveTimeout;
 function menuItemHoverEvent(event) {
-  if (this.classList.contains('group-menu-hover')) {
+  if (this.classList.contains('group-menu-hover') && this.mouseLeaveTimeout) {
     // prevent menu from hiding if the mouse leaves only for a moment
-    clearTimeout(mouseLeaveTimeout);
+    clearTimeout(this.mouseLeaveTimeout);
   } else {
     this.classList.add('group-menu-hover');
   }
@@ -131,10 +130,17 @@ function menuItemFocusinEvent(event) {
 }
 
 function menuItemMouseLeaveEvent(event) {
+  const groupMenu = document.querySelectorAll('.block-group-content-menu')[0];
   if (this.classList.contains('group-menu-hover') && !event.currentTarget.contains(event.relatedTarget)) {
-    mouseLeaveTimeout = setTimeout(() => {
+    // remove hover immediately if next target is still in the menu
+    // otherwise wait a bit
+    if (groupMenu.contains(event.relatedTarget)) {
       this.classList.remove('group-menu-hover');
-    }, 800);
+    } else {
+      this.mouseLeaveTimeout = setTimeout(() => {
+        this.classList.remove('group-menu-hover');
+      }, 800);
+    }
   }
 }
 
