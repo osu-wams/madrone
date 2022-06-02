@@ -12662,6 +12662,19 @@ a.button:focus,
   width: initial !important;
 }
 
+/* The row class has negative margins. Adding margin 0 inline to the layout builder section row stops the
+ * content from overflowing.
+ */
+.w-100 .row.layout-builder__layout,
+.container-fluid .row.layout-builder__layout,
+.container-sm .row.layout-builder__layout,
+.container-md .row.layout-builder__layout,
+.container-lg .row.layout-builder__layout,
+.container-xl .row.layout-builder__layout,
+.container-xxl .row.layout-builder__layout {
+  margin-inline: 0;
+}
+
 main .osu-bg-page-default nav ul.menu li a {
   color: #212529 !important;
   background-color: #f7f5f5 !important;
