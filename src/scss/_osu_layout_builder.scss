@@ -35,3 +35,13 @@
 .node-layout-builder-form {
   @extend .container;
 }
+
+/* The row class has negative margins. Adding margin 0 inline to the layout builder section row stops the
+ * content from overflowing.
+ */
+.w-100,
+.container-fluid {
+  .row.layout-builder__layout {
+    margin-inline: 0;
+  }
+}
