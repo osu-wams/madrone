@@ -6,8 +6,6 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\node\Entity\Node;
-use Drupal\osu_groups\OsuGroupsHandler;
 
 /**
  * Implements hook_preprocess().
@@ -193,13 +191,6 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $form['advanced']['submit']['#attributes']['class'][] = 'button--primary';
       break;
 
-    case 'entity_view_display_layout_builder_form':
-    case 'node_page_layout_builder_form':
-    case 'layout_builder_discard_changes':
-    case 'layout_builder_revert_overrides':
-      $form['#attributes']['class'][] = 'container';
-      break;
-
     case 'views_exposed_form':
       $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
       break;
@@ -219,6 +210,10 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $form['ui']['tab_content']['appearance']['spacing']['padding']['#default_value'] = 1;
       $form['ui']['tab_content']['appearance']['spacing']['margin']['#default_value'] = 1;
       break;
+  }
+  // Check if we are in a layout builder form.
+  if (\Drupal::routeMatch()->getRouteObject()->getOption('_layout_builder')) {
+    $form['#attributes']['class'][] = 'container';
   }
 }
 
@@ -319,22 +314,26 @@ function madrone_theme_suggestions_image_alter(array &$suggestions, array $varia
  *   and that group has field_hide_global_navigation on
  *   False if any of the above conditions are false
  */
-function hide_main_navigation() {
+function hide_main_navigation(): bool {
   if (\Drupal::service('module_handler')->moduleExists('osu_groups')) {
-    $current_path = Drupal::service('path.current')->getPath();
-    $path = Drupal::service('path_alias.manager')->getPathByAlias($current_path);
-    if (preg_match('/node\/(\d+)/', $path, $matches)) {
-      $node = Node::load($matches[1]);
-      $osu_groups = new OsuGroupsHandler();
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      /** @var \Drupal\osu_groups\OsuGroupsHandler $osu_groups */
+      $osu_groups = Drupal::service('osu_groups.group_handler');
       $group_content = $osu_groups->getGroupContentFromNode($node);
       if ($group_content) {
         $group = $group_content->getGroup();
         if ($group->hasField('field_hide_global_navigation')) {
-          $hide_menu = (bool) $group->get('field_hide_global_navigation')->first()->getValue()['value'];
-          if ($hide_menu) {
-            return TRUE;
-          }
+          return (bool) $group->get('field_hide_global_navigation')
+            ->first()
+            ->getValue()['value'];
         }
+      }
+    }
+    elseif ($group = \Drupal::routeMatch()->getParameter('group')) {
+      if ($group->hasField('field_hide_global_navigation')) {
+        return (bool) $group->get('field_hide_global_navigation')
+          ->first()
+          ->getValue()['value'];
       }
     }
   }
