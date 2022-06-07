@@ -100,3 +100,9 @@
 .osu-text-decoration-bucktoothwhite {
   text-decoration-color: $bucktoothwhite !important;
 }
+
+@media screen and (max-width: 768px) {
+  .breadcrumb {
+    flex-direction: column;
+  }
+}

@@ -12129,6 +12129,11 @@ textarea.form-control-lg {
   text-decoration-color: #fff !important;
 }
 
+@media screen and (max-width: 768px) {
+  .breadcrumb {
+    flex-direction: column;
+  }
+}
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
