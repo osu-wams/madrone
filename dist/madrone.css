@@ -12517,6 +12517,9 @@ select option:checked {
   color: #212529 !important;
 }
 
+.block-group-operations {
+  margin-bottom: 1rem;
+}
 .block-group-operations .dropbutton-multiple .dropbutton-widget {
   background-color: transparent;
   color: #423e3c;
