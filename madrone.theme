@@ -207,6 +207,10 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
     // For New Blocks.
     case 'layout_builder_add_block':
+      // Set label to a value and uncheck the display checkbox.
+      $form['settings']['label']['#default_value'] = 'In-line Block';
+      $form['settings']['label_display']['#default_value'] = FALSE;
+      // For updates to Bootstrap Layout Builder Blocks.
       $form['ui']['tab_content']['appearance']['spacing']['padding']['#default_value'] = 1;
       $form['ui']['tab_content']['appearance']['spacing']['margin']['#default_value'] = 1;
       break;
