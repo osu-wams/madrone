@@ -12197,7 +12197,7 @@ a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover
   background: rgba(0, 0, 0, 0.7);
 }
 /** Only force link color if the parent block has a dark bg set.*/
-.osu-bg-page-alt-2 > div > div > p a:not(.layout-builder__link--add):not(.btn):not(a.button) {
+.osu-bg-page-alt-2 > div > div > p a:not(.layout-builder__link--add, .btn, a.button) {
   color: #fff;
   text-decoration-color: #fff;
 }
