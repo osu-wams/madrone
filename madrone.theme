@@ -114,11 +114,10 @@ function madrone_preprocess_block(&$variables) {
           ->getActiveTheme()
           ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
-        if (array_key_exists('site_path', $variables['content'])) {
-          $variables['site_path'] = $variables['content']['site_path']['#uri'];
-        }
-        else {
-          $variables['site_path'] = $variables['base_path'];
+        if (array_key_exists('group_path', $variables['content']) &&
+          array_key_exists('group_name', $variables['content'])) {
+          $variables['group_name'] = $variables['content']['group_name']['#markup'];
+          $variables['group_path'] = $variables['content']['group_path']['#uri'];
         }
       }
       $variables['content']['#attributes']['region'] = $region;
