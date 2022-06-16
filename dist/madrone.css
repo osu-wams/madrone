@@ -12248,6 +12248,14 @@ code {
     font-size: 1.5rem;
   }
 }
+.block-system-branding-block a.site-name__site-link--with-group {
+  text-decoration: none;
+}
+.block-system-branding-block a.site-name__site-link--with-group:hover, .block-system-branding-block a.site-name__site-link--with-group:active, .block-system-branding-block a.site-name__site-link--with-group:focus {
+  text-decoration-line: underline !important;
+  text-decoration-color: #d73f09 !important;
+  text-decoration-thickness: 13% !important;
+}
 .block-system-branding-block a img {
   height: 80px;
 }
