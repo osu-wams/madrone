@@ -3,7 +3,7 @@ description: 'OSU Theme of the future'
 core_version_requirement: ^8 || ^9 || ^10
 type: theme
 dependencies:
-version: '1.0.0-alpha7'
+version: '1.0.0-alpha8'
 base theme: stable9
 regions:
   header: Header
