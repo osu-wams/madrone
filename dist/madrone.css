@@ -7267,11 +7267,11 @@ textarea.form-control-lg {
   align-items: center !important;
 }
 
-.align-items-baseline {
+.align-items-baseline, .osu-align-items-baseline {
   align-items: baseline !important;
 }
 
-.align-items-stretch {
+.align-items-stretch, .osu-align-items-stretch {
   align-items: stretch !important;
 }
 

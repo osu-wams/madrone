@@ -39,6 +39,14 @@
   @extend .align-items-end;
 }
 
+.osu-align-items-baseline {
+  @extend .align-items-baseline;
+}
+
+.osu-align-items-stretch {
+  @extend .align-items-stretch;
+}
+
 .osu-align-self-start {
   @extend .align-self-start;
 }
@@ -62,6 +70,7 @@
 .osu-justify-content-end {
   @extend .justify-content-end;
 }
+
 /* Enhancements for Navigation Blocks */
 .osu-nav-column ul.nav-pills {
   @extend .flex-column;
