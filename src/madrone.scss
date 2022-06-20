@@ -209,10 +209,10 @@ a {
   }
 }
 
-.osu-bg-page-alt-2 {
-  color: $bucktoothwhite;
+/** Only force link color if the parent block has a dark bg set.*/
+.osu-bg-page-alt-2 > div > div > p, {
 
-  a:not(.layout-builder__link--add) {
+  a:not(.layout-builder__link--add, .btn) {
     color: $bucktoothwhite;
     text-decoration-color: $bucktoothwhite;
   }

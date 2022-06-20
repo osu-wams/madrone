@@ -63,13 +63,14 @@
       {% if site_name %}
         <div class="block__content__site-name ms-4">
           {% if group_name and group_path %}
-            <a class="fs-6" href="{{ path('<front>') }}"
+            <a class="site-name__site-link--with-group fs-6" href="{{ path('<front>') }}"
                rel="home">{{ site_name }}</a>
             <br/>
-            <a class="text-decoration-none osu-text-osuorange fw-bolder"
+            <a class="site-name__group-link text-decoration-none osu-text-osuorange fw-bolder"
                href="{{ group_path }}">{{ group_name }}</a>
           {% else %}
-            <a class="text-decoration-none osu-text-osuorange fw-bolder" href="{{ path('<front>') }}"
+            <a class="site-name__site-link text-decoration-none osu-text-osuorange fw-bolder"
+               href="{{ path('<front>') }}"
                rel="home">{{ site_name }}</a>
           {% endif %}
         </div>

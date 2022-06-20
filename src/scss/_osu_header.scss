@@ -1,6 +1,18 @@
 .block-system-branding-block a {
   @include font-size(1.5rem);
 
+  &.site-name__site-link--with-group {
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration-line: underline !important;
+      text-decoration-color: $osuorange !important;
+      text-decoration-thickness: 13% !important;
+    }
+  }
+
   img {
     height: 80px;
   }
