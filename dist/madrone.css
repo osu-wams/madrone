@@ -12196,23 +12196,20 @@ a:hover {
 a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, a.nav-link:focus, .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus {
   background: rgba(0, 0, 0, 0.7);
 }
-/** Only force link color if the parent block has a dark bg set.*/
-.osu-bg-page-alt-2 > div > div > p a:not(.layout-builder__link--add, .btn, a.button) {
-  color: #fff;
-  text-decoration-color: #fff;
-}
-
 .container-fluid .block-page-title-block, .container-sm .block-page-title-block, .container-md .block-page-title-block, .container-lg .block-page-title-block, .container-xl .block-page-title-block, .container-xxl .block-page-title-block {
   padding-inline: 1.5rem;
 }
 
-.block-system-main-block ul:not(.nav):not(.navbar):not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li::marker {
+.block-system-main-block ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li::marker {
   display: inline-block;
   content: "\f054 ";
   letter-spacing: normal;
   color: #423e3c;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+.block-system-main-block .osu-text-bucktoothwhite ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li::marker {
+  color: #fff;
 }
 
 em.placeholder {
@@ -12238,6 +12235,12 @@ code {
 
 .node-preview-container {
   background-color: #fff;
+}
+
+/** Only force link color if the parent block has a dark bg set.*/
+.osu-text-bucktoothwhite > * a {
+  color: #fff;
+  text-decoration-color: #fff;
 }
 
 .block-system-branding-block a {

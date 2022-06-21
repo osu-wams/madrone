@@ -209,27 +209,29 @@ a {
   }
 }
 
-/** Only force link color if the parent block has a dark bg set.*/
-.osu-bg-page-alt-2 > div > div > p, {
-
-  a:not(.layout-builder__link--add, .btn) {
-    color: $bucktoothwhite;
-    text-decoration-color: $bucktoothwhite;
-  }
-}
-
 .container-fluid .block-page-title-block {
   padding-inline: 1.5rem;
 }
 
-.block-system-main-block ul:not(.nav):not(.navbar):not(.list-unstyled):not(.contextual-links):not(.vertical-tabs__menu):not(.pager__items) > li {
-  &::marker {
-    display: inline-block;
-    content: "\f054\2000";
-    letter-spacing: normal;
-    color: rgba($body-color, 1);
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+.block-system-main-block {
+  ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li {
+    &::marker {
+      display: inline-block;
+      content: "\f054\2000";
+      letter-spacing: normal;
+      color: rgba($body-color, 1);
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+  }
+
+  // Force the unordered list marker to be white when using the light color text.
+  .osu-text-bucktoothwhite {
+    ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li {
+      &::marker {
+        color: $bucktoothwhite;
+      }
+    }
   }
 }
 
@@ -256,6 +258,14 @@ code {
 
 .node-preview-container {
   background-color: $bucktoothwhite;
+}
+
+/** Only force link color if the parent block has a dark bg set.*/
+.osu-text-bucktoothwhite > * {
+  a {
+    color: $bucktoothwhite;
+    text-decoration-color: $bucktoothwhite;
+  }
 }
 
 @import "scss/osu_header";
