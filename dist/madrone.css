@@ -12684,6 +12684,12 @@ a.button:focus,
   width: initial !important;
 }
 
+/* Thicken resizable mouse grabber for Off Canvas Dialog - DRUP8-1036 */
+.ui-resizable-w {
+  width: 8px;
+  background-color: #666;
+}
+
 #drupal-modal .form-item {
   width: initial !important;
 }
