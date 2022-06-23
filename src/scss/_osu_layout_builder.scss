@@ -28,6 +28,13 @@
   }
 }
 
+/* Thicken resizable mouse grabber for Off Canvas Dialog - DRUP8-1036 */
+.ui-dialog .ui-resizable-w {
+  width: 5px;
+  left: 0;
+  background-color: #727579;
+}
+
 #drupal-modal .form-item {
   width: initial !important;
 }
