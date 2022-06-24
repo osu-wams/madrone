@@ -10,11 +10,23 @@
     border-color: $lava-400;
   }
 }
+
 select {
   option:checked {
     background-color: $neutral-200;
   }
 }
+
+/*
+ * Remove the background image that google_cse adds.
+ */
+form.search-form,
+form.header-search-block-form {
+  input {
+    background-image: none !important;
+  }
+}
+
 .layout-builder-form {
   .layout-builder__message .messages,
   .layout-builder__message--overrides .messages {

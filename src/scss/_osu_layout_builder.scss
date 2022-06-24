@@ -48,7 +48,17 @@
  */
 .w-100,
 .container-fluid {
-  .row.layout-builder__layout {
+  & > .row.layout-builder__layout {
     margin-inline: 0;
+  }
+}
+
+.container-fluid > .row.layout-builder__layout {
+  padding-inline: 1rem;
+  @media screen and (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+  @media screen and (min-width: 992px) {
+    padding-inline: 3rem;
   }
 }

@@ -12409,6 +12409,14 @@ select option:checked {
   background-color: #e9e5e4;
 }
 
+/*
+ * Remove the background image that google_cse adds.
+ */
+form.search-form input,
+form.header-search-block-form input {
+  background-image: none !important;
+}
+
 .layout-builder-form .layout-builder__message .messages,
 .layout-builder-form .layout-builder__message--overrides .messages {
   background-image: none !important;
@@ -12698,14 +12706,28 @@ a.button:focus,
 /* The row class has negative margins. Adding margin 0 inline to the layout builder section row stops the
  * content from overflowing.
  */
-.w-100 .row.layout-builder__layout,
-.container-fluid .row.layout-builder__layout,
-.container-sm .row.layout-builder__layout,
-.container-md .row.layout-builder__layout,
-.container-lg .row.layout-builder__layout,
-.container-xl .row.layout-builder__layout,
-.container-xxl .row.layout-builder__layout {
+.w-100 > .row.layout-builder__layout,
+.container-fluid > .row.layout-builder__layout,
+.container-sm > .row.layout-builder__layout,
+.container-md > .row.layout-builder__layout,
+.container-lg > .row.layout-builder__layout,
+.container-xl > .row.layout-builder__layout,
+.container-xxl > .row.layout-builder__layout {
   margin-inline: 0;
+}
+
+.container-fluid > .row.layout-builder__layout, .container-sm > .row.layout-builder__layout, .container-md > .row.layout-builder__layout, .container-lg > .row.layout-builder__layout, .container-xl > .row.layout-builder__layout, .container-xxl > .row.layout-builder__layout {
+  padding-inline: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .container-fluid > .row.layout-builder__layout, .container-sm > .row.layout-builder__layout, .container-md > .row.layout-builder__layout, .container-lg > .row.layout-builder__layout, .container-xl > .row.layout-builder__layout, .container-xxl > .row.layout-builder__layout {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container-fluid > .row.layout-builder__layout, .container-sm > .row.layout-builder__layout, .container-md > .row.layout-builder__layout, .container-lg > .row.layout-builder__layout, .container-xl > .row.layout-builder__layout, .container-xxl > .row.layout-builder__layout {
+    padding-inline: 3rem;
+  }
 }
 
 main .osu-bg-page-default nav ul.menu li a {
