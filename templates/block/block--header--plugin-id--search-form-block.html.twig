@@ -29,10 +29,9 @@
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
-  'col-2',
+  'col-3',
   'col-lg-4',
-  'd-none',
-  'd-lg-flex',
+  'd-flex',
   'justify-content-end',
   'align-items-center',
 ] %}
@@ -43,8 +42,11 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('block__content', 'h-100', 'border-start', 'border-neutral-200') }}>
+    <div{{ content_attributes.addClass('block__content', 'h-100', 'border-start', 'border-neutral-200', 'd-none', 'd-lg-block') }}>
       {{ content }}
+    </div>
+    <div class="border-start border-neutral-200 d-flex d-lg-none align-items-center h-100 p-4">
+      <a href="{{ path('search.view') }}"><i class="fa fa-2x fa-search osu-text-icon" aria-hidden="true"></i></a>
     </div>
   {% endblock %}
 </div>
