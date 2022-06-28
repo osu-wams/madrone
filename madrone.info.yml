@@ -1,6 +1,6 @@
 name: Madrone
 description: 'OSU Theme of the future'
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^9 || ^10
 type: theme
 dependencies:
 version: '1.0.1'
