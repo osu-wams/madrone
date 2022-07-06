@@ -10,9 +10,9 @@
   .osu-border-#{$border-color-name} {
     border-color: #{$border-color-value} !important;
   }
-  @each $border-color-side in $border-color-sides {
-    .osu-border-#{$border-color-name}-#{$border-color-side} {
-      border-#{$border-color-side}-color: #{$border-color-value} !important;
+  @each $border-side in $border-sides {
+    .osu-border-#{$border-color-name}-#{$border-side} {
+      border-#{$border-side}-color: #{$border-color-value} !important;
     }
   }
 }
