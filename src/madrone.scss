@@ -118,6 +118,66 @@ $utilities: map-merge-multiple(
       )
     ),
     (
+      "osu-border-width": (
+        property: border-width,
+        class: osu-border-width,
+        values: (
+          map-merge-multiple(
+              (0: 0),
+              map-get(map-get($utilities, "border-width"), "values")
+          )
+        )
+      )
+    ),
+    (
+      "osu-border-width-top": (
+        property: border-top-width,
+        class: osu-border-width-top,
+        values: (
+          map-merge-multiple(
+              (0: 0),
+              map-get(map-get($utilities, "border-width"), "values")
+          )
+        )
+      )
+    ),
+    (
+      "osu-border-width-right": (
+        property: border-right-width,
+        class: osu-border-width-right,
+        values: (
+          map-merge-multiple(
+              (0: 0),
+              map-get(map-get($utilities, "border-width"), "values")
+          )
+        )
+      )
+    ),
+    (
+      "osu-border-width-bottom": (
+        property: border-bottom-width,
+        class: osu-border-width-bottom,
+        values: (
+          map-merge-multiple(
+              (0: 0),
+              map-get(map-get($utilities, "border-width"), "values")
+          )
+        )
+      )
+    ),
+    (
+      "osu-border-width-left": (
+        property: border-left-width,
+        class: osu-border-width-left,
+        values: (
+          map-merge-multiple(
+              (0: 0),
+              map-get(map-get($utilities, "border-width"), "values")
+          )
+        )
+      )
+    ),
+    (
       "font-family": (
         property: font-family,
         class: font,

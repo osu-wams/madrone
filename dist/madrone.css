@@ -8314,6 +8314,126 @@ textarea.form-control-lg {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) !important;
 }
 
+.osu-border-width-0 {
+  border-width: 0 !important;
+}
+
+.osu-border-width-1 {
+  border-width: 1px !important;
+}
+
+.osu-border-width-2 {
+  border-width: 2px !important;
+}
+
+.osu-border-width-3 {
+  border-width: 3px !important;
+}
+
+.osu-border-width-4 {
+  border-width: 4px !important;
+}
+
+.osu-border-width-5 {
+  border-width: 5px !important;
+}
+
+.osu-border-width-top-0 {
+  border-top-width: 0 !important;
+}
+
+.osu-border-width-top-1 {
+  border-top-width: 1px !important;
+}
+
+.osu-border-width-top-2 {
+  border-top-width: 2px !important;
+}
+
+.osu-border-width-top-3 {
+  border-top-width: 3px !important;
+}
+
+.osu-border-width-top-4 {
+  border-top-width: 4px !important;
+}
+
+.osu-border-width-top-5 {
+  border-top-width: 5px !important;
+}
+
+.osu-border-width-right-0 {
+  border-right-width: 0 !important;
+}
+
+.osu-border-width-right-1 {
+  border-right-width: 1px !important;
+}
+
+.osu-border-width-right-2 {
+  border-right-width: 2px !important;
+}
+
+.osu-border-width-right-3 {
+  border-right-width: 3px !important;
+}
+
+.osu-border-width-right-4 {
+  border-right-width: 4px !important;
+}
+
+.osu-border-width-right-5 {
+  border-right-width: 5px !important;
+}
+
+.osu-border-width-bottom-0 {
+  border-bottom-width: 0 !important;
+}
+
+.osu-border-width-bottom-1 {
+  border-bottom-width: 1px !important;
+}
+
+.osu-border-width-bottom-2 {
+  border-bottom-width: 2px !important;
+}
+
+.osu-border-width-bottom-3 {
+  border-bottom-width: 3px !important;
+}
+
+.osu-border-width-bottom-4 {
+  border-bottom-width: 4px !important;
+}
+
+.osu-border-width-bottom-5 {
+  border-bottom-width: 5px !important;
+}
+
+.osu-border-width-left-0 {
+  border-left-width: 0 !important;
+}
+
+.osu-border-width-left-1 {
+  border-left-width: 1px !important;
+}
+
+.osu-border-width-left-2 {
+  border-left-width: 2px !important;
+}
+
+.osu-border-width-left-3 {
+  border-left-width: 3px !important;
+}
+
+.osu-border-width-left-4 {
+  border-left-width: 4px !important;
+}
+
+.osu-border-width-left-5 {
+  border-left-width: 5px !important;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
