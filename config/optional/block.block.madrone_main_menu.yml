@@ -15,7 +15,7 @@ provider: null
 plugin: 'superfish:main'
 settings:
   id: 'superfish:main'
-  label: 'Main navigation'
+  label: 'Menu'
   label_display: '0'
   provider: superfish
   level: '1'
