@@ -26,6 +26,12 @@
   div.form-item {
     width: initial !important;
   }
+
+  form.layout-builder-configure-block {
+    details[id^=edit-appearance-positioning] {
+      display: none;
+    }
+  }
 }
 
 /* Thicken resizable mouse grabber for Off Canvas Dialog - DRUP8-1036 */
