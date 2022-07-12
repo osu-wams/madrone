@@ -11234,6 +11234,18 @@ textarea.form-control-lg {
   text-decoration-color: #fff !important;
 }
 
+.osu-link-white {
+  color: #fff !important;
+  text-decoration-color: #fff !important;
+}
+.osu-link-white:hover {
+  text-decoration: none !important;
+}
+.osu-link-white:active {
+  color: #212529 !important;
+  background-color: #fff !important;
+}
+
 .breadcrumb {
   flex-direction: column;
 }
@@ -11392,9 +11404,12 @@ footer .region-footer a {
   color: #fff;
   text-decoration-color: #fff;
 }
-footer .region-footer a:hover {
-  color: #fff;
-  text-decoration-color: #fff;
+footer .region-footer a:hover, footer .region-footer a:focus {
+  text-decoration: none;
+}
+footer .region-footer a:active {
+  color: #212529;
+  background-color: #fff;
 }
 
 .madrone-primary-menu > .block-superfish .sf-accordion-toggle {
