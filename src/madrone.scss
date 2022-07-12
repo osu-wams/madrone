@@ -246,13 +246,17 @@ h6 {
 }
 
 a {
-  color: $body-color;
   text-decoration-color: rgba($osuorange, 1);
   text-decoration-thickness: 13%;
 
-  &:hover {
-    color: $body-color;
-    text-decoration-color: rgba($osuorange, 1);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $bucktoothwhite;
+    background-color: $paddletailblack;
   }
 
   &.nav-link:hover,
@@ -269,7 +273,7 @@ a {
   }
 }
 
-.container-fluid .block-page-title-block {
+main .block-page-title-block {
   padding-inline: 1.5rem;
 }
 
@@ -325,6 +329,11 @@ code {
   a:not(.layout-builder__link--add) {
     color: $bucktoothwhite;
     text-decoration-color: $bucktoothwhite;
+
+    &:active {
+      color: $paddletailblack;
+      background-color: $bucktoothwhite;
+    }
   }
 }
 
