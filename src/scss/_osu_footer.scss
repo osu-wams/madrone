@@ -6,9 +6,14 @@ footer {
       color: $bucktoothwhite;
       text-decoration-color: $bucktoothwhite;
 
-      &:hover {
-        color: $bucktoothwhite;
-        text-decoration-color: $bucktoothwhite;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:active {
+        color: $paddletailblack;
+        background-color: $bucktoothwhite;
       }
     }
   }

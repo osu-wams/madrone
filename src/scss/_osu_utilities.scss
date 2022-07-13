@@ -110,6 +110,20 @@
   text-decoration-color: $bucktoothwhite !important;
 }
 
+.osu-link-white {
+  color: $bucktoothwhite !important;
+  text-decoration-color: $bucktoothwhite !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  &:active {
+    color: $paddletailblack !important;
+    background-color: $bucktoothwhite !important;
+  }
+}
+
 .breadcrumb {
   flex-direction: column;
   @media screen and (min-width: 768px) {
