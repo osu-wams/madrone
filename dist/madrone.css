@@ -11774,6 +11774,23 @@ a.button:focus,
   max-width: max-content;
 }
 
+article.media.align-right {
+  margin-inline-start: 1rem !important;
+}
+article.media.align-left {
+  margin-inline-end: 1rem !important;
+}
+
+figure article[class*=media--view-mode-media-card] {
+  padding: 3rem !important;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) !important;
+  background-color: #f7f5f5 !important;
+}
+figure > figcaption.figure-caption::before {
+  content: "—";
+  padding-right: 1ch;
+}
+
 .media--view-mode-media-card-caption .field--name-name {
   color: #423e3c !important;
   padding-top: 1.5rem;
