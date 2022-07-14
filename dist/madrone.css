@@ -11359,11 +11359,11 @@ code {
 }
 
 /** Only force link color if the parent block has a dark bg set.*/
-.osu-text-bucktoothwhite > * a:not(.layout-builder__link--add) {
+.osu-text-bucktoothwhite > * a:not(.layout-builder__link--add, .btn, a.button) {
   color: #fff;
   text-decoration-color: #fff;
 }
-.osu-text-bucktoothwhite > * a:not(.layout-builder__link--add):active {
+.osu-text-bucktoothwhite > * a:not(.layout-builder__link--add, .btn, a.button):active {
   color: #212529;
   background-color: #fff;
 }
