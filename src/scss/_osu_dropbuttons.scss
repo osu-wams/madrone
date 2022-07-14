@@ -34,22 +34,25 @@
       }
 
       .dropbutton-action {
-        &:hover,
-        &:focus-within {
-          a {
-            text-decoration-color: rgba($osuorange, 1);
-            text-decoration-line: underline;
-            text-decoration-thickness: 13%;
-          }
-        }
-
         * {
           color: $bucktoothwhite;
           white-space: nowrap;
         }
 
         a {
-          text-decoration: none;
+          text-decoration-color: rgba($osuorange, 1);
+          text-decoration-thickness: 13%;
+
+          &:hover,
+          &:focus,
+          &:focus-within {
+            text-decoration: none;
+          }
+
+          &:active {
+            color: $bucktoothwhite;
+            background-color: $paddletailblack;
+          }
         }
       }
     }

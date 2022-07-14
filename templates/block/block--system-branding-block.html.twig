@@ -61,11 +61,10 @@
         <div class="align-self-stretch border-start border-neutral-200"></div>
       {% endif %}
       {% if site_name %}
-        <div class="block__content__site-name ms-4">
+        <div class="block__content__site-name d-flex flex-column ms-4">
           {% if group_name and group_path %}
             <a class="site-name__site-link--with-group fs-6" href="{{ path('<front>') }}"
                rel="home">{{ site_name }}</a>
-            <br/>
             <a class="site-name__group-link text-decoration-none osu-text-osuorange fw-bolder"
                href="{{ group_path }}">{{ group_name }}</a>
           {% else %}

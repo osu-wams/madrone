@@ -207,7 +207,6 @@ $utilities: map-merge-multiple(
 
 /** Theme Defaults **/
 h1 {
-  text-transform: uppercase;
   color: rgba($osuorange, 1);
   font-family: "Stratum2Web", serif;
   font-size: 48px;
@@ -338,6 +337,7 @@ code {
 }
 
 @import "scss/osu_header";
+@import "scss/osu_breadcrumbs";
 @import "scss/osu_footer";
 @import "scss/superfish";
 @import "scss/osu_forms";

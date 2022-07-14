@@ -110,6 +110,21 @@
   text-decoration-color: $bucktoothwhite !important;
 }
 
+.osu-link {
+  text-decoration-color: rgba($osuorange, 1);
+  text-decoration-thickness: 13%;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $bucktoothwhite;
+    background-color: $paddletailblack;
+  }
+}
+
 .osu-link-white {
   color: $bucktoothwhite !important;
   text-decoration-color: $bucktoothwhite !important;
@@ -121,12 +136,5 @@
   &:active {
     color: $paddletailblack !important;
     background-color: $bucktoothwhite !important;
-  }
-}
-
-.breadcrumb {
-  flex-direction: column;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
   }
 }
