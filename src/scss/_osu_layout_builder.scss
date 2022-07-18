@@ -14,6 +14,13 @@
   }
 }
 
+/* DRUP8-1056 */
+#layout-builder-modal {
+  .form-item {
+    width: 100%;
+  }
+}
+
 #drupal-off-canvas {
   .messages.messages.messages--error p {
     color: $paddletailblack;
@@ -23,8 +30,10 @@
     background-image: url(../assets/fade-zoom-in.svg);
   }
 
-  div.form-item {
-    width: initial !important;
+  .form-item {
+    /* Replace `initial` - DRUP8-1056 */
+    width: 100%;
+    //width: initial !important;
   }
 
   form.layout-builder-configure-block {
