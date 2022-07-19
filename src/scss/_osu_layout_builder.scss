@@ -19,6 +19,10 @@
   .form-item {
     width: 100%;
   }
+
+  .form-radios > div {
+    width: initial;
+  }
 }
 
 #drupal-off-canvas {
@@ -31,9 +35,11 @@
   }
 
   .form-item {
-    /* Replace `initial` - DRUP8-1056 */
     width: 100%;
-    //width: initial !important;
+  }
+
+  .form-radios > div {
+    width: initial;
   }
 
   form.layout-builder-configure-block {
