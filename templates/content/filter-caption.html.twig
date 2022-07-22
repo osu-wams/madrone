@@ -12,8 +12,7 @@
  * - string classes: The classes of the captioned HTML tag.
  */
 #}
-{% set classes = 'figure' %}
-<figure role="group"{%- if classes %} class="{{ classes }}"{%- endif %}>
+<figure role="group" class="figure osu-media-card{%- if classes %} {{ classes }}{%- endif %}">
   {{ node }}
-  <figcaption class="figure-caption">{{ caption }}</figcaption>
+  <figcaption class="figure-caption mt-4">{{ caption }}</figcaption>
 </figure>
