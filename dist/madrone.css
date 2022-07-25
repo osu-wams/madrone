@@ -107,7 +107,7 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: Open Sans, sans-serif;
-  --bs-body-font-size: 1rem;
+  --bs-body-font-size: 1.125rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.8;
   --bs-body-color: #423e3c;
@@ -159,47 +159,52 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.40625rem + 1.875vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 2.8125rem;
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.35rem + 1.2vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.321875rem + 0.8625vw);
 }
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.75rem;
+    font-size: 1.96875rem;
   }
 }
 
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.29375rem + 0.525vw);
 }
 @media (min-width: 1200px) {
   h4, .h4 {
-    font-size: 1.5rem;
+    font-size: 1.6875rem;
   }
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
+}
+@media (min-width: 1200px) {
+  h5, .h5 {
+    font-size: 1.40625rem;
+  }
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 p {
@@ -532,8 +537,13 @@ progress {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
   font-weight: 300;
+}
+@media (min-width: 1200px) {
+  .lead {
+    font-size: 1.40625rem;
+  }
 }
 
 .display-1 {
@@ -626,7 +636,7 @@ progress {
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 .blockquote > :last-child {
   margin-bottom: 0;
@@ -1994,13 +2004,18 @@ progress {
 .col-form-label-lg {
   padding-top: calc(1rem + 1px);
   padding-bottom: calc(1rem + 1px);
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
+}
+@media (min-width: 1200px) {
+  .col-form-label-lg {
+    font-size: 1.40625rem;
+  }
 }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
 }
 
 .form-text {
@@ -2013,7 +2028,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.8;
   color: #423e3c;
@@ -2117,7 +2132,7 @@ progress {
 .form-control-sm {
   min-height: calc(1.8em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   border-radius: 0.2rem;
 }
 .form-control-sm::file-selector-button {
@@ -2134,8 +2149,13 @@ progress {
 .form-control-lg {
   min-height: calc(1.8em + 2rem + 2px);
   padding: 1rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
+}
+@media (min-width: 1200px) {
+  .form-control-lg {
+    font-size: 1.40625rem;
+  }
 }
 .form-control-lg::file-selector-button {
   padding: 1rem 1.5rem;
@@ -2180,7 +2200,7 @@ textarea.form-control-lg {
   width: 100%;
   padding: 0.5rem 0.75rem 0.5rem 0.25rem;
   -moz-padding-start: calc(0.25rem - 3px);
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.8;
   color: #423e3c;
@@ -2220,7 +2240,7 @@ textarea.form-control-lg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   border-radius: 0.2rem;
 }
 
@@ -2228,13 +2248,18 @@ textarea.form-control-lg {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
+}
+@media (min-width: 1200px) {
+  .form-select-lg {
+    font-size: 1.40625rem;
+  }
 }
 
 .form-check {
   display: block;
-  min-height: 1.8rem;
+  min-height: 2.025rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
@@ -2499,7 +2524,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.8;
   color: #423e3c;
@@ -2517,8 +2542,18 @@ textarea.form-control-lg {
 .field--name-field-tags .field__items .field__item .input-group-lg > a,
 .input-group-lg > a.button {
   padding: 1rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
+}
+@media (min-width: 1200px) {
+  .input-group-lg > .form-control,
+.input-group-lg > .form-select,
+.input-group-lg > .input-group-text,
+.input-group-lg > .btn,
+.field--name-field-tags .field__items .field__item .input-group-lg > a,
+.input-group-lg > a.button {
+    font-size: 1.40625rem;
+  }
 }
 
 .input-group-sm > .form-control,
@@ -2528,7 +2563,7 @@ textarea.form-control-lg {
 .field--name-field-tags .field__items .field__item .input-group-sm > a,
 .input-group-sm > a.button {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   border-radius: 0.2rem;
 }
 
@@ -2569,7 +2604,7 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: 0.1rem;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   color: #fff;
   background-color: rgba(74, 119, 60, 0.9);
   border-radius: 0.25rem;
@@ -2658,7 +2693,7 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: 0.1rem;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   color: #fff;
   background-color: rgba(199, 33, 39, 0.9);
   border-radius: 0.25rem;
@@ -2744,7 +2779,7 @@ textarea.form-control-lg {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 3rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   border-radius: 50rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -3219,13 +3254,18 @@ textarea.form-control-lg {
 
 .btn-lg, .btn-group-lg > .btn, .field--name-field-tags .field__items .field__item .btn-group-lg > a, .btn-group-lg > a.button {
   padding: 0.5rem 3rem;
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 50rem;
+}
+@media (min-width: 1200px) {
+  .btn-lg, .btn-group-lg > .btn, .field--name-field-tags .field__items .field__item .btn-group-lg > a, .btn-group-lg > a.button {
+    font-size: 1.40625rem;
+  }
 }
 
 .btn-sm, .btn-group-sm > .btn, .field--name-field-tags .field__items .field__item .btn-group-sm > a, .btn-group-sm > a.button {
   padding: 0.25rem 3rem;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   border-radius: 50rem;
 }
 
@@ -3297,7 +3337,7 @@ textarea.form-control-lg {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #423e3c;
   text-align: left;
   list-style: none;
@@ -3527,7 +3567,7 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   color: #6c757d;
   white-space: nowrap;
 }
@@ -3708,6 +3748,7 @@ textarea.form-control-lg {
 .nav-link, .madrone-primary-menu > .block-superfish ul.sf-menu li a, .madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1) {
   display: block;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
   color: #423e3c;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -3844,12 +3885,17 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: 0.275rem;
-  padding-bottom: 0.275rem;
+  padding-top: 0.246875rem;
+  padding-bottom: 0.246875rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
   text-decoration: none;
   white-space: nowrap;
+}
+@media (min-width: 1200px) {
+  .navbar-brand {
+    font-size: 1.40625rem;
+  }
 }
 .navbar-nav {
   display: flex;
@@ -3879,12 +3925,17 @@ textarea.form-control-lg {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 50rem;
   transition: box-shadow 0.15s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .navbar-toggler {
+    font-size: 1.40625rem;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -4469,7 +4520,7 @@ textarea.form-control-lg {
   align-items: center;
   width: 100%;
   padding: 1rem 1.25rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #423e3c;
   text-align: left;
   background-color: #f7f5f5;
@@ -4577,6 +4628,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   padding: 0 0;
   margin-bottom: 1rem;
+  font-size: 1rem;
   list-style: none;
 }
 
@@ -4658,7 +4710,12 @@ textarea.form-control-lg {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: calc(1.265625rem + 0.1875vw);
+}
+@media (min-width: 1200px) {
+  .pagination-lg .page-link {
+    font-size: 1.40625rem;
+  }
 }
 .pagination-lg .page-item:first-child .page-link {
   border-top-left-radius: 0.3rem;
@@ -4671,7 +4728,7 @@ textarea.form-control-lg {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
 }
 .pagination-sm .page-item:first-child .page-link {
   border-top-left-radius: 0.2rem;
@@ -4811,7 +4868,7 @@ textarea.form-control-lg {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.75rem;
+  font-size: 0.84375rem;
   background-color: #e9ecef;
   border-radius: 0.25rem;
 }
@@ -5558,7 +5615,7 @@ textarea.form-control-lg {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -5660,7 +5717,7 @@ textarea.form-control-lg {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.984375rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -5754,7 +5811,7 @@ textarea.form-control-lg {
 .popover-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1.125rem;
   background-color: #f0f0f0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top-left-radius: calc(0.3rem - 1px);
@@ -7526,27 +7583,27 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: calc(1.40625rem + 1.875vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: calc(1.35rem + 1.2vw) !important;
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: calc(1.321875rem + 0.8625vw) !important;
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: calc(1.29375rem + 0.525vw) !important;
 }
 
 .fs-5 {
-  font-size: 1.25rem !important;
+  font-size: calc(1.265625rem + 0.1875vw) !important;
 }
 
 .fs-6 {
-  font-size: 1rem !important;
+  font-size: 1.125rem !important;
 }
 
 .fst-italic {
@@ -10688,16 +10745,19 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.5rem !important;
+    font-size: 2.8125rem !important;
   }
   .fs-2 {
-    font-size: 2rem !important;
+    font-size: 2.25rem !important;
   }
   .fs-3 {
-    font-size: 1.75rem !important;
+    font-size: 1.96875rem !important;
   }
   .fs-4 {
-    font-size: 1.5rem !important;
+    font-size: 1.6875rem !important;
+  }
+  .fs-5 {
+    font-size: 1.40625rem !important;
   }
 }
 @media print {
@@ -11346,7 +11406,7 @@ blockquote {
   padding: 2.5em 3.75em;
   border: 5px solid #e9e5e4;
   font-family: Georgia, "DejaVu Serif", serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 code {
@@ -11974,6 +12034,6 @@ body.cke_editable_themed {
 .ui-dialog input,
 .ui-dialog select,
 .ui-dialog textarea {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 /*# sourceMappingURL=madrone.css.map */

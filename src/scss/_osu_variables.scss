@@ -173,6 +173,7 @@ $link-hover-color: $body-color;
 $link-decoration: underline $osuorange;
 $nav-link-color: $neutral-700;
 $nav-link-hover-color: $bucktoothwhite;
+$nav-link-font-size: 1rem;
 
 /* Navigation Tabs */
 $nav-tabs-link-active-bg: $bucktoothwhite;
@@ -240,7 +241,8 @@ $btn-border-radius-sm: 50rem;
 
 /* Typography */
 $font-family-base: 'Open Sans', sans-serif;
-$blockquote-font-size: 1.125rem;
+$font-size-base: 1.125rem;
+$blockquote-font-size: 1.25rem;
 
 /* Tables */
 $table-bg: $bucktoothwhite;
@@ -250,3 +252,4 @@ $table-border-color: $neutral-200;
 /* Breadcrumbs */
 $breadcrumb-divider: quote("|");
 $breadcrumb-divider-color: $neutral-700;
+$breadcrumb-font-size: 1rem;
