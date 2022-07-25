@@ -11370,7 +11370,7 @@ a {
 a:hover, a:focus {
   text-decoration: none;
 }
-a:active {
+a:active:not(#osu-logo-wide, #osu-logo-crest) {
   color: #fff;
   background-color: #212529;
 }
@@ -11828,10 +11828,27 @@ a.button:focus,
   background-color: #212529;
 }
 
-.media--view-mode-media-card,
-.media--view-mode-media-card-caption {
+.media--view-mode-media-card {
   border-radius: 10px;
   max-width: max-content;
+}
+
+article.media.align-right {
+  margin-inline-start: 1rem !important;
+}
+article.media.align-left {
+  margin-inline-end: 1rem !important;
+}
+
+figure.align-right {
+  margin-inline-start: 1rem !important;
+}
+figure.align-left {
+  margin-inline-end: 1rem !important;
+}
+figure > figcaption.figure-caption::before {
+  content: "—";
+  padding-right: 1ch;
 }
 
 .media--view-mode-media-card-caption .field--name-name {
@@ -11841,6 +11858,15 @@ a.button:focus,
 .media--view-mode-media-card-caption .field--name-name div.field__item::before {
   content: "—";
   padding-right: 1ch;
+}
+
+.osu-media-card {
+  background-color: #f7f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.5rem;
+  max-width: max-content;
+  padding: 1.5rem;
 }
 
 .messages.messages--status.osu-alert-success a {

@@ -253,7 +253,7 @@ a {
     text-decoration: none;
   }
 
-  &:active {
+  &:active:not(#osu-logo-wide, #osu-logo-crest) {
     color: $bucktoothwhite;
     background-color: $paddletailblack;
   }

@@ -43,14 +43,14 @@
       {% if site_logo %}
         <div class="d-none d-lg-flex pe-2">
           <div class="ms-2 py-2">
-            <a class="text-decoration-none" href="https://oregonstate.edu">
+            <a id="osu-logo-wide" class="text-decoration-none d-inline-block" href="https://oregonstate.edu">
               <img class="" src="{{ site_logo }}" alt="{{ 'Oregon State University Logo'|t }}"/>
             </a>
           </div>
         </div>
         <div class="d-flex d-lg-none">
           <div class="py-2 px-2">
-            <a class="text-decoration-none" href="https://oregonstate.edu">
+            <a id="osu-logo-crest" class="text-decoration-none" href="https://oregonstate.edu">
               <img class="" src="{{ base_path }}{{ active_theme_path() }}/assets/osu-logo-crest-only.svg"
                    alt="{{ 'Oregon State University Crest Logo'|t }}"/>
             </a>
@@ -63,10 +63,14 @@
       {% if site_name %}
         <div class="block__content__site-name d-flex flex-column ms-4">
           {% if group_name and group_path %}
-            <a class="site-name__site-link--with-group fs-6" href="{{ path('<front>') }}"
-               rel="home">{{ site_name }}</a>
-            <a class="site-name__group-link text-decoration-none osu-text-osuorange fw-bolder"
-               href="{{ group_path }}">{{ group_name }}</a>
+            <div class="site-name__site-link--wrapper">
+              <a class="site-name__site-link--with-group fs-6" href="{{ path('<front>') }}"
+                 rel="home">{{ site_name }}</a>
+            </div>
+            <div class="site-name__group-link--wrapper">
+              <a class="site-name__group-link text-decoration-none osu-text-osuorange fw-bolder"
+                 href="{{ group_path }}">{{ group_name }}</a>
+            </div>
           {% else %}
             <a class="site-name__site-link text-decoration-none osu-text-osuorange fw-bolder"
                href="{{ path('<front>') }}"

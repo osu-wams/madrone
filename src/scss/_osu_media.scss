@@ -1,7 +1,31 @@
-.media--view-mode-media-card,
-.media--view-mode-media-card-caption {
+.media--view-mode-media-card {
   border-radius: 10px;
   max-width: max-content;
+}
+
+article.media {
+  &.align-right {
+    margin-inline-start: 1rem !important;
+  }
+
+  &.align-left {
+    margin-inline-end: 1rem !important;
+  }
+}
+
+figure {
+  &.align-right {
+    margin-inline-start: 1rem !important;
+  }
+
+  &.align-left {
+    margin-inline-end: 1rem !important;
+  }
+
+  & > figcaption.figure-caption::before {
+    content: "\2014";
+    padding-right: 1ch;
+  }
 }
 
 .media--view-mode-media-card-caption {
@@ -14,4 +38,13 @@
       padding-right: 1ch;
     }
   }
+}
+
+.osu-media-card {
+  background-color: $page-bg-default;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.5rem;
+  max-width: max-content;
+  padding: 1.5rem;
 }
