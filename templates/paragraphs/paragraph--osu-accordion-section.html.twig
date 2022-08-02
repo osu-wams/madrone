@@ -13,6 +13,8 @@
  *   - paragraph.getOwnerId(): The user ID of the paragraph author.
  *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
  *   and methods for the paragraph object.
+ * - paragraph fields: To render the raw value of a field in a pagragraph use
+ *   {{ paragraph.field_example.value }}
  * - content: All paragraph items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
  *   {{ content|without('field_example') }} to temporarily suppress the printing
@@ -49,6 +51,7 @@
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+    <h3 class="accordion-section-header">{{ paragraph.field_p_accordion_heading.value }}</h3>
     <div class="accordion" id="{{ paragraph_id }}">
       {% for key, item in content.field_osu_paragraph_item if key|first != '#' %}
         <div class="accordion-item">
@@ -58,19 +61,18 @@
                     aria-expanded="true"
                     aria-controls="collapseOne">{{ item['#paragraph'].field_p_accordion_title.value }}</button>
           </div>
-          <div id="{{ paragraph_id }}-{{ key + 1 }}" class="accordion-collapse collapse"
+          <div id="{{ paragraph_id }}-{{ key + 1 }}" class="accordion-collapse collapse accordion-body"
                aria-labelledby="heading-{{ paragraph_id }}-{{ key + 1 }}"
                data-bs-parent="#{{ paragraph_id }}">
-            {% for body_key, body_value in item['#paragraph'].field_p_accordion_body %}
-              {{ item['#paragraph'].field_p_accordion_body.value }}
-              {{ item.without(item['#paragraph'].field_p_accordion_title) }}
-            {% endfor %}
+            {% set accordion_body = {
+              '#type':   'processed_text',
+              '#text':    item['#paragraph'].field_p_accordion_body.value,
+              '#format':  item['#paragraph'].field_p_accordion_body.format,
+            } %}
+            {{ accordion_body }}
           </div>
         </div>
       {% endfor %}
     </div>
-    {#    {% block content %} #}
-    {#      {{ content }} #}
-    {#    {% endblock %} #}
   </div>
 {% endblock paragraph %}
