@@ -22,6 +22,10 @@ figure {
     margin-inline-end: 1rem !important;
   }
 
+  &.align-center {
+    display: block;
+  }
+
   & > figcaption.figure-caption::before {
     content: "\2014";
     padding-right: 1ch;

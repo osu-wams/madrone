@@ -677,7 +677,7 @@ progress {
 
 .figure-caption {
   font-size: 0.875em;
-  color: #6c757d;
+  color: #423e3c;
 }
 
 .container, .node-layout-builder-form,
@@ -11845,6 +11845,9 @@ figure.align-right {
 }
 figure.align-left {
   margin-inline-end: 1rem !important;
+}
+figure.align-center {
+  display: block;
 }
 figure > figcaption.figure-caption::before {
   content: "—";
