@@ -18,6 +18,7 @@
 /* Typography */
 /* Tables */
 /* Breadcrumbs */
+/* Accordions */
 @font-face {
   font-family: "Stratum2Web";
   src: url("../fonts/Stratum2WebThin.woff") format("woff"), url("../fonts/Stratum2WebThin.woff2") format("woff2");
@@ -4535,12 +4536,12 @@ textarea.form-control-lg {
   }
 }
 .accordion-button:not(.collapsed) {
-  color: #c23908;
-  background-color: #fbece6;
+  color: #fff;
+  background-color: #212529;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
 }
 .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c23908'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   transform: rotate(-180deg);
 }
 .accordion-button::after {
@@ -4566,7 +4567,7 @@ textarea.form-control-lg {
   z-index: 3;
   border-color: #d73f09;
   outline: 0;
-  box-shadow: none;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
 
 .accordion-header {
