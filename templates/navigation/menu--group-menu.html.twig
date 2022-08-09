@@ -43,7 +43,7 @@ We call a macro which calls itself to render the full tree.
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass(menu_classes, menu_levels) }}>
     {% else %}
-      <ul{{ attributes.removeCLass(menu_classes).addClass(submenu_classes, menu_levels) }}>
+      <ul{{ attributes.removeCLass(menu_classes).removeAttribute('id').addClass(submenu_classes, menu_levels) }}>
     {% endif %}
     {% set attributes = attributes.removeClass(menu_levels) %}
     {% for item in items %}
