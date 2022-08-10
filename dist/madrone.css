@@ -12066,4 +12066,49 @@ body.cke_editable_themed {
 .ui-dialog textarea {
   font-size: 1.125rem;
 }
+
+.toc-js.sticky.is-sticked {
+  position: initial;
+}
+@media screen and (min-width: 768px) {
+  .toc-js.sticky.is-sticked {
+    position: fixed;
+  }
+}
+.toc-js ul {
+  padding-left: 0;
+}
+.toc-js ul li {
+  padding-block: 0.4rem;
+  padding-inline: 1rem;
+}
+.toc-js ul li::marker {
+  content: "" !important;
+}
+.toc-js ul li.toc-active {
+  background-color: #d73f09;
+}
+.toc-js ul li.toc-active a {
+  color: #fff;
+}
+
+.toc-h1 + .toc-h2 {
+  margin-left: 0.65rem;
+}
+
+.toc-h2 + .toc-h3 {
+  margin-left: 1rem;
+}
+
+.toc-h3 + .toc-h4 {
+  margin-left: 1.25rem;
+}
+
+.toc-h4 + .toc-h5 {
+  margin-left: 1.6rem;
+}
+
+.toc-h5 + .toc-h6 {
+  margin-left: 1.9rem;
+}
 /*# sourceMappingURL=madrone.css.map */
