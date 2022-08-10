@@ -254,8 +254,8 @@ a {
   }
 
   &:active:not(#osu-logo-wide, #osu-logo-crest) {
-    color: $bucktoothwhite;
     background-color: $paddletailblack;
+    color: $bucktoothwhite;
   }
 
   &.nav-link:hover,
@@ -273,18 +273,22 @@ a {
 }
 
 main .block-page-title-block {
+  margin-inline: auto;
+  max-width: 55em;
+  overflow-wrap: anywhere;
   padding-inline: 1.5rem;
+  word-break: normal;
 }
 
 .block-system-main-block {
   ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li {
     &::marker {
-      display: inline-block;
-      content: "\f054\2000";
-      letter-spacing: normal;
       color: rgba($body-color, 1);
+      content: "\f054\2000";
+      display: inline-block;
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
+      letter-spacing: normal;
     }
   }
 
@@ -299,24 +303,24 @@ main .block-page-title-block {
 }
 
 em.placeholder {
+  background-color: unset;
+  cursor: unset;
   display: unset;
   min-height: unset;
-  cursor: unset;
-  vertical-align: unset;
   opacity: unset;
-  background-color: unset;
+  vertical-align: unset;
 }
 
 blockquote {
-  padding: 2.5em 3.75em;
   border: 5px solid $neutral-200;
   font-family: Georgia, "DejaVu Serif", serif;
   font-size: 1.25rem;
+  padding: 2.5em 3.75em;
 }
 
 code {
-  padding: 0.5em 0.25em;
   background-color: #fff;
+  padding: 0.5em 0.25em;
 }
 
 .node-preview-container {
@@ -330,8 +334,8 @@ code {
     text-decoration-color: $bucktoothwhite;
 
     &:active {
-      color: $paddletailblack;
       background-color: $bucktoothwhite;
+      color: $paddletailblack;
     }
   }
 }
