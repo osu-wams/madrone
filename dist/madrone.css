@@ -11474,9 +11474,6 @@ code {
   }
 }
 
-footer .region-footer {
-  background: #2e2b2a url("../assets/footer-trees.png") repeat-x scroll left bottom;
-}
 footer .region-footer a {
   color: #fff;
   text-decoration-color: #fff;
@@ -11485,8 +11482,8 @@ footer .region-footer a:hover, footer .region-footer a:focus {
   text-decoration: none;
 }
 footer .region-footer a:active {
-  color: #212529;
   background-color: #fff;
+  color: #212529;
 }
 
 .madrone-primary-menu > .block-superfish .sf-accordion-toggle {
