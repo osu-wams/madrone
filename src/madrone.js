@@ -11,17 +11,20 @@ window.addEventListener('load', () => {
     })
   });
 
-  // handle group menu horizontal spacing
-  if (!isMobile()) {
-    const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul li ul')];
-    groupMenus.forEach(menu => {
-      if (!menu.classList.contains('menu--level-2')) {
-        menu.style.left = menu.parentNode.offsetWidth + 'px';
-      }
-    });
+  // Check on page load if we need to be a mobile menu.
+  if (window.innerWidth <= 768) {
+    groupMobileMenu();
+    document.querySelector('#group-content-menu').classList.add('d-none');
   }
 
-  groupMobileMenu();
+  // handle group menu horizontal spacing
+  const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu.menu--level-1 li ul')];
+  groupMenus.forEach(menu => {
+    if (!menu.classList.contains('menu--level-2')) {
+      // move the child element 100% of its width.
+      menu.style.left = '100%';
+    }
+  });
 
   // this must come after groupMobileMenu() since .menu--level-1 changes there
   const liList = [...document.querySelectorAll('.block-group-content-menu .menu--level-1 li')];
@@ -31,19 +34,20 @@ window.addEventListener('load', () => {
       // add class chevron icon
       li.classList.add('group-sub-menu');
     }
+  });
 
-    // add hover / focus logic
-    if (!isMobile()) {
-      li.addEventListener('mouseenter', menuItemHoverEvent);
-      li.addEventListener('focusin', menuItemFocusinEvent);
-      li.addEventListener('mouseleave', menuItemMouseLeaveEvent);
-      li.addEventListener('focusout', menuItemMouseLeaveEvent);
-    }
+  // Add event listeners only for desktop.
+  const desktopMenuLiList = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu.menu--level-1 li')];
+  desktopMenuLiList.forEach(desktopLi => {
+    desktopLi.addEventListener('mouseenter', menuItemHoverEvent);
+    desktopLi.addEventListener('focusin', menuItemFocusinEvent);
+    desktopLi.addEventListener('mouseleave', menuItemMouseLeaveEvent);
+    desktopLi.addEventListener('focusout', menuItemMouseLeaveEvent);
   });
 });
 
 /**
- *  Update text next to menu name to Close when Opened.
+ * Update text next to menu name to Close when Opened.
  * @param sfToggle
  */
 function menuClickedText(sfToggle) {
@@ -55,28 +59,37 @@ function menuClickedText(sfToggle) {
   }
 }
 
+/**
+ * Create the mobile menu cloning the exiting menu.
+ */
 function groupMobileMenu() {
-  if (isMobile()) {
-    // Create menu top level bucket
-    const menus = document.querySelectorAll('.menu--level-1');
-    menus.forEach((menu) => {
-      createMenuBucket(menu);
-    });
+  // Create menu top level bucket
+  const menus = document.querySelectorAll('ul#group-content-menu');
+  menus.forEach((menu) => {
+    createMenuBucket(menu);
+  });
 
-    const liList = [...document.querySelectorAll('.block-group-content-menu .menu--level-1 li')];
-    liList.forEach(li => {
-      // if li has child ul element
-      if ([...(li.children)].some(e => e.tagName === 'UL')) {
-        cloneLi(li);
+  const liList = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu-accordion .menu--level-1 li')];
+  liList.forEach(li => {
+    // if li has child ul element
+    if ([...(li.children)].some(e => e.tagName === 'UL')) {
+      cloneLi(li);
 
-        li.children[0].addEventListener('click', menuItemClickEvent);
-      }
-    });
-  }
+      li.children[0].addEventListener('click', menuItemClickEvent);
+    }
+  });
 }
 
+/**
+ * Crate the container and inject the cloned menu.
+ * @param menu
+ */
 function createMenuBucket(menu) {
+  // Do a deep clone cleaning all extra styles.
+  const deepMenuClone = cleanDeepClone(menu);
+  // Create new top level ul.
   const topUl = document.createElement('ul');
+  topUl.id = 'group-content-menu-accordion';
   topUl.classList = menu.classList;
   topUl.classList.remove('menu--level-1');
   topUl.classList.add('menu--level-0', 'group-mobile-menu');
@@ -92,13 +105,33 @@ function createMenuBucket(menu) {
   topLi.appendChild(topA);
   topUl.appendChild(topLi);
   menu.parentNode.insertBefore(topUl, menu);
-  topLi.appendChild(menu);
+  // Append the cloned menu so we can target it with hide/show.
+  topLi.appendChild(deepMenuClone);
 
   topA.addEventListener('click', menuItemClickEvent);
 }
 
+/**
+ * Perform a deep clone and strip all inline styles applied.
+ * @param menu
+ * @returns Node
+ */
+function cleanDeepClone(menu) {
+  const deepClone = menu.cloneNode(true);
+  deepClone.removeAttribute("id");
+  const deepCloneSubMenus = deepClone.querySelectorAll('ul');
+  deepCloneSubMenus.forEach(deepCloneSubMenu => {
+    deepCloneSubMenu.style.left = null;
+  })
+  return deepClone;
+}
+
+/**
+ * Events for menu click on desktop.
+ * @param event
+ */
 function menuItemClickEvent(event) {
-  // prevent clicks from navigating to the a href
+  // prevent clicks from navigating to the html <a> element.
   event.preventDefault();
 
   // add styling and change text when clicked
@@ -114,6 +147,10 @@ function menuItemClickEvent(event) {
   }
 }
 
+/**
+ *  Events for menu hover on desktop.
+ * @param event
+ */
 function menuItemHoverEvent(event) {
   if (this.classList.contains('group-menu-hover') && this.mouseLeaveTimeout) {
     // prevent menu from hiding if the mouse leaves only for a moment
@@ -123,12 +160,20 @@ function menuItemHoverEvent(event) {
   }
 }
 
+/**
+ * Events for menu hover.
+ * @param event
+ */
 function menuItemFocusinEvent(event) {
   if (!this.classList.contains('group-menu-hover')) {
     this.classList.add('group-menu-hover');
   }
 }
 
+/**
+ * Event for when the mouse leaves.
+ * @param event
+ */
 function menuItemMouseLeaveEvent(event) {
   const groupMenu = document.querySelectorAll('.block-group-content-menu')[0];
   if (this.classList.contains('group-menu-hover') && !event.currentTarget.contains(event.relatedTarget)) {
@@ -144,7 +189,10 @@ function menuItemMouseLeaveEvent(event) {
   }
 }
 
-// clone li and add to child ul element
+/**
+ * Clone li and add to parent a element.
+ * @param li
+ */
 function cloneLi(li) {
   const clonedA = li.children[0].cloneNode(true);
   const clonedLi = document.createElement('li');
@@ -152,6 +200,38 @@ function cloneLi(li) {
   li.children[1].prepend(clonedLi);
 }
 
+/**
+ * Check it user agent is a mobile agent.
+ * @returns {RegExpMatchArray}
+ */
 function isMobile() {
   return navigator.userAgent.match(/(android|bb\d+|meego)|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i);
 }
+
+// Add event listener to browser resize.
+window.addEventListener('resize', (event) => {
+  if (window.innerWidth <= 768) {
+    // only add mobile menu if it doesn't already exist.
+    let groupMobileId = document.querySelector('#group-content-menu-accordion');
+    let groupMenuId = document.querySelector('#group-content-menu');
+    if (groupMobileId === null) {
+      groupMobileMenu();
+      groupMenuId.classList.add('d-none');
+    } else {
+
+      groupMenuId.classList.add('d-none');
+      groupMobileId.classList.remove('d-none');
+      groupMobileId.classList.add('d-flex');
+    }
+  } else {
+    // add back desktop menu if mobile menu was added.
+    let groupMobileId = document.querySelector('#group-content-menu-accordion');
+    let groupMenuId = document.querySelector('#group-content-menu');
+    if (groupMobileId !== null) {
+      groupMobileId.classList.remove('d-flex');
+      groupMobileId.classList.add('d-none');
+      groupMenuId.classList.remove('d-none');
+      groupMenuId.classList.add('d-flex');
+    }
+  }
+});
