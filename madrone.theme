@@ -72,7 +72,6 @@ function madrone_preprocess_node(&$variables) {
   // Ran into an issue when using views with display as content view modes
   // rather than using fields.
   $date = $variables['node']->getCreatedTime();
-  // Here you can use drupal's format_date() function, or some custom PHP date formatting.
   /** @var \Drupal\date_ap_style\ApStyleDateFormatter $date_ap */
   $date_ap = \Drupal::service('date_ap_style.formatter');
   $variables['date'] = $date_ap->formatTimestamp($date, ['always_display_year' => TRUE]);
