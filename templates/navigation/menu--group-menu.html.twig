@@ -34,10 +34,12 @@ We call a macro which calls itself to render the full tree.
     'nav-pills'
   ] %}
   {% set submenu_classes = [
-    'menu--' ~ menu_name|clean_class ~ '__submenu'
+    'menu--' ~ menu_name|clean_class ~ '__submenu',
+    'list-unstyled',
   ] %}
   {% set menu_levels = [
-    'menu--level-' ~ (menu_level + 1)
+    'menu--level-' ~ (menu_level + 1),
+    'list-unstyled',
   ] %}
   {% if items %}
     {% if menu_level == 0 %}

@@ -24,16 +24,19 @@
       padding-left: 0;
       position: absolute;
       transform: scaleY(0);
+      width: 12em;
       z-index: 499;
 
       li {
         background-color: $bucktoothwhite;
-        display: unset;
         position: relative;
       }
 
       li ul {
+        left: 0;
+        position: absolute;
         top: 0;
+        width: 12em;
       }
     }
 
@@ -64,6 +67,7 @@
   .menu--level-2 {
     .group-sub-menu > a::after {
       content: " \f054";
+      float: right;
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -101,7 +105,12 @@
     li {
       background-color: $neutral-200 !important;
       width: 100%;
+
+      ul {
+        width: 100% !important;
+      }
     }
+
 
     $menu-depth: 0;
     @for $i from 1 through 9 {
