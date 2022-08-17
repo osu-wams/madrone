@@ -11962,6 +11962,10 @@ figure > figcaption.figure-caption::before {
   padding: 1.5rem;
 }
 
+.messages.messages--error.osu-alert-danger a {
+  color: #fff;
+  text-decoration-color: #fff;
+}
 .messages.messages--status.osu-alert-success a {
   color: #fff;
 }
@@ -12166,7 +12170,7 @@ body.cke_editable_themed {
 .toc-js.sticky.is-sticked {
   position: initial;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .toc-js.sticky.is-sticked {
     position: fixed;
   }
@@ -12208,10 +12212,76 @@ body.cke_editable_themed {
   margin-left: 1.9rem;
 }
 
-.related-stories .related-stories-item > div {
+.all-stories .story-card > div {
   border-radius: 10px;
 }
-.related-stories .related-stories-item img {
+.all-stories .story-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+}
+
+.block-views-blockosu-stories-landing-page-stories-block h2, .block-views-blockosu-stories-landing-page-stories-block .h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.landing-stories .views-row {
+  border-radius: 10px;
+}
+.landing-stories .views-row img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+@media screen and (min-width: 992px) {
+  .landing-stories {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .landing-stories .views-row--1 {
+    grid-column: 1/3;
+  }
+  .landing-stories .views-row--1 img {
+    height: 300px;
+    object-fit: cover;
+  }
+  .landing-stories .more-link {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .landing-stories {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    max-width: 1600px;
+  }
+  .landing-stories .views-row--1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .landing-stories .views-row--1 img {
+    height: 660px;
+    object-fit: cover;
+  }
+  .landing-stories .more-link {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+}
+
+.block-views-blockosu-stories-related-stories-block h2, .block-views-blockosu-stories-related-stories-block .h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.related-stories .story-card > div {
+  border-radius: 10px;
+}
+.related-stories .story-card img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;

@@ -1,4 +1,11 @@
 .messages {
+  &.messages--error.osu-alert-danger {
+    a {
+      color: $bucktoothwhite;
+      text-decoration-color: $bucktoothwhite;
+    }
+  }
+
   &.messages--status.osu-alert-success {
     a {
       color: $bucktoothwhite;
