@@ -91,9 +91,9 @@
   {% if display_submitted %}
     <footer>
       {{ author_picture }}
-      <div{{ author_attributes }}>
+      <div{{ author_attributes.addClass('fst-italic', 'text-align-center') }}>
         {% trans %}
-          Submitted by
+          By
           {{ author_name }}
           on
           {{ date }}

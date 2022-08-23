@@ -18,7 +18,7 @@
 }
 
 .osu-opacity-90 {
-  opacity: .9;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* Display flex*/
@@ -120,8 +120,8 @@
   }
 
   &:active {
-    color: $bucktoothwhite;
     background-color: $paddletailblack;
+    color: $bucktoothwhite;
   }
 }
 
@@ -134,7 +134,20 @@
   }
 
   &:active {
-    color: $paddletailblack !important;
     background-color: $bucktoothwhite !important;
+    color: $paddletailblack !important;
+  }
+}
+
+.osu-link-orange {
+  color: $osuorange;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration-color: $osuorange !important;
+    text-decoration-line: underline !important;
+    text-decoration-thickness: 13% !important;
   }
 }

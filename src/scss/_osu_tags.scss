@@ -1,8 +1,18 @@
-.field--name-field-tags {
+.field--name-field-tags,
+.field--name-field-osu-organizations {
+  &.field--label-inline {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &.field__items,
   .field__items {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
 
     .field__item {
       a {
@@ -11,4 +21,8 @@
       }
     }
   }
+}
+
+.node--type-osu-profile .field--name-field-osu-organizations.field__items {
+  display: block;
 }
