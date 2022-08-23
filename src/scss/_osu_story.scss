@@ -2,6 +2,12 @@
   .story-card {
     & > div {
       border-radius: 10px;
+
+      .story-card__link::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+      }
     }
 
     img {
@@ -19,12 +25,20 @@
 }
 
 .landing-stories {
-  .views-row {
-    border-radius: 10px;
+  .story-card {
+    & > div {
+      border-radius: 10px;
 
-    img {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      .story-card__link::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+      }
+
+      img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
     }
   }
 
@@ -78,6 +92,12 @@
   .story-card {
     & > div {
       border-radius: 10px;
+
+      .story-card__link::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+      }
     }
 
     img {
