@@ -1,3 +1,6 @@
+const fontSize = 16;
+const smallestEm = 12;
+const largestEm = 27;
 // Wait for the page to finish before looking for the superfish toggles.
 window.addEventListener('load', () => {
   const superfishMenus = [...document.querySelectorAll('ul.sf-menu')];
@@ -20,6 +23,7 @@ window.addEventListener('load', () => {
   // handle group menu horizontal spacing
   const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu.menu--level-1 li ul')];
   groupMenus.forEach(menu => {
+    resizeMenu(menu);
     if (!menu.classList.contains('menu--level-2')) {
       // move the child element 100% of its width.
       menu.style.left = '100%';
@@ -235,3 +239,23 @@ window.addEventListener('resize', (event) => {
     }
   }
 });
+
+/**
+ * Resize the Menu provided to the largest item or our LargestEm constant.
+ * @param menu
+ */
+function resizeMenu(menu) {
+  menu.style.width = "auto";
+  let menuUlMaxLength = 0;
+  menu.querySelectorAll('li').forEach(menuLi => {
+    menuLi.setAttribute('style', 'white-space:nowrap;');
+    let largestItem = Math.ceil(menuLi.clientWidth / fontSize);
+    if (largestItem < smallestEm) {
+      menuUlMaxLength = smallestEm;
+    } else if (largestItem > largestEm) {
+      menuUlMaxLength = largestEm;
+    }
+    menuLi.setAttribute('style', '');
+  });
+  menu.style.width = `${menuUlMaxLength}em`;
+}

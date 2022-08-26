@@ -11848,7 +11848,6 @@ form.header-search-block-form input {
 .block-group-content-menu .menu--level-0 li a,
 .block-group-content-menu .menu--level-1 li a {
   padding: 1rem;
-  white-space: nowrap;
 }
 @media (hover: hover) and (pointer: fine) {
   .block-group-content-menu .menu--level-0 .group-menu-hover a,
@@ -12003,6 +12002,10 @@ form.header-search-block-form input {
 
 nav.pager ul.pager__items {
   gap: 0.5em;
+}
+nav.pager ul.pager__items li.pager__item span.page-link:first-child,
+nav.pager ul.pager__items li.pager__item span.page-link:last-child {
+  border-radius: 5px;
 }
 nav.pager ul.pager__items li.pager__item a {
   border-radius: 5px;
