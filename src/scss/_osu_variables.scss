@@ -49,6 +49,10 @@ $stratosphere-600: #003b5c;
 $stratosphere-700: #002235;
 $table-alt-row: #f9f9f9;
 
+$moondust: $stratosphere-200;
+$crater: #8e9089;
+$lightGrey: #e0e0e0;
+
 /* Setting other variable names for common colors */
 $page-bg-default: $neutral-100;
 $page-bg-alt-1: $bucktoothwhite;
@@ -71,14 +75,12 @@ $osu-bg-colors: (
 
 /* Map for border colors */
 $osu-border-colors: (
-  "neutral": $neutral-100,
-  "white": $bucktoothwhite,
-  "dark": $paddletailblack,
+  "light-grey": $lightGrey,
+  "crater": $crater,
   "osu": $osuorange,
-  "pine": $pine-400,
-  "rogue-wave": $rogue_wave-400,
-  "luminance": $luminance-400,
-  "stratosphere": $stratosphere-400,
+  "moondust": $moondust,
+  "dark": $paddletailblack,
+  "white": $bucktoothwhite,
 );
 
 /* Map for all colors */
@@ -243,6 +245,7 @@ $btn-border-radius-sm: 50rem;
 $font-family-base: 'Open Sans', sans-serif;
 $font-size-base: 1.125rem;
 $blockquote-font-size: 1.25rem;
+$blockquote-margin-y: 1.5rem;
 $figure-caption-color: $body-color;
 
 /* Tables */

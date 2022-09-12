@@ -3,6 +3,12 @@ const smallestEm = 12;
 const largestEm = 27;
 // Wait for the page to finish before looking for the superfish toggles.
 window.addEventListener('load', () => {
+  let breadCrumbSize = document.querySelectorAll('.block-system-breadcrumb-block nav ol li');
+  if (breadCrumbSize.length < 3) {
+    let breadCrumbOl = document.querySelectorAll('.block-system-breadcrumb-block nav ol.breadcrumb');
+    breadCrumbOl[0].classList.add('flex-row');
+  }
+
   const superfishMenus = [...document.querySelectorAll('ul.sf-menu')];
   superfishMenus.map(menu => {
     let menuId = menu.getAttribute('id');

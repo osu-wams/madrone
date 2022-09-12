@@ -192,6 +192,171 @@ $utilities: map-merge-multiple(
             )
         )
       )
+    ),
+    (
+      "margin": map-merge(
+          map-get($utilities, "margin"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "margin"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "margin-x": map-merge(
+          map-get($utilities, "margin-x"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "margin-x"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "margin-y": map-merge(
+          map-get($utilities, "margin-y"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "margin-y"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "margin-top": map-merge(
+          map-get($utilities, "margin-top"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "margin-top"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "margin-end": map-merge(
+          map-get($utilities, "margin-end"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "margin-end"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "margin-bottom": map-merge(
+          map-get($utilities, "margin-bottom"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "margin-bottom"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "margin-start": map-merge(
+          map-get($utilities, "margin-start"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "margin-start"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "padding": map-merge(
+          map-get($utilities, "padding"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "padding"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "padding-x": map-merge(
+          map-get($utilities, "padding-x"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "padding-x"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "padding-y": map-merge(
+          map-get($utilities, "padding-y"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "padding-y"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "padding-top": map-merge(
+          map-get($utilities, "padding-top"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "padding-top"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "padding-end": map-merge(
+          map-get($utilities, "padding-end"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "padding-end"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "padding-bottom": map-merge(
+          map-get($utilities, "padding-bottom"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "padding-bottom"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "padding-start": map-merge(
+          map-get($utilities, "padding-start"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "padding-start"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
+    ),
+    (
+      "gap": map-merge(
+          map-get($utilities, "gap"),
+          (
+            values: map-merge(
+                map-get(map-get($utilities, "gap"), "values"),
+                (6: 1rem * 5)
+            )
+          )
+      )
     )
 );
 
@@ -246,7 +411,8 @@ h6 {
 
 a {
   text-decoration-color: rgba($osuorange, 1);
-  text-decoration-thickness: 13%;
+  text-decoration-thickness: 10%;
+  text-underline-offset: 2px;
 
   &:hover,
   &:focus {
@@ -272,7 +438,16 @@ a {
   }
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
+hr {
+  margin-block: 3rem;
+}
+
 main .block-page-title-block {
+  margin-bottom: 3rem;
   margin-inline: auto;
   max-width: 55em;
   overflow-wrap: anywhere;
@@ -315,6 +490,7 @@ blockquote {
   border: 5px solid $neutral-200;
   font-family: Georgia, "DejaVu Serif", serif;
   font-size: 1.25rem;
+  margin-block: 1.5rem;
   padding: 2.5em 3.75em;
 }
 
