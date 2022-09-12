@@ -636,7 +636,7 @@ progress {
 }
 
 .blockquote {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 1.25rem;
 }
 .blockquote > :last-child {
@@ -644,8 +644,8 @@ progress {
 }
 
 .blockquote-footer {
-  margin-top: -1rem;
-  margin-bottom: 1rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
   font-size: 0.875em;
   color: #6c757d;
 }
@@ -7268,6 +7268,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   gap: 3rem !important;
 }
 
+.gap-6 {
+  gap: 5rem !important;
+}
+
 .justify-content-start, .osu-justify-content-start {
   justify-content: flex-start !important;
 }
@@ -7420,6 +7424,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   margin: auto !important;
 }
 
+.m-6 {
+  margin: 5rem !important;
+}
+
 .mx-0 {
   margin-right: 0 !important;
   margin-left: 0 !important;
@@ -7453,6 +7461,11 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .mx-auto {
   margin-right: auto !important;
   margin-left: auto !important;
+}
+
+.mx-6 {
+  margin-right: 5rem !important;
+  margin-left: 5rem !important;
 }
 
 .my-0 {
@@ -7490,6 +7503,11 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   margin-bottom: auto !important;
 }
 
+.my-6 {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+}
+
 .mt-0 {
   margin-top: 0 !important;
 }
@@ -7516,6 +7534,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 
 .mt-auto {
   margin-top: auto !important;
+}
+
+.mt-6 {
+  margin-top: 5rem !important;
 }
 
 .me-0 {
@@ -7546,6 +7568,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   margin-right: auto !important;
 }
 
+.me-6 {
+  margin-right: 5rem !important;
+}
+
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -7572,6 +7598,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 
 .mb-auto {
   margin-bottom: auto !important;
+}
+
+.mb-6 {
+  margin-bottom: 5rem !important;
 }
 
 .ms-0 {
@@ -7602,6 +7632,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   margin-left: auto !important;
 }
 
+.ms-6 {
+  margin-left: 5rem !important;
+}
+
 .p-0 {
   padding: 0 !important;
 }
@@ -7624,6 +7658,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 
 .p-5 {
   padding: 3rem !important;
+}
+
+.p-6 {
+  padding: 5rem !important;
 }
 
 .px-0 {
@@ -7656,6 +7694,11 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   padding-left: 3rem !important;
 }
 
+.px-6 {
+  padding-right: 5rem !important;
+  padding-left: 5rem !important;
+}
+
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -7686,6 +7729,11 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   padding-bottom: 3rem !important;
 }
 
+.py-6 {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
 .pt-0 {
   padding-top: 0 !important;
 }
@@ -7708,6 +7756,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 
 .pt-5 {
   padding-top: 3rem !important;
+}
+
+.pt-6 {
+  padding-top: 5rem !important;
 }
 
 .pe-0 {
@@ -7734,6 +7786,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   padding-right: 3rem !important;
 }
 
+.pe-6 {
+  padding-right: 5rem !important;
+}
+
 .pb-0 {
   padding-bottom: 0 !important;
 }
@@ -7758,6 +7814,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   padding-bottom: 3rem !important;
 }
 
+.pb-6 {
+  padding-bottom: 5rem !important;
+}
+
 .ps-0 {
   padding-left: 0 !important;
 }
@@ -7780,6 +7840,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 
 .ps-5 {
   padding-left: 3rem !important;
+}
+
+.ps-6 {
+  padding-left: 5rem !important;
 }
 
 .font-monospace {
@@ -8565,6 +8629,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .gap-sm-5 {
     gap: 3rem !important;
   }
+  .gap-sm-6 {
+    gap: 5rem !important;
+  }
   .justify-content-sm-start {
     justify-content: flex-start !important;
   }
@@ -8679,6 +8746,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .m-sm-auto {
     margin: auto !important;
   }
+  .m-sm-6 {
+    margin: 5rem !important;
+  }
   .mx-sm-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -8706,6 +8776,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .mx-sm-auto {
     margin-right: auto !important;
     margin-left: auto !important;
+  }
+  .mx-sm-6 {
+    margin-right: 5rem !important;
+    margin-left: 5rem !important;
   }
   .my-sm-0 {
     margin-top: 0 !important;
@@ -8735,6 +8809,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
+  .my-sm-6 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+  }
   .mt-sm-0 {
     margin-top: 0 !important;
   }
@@ -8755,6 +8833,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mt-sm-auto {
     margin-top: auto !important;
+  }
+  .mt-sm-6 {
+    margin-top: 5rem !important;
   }
   .me-sm-0 {
     margin-right: 0 !important;
@@ -8777,6 +8858,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .me-sm-auto {
     margin-right: auto !important;
   }
+  .me-sm-6 {
+    margin-right: 5rem !important;
+  }
   .mb-sm-0 {
     margin-bottom: 0 !important;
   }
@@ -8797,6 +8881,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mb-sm-auto {
     margin-bottom: auto !important;
+  }
+  .mb-sm-6 {
+    margin-bottom: 5rem !important;
   }
   .ms-sm-0 {
     margin-left: 0 !important;
@@ -8819,6 +8906,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .ms-sm-auto {
     margin-left: auto !important;
   }
+  .ms-sm-6 {
+    margin-left: 5rem !important;
+  }
   .p-sm-0 {
     padding: 0 !important;
   }
@@ -8836,6 +8926,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .p-sm-5 {
     padding: 3rem !important;
+  }
+  .p-sm-6 {
+    padding: 5rem !important;
   }
   .px-sm-0 {
     padding-right: 0 !important;
@@ -8861,6 +8954,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
+  .px-sm-6 {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+  }
   .py-sm-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -8885,6 +8982,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
+  .py-sm-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
   .pt-sm-0 {
     padding-top: 0 !important;
   }
@@ -8902,6 +9003,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .pt-sm-5 {
     padding-top: 3rem !important;
+  }
+  .pt-sm-6 {
+    padding-top: 5rem !important;
   }
   .pe-sm-0 {
     padding-right: 0 !important;
@@ -8921,6 +9025,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pe-sm-5 {
     padding-right: 3rem !important;
   }
+  .pe-sm-6 {
+    padding-right: 5rem !important;
+  }
   .pb-sm-0 {
     padding-bottom: 0 !important;
   }
@@ -8939,6 +9046,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pb-sm-5 {
     padding-bottom: 3rem !important;
   }
+  .pb-sm-6 {
+    padding-bottom: 5rem !important;
+  }
   .ps-sm-0 {
     padding-left: 0 !important;
   }
@@ -8956,6 +9066,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .ps-sm-5 {
     padding-left: 3rem !important;
+  }
+  .ps-sm-6 {
+    padding-left: 5rem !important;
   }
   .text-sm-start {
     text-align: left !important;
@@ -9060,6 +9173,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .gap-md-5 {
     gap: 3rem !important;
+  }
+  .gap-md-6 {
+    gap: 5rem !important;
   }
   .justify-content-md-start {
     justify-content: flex-start !important;
@@ -9175,6 +9291,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .m-md-auto {
     margin: auto !important;
   }
+  .m-md-6 {
+    margin: 5rem !important;
+  }
   .mx-md-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -9202,6 +9321,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .mx-md-auto {
     margin-right: auto !important;
     margin-left: auto !important;
+  }
+  .mx-md-6 {
+    margin-right: 5rem !important;
+    margin-left: 5rem !important;
   }
   .my-md-0 {
     margin-top: 0 !important;
@@ -9231,6 +9354,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
+  .my-md-6 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+  }
   .mt-md-0 {
     margin-top: 0 !important;
   }
@@ -9251,6 +9378,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mt-md-auto {
     margin-top: auto !important;
+  }
+  .mt-md-6 {
+    margin-top: 5rem !important;
   }
   .me-md-0 {
     margin-right: 0 !important;
@@ -9273,6 +9403,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .me-md-auto {
     margin-right: auto !important;
   }
+  .me-md-6 {
+    margin-right: 5rem !important;
+  }
   .mb-md-0 {
     margin-bottom: 0 !important;
   }
@@ -9293,6 +9426,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mb-md-auto {
     margin-bottom: auto !important;
+  }
+  .mb-md-6 {
+    margin-bottom: 5rem !important;
   }
   .ms-md-0 {
     margin-left: 0 !important;
@@ -9315,6 +9451,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .ms-md-auto {
     margin-left: auto !important;
   }
+  .ms-md-6 {
+    margin-left: 5rem !important;
+  }
   .p-md-0 {
     padding: 0 !important;
   }
@@ -9332,6 +9471,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .p-md-5 {
     padding: 3rem !important;
+  }
+  .p-md-6 {
+    padding: 5rem !important;
   }
   .px-md-0 {
     padding-right: 0 !important;
@@ -9357,6 +9499,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
+  .px-md-6 {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+  }
   .py-md-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -9381,6 +9527,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
+  .py-md-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
   .pt-md-0 {
     padding-top: 0 !important;
   }
@@ -9398,6 +9548,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .pt-md-5 {
     padding-top: 3rem !important;
+  }
+  .pt-md-6 {
+    padding-top: 5rem !important;
   }
   .pe-md-0 {
     padding-right: 0 !important;
@@ -9417,6 +9570,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pe-md-5 {
     padding-right: 3rem !important;
   }
+  .pe-md-6 {
+    padding-right: 5rem !important;
+  }
   .pb-md-0 {
     padding-bottom: 0 !important;
   }
@@ -9435,6 +9591,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pb-md-5 {
     padding-bottom: 3rem !important;
   }
+  .pb-md-6 {
+    padding-bottom: 5rem !important;
+  }
   .ps-md-0 {
     padding-left: 0 !important;
   }
@@ -9452,6 +9611,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .ps-md-5 {
     padding-left: 3rem !important;
+  }
+  .ps-md-6 {
+    padding-left: 5rem !important;
   }
   .text-md-start {
     text-align: left !important;
@@ -9556,6 +9718,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .gap-lg-5 {
     gap: 3rem !important;
+  }
+  .gap-lg-6 {
+    gap: 5rem !important;
   }
   .justify-content-lg-start {
     justify-content: flex-start !important;
@@ -9671,6 +9836,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .m-lg-auto {
     margin: auto !important;
   }
+  .m-lg-6 {
+    margin: 5rem !important;
+  }
   .mx-lg-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -9698,6 +9866,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .mx-lg-auto {
     margin-right: auto !important;
     margin-left: auto !important;
+  }
+  .mx-lg-6 {
+    margin-right: 5rem !important;
+    margin-left: 5rem !important;
   }
   .my-lg-0 {
     margin-top: 0 !important;
@@ -9727,6 +9899,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
+  .my-lg-6 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+  }
   .mt-lg-0 {
     margin-top: 0 !important;
   }
@@ -9747,6 +9923,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mt-lg-auto {
     margin-top: auto !important;
+  }
+  .mt-lg-6 {
+    margin-top: 5rem !important;
   }
   .me-lg-0 {
     margin-right: 0 !important;
@@ -9769,6 +9948,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .me-lg-auto {
     margin-right: auto !important;
   }
+  .me-lg-6 {
+    margin-right: 5rem !important;
+  }
   .mb-lg-0 {
     margin-bottom: 0 !important;
   }
@@ -9789,6 +9971,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mb-lg-auto {
     margin-bottom: auto !important;
+  }
+  .mb-lg-6 {
+    margin-bottom: 5rem !important;
   }
   .ms-lg-0 {
     margin-left: 0 !important;
@@ -9811,6 +9996,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .ms-lg-auto {
     margin-left: auto !important;
   }
+  .ms-lg-6 {
+    margin-left: 5rem !important;
+  }
   .p-lg-0 {
     padding: 0 !important;
   }
@@ -9828,6 +10016,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .p-lg-5 {
     padding: 3rem !important;
+  }
+  .p-lg-6 {
+    padding: 5rem !important;
   }
   .px-lg-0 {
     padding-right: 0 !important;
@@ -9853,6 +10044,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
+  .px-lg-6 {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+  }
   .py-lg-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -9877,6 +10072,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
+  .py-lg-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
   .pt-lg-0 {
     padding-top: 0 !important;
   }
@@ -9894,6 +10093,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .pt-lg-5 {
     padding-top: 3rem !important;
+  }
+  .pt-lg-6 {
+    padding-top: 5rem !important;
   }
   .pe-lg-0 {
     padding-right: 0 !important;
@@ -9913,6 +10115,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pe-lg-5 {
     padding-right: 3rem !important;
   }
+  .pe-lg-6 {
+    padding-right: 5rem !important;
+  }
   .pb-lg-0 {
     padding-bottom: 0 !important;
   }
@@ -9931,6 +10136,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pb-lg-5 {
     padding-bottom: 3rem !important;
   }
+  .pb-lg-6 {
+    padding-bottom: 5rem !important;
+  }
   .ps-lg-0 {
     padding-left: 0 !important;
   }
@@ -9948,6 +10156,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .ps-lg-5 {
     padding-left: 3rem !important;
+  }
+  .ps-lg-6 {
+    padding-left: 5rem !important;
   }
   .text-lg-start {
     text-align: left !important;
@@ -10052,6 +10263,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .gap-xl-5 {
     gap: 3rem !important;
+  }
+  .gap-xl-6 {
+    gap: 5rem !important;
   }
   .justify-content-xl-start {
     justify-content: flex-start !important;
@@ -10167,6 +10381,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .m-xl-auto {
     margin: auto !important;
   }
+  .m-xl-6 {
+    margin: 5rem !important;
+  }
   .mx-xl-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -10194,6 +10411,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .mx-xl-auto {
     margin-right: auto !important;
     margin-left: auto !important;
+  }
+  .mx-xl-6 {
+    margin-right: 5rem !important;
+    margin-left: 5rem !important;
   }
   .my-xl-0 {
     margin-top: 0 !important;
@@ -10223,6 +10444,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
+  .my-xl-6 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+  }
   .mt-xl-0 {
     margin-top: 0 !important;
   }
@@ -10243,6 +10468,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mt-xl-auto {
     margin-top: auto !important;
+  }
+  .mt-xl-6 {
+    margin-top: 5rem !important;
   }
   .me-xl-0 {
     margin-right: 0 !important;
@@ -10265,6 +10493,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .me-xl-auto {
     margin-right: auto !important;
   }
+  .me-xl-6 {
+    margin-right: 5rem !important;
+  }
   .mb-xl-0 {
     margin-bottom: 0 !important;
   }
@@ -10285,6 +10516,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mb-xl-auto {
     margin-bottom: auto !important;
+  }
+  .mb-xl-6 {
+    margin-bottom: 5rem !important;
   }
   .ms-xl-0 {
     margin-left: 0 !important;
@@ -10307,6 +10541,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .ms-xl-auto {
     margin-left: auto !important;
   }
+  .ms-xl-6 {
+    margin-left: 5rem !important;
+  }
   .p-xl-0 {
     padding: 0 !important;
   }
@@ -10324,6 +10561,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .p-xl-5 {
     padding: 3rem !important;
+  }
+  .p-xl-6 {
+    padding: 5rem !important;
   }
   .px-xl-0 {
     padding-right: 0 !important;
@@ -10349,6 +10589,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
+  .px-xl-6 {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+  }
   .py-xl-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -10373,6 +10617,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
+  .py-xl-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
   .pt-xl-0 {
     padding-top: 0 !important;
   }
@@ -10390,6 +10638,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .pt-xl-5 {
     padding-top: 3rem !important;
+  }
+  .pt-xl-6 {
+    padding-top: 5rem !important;
   }
   .pe-xl-0 {
     padding-right: 0 !important;
@@ -10409,6 +10660,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pe-xl-5 {
     padding-right: 3rem !important;
   }
+  .pe-xl-6 {
+    padding-right: 5rem !important;
+  }
   .pb-xl-0 {
     padding-bottom: 0 !important;
   }
@@ -10427,6 +10681,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pb-xl-5 {
     padding-bottom: 3rem !important;
   }
+  .pb-xl-6 {
+    padding-bottom: 5rem !important;
+  }
   .ps-xl-0 {
     padding-left: 0 !important;
   }
@@ -10444,6 +10701,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .ps-xl-5 {
     padding-left: 3rem !important;
+  }
+  .ps-xl-6 {
+    padding-left: 5rem !important;
   }
   .text-xl-start {
     text-align: left !important;
@@ -10548,6 +10808,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .gap-xxl-5 {
     gap: 3rem !important;
+  }
+  .gap-xxl-6 {
+    gap: 5rem !important;
   }
   .justify-content-xxl-start {
     justify-content: flex-start !important;
@@ -10663,6 +10926,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .m-xxl-auto {
     margin: auto !important;
   }
+  .m-xxl-6 {
+    margin: 5rem !important;
+  }
   .mx-xxl-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -10690,6 +10956,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .mx-xxl-auto {
     margin-right: auto !important;
     margin-left: auto !important;
+  }
+  .mx-xxl-6 {
+    margin-right: 5rem !important;
+    margin-left: 5rem !important;
   }
   .my-xxl-0 {
     margin-top: 0 !important;
@@ -10719,6 +10989,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
+  .my-xxl-6 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+  }
   .mt-xxl-0 {
     margin-top: 0 !important;
   }
@@ -10739,6 +11013,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mt-xxl-auto {
     margin-top: auto !important;
+  }
+  .mt-xxl-6 {
+    margin-top: 5rem !important;
   }
   .me-xxl-0 {
     margin-right: 0 !important;
@@ -10761,6 +11038,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .me-xxl-auto {
     margin-right: auto !important;
   }
+  .me-xxl-6 {
+    margin-right: 5rem !important;
+  }
   .mb-xxl-0 {
     margin-bottom: 0 !important;
   }
@@ -10781,6 +11061,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .mb-xxl-auto {
     margin-bottom: auto !important;
+  }
+  .mb-xxl-6 {
+    margin-bottom: 5rem !important;
   }
   .ms-xxl-0 {
     margin-left: 0 !important;
@@ -10803,6 +11086,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .ms-xxl-auto {
     margin-left: auto !important;
   }
+  .ms-xxl-6 {
+    margin-left: 5rem !important;
+  }
   .p-xxl-0 {
     padding: 0 !important;
   }
@@ -10820,6 +11106,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .p-xxl-5 {
     padding: 3rem !important;
+  }
+  .p-xxl-6 {
+    padding: 5rem !important;
   }
   .px-xxl-0 {
     padding-right: 0 !important;
@@ -10845,6 +11134,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
+  .px-xxl-6 {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+  }
   .py-xxl-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -10869,6 +11162,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
+  .py-xxl-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
   .pt-xxl-0 {
     padding-top: 0 !important;
   }
@@ -10886,6 +11183,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .pt-xxl-5 {
     padding-top: 3rem !important;
+  }
+  .pt-xxl-6 {
+    padding-top: 5rem !important;
   }
   .pe-xxl-0 {
     padding-right: 0 !important;
@@ -10905,6 +11205,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pe-xxl-5 {
     padding-right: 3rem !important;
   }
+  .pe-xxl-6 {
+    padding-right: 5rem !important;
+  }
   .pb-xxl-0 {
     padding-bottom: 0 !important;
   }
@@ -10923,6 +11226,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .pb-xxl-5 {
     padding-bottom: 3rem !important;
   }
+  .pb-xxl-6 {
+    padding-bottom: 5rem !important;
+  }
   .ps-xxl-0 {
     padding-left: 0 !important;
   }
@@ -10940,6 +11246,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   }
   .ps-xxl-5 {
     padding-left: 3rem !important;
+  }
+  .ps-xxl-6 {
+    padding-left: 5rem !important;
   }
   .text-xxl-start {
     text-align: left !important;
@@ -11319,64 +11628,44 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 }
 
 /* For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use*/
-.osu-border-neutral {
-  border-color: #f7f5f5 !important;
+.osu-border-light-grey {
+  border-color: #e0e0e0 !important;
 }
 
-.osu-border-neutral-left {
-  border-left-color: #f7f5f5 !important;
+.osu-border-light-grey-left {
+  border-left-color: #e0e0e0 !important;
 }
 
-.osu-border-neutral-top {
-  border-top-color: #f7f5f5 !important;
+.osu-border-light-grey-top {
+  border-top-color: #e0e0e0 !important;
 }
 
-.osu-border-neutral-right {
-  border-right-color: #f7f5f5 !important;
+.osu-border-light-grey-right {
+  border-right-color: #e0e0e0 !important;
 }
 
-.osu-border-neutral-bottom {
-  border-bottom-color: #f7f5f5 !important;
+.osu-border-light-grey-bottom {
+  border-bottom-color: #e0e0e0 !important;
 }
 
-.osu-border-white {
-  border-color: #fff !important;
+.osu-border-crater {
+  border-color: #8e9089 !important;
 }
 
-.osu-border-white-left {
-  border-left-color: #fff !important;
+.osu-border-crater-left {
+  border-left-color: #8e9089 !important;
 }
 
-.osu-border-white-top {
-  border-top-color: #fff !important;
+.osu-border-crater-top {
+  border-top-color: #8e9089 !important;
 }
 
-.osu-border-white-right {
-  border-right-color: #fff !important;
+.osu-border-crater-right {
+  border-right-color: #8e9089 !important;
 }
 
-.osu-border-white-bottom {
-  border-bottom-color: #fff !important;
-}
-
-.osu-border-dark {
-  border-color: #212529 !important;
-}
-
-.osu-border-dark-left {
-  border-left-color: #212529 !important;
-}
-
-.osu-border-dark-top {
-  border-top-color: #212529 !important;
-}
-
-.osu-border-dark-right {
-  border-right-color: #212529 !important;
-}
-
-.osu-border-dark-bottom {
-  border-bottom-color: #212529 !important;
+.osu-border-crater-bottom {
+  border-bottom-color: #8e9089 !important;
 }
 
 .osu-border-osu {
@@ -11399,84 +11688,64 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   border-bottom-color: #d73f09 !important;
 }
 
-.osu-border-pine {
-  border-color: #4a773c !important;
+.osu-border-moondust {
+  border-color: #c6dae7 !important;
 }
 
-.osu-border-pine-left {
-  border-left-color: #4a773c !important;
+.osu-border-moondust-left {
+  border-left-color: #c6dae7 !important;
 }
 
-.osu-border-pine-top {
-  border-top-color: #4a773c !important;
+.osu-border-moondust-top {
+  border-top-color: #c6dae7 !important;
 }
 
-.osu-border-pine-right {
-  border-right-color: #4a773c !important;
+.osu-border-moondust-right {
+  border-right-color: #c6dae7 !important;
 }
 
-.osu-border-pine-bottom {
-  border-bottom-color: #4a773c !important;
+.osu-border-moondust-bottom {
+  border-bottom-color: #c6dae7 !important;
 }
 
-.osu-border-rogue-wave {
-  border-color: #00859b !important;
+.osu-border-dark {
+  border-color: #212529 !important;
 }
 
-.osu-border-rogue-wave-left {
-  border-left-color: #00859b !important;
+.osu-border-dark-left {
+  border-left-color: #212529 !important;
 }
 
-.osu-border-rogue-wave-top {
-  border-top-color: #00859b !important;
+.osu-border-dark-top {
+  border-top-color: #212529 !important;
 }
 
-.osu-border-rogue-wave-right {
-  border-right-color: #00859b !important;
+.osu-border-dark-right {
+  border-right-color: #212529 !important;
 }
 
-.osu-border-rogue-wave-bottom {
-  border-bottom-color: #00859b !important;
+.osu-border-dark-bottom {
+  border-bottom-color: #212529 !important;
 }
 
-.osu-border-luminance {
-  border-color: #ffb500 !important;
+.osu-border-white {
+  border-color: #fff !important;
 }
 
-.osu-border-luminance-left {
-  border-left-color: #ffb500 !important;
+.osu-border-white-left {
+  border-left-color: #fff !important;
 }
 
-.osu-border-luminance-top {
-  border-top-color: #ffb500 !important;
+.osu-border-white-top {
+  border-top-color: #fff !important;
 }
 
-.osu-border-luminance-right {
-  border-right-color: #ffb500 !important;
+.osu-border-white-right {
+  border-right-color: #fff !important;
 }
 
-.osu-border-luminance-bottom {
-  border-bottom-color: #ffb500 !important;
-}
-
-.osu-border-stratosphere {
-  border-color: #006a8e !important;
-}
-
-.osu-border-stratosphere-left {
-  border-left-color: #006a8e !important;
-}
-
-.osu-border-stratosphere-top {
-  border-top-color: #006a8e !important;
-}
-
-.osu-border-stratosphere-right {
-  border-right-color: #006a8e !important;
-}
-
-.osu-border-stratosphere-bottom {
-  border-bottom-color: #006a8e !important;
+.osu-border-white-bottom {
+  border-bottom-color: #fff !important;
 }
 
 .osu-opacity-90 {
@@ -11583,7 +11852,8 @@ h6, .h6 {
 
 a {
   text-decoration-color: #d73f09;
-  text-decoration-thickness: 13%;
+  text-decoration-thickness: 10%;
+  text-underline-offset: 2px;
 }
 a:hover, a:focus {
   text-decoration: none;
@@ -11595,7 +11865,16 @@ a:active:not(#osu-logo-wide, #osu-logo-crest) {
 a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, a.nav-link:focus, .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus {
   background: rgba(0, 0, 0, 0.7);
 }
+p:last-child {
+  margin-bottom: 0;
+}
+
+hr {
+  margin-block: 3rem;
+}
+
 main .block-page-title-block {
+  margin-bottom: 3rem;
   margin-inline: auto;
   max-width: 55em;
   overflow-wrap: anywhere;
@@ -11628,6 +11907,7 @@ blockquote {
   border: 5px solid #e9e5e4;
   font-family: Georgia, "DejaVu Serif", serif;
   font-size: 1.25rem;
+  margin-block: 1.5rem;
   padding: 2.5em 3.75em;
 }
 
@@ -12002,6 +12282,7 @@ form.header-search-block-form input {
 
 nav.pager ul.pager__items {
   gap: 0.5em;
+  margin-top: 1rem;
 }
 nav.pager ul.pager__items li.pager__item span.page-link:first-child,
 nav.pager ul.pager__items li.pager__item span.page-link:last-child {
@@ -12449,5 +12730,10 @@ body.cke_editable_themed {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
+}
+.related-stories .more-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=madrone.css.map */
