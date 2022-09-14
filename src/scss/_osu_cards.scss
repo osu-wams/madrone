@@ -1,7 +1,7 @@
-.block-inline-blockosu-card {
+.block--type-osu-card.block--view-mode-full-image {
   .block-field-blockblock-contentosu-cardfield-osu-card-image img {
-    //border-top-left-radius: .5rem;
-    //border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
     width: 100%;
   }
 }
