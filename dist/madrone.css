@@ -12451,12 +12451,26 @@ figure > figcaption.figure-caption::before {
 #drupal-off-canvas form.layout-builder-configure-block details[id^=edit-appearance-positioning] {
   display: none;
 }
+#drupal-off-canvas .paragraphs-dropdown button.paragraphs-dropdown-toggle {
+  background: url("../assets/icon-actions.svg") no-repeat center;
+  background-size: 26px 26px;
+  border: 1px solid #727579 !important;
+  border-radius: 0.25rem;
+  cursor: pointer !important;
+  display: block !important;
+  height: 36px !important;
+  margin-block: 1rem;
+  width: 36px !important;
+}
+#drupal-off-canvas .paragraphs-dropdown .paragraphs-dropdown-actions {
+  background-color: #383A40;
+}
 
 /* Thicken resizable mouse grabber for Off Canvas Dialog - DRUP8-1036 */
 .ui-dialog .ui-resizable-w {
-  width: 5px;
-  left: 0;
   background-color: #727579;
+  left: 0;
+  width: 5px;
 }
 
 #drupal-modal .form-item {
