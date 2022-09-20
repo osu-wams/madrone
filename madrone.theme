@@ -107,6 +107,9 @@ function madrone_preprocess_block(&$variables) {
         if ($region == 'header') {
           $variables['content']['keys']['#madrone_is_header_search_submit'] = TRUE;
           $variables['content']['actions']['submit']['#madrone_is_header_search_submit'] = TRUE;
+          if (in_array('contextual-region', $variables['attributes']['class'])) {
+            $variables['attributes']['class'] = array_diff($variables['attributes']['class'], ['contextual-region']);
+          }
         }
         elseif ($region == 'mobile_header') {
           $variables['content']['keys']['#madrone_is_mobile_search_submit'] = TRUE;
@@ -122,6 +125,11 @@ function madrone_preprocess_block(&$variables) {
           array_key_exists('group_name', $variables['content'])) {
           $variables['group_name'] = $variables['content']['group_name']['#markup'];
           $variables['group_path'] = $variables['content']['group_path']['#uri'];
+        }
+        if ($region == 'header') {
+          if (in_array('contextual-region', $variables['attributes']['class'])) {
+            $variables['attributes']['class'] = array_diff($variables['attributes']['class'], ['contextual-region']);
+          }
         }
       }
       $variables['content']['#attributes']['region'] = $region;
