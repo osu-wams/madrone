@@ -18,6 +18,8 @@ regions:
   page_bottom: Page Bottom
   pre_footer: Full width above the Footer
   footer: Footer
+regions_hidden:
+  - header
 ckeditor_stylesheets:
   - dist/madrone.css
 libraries:
