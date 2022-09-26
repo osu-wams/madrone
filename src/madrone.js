@@ -260,6 +260,8 @@ function resizeMenu(menu) {
       menuUlMaxLength = smallestEm;
     } else if (largestItem > largestEm) {
       menuUlMaxLength = largestEm;
+    } else {
+      menuUlMaxLength = largestItem;
     }
     menuLi.setAttribute('style', '');
   });
