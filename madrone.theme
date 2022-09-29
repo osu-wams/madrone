@@ -127,7 +127,8 @@ function madrone_preprocess_block(&$variables) {
           $variables['group_path'] = $variables['content']['group_path']['#uri'];
         }
         if ($region == 'header') {
-          if (in_array('contextual-region', $variables['attributes']['class'])) {
+          if (array_key_exists('class', $variables['attributes']) &&
+            in_array('contextual-region', $variables['attributes']['class'])) {
             $variables['attributes']['class'] = array_diff($variables['attributes']['class'], ['contextual-region']);
           }
         }
