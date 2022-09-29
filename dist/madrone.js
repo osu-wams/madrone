@@ -54,6 +54,18 @@ window.addEventListener('load', () => {
     desktopLi.addEventListener('mouseleave', menuItemMouseLeaveEvent);
     desktopLi.addEventListener('focusout', menuItemMouseLeaveEvent);
   });
+
+  // Add an overflow hidden class to the parent element if the block is inside a column class and has animations.
+  const animatedBlocks = [...document.querySelectorAll(".block.aos-init")];
+  animatedBlocks.map(block => {
+    let blockParent = block.parentElement;
+    for (let i = 0; i < blockParent.classList.length; i++) {
+      if (/col-.*/.test(blockParent.classList[i])) {
+        blockParent.classList.add('overflow-hidden');
+        break;
+      }
+    }
+  })
 });
 
 /**
