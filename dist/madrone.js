@@ -65,7 +65,7 @@ window.addEventListener('load', () => {
         break;
       }
     }
-  })
+  });
 });
 
 /**
