@@ -16,7 +16,7 @@
 {% set region_class = [
   'madrone-' ~ region|clean_class,
 ] %}
-{% if content %}
+{% if content and not hide_breadcrumbs %}
   <div class="container-fluid gx-3">
     <div{{ attributes.setAttribute('id', region_id).addClass(region_class) }}>
       {{ content }}
