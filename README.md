@@ -17,7 +17,7 @@
   - You should get gulp-cli, best option is to install it globally
     - ```npm install -g gulp-cli```
 - docker-compose up -d (If using docker)
-  - wait for the Database to be up ready.
+  - wait for the Database to be up and ready.
     ```shell
     docker-compose logs database --follow
     ```
@@ -27,8 +27,8 @@
   - Select the OSU Standard Installation profile (should already be used as it's
     a distribution now.)
     - If you need to install
-      Drupal Standard you will have to use drush to install a different profile.
-- Disable css/js aggregation and page cache.
+      Drupal Standard you will have to use Drush to install a different profile.
+- Disable CSS/JS aggregation and page cache.
   - In Web Interface
     - http://localhost.oregonstate.edu:8080/admin/config/development/performance
     - Set Max age to 0
