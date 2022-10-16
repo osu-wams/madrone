@@ -11959,7 +11959,7 @@ code {
   flex-direction: column;
   margin-top: 10px;
 }
-.breadcrumb::before {
+.breadcrumb .breadcrumb-item::before {
   font-weight: 900;
 }
 @media screen and (min-width: 768px) {
