@@ -223,6 +223,7 @@ $pagination-disabled-border-color: $neutral-300;
 
 /* Form updates */
 $form-check-input-checked-bg-color: $osuorange;
+
 /* Form Select updates */
 $form-select-padding-x: .25rem;
 $form-select-padding-y: .5rem;
@@ -254,7 +255,7 @@ $table-striped-bg: $table-alt-row;
 $table-border-color: $neutral-200;
 
 /* Breadcrumbs */
-$breadcrumb-divider: quote("|");
+$breadcrumb-divider: quote(">");
 $breadcrumb-divider-color: $neutral-700;
 $breadcrumb-font-size: 1rem;
 
