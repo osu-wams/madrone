@@ -7,10 +7,6 @@ composer.lock
 # /dist/
 .DS_Store
 
-# Ignore lock files.
-/package-lock.json
-/yarn.lock
-
 # Ignore IDE settings
 /.idea
 # Docker composer overrides
