@@ -11805,6 +11805,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   text-decoration-thickness: 13% !important;
 }
 
+.osu-img-full img {
+  width: 100%;
+}
+
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
@@ -12343,6 +12347,18 @@ a.button:focus,
   background-color: #212529;
 }
 
+/*
+ * Fix for image alignment center.
+ */
+.node .align-center.media--type-image .field--type-image {
+  float: none;
+}
+
+.align-center.media--type-image img {
+  display: block;
+  margin-inline: auto;
+}
+
 .media--view-mode-media-card {
   border-radius: 10px;
   max-width: max-content;
@@ -12752,6 +12768,18 @@ body.cke_editable_themed {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+.story-author .field__items,
+.block-field-blocknodestoryfield-osu-story-author .field__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  justify-content: center;
+}
+.story-author .field__items .field__item,
+.block-field-blocknodestoryfield-osu-story-author .field__items .field__item {
+  font-style: italic;
 }
 
 .block--type-osu-card.block--view-mode-full-image .block-field-blockblock-contentosu-cardfield-osu-card-image img {

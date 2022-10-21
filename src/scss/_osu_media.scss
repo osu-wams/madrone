@@ -1,3 +1,19 @@
+/*
+ * Fix for image alignment center.
+ */
+.node {
+  .align-center.media--type-image {
+    .field--type-image {
+      float: none;
+    }
+  }
+}
+
+.align-center.media--type-image img {
+  display: block;
+  margin-inline: auto;
+}
+
 .media--view-mode-media-card {
   border-radius: 10px;
   max-width: max-content;

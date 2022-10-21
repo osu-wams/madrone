@@ -48,7 +48,7 @@
         @for $i from 1 through 9 {
           li.sf-depth-#{$i} {
             left: #{$sf-depth}rem;
-            $sf-depth: $sf-depth +.25;
+            $sf-depth: $sf-depth + .25;
           }
         }
 

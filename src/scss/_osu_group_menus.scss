@@ -115,7 +115,7 @@
     @for $i from 1 through 9 {
       .menu--level-#{$i} {
         padding-left: #{$menu-depth}px;
-        $menu-depth: $menu-depth +7.5;
+        $menu-depth: $menu-depth + 7.5;
       }
     }
 

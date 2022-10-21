@@ -113,3 +113,17 @@
     margin-top: 1rem;
   }
 }
+
+.story-author,
+.block-field-blocknodestoryfield-osu-story-author {
+  .field__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 1rem;
+    justify-content: center;
+
+    .field__item {
+      font-style: italic;
+    }
+  }
+}
