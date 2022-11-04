@@ -12655,23 +12655,23 @@ body.cke_editable_themed {
   color: #fff;
 }
 
-.toc-h1 + .toc-h2 {
+.toc-h2 {
   margin-left: 0.65rem;
 }
 
-.toc-h2 + .toc-h3 {
+.toc-h3 {
   margin-left: 1rem;
 }
 
-.toc-h3 + .toc-h4 {
+.toc-h4 {
   margin-left: 1.25rem;
 }
 
-.toc-h4 + .toc-h5 {
+.toc-h5 {
   margin-left: 1.6rem;
 }
 
-.toc-h5 + .toc-h6 {
+.toc-h6 {
   margin-left: 1.9rem;
 }
 

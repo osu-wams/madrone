@@ -25,41 +25,41 @@
 #}
 <!DOCTYPE html>
 <html{{ html_attributes }}>
-  <head>
-    <head-placeholder token="{{ placeholder_token }}">
+<head>
+  <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
-    <js-placeholder token="{{ placeholder_token }}">
+      <js-placeholder token="{{ placeholder_token }}">
 
-    {% if monsido_site_id %}
-    <script type="text/javascript">
-      window._monsido = window._monsido || {
-          token: "{{ monsido_site_id }}",
-          statistics: {
-              enabled: true,
-              documentTracking: {
+        {% if monsido_site_id %}
+          <script type="text/javascript">
+            window._monsido = window._monsido || {
+              token: "{{ monsido_site_id }}",
+              statistics: {
+                enabled: true,
+                documentTracking: {
                   enabled: false,
                   documentCls: "monsido_download",
                   documentIgnoreCls: "monsido_ignore_download",
-                  documentExt: ["pdf","doc","ppt","docx","pptx"],
+                  documentExt: ["pdf", "doc", "ppt", "docx", "pptx"],
+                },
               },
-          },
-      };
-    </script>
-    <script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
-    {% endif %}
-  </head>
-  <body{{ attributes.addClass('bg-neutral-100') }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <a href="#main-content" class="visually-hidden focusable">
-      {{ 'Skip to main content'|t }}
-    </a>
-    {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}
-    <js-bottom-placeholder token="{{ placeholder_token }}">
-  </body>
+            };
+          </script>
+          <script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+        {% endif %}
+        </head>
+<body{{ attributes.addClass('bg-neutral-100') }}>
+{#
+Keyboard navigation/accessibility link to main content section in
+page.html.twig.
+#}
+<a href="#main-content" class="visually-hidden focusable">
+  {{ 'Skip to main content'|t }}
+</a>
+{{ page_top }}
+{{ page }}
+{{ page_bottom }}
+<js-bottom-placeholder token="{{ placeholder_token }}">
+</body>
 </html>

@@ -3,12 +3,6 @@ const smallestEm = 12;
 const largestEm = 27;
 // Wait for the page to finish before looking for the superfish toggles.
 window.addEventListener('load', () => {
-  let breadCrumbSize = document.querySelectorAll('.block-system-breadcrumb-block nav ol li');
-  if (breadCrumbSize.length < 3) {
-    let breadCrumbOl = document.querySelectorAll('.block-system-breadcrumb-block nav ol.breadcrumb');
-    breadCrumbOl[0].classList.add('flex-row');
-  }
-
   const superfishMenus = [...document.querySelectorAll('ul.sf-menu')];
   superfishMenus.map(menu => {
     let menuId = menu.getAttribute('id');
@@ -66,6 +60,44 @@ window.addEventListener('load', () => {
       }
     }
   });
+
+  // ToCJS Width setter.
+  const tocJsBlocks = document.querySelectorAll(".toc-js");
+  if (tocJsBlocks.length > 0) {
+    let tocJsBlocks1 = tocJsBlocks[0];
+    let tocJsParentBlock = tocJsBlocks1.closest('.block.block-toc-js.block-toc-js-block');
+    const tocJsParentBlockStyle = window.getComputedStyle(tocJsParentBlock);
+    const finalPadding = parseFloat(tocJsParentBlockStyle.paddingLeft) + parseFloat(tocJsParentBlockStyle.paddingRight);
+    const finalMargin = parseFloat(tocJsParentBlockStyle.marginLeft) + parseFloat(tocJsParentBlockStyle.marginRight);
+    const finalWidth = tocJsParentBlock.clientWidth - finalMargin - finalPadding;
+    tocJsBlocks1.style.width = `${finalWidth}px`;
+    let prevClassState = tocJsBlocks1.classList.contains('is-sticked');
+    let classesToCopy = [...tocJsParentBlockStyle].filter((key) => {
+      if (/^border.*/.test(key) || /^background.*/.test(key) || /^padding.*/.test(key)) {
+        return key;
+      }
+    });
+    let tocJsObserver = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        if (mutation.attributeName === 'class') {
+          let currentClassState = mutation.target.classList.contains('is-sticked');
+          if (prevClassState !== currentClassState) {
+            prevClassState = currentClassState;
+          }
+          if (prevClassState) {
+            classesToCopy.forEach(cssClass => {
+              tocJsBlocks1.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
+            });
+          } else {
+            classesToCopy.forEach(cssClass => {
+              tocJsBlocks1.style.removeProperty(cssClass);
+            });
+          }
+        }
+      });
+    });
+    tocJsObserver.observe(tocJsBlocks1, {attributes: true, childList: false, characterData: false});
+  }
 });
 
 /**
