@@ -1,6 +1,8 @@
 const fontSize = 16;
 const smallestEm = 12;
 const largestEm = 27;
+const DELAY = 250;
+let tocJsTimeout = false;
 // Wait for the page to finish before looking for the superfish toggles.
 window.addEventListener('load', () => {
   const superfishMenus = [...document.querySelectorAll('ul.sf-menu')];
@@ -67,16 +69,26 @@ window.addEventListener('load', () => {
     let tocJsBlocks1 = tocJsBlocks[0];
     let tocJsParentBlock = tocJsBlocks1.closest('.block.block-toc-js.block-toc-js-block');
     const tocJsParentBlockStyle = window.getComputedStyle(tocJsParentBlock);
-    const finalPadding = parseFloat(tocJsParentBlockStyle.paddingLeft) + parseFloat(tocJsParentBlockStyle.paddingRight);
-    const finalMargin = parseFloat(tocJsParentBlockStyle.marginLeft) + parseFloat(tocJsParentBlockStyle.marginRight);
-    const finalWidth = tocJsParentBlock.clientWidth - finalMargin - finalPadding;
-    tocJsBlocks1.style.width = `${finalWidth}px`;
+
+    resizeTocJsBlock(tocJsBlocks1);
+
     let prevClassState = tocJsBlocks1.classList.contains('is-sticked');
+    // We only care about background, border, and padding.
     let classesToCopy = [...tocJsParentBlockStyle].filter((key) => {
       if (/^border.*/.test(key) || /^background.*/.test(key) || /^padding.*/.test(key)) {
         return key;
       }
     });
+    // We loaded the page not at the top, so we need to copy styles down.
+    if (prevClassState) {
+      classesToCopy.forEach(cssClass => {
+        tocJsBlocks1.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
+      });
+      // overwrite background color and border options when loading the page midway.
+      tocJsParentBlock.style.setProperty('background-color', 'transparent', 'important');
+      tocJsParentBlock.style.setProperty('border', '0', 'important');
+    }
+    // Create a mutiation observer to make changes when the class 'is-sticked' is added/removed.
     let tocJsObserver = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
         if (mutation.attributeName === 'class') {
@@ -88,10 +100,19 @@ window.addEventListener('load', () => {
             classesToCopy.forEach(cssClass => {
               tocJsBlocks1.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
             });
+            // Set the margin left and to stop the block from jumping and set the background to transparent on the
+            // parent block to "hide" it when scrolled.
+            tocJsParentBlock.style.setProperty('margin-left', `-${tocJsParentBlockStyle.paddingLeft}`, 'important')
+            tocJsParentBlock.style.setProperty('background-color', 'transparent', 'important');
+            tocJsParentBlock.style.setProperty('border', '0', 'important');
           } else {
             classesToCopy.forEach(cssClass => {
               tocJsBlocks1.style.removeProperty(cssClass);
             });
+            // Clear all classes we set.
+            tocJsParentBlock.style.removeProperty('background-color');
+            tocJsParentBlock.style.removeProperty('border');
+            tocJsParentBlock.style.removeProperty('margin-left');
           }
         }
       });
@@ -264,6 +285,9 @@ function isMobile() {
 
 // Add event listener to browser resize.
 window.addEventListener('resize', (event) => {
+  const tocJsBlocks = document.querySelectorAll(".toc-js");
+  clearTimeout(tocJsTimeout);
+  tocJsTimeout = setTimeout(resizeTocJsBlock(tocJsBlocks[0]), DELAY)
   if (window.innerWidth <= 768) {
     // only add mobile menu if it doesn't already exist.
     let groupMobileId = document.querySelector('#group-content-menu-accordion');
@@ -310,4 +334,20 @@ function resizeMenu(menu) {
     menuLi.setAttribute('style', '');
   });
   menu.style.width = `${menuUlMaxLength}em`;
+}
+
+/**
+ * Resize the ToCJS block to not overflow when the block switches to position static.
+ *
+ * @param block
+ * @return boolean
+ */
+function resizeTocJsBlock(block) {
+  let closestParentBlock = block.closest('.block.block-toc-js.block-toc-js-block');
+  const parentBlockStyle = window.getComputedStyle(closestParentBlock);
+  const finalPadding = parseFloat(parentBlockStyle.paddingLeft) + parseFloat(parentBlockStyle.paddingRight);
+  const finalMargin = parseFloat(parentBlockStyle.marginLeft) + parseFloat(parentBlockStyle.marginRight);
+  const finalWidth = closestParentBlock.clientWidth - finalMargin - finalPadding;
+  block.style.width = `${finalWidth}px`;
+  return true;
 }
