@@ -66,13 +66,13 @@ window.addEventListener('load', () => {
   // ToCJS Width setter.
   const tocJsBlocks = document.querySelectorAll(".toc-js");
   if (tocJsBlocks.length > 0) {
-    let tocJsBlocks1 = tocJsBlocks[0];
-    let tocJsParentBlock = tocJsBlocks1.closest('.block.block-toc-js.block-toc-js-block');
+    let tocJsBlock = tocJsBlocks[0];
+    let tocJsParentBlock = tocJsBlock.closest('.block.block-toc-js.block-toc-js-block');
     const tocJsParentBlockStyle = window.getComputedStyle(tocJsParentBlock);
 
-    resizeTocJsBlock(tocJsBlocks1);
+    resizeTocJsBlock(tocJsBlock);
 
-    let prevClassState = tocJsBlocks1.classList.contains('is-sticked');
+    let prevClassState = tocJsBlock.classList.contains('is-sticked');
     // We only care about background, border, and padding.
     let classesToCopy = [...tocJsParentBlockStyle].filter((key) => {
       if (/^border.*/.test(key) || /^background.*/.test(key) || /^padding.*/.test(key)) {
@@ -82,13 +82,13 @@ window.addEventListener('load', () => {
     // We loaded the page not at the top, so we need to copy styles down.
     if (prevClassState) {
       classesToCopy.forEach(cssClass => {
-        tocJsBlocks1.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
+        tocJsBlock.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
       });
       // overwrite background color and border options when loading the page midway.
       tocJsParentBlock.style.setProperty('background-color', 'transparent', 'important');
       tocJsParentBlock.style.setProperty('border', '0', 'important');
     }
-    // Create a mutiation observer to make changes when the class 'is-sticked' is added/removed.
+    // Create a mutation observer to watch for changes, specifically when the class 'is-sticked' is added/removed.
     let tocJsObserver = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
         if (mutation.attributeName === 'class') {
@@ -98,7 +98,7 @@ window.addEventListener('load', () => {
           }
           if (prevClassState) {
             classesToCopy.forEach(cssClass => {
-              tocJsBlocks1.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
+              tocJsBlock.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
             });
             // Set the margin left and to stop the block from jumping and set the background to transparent on the
             // parent block to "hide" it when scrolled.
@@ -107,7 +107,7 @@ window.addEventListener('load', () => {
             tocJsParentBlock.style.setProperty('border', '0', 'important');
           } else {
             classesToCopy.forEach(cssClass => {
-              tocJsBlocks1.style.removeProperty(cssClass);
+              tocJsBlock.style.removeProperty(cssClass);
             });
             // Clear all classes we set.
             tocJsParentBlock.style.removeProperty('background-color');
@@ -117,7 +117,7 @@ window.addEventListener('load', () => {
         }
       });
     });
-    tocJsObserver.observe(tocJsBlocks1, {attributes: true, childList: false, characterData: false});
+    tocJsObserver.observe(tocJsBlock, {attributes: true, childList: false, characterData: false});
   }
 });
 
@@ -286,8 +286,11 @@ function isMobile() {
 // Add event listener to browser resize.
 window.addEventListener('resize', (event) => {
   const tocJsBlocks = document.querySelectorAll(".toc-js");
-  clearTimeout(tocJsTimeout);
-  tocJsTimeout = setTimeout(resizeTocJsBlock(tocJsBlocks[0]), DELAY)
+  if (tocJsBlocks.length > 0) {
+    const tocJsBlock = tocJsBlocks[0];
+    clearTimeout(tocJsTimeout);
+    tocJsTimeout = setTimeout(resizeTocJsBlock(tocJsBlock), DELAY);
+  }
   if (window.innerWidth <= 768) {
     // only add mobile menu if it doesn't already exist.
     let groupMobileId = document.querySelector('#group-content-menu-accordion');
