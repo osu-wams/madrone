@@ -8403,6 +8403,22 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   background-color: #212529 !important;
 }
 
+.osu-bg-moondust {
+  background-color: #c6dae7 !important;
+}
+
+.osu-bg-crater {
+  background-color: #8e9089 !important;
+}
+
+.osu-bg-osuorange {
+  background-color: #d73f09 !important;
+}
+
+.osu-bg-light-grey {
+  background-color: #e0e0e0 !important;
+}
+
 .osu-bg-menu {
   background-color: #e9e5e4 !important;
 }
@@ -12655,23 +12671,23 @@ body.cke_editable_themed {
   color: #fff;
 }
 
-.toc-h1 + .toc-h2 {
+.toc-h2 {
   margin-left: 0.65rem;
 }
 
-.toc-h2 + .toc-h3 {
+.toc-h3 {
   margin-left: 1rem;
 }
 
-.toc-h3 + .toc-h4 {
+.toc-h4 {
   margin-left: 1.25rem;
 }
 
-.toc-h4 + .toc-h5 {
+.toc-h5 {
   margin-left: 1.6rem;
 }
 
-.toc-h5 + .toc-h6 {
+.toc-h6 {
   margin-left: 1.9rem;
 }
 
@@ -12786,5 +12802,32 @@ body.cke_editable_themed {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   width: 100%;
+}
+
+.osu-bg-page-alt-2 .block-inline-blockmenu-bar-item > .block__content > div:focus-within, .osu-bg-page-alt-2 .block-inline-blockmenu-bar-item > .block__content > div:hover {
+  background-color: #fff;
+  color: #212529 !important;
+}
+.osu-bg-page-alt-2 .block-inline-blockmenu-bar-item > .block__content > div:focus-within a, .osu-bg-page-alt-2 .block-inline-blockmenu-bar-item > .block__content > div:hover a {
+  color: #212529;
+}
+
+.block-inline-blockmenu-bar-item {
+  position: relative;
+}
+.block-inline-blockmenu-bar-item > .block__content > div {
+  transition: 400ms background-color ease, 400ms color ease;
+}
+.block-inline-blockmenu-bar-item > .block__content > div:focus-within, .block-inline-blockmenu-bar-item > .block__content > div:hover {
+  background-color: #212529;
+  color: #fff;
+}
+.block-inline-blockmenu-bar-item > .block__content > div:focus-within a, .block-inline-blockmenu-bar-item > .block__content > div:hover a {
+  color: #fff;
+}
+.block-inline-blockmenu-bar-item .field--name-field-osu-menu-bar-item-link a::before {
+  content: "";
+  inset: 0;
+  position: absolute;
 }
 /*# sourceMappingURL=madrone.css.map */

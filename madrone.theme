@@ -228,9 +228,13 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       break;
   }
   // Check if we are in a layout builder form.
-  if (\Drupal::routeMatch()->getRouteObject()->getOption('_layout_builder')) {
-    $form['#attributes']['class'][] = 'container';
+  $route_object = \Drupal::routeMatch()->getRouteObject();
+  if (!is_null($route_object)) {
+    if ($route_object->getOption('_layout_builder')) {
+      $form['#attributes']['class'][] = 'container';
+    }
   }
+
 }
 
 /**

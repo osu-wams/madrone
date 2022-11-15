@@ -1,14 +1,10 @@
 const fontSize = 16;
 const smallestEm = 12;
 const largestEm = 27;
+const DELAY = 250;
+let tocJsTimeout = false;
 // Wait for the page to finish before looking for the superfish toggles.
 window.addEventListener('load', () => {
-  let breadCrumbSize = document.querySelectorAll('.block-system-breadcrumb-block nav ol li');
-  if (breadCrumbSize.length < 3) {
-    let breadCrumbOl = document.querySelectorAll('.block-system-breadcrumb-block nav ol.breadcrumb');
-    breadCrumbOl[0].classList.add('flex-row');
-  }
-
   const superfishMenus = [...document.querySelectorAll('ul.sf-menu')];
   superfishMenus.map(menu => {
     let menuId = menu.getAttribute('id');
@@ -66,6 +62,63 @@ window.addEventListener('load', () => {
       }
     }
   });
+
+  // ToCJS Width setter.
+  const tocJsBlocks = document.querySelectorAll(".toc-js");
+  if (tocJsBlocks.length > 0) {
+    let tocJsBlock = tocJsBlocks[0];
+    let tocJsParentBlock = tocJsBlock.closest('.block.block-toc-js.block-toc-js-block');
+    const tocJsParentBlockStyle = window.getComputedStyle(tocJsParentBlock);
+
+    resizeTocJsBlock(tocJsBlock);
+
+    let prevClassState = tocJsBlock.classList.contains('is-sticked');
+    // We only care about background, border, and padding.
+    let classesToCopy = [...tocJsParentBlockStyle].filter((key) => {
+      if (/^border.*/.test(key) || /^background.*/.test(key) || /^padding.*/.test(key)) {
+        return key;
+      }
+    });
+    // We loaded the page not at the top, so we need to copy styles down.
+    if (prevClassState) {
+      classesToCopy.forEach(cssClass => {
+        tocJsBlock.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
+      });
+      // overwrite background color and border options when loading the page midway.
+      tocJsParentBlock.style.setProperty('background-color', 'transparent', 'important');
+      tocJsParentBlock.style.setProperty('border', '0', 'important');
+    }
+    // Create a mutation observer to watch for changes, specifically when the class 'is-sticked' is added/removed.
+    let tocJsObserver = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        if (mutation.attributeName === 'class') {
+          let currentClassState = mutation.target.classList.contains('is-sticked');
+          if (prevClassState !== currentClassState) {
+            prevClassState = currentClassState;
+          }
+          if (prevClassState) {
+            classesToCopy.forEach(cssClass => {
+              tocJsBlock.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
+            });
+            // Set the margin left and to stop the block from jumping and set the background to transparent on the
+            // parent block to "hide" it when scrolled.
+            tocJsParentBlock.style.setProperty('margin-left', `-${tocJsParentBlockStyle.paddingLeft}`, 'important')
+            tocJsParentBlock.style.setProperty('background-color', 'transparent', 'important');
+            tocJsParentBlock.style.setProperty('border', '0', 'important');
+          } else {
+            classesToCopy.forEach(cssClass => {
+              tocJsBlock.style.removeProperty(cssClass);
+            });
+            // Clear all classes we set.
+            tocJsParentBlock.style.removeProperty('background-color');
+            tocJsParentBlock.style.removeProperty('border');
+            tocJsParentBlock.style.removeProperty('margin-left');
+          }
+        }
+      });
+    });
+    tocJsObserver.observe(tocJsBlock, {attributes: true, childList: false, characterData: false});
+  }
 });
 
 /**
@@ -232,6 +285,12 @@ function isMobile() {
 
 // Add event listener to browser resize.
 window.addEventListener('resize', (event) => {
+  const tocJsBlocks = document.querySelectorAll(".toc-js");
+  if (tocJsBlocks.length > 0) {
+    const tocJsBlock = tocJsBlocks[0];
+    clearTimeout(tocJsTimeout);
+    tocJsTimeout = setTimeout(resizeTocJsBlock(tocJsBlock), DELAY);
+  }
   if (window.innerWidth <= 768) {
     // only add mobile menu if it doesn't already exist.
     let groupMobileId = document.querySelector('#group-content-menu-accordion');
@@ -278,4 +337,20 @@ function resizeMenu(menu) {
     menuLi.setAttribute('style', '');
   });
   menu.style.width = `${menuUlMaxLength}em`;
+}
+
+/**
+ * Resize the ToCJS block to not overflow when the block switches to position static.
+ *
+ * @param block
+ * @return boolean
+ */
+function resizeTocJsBlock(block) {
+  let closestParentBlock = block.closest('.block.block-toc-js.block-toc-js-block');
+  const parentBlockStyle = window.getComputedStyle(closestParentBlock);
+  const finalPadding = parseFloat(parentBlockStyle.paddingLeft) + parseFloat(parentBlockStyle.paddingRight);
+  const finalMargin = parseFloat(parentBlockStyle.marginLeft) + parseFloat(parentBlockStyle.marginRight);
+  const finalWidth = closestParentBlock.clientWidth - finalMargin - finalPadding;
+  block.style.width = `${finalWidth}px`;
+  return true;
 }

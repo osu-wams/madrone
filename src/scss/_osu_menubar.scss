@@ -1,0 +1,47 @@
+.osu-bg-page-alt-2 {
+  .block-inline-blockmenu-bar-item {
+    & > .block__content > div {
+      &:focus-within,
+      &:hover {
+        background-color: $bucktoothwhite;
+        color: $paddletailblack !important;
+
+        a {
+          color: $paddletailblack;
+        }
+      }
+    }
+  }
+}
+
+.block-inline-blockmenu-bar-item {
+  position: relative;
+
+
+  & > .block__content > div {
+    transition: 400ms background-color ease, 400ms color ease;
+
+    &:focus-within,
+    &:hover {
+      background-color: $page-bg-alt-2;
+      color: $bucktoothwhite;
+
+      a {
+        color: $bucktoothwhite;
+      }
+    }
+  }
+
+
+  .field--name-field-osu-menu-bar-item-link {
+    a {
+      &::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+      }
+    }
+  }
+
+}
+
