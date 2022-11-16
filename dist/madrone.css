@@ -12804,28 +12804,28 @@ body.cke_editable_themed {
   width: 100%;
 }
 
-.osu-bg-page-alt-2 .block-inline-blockmenu-bar-item > .block__content > div:focus-within, .osu-bg-page-alt-2 .block-inline-blockmenu-bar-item > .block__content > div:hover {
+.osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
   background-color: #fff;
   color: #212529 !important;
 }
-.osu-bg-page-alt-2 .block-inline-blockmenu-bar-item > .block__content > div:focus-within a, .osu-bg-page-alt-2 .block-inline-blockmenu-bar-item > .block__content > div:hover a {
+.osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
   color: #212529;
 }
 
-.block-inline-blockmenu-bar-item {
+.block-inline-blockosu-menu-bar-item {
   position: relative;
 }
-.block-inline-blockmenu-bar-item > .block__content > div {
+.block-inline-blockosu-menu-bar-item > .block__content > div {
   transition: 400ms background-color ease, 400ms color ease;
 }
-.block-inline-blockmenu-bar-item > .block__content > div:focus-within, .block-inline-blockmenu-bar-item > .block__content > div:hover {
+.block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
   background-color: #212529;
   color: #fff;
 }
-.block-inline-blockmenu-bar-item > .block__content > div:focus-within a, .block-inline-blockmenu-bar-item > .block__content > div:hover a {
+.block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
   color: #fff;
 }
-.block-inline-blockmenu-bar-item .field--name-field-osu-menu-bar-item-link a::before {
+.block-inline-blockosu-menu-bar-item .field--name-field-osu-menu-bar-item-link a::before {
   content: "";
   inset: 0;
   position: absolute;
