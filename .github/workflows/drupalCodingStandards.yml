@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: guix77/phpcs-drupal-action@v1.0.0
+      - uses: guix77/phpcs-drupal-action@v1.0.1
       - uses: DirtDiglett/actions-twigcs@1.0.0
