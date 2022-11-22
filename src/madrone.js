@@ -373,7 +373,7 @@ let originalBreadcrumbs;
 let breadcrumbs;
 let condensedCrumbs;
 /**
- * Condense breadcrumbs list when >= 5 pages deep
+ * Condense breadcrumbs list when >= 3 pages deep
  */
 function mobileBreadcrumbs() {
   if (!breadcrumbs) {
@@ -385,8 +385,8 @@ function mobileBreadcrumbs() {
     originalBreadcrumbs = breadcrumbs.cloneNode(true);
   }
 
-  const initialLength = breadcrumbs.children.length;
-  if (initialLength >= 5) {
+  const numCrumbs = breadcrumbs.children.length;
+  if (numCrumbs >= 3) {
     if (!condensedCrumbs) {
       createCondensedCrumbs(breadcrumbs);
     } else {
