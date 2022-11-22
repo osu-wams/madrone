@@ -2,6 +2,10 @@
   flex-direction: column;
   margin-top: 10px;
 
+  &.breadcrumb-condensed {
+    flex-direction: row;
+  }
+
  .breadcrumb-item::before {
     font-weight: 900;
   }
@@ -10,4 +14,3 @@
     flex-direction: row;
   }
 }
-
