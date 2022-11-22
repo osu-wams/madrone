@@ -19,7 +19,12 @@ window.addEventListener('load', () => {
   // Check on page load if we need to be a mobile menu.
   if (window.innerWidth <= 768) {
     groupMobileMenu();
-    document.querySelector('#group-content-menu').classList.add('d-none');
+    const groupMenu = document.querySelector('#group-content-menu');
+    if (groupMenu) {
+      groupMenu.classList.add('d-none');
+    }
+
+    mobileBreadcrumbs();
   }
 
   // handle group menu horizontal spacing
@@ -297,13 +302,17 @@ window.addEventListener('resize', (event) => {
     let groupMenuId = document.querySelector('#group-content-menu');
     if (groupMobileId === null) {
       groupMobileMenu();
-      groupMenuId.classList.add('d-none');
+      if (groupMenuId) {
+        groupMenuId.classList.add('d-none');
+      }
     } else {
 
       groupMenuId.classList.add('d-none');
       groupMobileId.classList.remove('d-none');
       groupMobileId.classList.add('d-flex');
     }
+
+    mobileBreadcrumbs();
   } else {
     // add back desktop menu if mobile menu was added.
     let groupMobileId = document.querySelector('#group-content-menu-accordion');
@@ -313,6 +322,10 @@ window.addEventListener('resize', (event) => {
       groupMobileId.classList.add('d-none');
       groupMenuId.classList.remove('d-none');
       groupMenuId.classList.add('d-flex');
+    }
+
+    if (condensedCrumbs) {
+      resetBreadCrumbs();
     }
   }
 });
@@ -353,4 +366,127 @@ function resizeTocJsBlock(block) {
   const finalWidth = closestParentBlock.clientWidth - finalMargin - finalPadding;
   block.style.width = `${finalWidth}px`;
   return true;
+}
+
+// store breadcrumb elements so they can be swapped in and out depending on state
+let originalBreadcrumbs;
+let breadcrumbs;
+let condensedCrumbs;
+/**
+ * Condense breadcrumbs list when >= 5 pages deep
+ */
+function mobileBreadcrumbs() {
+  if (!breadcrumbs) {
+    breadcrumbs = document.querySelector('nav ol.breadcrumb');
+    originalBreadcrumbs = breadcrumbs.cloneNode(true);
+    truncateCrumbs();
+  }
+  if (!originalBreadcrumbs) {
+    originalBreadcrumbs = breadcrumbs.cloneNode(true);
+  }
+
+  const initialLength = breadcrumbs.children.length;
+  if (initialLength >= 5) {
+    if (!condensedCrumbs) {
+      createCondensedCrumbs(breadcrumbs);
+    } else {
+      // if originalBreadCrumbs has a parentNode then it is in the DOM, if not breadcrumbs is in DOM
+      if (originalBreadcrumbs.parentNode) {
+        originalBreadcrumbs.after(condensedCrumbs);
+        originalBreadcrumbs.remove();
+      } else {
+        breadcrumbs.after(condensedCrumbs);
+      }
+    }
+
+    breadcrumbs.remove();
+  }
+};
+
+/**
+ * Truncates text in breadcrumbs
+ * 
+ * @param {<ol> of breadcrumbs} breadcrumbs 
+ */
+function truncateCrumbs() {
+  const TEXT_LIMIT = 30;
+  [...breadcrumbs.children].forEach(crumb => {
+    if (crumb.children[0] && crumb.children[0].textContent.length > TEXT_LIMIT) {
+      crumb.children[0].textContent = `${crumb.children[0].textContent.substring(0, TEXT_LIMIT)}...`;
+    } else if (crumb.children.length === 0 && crumb.textContent.trim().length > TEXT_LIMIT) {
+      crumb.textContent = `${crumb.textContent.trim().substring(0, TEXT_LIMIT)}...`;
+    }
+  });
+}
+
+/**
+ * Creates a <ol> of condensed breadcrumbs to replace original breadcrumbs
+ * 
+ * @param {<ol> of breadcrumbs} breadcrumbs 
+ */
+function createCondensedCrumbs(breadcrumbs) {
+    condensedCrumbs = document.createElement('ol');
+    condensedCrumbs.classList = ['breadcrumb breadcrumb-condensed'];
+    condensedCrumbs.appendChild(breadcrumbs.children[breadcrumbs.children.length - 2].cloneNode(true));
+
+    const expandCrumb = createCrumb('(expand)', breadcrumbs.children[0].classList, expandBreadCrumbs);
+    condensedCrumbs.children[0].before(expandCrumb);
+    const condenseCrumb = createCrumb('(condense)', [], condenseBreadCrumbs);
+    breadcrumbs.appendChild(condenseCrumb);
+
+    breadcrumbs.after(condensedCrumbs)
+}
+
+function createCrumb(textContent, classList, onclick) {
+  const crumb = document.createElement('li');
+  crumb.classList = classList;
+
+  // create <a> tag with onclick event
+  crumb.appendChild(document.createElement('a'));
+  crumb.children[0].textContent = textContent;
+  crumb.children[0].href = '';
+  crumb.children[0].onclick = onclick;
+
+  return crumb;
+}
+
+/**
+ * Hides condensed breadcrumb list and displays regular breadcrumb list
+ * 
+ * @param {event} e click event
+ */
+function expandBreadCrumbs(e) {
+  // not always called from an event
+  if (e) {
+    e.preventDefault();
+  }
+
+  condensedCrumbs.after(breadcrumbs);
+  condensedCrumbs.remove();
+};
+
+/**
+ * Shows condensed breadcrumb list and hides regular breadcrumb list
+ * 
+ * @param {event} e click event
+ */
+function condenseBreadCrumbs(e) {
+  // not always called from an event
+  if (e) {
+    e.preventDefault();
+  }
+
+  breadcrumbs.after(condensedCrumbs);
+  breadcrumbs.remove();
+};
+
+/**
+ * Sets breadcrumbs back to their original settings for desktop view
+ */
+function resetBreadCrumbs() {
+  if (originalBreadcrumbs) {
+
+    condensedCrumbs.after(originalBreadcrumbs);
+    condensedCrumbs.remove();
+  }
 }
