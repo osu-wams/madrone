@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
   const tocJsBlocks = document.querySelectorAll(".toc-js");
   if (tocJsBlocks.length > 0) {
     let tocJsBlock = tocJsBlocks[0];
-    let tocJsParentBlock = tocJsBlock.closest('.block.block-toc-js.block-toc-js-block');
+    let tocJsParentBlock = tocJsBlock.closest('.block[class*="toc-js"]');
     const tocJsParentBlockStyle = window.getComputedStyle(tocJsParentBlock);
 
     resizeTocJsBlock(tocJsBlock);
@@ -359,7 +359,7 @@ function resizeMenu(menu) {
  * @return boolean
  */
 function resizeTocJsBlock(block) {
-  let closestParentBlock = block.closest('.block.block-toc-js.block-toc-js-block');
+  let closestParentBlock = block.closest('.block[class*="toc-js"]');
   const parentBlockStyle = window.getComputedStyle(closestParentBlock);
   const finalPadding = parseFloat(parentBlockStyle.paddingLeft) + parseFloat(parentBlockStyle.paddingRight);
   const finalMargin = parseFloat(parentBlockStyle.marginLeft) + parseFloat(parentBlockStyle.marginRight);
@@ -372,6 +372,7 @@ function resizeTocJsBlock(block) {
 let originalBreadcrumbs;
 let breadcrumbs;
 let condensedCrumbs;
+
 /**
  * Condense breadcrumbs list when >= 3 pages deep
  */
@@ -405,8 +406,8 @@ function mobileBreadcrumbs() {
 
 /**
  * Truncates text in breadcrumbs
- * 
- * @param {<ol> of breadcrumbs} breadcrumbs 
+ *
+ * @param {<ol> of breadcrumbs} breadcrumbs
  */
 function truncateCrumbs() {
   const TEXT_LIMIT = 30;
@@ -421,20 +422,20 @@ function truncateCrumbs() {
 
 /**
  * Creates a <ol> of condensed breadcrumbs to replace original breadcrumbs
- * 
- * @param {<ol> of breadcrumbs} breadcrumbs 
+ *
+ * @param {<ol> of breadcrumbs} breadcrumbs
  */
 function createCondensedCrumbs(breadcrumbs) {
-    condensedCrumbs = document.createElement('ol');
-    condensedCrumbs.classList = ['breadcrumb breadcrumb-condensed'];
-    condensedCrumbs.appendChild(breadcrumbs.children[breadcrumbs.children.length - 2].cloneNode(true));
+  condensedCrumbs = document.createElement('ol');
+  condensedCrumbs.classList = ['breadcrumb breadcrumb-condensed'];
+  condensedCrumbs.appendChild(breadcrumbs.children[breadcrumbs.children.length - 2].cloneNode(true));
 
-    const expandCrumb = createCrumb('(expand)', breadcrumbs.children[0].classList, expandBreadCrumbs);
-    condensedCrumbs.children[0].before(expandCrumb);
-    const condenseCrumb = createCrumb('(condense)', [], condenseBreadCrumbs);
-    breadcrumbs.appendChild(condenseCrumb);
+  const expandCrumb = createCrumb('(expand)', breadcrumbs.children[0].classList, expandBreadCrumbs);
+  condensedCrumbs.children[0].before(expandCrumb);
+  const condenseCrumb = createCrumb('(condense)', [], condenseBreadCrumbs);
+  breadcrumbs.appendChild(condenseCrumb);
 
-    breadcrumbs.after(condensedCrumbs)
+  breadcrumbs.after(condensedCrumbs)
 }
 
 function createCrumb(textContent, classList, onclick) {
@@ -452,7 +453,7 @@ function createCrumb(textContent, classList, onclick) {
 
 /**
  * Hides condensed breadcrumb list and displays regular breadcrumb list
- * 
+ *
  * @param {event} e click event
  */
 function expandBreadCrumbs(e) {
@@ -467,7 +468,7 @@ function expandBreadCrumbs(e) {
 
 /**
  * Shows condensed breadcrumb list and hides regular breadcrumb list
- * 
+ *
  * @param {event} e click event
  */
 function condenseBreadCrumbs(e) {

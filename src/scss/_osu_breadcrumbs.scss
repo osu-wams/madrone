@@ -1,15 +1,14 @@
 .breadcrumb {
-  flex-direction: column;
   margin-top: 10px;
 
   &.breadcrumb-condensed {
     flex-direction: row;
   }
 
- .breadcrumb-item::before {
+  .breadcrumb-item::before {
     font-weight: 900;
   }
-  
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
