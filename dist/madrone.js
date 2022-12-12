@@ -4,6 +4,10 @@ const largestEm = 27;
 const DELAY = 250;
 let tocJsTimeout = false;
 // Wait for the page to finish before looking for the superfish toggles.
+// store breadcrumb elements, so they can be swapped in and out depending on state.
+let originalBreadcrumbs;
+let breadcrumbs;
+let condensedCrumbs;
 window.addEventListener('load', () => {
   const superfishMenus = [...document.querySelectorAll('ul.sf-menu')];
   superfishMenus.map(menu => {
@@ -132,10 +136,10 @@ window.addEventListener('load', () => {
  */
 function menuClickedText(sfToggle) {
   if (sfToggle.classList.contains('sf-expanded')) {
-    let menuToggleText = sfToggle.textContent;
-    sfToggle.textContent = `Close ${menuToggleText}`;
+    let menuToggleText = sfToggle.innerHTML;
+    sfToggle.innerHTML = `<span class="madrone-mobile-menu-close">Close&nbsp;</span>${menuToggleText}`
   } else {
-    sfToggle.textContent = sfToggle.textContent.replace('Close ', '');
+    sfToggle.querySelector('span.madrone-mobile-menu-close').remove()
   }
 }
 
@@ -368,41 +372,38 @@ function resizeTocJsBlock(block) {
   return true;
 }
 
-// store breadcrumb elements so they can be swapped in and out depending on state
-let originalBreadcrumbs;
-let breadcrumbs;
-let condensedCrumbs;
-
 /**
  * Condense breadcrumbs list when >= 3 pages deep
  */
 function mobileBreadcrumbs() {
   if (!breadcrumbs) {
     breadcrumbs = document.querySelector('nav ol.breadcrumb');
-    originalBreadcrumbs = breadcrumbs.cloneNode(true);
-    truncateCrumbs();
-  }
-  if (!originalBreadcrumbs) {
-    originalBreadcrumbs = breadcrumbs.cloneNode(true);
-  }
-
-  const numCrumbs = breadcrumbs.children.length;
-  if (numCrumbs >= 3) {
-    if (!condensedCrumbs) {
-      createCondensedCrumbs(breadcrumbs);
-    } else {
-      // if originalBreadCrumbs has a parentNode then it is in the DOM, if not breadcrumbs is in DOM
-      if (originalBreadcrumbs.parentNode) {
-        originalBreadcrumbs.after(condensedCrumbs);
-        originalBreadcrumbs.remove();
-      } else {
-        breadcrumbs.after(condensedCrumbs);
-      }
+    if (breadcrumbs !== null) {
+      originalBreadcrumbs = breadcrumbs.cloneNode(true);
+      truncateCrumbs();
     }
-
-    breadcrumbs.remove();
   }
-};
+  if (!originalBreadcrumbs && breadcrumbs !== null) {
+    originalBreadcrumbs = breadcrumbs.cloneNode(true);
+  }
+  if (breadcrumbs) {
+    const numCrumbs = breadcrumbs.children.length;
+    if (numCrumbs >= 3) {
+      if (!condensedCrumbs) {
+        createCondensedCrumbs(breadcrumbs);
+      } else {
+        // if originalBreadCrumbs has a parentNode then it is in the DOM, if not breadcrumbs is in DOM
+        if (originalBreadcrumbs.parentNode) {
+          originalBreadcrumbs.after(condensedCrumbs);
+          originalBreadcrumbs.remove();
+        } else {
+          breadcrumbs.after(condensedCrumbs);
+        }
+      }
+      breadcrumbs.remove();
+    }
+  }
+}
 
 /**
  * Truncates text in breadcrumbs
