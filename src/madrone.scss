@@ -499,10 +499,6 @@ code {
   padding: 0.5em 0.25em;
 }
 
-.node-preview-container {
-  background-color: $bucktoothwhite;
-}
-
 /** Only force link color if the parent block has a dark bg set.*/
 .osu-text-bucktoothwhite > * {
   a:not(.layout-builder__link--add, .btn) {
@@ -528,6 +524,7 @@ code {
 @import "scss/osu_dropbuttons";
 @import "scss/osu_media";
 @import "scss/osu_messages";
+@import "scss/osu_preview";
 @import "scss/osu_tables";
 @import "scss/osu_layout_builder";
 @import "scss/osu_layout_builder_menus";
