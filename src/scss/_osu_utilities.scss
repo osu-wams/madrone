@@ -67,6 +67,10 @@
   @extend .justify-content-center;
 }
 
+.osu-justify-content-between {
+  @extend .justify-content-between;
+}
+
 .osu-justify-content-end {
   @extend .justify-content-end;
 }

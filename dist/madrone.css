@@ -2357,10 +2357,10 @@ textarea.form-control-lg {
 .btn-check[disabled] + .btn, .field--name-field-tags.field__items .field__item .btn-check[disabled] + a,
 .field--name-field-tags .field__items .field__item .btn-check[disabled] + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-check[disabled] + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-check[disabled] + a, .btn-check[disabled] + a.button, .btn-check:disabled + .btn, .field--name-field-tags.field__items .field__item .btn-check:disabled + a,
+.field--name-field-osu-organizations .field__items .field__item .btn-check[disabled] + a, .node-preview-container .node-preview-form-select .btn-check[disabled] + .node-preview-backlink, .btn-check[disabled] + a.button, .btn-check:disabled + .btn, .field--name-field-tags.field__items .field__item .btn-check:disabled + a,
 .field--name-field-tags .field__items .field__item .btn-check:disabled + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-check:disabled + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-check:disabled + a, .btn-check:disabled + a.button {
+.field--name-field-osu-organizations .field__items .field__item .btn-check:disabled + a, .node-preview-container .node-preview-form-select .btn-check:disabled + .node-preview-backlink, .btn-check:disabled + a.button {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2525,7 +2525,7 @@ textarea.form-control-lg {
 .input-group .field--name-field-osu-organizations.field__items .field__item a,
 .field--name-field-osu-organizations.field__items .field__item .input-group a,
 .input-group .field--name-field-osu-organizations .field__items .field__item a,
-.field--name-field-osu-organizations .field__items .field__item .input-group a, .input-group a.button {
+.field--name-field-osu-organizations .field__items .field__item .input-group a, .input-group .node-preview-container .node-preview-form-select .node-preview-backlink, .node-preview-container .node-preview-form-select .input-group .node-preview-backlink, .input-group a.button {
   position: relative;
   z-index: 2;
 }
@@ -2535,7 +2535,7 @@ textarea.form-control-lg {
 .input-group .field--name-field-osu-organizations.field__items .field__item a:focus,
 .field--name-field-osu-organizations.field__items .field__item .input-group a:focus,
 .input-group .field--name-field-osu-organizations .field__items .field__item a:focus,
-.field--name-field-osu-organizations .field__items .field__item .input-group a:focus, .input-group a.button:focus {
+.field--name-field-osu-organizations .field__items .field__item .input-group a:focus, .input-group .node-preview-container .node-preview-form-select .node-preview-backlink:focus, .node-preview-container .node-preview-form-select .input-group .node-preview-backlink:focus, .input-group a.button:focus {
   z-index: 3;
 }
 
@@ -2562,6 +2562,7 @@ textarea.form-control-lg {
 .field--name-field-tags .field__items .field__item .input-group-lg > a,
 .field--name-field-osu-organizations.field__items .field__item .input-group-lg > a,
 .field--name-field-osu-organizations .field__items .field__item .input-group-lg > a,
+.node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
 .input-group-lg > a.button {
   padding: 1rem 1.5rem;
   font-size: calc(1.265625rem + 0.1875vw);
@@ -2576,6 +2577,7 @@ textarea.form-control-lg {
 .field--name-field-tags .field__items .field__item .input-group-lg > a,
 .field--name-field-osu-organizations.field__items .field__item .input-group-lg > a,
 .field--name-field-osu-organizations .field__items .field__item .input-group-lg > a,
+.node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
 .input-group-lg > a.button {
     font-size: 1.40625rem;
   }
@@ -2589,6 +2591,7 @@ textarea.form-control-lg {
 .field--name-field-tags .field__items .field__item .input-group-sm > a,
 .field--name-field-osu-organizations.field__items .field__item .input-group-sm > a,
 .field--name-field-osu-organizations .field__items .field__item .input-group-sm > a,
+.node-preview-container .node-preview-form-select .input-group-sm > .node-preview-backlink,
 .input-group-sm > a.button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
@@ -2797,7 +2800,7 @@ textarea.form-control-lg {
 .btn, .field--name-field-tags.field__items .field__item a,
 .field--name-field-tags .field__items .field__item a,
 .field--name-field-osu-organizations.field__items .field__item a,
-.field--name-field-osu-organizations .field__items .field__item a, a.button {
+.field--name-field-osu-organizations .field__items .field__item a, .node-preview-container .node-preview-form-select .node-preview-backlink, a.button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.8;
@@ -2818,39 +2821,39 @@ textarea.form-control-lg {
   .btn, .field--name-field-tags.field__items .field__item a,
 .field--name-field-tags .field__items .field__item a,
 .field--name-field-osu-organizations.field__items .field__item a,
-.field--name-field-osu-organizations .field__items .field__item a, a.button {
+.field--name-field-osu-organizations .field__items .field__item a, .node-preview-container .node-preview-form-select .node-preview-backlink, a.button {
     transition: none;
   }
 }
 .btn:hover, .field--name-field-tags.field__items .field__item a:hover,
 .field--name-field-tags .field__items .field__item a:hover,
 .field--name-field-osu-organizations.field__items .field__item a:hover,
-.field--name-field-osu-organizations .field__items .field__item a:hover, a.button:hover {
+.field--name-field-osu-organizations .field__items .field__item a:hover, .node-preview-container .node-preview-form-select .node-preview-backlink:hover, a.button:hover {
   color: #423e3c;
 }
 .btn-check:focus + .btn, .field--name-field-tags.field__items .field__item .btn-check:focus + a,
 .field--name-field-tags .field__items .field__item .btn-check:focus + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-check:focus + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-check:focus + a, .btn-check:focus + a.button, .btn:focus, .field--name-field-tags.field__items .field__item a:focus,
+.field--name-field-osu-organizations .field__items .field__item .btn-check:focus + a, .node-preview-container .node-preview-form-select .btn-check:focus + .node-preview-backlink, .btn-check:focus + a.button, .btn:focus, .field--name-field-tags.field__items .field__item a:focus,
 .field--name-field-tags .field__items .field__item a:focus,
 .field--name-field-osu-organizations.field__items .field__item a:focus,
-.field--name-field-osu-organizations .field__items .field__item a:focus, a.button:focus {
+.field--name-field-osu-organizations .field__items .field__item a:focus, .node-preview-container .node-preview-form-select .node-preview-backlink:focus, a.button:focus {
   outline: 0;
   box-shadow: none;
 }
 .btn:disabled, .field--name-field-tags.field__items .field__item a:disabled,
 .field--name-field-tags .field__items .field__item a:disabled,
 .field--name-field-osu-organizations.field__items .field__item a:disabled,
-.field--name-field-osu-organizations .field__items .field__item a:disabled, a.button:disabled, .btn.disabled, .field--name-field-tags.field__items .field__item a.disabled,
+.field--name-field-osu-organizations .field__items .field__item a:disabled, .node-preview-container .node-preview-form-select .node-preview-backlink:disabled, a.button:disabled, .btn.disabled, .field--name-field-tags.field__items .field__item a.disabled,
 .field--name-field-tags .field__items .field__item a.disabled,
 .field--name-field-osu-organizations.field__items .field__item a.disabled,
-.field--name-field-osu-organizations .field__items .field__item a.disabled, a.disabled.button, fieldset:disabled .btn, fieldset:disabled .field--name-field-tags.field__items .field__item a, .field--name-field-tags.field__items .field__item fieldset:disabled a,
+.field--name-field-osu-organizations .field__items .field__item a.disabled, .node-preview-container .node-preview-form-select .disabled.node-preview-backlink, a.disabled.button, fieldset:disabled .btn, fieldset:disabled .field--name-field-tags.field__items .field__item a, .field--name-field-tags.field__items .field__item fieldset:disabled a,
 fieldset:disabled .field--name-field-tags .field__items .field__item a,
 .field--name-field-tags .field__items .field__item fieldset:disabled a,
 fieldset:disabled .field--name-field-osu-organizations.field__items .field__item a,
 .field--name-field-osu-organizations.field__items .field__item fieldset:disabled a,
 fieldset:disabled .field--name-field-osu-organizations .field__items .field__item a,
-.field--name-field-osu-organizations .field__items .field__item fieldset:disabled a, fieldset:disabled a.button {
+.field--name-field-osu-organizations .field__items .field__item fieldset:disabled a, fieldset:disabled .node-preview-container .node-preview-form-select .node-preview-backlink, .node-preview-container .node-preview-form-select fieldset:disabled .node-preview-backlink, fieldset:disabled a.button {
   pointer-events: none;
   opacity: 0.65;
 }
@@ -3358,7 +3361,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-lg, .btn-group-lg > .btn, .field--name-field-tags.field__items .field__item .btn-group-lg > a,
 .field--name-field-tags .field__items .field__item .btn-group-lg > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-lg > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a, .btn-group-lg > a.button {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .btn-group-lg > a.button {
   padding: 0.5rem 3rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 50rem;
@@ -3367,7 +3370,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   .btn-lg, .btn-group-lg > .btn, .field--name-field-tags.field__items .field__item .btn-group-lg > a,
 .field--name-field-tags .field__items .field__item .btn-group-lg > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-lg > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a, .btn-group-lg > a.button {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .btn-group-lg > a.button {
     font-size: 1.40625rem;
   }
 }
@@ -3375,7 +3378,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-sm, .btn-group-sm > .btn, .field--name-field-tags.field__items .field__item .btn-group-sm > a,
 .field--name-field-tags .field__items .field__item .btn-group-sm > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-sm > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-sm > a, .btn-group-sm > a.button {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-sm > a, .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink, .btn-group-sm > a.button {
   padding: 0.25rem 3rem;
   font-size: 0.984375rem;
   border-radius: 50rem;
@@ -3728,12 +3731,13 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-group > .btn, .field--name-field-tags.field__items .field__item .btn-group > a,
 .field--name-field-tags .field__items .field__item .btn-group > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group > a, .btn-group > a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group > a, .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink, .btn-group > a.button,
 .btn-group-vertical > .btn,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink,
 .btn-group-vertical > a.button {
   position: relative;
   flex: 1 1 auto;
@@ -3741,72 +3745,83 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-group > .btn-check:checked + .btn, .field--name-field-tags.field__items .field__item .btn-group > .btn-check:checked + a,
 .field--name-field-tags .field__items .field__item .btn-group > .btn-check:checked + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > .btn-check:checked + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-check:checked + a, .btn-group > .btn-check:checked + a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-check:checked + a, .node-preview-container .node-preview-form-select .btn-group > .btn-check:checked + .node-preview-backlink, .btn-group > .btn-check:checked + a.button,
 .btn-group > .btn-check:focus + .btn,
 .field--name-field-tags.field__items .field__item .btn-group > .btn-check:focus + a,
 .field--name-field-tags .field__items .field__item .btn-group > .btn-check:focus + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > .btn-check:focus + a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-check:focus + a,
+.node-preview-container .node-preview-form-select .btn-group > .btn-check:focus + .node-preview-backlink,
 .btn-group > .btn-check:focus + a.button,
 .btn-group > .btn:hover,
 .field--name-field-tags.field__items .field__item .btn-group > a:hover,
 .field--name-field-tags .field__items .field__item .btn-group > a:hover,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:hover,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a:hover,
+.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:hover,
 .btn-group > a.button:hover,
 .btn-group > .btn:focus,
 .field--name-field-tags.field__items .field__item .btn-group > a:focus,
 .field--name-field-tags .field__items .field__item .btn-group > a:focus,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:focus,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a:focus,
+.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:focus,
 .btn-group > a.button:focus,
 .btn-group > .btn:active,
 .field--name-field-tags.field__items .field__item .btn-group > a:active,
 .field--name-field-tags .field__items .field__item .btn-group > a:active,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:active,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a:active,
+.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:active,
 .btn-group > a.button:active,
 .btn-group > .btn.active,
 .field--name-field-tags.field__items .field__item .btn-group > a.active,
 .field--name-field-tags .field__items .field__item .btn-group > a.active,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a.active,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a.active,
+.node-preview-container .node-preview-form-select .btn-group > .active.node-preview-backlink,
 .btn-group > a.active.button,
 .btn-group-vertical > .btn-check:checked + .btn,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn-check:checked + a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn-check:checked + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn-check:checked + a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn-check:checked + a,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-check:checked + .node-preview-backlink,
 .btn-group-vertical > .btn-check:checked + a.button,
 .btn-group-vertical > .btn-check:focus + .btn,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn-check:focus + a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn-check:focus + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn-check:focus + a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn-check:focus + a,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-check:focus + .node-preview-backlink,
 .btn-group-vertical > .btn-check:focus + a.button,
 .btn-group-vertical > .btn:hover,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a:hover,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:hover,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:hover,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:hover,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:hover,
 .btn-group-vertical > a.button:hover,
 .btn-group-vertical > .btn:focus,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a:focus,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:focus,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:focus,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:focus,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:focus,
 .btn-group-vertical > a.button:focus,
 .btn-group-vertical > .btn:active,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a:active,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:active,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:active,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:active,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:active,
 .btn-group-vertical > a.button:active,
 .btn-group-vertical > .btn.active,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a.active,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a.active,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a.active,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a.active,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .active.node-preview-backlink,
 .btn-group-vertical > a.active.button {
   z-index: 1;
 }
@@ -3823,19 +3838,20 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-group > .btn:not(:first-child), .field--name-field-tags.field__items .field__item .btn-group > a:not(:first-child),
 .field--name-field-tags .field__items .field__item .btn-group > a:not(:first-child),
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:not(:first-child),
-.field--name-field-osu-organizations .field__items .field__item .btn-group > a:not(:first-child), .btn-group > a.button:not(:first-child),
+.field--name-field-osu-organizations .field__items .field__item .btn-group > a:not(:first-child), .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:not(:first-child), .btn-group > a.button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .field--name-field-tags.field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle),
 .field--name-field-tags .field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle),
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle),
-.field--name-field-osu-organizations .field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle), .btn-group > a.button:not(:last-child):not(.dropdown-toggle),
+.field--name-field-osu-organizations .field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle), .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .btn-group > a.button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .field--name-field-tags.field__items .field__item .btn-group > .btn-group:not(:last-child) > a,
 .field--name-field-tags .field__items .field__item .btn-group > .btn-group:not(:last-child) > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > .btn-group:not(:last-child) > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-group:not(:last-child) > a,
+.node-preview-container .node-preview-form-select .btn-group > .btn-group:not(:last-child) > .node-preview-backlink,
 .btn-group > .btn-group:not(:last-child) > a.button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -3843,18 +3859,20 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-group > .btn:nth-child(n+3), .field--name-field-tags.field__items .field__item .btn-group > a:nth-child(n+3),
 .field--name-field-tags .field__items .field__item .btn-group > a:nth-child(n+3),
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:nth-child(n+3),
-.field--name-field-osu-organizations .field__items .field__item .btn-group > a:nth-child(n+3), .btn-group > a.button:nth-child(n+3),
+.field--name-field-osu-organizations .field__items .field__item .btn-group > a:nth-child(n+3), .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:nth-child(n+3), .btn-group > a.button:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
 .field--name-field-tags.field__items .field__item .btn-group > :not(.btn-check) + a,
 .field--name-field-tags .field__items .field__item .btn-group > :not(.btn-check) + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > :not(.btn-check) + a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > :not(.btn-check) + a,
+.node-preview-container .node-preview-form-select .btn-group > :not(.btn-check) + .node-preview-backlink,
 .btn-group > :not(.btn-check) + a.button,
 .btn-group > .btn-group:not(:first-child) > .btn,
 .field--name-field-tags.field__items .field__item .btn-group > .btn-group:not(:first-child) > a,
 .field--name-field-tags .field__items .field__item .btn-group > .btn-group:not(:first-child) > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > .btn-group:not(:first-child) > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-group:not(:first-child) > a,
+.node-preview-container .node-preview-form-select .btn-group > .btn-group:not(:first-child) > .node-preview-backlink,
 .btn-group > .btn-group:not(:first-child) > a.button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3874,7 +3892,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .field--name-field-tags.field__items .field__item .btn-group-sm > a + .dropdown-toggle-split,
 .field--name-field-tags .field__items .field__item .btn-group-sm > a + .dropdown-toggle-split,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-sm > a + .dropdown-toggle-split,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-sm > a + .dropdown-toggle-split, .btn-group-sm > a.button + .dropdown-toggle-split {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-sm > a + .dropdown-toggle-split, .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink + .dropdown-toggle-split, .btn-group-sm > a.button + .dropdown-toggle-split {
   padding-right: 2.25rem;
   padding-left: 2.25rem;
 }
@@ -3882,7 +3900,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .field--name-field-tags.field__items .field__item .btn-group-lg > a + .dropdown-toggle-split,
 .field--name-field-tags .field__items .field__item .btn-group-lg > a + .dropdown-toggle-split,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-lg > a + .dropdown-toggle-split,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a + .dropdown-toggle-split, .btn-group-lg > a.button + .dropdown-toggle-split {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a + .dropdown-toggle-split, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink + .dropdown-toggle-split, .btn-group-lg > a.button + .dropdown-toggle-split {
   padding-right: 2.25rem;
   padding-left: 2.25rem;
 }
@@ -3895,26 +3913,27 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-group-vertical > .btn, .field--name-field-tags.field__items .field__item .btn-group-vertical > a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a, .btn-group-vertical > a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink, .btn-group-vertical > a.button,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
 .btn-group-vertical > .btn:not(:first-child), .field--name-field-tags.field__items .field__item .btn-group-vertical > a:not(:first-child),
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:not(:first-child),
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:not(:first-child),
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:not(:first-child), .btn-group-vertical > a.button:not(:first-child),
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:not(:first-child), .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:first-child), .btn-group-vertical > a.button:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
 .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .field--name-field-tags.field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle),
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn-group:not(:last-child) > a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn-group:not(:last-child) > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn-group:not(:last-child) > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn-group:not(:last-child) > a,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-group:not(:last-child) > .node-preview-backlink,
 .btn-group-vertical > .btn-group:not(:last-child) > a.button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -3928,12 +3947,25 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn ~ a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a ~ a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn ~ a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ a, .btn-group-vertical > a.button ~ .btn, .btn-group-vertical > .btn ~ a.button, .btn-group-vertical > a.button ~ a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ a, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ .btn, .node-preview-container .node-preview-form-select .field--name-field-tags.field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a, .field--name-field-tags.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
+.node-preview-container .node-preview-form-select .field--name-field-tags .field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a,
+.field--name-field-tags .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
+.node-preview-container .node-preview-form-select .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a,
+.field--name-field-osu-organizations.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
+.node-preview-container .node-preview-form-select .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a,
+.field--name-field-osu-organizations .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a, .node-preview-container .node-preview-form-select .btn-group-vertical > .btn ~ .node-preview-backlink, .node-preview-container .node-preview-form-select .field--name-field-tags.field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink, .field--name-field-tags.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
+.node-preview-container .node-preview-form-select .field--name-field-tags .field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
+.field--name-field-tags .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
+.node-preview-container .node-preview-form-select .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
+.field--name-field-osu-organizations.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
+.node-preview-container .node-preview-form-select .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
+.field--name-field-osu-organizations .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ .node-preview-backlink, .btn-group-vertical > a.button ~ .btn, .node-preview-container .node-preview-form-select .btn-group-vertical > a.button ~ .node-preview-backlink, .btn-group-vertical > .btn ~ a.button, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a.button, .btn-group-vertical > a.button ~ a.button,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn-group:not(:first-child) > a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn-group:not(:first-child) > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn-group:not(:first-child) > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn-group:not(:first-child) > a,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-group:not(:first-child) > .node-preview-backlink,
 .btn-group-vertical > .btn-group:not(:first-child) > a.button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -4960,7 +4992,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn .badge, .field--name-field-tags.field__items .field__item a .badge,
 .field--name-field-tags .field__items .field__item a .badge,
 .field--name-field-osu-organizations.field__items .field__item a .badge,
-.field--name-field-osu-organizations .field__items .field__item a .badge, a.button .badge {
+.field--name-field-osu-organizations .field__items .field__item a .badge, .node-preview-container .node-preview-form-select .node-preview-backlink .badge, a.button .badge {
   position: relative;
   top: -1px;
 }
@@ -6399,7 +6431,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .placeholder.btn::before, .field--name-field-tags.field__items .field__item a.placeholder::before,
 .field--name-field-tags .field__items .field__item a.placeholder::before,
 .field--name-field-osu-organizations.field__items .field__item a.placeholder::before,
-.field--name-field-osu-organizations .field__items .field__item a.placeholder::before, a.placeholder.button::before {
+.field--name-field-osu-organizations .field__items .field__item a.placeholder::before, .node-preview-container .node-preview-form-select .placeholder.node-preview-backlink::before, a.placeholder.button::before {
   display: inline-block;
   content: "";
 }
@@ -7284,7 +7316,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   justify-content: center !important;
 }
 
-.justify-content-between {
+.justify-content-between, .osu-justify-content-between {
   justify-content: space-between !important;
 }
 
@@ -11342,31 +11374,31 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     disabled border color,
     disabled color
  */
-.osu-btn-primary, .ui-dialog .button, a.button {
+.osu-btn-primary, .ui-dialog .button, .node-preview-container .node-preview-form-select .node-preview-backlink, a.button {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
 }
-.osu-btn-primary:hover, .ui-dialog .button:hover, a.button:hover {
+.osu-btn-primary:hover, .ui-dialog .button:hover, .node-preview-container .node-preview-form-select .node-preview-backlink:hover, a.button:hover {
   color: #fff;
   background-color: #212529;
   border-color: #212529;
 }
-.btn-check:focus + .osu-btn-primary, .ui-dialog .btn-check:focus + .button, .btn-check:focus + a.button, .osu-btn-primary:focus, .ui-dialog .button:focus, a.button:focus {
+.btn-check:focus + .osu-btn-primary, .ui-dialog .btn-check:focus + .button, .node-preview-container .node-preview-form-select .btn-check:focus + .node-preview-backlink, .btn-check:focus + a.button, .osu-btn-primary:focus, .ui-dialog .button:focus, .node-preview-container .node-preview-form-select .node-preview-backlink:focus, a.button:focus {
   color: #fff;
   background-color: #212529;
   border-color: #212529;
   box-shadow: 0 0 0 0 rgba(221, 92, 46, 0.5);
 }
-.btn-check:checked + .osu-btn-primary, .ui-dialog .btn-check:checked + .button, .btn-check:checked + a.button, .btn-check:active + .osu-btn-primary, .ui-dialog .btn-check:active + .button, .btn-check:active + a.button, .osu-btn-primary:active, .ui-dialog .button:active, a.button:active, .osu-btn-primary.active, .ui-dialog .active.button, a.active.button, .show > .osu-btn-primary.dropdown-toggle, .ui-dialog .show > .dropdown-toggle.button, .show > a.dropdown-toggle.button {
+.btn-check:checked + .osu-btn-primary, .ui-dialog .btn-check:checked + .button, .node-preview-container .node-preview-form-select .btn-check:checked + .node-preview-backlink, .btn-check:checked + a.button, .btn-check:active + .osu-btn-primary, .ui-dialog .btn-check:active + .button, .node-preview-container .node-preview-form-select .btn-check:active + .node-preview-backlink, .btn-check:active + a.button, .osu-btn-primary:active, .ui-dialog .button:active, .node-preview-container .node-preview-form-select .node-preview-backlink:active, a.button:active, .osu-btn-primary.active, .ui-dialog .active.button, .node-preview-container .node-preview-form-select .active.node-preview-backlink, a.active.button, .show > .osu-btn-primary.dropdown-toggle, .ui-dialog .show > .dropdown-toggle.button, .node-preview-container .node-preview-form-select .show > .dropdown-toggle.node-preview-backlink, .show > a.dropdown-toggle.button {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
 }
-.btn-check:checked + .osu-btn-primary:focus, .ui-dialog .btn-check:checked + .button:focus, .btn-check:checked + a.button:focus, .btn-check:active + .osu-btn-primary:focus, .ui-dialog .btn-check:active + .button:focus, .btn-check:active + a.button:focus, .osu-btn-primary:active:focus, .ui-dialog .button:active:focus, a.button:active:focus, .osu-btn-primary.active:focus, .ui-dialog .active.button:focus, a.active.button:focus, .show > .osu-btn-primary.dropdown-toggle:focus, .ui-dialog .show > .dropdown-toggle.button:focus, .show > a.dropdown-toggle.button:focus {
+.btn-check:checked + .osu-btn-primary:focus, .ui-dialog .btn-check:checked + .button:focus, .node-preview-container .node-preview-form-select .btn-check:checked + .node-preview-backlink:focus, .btn-check:checked + a.button:focus, .btn-check:active + .osu-btn-primary:focus, .ui-dialog .btn-check:active + .button:focus, .node-preview-container .node-preview-form-select .btn-check:active + .node-preview-backlink:focus, .btn-check:active + a.button:focus, .osu-btn-primary:active:focus, .ui-dialog .button:active:focus, .node-preview-container .node-preview-form-select .node-preview-backlink:active:focus, a.button:active:focus, .osu-btn-primary.active:focus, .ui-dialog .active.button:focus, .node-preview-container .node-preview-form-select .active.node-preview-backlink:focus, a.active.button:focus, .show > .osu-btn-primary.dropdown-toggle:focus, .ui-dialog .show > .dropdown-toggle.button:focus, .node-preview-container .node-preview-form-select .show > .dropdown-toggle.node-preview-backlink:focus, .show > a.dropdown-toggle.button:focus {
   box-shadow: 0 0 0 0 rgba(221, 92, 46, 0.5);
 }
-.osu-btn-primary:disabled, .ui-dialog .button:disabled, a.button:disabled, .osu-btn-primary.disabled, .ui-dialog .disabled.button, a.disabled.button {
+.osu-btn-primary:disabled, .ui-dialog .button:disabled, .node-preview-container .node-preview-form-select .node-preview-backlink:disabled, a.button:disabled, .osu-btn-primary.disabled, .ui-dialog .disabled.button, .node-preview-container .node-preview-form-select .disabled.node-preview-backlink, a.disabled.button {
   color: #fff;
   background-color: #d73f09;
   border-color: #d73f09;
@@ -11936,10 +11968,6 @@ code {
   padding: 0.5em 0.25em;
 }
 
-.node-preview-container {
-  background-color: #fff;
-}
-
 /** Only force link color if the parent block has a dark bg set.*/
 .osu-text-bucktoothwhite > * a:not(.layout-builder__link--add, .btn, a.button) {
   color: #fff;
@@ -12324,6 +12352,7 @@ nav.pager ul.pager__items li.pager__item a {
 .osu-btn-dark:active:focus,
 .osu-btn-primary:focus,
 .ui-dialog .button:focus,
+.node-preview-container .node-preview-form-select .node-preview-backlink:focus,
 a.button:focus,
 .osu-btn-primary:active:focus {
   box-shadow: none;
@@ -12427,6 +12456,26 @@ figure > figcaption.figure-caption::before {
 }
 .messages.messages--status.osu-alert-success a {
   color: #fff;
+}
+
+.node-preview-container {
+  background-color: #fff;
+}
+.node-preview-container .node-preview-form-select .node-preview-backlink {
+  flex: 0 0 auto;
+  width: auto;
+}
+.node-preview-container .node-preview-form-select .form-item-view-mode {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .node-preview-container .node-preview-form-select .form-item-view-mode {
+    width: 25%;
+  }
+}
+.node-preview-container .node-preview-form-select .form-item-view-mode select {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
 }
 
 .table-osuorange, .osu-table-orange > thead {

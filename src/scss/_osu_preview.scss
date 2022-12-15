@@ -1,0 +1,24 @@
+.node-preview-container {
+  background-color: $bucktoothwhite;
+
+  .node-preview-form-select {
+    .node-preview-backlink {
+      flex: 0 0 auto;
+      width: auto;
+      @extend .btn;
+      @extend .osu-btn-primary;
+    }
+
+    .form-item-view-mode {
+      width: 100%;
+      @media screen and (min-width: 768px) {
+        width: 25%;
+      }
+
+      select {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+      }
+    }
+  }
+}

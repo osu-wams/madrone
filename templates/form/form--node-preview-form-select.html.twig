@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{% set form_classes = [
+  'row',
+  'px-2',
+  'osu-align-items-center',
+  'osu-justify-content-between'
+] %}
+<form{{ attributes.removeAttribute('region').addClass(form_classes) }}>
+  {{ children }}
+</form>
