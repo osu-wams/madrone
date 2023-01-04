@@ -22,8 +22,8 @@
 
     .dropbutton {
       .dropbutton-toggle {
-        width: 2em;
         height: 2em;
+        width: 2em;
 
         & > button {
           &:hover,
@@ -50,8 +50,8 @@
           }
 
           &:active {
-            color: $bucktoothwhite;
             background-color: $paddletailblack;
+            color: $bucktoothwhite;
           }
         }
       }
