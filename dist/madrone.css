@@ -8,6 +8,7 @@
 /* Map for minimum heights */
 /* Map for border sides */
 /* Link Defaults */
+/* Navigation Links */
 /* Navigation Tabs */
 /* Navigation Pills */
 /* Input Updates */
@@ -3923,7 +3924,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   border-top-right-radius: 0;
 }
 
-.nav, .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal {
+.nav, .madrone-primary-menu > .block-superfish ul.sf-menu {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-size: 1rem;
@@ -12581,7 +12582,7 @@ footer .region-footer a:active {
 .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a {
   font-weight: 600;
   line-height: 3rem;
-  margin-left: 1rem;
+  padding-left: 1rem;
   text-decoration: none;
 }
 .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a::before {

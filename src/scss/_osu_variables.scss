@@ -177,8 +177,12 @@ $line-height-base: 1.8;
 $link-color: $body-color;
 $link-hover-color: $body-color;
 $link-decoration: underline $osuorange;
+
+/* Navigation Links */
 $nav-link-color: $neutral-700;
 $nav-link-hover-color: $bucktoothwhite;
+$nav-link-padding-y: .5rem;
+$nav-link-padding-x: 1rem;
 $nav-link-font-size: 1rem;
 
 /* Navigation Tabs */

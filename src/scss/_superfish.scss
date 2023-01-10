@@ -8,7 +8,7 @@
     & > a {
       font-weight: 600;
       line-height: 3rem;
-      margin-left: 1rem;
+      padding-left: 1rem;
       text-decoration: none;
 
       &::before {
@@ -24,10 +24,9 @@
   ul {
     &.sf-menu {
       line-height: 1.75rem;
+      @extend .nav;
 
       &.sf-horizontal {
-        @extend .nav;
-
         li {
           a.sf-depth-1 {
             padding: 1rem;
