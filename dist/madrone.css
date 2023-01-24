@@ -12394,6 +12394,21 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   width: 100%;
 }
 
+.osu-bg-overlay-dark {
+  position: relative;
+}
+.osu-bg-overlay-dark:after {
+  background-color: hsla(210deg, 11%, 14%, 0.75);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 0;
+}
+.osu-bg-overlay-dark > div > div, .osu-bg-overlay-dark > h2, .osu-bg-overlay-dark > .h2 {
+  position: relative;
+  z-index: 1;
+}
+
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
