@@ -159,3 +159,21 @@
 .osu-img-full img {
   width: 100%;
 }
+
+.osu-bg-overlay-dark {
+  position: relative;
+
+  &:after {
+    background-color: hsla(210, 11%, 14%, 0.75);
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: 0;
+  }
+
+  & > div > div,
+  & > h2 {
+    position: relative;
+    z-index: 1;
+  }
+}
