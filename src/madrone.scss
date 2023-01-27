@@ -375,38 +375,38 @@ $utilities: map-merge-multiple(
 h1 {
   color: rgba($osuorange, 1);
   font-family: "Stratum2Web", serif;
-  font-size: 48px;
+  @include font-size(3rem);
   font-weight: 500;
 }
 
 h2 {
   font-family: "Stratum2Web", serif;
-  font-size: 36px;
+  @include font-size(2.25rem);
   font-weight: 400;
 }
 
 h3 {
   color: rgba($osuorange, 1);
   font-family: "Open Sans", sans-serif;
-  font-size: 28px;
+  @include font-size(1.75rem);
   font-weight: 500;
 }
 
 h4 {
   font-family: "Open Sans", sans-serif;
-  font-size: 22px;
+  @include font-size(1.375rem);
   font-weight: 600;
 }
 
 h5 {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  @include font-size(1.25rem);
   font-weight: 600;
 }
 
 h6 {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  @include font-size(1.125rem);
   font-weight: 600;
 }
 
@@ -447,13 +447,31 @@ hr {
   margin-block: 3rem;
 }
 
+//main .block-page-title-block {
+//  margin-inline: auto;
+//  max-width: 62rem;
+//
+//  > .block__content {
+//    overflow-wrap: anywhere;
+//    text-align: center;
+//    word-break: normal;
+//
+//    > h1 {
+//      margin-block: 1rem;
+//    }
+//  }
+//}
 main .block-page-title-block {
-  margin-bottom: 3rem;
-  margin-inline: auto;
-  max-width: 55em;
-  overflow-wrap: anywhere;
-  padding-inline: 1.5rem;
-  word-break: normal;
+  > .block__content {
+    > h1 {
+      margin-block: 1rem;
+      margin-inline: auto;
+      max-width: 62rem;
+      overflow-wrap: anywhere;
+      text-align: center;
+      word-break: normal;
+    }
+  }
 }
 
 .block-system-main-block {

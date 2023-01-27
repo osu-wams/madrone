@@ -12419,38 +12419,58 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 h1, .h1 {
   color: #d73f09;
   font-family: "Stratum2Web", serif;
-  font-size: 48px;
+  font-size: calc(1.425rem + 2.1vw);
   font-weight: 500;
+}
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 3rem;
+  }
 }
 
 h2, .h2 {
   font-family: "Stratum2Web", serif;
-  font-size: 36px;
+  font-size: calc(1.35rem + 1.2vw);
   font-weight: 400;
+}
+@media (min-width: 1200px) {
+  h2, .h2 {
+    font-size: 2.25rem;
+  }
 }
 
 h3, .h3 {
   color: #d73f09;
   font-family: "Open Sans", sans-serif;
-  font-size: 28px;
+  font-size: calc(1.3rem + 0.6vw);
   font-weight: 500;
+}
+@media (min-width: 1200px) {
+  h3, .h3 {
+    font-size: 1.75rem;
+  }
 }
 
 h4, .h4 {
   font-family: "Open Sans", sans-serif;
-  font-size: 22px;
+  font-size: calc(1.2625rem + 0.15vw);
   font-weight: 600;
+}
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.375rem;
+  }
 }
 
 h5, .h5 {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
 h6, .h6 {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
@@ -12477,12 +12497,12 @@ hr {
   margin-block: 3rem;
 }
 
-main .block-page-title-block {
-  margin-bottom: 3rem;
+main .block-page-title-block > .block__content > h1, main .block-page-title-block > .block__content > .h1 {
+  margin-block: 1rem;
   margin-inline: auto;
-  max-width: 55em;
+  max-width: 62rem;
   overflow-wrap: anywhere;
-  padding-inline: 1.5rem;
+  text-align: center;
   word-break: normal;
 }
 
@@ -12574,6 +12594,10 @@ code {
   .breadcrumb {
     flex-direction: row;
   }
+}
+
+.madrone-breadcrumb .block-system-breadcrumb-block {
+  --bs-gutter-x: 2rem;
 }
 
 footer .region-footer a {
