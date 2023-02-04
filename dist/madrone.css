@@ -8539,6 +8539,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   font-size: 1.125rem !important;
 }
 
+.fs-7 {
+  font-size: 0.9rem !important;
+}
+
 .fst-italic {
   font-style: italic !important;
 }
@@ -12431,7 +12435,7 @@ h1, .h1 {
 h2, .h2 {
   font-family: "Stratum2Web", serif;
   font-size: calc(1.35rem + 1.2vw);
-  font-weight: 400;
+  font-weight: 600;
 }
 @media (min-width: 1200px) {
   h2, .h2 {
@@ -12463,15 +12467,40 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-family: "Open Sans", sans-serif;
+  color: #d73f09;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 h6, .h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
+}
+
+.display-1 {
+  font-family: "Georgia", "Noto serif", serif;
+}
+
+.display-2 {
+  font-weight: 900;
+}
+
+.display-3 {
+  font-family: "Georgia", "Noto serif", serif;
+}
+
+.display-4 {
+  font-weight: 900;
+}
+
+.display-5 {
+  font-family: "Georgia", "Noto serif", serif;
+}
+
+.display-6 {
+  font-weight: 900;
 }
 
 a {

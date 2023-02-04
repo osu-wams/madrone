@@ -186,12 +186,19 @@ $utilities: map-merge-multiple(
         map-merge(
             map-get(map-get($utilities, "font-family"), "values"),
             (
-              "stratum2web": (
-                "Stratum2Web",
-                serif
-              )
+              "stratum2web": ("Stratum2Web", serif)
             )
         )
+      )
+    ),
+    (
+      "font-size": map-merge(
+          map-get($utilities, "font-size"),
+          (values: map-merge(
+              map-get(map-get($utilities, "font-size"), "values"),
+              (7: $font-size-base * .8)
+          )
+          )
       )
     ),
     (
@@ -382,7 +389,7 @@ h1 {
 h2 {
   font-family: "Stratum2Web", serif;
   @include font-size(2.25rem);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h3 {
@@ -399,15 +406,40 @@ h4 {
 }
 
 h5 {
-  font-family: "Open Sans", sans-serif;
+  color: $osuorange;
   @include font-size(1.25rem);
-  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 h6 {
   font-family: "Open Sans", sans-serif;
   @include font-size(1.125rem);
   font-weight: 600;
+}
+
+.display-1 {
+  font-family: $font-family-serif;
+}
+
+.display-2 {
+  font-weight: 900;
+}
+
+.display-3 {
+  font-family: $font-family-serif;
+}
+
+.display-4 {
+  font-weight: 900;
+}
+
+.display-5 {
+  font-family: $font-family-serif;
+}
+
+.display-6 {
+  font-weight: 900;
 }
 
 a {
