@@ -401,20 +401,20 @@ h3 {
 
 h4 {
   font-family: "Open Sans", sans-serif;
-  @include font-size(1.375rem);
+  @include font-size(1.625rem);
   font-weight: 600;
 }
 
 h5 {
   color: $osuorange;
-  @include font-size(1.25rem);
+  @include font-size(1.5rem);
   font-family: "Open Sans", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h6 {
   font-family: "Open Sans", sans-serif;
-  @include font-size(1.125rem);
+  @include font-size(1.25rem);
   font-weight: 600;
 }
 
