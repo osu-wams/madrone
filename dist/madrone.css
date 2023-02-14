@@ -12584,6 +12584,10 @@ code {
   color: #212529;
 }
 
+.node--unpublished {
+  background-color: #ffdedf;
+}
+
 .block-system-branding-block a {
   font-size: calc(1.275rem + 0.3vw);
 }
