@@ -136,6 +136,13 @@ function madrone_preprocess_block(&$variables) {
       $variables['content']['#attributes']['region'] = $region;
     }
   }
+  // Add bundle and view_mode variables for content blocks.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $variables['bundle'] = $variables['elements']['content']['#block_content']->bundle();
+    if (isset($variables['elements']['#configuration']['view_mode'])) {
+      $variables['view_mode'] = $variables['elements']['#configuration']['view_mode'];
+    }
+  }
 }
 
 /**

@@ -493,7 +493,7 @@ main .block-page-title-block {
 }
 
 .block-system-main-block {
-  ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li {
+  ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li:not([style*="list-style: none"]) {
     &::marker {
       color: rgba($body-color, 1);
       content: "\f054\2000";
