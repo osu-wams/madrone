@@ -59,7 +59,7 @@
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#{{ paragraph_id }}-{{ key + 1 }}"
                     aria-expanded="true"
-                    aria-controls="collapseOne">{{ item['#paragraph'].field_p_accordion_title.value }}</button>
+                    aria-controls="{{ paragraph_id }}-{{ key + 1 }}">{{ item['#paragraph'].field_p_accordion_title.value }}</button>
           </div>
           <div id="{{ paragraph_id }}-{{ key + 1 }}" class="accordion-collapse collapse accordion-body"
                aria-labelledby="heading-{{ paragraph_id }}-{{ key + 1 }}"
