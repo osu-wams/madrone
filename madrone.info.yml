@@ -5,6 +5,8 @@ type: theme
 dependencies:
 version: '1.1.4'
 base theme: stable9
+logo: logo.svg
+screenshot: madrone.png
 regions:
   header: Header
   primary_menu: Primary menu
