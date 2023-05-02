@@ -160,6 +160,16 @@
   width: 100%;
 }
 
+.osu-img-rounded-top img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.osu-img-rounded-bottom img {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
 .osu-bg-overlay-dark {
   position: relative;
 
