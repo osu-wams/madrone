@@ -35,6 +35,8 @@
 
   .field--name-field-osu-menu-bar-item-link {
     a {
+      text-decoration: none !important;
+
       &::before {
         content: '';
         inset: 0;

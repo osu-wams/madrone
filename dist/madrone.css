@@ -6450,8 +6450,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 575.98px) {
   .offcanvas-sm.offcanvas-end {
     top: 0;
     right: 0;
@@ -6459,8 +6457,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 575.98px) {
   .offcanvas-sm.offcanvas-top {
     top: 0;
     right: 0;
@@ -6470,8 +6466,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 575.98px) {
   .offcanvas-sm.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6480,13 +6474,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 575.98px) {
   .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 575.98px) {
   .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show {
     visibility: visible;
   }
@@ -6538,8 +6528,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 767.98px) {
   .offcanvas-md.offcanvas-end {
     top: 0;
     right: 0;
@@ -6547,8 +6535,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 767.98px) {
   .offcanvas-md.offcanvas-top {
     top: 0;
     right: 0;
@@ -6558,8 +6544,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 767.98px) {
   .offcanvas-md.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6568,13 +6552,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 767.98px) {
   .offcanvas-md.showing, .offcanvas-md.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 767.98px) {
   .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show {
     visibility: visible;
   }
@@ -6626,8 +6606,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 991.98px) {
   .offcanvas-lg.offcanvas-end {
     top: 0;
     right: 0;
@@ -6635,8 +6613,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 991.98px) {
   .offcanvas-lg.offcanvas-top {
     top: 0;
     right: 0;
@@ -6646,8 +6622,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 991.98px) {
   .offcanvas-lg.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6656,13 +6630,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 991.98px) {
   .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 991.98px) {
   .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show {
     visibility: visible;
   }
@@ -6714,8 +6684,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 1199.98px) {
   .offcanvas-xl.offcanvas-end {
     top: 0;
     right: 0;
@@ -6723,8 +6691,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 1199.98px) {
   .offcanvas-xl.offcanvas-top {
     top: 0;
     right: 0;
@@ -6734,8 +6700,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 1199.98px) {
   .offcanvas-xl.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6744,13 +6708,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 1199.98px) {
   .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 1199.98px) {
   .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show {
     visibility: visible;
   }
@@ -6802,8 +6762,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 1399.98px) {
   .offcanvas-xxl.offcanvas-end {
     top: 0;
     right: 0;
@@ -6811,8 +6769,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 1399.98px) {
   .offcanvas-xxl.offcanvas-top {
     top: 0;
     right: 0;
@@ -6822,8 +6778,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 1399.98px) {
   .offcanvas-xxl.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6832,13 +6786,9 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 1399.98px) {
   .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 1399.98px) {
   .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show {
     visibility: visible;
   }
@@ -8694,7 +8644,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 
 .text-body {
   --bs-text-opacity: 1;
-  color: #423e3c !important;
+  color: #212529 !important;
 }
 
 .text-muted {
@@ -9053,7 +9003,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 }
 
 .osu-text-body {
-  color: #423e3c !important;
+  color: #212529 !important;
 }
 
 .osu-text-osuorange {
@@ -12412,7 +12362,7 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   position: relative;
 }
 .osu-bg-overlay-dark:after {
-  background-color: hsla(210deg, 11%, 14%, 0.75);
+  background-color: hsla(210, 11%, 14%, 0.75);
   content: "";
   inset: 0;
   position: absolute;
@@ -13507,6 +13457,9 @@ body.cke_editable_themed {
 }
 .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
   color: #fff;
+}
+.block-inline-blockosu-menu-bar-item .field--name-field-osu-menu-bar-item-link a {
+  text-decoration: none !important;
 }
 .block-inline-blockosu-menu-bar-item .field--name-field-osu-menu-bar-item-link a::before {
   content: "";
