@@ -38,7 +38,8 @@ We call a macro which calls itself to render the full tree.
     'menu--' ~ menu_name|clean_class ~ '__submenu'
   ] %}
   {% set menu_levels = [
-    'menu--level-' ~ (menu_level + 1)
+    'menu--level-' ~ (menu_level + 1),
+    'nav'
   ] %}
   {% if items %}
     {% if menu_level == 0 %}

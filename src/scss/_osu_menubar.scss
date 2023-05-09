@@ -1,22 +1,33 @@
-.osu-bg-page-alt-2 {
-  .block-inline-blockosu-menu-bar-item {
-    & > .block__content > div {
-      &:focus-within,
-      &:hover {
-        background-color: $bucktoothwhite;
-        color: $paddletailblack !important;
-
-        a {
-          color: $paddletailblack;
-        }
-      }
-    }
-  }
-}
-
 .block-inline-blockosu-menu-bar-item {
   position: relative;
 
+  // SASS Parent Selector, apply the .osu-bg-page-alt-2 class to the root parent
+  // see https://sass-lang.com/documentation/style-rules/parent-selector
+  .osu-bg-page-alt-2 & > .block__content > div {
+    &:focus-within,
+    &:hover {
+      background-color: $bucktoothwhite;
+      color: $paddletailblack !important;
+
+      a {
+        color: $paddletailblack;
+      }
+    }
+  }
+
+  // SASS Parent Selector, apply the .osu-bg-osuorange class to the root parent
+  // see https://sass-lang.com/documentation/style-rules/parent-selector
+  .osu-bg-osuorange & > .block__content > div {
+    &:focus-within,
+    &:hover {
+      background-color: $bucktoothwhite;
+      color: $osuorange !important;
+
+      a {
+        color: $osuorange;
+      }
+    }
+  }
 
   & > .block__content > div {
     transition: 400ms background-color ease, 400ms color ease;

@@ -1,0 +1,25 @@
+$menu-depth: .5;
+@for $i from 2 to 10 {
+  .madrone-sidebar ul.menu--level-#{$i} li {
+    padding-left: #{$menu-depth}rem;
+    width: 100%;
+
+    & > a {
+      &::before {
+        color: rgba($body-color, 1);
+        content: "\f054\2000";
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        letter-spacing: normal;
+      }
+
+      &:hover::before,
+      &:focus:focus {
+        color: rgba($bucktoothwhite, 1);
+
+      }
+    }
+  }
+  $menu-depth: $menu-depth + .25;
+}
