@@ -1,3 +1,4 @@
+@import "osu_variables";
 /* Create osu-min-h-xx classes for min-height*/
 @each $height-name, $height-val in $min-heights {
   .osu-min-h-#{$height-name} {

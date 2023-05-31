@@ -2380,13 +2380,13 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .field--name-field-tags.field__items .field__item .btn-check[disabled] + a,
+.btn-check[disabled] + .btn, .node-preview-container .node-preview-form-select .btn-check[disabled] + .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-check[disabled] + a,
 .field--name-field-tags .field__items .field__item .btn-check[disabled] + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-check[disabled] + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-check[disabled] + a, .node-preview-container .node-preview-form-select .btn-check[disabled] + .node-preview-backlink, .btn-check[disabled] + a.button, .btn-check:disabled + .btn, .field--name-field-tags.field__items .field__item .btn-check:disabled + a,
+.field--name-field-osu-organizations .field__items .field__item .btn-check[disabled] + a, .btn-check[disabled] + a.button, .btn-check:disabled + .btn, .node-preview-container .node-preview-form-select .btn-check:disabled + .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-check:disabled + a,
 .field--name-field-tags .field__items .field__item .btn-check:disabled + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-check:disabled + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-check:disabled + a, .node-preview-container .node-preview-form-select .btn-check:disabled + .node-preview-backlink, .btn-check:disabled + a.button {
+.field--name-field-osu-organizations .field__items .field__item .btn-check:disabled + a, .btn-check:disabled + a.button {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2562,23 +2562,23 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn, .input-group .field--name-field-tags.field__items .field__item a, .field--name-field-tags.field__items .field__item .input-group a,
+.input-group .btn, .input-group .node-preview-container .node-preview-form-select .node-preview-backlink, .node-preview-container .node-preview-form-select .input-group .node-preview-backlink, .input-group .field--name-field-tags.field__items .field__item a, .field--name-field-tags.field__items .field__item .input-group a,
 .input-group .field--name-field-tags .field__items .field__item a,
 .field--name-field-tags .field__items .field__item .input-group a,
 .input-group .field--name-field-osu-organizations.field__items .field__item a,
 .field--name-field-osu-organizations.field__items .field__item .input-group a,
 .input-group .field--name-field-osu-organizations .field__items .field__item a,
-.field--name-field-osu-organizations .field__items .field__item .input-group a, .input-group .node-preview-container .node-preview-form-select .node-preview-backlink, .node-preview-container .node-preview-form-select .input-group .node-preview-backlink, .input-group a.button {
+.field--name-field-osu-organizations .field__items .field__item .input-group a, .input-group a.button {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .field--name-field-tags.field__items .field__item a:focus, .field--name-field-tags.field__items .field__item .input-group a:focus,
+.input-group .btn:focus, .input-group .node-preview-container .node-preview-form-select .node-preview-backlink:focus, .node-preview-container .node-preview-form-select .input-group .node-preview-backlink:focus, .input-group .field--name-field-tags.field__items .field__item a:focus, .field--name-field-tags.field__items .field__item .input-group a:focus,
 .input-group .field--name-field-tags .field__items .field__item a:focus,
 .field--name-field-tags .field__items .field__item .input-group a:focus,
 .input-group .field--name-field-osu-organizations.field__items .field__item a:focus,
 .field--name-field-osu-organizations.field__items .field__item .input-group a:focus,
 .input-group .field--name-field-osu-organizations .field__items .field__item a:focus,
-.field--name-field-osu-organizations .field__items .field__item .input-group a:focus, .input-group .node-preview-container .node-preview-form-select .node-preview-backlink:focus, .node-preview-container .node-preview-form-select .input-group .node-preview-backlink:focus, .input-group a.button:focus {
+.field--name-field-osu-organizations .field__items .field__item .input-group a:focus, .input-group a.button:focus {
   z-index: 5;
 }
 
@@ -2601,11 +2601,11 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
+.node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .input-group-lg > a,
 .field--name-field-tags .field__items .field__item .input-group-lg > a,
 .field--name-field-osu-organizations.field__items .field__item .input-group-lg > a,
 .field--name-field-osu-organizations .field__items .field__item .input-group-lg > a,
-.node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
 .input-group-lg > a.button {
   padding: 1rem 1.5rem;
   font-size: calc(1.265625rem + 0.1875vw);
@@ -2616,11 +2616,11 @@ textarea.form-control-lg {
   .input-group-lg > .form-select,
   .input-group-lg > .input-group-text,
   .input-group-lg > .btn,
+  .node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
   .field--name-field-tags.field__items .field__item .input-group-lg > a,
   .field--name-field-tags .field__items .field__item .input-group-lg > a,
   .field--name-field-osu-organizations.field__items .field__item .input-group-lg > a,
   .field--name-field-osu-organizations .field__items .field__item .input-group-lg > a,
-  .node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
   .input-group-lg > a.button {
     font-size: 1.40625rem;
   }
@@ -2630,11 +2630,11 @@ textarea.form-control-lg {
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
+.node-preview-container .node-preview-form-select .input-group-sm > .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .input-group-sm > a,
 .field--name-field-tags .field__items .field__item .input-group-sm > a,
 .field--name-field-osu-organizations.field__items .field__item .input-group-sm > a,
 .field--name-field-osu-organizations .field__items .field__item .input-group-sm > a,
-.node-preview-container .node-preview-form-select .input-group-sm > .node-preview-backlink,
 .input-group-sm > a.button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
@@ -2851,10 +2851,10 @@ textarea.form-control-lg {
   z-index: 4;
 }
 
-.btn, .field--name-field-tags.field__items .field__item a,
+.btn, .node-preview-container .node-preview-form-select .node-preview-backlink, .field--name-field-tags.field__items .field__item a,
 .field--name-field-tags .field__items .field__item a,
 .field--name-field-osu-organizations.field__items .field__item a,
-.field--name-field-osu-organizations .field__items .field__item a, .node-preview-container .node-preview-form-select .node-preview-backlink, a.button {
+.field--name-field-osu-organizations .field__items .field__item a, a.button {
   --bs-btn-padding-x: 1.5rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2888,98 +2888,98 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .field--name-field-tags.field__items .field__item a,
+  .btn, .node-preview-container .node-preview-form-select .node-preview-backlink, .field--name-field-tags.field__items .field__item a,
   .field--name-field-tags .field__items .field__item a,
   .field--name-field-osu-organizations.field__items .field__item a,
-  .field--name-field-osu-organizations .field__items .field__item a, .node-preview-container .node-preview-form-select .node-preview-backlink, a.button {
+  .field--name-field-osu-organizations .field__items .field__item a, a.button {
     transition: none;
   }
 }
-.btn:hover, .field--name-field-tags.field__items .field__item a:hover,
+.btn:hover, .node-preview-container .node-preview-form-select .node-preview-backlink:hover, .field--name-field-tags.field__items .field__item a:hover,
 .field--name-field-tags .field__items .field__item a:hover,
 .field--name-field-osu-organizations.field__items .field__item a:hover,
-.field--name-field-osu-organizations .field__items .field__item a:hover, .node-preview-container .node-preview-form-select .node-preview-backlink:hover, a.button:hover {
+.field--name-field-osu-organizations .field__items .field__item a:hover, a.button:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover, .field--name-field-tags.field__items .field__item .btn-check + a:hover,
+.btn-check + .btn:hover, .node-preview-container .node-preview-form-select .btn-check + .node-preview-backlink:hover, .field--name-field-tags.field__items .field__item .btn-check + a:hover,
 .field--name-field-tags .field__items .field__item .btn-check + a:hover,
 .field--name-field-osu-organizations.field__items .field__item .btn-check + a:hover,
-.field--name-field-osu-organizations .field__items .field__item .btn-check + a:hover, .node-preview-container .node-preview-form-select .btn-check + .node-preview-backlink:hover, .btn-check + a.button:hover {
+.field--name-field-osu-organizations .field__items .field__item .btn-check + a:hover, .btn-check + a.button:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible, .field--name-field-tags.field__items .field__item a:focus-visible,
+.btn:focus-visible, .node-preview-container .node-preview-form-select .node-preview-backlink:focus-visible, .field--name-field-tags.field__items .field__item a:focus-visible,
 .field--name-field-tags .field__items .field__item a:focus-visible,
 .field--name-field-osu-organizations.field__items .field__item a:focus-visible,
-.field--name-field-osu-organizations .field__items .field__item a:focus-visible, .node-preview-container .node-preview-form-select .node-preview-backlink:focus-visible, a.button:focus-visible {
+.field--name-field-osu-organizations .field__items .field__item a:focus-visible, a.button:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn, .field--name-field-tags.field__items .field__item .btn-check:focus-visible + a,
+.btn-check:focus-visible + .btn, .node-preview-container .node-preview-form-select .btn-check:focus-visible + .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-check:focus-visible + a,
 .field--name-field-tags .field__items .field__item .btn-check:focus-visible + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-check:focus-visible + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-check:focus-visible + a, .node-preview-container .node-preview-form-select .btn-check:focus-visible + .node-preview-backlink, .btn-check:focus-visible + a.button {
+.field--name-field-osu-organizations .field__items .field__item .btn-check:focus-visible + a, .btn-check:focus-visible + a.button {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .field--name-field-tags.field__items .field__item .btn-check:checked + a,
+.btn-check:checked + .btn, .node-preview-container .node-preview-form-select .btn-check:checked + .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-check:checked + a,
 .field--name-field-tags .field__items .field__item .btn-check:checked + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-check:checked + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-check:checked + a, .node-preview-container .node-preview-form-select .btn-check:checked + .node-preview-backlink, .btn-check:checked + a.button, :not(.btn-check) + .btn:active, .field--name-field-tags.field__items .field__item :not(.btn-check) + a:active,
+.field--name-field-osu-organizations .field__items .field__item .btn-check:checked + a, .btn-check:checked + a.button, :not(.btn-check) + .btn:active, .node-preview-container .node-preview-form-select :not(.btn-check) + .node-preview-backlink:active, .field--name-field-tags.field__items .field__item :not(.btn-check) + a:active,
 .field--name-field-tags .field__items .field__item :not(.btn-check) + a:active,
 .field--name-field-osu-organizations.field__items .field__item :not(.btn-check) + a:active,
-.field--name-field-osu-organizations .field__items .field__item :not(.btn-check) + a:active, .node-preview-container .node-preview-form-select :not(.btn-check) + .node-preview-backlink:active, :not(.btn-check) + a.button:active, .btn:first-child:active, .field--name-field-tags.field__items .field__item a:first-child:active,
+.field--name-field-osu-organizations .field__items .field__item :not(.btn-check) + a:active, :not(.btn-check) + a.button:active, .btn:first-child:active, .node-preview-container .node-preview-form-select .node-preview-backlink:first-child:active, .field--name-field-tags.field__items .field__item a:first-child:active,
 .field--name-field-tags .field__items .field__item a:first-child:active,
 .field--name-field-osu-organizations.field__items .field__item a:first-child:active,
-.field--name-field-osu-organizations .field__items .field__item a:first-child:active, .node-preview-container .node-preview-form-select .node-preview-backlink:first-child:active, a.button:first-child:active, .btn.active, .field--name-field-tags.field__items .field__item a.active,
+.field--name-field-osu-organizations .field__items .field__item a:first-child:active, a.button:first-child:active, .btn.active, .node-preview-container .node-preview-form-select .active.node-preview-backlink, .field--name-field-tags.field__items .field__item a.active,
 .field--name-field-tags .field__items .field__item a.active,
 .field--name-field-osu-organizations.field__items .field__item a.active,
-.field--name-field-osu-organizations .field__items .field__item a.active, .node-preview-container .node-preview-form-select .active.node-preview-backlink, a.active.button, .btn.show, .field--name-field-tags.field__items .field__item a.show,
+.field--name-field-osu-organizations .field__items .field__item a.active, a.active.button, .btn.show, .node-preview-container .node-preview-form-select .show.node-preview-backlink, .field--name-field-tags.field__items .field__item a.show,
 .field--name-field-tags .field__items .field__item a.show,
 .field--name-field-osu-organizations.field__items .field__item a.show,
-.field--name-field-osu-organizations .field__items .field__item a.show, .node-preview-container .node-preview-form-select .show.node-preview-backlink, a.show.button {
+.field--name-field-osu-organizations .field__items .field__item a.show, a.show.button {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .field--name-field-tags.field__items .field__item .btn-check:checked + a:focus-visible,
+.btn-check:checked + .btn:focus-visible, .node-preview-container .node-preview-form-select .btn-check:checked + .node-preview-backlink:focus-visible, .field--name-field-tags.field__items .field__item .btn-check:checked + a:focus-visible,
 .field--name-field-tags .field__items .field__item .btn-check:checked + a:focus-visible,
 .field--name-field-osu-organizations.field__items .field__item .btn-check:checked + a:focus-visible,
-.field--name-field-osu-organizations .field__items .field__item .btn-check:checked + a:focus-visible, .node-preview-container .node-preview-form-select .btn-check:checked + .node-preview-backlink:focus-visible, .btn-check:checked + a.button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .field--name-field-tags.field__items .field__item :not(.btn-check) + a:active:focus-visible,
+.field--name-field-osu-organizations .field__items .field__item .btn-check:checked + a:focus-visible, .btn-check:checked + a.button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .node-preview-container .node-preview-form-select :not(.btn-check) + .node-preview-backlink:active:focus-visible, .field--name-field-tags.field__items .field__item :not(.btn-check) + a:active:focus-visible,
 .field--name-field-tags .field__items .field__item :not(.btn-check) + a:active:focus-visible,
 .field--name-field-osu-organizations.field__items .field__item :not(.btn-check) + a:active:focus-visible,
-.field--name-field-osu-organizations .field__items .field__item :not(.btn-check) + a:active:focus-visible, .node-preview-container .node-preview-form-select :not(.btn-check) + .node-preview-backlink:active:focus-visible, :not(.btn-check) + a.button:active:focus-visible, .btn:first-child:active:focus-visible, .field--name-field-tags.field__items .field__item a:first-child:active:focus-visible,
+.field--name-field-osu-organizations .field__items .field__item :not(.btn-check) + a:active:focus-visible, :not(.btn-check) + a.button:active:focus-visible, .btn:first-child:active:focus-visible, .node-preview-container .node-preview-form-select .node-preview-backlink:first-child:active:focus-visible, .field--name-field-tags.field__items .field__item a:first-child:active:focus-visible,
 .field--name-field-tags .field__items .field__item a:first-child:active:focus-visible,
 .field--name-field-osu-organizations.field__items .field__item a:first-child:active:focus-visible,
-.field--name-field-osu-organizations .field__items .field__item a:first-child:active:focus-visible, .node-preview-container .node-preview-form-select .node-preview-backlink:first-child:active:focus-visible, a.button:first-child:active:focus-visible, .btn.active:focus-visible, .field--name-field-tags.field__items .field__item a.active:focus-visible,
+.field--name-field-osu-organizations .field__items .field__item a:first-child:active:focus-visible, a.button:first-child:active:focus-visible, .btn.active:focus-visible, .node-preview-container .node-preview-form-select .active.node-preview-backlink:focus-visible, .field--name-field-tags.field__items .field__item a.active:focus-visible,
 .field--name-field-tags .field__items .field__item a.active:focus-visible,
 .field--name-field-osu-organizations.field__items .field__item a.active:focus-visible,
-.field--name-field-osu-organizations .field__items .field__item a.active:focus-visible, .node-preview-container .node-preview-form-select .active.node-preview-backlink:focus-visible, a.active.button:focus-visible, .btn.show:focus-visible, .field--name-field-tags.field__items .field__item a.show:focus-visible,
+.field--name-field-osu-organizations .field__items .field__item a.active:focus-visible, a.active.button:focus-visible, .btn.show:focus-visible, .node-preview-container .node-preview-form-select .show.node-preview-backlink:focus-visible, .field--name-field-tags.field__items .field__item a.show:focus-visible,
 .field--name-field-tags .field__items .field__item a.show:focus-visible,
 .field--name-field-osu-organizations.field__items .field__item a.show:focus-visible,
-.field--name-field-osu-organizations .field__items .field__item a.show:focus-visible, .node-preview-container .node-preview-form-select .show.node-preview-backlink:focus-visible, a.show.button:focus-visible {
+.field--name-field-osu-organizations .field__items .field__item a.show:focus-visible, a.show.button:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, .field--name-field-tags.field__items .field__item a:disabled,
+.btn:disabled, .node-preview-container .node-preview-form-select .node-preview-backlink:disabled, .field--name-field-tags.field__items .field__item a:disabled,
 .field--name-field-tags .field__items .field__item a:disabled,
 .field--name-field-osu-organizations.field__items .field__item a:disabled,
-.field--name-field-osu-organizations .field__items .field__item a:disabled, .node-preview-container .node-preview-form-select .node-preview-backlink:disabled, a.button:disabled, .btn.disabled, .field--name-field-tags.field__items .field__item a.disabled,
+.field--name-field-osu-organizations .field__items .field__item a:disabled, a.button:disabled, .btn.disabled, .node-preview-container .node-preview-form-select .disabled.node-preview-backlink, .field--name-field-tags.field__items .field__item a.disabled,
 .field--name-field-tags .field__items .field__item a.disabled,
 .field--name-field-osu-organizations.field__items .field__item a.disabled,
-.field--name-field-osu-organizations .field__items .field__item a.disabled, .node-preview-container .node-preview-form-select .disabled.node-preview-backlink, a.disabled.button, fieldset:disabled .btn, fieldset:disabled .field--name-field-tags.field__items .field__item a, .field--name-field-tags.field__items .field__item fieldset:disabled a,
+.field--name-field-osu-organizations .field__items .field__item a.disabled, a.disabled.button, fieldset:disabled .btn, fieldset:disabled .node-preview-container .node-preview-form-select .node-preview-backlink, .node-preview-container .node-preview-form-select fieldset:disabled .node-preview-backlink, fieldset:disabled .field--name-field-tags.field__items .field__item a, .field--name-field-tags.field__items .field__item fieldset:disabled a,
 fieldset:disabled .field--name-field-tags .field__items .field__item a,
 .field--name-field-tags .field__items .field__item fieldset:disabled a,
 fieldset:disabled .field--name-field-osu-organizations.field__items .field__item a,
 .field--name-field-osu-organizations.field__items .field__item fieldset:disabled a,
 fieldset:disabled .field--name-field-osu-organizations .field__items .field__item a,
-.field--name-field-osu-organizations .field__items .field__item fieldset:disabled a, fieldset:disabled .node-preview-container .node-preview-form-select .node-preview-backlink, .node-preview-container .node-preview-form-select fieldset:disabled .node-preview-backlink, fieldset:disabled a.button {
+.field--name-field-osu-organizations .field__items .field__item fieldset:disabled a, fieldset:disabled a.button {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -3284,28 +3284,28 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .btn-group-lg > .btn, .field--name-field-tags.field__items .field__item .btn-group-lg > a,
+.btn-lg, .btn-group-lg > .btn, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group-lg > a,
 .field--name-field-tags .field__items .field__item .btn-group-lg > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-lg > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .btn-group-lg > a.button {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a, .btn-group-lg > a.button {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1.5rem;
   --bs-btn-font-size: calc(1.265625rem + 0.1875vw);
   --bs-btn-border-radius: 1.5rem;
 }
 @media (min-width: 1200px) {
-  .btn-lg, .btn-group-lg > .btn, .field--name-field-tags.field__items .field__item .btn-group-lg > a,
+  .btn-lg, .btn-group-lg > .btn, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group-lg > a,
   .field--name-field-tags .field__items .field__item .btn-group-lg > a,
   .field--name-field-osu-organizations.field__items .field__item .btn-group-lg > a,
-  .field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .btn-group-lg > a.button {
+  .field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a, .btn-group-lg > a.button {
     --bs-btn-font-size: 1.40625rem;
   }
 }
 
-.btn-sm, .btn-group-sm > .btn, .field--name-field-tags.field__items .field__item .btn-group-sm > a,
+.btn-sm, .btn-group-sm > .btn, .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group-sm > a,
 .field--name-field-tags .field__items .field__item .btn-group-sm > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-sm > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-sm > a, .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink, .btn-group-sm > a.button {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-sm > a, .btn-group-sm > a.button {
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 1.5rem;
   --bs-btn-font-size: 0.984375rem;
@@ -3671,100 +3671,100 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .field--name-field-tags.field__items .field__item .btn-group > a,
+.btn-group > .btn, .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group > a,
 .field--name-field-tags .field__items .field__item .btn-group > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group > a, .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink, .btn-group > a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group > a, .btn-group > a.button,
 .btn-group-vertical > .btn,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink,
 .btn-group-vertical > a.button {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .field--name-field-tags.field__items .field__item .btn-group > .btn-check:checked + a,
+.btn-group > .btn-check:checked + .btn, .node-preview-container .node-preview-form-select .btn-group > .btn-check:checked + .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group > .btn-check:checked + a,
 .field--name-field-tags .field__items .field__item .btn-group > .btn-check:checked + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > .btn-check:checked + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-check:checked + a, .node-preview-container .node-preview-form-select .btn-group > .btn-check:checked + .node-preview-backlink, .btn-group > .btn-check:checked + a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-check:checked + a, .btn-group > .btn-check:checked + a.button,
 .btn-group > .btn-check:focus + .btn,
+.node-preview-container .node-preview-form-select .btn-group > .btn-check:focus + .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group > .btn-check:focus + a,
 .field--name-field-tags .field__items .field__item .btn-group > .btn-check:focus + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > .btn-check:focus + a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-check:focus + a,
-.node-preview-container .node-preview-form-select .btn-group > .btn-check:focus + .node-preview-backlink,
 .btn-group > .btn-check:focus + a.button,
 .btn-group > .btn:hover,
+.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:hover,
 .field--name-field-tags.field__items .field__item .btn-group > a:hover,
 .field--name-field-tags .field__items .field__item .btn-group > a:hover,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:hover,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a:hover,
-.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:hover,
 .btn-group > a.button:hover,
 .btn-group > .btn:focus,
+.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:focus,
 .field--name-field-tags.field__items .field__item .btn-group > a:focus,
 .field--name-field-tags .field__items .field__item .btn-group > a:focus,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:focus,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a:focus,
-.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:focus,
 .btn-group > a.button:focus,
 .btn-group > .btn:active,
+.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:active,
 .field--name-field-tags.field__items .field__item .btn-group > a:active,
 .field--name-field-tags .field__items .field__item .btn-group > a:active,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:active,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a:active,
-.node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:active,
 .btn-group > a.button:active,
 .btn-group > .btn.active,
+.node-preview-container .node-preview-form-select .btn-group > .active.node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group > a.active,
 .field--name-field-tags .field__items .field__item .btn-group > a.active,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a.active,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a.active,
-.node-preview-container .node-preview-form-select .btn-group > .active.node-preview-backlink,
 .btn-group > a.active.button,
 .btn-group-vertical > .btn-check:checked + .btn,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-check:checked + .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn-check:checked + a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn-check:checked + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn-check:checked + a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn-check:checked + a,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-check:checked + .node-preview-backlink,
 .btn-group-vertical > .btn-check:checked + a.button,
 .btn-group-vertical > .btn-check:focus + .btn,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-check:focus + .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn-check:focus + a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn-check:focus + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn-check:focus + a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn-check:focus + a,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-check:focus + .node-preview-backlink,
 .btn-group-vertical > .btn-check:focus + a.button,
 .btn-group-vertical > .btn:hover,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:hover,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a:hover,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:hover,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:hover,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:hover,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:hover,
 .btn-group-vertical > a.button:hover,
 .btn-group-vertical > .btn:focus,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:focus,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a:focus,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:focus,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:focus,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:focus,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:focus,
 .btn-group-vertical > a.button:focus,
 .btn-group-vertical > .btn:active,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:active,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a:active,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:active,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:active,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:active,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:active,
 .btn-group-vertical > a.button:active,
 .btn-group-vertical > .btn.active,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .active.node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > a.active,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a.active,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a.active,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a.active,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .active.node-preview-backlink,
 .btn-group-vertical > a.active.button {
   z-index: 1;
 }
@@ -3781,51 +3781,51 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
 .btn-group {
   border-radius: 1.5rem;
 }
-.btn-group > :not(.btn-check:first-child) + .btn, .field--name-field-tags.field__items .field__item .btn-group > :not(.btn-check:first-child) + a,
+.btn-group > :not(.btn-check:first-child) + .btn, .node-preview-container .node-preview-form-select .btn-group > :not(.btn-check:first-child) + .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group > :not(.btn-check:first-child) + a,
 .field--name-field-tags .field__items .field__item .btn-group > :not(.btn-check:first-child) + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > :not(.btn-check:first-child) + a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group > :not(.btn-check:first-child) + a, .node-preview-container .node-preview-form-select .btn-group > :not(.btn-check:first-child) + .node-preview-backlink, .btn-group > :not(.btn-check:first-child) + a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group > :not(.btn-check:first-child) + a, .btn-group > :not(.btn-check:first-child) + a.button,
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .field--name-field-tags.field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .field--name-field-tags.field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle),
 .field--name-field-tags .field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle),
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle),
-.field--name-field-osu-organizations .field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle), .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .btn-group > a.button:not(:last-child):not(.dropdown-toggle),
+.field--name-field-osu-organizations .field__items .field__item .btn-group > a:not(:last-child):not(.dropdown-toggle), .btn-group > a.button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
+.node-preview-container .node-preview-form-select .btn-group > .dropdown-toggle-split.node-preview-backlink:first-child,
 .field--name-field-tags.field__items .field__item .btn-group > a.dropdown-toggle-split:first-child,
 .field--name-field-tags .field__items .field__item .btn-group > a.dropdown-toggle-split:first-child,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a.dropdown-toggle-split:first-child,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > a.dropdown-toggle-split:first-child,
-.node-preview-container .node-preview-form-select .btn-group > .dropdown-toggle-split.node-preview-backlink:first-child,
 .btn-group > a.dropdown-toggle-split.button:first-child,
 .btn-group > .btn-group:not(:last-child) > .btn,
+.node-preview-container .node-preview-form-select .btn-group > .btn-group:not(:last-child) > .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group > .btn-group:not(:last-child) > a,
 .field--name-field-tags .field__items .field__item .btn-group > .btn-group:not(:last-child) > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > .btn-group:not(:last-child) > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-group:not(:last-child) > a,
-.node-preview-container .node-preview-form-select .btn-group > .btn-group:not(:last-child) > .node-preview-backlink,
 .btn-group > .btn-group:not(:last-child) > a.button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .field--name-field-tags.field__items .field__item .btn-group > a:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:nth-child(n+3), .field--name-field-tags.field__items .field__item .btn-group > a:nth-child(n+3),
 .field--name-field-tags .field__items .field__item .btn-group > a:nth-child(n+3),
 .field--name-field-osu-organizations.field__items .field__item .btn-group > a:nth-child(n+3),
-.field--name-field-osu-organizations .field__items .field__item .btn-group > a:nth-child(n+3), .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:nth-child(n+3), .btn-group > a.button:nth-child(n+3),
+.field--name-field-osu-organizations .field__items .field__item .btn-group > a:nth-child(n+3), .btn-group > a.button:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
+.node-preview-container .node-preview-form-select .btn-group > :not(.btn-check) + .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group > :not(.btn-check) + a,
 .field--name-field-tags .field__items .field__item .btn-group > :not(.btn-check) + a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > :not(.btn-check) + a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > :not(.btn-check) + a,
-.node-preview-container .node-preview-form-select .btn-group > :not(.btn-check) + .node-preview-backlink,
 .btn-group > :not(.btn-check) + a.button,
 .btn-group > .btn-group:not(:first-child) > .btn,
+.node-preview-container .node-preview-form-select .btn-group > .btn-group:not(:first-child) > .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group > .btn-group:not(:first-child) > a,
 .field--name-field-tags .field__items .field__item .btn-group > .btn-group:not(:first-child) > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group > .btn-group:not(:first-child) > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group > .btn-group:not(:first-child) > a,
-.node-preview-container .node-preview-form-select .btn-group > .btn-group:not(:first-child) > .node-preview-backlink,
 .btn-group > .btn-group:not(:first-child) > a.button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3842,18 +3842,18 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .field--name-field-tags.field__items .field__item .btn-group-sm > a + .dropdown-toggle-split,
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink + .dropdown-toggle-split, .field--name-field-tags.field__items .field__item .btn-group-sm > a + .dropdown-toggle-split,
 .field--name-field-tags .field__items .field__item .btn-group-sm > a + .dropdown-toggle-split,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-sm > a + .dropdown-toggle-split,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-sm > a + .dropdown-toggle-split, .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink + .dropdown-toggle-split, .btn-group-sm > a.button + .dropdown-toggle-split {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-sm > a + .dropdown-toggle-split, .btn-group-sm > a.button + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .field--name-field-tags.field__items .field__item .btn-group-lg > a + .dropdown-toggle-split,
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink + .dropdown-toggle-split, .field--name-field-tags.field__items .field__item .btn-group-lg > a + .dropdown-toggle-split,
 .field--name-field-tags .field__items .field__item .btn-group-lg > a + .dropdown-toggle-split,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-lg > a + .dropdown-toggle-split,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a + .dropdown-toggle-split, .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink + .dropdown-toggle-split, .btn-group-lg > a.button + .dropdown-toggle-split {
+.field--name-field-osu-organizations .field__items .field__item .btn-group-lg > a + .dropdown-toggle-split, .btn-group-lg > a.button + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
@@ -3863,62 +3863,62 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .field--name-field-tags.field__items .field__item .btn-group-vertical > a,
+.btn-group-vertical > .btn, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group-vertical > a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink, .btn-group-vertical > a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a, .btn-group-vertical > a.button,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .field--name-field-tags.field__items .field__item .btn-group-vertical > a:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:first-child), .field--name-field-tags.field__items .field__item .btn-group-vertical > a:not(:first-child),
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:not(:first-child),
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:not(:first-child),
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:not(:first-child), .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:first-child), .btn-group-vertical > a.button:not(:first-child),
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:not(:first-child), .btn-group-vertical > a.button:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .field--name-field-tags.field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .field--name-field-tags.field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle),
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-group:not(:last-child) > .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn-group:not(:last-child) > a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn-group:not(:last-child) > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn-group:not(:last-child) > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn-group:not(:last-child) > a,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-group:not(:last-child) > .node-preview-backlink,
 .btn-group-vertical > .btn-group:not(:last-child) > a.button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .field--name-field-tags.field__items .field__item .btn-group-vertical > a ~ .btn,
+.btn-group-vertical > .btn ~ .btn, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ .btn, .node-preview-container .node-preview-form-select .btn-group-vertical > .btn ~ .node-preview-backlink, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group-vertical > a ~ .btn, .field--name-field-tags.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink, .node-preview-container .node-preview-form-select .field--name-field-tags.field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a ~ .btn,
+.field--name-field-tags .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
+.node-preview-container .node-preview-form-select .field--name-field-tags .field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a ~ .btn,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ .btn, .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn ~ a, .field--name-field-tags.field__items .field__item .btn-group-vertical > a ~ a,
+.field--name-field-osu-organizations.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
+.node-preview-container .node-preview-form-select .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ .btn,
+.field--name-field-osu-organizations .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
+.node-preview-container .node-preview-form-select .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink, .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn ~ a, .field--name-field-tags.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a, .node-preview-container .node-preview-form-select .field--name-field-tags.field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a, .field--name-field-tags.field__items .field__item .btn-group-vertical > a ~ a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn ~ a,
+.field--name-field-tags .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
+.node-preview-container .node-preview-form-select .field--name-field-tags .field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > a ~ a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn ~ a,
+.field--name-field-osu-organizations.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
+.node-preview-container .node-preview-form-select .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a ~ a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn ~ a,
-.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ a, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ .btn, .node-preview-container .node-preview-form-select .field--name-field-tags.field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a, .field--name-field-tags.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
-.node-preview-container .node-preview-form-select .field--name-field-tags .field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a,
-.field--name-field-tags .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
-.node-preview-container .node-preview-form-select .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a,
-.field--name-field-osu-organizations.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
+.field--name-field-osu-organizations .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a,
 .node-preview-container .node-preview-form-select .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .node-preview-backlink ~ a,
-.field--name-field-osu-organizations .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a, .node-preview-container .node-preview-form-select .btn-group-vertical > .btn ~ .node-preview-backlink, .node-preview-container .node-preview-form-select .field--name-field-tags.field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink, .field--name-field-tags.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
-.node-preview-container .node-preview-form-select .field--name-field-tags .field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
-.field--name-field-tags .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
-.node-preview-container .node-preview-form-select .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
-.field--name-field-osu-organizations.field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink,
-.node-preview-container .node-preview-form-select .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ .node-preview-backlink,
-.field--name-field-osu-organizations .field__items .field__item .node-preview-container .node-preview-form-select .btn-group-vertical > a ~ .node-preview-backlink, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ .node-preview-backlink, .btn-group-vertical > a.button ~ .btn, .node-preview-container .node-preview-form-select .btn-group-vertical > a.button ~ .node-preview-backlink, .btn-group-vertical > .btn ~ a.button, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a.button, .btn-group-vertical > a.button ~ a.button,
+.field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > a ~ a, .btn-group-vertical > a.button ~ .btn, .node-preview-container .node-preview-form-select .btn-group-vertical > a.button ~ .node-preview-backlink, .btn-group-vertical > .btn ~ a.button, .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink ~ a.button, .btn-group-vertical > a.button ~ a.button,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-group:not(:first-child) > .node-preview-backlink,
 .field--name-field-tags.field__items .field__item .btn-group-vertical > .btn-group:not(:first-child) > a,
 .field--name-field-tags .field__items .field__item .btn-group-vertical > .btn-group:not(:first-child) > a,
 .field--name-field-osu-organizations.field__items .field__item .btn-group-vertical > .btn-group:not(:first-child) > a,
 .field--name-field-osu-organizations .field__items .field__item .btn-group-vertical > .btn-group:not(:first-child) > a,
-.node-preview-container .node-preview-form-select .btn-group-vertical > .btn-group:not(:first-child) > .node-preview-backlink,
 .btn-group-vertical > .btn-group:not(:first-child) > a.button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -4972,10 +4972,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   display: none;
 }
 
-.btn .badge, .field--name-field-tags.field__items .field__item a .badge,
+.btn .badge, .node-preview-container .node-preview-form-select .node-preview-backlink .badge, .field--name-field-tags.field__items .field__item a .badge,
 .field--name-field-tags .field__items .field__item a .badge,
 .field--name-field-osu-organizations.field__items .field__item a .badge,
-.field--name-field-osu-organizations .field__items .field__item a .badge, .node-preview-container .node-preview-form-select .node-preview-backlink .badge, a.button .badge {
+.field--name-field-osu-organizations .field__items .field__item a .badge, a.button .badge {
   position: relative;
   top: -1px;
 }
@@ -6916,10 +6916,10 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   background-color: currentcolor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .field--name-field-tags.field__items .field__item a.placeholder::before,
+.placeholder.btn::before, .node-preview-container .node-preview-form-select .placeholder.node-preview-backlink::before, .field--name-field-tags.field__items .field__item a.placeholder::before,
 .field--name-field-tags .field__items .field__item a.placeholder::before,
 .field--name-field-osu-organizations.field__items .field__item a.placeholder::before,
-.field--name-field-osu-organizations .field__items .field__item a.placeholder::before, .node-preview-container .node-preview-form-select .placeholder.node-preview-backlink::before, a.placeholder.button::before {
+.field--name-field-osu-organizations .field__items .field__item a.placeholder::before, a.placeholder.button::before {
   display: inline-block;
   content: "";
 }
@@ -11952,187 +11952,27 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     display: none !important;
   }
 }
-/** Custom Mixins **/
-/** Bootstrap Buttons
-    Only the first two colors are required to make a new button variant.
-    The order of the buttons is:
-    background,
-    border color,
-    color,
-    hover background,
-    hover border color,
-    hover color
-    active background,
-    active border color,
-    active color
-    disabled background,
-    disabled border color,
-    disabled color
- */
-.osu-btn-primary, .ui-dialog .button, .node-preview-container .node-preview-form-select .node-preview-backlink, a.button {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #d73f09;
-  --bs-btn-border-color: #d73f09;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #212529;
-  --bs-btn-hover-border-color: #212529;
-  --bs-btn-focus-shadow-rgb: 221, 92, 46;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #d73f09;
-  --bs-btn-active-border-color: #d73f09;
-  --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #d73f09;
-  --bs-btn-disabled-border-color: #d73f09;
-}
-
-.osu-btn-light {
-  --bs-btn-color: #423e3c;
-  --bs-btn-bg: #f7f5f5;
-  --bs-btn-border-color: #212529;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #d73f09;
-  --bs-btn-hover-border-color: #d73f09;
-  --bs-btn-focus-shadow-rgb: 38, 41, 44;
-  --bs-btn-active-color: #423e3c;
-  --bs-btn-active-bg: #fff;
-  --bs-btn-active-border-color: #d73f09;
-  --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #f7f5f5;
-  --bs-btn-disabled-border-color: #212529;
-}
-
-.osu-btn-dark {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #212529;
-  --bs-btn-border-color: #212529;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #d73f09;
-  --bs-btn-hover-border-color: #d73f09;
-  --bs-btn-focus-shadow-rgb: 66, 70, 73;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #212529;
-  --bs-btn-active-border-color: #d73f09;
-  --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #212529;
-  --bs-btn-disabled-border-color: #212529;
-}
-
-.osu-btn-white {
-  --bs-btn-color: #423e3c;
-  --bs-btn-bg: #fff;
-  --bs-btn-border-color: #212529;
-  --bs-btn-hover-color: #423e3c;
-  --bs-btn-hover-bg: #fff;
-  --bs-btn-hover-border-color: #d73f09;
-  --bs-btn-focus-shadow-rgb: 38, 41, 44;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #d73f09;
-  --bs-btn-active-border-color: #d73f09;
-  --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #fff;
-  --bs-btn-disabled-border-color: #212529;
-}
-
-.osu-btn-pine {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #4a773c;
-  --bs-btn-border-color: #4a773c;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #3f6533;
-  --bs-btn-hover-border-color: #3b5f30;
-  --bs-btn-focus-shadow-rgb: 101, 139, 89;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #3b5f30;
-  --bs-btn-active-border-color: #38592d;
-  --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #4a773c;
-  --bs-btn-disabled-border-color: #4a773c;
-}
-
-.osu-btn-luminance {
-  --bs-btn-color: #423e3c;
-  --bs-btn-bg: #ffb500;
-  --bs-btn-border-color: #ffb500;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ffc026;
-  --bs-btn-hover-border-color: #ffbc1a;
-  --bs-btn-focus-shadow-rgb: 227, 163, 9;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ffc433;
-  --bs-btn-active-border-color: #ffbc1a;
-  --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #ffb500;
-  --bs-btn-disabled-border-color: #ffb500;
-}
-
-/* Button has to have black text for WCAG AA */
-.osu-btn-rogue-wave {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #00859b;
-  --bs-btn-border-color: #00859b;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #2697aa;
-  --bs-btn-hover-border-color: #1a91a5;
-  --bs-btn-focus-shadow-rgb: 0, 113, 132;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #339daf;
-  --bs-btn-active-border-color: #1a91a5;
-  --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #00859b;
-  --bs-btn-disabled-border-color: #00859b;
-}
-
-.osu-btn-stratosphere {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #006a8e;
-  --bs-btn-border-color: #006a8e;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #005a79;
-  --bs-btn-hover-border-color: #005572;
-  --bs-btn-focus-shadow-rgb: 38, 128, 159;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #005572;
-  --bs-btn-active-border-color: #00506b;
-  --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #006a8e;
-  --bs-btn-disabled-border-color: #006a8e;
-}
-
-.osu-alert-success {
-  --bs-alert-color: #fff;
-  --bs-alert-bg: #4a773c;
-  --bs-alert-border-color: #4a773c;
-}
-.osu-alert-success .alert-link {
-  color: #cccccc;
-}
-
-.osu-alert-warning {
-  --bs-alert-color: #423e3c;
-  --bs-alert-bg: #ffb500;
-  --bs-alert-border-color: #ffb500;
-}
-.osu-alert-warning .alert-link {
-  color: #353230;
-}
-
-.osu-alert-danger {
-  --bs-alert-color: #fff;
-  --bs-alert-bg: #c72127;
-  --bs-alert-border-color: #c72127;
-}
-.osu-alert-danger .alert-link {
-  color: #cccccc;
-}
-
+/** Custom Mixins **/ /* All OSU colors */
+/* Setting other variable names for common colors */
+/* Map array for text color classes */
+/* Map for Background Colors */
+/* Map for border colors */
+/* Map for all colors */
+/* Map for minimum heights */
+/* Map for border sides */
+/* Link Defaults */
+/* Navigation Links */
+/* Navigation Tabs */
+/* Navigation Pills */
+/* Input Updates */
+/* Pagination settings */
+/* Form updates */
+/* Form Select updates */
+/* Button Changes */
+/* Typography */
+/* Tables */
+/* Breadcrumbs */
+/* Accordions */
 /* Create osu-min-h-xx classes for min-height*/
 .osu-min-h-100 {
   min-height: 100px;
@@ -12373,13 +12213,74 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   z-index: 1;
 }
 
+/* All OSU colors */
+/* Setting other variable names for common colors */
+/* Map array for text color classes */
+/* Map for Background Colors */
+/* Map for border colors */
+/* Map for all colors */
+/* Map for minimum heights */
+/* Map for border sides */
+/* Link Defaults */
+/* Navigation Links */
+/* Navigation Tabs */
+/* Navigation Pills */
+/* Input Updates */
+/* Pagination settings */
+/* Form updates */
+/* Form Select updates */
+/* Button Changes */
+/* Typography */
+/* Tables */
+/* Breadcrumbs */
+/* Accordions */
+/** Theme Defaults **/
+a {
+  text-decoration-color: #d73f09;
+  text-decoration-thickness: 10%;
+  text-underline-offset: 2px;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+a:active:not(#osu-logo-wide, #osu-logo-crest) {
+  background-color: #212529;
+  color: #fff;
+}
+a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, a.nav-link:focus, .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus {
+  background: rgba(0, 0, 0, 0.7);
+}
+hr {
+  margin-block: 3rem;
+}
+
 /** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
 }
 
-/** Theme Defaults **/
+/* All OSU colors */
+/* Setting other variable names for common colors */
+/* Map array for text color classes */
+/* Map for Background Colors */
+/* Map for border colors */
+/* Map for all colors */
+/* Map for minimum heights */
+/* Map for border sides */
+/* Link Defaults */
+/* Navigation Links */
+/* Navigation Tabs */
+/* Navigation Pills */
+/* Input Updates */
+/* Pagination settings */
+/* Form updates */
+/* Form Select updates */
+/* Button Changes */
+/* Typography */
+/* Tables */
+/* Breadcrumbs */
+/* Accordions */
 h1, .h1 {
   color: #d73f09;
   font-family: "Stratum2Web", serif;
@@ -12468,27 +12369,17 @@ h6, .h6 {
   font-weight: 900;
 }
 
-a {
-  text-decoration-color: #d73f09;
-  text-decoration-thickness: 10%;
-  text-underline-offset: 2px;
-}
-a:hover, a:focus {
-  text-decoration: none;
-}
-a:active:not(#osu-logo-wide, #osu-logo-crest) {
-  background-color: #212529;
-  color: #fff;
-}
-a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, a.nav-link:focus, .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus {
-  background: rgba(0, 0, 0, 0.7);
-}
-p:last-child {
-  margin-bottom: 0;
+blockquote {
+  border: 5px solid #e9e5e4;
+  font-family: Georgia, "DejaVu Serif", serif;
+  font-size: 1.25rem;
+  margin-block: 1.5rem;
+  padding: 2.5em 3.75em;
 }
 
-hr {
-  margin-block: 3rem;
+code {
+  background-color: #fff;
+  padding: 0.5em 0.25em;
 }
 
 main .block-page-title-block > .block__content > h1, main .block-page-title-block > .block__content > .h1 {
@@ -12504,7 +12395,7 @@ main .block-page-title-block > .block__content > h1, main .block-page-title-bloc
   color: #423e3c;
   content: "\f054 ";
   display: inline-block;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   letter-spacing: normal;
 }
@@ -12521,17 +12412,8 @@ em.placeholder {
   vertical-align: unset;
 }
 
-blockquote {
-  border: 5px solid #e9e5e4;
-  font-family: Georgia, "DejaVu Serif", serif;
-  font-size: 1.25rem;
-  margin-block: 1.5rem;
-  padding: 2.5em 3.75em;
-}
-
-code {
-  background-color: #fff;
-  padding: 0.5em 0.25em;
+p:last-child {
+  margin-bottom: 0;
 }
 
 /** Only force link color if the parent block has a dark bg set.*/
@@ -12542,10 +12424,6 @@ code {
 .osu-text-bucktoothwhite > * a:not(.layout-builder__link--add, .btn, a.button):active {
   background-color: #fff;
   color: #212529;
-}
-
-.node--unpublished {
-  background-color: #ffdedf;
 }
 
 .block-system-branding-block a {
@@ -12579,6 +12457,18 @@ code {
   right: 0;
 }
 
+footer .region-footer a {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+footer .region-footer a:hover, footer .region-footer a:focus {
+  text-decoration: none;
+}
+footer .region-footer a:active {
+  background-color: #fff;
+  color: #212529;
+}
+
 .breadcrumb {
   margin-top: 10px;
 }
@@ -12596,18 +12486,6 @@ code {
 
 .madrone-breadcrumb .block-system-breadcrumb-block {
   --bs-gutter-x: 2rem;
-}
-
-footer .region-footer a {
-  color: #fff;
-  text-decoration-color: #fff;
-}
-footer .region-footer a:hover, footer .region-footer a:focus {
-  text-decoration: none;
-}
-footer .region-footer a:active {
-  background-color: #fff;
-  color: #212529;
 }
 
 .madrone-primary-menu > .block-superfish .sf-accordion-toggle {
@@ -12847,33 +12725,6 @@ footer .region-footer a:active {
   color: white;
 }
 
-.form-item .form-label.form-required::after {
-  content: "*";
-  color: #c72127;
-  position: relative;
-  left: 0.5em;
-}
-.form-item > .required:focus {
-  border-color: #c72127;
-}
-
-select option:checked {
-  background-color: #e9e5e4;
-}
-
-/*
- * Remove the background image that google_cse adds.
- */
-form.search-form input,
-form.header-search-block-form input {
-  background-image: none !important;
-}
-
-.layout-builder-form .layout-builder__message .messages,
-.layout-builder-form .layout-builder__message--overrides .messages {
-  background-image: none !important;
-}
-
 .block-group-content-menu .menu--level-0,
 .block-group-content-menu .menu--level-1 {
   background-color: #e9e5e4;
@@ -13008,43 +12859,211 @@ form.header-search-block-form input {
   color: #212529 !important;
 }
 
-.block-group-operations {
-  margin-bottom: 1rem;
+.form-item .form-label.form-required::after {
+  content: "*";
+  color: #c72127;
+  position: relative;
+  left: 0.5em;
 }
-.block-group-operations .dropbutton-multiple .dropbutton-widget {
-  background-color: transparent;
-  color: #423e3c;
-}
-.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
-    flex-direction: row;
-  }
-}
-.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-toggle {
-  display: none;
-}
-.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action a {
-  color: #423e3c;
-}
-.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .secondary-action {
-  display: block;
+.form-item > .required:focus {
+  border-color: #c72127;
 }
 
-nav.pager ul.pager__items {
-  gap: 0.5em;
-  margin-top: 1rem;
+select option:checked {
+  background-color: #e9e5e4;
 }
-nav.pager ul.pager__items li.pager__item span.page-link:first-child,
-nav.pager ul.pager__items li.pager__item span.page-link:last-child {
-  border-radius: 5px;
+
+/*
+ * Remove the background image that google_cse adds.
+ */
+form.search-form input,
+form.header-search-block-form input {
+  background-image: none !important;
 }
-nav.pager ul.pager__items li.pager__item a {
-  border-radius: 5px;
+
+.layout-builder-form .layout-builder__message .messages,
+.layout-builder-form .layout-builder__message--overrides .messages {
+  background-image: none !important;
+}
+
+/** Bootstrap Buttons
+    Only the first two colors are required to make a new button variant.
+    The order of the buttons is:
+    background,
+    border color,
+    color,
+    hover background,
+    hover border color,
+    hover color
+    active background,
+    active border color,
+    active color
+    disabled background,
+    disabled border color,
+    disabled color
+ */
+.osu-btn-primary, .node-preview-container .node-preview-form-select .node-preview-backlink, .ui-dialog .button, a.button {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d73f09;
+  --bs-btn-border-color: #d73f09;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #212529;
+  --bs-btn-hover-border-color: #212529;
+  --bs-btn-focus-shadow-rgb: 221, 92, 46;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #d73f09;
+  --bs-btn-active-border-color: #d73f09;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #d73f09;
+  --bs-btn-disabled-border-color: #d73f09;
+}
+
+.osu-btn-light {
+  --bs-btn-color: #423e3c;
+  --bs-btn-bg: #f7f5f5;
+  --bs-btn-border-color: #212529;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d73f09;
+  --bs-btn-hover-border-color: #d73f09;
+  --bs-btn-focus-shadow-rgb: 38, 41, 44;
+  --bs-btn-active-color: #423e3c;
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: #d73f09;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #f7f5f5;
+  --bs-btn-disabled-border-color: #212529;
+}
+
+.osu-btn-dark {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #212529;
+  --bs-btn-border-color: #212529;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d73f09;
+  --bs-btn-hover-border-color: #d73f09;
+  --bs-btn-focus-shadow-rgb: 66, 70, 73;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #212529;
+  --bs-btn-active-border-color: #d73f09;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #212529;
+  --bs-btn-disabled-border-color: #212529;
+}
+
+.osu-btn-white {
+  --bs-btn-color: #423e3c;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #212529;
+  --bs-btn-hover-color: #423e3c;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #d73f09;
+  --bs-btn-focus-shadow-rgb: 38, 41, 44;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #d73f09;
+  --bs-btn-active-border-color: #d73f09;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #fff;
+  --bs-btn-disabled-border-color: #212529;
+}
+
+.osu-btn-pine {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #4a773c;
+  --bs-btn-border-color: #4a773c;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3f6533;
+  --bs-btn-hover-border-color: #3b5f30;
+  --bs-btn-focus-shadow-rgb: 101, 139, 89;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #3b5f30;
+  --bs-btn-active-border-color: #38592d;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #4a773c;
+  --bs-btn-disabled-border-color: #4a773c;
+}
+
+.osu-btn-luminance {
+  --bs-btn-color: #423e3c;
+  --bs-btn-bg: #ffb500;
+  --bs-btn-border-color: #ffb500;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #ffc026;
+  --bs-btn-hover-border-color: #ffbc1a;
+  --bs-btn-focus-shadow-rgb: 227, 163, 9;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #ffc433;
+  --bs-btn-active-border-color: #ffbc1a;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #ffb500;
+  --bs-btn-disabled-border-color: #ffb500;
+}
+
+/* Button has to have black text for WCAG AA */
+.osu-btn-rogue-wave {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #00859b;
+  --bs-btn-border-color: #00859b;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #2697aa;
+  --bs-btn-hover-border-color: #1a91a5;
+  --bs-btn-focus-shadow-rgb: 0, 113, 132;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #339daf;
+  --bs-btn-active-border-color: #1a91a5;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #00859b;
+  --bs-btn-disabled-border-color: #00859b;
+}
+
+.osu-btn-stratosphere {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #006a8e;
+  --bs-btn-border-color: #006a8e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #005a79;
+  --bs-btn-hover-border-color: #005572;
+  --bs-btn-focus-shadow-rgb: 38, 128, 159;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #005572;
+  --bs-btn-active-border-color: #00506b;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #006a8e;
+  --bs-btn-disabled-border-color: #006a8e;
+}
+
+.osu-alert-success {
+  --bs-alert-color: #fff;
+  --bs-alert-bg: #4a773c;
+  --bs-alert-border-color: #4a773c;
+}
+.osu-alert-success .alert-link {
+  color: #cccccc;
+}
+
+.osu-alert-warning {
+  --bs-alert-color: #423e3c;
+  --bs-alert-bg: #ffb500;
+  --bs-alert-border-color: #ffb500;
+}
+.osu-alert-warning .alert-link {
+  color: #353230;
+}
+
+.osu-alert-danger {
+  --bs-alert-color: #fff;
+  --bs-alert-bg: #c72127;
+  --bs-alert-border-color: #c72127;
+}
+.osu-alert-danger .alert-link {
+  color: #cccccc;
 }
 
 /* Disable focus box shadows on custom buttons. */
@@ -13053,8 +13072,8 @@ nav.pager ul.pager__items li.pager__item a {
 .osu-btn-dark:focus,
 .osu-btn-dark:active:focus,
 .osu-btn-primary:focus,
-.ui-dialog .button:focus,
 .node-preview-container .node-preview-form-select .node-preview-backlink:focus,
+.ui-dialog .button:focus,
 a.button:focus,
 .osu-btn-primary:active:focus {
   box-shadow: none;
@@ -13094,6 +13113,107 @@ a.button:focus,
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:active {
   background-color: #212529;
   color: #fff;
+}
+
+.block-group-operations {
+  margin-bottom: 1rem;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget {
+  background-color: transparent;
+  color: #423e3c;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
+    flex-direction: row;
+  }
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-toggle {
+  display: none;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action a {
+  color: #423e3c;
+}
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .secondary-action {
+  display: block;
+}
+
+.block--type-osu-card.block--view-mode-full-image .block-field-blockblock-contentosu-cardfield-osu-card-image img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: 100%;
+}
+
+.block-inline-blockosu-menu-bar-item {
+  position: relative;
+}
+.osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
+  background-color: #fff;
+  color: #212529 !important;
+}
+.osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
+  color: #212529;
+}
+.osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
+  background-color: #fff;
+  color: #d73f09 !important;
+}
+.osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
+  color: #d73f09;
+}
+.block-inline-blockosu-menu-bar-item > .block__content > div {
+  transition: 400ms background-color ease, 400ms color ease;
+}
+.block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
+  background-color: #212529;
+  color: #fff;
+}
+.block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
+  color: #fff;
+}
+.block-inline-blockosu-menu-bar-item .field--name-field-osu-menu-bar-item-link a {
+  text-decoration: none !important;
+}
+.block-inline-blockosu-menu-bar-item .field--name-field-osu-menu-bar-item-link a::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.field--name-field-tags.field--label-inline,
+.field--name-field-osu-organizations.field--label-inline {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.field--name-field-tags.field__items,
+.field--name-field-tags .field__items,
+.field--name-field-osu-organizations.field__items,
+.field--name-field-osu-organizations .field__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.node--type-osu-profile .field--name-field-osu-organizations.field__items {
+  display: block;
+}
+
+nav.pager ul.pager__items {
+  gap: 0.5em;
+  margin-top: 1rem;
+}
+nav.pager ul.pager__items li.pager__item span.page-link:first-child,
+nav.pager ul.pager__items li.pager__item span.page-link:last-child {
+  border-radius: 5px;
+}
+nav.pager ul.pager__items li.pager__item a {
+  border-radius: 5px;
 }
 
 /*
@@ -13152,12 +13272,128 @@ figure > figcaption.figure-caption::before {
   padding: 1.5rem;
 }
 
+/* Landing Stories View Block */
+.block-views-blockosu-stories-landing-page-stories-block h2, .block-views-blockosu-stories-landing-page-stories-block .h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.landing-stories .story-card > div {
+  border-radius: 10px;
+}
+.landing-stories .story-card > div .story-card__link::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+.landing-stories .story-card > div img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+@media screen and (min-width: 992px) {
+  .landing-stories {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .landing-stories .views-row--1 {
+    grid-column: 1/3;
+  }
+  .landing-stories .views-row--1 img {
+    height: 300px;
+    object-fit: cover;
+  }
+  .landing-stories .more-link {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .landing-stories {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    max-width: 1600px;
+  }
+  .landing-stories .views-row--1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .landing-stories .views-row--1 img {
+    height: 660px;
+    object-fit: cover;
+  }
+  .landing-stories .more-link {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+}
+
+/* Styles for the Related Stories View Block */
+.block-views-blockosu-stories-related-stories-block h2, .block-views-blockosu-stories-related-stories-block .h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.related-stories .story-card > div {
+  border-radius: 10px;
+}
+.related-stories .story-card > div .story-card__link::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+.related-stories .story-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+}
+.related-stories .more-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Story Author specific styling */
+.story-author .field__items,
+.block-field-blocknodestoryfield-osu-story-author .field__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  justify-content: center;
+}
+.story-author .field__items .field__item,
+.block-field-blocknodestoryfield-osu-story-author .field__items .field__item {
+  font-style: italic;
+}
+
 .messages.messages--error.osu-alert-danger a {
   color: #fff;
   text-decoration-color: #fff;
 }
 .messages.messages--status.osu-alert-success a {
   color: #fff;
+}
+
+/**
+ * @file
+ * Styles for Drupal Modal Windows.
+ */
+.ui-widget-overlay {
+  background: #000;
+  opacity: 0.7;
+}
+
+.ui-dialog {
+  border-radius: 0;
+  z-index: 999;
+}
+
+.ui-dialog input,
+.ui-dialog select,
+.ui-dialog textarea {
+  font-size: 1.125rem;
 }
 
 .node-preview-container {
@@ -13202,6 +13438,60 @@ figure > figcaption.figure-caption::before {
 .osu-table-orange > thead a {
   color: #fff;
   text-decoration-color: #fff;
+}
+
+/* only changes to ckeditor with the included styles. */
+body.cke_editable_themed {
+  padding: 1rem;
+}
+
+.cke_reset_all .cke_dialog_body * {
+  font: 0.8125rem/1.538em BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.toc-js.sticky.is-sticked {
+  position: initial;
+}
+@media screen and (min-width: 992px) {
+  .toc-js.sticky.is-sticked {
+    position: fixed;
+  }
+}
+.toc-js ul {
+  padding-left: 0;
+}
+.toc-js ul li {
+  padding-block: 0.4rem;
+  padding-inline: 1rem;
+}
+.toc-js ul li::marker {
+  content: "" !important;
+}
+.toc-js ul li.toc-active {
+  background-color: #d73f09;
+}
+.toc-js ul li.toc-active a {
+  color: #fff;
+}
+
+.toc-h2 {
+  margin-left: 0.65rem;
+}
+
+.toc-h3 {
+  margin-left: 1rem;
+}
+
+.toc-h4 {
+  margin-left: 1.25rem;
+}
+
+.toc-h5 {
+  margin-left: 1.6rem;
+}
+
+.toc-h6 {
+  margin-left: 1.9rem;
 }
 
 /* Layout Builder updates */
@@ -13358,98 +13648,30 @@ figure > figcaption.figure-caption::before {
   background-color: #fff !important;
 }
 
-/* only changes to ckeditor with the included styles. */
-body.cke_editable_themed {
-  padding: 1rem;
-}
-
-.cke_reset_all .cke_dialog_body * {
-  font: 0.8125rem/1.538em BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-
-.field--name-field-tags.field--label-inline,
-.field--name-field-osu-organizations.field--label-inline {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.field--name-field-tags.field__items,
-.field--name-field-tags .field__items,
-.field--name-field-osu-organizations.field__items,
-.field--name-field-osu-organizations .field__items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-.node--type-osu-profile .field--name-field-osu-organizations.field__items {
-  display: block;
-}
-
-/**
- * @file
- * Styles for Drupal Modal Windows.
- */
-.ui-widget-overlay {
-  background: #000;
-  opacity: 0.7;
-}
-
-.ui-dialog {
-  border-radius: 0;
-  z-index: 999;
-}
-
-.ui-dialog input,
-.ui-dialog select,
-.ui-dialog textarea {
-  font-size: 1.125rem;
-}
-
-.toc-js.sticky.is-sticked {
-  position: initial;
-}
-@media screen and (min-width: 992px) {
-  .toc-js.sticky.is-sticked {
-    position: fixed;
-  }
-}
-.toc-js ul {
-  padding-left: 0;
-}
-.toc-js ul li {
-  padding-block: 0.4rem;
-  padding-inline: 1rem;
-}
-.toc-js ul li::marker {
-  content: "" !important;
-}
-.toc-js ul li.toc-active {
-  background-color: #d73f09;
-}
-.toc-js ul li.toc-active a {
-  color: #fff;
-}
-
-.toc-h2 {
-  margin-left: 0.65rem;
-}
-
-.toc-h3 {
-  margin-left: 1rem;
-}
-
-.toc-h4 {
-  margin-left: 1.25rem;
-}
-
-.toc-h5 {
-  margin-left: 1.6rem;
-}
-
-.toc-h6 {
-  margin-left: 1.9rem;
+/* All OSU colors */
+/* Setting other variable names for common colors */
+/* Map array for text color classes */
+/* Map for Background Colors */
+/* Map for border colors */
+/* Map for all colors */
+/* Map for minimum heights */
+/* Map for border sides */
+/* Link Defaults */
+/* Navigation Links */
+/* Navigation Tabs */
+/* Navigation Pills */
+/* Input Updates */
+/* Pagination settings */
+/* Form updates */
+/* Form Select updates */
+/* Button Changes */
+/* Typography */
+/* Tables */
+/* Breadcrumbs */
+/* Accordions */
+.node--unpublished,
+.group--unpublished {
+  background-color: #ffdedf;
 }
 
 .all-stories .story-card > div {
@@ -13464,140 +13686,5 @@ body.cke_editable_themed {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
-}
-
-.block-views-blockosu-stories-landing-page-stories-block h2, .block-views-blockosu-stories-landing-page-stories-block .h2 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.landing-stories .story-card > div {
-  border-radius: 10px;
-}
-.landing-stories .story-card > div .story-card__link::before {
-  content: "";
-  inset: 0;
-  position: absolute;
-}
-.landing-stories .story-card > div img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-@media screen and (min-width: 992px) {
-  .landing-stories {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-  .landing-stories .views-row--1 {
-    grid-column: 1/3;
-  }
-  .landing-stories .views-row--1 img {
-    height: 300px;
-    object-fit: cover;
-  }
-  .landing-stories .more-link {
-    grid-column: 1/-1;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .landing-stories {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    max-width: 1600px;
-  }
-  .landing-stories .views-row--1 {
-    grid-column: 1/3;
-    grid-row: 1/3;
-  }
-  .landing-stories .views-row--1 img {
-    height: 660px;
-    object-fit: cover;
-  }
-  .landing-stories .more-link {
-    grid-column: 1/-1;
-    text-align: center;
-  }
-}
-
-.block-views-blockosu-stories-related-stories-block h2, .block-views-blockosu-stories-related-stories-block .h2 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.related-stories .story-card > div {
-  border-radius: 10px;
-}
-.related-stories .story-card > div .story-card__link::before {
-  content: "";
-  inset: 0;
-  position: absolute;
-}
-.related-stories .story-card img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 100%;
-}
-.related-stories .more-link {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.story-author .field__items,
-.block-field-blocknodestoryfield-osu-story-author .field__items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1rem;
-  justify-content: center;
-}
-.story-author .field__items .field__item,
-.block-field-blocknodestoryfield-osu-story-author .field__items .field__item {
-  font-style: italic;
-}
-
-.block--type-osu-card.block--view-mode-full-image .block-field-blockblock-contentosu-cardfield-osu-card-image img {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  width: 100%;
-}
-
-.block-inline-blockosu-menu-bar-item {
-  position: relative;
-}
-.osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
-  background-color: #fff;
-  color: #212529 !important;
-}
-.osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
-  color: #212529;
-}
-.osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
-  background-color: #fff;
-  color: #d73f09 !important;
-}
-.osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
-  color: #d73f09;
-}
-.block-inline-blockosu-menu-bar-item > .block__content > div {
-  transition: 400ms background-color ease, 400ms color ease;
-}
-.block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
-  background-color: #212529;
-  color: #fff;
-}
-.block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
-  color: #fff;
-}
-.block-inline-blockosu-menu-bar-item .field--name-field-osu-menu-bar-item-link a {
-  text-decoration: none !important;
-}
-.block-inline-blockosu-menu-bar-item .field--name-field-osu-menu-bar-item-link a::before {
-  content: "";
-  inset: 0;
-  position: absolute;
 }
 /*# sourceMappingURL=madrone.css.map */

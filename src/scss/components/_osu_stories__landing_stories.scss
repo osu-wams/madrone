@@ -1,24 +1,4 @@
-.all-stories {
-  .story-card {
-    & > div {
-      border-radius: 10px;
-
-      .story-card__link::before {
-        content: '';
-        inset: 0;
-        position: absolute;
-      }
-    }
-
-    img {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      width: 100%;
-
-    }
-  }
-}
-
+/* Landing Stories View Block */
 .block-views-blockosu-stories-landing-page-stories-block h2 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -77,53 +57,6 @@
     .more-link {
       grid-column: 1/-1;
       text-align: center;
-    }
-  }
-}
-
-.block-views-blockosu-stories-related-stories-block {
-  h2 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-}
-
-.related-stories {
-  .story-card {
-    & > div {
-      border-radius: 10px;
-
-      .story-card__link::before {
-        content: '';
-        inset: 0;
-        position: absolute;
-      }
-    }
-
-    img {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      width: 100%;
-    }
-  }
-
-  .more-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-}
-
-.story-author,
-.block-field-blocknodestoryfield-osu-story-author {
-  .field__items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .25rem 1rem;
-    justify-content: center;
-
-    .field__item {
-      font-style: italic;
     }
   }
 }
