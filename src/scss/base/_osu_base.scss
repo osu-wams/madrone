@@ -1,5 +1,5 @@
 @import "../abstracts/osu_variables";
-/** Theme Defaults **/
+// Theme Defaults
 a {
   text-decoration-color: rgba($osuorange, 1);
   text-decoration-thickness: 10%;
@@ -33,7 +33,7 @@ hr {
   margin-block: 3rem;
 }
 
-/** Bootstrap v4 shim class for layout builder. */
+// Bootstrap v4 shim class for layout builder.
 .no-gutters {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;

@@ -1,0 +1,27 @@
+@import "../abstracts/osu_variables";
+
+.simple-popup-blocks-global {
+  // The minimized button.
+  .spb_minimized {
+  }
+
+  .spb-popup-main-wrapper {
+    background-color: $bucktoothwhite;
+    border: .125rem solid $paddletailblack;
+    padding: .75rem;
+
+    &.spb_center {
+      margin-left: max(calc(92vw / -2), var(--spb-margin-left)) !important;
+      max-width: min(92vw, var(--spb-width));
+    }
+
+    > .block-block-content {
+      display: none;
+    }
+
+    // The close, minimize button.
+    .spb-controls {
+
+    }
+  }
+}

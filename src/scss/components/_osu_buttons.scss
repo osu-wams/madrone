@@ -1,19 +1,19 @@
-/** Bootstrap Buttons
-    Only the first two colors are required to make a new button variant.
-    The order of the buttons is:
-    background,
-    border color,
-    color,
-    hover background,
-    hover border color,
-    hover color
-    active background,
-    active border color,
-    active color
-    disabled background,
-    disabled border color,
-    disabled color
- */
+// Bootstrap Buttons
+// Only the first two colors are required to make a new button variant.
+// The order of the buttons is:
+// background,
+// border color,
+// color,
+// hover background,
+// hover border color,
+// hover color
+// active background,
+// active border color,
+// active color
+// disabled background,
+// disabled border color,
+// disabled color
+// see https://getbootstrap.com/docs/5.3/components/buttons/#sass-mixins
 .osu-btn-primary {
   @include button-variant(
       $osuorange,
@@ -86,7 +86,7 @@
   );
 }
 
-/* Button has to have black text for WCAG AA */
+// Button has to have black text for WCAG AA.
 .osu-btn-rogue-wave {
   @include button-variant(
       $rogue_wave-400,
@@ -114,7 +114,7 @@
   @include alert-variant($lava-400, $lava-400, $bucktoothwhite);
 }
 
-/* Disable focus box shadows on custom buttons. */
+// Disable focus box shadows on custom buttons.
 .osu-btn-light:focus,
 .osu-btn-light:active:focus,
 .osu-btn-dark:focus,

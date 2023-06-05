@@ -1,25 +1,4 @@
 @charset "UTF-8";
-/* All OSU colors */
-/* Setting other variable names for common colors */
-/* Map array for text color classes */
-/* Map for Background Colors */
-/* Map for border colors */
-/* Map for all colors */
-/* Map for minimum heights */
-/* Map for border sides */
-/* Link Defaults */
-/* Navigation Links */
-/* Navigation Tabs */
-/* Navigation Pills */
-/* Input Updates */
-/* Pagination settings */
-/* Form updates */
-/* Form Select updates */
-/* Button Changes */
-/* Typography */
-/* Tables */
-/* Breadcrumbs */
-/* Accordions */
 @font-face {
   font-family: "Stratum2Web";
   src: url("../fonts/Stratum2WebThin.woff") format("woff"), url("../fonts/Stratum2WebThin.woff2") format("woff2");
@@ -11952,28 +11931,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
     display: none !important;
   }
 }
-/** Custom Mixins **/ /* All OSU colors */
-/* Setting other variable names for common colors */
-/* Map array for text color classes */
-/* Map for Background Colors */
-/* Map for border colors */
-/* Map for all colors */
-/* Map for minimum heights */
-/* Map for border sides */
-/* Link Defaults */
-/* Navigation Links */
-/* Navigation Tabs */
-/* Navigation Pills */
-/* Input Updates */
-/* Pagination settings */
-/* Form updates */
-/* Form Select updates */
-/* Button Changes */
-/* Typography */
-/* Tables */
-/* Breadcrumbs */
-/* Accordions */
-/* Create osu-min-h-xx classes for min-height*/
 .osu-min-h-100 {
   min-height: 100px;
 }
@@ -12006,7 +11963,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   min-height: 800px;
 }
 
-/* For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use*/
 .osu-border-light-grey {
   border-color: #e0e0e0 !important;
 }
@@ -12131,10 +12087,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   background-color: rgba(255, 255, 255, 0.95);
 }
 
-/* Display flex*/
-/* Wrapper classes for flex alignment */
-/* Enhancements for Navigation Blocks */
-/* Shh, tis a secret */
 .osu-hover-pop {
   transition: all 250ms ease;
 }
@@ -12213,28 +12165,6 @@ fieldset:disabled .field--name-field-osu-organizations .field__items .field__ite
   z-index: 1;
 }
 
-/* All OSU colors */
-/* Setting other variable names for common colors */
-/* Map array for text color classes */
-/* Map for Background Colors */
-/* Map for border colors */
-/* Map for all colors */
-/* Map for minimum heights */
-/* Map for border sides */
-/* Link Defaults */
-/* Navigation Links */
-/* Navigation Tabs */
-/* Navigation Pills */
-/* Input Updates */
-/* Pagination settings */
-/* Form updates */
-/* Form Select updates */
-/* Button Changes */
-/* Typography */
-/* Tables */
-/* Breadcrumbs */
-/* Accordions */
-/** Theme Defaults **/
 a {
   text-decoration-color: #d73f09;
   text-decoration-thickness: 10%;
@@ -12254,33 +12184,11 @@ hr {
   margin-block: 3rem;
 }
 
-/** Bootstrap v4 shim class for layout builder. */
 .no-gutters {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
 }
 
-/* All OSU colors */
-/* Setting other variable names for common colors */
-/* Map array for text color classes */
-/* Map for Background Colors */
-/* Map for border colors */
-/* Map for all colors */
-/* Map for minimum heights */
-/* Map for border sides */
-/* Link Defaults */
-/* Navigation Links */
-/* Navigation Tabs */
-/* Navigation Pills */
-/* Input Updates */
-/* Pagination settings */
-/* Form updates */
-/* Form Select updates */
-/* Button Changes */
-/* Typography */
-/* Tables */
-/* Breadcrumbs */
-/* Accordions */
 h1, .h1 {
   color: #d73f09;
   font-family: "Stratum2Web", serif;
@@ -12416,7 +12324,6 @@ p:last-child {
   margin-bottom: 0;
 }
 
-/** Only force link color if the parent block has a dark bg set.*/
 .osu-text-bucktoothwhite > * a:not(.layout-builder__link--add, .btn, a.button) {
   color: #fff;
   text-decoration-color: #fff;
@@ -12886,22 +12793,6 @@ form.header-search-block-form input {
   background-image: none !important;
 }
 
-/** Bootstrap Buttons
-    Only the first two colors are required to make a new button variant.
-    The order of the buttons is:
-    background,
-    border color,
-    color,
-    hover background,
-    hover border color,
-    hover color
-    active background,
-    active border color,
-    active color
-    disabled background,
-    disabled border color,
-    disabled color
- */
 .osu-btn-primary, .node-preview-container .node-preview-form-select .node-preview-backlink, .ui-dialog .button, a.button {
   --bs-btn-color: #fff;
   --bs-btn-bg: #d73f09;
@@ -13004,7 +12895,6 @@ form.header-search-block-form input {
   --bs-btn-disabled-border-color: #ffb500;
 }
 
-/* Button has to have black text for WCAG AA */
 .osu-btn-rogue-wave {
   --bs-btn-color: #000;
   --bs-btn-bg: #00859b;
@@ -13066,7 +12956,6 @@ form.header-search-block-form input {
   color: #cccccc;
 }
 
-/* Disable focus box shadows on custom buttons. */
 .osu-btn-light:focus,
 .osu-btn-light:active:focus,
 .osu-btn-dark:focus,
@@ -13216,9 +13105,6 @@ nav.pager ul.pager__items li.pager__item a {
   border-radius: 5px;
 }
 
-/*
- * Fix for image alignment center.
- */
 .node .align-center.media--type-image .field--type-image {
   float: none;
 }
@@ -13272,7 +13158,6 @@ figure > figcaption.figure-caption::before {
   padding: 1.5rem;
 }
 
-/* Landing Stories View Block */
 .block-views-blockosu-stories-landing-page-stories-block h2, .block-views-blockosu-stories-landing-page-stories-block .h2 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -13330,7 +13215,6 @@ figure > figcaption.figure-caption::before {
   }
 }
 
-/* Styles for the Related Stories View Block */
 .block-views-blockosu-stories-related-stories-block h2, .block-views-blockosu-stories-related-stories-block .h2 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -13355,7 +13239,6 @@ figure > figcaption.figure-caption::before {
   margin-top: 1rem;
 }
 
-/* Story Author specific styling */
 .story-author .field__items,
 .block-field-blocknodestoryfield-osu-story-author .field__items {
   display: flex;
@@ -13376,10 +13259,6 @@ figure > figcaption.figure-caption::before {
   color: #fff;
 }
 
-/**
- * @file
- * Styles for Drupal Modal Windows.
- */
 .ui-widget-overlay {
   background: #000;
   opacity: 0.7;
@@ -13440,7 +13319,6 @@ figure > figcaption.figure-caption::before {
   text-decoration-color: #fff;
 }
 
-/* only changes to ckeditor with the included styles. */
 body.cke_editable_themed {
   padding: 1rem;
 }
@@ -13494,13 +13372,10 @@ body.cke_editable_themed {
   margin-left: 1.9rem;
 }
 
-/* Layout Builder updates */
-/* Remove background for Layout Builder - DRUP8-1012 */
 .layout-builder {
   background-color: transparent;
 }
 
-/* Remove background on block sections in Layout Builder */
 .layout-builder-block {
   background-color: transparent;
 }
@@ -13508,7 +13383,6 @@ body.cke_editable_themed {
   min-height: 13rem;
 }
 
-/* DRUP8-1056 */
 #layout-builder-modal .form-item {
   width: 100%;
 }
@@ -13552,7 +13426,6 @@ body.cke_editable_themed {
   background-color: #383A40;
 }
 
-/* Thicken resizable mouse grabber for Off Canvas Dialog - DRUP8-1036 */
 .ui-dialog .ui-resizable-w {
   background-color: #727579;
   left: 0;
@@ -13563,9 +13436,6 @@ body.cke_editable_themed {
   width: initial !important;
 }
 
-/* The row class has negative margins. Adding margin 0 inline to the layout builder section row stops the
- * content from overflowing.
- */
 .w-100 > .row.layout-builder__layout,
 .container-fluid > .row.layout-builder__layout,
 .container-sm > .row.layout-builder__layout,
@@ -13648,27 +13518,18 @@ body.cke_editable_themed {
   background-color: #fff !important;
 }
 
-/* All OSU colors */
-/* Setting other variable names for common colors */
-/* Map array for text color classes */
-/* Map for Background Colors */
-/* Map for border colors */
-/* Map for all colors */
-/* Map for minimum heights */
-/* Map for border sides */
-/* Link Defaults */
-/* Navigation Links */
-/* Navigation Tabs */
-/* Navigation Pills */
-/* Input Updates */
-/* Pagination settings */
-/* Form updates */
-/* Form Select updates */
-/* Button Changes */
-/* Typography */
-/* Tables */
-/* Breadcrumbs */
-/* Accordions */
+.simple-popup-blocks-global .spb-popup-main-wrapper {
+  background-color: #fff;
+  border: 0.125rem solid #212529;
+  padding: 0.75rem;
+}
+.simple-popup-blocks-global .spb-popup-main-wrapper.spb_center {
+  margin-left: max(-46vw, var(--spb-margin-left)) !important;
+  max-width: min(92vw, var(--spb-width));
+}
+.simple-popup-blocks-global .spb-popup-main-wrapper > .block-block-content {
+  display: none;
+}
 .node--unpublished,
 .group--unpublished {
   background-color: #ffdedf;
