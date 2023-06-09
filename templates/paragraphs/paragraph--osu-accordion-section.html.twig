@@ -53,20 +53,22 @@
   <div{{ attributes.addClass(classes) }}>
     <h3 class="accordion-section-header">{{ paragraph.field_p_accordion_heading.value }}</h3>
     <div class="accordion" id="{{ paragraph_id }}">
-      {% for key, item in content.field_osu_paragraph_item if key|first != '#' %}
-        <div class="accordion-item">
-          <div class="accordion-header" id="heading-{{ paragraph_id }}-{{ key + 1 }}">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#{{ paragraph_id }}-{{ key + 1 }}"
-                    aria-expanded="true"
-                    aria-controls="{{ paragraph_id }}-{{ key + 1 }}">{{ item['#paragraph'].field_p_accordion_title.value }}</button>
+      {% for key, item in content.field_osu_paragraph_item %}
+        {% if key|first != '#' %}
+          <div class="accordion-item">
+            <div class="accordion-header" id="heading-{{ paragraph_id }}-{{ key + 1 }}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#{{ paragraph_id }}-{{ key + 1 }}"
+                      aria-expanded="true"
+                      aria-controls="{{ paragraph_id }}-{{ key + 1 }}">{{ item['#paragraph'].field_p_accordion_title.value }}</button>
+            </div>
+            <div id="{{ paragraph_id }}-{{ key + 1 }}" class="accordion-collapse collapse accordion-body"
+                 aria-labelledby="heading-{{ paragraph_id }}-{{ key + 1 }}"
+                 data-bs-parent="#{{ paragraph_id }}">
+              {{ item['#paragraph'].field_p_accordion_body.processed }}
+            </div>
           </div>
-          <div id="{{ paragraph_id }}-{{ key + 1 }}" class="accordion-collapse collapse accordion-body"
-               aria-labelledby="heading-{{ paragraph_id }}-{{ key + 1 }}"
-               data-bs-parent="#{{ paragraph_id }}">
-            {{ item['#paragraph'].field_p_accordion_body.processed }}
-          </div>
-        </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>

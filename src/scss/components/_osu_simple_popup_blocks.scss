@@ -8,7 +8,7 @@
   .spb-popup-main-wrapper {
     background-color: $bucktoothwhite;
     border: .125rem solid $paddletailblack;
-    padding: .75rem;
+    padding: .75rem 2.5rem .75rem .75rem;
 
     &.spb_center {
       margin-left: max(calc(92vw / -2), var(--spb-margin-left)) !important;
