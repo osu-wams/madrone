@@ -1,4 +1,4 @@
-/* All OSU colors */
+// All OSU colors
 $osuorange: #d73f09;
 $bucktoothwhite: #fff;
 $paddletailblack: #212529;
@@ -53,12 +53,12 @@ $moondust: $stratosphere-200;
 $crater: #8e9089;
 $lightGrey: #e0e0e0;
 
-/* Setting other variable names for common colors */
+// Setting other variable names for common colors
 $page-bg-default: $neutral-100;
 $page-bg-alt-1: $bucktoothwhite;
 $page-bg-alt-2: $paddletailblack;
 
-/* Map array for text color classes */
+// Map array for text color classes
 $osu-colors-text: (
   "body": $neutral-700,
   "osuorange": $osuorange,
@@ -66,7 +66,7 @@ $osu-colors-text: (
   "icon": $neutral-550,
 );
 
-/* Map for Background Colors */
+// Map for Background Colors
 $osu-bg-colors: (
   "page-default": $page-bg-default,
   "page-alt-1": $page-bg-alt-1,
@@ -77,7 +77,7 @@ $osu-bg-colors: (
   "light-grey": $lightGrey,
 );
 
-/* Map for border colors */
+// Map for border colors
 $osu-border-colors: (
   "light-grey": $lightGrey,
   "crater": $crater,
@@ -87,7 +87,7 @@ $osu-border-colors: (
   "white": $bucktoothwhite,
 );
 
-/* Map for all colors */
+// Map for all colors
 $osu-colors-all: (
   "osuorange": $osuorange,
   "paddletailblack": $paddletailblack,
@@ -139,7 +139,7 @@ $osu-colors-all: (
   "stratosphere-700": $stratosphere-700,
 );
 
-/* Map for minimum heights */
+// Map for minimum heights
 $min-heights: (
   '100': 100px,
   '200': 200px,
@@ -151,7 +151,7 @@ $min-heights: (
   '800': 800px,
 );
 
-/* Map for border sides */
+// Map for border sides
 $border-sides: (
   "left",
   "top",
@@ -173,31 +173,31 @@ $dark: $paddletailblack;
 $code-color: $osuorange;
 $line-height-base: 1.8;
 
-/* Link Defaults */
+// Link Defaults
 $link-color: $body-color;
 $link-hover-color: $body-color;
 $link-decoration: underline $osuorange;
 
-/* Navigation Links */
+// Navigation Links
 $nav-link-color: $neutral-700;
 $nav-link-hover-color: $bucktoothwhite;
 $nav-link-padding-y: .5rem;
 $nav-link-padding-x: 1rem;
 $nav-link-font-size: 1rem;
 
-/* Navigation Tabs */
+// Navigation Tabs
 $nav-tabs-link-active-bg: $bucktoothwhite;
 $nav-tabs-link-active-border-color: transparent transparent $osuorange;
 $nav-tabs-link-active-color: $body-color;
 $nav-tabs-border-radius: 0;
 $nav-tabs-border-width: .15em;
 
-/* Navigation Pills */
+// Navigation Pills
 $nav-pills-border-radius: 0;
 $nav-pills-link-active-bg: $bucktoothwhite;
 $nav-pills-link-active-color: $body-color;
 
-/* Input Updates */
+// Input Updates
 $input-bg: $bucktoothwhite;
 $input-border-color: $neutral-200;
 $input-border-radius: 0px;
@@ -210,7 +210,7 @@ $input-padding-x-lg: 1.5rem;
 $input-padding-y: .5rem;
 $input-padding-y-lg: 1rem;
 
-/* Pagination settings */
+// Pagination settings
 $pagination-bg: $bucktoothwhite;
 $pagination-color: $osuorange;
 $pagination-border-color: $osuorange;
@@ -229,16 +229,16 @@ $pagination-disabled-bg: $neutral-200;
 $pagination-disabled-color: $body-color;
 $pagination-disabled-border-color: $neutral-300;
 
-/* Form updates */
+// Form updates
 $form-check-input-checked-bg-color: $osuorange;
 
-/* Form Select updates */
+// Form Select updates
 $form-select-padding-x: .25rem;
 $form-select-padding-y: .5rem;
 $form-select-box-shadow: none;
 $form-select-focus-box-shadow: none;
 
-/* Button Changes */
+// Button Changes
 $btn-box-shadow: none;
 $btn-focus-box-shadow: none;
 $btn-focus-width: 0;
@@ -251,7 +251,7 @@ $btn-border-radius: 1.5rem;
 $btn-border-radius-lg: 1.5rem;
 $btn-border-radius-sm: 1.5rem;
 
-/* Typography */
+// Typography
 $font-family-base: 'Open Sans', sans-serif;
 $font-size-base: 1.125rem;
 $blockquote-font-size: 1.25rem;
@@ -259,17 +259,17 @@ $blockquote-margin-y: 1.5rem;
 $figure-caption-color: $body-color;
 $font-family-serif: 'Georgia', 'Noto serif', serif;
 
-/* Tables */
+// Tables
 $table-bg: $bucktoothwhite;
 $table-striped-bg: $table-alt-row;
 $table-border-color: $neutral-200;
 
-/* Breadcrumbs */
+// Breadcrumbs
 $breadcrumb-divider: quote(">");
 $breadcrumb-divider-color: $neutral-700;
 $breadcrumb-font-size: 1rem;
 
-/* Accordions */
+// Accordions
 $accordion-button-active-bg: $paddletailblack;
 $accordion-button-active-color: $bucktoothwhite;
 $accordion-button-focus-box-shadow: 0 2px 3px rgb(0 0 0 / 25%);

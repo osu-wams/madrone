@@ -128,6 +128,13 @@ window.addEventListener('load', () => {
     });
     tocJsObserver.observe(tocJsBlock, {attributes: true, childList: false, characterData: false});
   }
+  /* Simple Popup Blocks Module.
+   * Set Inline CSS Variables for margin-left.
+   */
+  document.querySelectorAll('.simple-popup-blocks-global .spb-popup-main-wrapper').forEach(osuSpb => {
+    osuSpb.style.setProperty('--spb-width', osuSpb.style.getPropertyValue('width'));
+    osuSpb.style.setProperty('--spb-margin-left', osuSpb.style.getPropertyValue('margin-left'));
+  })
 });
 
 /**

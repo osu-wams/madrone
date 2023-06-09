@@ -1,11 +1,12 @@
-/* Create osu-min-h-xx classes for min-height*/
+@import "osu_variables";
+// Create osu-min-h-xx classes for min-height
 @each $height-name, $height-val in $min-heights {
   .osu-min-h-#{$height-name} {
     min-height: $height-val;
   }
 }
 
-/* For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use*/
+// For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use
 @each $border-color-name, $border-color-value in $osu-border-colors {
   .osu-border-#{$border-color-name} {
     border-color: #{$border-color-value} !important;
@@ -21,12 +22,12 @@
   background-color: rgba(255, 255, 255, 0.95);
 }
 
-/* Display flex*/
+// Display flex
 .osu-d-flex {
   @extend .d-flex;
 }
 
-/* Wrapper classes for flex alignment */
+// Wrapper classes for flex alignment
 .osu-align-items-start {
   @extend .align-items-start;
 }
@@ -75,7 +76,7 @@
   @extend .justify-content-end;
 }
 
-/* Enhancements for Navigation Blocks */
+// Enhancements for Navigation Blocks
 .osu-nav-column ul.nav-pills {
   @extend .flex-column;
 }
@@ -97,7 +98,7 @@
 }
 
 
-/* Shh, tis a secret */
+// Shh, tis a secret
 .osu-hover-pop {
   transition: all 250ms ease;
 

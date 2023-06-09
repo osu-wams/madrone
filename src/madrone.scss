@@ -1,7 +1,7 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 // Import of User Variables.
-@import "scss/osu_variables";
+@import "scss/abstracts/osu_variables";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -369,208 +369,40 @@ $utilities: map-merge-multiple(
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "scss/osu_mixins";
-@import "scss/osu_utilities";
+@import "scss/abstracts/osu_mixins";
+@import "scss/abstracts/osu_utilities";
 
-/** Bootstrap v4 shim class for layout builder. */
-.no-gutters {
-  --bs-gutter-x: 0;
-  --bs-gutter-y: 0;
-}
+@import "scss/base/osu_base";
+@import "scss/base/osu_typography";
 
-/** Theme Defaults **/
-h1 {
-  color: rgba($osuorange, 1);
-  font-family: "Stratum2Web", serif;
-  @include font-size(3rem);
-  font-weight: 500;
-}
+@import "scss/layout/osu_header";
+@import "scss/layout/osu_footer";
+@import "scss/layout/osu_breadcrumbs";
+@import "scss/layout/superfish";
+@import "scss/layout/osu_menus";
+@import "scss/layout/osu_group_menus";
+@import "scss/layout/osu_forms";
 
-h2 {
-  font-family: "Stratum2Web", serif;
-  @include font-size(2.25rem);
-  font-weight: 600;
-}
+@import "scss/components/osu_buttons";
+@import "scss/components/osu_dropbuttons";
+@import "scss/components/osu_group_operations";
+@import "scss/components/osu_cards";
+@import "scss/components/osu_menubar";
+@import "scss/components/osu_tags";
+@import "scss/components/osu_pager";
+@import "scss/components/osu_media";
+@import "scss/components/osu_stories__landing_stories";
+@import "scss/components/osu_stories__related_stories";
+@import "scss/components/osu_stories__author";
+@import "scss/components/osu_messages";
+@import "scss/components/osu_modals";
+@import "scss/components/osu_preview";
+@import "scss/components/osu_tables";
+@import "scss/components/osu_ckeditor";
+@import "scss/components/osu_tocjs";
+@import "scss/components/osu_layout_builder";
+@import "scss/components/osu_layout_builder_menus";
+@import "scss/components/osu_simple_popup_blocks";
 
-h3 {
-  color: rgba($osuorange, 1);
-  font-family: "Open Sans", sans-serif;
-  @include font-size(1.75rem);
-  font-weight: 500;
-}
-
-h4 {
-  font-family: "Open Sans", sans-serif;
-  @include font-size(1.625rem);
-  font-weight: 600;
-}
-
-h5 {
-  color: $osuorange;
-  @include font-size(1.5rem);
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-}
-
-h6 {
-  font-family: "Open Sans", sans-serif;
-  @include font-size(1.25rem);
-  font-weight: 600;
-}
-
-.display-1 {
-  font-family: $font-family-serif;
-}
-
-.display-2 {
-  font-weight: 900;
-}
-
-.display-3 {
-  font-family: $font-family-serif;
-}
-
-.display-4 {
-  font-weight: 900;
-}
-
-.display-5 {
-  font-family: $font-family-serif;
-}
-
-.display-6 {
-  font-weight: 900;
-}
-
-a {
-  text-decoration-color: rgba($osuorange, 1);
-  text-decoration-thickness: 10%;
-  text-underline-offset: 2px;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-
-  &:active:not(#osu-logo-wide, #osu-logo-crest) {
-    background-color: $paddletailblack;
-    color: $bucktoothwhite;
-  }
-
-  &.nav-link:hover,
-  &.nav-link:focus {
-    background: rgb(0 0 0 / 70%);
-  }
-
-  &.button {
-    @extend .btn;
-    @extend .rounded-pill;
-    @extend .px-5;
-    @extend .my-3;
-    @extend .osu-btn-primary;
-  }
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-hr {
-  margin-block: 3rem;
-}
-
-main .block-page-title-block {
-  > .block__content {
-    > h1 {
-      margin-block: 1rem;
-      margin-inline: auto;
-      max-width: 62rem;
-      overflow-wrap: anywhere;
-      text-align: center;
-      word-break: normal;
-    }
-  }
-}
-
-.block-system-main-block {
-  ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li:not([style*="list-style: none"]) {
-    &::marker {
-      color: rgba($body-color, 1);
-      content: "\f054\2000";
-      display: inline-block;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      letter-spacing: normal;
-    }
-  }
-
-  // Force the unordered list marker to be white when using the light color text.
-  .osu-text-bucktoothwhite {
-    ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li {
-      &::marker {
-        color: $bucktoothwhite;
-      }
-    }
-  }
-}
-
-em.placeholder {
-  background-color: unset;
-  cursor: unset;
-  display: unset;
-  min-height: unset;
-  opacity: unset;
-  vertical-align: unset;
-}
-
-blockquote {
-  border: 5px solid $neutral-200;
-  font-family: Georgia, "DejaVu Serif", serif;
-  font-size: 1.25rem;
-  margin-block: 1.5rem;
-  padding: 2.5em 3.75em;
-}
-
-code {
-  background-color: #fff;
-  padding: 0.5em 0.25em;
-}
-
-/** Only force link color if the parent block has a dark bg set.*/
-.osu-text-bucktoothwhite > * {
-  a:not(.layout-builder__link--add, .btn) {
-    color: $bucktoothwhite;
-    text-decoration-color: $bucktoothwhite;
-
-    &:active {
-      background-color: $bucktoothwhite;
-      color: $paddletailblack;
-    }
-  }
-}
-
-@import "scss/osu_base";
-@import "scss/osu_header";
-@import "scss/osu_breadcrumbs";
-@import "scss/osu_footer";
-@import "scss/superfish";
-@import "scss/osu_menus";
-@import "scss/osu_forms";
-@import "scss/osu_group_menus";
-@import "scss/osu_group_operations";
-@import "scss/pager";
-@import "scss/osu_buttons";
-@import "scss/osu_dropbuttons";
-@import "scss/osu_media";
-@import "scss/osu_messages";
-@import "scss/osu_preview";
-@import "scss/osu_tables";
-@import "scss/osu_layout_builder";
-@import "scss/osu_layout_builder_menus";
-@import "scss/osu_ckeditor";
-@import "scss/osu_tags";
-@import "scss/osu_modals";
-@import "scss/osu_tocjs";
-@import "scss/osu_story";
-@import "scss/osu_cards";
-@import "scss/osu_menubar";
+@import "scss/pages/osu_unpublished";
+@import "scss/pages/osu_stories__all_stories";

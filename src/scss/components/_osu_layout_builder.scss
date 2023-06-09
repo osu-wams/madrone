@@ -1,11 +1,11 @@
-/* Layout Builder updates */
+// Layout Builder updates.
 
-/* Remove background for Layout Builder - DRUP8-1012 */
+// Remove background for Layout Builder - DRUP8-1012.
 .layout-builder {
   background-color: transparent;
 }
 
-/* Remove background on block sections in Layout Builder */
+// Remove background on block sections in Layout Builder.
 .layout-builder-block {
   background-color: transparent;
 
@@ -14,7 +14,7 @@
   }
 }
 
-/* DRUP8-1056 */
+// DRUP8-1056
 #layout-builder-modal {
   .form-item {
     width: 100%;
@@ -25,7 +25,8 @@
   }
 }
 
-#drupal-off-canvas {
+#drupal-off-canvas:not(.drupal-off-canvas-reset),
+#drupal-off-canvas-wrapper {
   .messages.messages.messages--error p {
     color: $paddletailblack;
   }
@@ -76,7 +77,7 @@
   }
 }
 
-/* Thicken resizable mouse grabber for Off Canvas Dialog - DRUP8-1036 */
+// Thicken resizable mouse grabber for Off Canvas Dialog - DRUP8-1036.
 .ui-dialog .ui-resizable-w {
   background-color: #727579;
   left: 0;
@@ -91,9 +92,9 @@
   @extend .container;
 }
 
-/* The row class has negative margins. Adding margin 0 inline to the layout builder section row stops the
- * content from overflowing.
- */
+// The row class has negative margins. Adding margin 0 inline to the layout builder section row stops the
+// content from overflowing.
+
 .w-100,
 .container-fluid {
   & > .row.layout-builder__layout {

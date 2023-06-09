@@ -1,0 +1,40 @@
+@import "../abstracts/osu_variables";
+// Theme Defaults
+a {
+  text-decoration-color: rgba($osuorange, 1);
+  text-decoration-thickness: 10%;
+  text-underline-offset: 2px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active:not(#osu-logo-wide, #osu-logo-crest) {
+    background-color: $paddletailblack;
+    color: $bucktoothwhite;
+  }
+
+  &.nav-link:hover,
+  &.nav-link:focus {
+    background: rgb(0 0 0 / 70%);
+  }
+
+  &.button {
+    @extend .btn;
+    @extend .rounded-pill;
+    @extend .px-5;
+    @extend .my-3;
+    @extend .osu-btn-primary;
+  }
+}
+
+hr {
+  margin-block: 3rem;
+}
+
+// Bootstrap v4 shim class for layout builder.
+.no-gutters {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}

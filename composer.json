@@ -12,7 +12,9 @@
     ],
     "scripts": {
         "cs": "phpcs",
+        "phpcs": "phpcs",
         "cbf": "phpcbf",
+        "phpcbf": "phpcbf",
         "twigcs": "twigcs --twig-version=2",
         "post-install-cmd": [
             "vendor/bin/cghooks add"
@@ -34,9 +36,9 @@
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "*",
         "drupal/coder": "^8.3",
-        "friendsoftwig/twigcs": "^5.0",
+        "friendsoftwig/twigcs": "^6.2",
         "squizlabs/php_codesniffer": "^3.5"
     },
     "extra": {
