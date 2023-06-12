@@ -13319,10 +13319,6 @@ figure > figcaption.figure-caption::before {
   text-decoration-color: #fff;
 }
 
-a.tabledrag-handle .handle {
-  box-sizing: content-box;
-}
-
 body.cke_editable_themed {
   padding: 1rem;
 }
@@ -13528,6 +13524,16 @@ body.cke_editable_themed {
 .madrone-content nav.osu-bg-page-alt-2 ul.menu li a:hover {
   color: #212529 !important;
   background-color: #fff !important;
+}
+
+body div.tabledrag-changed-warning {
+  background-color: #ffb500;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+a.tabledrag-handle .handle {
+  box-sizing: content-box;
 }
 
 .simple-popup-blocks-global .spb-popup-main-wrapper {
