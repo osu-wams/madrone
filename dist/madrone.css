@@ -13319,6 +13319,10 @@ figure > figcaption.figure-caption::before {
   text-decoration-color: #fff;
 }
 
+a.tabledrag-handle .handle {
+  box-sizing: content-box;
+}
+
 body.cke_editable_themed {
   padding: 1rem;
 }

@@ -35,3 +35,8 @@
 .madrone-content table:not(.osu-table):not(.osu-table-orange) {
   @extend .osu-table;
 }
+
+// Fix tabletrag handles not rendering properly.
+a.tabledrag-handle .handle {
+  box-sizing: content-box;
+}
