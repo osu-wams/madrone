@@ -5,10 +5,15 @@
   .spb_minimized {
   }
 
+  .spb_overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
   .spb-popup-main-wrapper {
     background-color: $bucktoothwhite;
-    border: .125rem solid $paddletailblack;
-    padding: .75rem 2.5rem .75rem .75rem;
+    border: .025rem solid $osuorange;
+    border-radius: .25rem;
+    padding: 1.3rem 2rem;
 
     &.spb_center {
       margin-left: max(calc(92vw / -2), var(--spb-margin-left)) !important;
@@ -21,7 +26,15 @@
 
     // The close, minimize button.
     .spb-controls {
+      right: 5px;
+      top: 5px;
 
+      > .spb_close,
+      > .spb_minimize {
+        border-color: $osuorange;
+        border-radius: .25rem;
+        color: $osuorange;
+      }
     }
   }
 }
