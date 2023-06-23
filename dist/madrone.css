@@ -12178,7 +12178,7 @@ a:active:not(#osu-logo-wide, #osu-logo-crest) {
   color: #fff;
 }
 a.nav-link:hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:hover, a.nav-link:focus, .madrone-primary-menu > .block-superfish ul.sf-menu li a:focus {
-  background: rgba(0, 0, 0, 0.7);
+  background: #212529;
 }
 hr {
   margin-block: 3rem;
@@ -13019,6 +13019,7 @@ a.button:focus,
 @media screen and (min-width: 768px) {
   .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-toggle {
