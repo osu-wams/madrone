@@ -1,28 +1,32 @@
 .block-group-operations {
   margin-bottom: 1rem;
-  .dropbutton-multiple .dropbutton-widget {
-    background-color: transparent;
-    color: $body-color;
 
-    .dropbutton {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      @media screen and (min-width: 768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
+  .dropbutton-single,
+  .dropbutton-multiple {
+    .dropbutton-widget {
+      background-color: transparent;
+      color: $body-color;
 
-      .dropbutton-toggle {
-        display: none;
-      }
+      .dropbutton {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @media screen and (min-width: 768px) {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
 
-      .dropbutton-action a {
-        color: $body-color;
-      }
+        .dropbutton-toggle {
+          display: none;
+        }
 
-      .secondary-action {
-        display: block;
+        .dropbutton-action a {
+          color: $body-color;
+        }
+
+        .secondary-action {
+          display: block;
+        }
       }
     }
   }
