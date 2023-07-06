@@ -86,6 +86,9 @@
   {% endif %}
   {{ title_suffix }}
 
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
   {% if display_submitted %}
     <footer>
       {{ author_picture }}
@@ -100,9 +103,4 @@
       </div>
     </footer>
   {% endif %}
-
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-  </div>
-
 </article>
