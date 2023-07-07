@@ -11,7 +11,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "postcss": "^8.4.7",
     "sass": "^1.45.0",
-    "stylelint": "^14.5.3",
+    "stylelint": "^15.10.1",
     "stylelint-config-drupal": "^3.0.0",
     "stylelint-config-recommended": "^9.0.0",
     "stylelint-config-standard-scss": "^6.1.0"
