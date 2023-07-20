@@ -1,14 +1,26 @@
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../abstracts/osu_variables";
+
 .messages {
   &.messages--error.osu-alert-danger {
     a {
-      color: $bucktoothwhite;
+      color: var(--#{$prefix}alert-link-color);
+      font-weight: 700;
       text-decoration-color: $bucktoothwhite;
+    }
+  }
+
+  &.messages--warning.osu-alert-warning {
+    a {
+      color: var(--#{$prefix}alert-link-color);
+      font-weight: 700;
     }
   }
 
   &.messages--status.osu-alert-success {
     a {
-      color: $bucktoothwhite;
+      color: var(--#{$prefix}alert-link-color);
+      font-weight: 700;
     }
   }
 }

@@ -14173,6 +14173,17 @@ a.button:focus,
     flex-wrap: wrap;
   }
 }
+.field--label-inline > .field__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .field--label-inline > .field__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 .block-inline-blockosu-menu-bar-item {
   position: relative;
@@ -14389,11 +14400,17 @@ figure > figcaption.figure-caption::before {
 }
 
 .messages.messages--error.osu-alert-danger a {
-  color: #fff;
+  color: var(--bs-alert-link-color);
+  font-weight: 700;
   text-decoration-color: #fff;
 }
+.messages.messages--warning.osu-alert-warning a {
+  color: var(--bs-alert-link-color);
+  font-weight: 700;
+}
 .messages.messages--status.osu-alert-success a {
-  color: #fff;
+  color: var(--bs-alert-link-color);
+  font-weight: 700;
 }
 
 .ui-widget-overlay {
