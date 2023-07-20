@@ -10,10 +10,16 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "postcss": "^8.4.7",
+    "prettier": "^3.0.0",
     "sass": "^1.45.0",
-    "stylelint": "^15.10.1",
-    "stylelint-config-drupal": "^3.0.0",
-    "stylelint-config-recommended": "^9.0.0",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "stylelint": "^15.10.2",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-order": "^6.0.3"
+  },
+  "scripts": {
+    "lint:scss": "stylelint \"./src/**/*.scss\"",
+    "prettier:js": "prettier --write \"./src/**/*.js\"",
+    "prettier:scss": "prettier --write \"./src/**/*.scss\""
   }
 }
