@@ -1,0 +1,21 @@
+.field--label-inline {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  > .field__items {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+
+}

@@ -102,18 +102,6 @@
   );
 }
 
-.osu-alert-success {
-  @include alert-variant($pine-400, $pine-400, $bucktoothwhite);
-}
-
-.osu-alert-warning {
-  @include alert-variant($luminance-400, $luminance-400, $body-color);
-}
-
-.osu-alert-danger {
-  @include alert-variant($lava-400, $lava-400, $bucktoothwhite);
-}
-
 // Disable focus box shadows on custom buttons.
 .osu-btn-light:focus,
 .osu-btn-light:active:focus,

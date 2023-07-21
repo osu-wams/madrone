@@ -58,6 +58,13 @@ $page-bg-default: $neutral-100;
 $page-bg-alt-1: $bucktoothwhite;
 $page-bg-alt-2: $paddletailblack;
 
+// Map array for Alerts
+$osu-alerts: (
+  "success": $pine-400,
+  "warning": $luminance-400,
+  "danger": $lava-400,
+);
+
 // Map array for text color classes
 $osu-colors-text: (
   "body": $neutral-700,
