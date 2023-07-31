@@ -1,3 +1,5 @@
+@import "../abstracts/osu_variables";
+
 .madrone-primary-menu > .block-superfish {
   .sf-accordion-toggle {
     display: flex;
@@ -24,11 +26,13 @@
   ul {
     &.sf-menu {
       line-height: 1.75rem;
-      @extend .nav;
 
       &.sf-horizontal {
         li {
-          a.sf-depth-1 {
+          a,
+          span {
+            --bs-nav-link-padding-x: 1rem;
+            --bs-nav-link-padding-y: 1rem;
             padding: 1rem;
           }
 
@@ -55,7 +59,6 @@
 
       li {
         float: none;
-        @extend .nav-item;
 
         // chevron top level
         &.sf-depth-1.menuparent {
@@ -63,7 +66,8 @@
             background-color: $bucktoothwhite;
           }
 
-          & > a::after {
+          & > a::after,
+          & > span::after {
             color: $neutral-700;
             content: '\2000\f078';
             display: inline-block;
@@ -84,18 +88,21 @@
           &:hover,
           &:active,
           &:focus {
-            > a {
+            > a,
+            > span {
               background-color: $osuorange;
               color: $bucktoothwhite;
               transition: none !important;
             }
 
-            > a.menuparent::after {
+            > a.menuparent::after,
+            > span.menuparent::after {
               color: $bucktoothwhite;
             }
           }
 
-          a.menuparent::after {
+          a.menuparent::after,
+          span.menuparent::after {
             color: $neutral-700;
             content: '\2000\f054';
             display: inline-block;
@@ -107,9 +114,8 @@
           }
         }
 
-        a:not(.sf-depth-1) {
-          @extend .nav-link;
-
+        a:not(.sf-depth-1),
+        span:not(.sf-depth-1) {
           &:hover,
           &:active,
           &:focus {
@@ -117,9 +123,8 @@
           }
         }
 
-        a {
-          @extend .nav-link;
-
+        a,
+        span {
           &:hover,
           &:active,
           &:focus {

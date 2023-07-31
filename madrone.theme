@@ -118,8 +118,8 @@ function madrone_preprocess_block(&$variables) {
       }
       if ($variables['base_plugin_id'] == 'system_branding_block') {
         $themeCrestPath = '/' . Drupal::theme()
-          ->getActiveTheme()
-          ->getPath() . '/assets/osu-logo-crest-only.svg';
+            ->getActiveTheme()
+            ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
         if (array_key_exists('group_path', $variables['content']) &&
           array_key_exists('group_name', $variables['content'])) {
@@ -331,6 +331,33 @@ function madrone_theme_suggestions_image_style_alter(array &$suggestions, array 
  */
 function madrone_theme_suggestions_image_alter(array &$suggestions, array $variables) {
   $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['style_name'];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function madrone_preprocess_superfish(&$variables) {
+  $superfish_menu_classes = explode(' ', $variables['menu_classes']);
+  $superfish_menu_classes[] = "nav";
+  $variables['menu_classes'] = implode(" ", $superfish_menu_classes);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function madrone_preprocess_superfish_menu_items(&$variables) {
+  foreach ($variables['menu_items'] as &$menu_item) {
+    /** @var \Drupal\Core\Template\Attribute $menu_item_attributes */
+    $menu_item_attributes = $menu_item['attributes'];
+    /** @var \Drupal\Core\Template\AttributeValueBase $menu_item_classes */
+    $menu_item_classes = $menu_item_attributes->getClass();
+    // Add the nav-item to all the li's of superfish menu.
+    $menu_item_classes[] = 'nav-item';
+    $menu_item_attributes->setAttribute('class', $menu_item_classes);
+    // Add the nav-link class to all links in superfish.
+    $menu_item['link']['#options']['attributes']['class'][] = 'nav-link';
+    $menu_item['link_menuparent']['#options']['attributes']['class'][] = 'nav-link';
+  }
 }
 
 /**
