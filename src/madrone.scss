@@ -208,7 +208,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "margin"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -219,7 +223,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "margin-x"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -230,7 +238,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "margin-y"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -241,7 +253,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "margin-top"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -252,7 +268,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "margin-end"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -263,7 +283,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "margin-bottom"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -274,7 +298,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "margin-start"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -285,7 +313,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "padding"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -296,7 +328,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "padding-x"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -307,7 +343,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "padding-y"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -318,7 +358,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "padding-top"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -329,7 +373,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "padding-end"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -340,7 +388,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "padding-bottom"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -351,7 +403,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "padding-start"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
@@ -362,7 +418,11 @@ $utilities: map-merge-multiple(
           (
             values: map-merge(
                 map-get(map-get($utilities, "gap"), "values"),
-                (6: 1rem * 5)
+                (
+                  '4_5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 7,
+                )
             )
           )
       )
