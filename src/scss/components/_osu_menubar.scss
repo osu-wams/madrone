@@ -30,7 +30,9 @@
   }
 
   & > .block__content > div {
-    transition: 400ms background-color ease, 400ms color ease;
+    transition:
+      400ms background-color ease,
+      400ms color ease;
 
     &:focus-within,
     &:hover {
@@ -43,7 +45,6 @@
     }
   }
 
-
   .field--name-field-osu-menu-bar-item-link {
     a {
       text-decoration: none !important;
@@ -55,6 +56,4 @@
       }
     }
   }
-
 }
-

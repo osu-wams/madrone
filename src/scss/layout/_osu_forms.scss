@@ -1,9 +1,9 @@
 .form-item {
   .form-label.form-required::after {
-    content: "*";
+    content: '*';
     color: $lava-400;
     position: relative;
-    left: .5em;
+    left: 0.5em;
   }
 
   & > .required:focus {

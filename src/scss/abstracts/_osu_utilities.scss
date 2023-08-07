@@ -1,4 +1,5 @@
-@import "osu_variables";
+@import '../../../node_modules/bootstrap/scss/variables';
+@import 'osu_variables';
 // Create osu-min-h-xx classes for min-height
 @each $height-name, $height-val in $min-heights {
   .osu-min-h-#{$height-name} {
@@ -25,6 +26,18 @@
 // Display flex
 .osu-d-flex {
   @extend .d-flex;
+}
+
+.osu-d-table-caption {
+  display: table-caption;
+}
+
+.osu-caption-top {
+  caption-side: top;
+}
+
+.osu-caption-bottom {
+  caption-side: bottom;
 }
 
 // Wrapper classes for flex alignment
@@ -97,7 +110,6 @@
   @extend .justify-content-end;
 }
 
-
 // Shh, tis a secret
 .osu-hover-pop {
   transition: all 250ms ease;
@@ -169,6 +181,10 @@
 .osu-img-rounded-bottom img {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+}
+
+.osu-img-rounded-pill img {
+  border-radius: $border-radius-pill;
 }
 
 .osu-bg-overlay-dark {

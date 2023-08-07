@@ -1,57 +1,57 @@
-@import "../node_modules/bootstrap/scss/functions";
+@import '../node_modules/bootstrap/scss/functions';
 
 // Import of User Variables.
-@import "scss/abstracts/osu_variables";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/variables-dark";
-@import "../node_modules/bootstrap/scss/maps";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/utilities";
+@import 'scss/abstracts/osu_variables';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/variables-dark';
+@import '../node_modules/bootstrap/scss/maps';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/utilities';
 
 @font-face {
-  font-family: "Stratum2Web";
-  src: url("../fonts/Stratum2WebThin.woff") format("woff"),
-  url("../fonts/Stratum2WebThin.woff2") format("woff2");
+  font-family: 'Stratum2Web';
+  src: url('../fonts/Stratum2WebThin.woff') format('woff'),
+  url('../fonts/Stratum2WebThin.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Stratum2Web";
-  src: url("../fonts/Stratum2WebLight.woff") format("woff"),
-  url("../fonts/Stratum2WebLight.woff2") format("woff2");
+  font-family: 'Stratum2Web';
+  src: url('../fonts/Stratum2WebLight.woff') format('woff'),
+  url('../fonts/Stratum2WebLight.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Stratum2Web";
-  src: url("../fonts/Stratum2WebRegular.woff") format("woff"),
-  url("../fonts/Stratum2WebRegular.woff2") format("woff2");
+  font-family: 'Stratum2Web';
+  src: url('../fonts/Stratum2WebRegular.woff') format('woff'),
+  url('../fonts/Stratum2WebRegular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Stratum2Web";
-  src: url("../fonts/Stratum2WebMedium.woff") format("woff"),
-  url("../fonts/Stratum2WebMedium.woff2") format("woff2");
+  font-family: 'Stratum2Web';
+  src: url('../fonts/Stratum2WebMedium.woff') format('woff'),
+  url('../fonts/Stratum2WebMedium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Stratum2Web";
-  src: url("../fonts/Stratum2WebBold.woff") format("woff"),
-  url("../fonts/Stratum2WebBold.woff2") format("woff2");
+  font-family: 'Stratum2Web';
+  src: url('../fonts/Stratum2WebBold.woff') format('woff'),
+  url('../fonts/Stratum2WebBold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Stratum2Web";
-  src: url("../fonts/Stratum2WebBlack.woff") format("woff"),
-  url("../fonts/Stratum2WebBlack.woff2") format("woff2");
+  font-family: 'Stratum2Web';
+  src: url('../fonts/Stratum2WebBlack.woff') format('woff'),
+  url('../fonts/Stratum2WebBlack.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
 }
@@ -59,429 +59,477 @@
 $utilities: map-merge-multiple(
     $utilities,
     (
-      "color":
+      'color':
       map-merge(
-          map-get($utilities, "color"),
+          map-get($utilities, 'color'),
           (
             values:
             map-merge(
-                map-get(map-get($utilities, "color"), "values"),
+                map-get(map-get($utilities, 'color'), 'values'),
                 $osu-colors-text
-            )
+            ),
           )
       ),
-      "osu-text-colors": (
+      'osu-text-colors': (
         property: color,
         class: osu-text,
-        values: $osu-colors-text
-      )
+        values: $osu-colors-text,
+      ),
     ),
     (
-      "background-color": (
+      'background-color': (
         property: background-color,
         class: bg,
         values:
         map-merge-multiple(
             $osu-colors-all,
             (
-              "transparent": transparent
+              'transparent': transparent,
             )
-        )
+        ),
       ),
-      "osu-background-color": (
+      'osu-background-color': (
         property: background-color,
         class: osu-bg,
         values:
         map-merge-multiple(
             $osu-bg-colors,
             (
-              "menu": $neutral-200
+              'menu': $neutral-200,
             ),
             (
-              "transparent": transparent
+              'transparent': transparent,
             )
-        )
-      )
+        ),
+      ),
     ),
     (
-      "osu-shadows": (
+      'osu-shadows': (
         property: box-shadow,
         class: osu-shadow,
         values: (
-          null: 0 2px 3px rgb(0 0 0 / 25%)
-        )
-      )
+          null: 0 2px 3px rgb(0 0 0 / 25%),
+        ),
+      ),
     ),
     (
-      "border-color": (
+      'border-color': (
         property: border-color,
         class: border,
-        values: map-merge($theme-colors, $osu-colors-all)
-      )
+        values: map-merge($theme-colors, $osu-colors-all),
+      ),
     ),
     (
-      "osu-border-width": (
+      'osu-border-width': (
         property: border-width,
         class: osu-border-width,
         values: (
           map-merge-multiple(
-              (0: 0),
-              map-get(map-get($utilities, "border-width"), "values")
-          )
-        )
-      )
+              (
+                0: 0,
+              ),
+              map-get(map-get($utilities, 'border-width'), 'values')
+          ),
+        ),
+      ),
     ),
     (
-      "osu-border-width-top": (
+      'osu-border-width-top': (
         property: border-top-width,
         class: osu-border-width-top,
         values: (
           map-merge-multiple(
-              (0: 0),
-              map-get(map-get($utilities, "border-width"), "values")
-          )
-        )
-      )
+              (
+                0: 0,
+              ),
+              map-get(map-get($utilities, 'border-width'), 'values')
+          ),
+        ),
+      ),
     ),
     (
-      "osu-border-width-right": (
+      'osu-border-width-right': (
         property: border-right-width,
         class: osu-border-width-right,
         values: (
           map-merge-multiple(
-              (0: 0),
-              map-get(map-get($utilities, "border-width"), "values")
-          )
-        )
-      )
+              (
+                0: 0,
+              ),
+              map-get(map-get($utilities, 'border-width'), 'values')
+          ),
+        ),
+      ),
     ),
     (
-      "osu-border-width-bottom": (
+      'osu-border-width-bottom': (
         property: border-bottom-width,
         class: osu-border-width-bottom,
         values: (
           map-merge-multiple(
-              (0: 0),
-              map-get(map-get($utilities, "border-width"), "values")
-          )
-        )
-      )
+              (
+                0: 0,
+              ),
+              map-get(map-get($utilities, 'border-width'), 'values')
+          ),
+        ),
+      ),
     ),
     (
-      "osu-border-width-left": (
+      'osu-border-width-left': (
         property: border-left-width,
         class: osu-border-width-left,
         values: (
           map-merge-multiple(
-              (0: 0),
-              map-get(map-get($utilities, "border-width"), "values")
-          )
-        )
-      )
+              (
+                0: 0,
+              ),
+              map-get(map-get($utilities, 'border-width'), 'values')
+          ),
+        ),
+      ),
     ),
     (
-      "font-family": (
+      'font-family': (
         property: font-family,
         class: font,
         values:
         map-merge(
-            map-get(map-get($utilities, "font-family"), "values"),
+            map-get(map-get($utilities, 'font-family'), 'values'),
             (
-              "stratum2web": ("Stratum2Web", serif)
+              'stratum2web': (
+                'Stratum2Web',
+                serif,
+              ),
             )
-        )
-      )
+        ),
+      ),
     ),
     (
-      "font-size": map-merge(
-          map-get($utilities, "font-size"),
-          (values: map-merge(
-              map-get(map-get($utilities, "font-size"), "values"),
-              (7: $font-size-base * .8)
-          )
-          )
-      )
-    ),
-    (
-      "margin": map-merge(
-          map-get($utilities, "margin"),
+      'font-size':
+      map-merge(
+          map-get($utilities, 'font-size'),
           (
-            values: map-merge(
-                map-get(map-get($utilities, "margin"), "values"),
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'font-size'), 'values'),
+                (
+                  7: $font-size-base * 0.8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'margin':
+      map-merge(
+          map-get($utilities, 'margin'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'margin'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'margin-x':
+      map-merge(
+          map-get($utilities, 'margin-x'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'margin-x'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'margin-y':
+      map-merge(
+          map-get($utilities, 'margin-y'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'margin-y'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'margin-top':
+      map-merge(
+          map-get($utilities, 'margin-top'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'margin-top'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'margin-end':
+      map-merge(
+          map-get($utilities, 'margin-end'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'margin-end'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'margin-bottom':
+      map-merge(
+          map-get($utilities, 'margin-bottom'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'margin-bottom'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'margin-start':
+      map-merge(
+          map-get($utilities, 'margin-start'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'margin-start'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'padding':
+      map-merge(
+          map-get($utilities, 'padding'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'padding'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'padding-x':
+      map-merge(
+          map-get($utilities, 'padding-x'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'padding-x'), 'values'),
+                (
+                  '2-5': $spacer * 0.75,
+                  '4-5': $spacer * 2,
+                  6: $spacer * 5,
+                  7: $spacer * 8,
+                )
+            ),
+          )
+      ),
+    ),
+    (
+      'padding-y':
+      map-merge(
+          map-get($utilities, 'padding-y'),
+          (
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'padding-y'), 'values'),
                 (
                   '2-5': $spacer * .75,
                   '4-5': $spacer * 2,
                   6: $spacer * 5,
                   7: $spacer * 8,
                 )
-            )
+            ),
           )
-      )
+      ),
     ),
     (
-      "margin-x": map-merge(
-          map-get($utilities, "margin-x"),
+      'padding-top':
+      map-merge(
+          map-get($utilities, 'padding-top'),
           (
-            values: map-merge(
-                map-get(map-get($utilities, "margin-x"), "values"),
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'padding-top'), 'values'),
                 (
                   '2-5': $spacer * .75,
                   '4-5': $spacer * 2,
                   6: $spacer * 5,
                   7: $spacer * 8,
                 )
-            )
+            ),
           )
-      )
+      ),
     ),
     (
-      "margin-y": map-merge(
-          map-get($utilities, "margin-y"),
+      'padding-end':
+      map-merge(
+          map-get($utilities, 'padding-end'),
           (
-            values: map-merge(
-                map-get(map-get($utilities, "margin-y"), "values"),
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'padding-end'), 'values'),
                 (
                   '2-5': $spacer * .75,
                   '4-5': $spacer * 2,
                   6: $spacer * 5,
                   7: $spacer * 8,
                 )
-            )
+            ),
           )
-      )
+      ),
     ),
     (
-      "margin-top": map-merge(
-          map-get($utilities, "margin-top"),
+      'padding-bottom':
+      map-merge(
+          map-get($utilities, 'padding-bottom'),
           (
-            values: map-merge(
-                map-get(map-get($utilities, "margin-top"), "values"),
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'padding-bottom'), 'values'),
                 (
                   '2-5': $spacer * .75,
                   '4-5': $spacer * 2,
                   6: $spacer * 5,
                   7: $spacer * 8,
                 )
-            )
+            ),
           )
-      )
+      ),
     ),
     (
-      "margin-end": map-merge(
-          map-get($utilities, "margin-end"),
+      'padding-start':
+      map-merge(
+          map-get($utilities, 'padding-start'),
           (
-            values: map-merge(
-                map-get(map-get($utilities, "margin-end"), "values"),
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'padding-start'), 'values'),
                 (
                   '2-5': $spacer * .75,
                   '4-5': $spacer * 2,
                   6: $spacer * 5,
                   7: $spacer * 8,
                 )
-            )
+            ),
           )
-      )
+      ),
     ),
     (
-      "margin-bottom": map-merge(
-          map-get($utilities, "margin-bottom"),
+      'gap':
+      map-merge(
+          map-get($utilities, 'gap'),
           (
-            values: map-merge(
-                map-get(map-get($utilities, "margin-bottom"), "values"),
+            values:
+            map-merge(
+                map-get(map-get($utilities, 'gap'), 'values'),
                 (
                   '2-5': $spacer * .75,
                   '4-5': $spacer * 2,
                   6: $spacer * 5,
                   7: $spacer * 8,
                 )
-            )
+            ),
           )
-      )
-    ),
-    (
-      "margin-start": map-merge(
-          map-get($utilities, "margin-start"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "margin-start"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
-    ),
-    (
-      "padding": map-merge(
-          map-get($utilities, "padding"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "padding"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
-    ),
-    (
-      "padding-x": map-merge(
-          map-get($utilities, "padding-x"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "padding-x"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
-    ),
-    (
-      "padding-y": map-merge(
-          map-get($utilities, "padding-y"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "padding-y"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
-    ),
-    (
-      "padding-top": map-merge(
-          map-get($utilities, "padding-top"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "padding-top"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
-    ),
-    (
-      "padding-end": map-merge(
-          map-get($utilities, "padding-end"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "padding-end"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
-    ),
-    (
-      "padding-bottom": map-merge(
-          map-get($utilities, "padding-bottom"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "padding-bottom"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
-    ),
-    (
-      "padding-start": map-merge(
-          map-get($utilities, "padding-start"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "padding-start"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
-    ),
-    (
-      "gap": map-merge(
-          map-get($utilities, "gap"),
-          (
-            values: map-merge(
-                map-get(map-get($utilities, "gap"), "values"),
-                (
-                  '2-5': $spacer * .75,
-                  '4-5': $spacer * 2,
-                  6: $spacer * 5,
-                  7: $spacer * 8,
-                )
-            )
-          )
-      )
+      ),
     )
 );
 
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "scss/abstracts/osu_mixins";
-@import "scss/abstracts/osu_utilities";
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'scss/abstracts/osu_mixins';
+@import 'scss/abstracts/osu_utilities';
 
-@import "scss/base/osu_base";
-@import "scss/base/osu_typography";
+@import 'scss/base/osu_base';
+@import 'scss/base/osu_typography';
 
-@import "scss/layout/osu_header";
-@import "scss/layout/osu_footer";
-@import "scss/layout/osu_breadcrumbs";
-@import "scss/layout/superfish";
-@import "scss/layout/osu_menus";
-@import "scss/layout/osu_group_menus";
-@import "scss/layout/osu_forms";
+@import 'scss/layout/osu_header';
+@import 'scss/layout/osu_footer';
+@import 'scss/layout/osu_breadcrumbs';
+@import 'scss/layout/superfish';
+@import 'scss/layout/osu_menus';
+@import 'scss/layout/osu_group_menus';
+@import 'scss/layout/osu_forms';
 
-@import "scss/components/osu_alerts";
-@import "scss/components/osu_buttons";
-@import "scss/components/osu_dropbuttons";
-@import "scss/components/osu_group_operations";
-@import "scss/components/osu_cards";
-@import "scss/components/osu_fields";
-@import "scss/components/osu_menubar";
-@import "scss/components/osu_tags";
-@import "scss/components/osu_pager";
-@import "scss/components/osu_media";
-@import "scss/components/osu_stories__landing_stories";
-@import "scss/components/osu_stories__related_stories";
-@import "scss/components/osu_stories__author";
-@import "scss/components/osu_messages";
-@import "scss/components/osu_modals";
-@import "scss/components/osu_preview";
-@import "scss/components/osu_tables";
-@import "scss/components/osu_ckeditor";
-@import "scss/components/osu_tocjs";
-@import "scss/components/osu_layout_builder";
-@import "scss/components/osu_layout_builder_menus";
-@import "scss/components/osu_tabledrag";
-@import "scss/components/osu_simple_popup_blocks";
+@import 'scss/components/osu_alerts';
+@import 'scss/components/osu_buttons';
+@import 'scss/components/osu_dropbuttons';
+@import 'scss/components/osu_group_operations';
+@import 'scss/components/osu_cards';
+@import 'scss/components/osu_fields';
+@import 'scss/components/osu_menubar';
+@import 'scss/components/osu_tags';
+@import 'scss/components/osu_pager';
+@import 'scss/components/osu_media';
+@import 'scss/components/osu_stories__landing_stories';
+@import 'scss/components/osu_stories__related_stories';
+@import 'scss/components/osu_stories__author';
+@import 'scss/components/osu_messages';
+@import 'scss/components/osu_modals';
+@import 'scss/components/osu_preview';
+@import 'scss/components/osu_tables';
+@import 'scss/components/osu_ckeditor';
+@import 'scss/components/osu_tocjs';
+@import 'scss/components/osu_layout_builder';
+@import 'scss/components/osu_layout_builder_menus';
+@import 'scss/components/osu_tabledrag';
+@import 'scss/components/osu_simple_popup_blocks';
 
-@import "scss/pages/osu_unpublished";
-@import "scss/pages/osu_stories__all_stories";
+@import 'scss/pages/osu_unpublished';
+@import 'scss/pages/osu_stories__all_stories';

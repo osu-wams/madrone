@@ -60,90 +60,90 @@ $page-bg-alt-2: $paddletailblack;
 
 // Map array for Alerts
 $osu-alerts: (
-  "success": $pine-400,
-  "warning": $luminance-400,
-  "danger": $lava-400,
+  'success': $pine-400,
+  'warning': $luminance-400,
+  'danger': $lava-400,
 );
 
 // Map array for text color classes
 $osu-colors-text: (
-  "body": $neutral-700,
-  "osuorange": $osuorange,
-  "bucktoothwhite": $bucktoothwhite,
-  "icon": $neutral-550,
+  'body': $neutral-700,
+  'osuorange': $osuorange,
+  'bucktoothwhite': $bucktoothwhite,
+  'icon': $neutral-550,
 );
 
 // Map for Background Colors
 $osu-bg-colors: (
-  "page-default": $page-bg-default,
-  "page-alt-1": $page-bg-alt-1,
-  "page-alt-2": $page-bg-alt-2,
-  "moondust": $moondust,
-  "crater": $crater,
-  "osuorange": $osuorange,
-  "light-grey": $lightGrey,
+  'page-default': $page-bg-default,
+  'page-alt-1': $page-bg-alt-1,
+  'page-alt-2': $page-bg-alt-2,
+  'moondust': $moondust,
+  'crater': $crater,
+  'osuorange': $osuorange,
+  'light-grey': $lightGrey,
 );
 
 // Map for border colors
 $osu-border-colors: (
-  "light-grey": $lightGrey,
-  "crater": $crater,
-  "osu": $osuorange,
-  "moondust": $moondust,
-  "dark": $paddletailblack,
-  "white": $bucktoothwhite,
+  'light-grey': $lightGrey,
+  'crater': $crater,
+  'osu': $osuorange,
+  'moondust': $moondust,
+  'dark': $paddletailblack,
+  'white': $bucktoothwhite,
 );
 
 // Map for all colors
 $osu-colors-all: (
-  "osuorange": $osuorange,
-  "paddletailblack": $paddletailblack,
-  "bucktoothwhite": $bucktoothwhite,
-  "neutral-100": $neutral-100,
-  "neutral-200": $neutral-200,
-  "neutral-300": $neutral-300,
-  "neutral-400": $neutral-400,
-  "neutral-500": $neutral-500,
-  "neutral-550": $neutral-550,
-  "neutral-600": $neutral-600,
-  "neutral-700": $neutral-700,
-  "neutral-800": $neutral-800,
-  "neutral-900": $neutral-900,
-  "lava-100": $lava-100,
-  "lava-200": $lava-200,
-  "lava-300": $lava-300,
-  "lava-400": $lava-400,
-  "lava-500": $lava-500,
-  "lava-600": $lava-600,
-  "lava-700": $lava-700,
-  "luminance-100": $luminance-100,
-  "luminance-200": $luminance-200,
-  "luminance-300": $luminance-300,
-  "luminance-400": $luminance-400,
-  "luminance-500": $luminance-500,
-  "luminance-600": $luminance-600,
-  "luminance-700": $luminance-700,
-  "pine-100": $pine-100,
-  "pine-200": $pine-200,
-  "pine-300": $pine-300,
-  "pine-400": $pine-400,
-  "pine-500": $pine-500,
-  "pine-600": $pine-600,
-  "pine-700": $pine-700,
-  "rogue_wave-100": $rogue_wave-100,
-  "rogue_wave-200": $rogue_wave-200,
-  "rogue_wave-300": $rogue_wave-300,
-  "rogue_wave-400": $rogue_wave-400,
-  "rogue_wave-500": $rogue_wave-500,
-  "rogue_wave-600": $rogue_wave-600,
-  "rogue_wave-700": $rogue_wave-700,
-  "stratosphere-100": $stratosphere-100,
-  "stratosphere-200": $stratosphere-200,
-  "stratosphere-300": $stratosphere-300,
-  "stratosphere-400": $stratosphere-400,
-  "stratosphere-500": $stratosphere-500,
-  "stratosphere-600": $stratosphere-600,
-  "stratosphere-700": $stratosphere-700,
+  'osuorange': $osuorange,
+  'paddletailblack': $paddletailblack,
+  'bucktoothwhite': $bucktoothwhite,
+  'neutral-100': $neutral-100,
+  'neutral-200': $neutral-200,
+  'neutral-300': $neutral-300,
+  'neutral-400': $neutral-400,
+  'neutral-500': $neutral-500,
+  'neutral-550': $neutral-550,
+  'neutral-600': $neutral-600,
+  'neutral-700': $neutral-700,
+  'neutral-800': $neutral-800,
+  'neutral-900': $neutral-900,
+  'lava-100': $lava-100,
+  'lava-200': $lava-200,
+  'lava-300': $lava-300,
+  'lava-400': $lava-400,
+  'lava-500': $lava-500,
+  'lava-600': $lava-600,
+  'lava-700': $lava-700,
+  'luminance-100': $luminance-100,
+  'luminance-200': $luminance-200,
+  'luminance-300': $luminance-300,
+  'luminance-400': $luminance-400,
+  'luminance-500': $luminance-500,
+  'luminance-600': $luminance-600,
+  'luminance-700': $luminance-700,
+  'pine-100': $pine-100,
+  'pine-200': $pine-200,
+  'pine-300': $pine-300,
+  'pine-400': $pine-400,
+  'pine-500': $pine-500,
+  'pine-600': $pine-600,
+  'pine-700': $pine-700,
+  'rogue_wave-100': $rogue_wave-100,
+  'rogue_wave-200': $rogue_wave-200,
+  'rogue_wave-300': $rogue_wave-300,
+  'rogue_wave-400': $rogue_wave-400,
+  'rogue_wave-500': $rogue_wave-500,
+  'rogue_wave-600': $rogue_wave-600,
+  'rogue_wave-700': $rogue_wave-700,
+  'stratosphere-100': $stratosphere-100,
+  'stratosphere-200': $stratosphere-200,
+  'stratosphere-300': $stratosphere-300,
+  'stratosphere-400': $stratosphere-400,
+  'stratosphere-500': $stratosphere-500,
+  'stratosphere-600': $stratosphere-600,
+  'stratosphere-700': $stratosphere-700,
 );
 
 // Map for minimum heights
@@ -159,13 +159,7 @@ $min-heights: (
 );
 
 // Map for border sides
-$border-sides: (
-  "left",
-  "top",
-  "right",
-  "bottom"
-);
-
+$border-sides: ('left', 'top', 'right', 'bottom');
 
 $body-color: $neutral-700;
 $body-bg: $page-bg-default;
@@ -188,7 +182,7 @@ $link-decoration: underline $osuorange;
 // Navigation Links
 $nav-link-color: $neutral-700;
 $nav-link-hover-color: $bucktoothwhite;
-$nav-link-padding-y: .5rem;
+$nav-link-padding-y: 0.5rem;
 $nav-link-padding-x: 1rem;
 $nav-link-font-size: 1rem;
 
@@ -197,7 +191,7 @@ $nav-tabs-link-active-bg: $bucktoothwhite;
 $nav-tabs-link-active-border-color: transparent transparent $osuorange;
 $nav-tabs-link-active-color: $body-color;
 $nav-tabs-border-radius: 0;
-$nav-tabs-border-width: .15em;
+$nav-tabs-border-width: 0.15em;
 
 // Navigation Pills
 $nav-pills-border-radius: 0;
@@ -214,7 +208,7 @@ $input-btn-focus-box-shadow: none;
 $input-focus-border-color: $osuorange;
 $input-padding-x: 1rem;
 $input-padding-x-lg: 1.5rem;
-$input-padding-y: .5rem;
+$input-padding-y: 0.5rem;
 $input-padding-y-lg: 1rem;
 
 // Pagination settings
@@ -240,8 +234,8 @@ $pagination-disabled-border-color: $neutral-300;
 $form-check-input-checked-bg-color: $osuorange;
 
 // Form Select updates
-$form-select-padding-x: .25rem;
-$form-select-padding-y: .5rem;
+$form-select-padding-x: 0.25rem;
+$form-select-padding-y: 0.5rem;
 $form-select-box-shadow: none;
 $form-select-focus-box-shadow: none;
 
@@ -251,7 +245,7 @@ $btn-focus-box-shadow: none;
 $btn-focus-width: 0;
 $btn-active-box-shadow: none;
 $btn-padding-x: 1.5rem;
-$btn-padding-y: .375rem;
+$btn-padding-y: 0.375rem;
 $btn-padding-x-lg: 1.5rem;
 $btn-padding-x-sm: 1.5rem;
 $btn-border-radius: 1.5rem;
@@ -272,7 +266,7 @@ $table-striped-bg: $table-alt-row;
 $table-border-color: $neutral-200;
 
 // Breadcrumbs
-$breadcrumb-divider: quote(">");
+$breadcrumb-divider: quote('>');
 $breadcrumb-divider-color: $neutral-700;
 $breadcrumb-font-size: 1rem;
 
@@ -280,3 +274,6 @@ $breadcrumb-font-size: 1rem;
 $accordion-button-active-bg: $paddletailblack;
 $accordion-button-active-color: $bucktoothwhite;
 $accordion-button-focus-box-shadow: 0 2px 3px rgb(0 0 0 / 25%);
+
+// Enable Negative margin
+$enable-negative-margins: true;

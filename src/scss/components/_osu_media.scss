@@ -1,3 +1,4 @@
+@import '../abstracts/osu_variables';
 // Fix for image alignment center.
 .node {
   .align-center.media--type-image {
@@ -27,22 +28,15 @@ article.media {
   }
 }
 
-figure {
+figure.figure {
+  display: table;
+
   &.align-right {
     margin-inline-start: 1rem !important;
   }
 
   &.align-left {
     margin-inline-end: 1rem !important;
-  }
-
-  &.align-center {
-    display: block;
-  }
-
-  & > figcaption.figure-caption::before {
-    content: "\2014";
-    padding-right: 1ch;
   }
 }
 
@@ -52,7 +46,7 @@ figure {
     padding-top: 1.5rem;
 
     div.field__item::before {
-      content: "\2014";
+      content: '\2014';
       padding-right: 1ch;
     }
   }

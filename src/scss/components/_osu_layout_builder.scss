@@ -53,7 +53,7 @@
   }
 
   form.layout-builder-configure-block {
-    details[id^=edit-appearance-positioning] {
+    details[id^='edit-appearance-positioning'] {
       display: none;
     }
   }
@@ -63,7 +63,7 @@
       background: url('../assets/icon-actions.svg') no-repeat center;
       background-size: 26px 26px;
       border: 1px solid #727579 !important;
-      border-radius: .25rem;
+      border-radius: 0.25rem;
       cursor: pointer !important;
       display: block !important;
       height: 36px !important;
@@ -72,7 +72,7 @@
     }
 
     .paragraphs-dropdown-actions {
-      background-color: #383A40;
+      background-color: #383a40;
     }
   }
 }

@@ -16,89 +16,78 @@
 // see https://getbootstrap.com/docs/5.3/components/buttons/#sass-mixins
 .osu-btn-primary {
   @include button-variant(
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite,
-      $paddletailblack,
-      $paddletailblack,
-      $bucktoothwhite,
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite
+    $osuorange,
+    $osuorange,
+    $bucktoothwhite,
+    $paddletailblack,
+    $paddletailblack,
+    $bucktoothwhite,
+    $osuorange,
+    $osuorange,
+    $bucktoothwhite
   );
 }
 
 .osu-btn-light {
   @include button-variant(
-      $neutral-100,
-      $paddletailblack,
-      $body-color,
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite,
-      $bucktoothwhite,
-      $osuorange,
-      $body-color
+    $neutral-100,
+    $paddletailblack,
+    $body-color,
+    $osuorange,
+    $osuorange,
+    $bucktoothwhite,
+    $bucktoothwhite,
+    $osuorange,
+    $body-color
   );
 }
 
 .osu-btn-dark {
   @include button-variant(
-      $paddletailblack,
-      $paddletailblack,
-      $bucktoothwhite,
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite,
-      $paddletailblack,
-      $osuorange,
-      $bucktoothwhite
+    $paddletailblack,
+    $paddletailblack,
+    $bucktoothwhite,
+    $osuorange,
+    $osuorange,
+    $bucktoothwhite,
+    $paddletailblack,
+    $osuorange,
+    $bucktoothwhite
   );
 }
 
 .osu-btn-white {
   @include button-variant(
-      $bucktoothwhite,
-      $paddletailblack,
-      $body-color,
-      $bucktoothwhite,
-      $osuorange,
-      $body-color,
-      $osuorange,
-      $osuorange,
-      $bucktoothwhite
+    $bucktoothwhite,
+    $paddletailblack,
+    $body-color,
+    $bucktoothwhite,
+    $osuorange,
+    $body-color,
+    $osuorange,
+    $osuorange,
+    $bucktoothwhite
   );
 }
 
 .osu-btn-pine {
-  @include button-variant(
-      $pine-400,
-      $pine-400,
-      $bucktoothwhite
-  );
+  @include button-variant($pine-400, $pine-400, $bucktoothwhite);
 }
 
 .osu-btn-luminance {
-  @include button-variant(
-      $luminance-400,
-      $luminance-400,
-      $body-color
-  );
+  @include button-variant($luminance-400, $luminance-400, $body-color);
 }
 
 // Button has to have black text for WCAG AA.
 .osu-btn-rogue-wave {
-  @include button-variant(
-      $rogue_wave-400,
-      $rogue_wave-400
-  );
+  @include button-variant($rogue_wave-400, $rogue_wave-400);
 }
 
 .osu-btn-stratosphere {
   @include button-variant(
-      $stratosphere-400,
-      $stratosphere-400,
-      $bucktoothwhite
+    $stratosphere-400,
+    $stratosphere-400,
+    $bucktoothwhite
   );
 }
 
