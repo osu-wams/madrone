@@ -1,27 +1,27 @@
-@import "../abstracts/osu_variables";
+@import '../abstracts/osu_variables';
 
 h1 {
   color: rgba($osuorange, 1);
-  font-family: "Stratum2Web", serif;
+  font-family: 'Stratum2Web', serif;
   @include font-size(3rem);
   font-weight: 500;
 }
 
 h2 {
-  font-family: "Stratum2Web", serif;
+  font-family: 'Stratum2Web', serif;
   @include font-size(2.25rem);
   font-weight: 600;
 }
 
 h3 {
   color: rgba($osuorange, 1);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   @include font-size(1.75rem);
   font-weight: 500;
 }
 
 h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   @include font-size(1.625rem);
   font-weight: 600;
 }
@@ -29,12 +29,12 @@ h4 {
 h5 {
   color: $osuorange;
   @include font-size(1.5rem);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
 }
 
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   @include font-size(1.25rem);
   font-weight: 600;
 }
@@ -65,7 +65,7 @@ h6 {
 
 blockquote {
   border: 5px solid $neutral-200;
-  font-family: Georgia, "DejaVu Serif", serif;
+  font-family: Georgia, 'DejaVu Serif', serif;
   font-size: 1.25rem;
   margin-block: 1.5rem;
   padding: 2.5em 3.75em;
@@ -90,12 +90,20 @@ main .block-page-title-block {
 }
 
 .block-system-main-block {
-  ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li:not([style*="list-style: none"]) {
+  ul:not(
+      .nav,
+      .navbar,
+      .list-unstyled,
+      .contextual-links,
+      .vertical-tabs__menu,
+      .pager__items
+    )
+    > li:not([style*='list-style: none']) {
     &::marker {
       color: rgba($body-color, 1);
-      content: "\f054\2000";
+      content: '\f054\2000';
       display: inline-block;
-      font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+      font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
       font-weight: 900;
       letter-spacing: normal;
     }
@@ -103,7 +111,15 @@ main .block-page-title-block {
 
   // Force the unordered list marker to be white when using the light color text.
   .osu-text-bucktoothwhite {
-    ul:not(.nav, .navbar, .list-unstyled, .contextual-links, .vertical-tabs__menu, .pager__items) > li {
+    ul:not(
+        .nav,
+        .navbar,
+        .list-unstyled,
+        .contextual-links,
+        .vertical-tabs__menu,
+        .pager__items
+      )
+      > li {
       &::marker {
         color: $bucktoothwhite;
       }

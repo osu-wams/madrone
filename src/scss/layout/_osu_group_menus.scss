@@ -1,4 +1,4 @@
-@import "../abstracts/osu_variables";
+@import '../abstracts/osu_variables';
 
 .block-group-content-menu {
   .menu--level-0,
@@ -21,7 +21,7 @@
         span {
           cursor: pointer;
           background-color: $bucktoothwhite;
-          color: $paddletailblack
+          color: $paddletailblack;
         }
       }
     }
@@ -65,9 +65,9 @@
   .group-sub-menu > a::after,
   .group-sub-menu > span::after {
     color: #423e3c;
-    content: " \f078";
+    content: ' \f078';
     display: inline-block;
-    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
     font-size: 12px;
     font-weight: 900;
     letter-spacing: normal;
@@ -77,7 +77,7 @@
   .menu--level-2 {
     .group-sub-menu > a::after,
     .group-sub-menu > span::after {
-      content: " \f054";
+      content: ' \f054';
       float: right;
     }
 
@@ -88,7 +88,7 @@
         color: $bucktoothwhite;
 
         &::after {
-          color: $bucktoothwhite
+          color: $bucktoothwhite;
         }
       }
     }
@@ -107,9 +107,9 @@
 
       // Main menu hamburger symbol
       &::before {
-        content: "\f0c9";
+        content: '\f0c9';
         display: inline-block;
-        font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+        font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
         font-weight: 900;
         letter-spacing: 1rem;
       }
@@ -124,7 +124,6 @@
       }
     }
 
-
     $menu-depth: 0;
     @for $i from 1 through 9 {
       .menu--level-#{$i} {
@@ -135,7 +134,7 @@
 
     // sub menu downward chevron
     .group-sub-menu > a::after {
-      content: " \f078";
+      content: ' \f078';
     }
 
     .group-menu-clicked {

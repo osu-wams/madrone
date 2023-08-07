@@ -1,4 +1,4 @@
-@import "../abstracts/osu_variables";
+@import '../abstracts/osu_variables';
 
 .madrone-primary-menu > .block-superfish {
   .sf-accordion-toggle {
@@ -14,9 +14,9 @@
       text-decoration: none;
 
       &::before {
-        content: "\f0c9";
+        content: '\f0c9';
         display: inline-block;
-        font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+        font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
         font-weight: 900;
         letter-spacing: 1rem;
       }
@@ -51,10 +51,9 @@
         @for $i from 1 through 9 {
           li.sf-depth-#{$i} {
             left: #{$sf-depth}rem;
-            $sf-depth: $sf-depth + .25;
+            $sf-depth: $sf-depth + 0.25;
           }
         }
-
       }
 
       li {
@@ -71,7 +70,7 @@
             color: $neutral-700;
             content: '\2000\f078';
             display: inline-block;
-            font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+            font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
             font-size: 12px;
             font-weight: 900;
             letter-spacing: normal;
@@ -107,7 +106,7 @@
             content: '\2000\f054';
             display: inline-block;
             float: right;
-            font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+            font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
             font-size: 12px;
             font-weight: 900;
             letter-spacing: normal;

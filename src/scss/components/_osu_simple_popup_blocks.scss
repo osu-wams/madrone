@@ -1,4 +1,4 @@
-@import "../abstracts/osu_variables";
+@import '../abstracts/osu_variables';
 
 .simple-popup-blocks-global {
   // The minimized button.
@@ -11,8 +11,8 @@
 
   .spb-popup-main-wrapper {
     background-color: $bucktoothwhite;
-    border: .025rem solid $osuorange;
-    border-radius: .25rem;
+    border: 0.025rem solid $osuorange;
+    border-radius: 0.25rem;
     padding: 1.3rem 2rem;
 
     &.spb_center {
@@ -32,7 +32,7 @@
       > .spb_close,
       > .spb_minimize {
         border-color: $osuorange;
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         color: $osuorange;
       }
     }

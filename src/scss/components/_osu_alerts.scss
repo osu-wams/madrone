@@ -1,5 +1,5 @@
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../abstracts/osu_variables";
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../abstracts/osu_variables';
 
 // Generate contextual modifier classes for colorizing the alert
 @each $state in map-keys($osu-alerts) {

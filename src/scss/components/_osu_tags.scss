@@ -13,11 +13,19 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
+  }
+}
 
-    .field__item {
-      a {
-        @extend .btn;
-        @extend .btn-primary;
+.node--type-story {
+  .field--name-field-tags,
+  .field--name-field-osu-organizations {
+    &.field__items,
+    .field__items {
+      .field__item {
+        a {
+          @extend .btn;
+          @extend .btn-primary;
+        }
       }
     }
   }
