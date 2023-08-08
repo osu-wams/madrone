@@ -1,0 +1,6 @@
+.accordion-button:hover {
+  border-color: var(--bs-accordion-btn-focus-border-color);
+  box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+  outline: 0;
+  z-index: 3;
+}
