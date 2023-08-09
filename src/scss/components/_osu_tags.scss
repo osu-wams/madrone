@@ -1,36 +1,13 @@
 .field--name-field-tags,
 .field--name-field-osu-organizations {
   &.field--label-inline {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    .field__items {
+      flex-direction: row;
+    }
   }
 
   &.field__items,
   .field__items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
+    flex-direction: column;
   }
-}
-
-.node--type-story {
-  .field--name-field-tags,
-  .field--name-field-osu-organizations {
-    &.field__items,
-    .field__items {
-      .field__item {
-        a {
-          @extend .btn;
-          @extend .btn-primary;
-        }
-      }
-    }
-  }
-}
-
-.node--type-osu-profile .field--name-field-osu-organizations.field__items {
-  display: block;
 }

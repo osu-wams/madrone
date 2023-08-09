@@ -317,8 +317,7 @@ $utilities: map-merge-multiple(
       )
     ),
     (
-      'padding':
-      map-merge(
+      'padding': map-merge(
           map-get($utilities, 'padding'),
           (
             values:
