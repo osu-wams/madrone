@@ -4,14 +4,17 @@ body.cke_editable_themed {
 }
 
 .cke_reset_all .cke_dialog_body * {
-  font:
-    0.8125rem/1.538em BlinkMacSystemFont,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    Oxygen-Sans,
-    Ubuntu,
-    Cantarell,
-    'Helvetica Neue',
-    sans-serif;
+  font: 0.8125rem/1.538em BlinkMacSystemFont,
+  -apple-system,
+  'Segoe UI',
+  Roboto,
+  Oxygen-Sans,
+  Ubuntu,
+  Cantarell,
+  'Helvetica Neue',
+  sans-serif;
+}
+
+.cke_editable_themed .scayt-misspell-word {
+  border-bottom-style: dotted !important;
 }

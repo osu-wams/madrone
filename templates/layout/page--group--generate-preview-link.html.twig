@@ -55,9 +55,11 @@
   {{ page.highlighted }}
   {{ page.help }}
 
+  {% set page_sidebar_content = page.sidebar|render|striptags('<img><video><drupal-render-placeholder>')|trim %}
+
   {% set content_classes = [
     'layout-content',
-    page.sidebar ? 'col-12 col-lg-9 col-xxl-10' : 'col-12'
+    page_sidebar_content ? 'col-12 col-lg-9 col-xxl-10' : 'col-12'
   ] %}
   <div class="container flex-fill position-relative">
     <main class="d-flex flex-wrap flex-fill gx-3 gx-lg-0" role="main">
@@ -66,7 +68,7 @@
         {{ page.content }}
       </div>
 
-      {% if page.sidebar %}
+      {% if page_sidebar_content is not empty %}
         <aside class="layout-sidebar px-4 px-lg-2 px-xxl-3 col-12 col-lg-3 col-xxl-2 flex-fill"
                role="complementary">
           {{ page.sidebar }}
