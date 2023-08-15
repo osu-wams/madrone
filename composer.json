@@ -36,7 +36,7 @@
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
-        "dealerdirect/phpcodesniffer-composer-installer": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
         "drupal/coder": "^8.3",
         "friendsoftwig/twigcs": "^6.2",
         "squizlabs/php_codesniffer": "^3.5"
