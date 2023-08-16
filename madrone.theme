@@ -73,7 +73,7 @@ function madrone_preprocess_node(&$variables) {
   // rather than using fields.
   $date = $variables['node']->getCreatedTime();
   /** @var \Drupal\date_ap_style\ApStyleDateFormatter $date_ap */
-  $date_ap = \Drupal::service('date_ap_style.formatter');
+  $date_ap = Drupal::service('date_ap_style.formatter');
   $variables['date'] = $date_ap->formatTimestamp($date, ['always_display_year' => TRUE]);
   if ($variables['elements']['#view_mode'] === 'full'
     && !array_key_exists('view', $variables)
@@ -254,7 +254,7 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       break;
   }
   // Check if we are in a layout builder form.
-  $route_object = \Drupal::routeMatch()->getRouteObject();
+  $route_object = Drupal::routeMatch()->getRouteObject();
   if (!is_null($route_object)) {
     if ($route_object->getOption('_layout_builder')) {
       $form['#attributes']['class'][] = 'container';
@@ -303,6 +303,15 @@ function madrone_theme_suggestions_form_alter(array &$suggestions, array $variab
   if (isset($variables['element']['#attributes']['region'])) {
     $region = $variables['element']['#attributes']['region'];
     $suggestions[] = 'form__' . $region . '__' . $form_id;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function madrone_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#id'] === 'admin-toolbar-search-input') {
+    $suggestions[] = $variables['theme_hook_original'] . '__' . 'admin_toolbar_search';
   }
 }
 
@@ -388,8 +397,8 @@ function madrone_preprocess_superfish_menu_items(&$variables) {
  *   False if any of the above conditions are false
  */
 function hide_main_navigation(): bool {
-  if (\Drupal::service('module_handler')->moduleExists('osu_groups')) {
-    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+  if (Drupal::service('module_handler')->moduleExists('osu_groups')) {
+    if ($node = Drupal::routeMatch()->getParameter('node')) {
       /** @var \Drupal\osu_groups\OsuGroupsHandler $osu_groups */
       $osu_groups = Drupal::service('osu_groups.group_handler');
       $group_content = $osu_groups->getGroupContentFromNode($node);
@@ -402,7 +411,7 @@ function hide_main_navigation(): bool {
         }
       }
     }
-    elseif ($group = \Drupal::routeMatch()->getParameter('group')) {
+    elseif ($group = Drupal::routeMatch()->getParameter('group')) {
       if ($group->hasField('field_hide_global_navigation')) {
         return (bool) $group->get('field_hide_global_navigation')
           ->first()
