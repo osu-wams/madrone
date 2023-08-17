@@ -111,3 +111,20 @@
     padding-inline: 3rem;
   }
 }
+// Adding an X to a few buttons that are missed in themeing. Might need to remove in the future.
+.editor-link-dialog,
+.editor-file-dialog {
+  button.ui-dialog-titlebar-close:after {
+    content: 'X';
+    position: relative;
+    top: -0.55rem;
+  }
+}
+
+.media-library-widget-modal {
+  button.ui-dialog-titlebar-close:after {
+    content: 'X';
+    position: relative;
+    top: -0.25rem;
+  }
+}
