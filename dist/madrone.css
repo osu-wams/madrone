@@ -16059,6 +16059,19 @@ body.cke_editable_themed {
   }
 }
 
+.editor-link-dialog button.ui-dialog-titlebar-close:after,
+.editor-file-dialog button.ui-dialog-titlebar-close:after {
+  content: "X";
+  position: relative;
+  top: -0.55rem;
+}
+
+.media-library-widget-modal button.ui-dialog-titlebar-close:after {
+  content: "X";
+  position: relative;
+  top: -0.25rem;
+}
+
 .madrone-content .osu-bg-page-default nav ul.menu li a {
   color: #212529 !important;
   background-color: #f7f5f5 !important;
