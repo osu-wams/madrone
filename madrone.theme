@@ -118,8 +118,8 @@ function madrone_preprocess_block(&$variables) {
       }
       if ($variables['base_plugin_id'] == 'system_branding_block') {
         $themeCrestPath = '/' . Drupal::theme()
-          ->getActiveTheme()
-          ->getPath() . '/assets/osu-logo-crest-only.svg';
+            ->getActiveTheme()
+            ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
         if (array_key_exists('group_path', $variables['content']) &&
           array_key_exists('group_name', $variables['content'])) {
@@ -314,6 +314,22 @@ function madrone_theme_suggestions_menu_alter(array &$suggestions, array $variab
     $region = str_replace('-', '_', $variables['attributes']['region']);
     $suggestions[] = 'menu__' . $region;
     $suggestions[] = $variables['theme_hook_original'] . '__' . $region;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function madrone_theme_suggestions_filter_caption_alter(array &$suggestions, array $variables) {
+  $classes = explode(' ', $variables['classes']);
+  $view_mode = '';
+  foreach ($classes as $class) {
+    if (str_contains($class, 'view-mode--')) {
+      $view_mode = substr($class, strlen('view-mode--'));
+    }
+  }
+  if (!empty($view_mode)) {
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $view_mode;
   }
 }
 

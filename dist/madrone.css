@@ -15713,9 +15713,6 @@ article.media.align-left {
   margin-inline-end: 1rem !important;
 }
 
-figure.figure {
-  display: table;
-}
 figure.figure.align-right {
   margin-inline-start: 1rem !important;
 }
