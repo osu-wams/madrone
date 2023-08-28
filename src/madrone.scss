@@ -445,12 +445,24 @@ $utilities: map-merge-multiple(
             )
           )
       )
+    ),
+    (
+      'max-width': map-merge(
+          map-get($utilities, 'max-width'),
+          (
+            responsive: true,
+            values: map-merge(
+                map-get(map-get($utilities, 'max-width'), 'values'),
+                map-remove(map-get(map-get($utilities, 'width'), 'values'), auto)
+            )
+          )
+      )
     )
 );
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import 'scss/abstracts/osu_mixins';
-@import 'scss/abstracts/osu_utilities';
+@import 'scss/utilities/osu_utilities';
 
 @import 'scss/base/osu_base';
 @import 'scss/base/osu_typography';

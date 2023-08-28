@@ -7871,6 +7871,18 @@ textarea.form-control-lg {
   max-width: 100% !important;
 }
 
+.mw-25 {
+  max-width: 25% !important;
+}
+
+.mw-50 {
+  max-width: 50% !important;
+}
+
+.mw-75 {
+  max-width: 75% !important;
+}
+
 .vw-100 {
   width: 100vw !important;
 }
@@ -10154,6 +10166,18 @@ textarea.form-control-lg {
   .d-sm-none {
     display: none !important;
   }
+  .mw-sm-100 {
+    max-width: 100% !important;
+  }
+  .mw-sm-25 {
+    max-width: 25% !important;
+  }
+  .mw-sm-50 {
+    max-width: 50% !important;
+  }
+  .mw-sm-75 {
+    max-width: 75% !important;
+  }
   .flex-sm-fill {
     flex: 1 1 auto !important;
   }
@@ -11014,6 +11038,18 @@ textarea.form-control-lg {
   }
   .d-md-none {
     display: none !important;
+  }
+  .mw-md-100 {
+    max-width: 100% !important;
+  }
+  .mw-md-25 {
+    max-width: 25% !important;
+  }
+  .mw-md-50 {
+    max-width: 50% !important;
+  }
+  .mw-md-75 {
+    max-width: 75% !important;
   }
   .flex-md-fill {
     flex: 1 1 auto !important;
@@ -11876,6 +11912,18 @@ textarea.form-control-lg {
   .d-lg-none {
     display: none !important;
   }
+  .mw-lg-100 {
+    max-width: 100% !important;
+  }
+  .mw-lg-25 {
+    max-width: 25% !important;
+  }
+  .mw-lg-50 {
+    max-width: 50% !important;
+  }
+  .mw-lg-75 {
+    max-width: 75% !important;
+  }
   .flex-lg-fill {
     flex: 1 1 auto !important;
   }
@@ -12737,6 +12785,18 @@ textarea.form-control-lg {
   .d-xl-none {
     display: none !important;
   }
+  .mw-xl-100 {
+    max-width: 100% !important;
+  }
+  .mw-xl-25 {
+    max-width: 25% !important;
+  }
+  .mw-xl-50 {
+    max-width: 50% !important;
+  }
+  .mw-xl-75 {
+    max-width: 75% !important;
+  }
   .flex-xl-fill {
     flex: 1 1 auto !important;
   }
@@ -13597,6 +13657,18 @@ textarea.form-control-lg {
   }
   .d-xxl-none {
     display: none !important;
+  }
+  .mw-xxl-100 {
+    max-width: 100% !important;
+  }
+  .mw-xxl-25 {
+    max-width: 25% !important;
+  }
+  .mw-xxl-50 {
+    max-width: 50% !important;
+  }
+  .mw-xxl-75 {
+    max-width: 75% !important;
   }
   .flex-xxl-fill {
     flex: 1 1 auto !important;
