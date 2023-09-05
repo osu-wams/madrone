@@ -187,20 +187,48 @@
   border-radius: $border-radius-pill;
 }
 
-.osu-bg-overlay-dark {
+.osu-bg-overlay-dark,
+.osu-bg-before-dark {
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
+  --osu-bg-overaly-to-color: hsla(210, 11%, 15%, 0.75);
+  --osu-bg-overlay-deg: 0deg;
   position: relative;
 
-  &:after {
-    background-color: hsla(210, 11%, 14%, 0.75);
+
+  &:before {
+    background: linear-gradient(var(--osu-bg-overlay-deg), var(--osu-bg-overaly-from-color), var(--osu-bg-overaly-to-color));
     content: '';
     inset: 0;
     position: absolute;
     z-index: 0;
   }
 
-  & > div > div,
-  & > h2 {
+  & > div {
     position: relative;
     z-index: 1;
   }
+}
+
+.osu-bg-before-dark-to-left {
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
+  --osu-bg-overaly-to-color: transparent;
+  --osu-bg-overlay-deg: 90deg;
+}
+
+.osu-bg-before-dark-to-right {
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
+  --osu-bg-overaly-to-color: transparent;
+  --osu-bg-overlay-deg: 270deg;
+}
+
+.osu-bg-before-dark-to-top {
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
+  --osu-bg-overaly-to-color: transparent;
+  --osu-bg-overlay-deg: 180deg;
+}
+
+.osu-bg-before-dark-to-bottom {
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
+  --osu-bg-overaly-to-color: transparent;
+  --osu-bg-overlay-deg: 0deg;
 }
