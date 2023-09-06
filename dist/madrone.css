@@ -15768,9 +15768,17 @@ nav.pager ul.pager__items li.pager__item a {
   float: none;
 }
 
-.align-center.media--type-image img {
+.align-center audio,
+.align-center img,
+.align-center video,
+.align-center .media-oembed-content {
   display: block;
   margin-inline: auto;
+}
+
+article.align-center.media--type-document > .field {
+  display: flex;
+  justify-content: center;
 }
 
 .media--view-mode-media-card {

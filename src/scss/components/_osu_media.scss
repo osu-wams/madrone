@@ -8,9 +8,20 @@
   }
 }
 
-.align-center.media--type-image img {
-  display: block;
-  margin-inline: auto;
+.align-center {
+  audio,
+  img,
+  video,
+  .media-oembed-content {
+    display: block;
+    margin-inline: auto;
+  }
+}
+
+// Ensure that how Documents are rendered that centering them actually works.
+article.align-center.media--type-document > .field {
+  display: flex;
+  justify-content: center;
 }
 
 .media--view-mode-media-card {
