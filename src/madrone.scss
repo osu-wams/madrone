@@ -108,8 +108,8 @@ $utilities: map-merge-multiple(
         property: box-shadow,
         class: osu-shadow,
         values: (
-          null: 0 2px 3px rgb(0 0 0 / 25%),
-          1: 0 2px 3px rgba(0, 0, 0, 0.55)
+          null: 0 2px 3px hsla(0, 0%, 0%, 0.25),
+          1: 0 2px 3px hsla(0, 0%, 0%, 0.55)
         ),
       ),
     ),
