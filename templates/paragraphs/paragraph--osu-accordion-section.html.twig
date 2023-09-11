@@ -51,7 +51,9 @@
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    <h3 class="accordion-section-header">{{ paragraph.field_p_accordion_heading.value }}</h3>
+    {% if paragraph.field_p_accordion_heading.value %}
+      <h3 class="accordion-section-header">{{ paragraph.field_p_accordion_heading.value }}</h3>
+    {% endif %}
     <div class="accordion" id="{{ paragraph_id }}">
       {% for key, item in content.field_osu_paragraph_item %}
         {% if key|first != '#' %}
