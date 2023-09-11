@@ -9,132 +9,133 @@ let originalBreadcrumbs;
 let breadcrumbs;
 let condensedCrumbs;
 window.addEventListener('load', () => {
-  const superfishMenus = [...document.querySelectorAll('ul.sf-menu')];
-  superfishMenus.map(menu => {
-    let menuId = menu.getAttribute('id');
-    let menuToggles = document.querySelectorAll(`a#${menuId}-toggle`);
-    [...menuToggles].map(menuToggle => {
-      menuToggle.addEventListener('click', event => {
-        menuClickedText(menuToggle);
-      })
-    })
-  });
-
-  // Check on page load if we need to be a mobile menu.
-  if (window.innerWidth <= 768) {
-    groupMobileMenu();
-    const groupMenu = document.querySelector('#group-content-menu');
-    if (groupMenu) {
-      groupMenu.classList.add('d-none');
-    }
-
-    mobileBreadcrumbs();
-  }
-
-  // handle group menu horizontal spacing
-  const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu.menu--level-1 li ul')];
-  groupMenus.forEach(menu => {
-    resizeMenu(menu);
-    if (!menu.classList.contains('menu--level-2')) {
-      // move the child element 100% of its width.
-      menu.style.left = '100%';
-    }
-  });
-
-  // this must come after groupMobileMenu() since .menu--level-1 changes there
-  const liList = [...document.querySelectorAll('.block-group-content-menu .menu--level-1 li')];
-  liList.forEach(li => {
-    // if li has child ul element
-    if ([...(li.children)].some(e => e.tagName === 'UL')) {
-      // add class chevron icon
-      li.classList.add('group-sub-menu');
-    }
-  });
-
-  // Add event listeners only for desktop.
-  const desktopMenuLiList = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu.menu--level-1 li')];
-  desktopMenuLiList.forEach(desktopLi => {
-    desktopLi.addEventListener('mouseenter', menuItemHoverEvent);
-    desktopLi.addEventListener('focusin', menuItemFocusinEvent);
-    desktopLi.addEventListener('mouseleave', menuItemMouseLeaveEvent);
-    desktopLi.addEventListener('focusout', menuItemMouseLeaveEvent);
-  });
-
-  // Add an overflow hidden class to the parent element if the block is inside a column class and has animations.
-  const animatedBlocks = [...document.querySelectorAll(".block.aos-init")];
-  animatedBlocks.map(block => {
-    let blockParent = block.parentElement;
-    for (let i = 0; i < blockParent.classList.length; i++) {
-      if (/col-.*/.test(blockParent.classList[i])) {
-        blockParent.classList.add('overflow-hidden');
-        break;
-      }
-    }
-  });
-
-  // ToCJS Width setter.
-  const tocJsBlocks = document.querySelectorAll(".toc-js");
-  if (tocJsBlocks.length > 0) {
-    let tocJsBlock = tocJsBlocks[0];
-    let tocJsParentBlock = tocJsBlock.closest('.block[class*="toc-js"]');
-    const tocJsParentBlockStyle = window.getComputedStyle(tocJsParentBlock);
-
-    resizeTocJsBlock(tocJsBlock);
-
-    let prevClassState = tocJsBlock.classList.contains('is-sticked');
-    // We only care about background, border, and padding.
-    let classesToCopy = [...tocJsParentBlockStyle].filter((key) => {
-      if (/^border.*/.test(key) || /^background.*/.test(key) || /^padding.*/.test(key)) {
-        return key;
-      }
+    reducedMotionCheck();
+    const superfishMenus = [...document.querySelectorAll('ul.sf-menu')];
+    superfishMenus.map(menu => {
+        let menuId = menu.getAttribute('id');
+        let menuToggles = document.querySelectorAll(`a#${menuId}-toggle`);
+        [...menuToggles].map(menuToggle => {
+            menuToggle.addEventListener('click', event => {
+                menuClickedText(menuToggle);
+            })
+        })
     });
-    // We loaded the page not at the top, so we need to copy styles down.
-    if (prevClassState) {
-      classesToCopy.forEach(cssClass => {
-        tocJsBlock.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
-      });
-      // overwrite background color and border options when loading the page midway.
-      tocJsParentBlock.style.setProperty('background-color', 'transparent', 'important');
-      tocJsParentBlock.style.setProperty('border', '0', 'important');
+
+    // Check on page load if we need to be a mobile menu.
+    if (window.innerWidth <= 768) {
+        groupMobileMenu();
+        const groupMenu = document.querySelector('#group-content-menu');
+        if (groupMenu) {
+            groupMenu.classList.add('d-none');
+        }
+
+        mobileBreadcrumbs();
     }
-    // Create a mutation observer to watch for changes, specifically when the class 'is-sticked' is added/removed.
-    let tocJsObserver = new MutationObserver(mutations => {
-      mutations.forEach(mutation => {
-        if (mutation.attributeName === 'class') {
-          let currentClassState = mutation.target.classList.contains('is-sticked');
-          if (prevClassState !== currentClassState) {
-            prevClassState = currentClassState;
-          }
-          if (prevClassState) {
+
+    // handle group menu horizontal spacing
+    const groupMenus = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu.menu--level-1 li ul')];
+    groupMenus.forEach(menu => {
+        resizeMenu(menu);
+        if (!menu.classList.contains('menu--level-2')) {
+            // move the child element 100% of its width.
+            menu.style.left = '100%';
+        }
+    });
+
+    // this must come after groupMobileMenu() since .menu--level-1 changes there
+    const liList = [...document.querySelectorAll('.block-group-content-menu .menu--level-1 li')];
+    liList.forEach(li => {
+        // if li has child ul element
+        if ([...(li.children)].some(e => e.tagName === 'UL')) {
+            // add class chevron icon
+            li.classList.add('group-sub-menu');
+        }
+    });
+
+    // Add event listeners only for desktop.
+    const desktopMenuLiList = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu.menu--level-1 li')];
+    desktopMenuLiList.forEach(desktopLi => {
+        desktopLi.addEventListener('mouseenter', menuItemHoverEvent);
+        desktopLi.addEventListener('focusin', menuItemFocusinEvent);
+        desktopLi.addEventListener('mouseleave', menuItemMouseLeaveEvent);
+        desktopLi.addEventListener('focusout', menuItemMouseLeaveEvent);
+    });
+
+    // Add an overflow hidden class to the parent element if the block is inside a column class and has animations.
+    const animatedBlocks = [...document.querySelectorAll(".block.aos-init")];
+    animatedBlocks.map(block => {
+        let blockParent = block.parentElement;
+        for (let i = 0; i < blockParent.classList.length; i++) {
+            if (/col-.*/.test(blockParent.classList[i])) {
+                blockParent.classList.add('overflow-hidden');
+                break;
+            }
+        }
+    });
+
+    // ToCJS Width setter.
+    const tocJsBlocks = document.querySelectorAll(".toc-js");
+    if (tocJsBlocks.length > 0) {
+        let tocJsBlock = tocJsBlocks[0];
+        let tocJsParentBlock = tocJsBlock.closest('.block[class*="toc-js"]');
+        const tocJsParentBlockStyle = window.getComputedStyle(tocJsParentBlock);
+
+        resizeTocJsBlock(tocJsBlock);
+
+        let prevClassState = tocJsBlock.classList.contains('is-sticked');
+        // We only care about background, border, and padding.
+        let classesToCopy = [...tocJsParentBlockStyle].filter((key) => {
+            if (/^border.*/.test(key) || /^background.*/.test(key) || /^padding.*/.test(key)) {
+                return key;
+            }
+        });
+        // We loaded the page not at the top, so we need to copy styles down.
+        if (prevClassState) {
             classesToCopy.forEach(cssClass => {
-              tocJsBlock.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
+                tocJsBlock.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
             });
-            // Set the margin left and to stop the block from jumping and set the background to transparent on the
-            // parent block to "hide" it when scrolled.
-            tocJsParentBlock.style.setProperty('margin-left', `-${tocJsParentBlockStyle.paddingLeft}`, 'important')
+            // overwrite background color and border options when loading the page midway.
             tocJsParentBlock.style.setProperty('background-color', 'transparent', 'important');
             tocJsParentBlock.style.setProperty('border', '0', 'important');
-          } else {
-            classesToCopy.forEach(cssClass => {
-              tocJsBlock.style.removeProperty(cssClass);
-            });
-            // Clear all classes we set.
-            tocJsParentBlock.style.removeProperty('background-color');
-            tocJsParentBlock.style.removeProperty('border');
-            tocJsParentBlock.style.removeProperty('margin-left');
-          }
         }
-      });
-    });
-    tocJsObserver.observe(tocJsBlock, {attributes: true, childList: false, characterData: false});
-  }
-  /* Simple Popup Blocks Module.
-   * Set Inline CSS Variables for margin-left.
-   */
-  document.querySelectorAll('.simple-popup-blocks-global .spb-popup-main-wrapper').forEach(osuSpb => {
-    osuSpb.style.setProperty('--spb-width', osuSpb.style.getPropertyValue('width'));
-    osuSpb.style.setProperty('--spb-margin-left', osuSpb.style.getPropertyValue('margin-left'));
-  })
+        // Create a mutation observer to watch for changes, specifically when the class 'is-sticked' is added/removed.
+        let tocJsObserver = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.attributeName === 'class') {
+                    let currentClassState = mutation.target.classList.contains('is-sticked');
+                    if (prevClassState !== currentClassState) {
+                        prevClassState = currentClassState;
+                    }
+                    if (prevClassState) {
+                        classesToCopy.forEach(cssClass => {
+                            tocJsBlock.style.setProperty(cssClass, tocJsParentBlockStyle.getPropertyValue(cssClass), tocJsParentBlockStyle.getPropertyPriority(cssClass));
+                        });
+                        // Set the margin left and to stop the block from jumping and set the background to transparent on the
+                        // parent block to "hide" it when scrolled.
+                        tocJsParentBlock.style.setProperty('margin-left', `-${tocJsParentBlockStyle.paddingLeft}`, 'important')
+                        tocJsParentBlock.style.setProperty('background-color', 'transparent', 'important');
+                        tocJsParentBlock.style.setProperty('border', '0', 'important');
+                    } else {
+                        classesToCopy.forEach(cssClass => {
+                            tocJsBlock.style.removeProperty(cssClass);
+                        });
+                        // Clear all classes we set.
+                        tocJsParentBlock.style.removeProperty('background-color');
+                        tocJsParentBlock.style.removeProperty('border');
+                        tocJsParentBlock.style.removeProperty('margin-left');
+                    }
+                }
+            });
+        });
+        tocJsObserver.observe(tocJsBlock, {attributes: true, childList: false, characterData: false});
+    }
+    /* Simple Popup Blocks Module.
+     * Set Inline CSS Variables for margin-left.
+     */
+    document.querySelectorAll('.simple-popup-blocks-global .spb-popup-main-wrapper').forEach(osuSpb => {
+        osuSpb.style.setProperty('--spb-width', osuSpb.style.getPropertyValue('width'));
+        osuSpb.style.setProperty('--spb-margin-left', osuSpb.style.getPropertyValue('margin-left'));
+    })
 });
 
 /**
@@ -142,33 +143,33 @@ window.addEventListener('load', () => {
  * @param sfToggle
  */
 function menuClickedText(sfToggle) {
-  if (sfToggle.classList.contains('sf-expanded')) {
-    let menuToggleText = sfToggle.innerHTML;
-    sfToggle.innerHTML = `<span class="madrone-mobile-menu-close">Close&nbsp;</span>${menuToggleText}`
-  } else {
-    sfToggle.querySelector('span.madrone-mobile-menu-close').remove()
-  }
+    if (sfToggle.classList.contains('sf-expanded')) {
+        let menuToggleText = sfToggle.innerHTML;
+        sfToggle.innerHTML = `<span class="madrone-mobile-menu-close">Close&nbsp;</span>${menuToggleText}`
+    } else {
+        sfToggle.querySelector('span.madrone-mobile-menu-close').remove()
+    }
 }
 
 /**
  * Create the mobile menu cloning the exiting menu.
  */
 function groupMobileMenu() {
-  // Create menu top level bucket
-  const menus = document.querySelectorAll('ul#group-content-menu');
-  menus.forEach((menu) => {
-    createMenuBucket(menu);
-  });
+    // Create menu top level bucket
+    const menus = document.querySelectorAll('ul#group-content-menu');
+    menus.forEach((menu) => {
+        createMenuBucket(menu);
+    });
 
-  const liList = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu-accordion .menu--level-1 li')];
-  liList.forEach(li => {
-    // if li has child ul element
-    if ([...(li.children)].some(e => e.tagName === 'UL')) {
-      cloneLi(li);
+    const liList = [...document.querySelectorAll('.block-group-content-menu ul#group-content-menu-accordion .menu--level-1 li')];
+    liList.forEach(li => {
+        // if li has child ul element
+        if ([...(li.children)].some(e => e.tagName === 'UL')) {
+            cloneLi(li);
 
-      li.children[0].addEventListener('click', menuItemClickEvent);
-    }
-  });
+            li.children[0].addEventListener('click', menuItemClickEvent);
+        }
+    });
 }
 
 /**
@@ -176,30 +177,30 @@ function groupMobileMenu() {
  * @param menu
  */
 function createMenuBucket(menu) {
-  // Do a deep clone cleaning all extra styles.
-  const deepMenuClone = cleanDeepClone(menu);
-  // Create new top level ul.
-  const topUl = document.createElement('ul');
-  topUl.id = 'group-content-menu-accordion';
-  topUl.classList = menu.classList;
-  topUl.classList.remove('menu--level-1');
-  topUl.classList.add('menu--level-0', 'group-mobile-menu');
+    // Do a deep clone cleaning all extra styles.
+    const deepMenuClone = cleanDeepClone(menu);
+    // Create new top level ul.
+    const topUl = document.createElement('ul');
+    topUl.id = 'group-content-menu-accordion';
+    topUl.classList = menu.classList;
+    topUl.classList.remove('menu--level-1');
+    topUl.classList.add('menu--level-0', 'group-mobile-menu');
 
-  const topLi = document.createElement('li');
-  topLi.classList = menu.children[0].classList;
+    const topLi = document.createElement('li');
+    topLi.classList = menu.children[0].classList;
 
-  const topA = document.createElement('a');
-  topA.classList = menu.children[0].children[0].classList;
-  topA.classList.add('group-mobile-main-a');
-  topA.innerHTML = 'Menu';
+    const topA = document.createElement('a');
+    topA.classList = menu.children[0].children[0].classList;
+    topA.classList.add('group-mobile-main-a');
+    topA.innerHTML = 'Menu';
 
-  topLi.appendChild(topA);
-  topUl.appendChild(topLi);
-  menu.parentNode.insertBefore(topUl, menu);
-  // Append the cloned menu so we can target it with hide/show.
-  topLi.appendChild(deepMenuClone);
+    topLi.appendChild(topA);
+    topUl.appendChild(topLi);
+    menu.parentNode.insertBefore(topUl, menu);
+    // Append the cloned menu so we can target it with hide/show.
+    topLi.appendChild(deepMenuClone);
 
-  topA.addEventListener('click', menuItemClickEvent);
+    topA.addEventListener('click', menuItemClickEvent);
 }
 
 /**
@@ -208,13 +209,13 @@ function createMenuBucket(menu) {
  * @returns Node
  */
 function cleanDeepClone(menu) {
-  const deepClone = menu.cloneNode(true);
-  deepClone.removeAttribute("id");
-  const deepCloneSubMenus = deepClone.querySelectorAll('ul');
-  deepCloneSubMenus.forEach(deepCloneSubMenu => {
-    deepCloneSubMenu.style.left = null;
-  })
-  return deepClone;
+    const deepClone = menu.cloneNode(true);
+    deepClone.removeAttribute("id");
+    const deepCloneSubMenus = deepClone.querySelectorAll('ul');
+    deepCloneSubMenus.forEach(deepCloneSubMenu => {
+        deepCloneSubMenu.style.left = null;
+    })
+    return deepClone;
 }
 
 /**
@@ -222,20 +223,20 @@ function cleanDeepClone(menu) {
  * @param event
  */
 function menuItemClickEvent(event) {
-  // prevent clicks from navigating to the html <a> element.
-  event.preventDefault();
+    // prevent clicks from navigating to the html <a> element.
+    event.preventDefault();
 
-  // add styling and change text when clicked
-  if (this.parentNode.classList.contains('group-menu-clicked')) {
-    this.parentNode.classList.remove('group-menu-clicked');
+    // add styling and change text when clicked
+    if (this.parentNode.classList.contains('group-menu-clicked')) {
+        this.parentNode.classList.remove('group-menu-clicked');
 
-    this.textContent = this.textContent.replace('Close ', '');
-  } else {
-    this.parentNode.classList.add('group-menu-clicked');
+        this.textContent = this.textContent.replace('Close ', '');
+    } else {
+        this.parentNode.classList.add('group-menu-clicked');
 
-    const menuToggleText = this.textContent;
-    this.textContent = `Close ${menuToggleText}`;
-  }
+        const menuToggleText = this.textContent;
+        this.textContent = `Close ${menuToggleText}`;
+    }
 }
 
 /**
@@ -243,12 +244,12 @@ function menuItemClickEvent(event) {
  * @param event
  */
 function menuItemHoverEvent(event) {
-  if (this.classList.contains('group-menu-hover') && this.mouseLeaveTimeout) {
-    // prevent menu from hiding if the mouse leaves only for a moment
-    clearTimeout(this.mouseLeaveTimeout);
-  } else {
-    this.classList.add('group-menu-hover');
-  }
+    if (this.classList.contains('group-menu-hover') && this.mouseLeaveTimeout) {
+        // prevent menu from hiding if the mouse leaves only for a moment
+        clearTimeout(this.mouseLeaveTimeout);
+    } else {
+        this.classList.add('group-menu-hover');
+    }
 }
 
 /**
@@ -256,9 +257,9 @@ function menuItemHoverEvent(event) {
  * @param event
  */
 function menuItemFocusinEvent(event) {
-  if (!this.classList.contains('group-menu-hover')) {
-    this.classList.add('group-menu-hover');
-  }
+    if (!this.classList.contains('group-menu-hover')) {
+        this.classList.add('group-menu-hover');
+    }
 }
 
 /**
@@ -266,18 +267,18 @@ function menuItemFocusinEvent(event) {
  * @param event
  */
 function menuItemMouseLeaveEvent(event) {
-  const groupMenu = document.querySelectorAll('.block-group-content-menu')[0];
-  if (this.classList.contains('group-menu-hover') && !event.currentTarget.contains(event.relatedTarget)) {
-    // remove hover immediately if next target is still in the menu
-    // otherwise wait a bit
-    if (groupMenu.contains(event.relatedTarget)) {
-      this.classList.remove('group-menu-hover');
-    } else {
-      this.mouseLeaveTimeout = setTimeout(() => {
-        this.classList.remove('group-menu-hover');
-      }, 800);
+    const groupMenu = document.querySelectorAll('.block-group-content-menu')[0];
+    if (this.classList.contains('group-menu-hover') && !event.currentTarget.contains(event.relatedTarget)) {
+        // remove hover immediately if next target is still in the menu
+        // otherwise wait a bit
+        if (groupMenu.contains(event.relatedTarget)) {
+            this.classList.remove('group-menu-hover');
+        } else {
+            this.mouseLeaveTimeout = setTimeout(() => {
+                this.classList.remove('group-menu-hover');
+            }, 800);
+        }
     }
-  }
 }
 
 /**
@@ -285,10 +286,10 @@ function menuItemMouseLeaveEvent(event) {
  * @param li
  */
 function cloneLi(li) {
-  const clonedA = li.children[0].cloneNode(true);
-  const clonedLi = document.createElement('li');
-  clonedLi.appendChild(clonedA);
-  li.children[1].prepend(clonedLi);
+    const clonedA = li.children[0].cloneNode(true);
+    const clonedLi = document.createElement('li');
+    clonedLi.appendChild(clonedA);
+    li.children[1].prepend(clonedLi);
 }
 
 /**
@@ -296,49 +297,49 @@ function cloneLi(li) {
  * @returns {RegExpMatchArray}
  */
 function isMobile() {
-  return navigator.userAgent.match(/(android|bb\d+|meego)|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i);
+    return navigator.userAgent.match(/(android|bb\d+|meego)|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i);
 }
 
 // Add event listener to browser resize.
 window.addEventListener('resize', (event) => {
-  const tocJsBlocks = document.querySelectorAll(".toc-js");
-  if (tocJsBlocks.length > 0) {
-    const tocJsBlock = tocJsBlocks[0];
-    clearTimeout(tocJsTimeout);
-    tocJsTimeout = setTimeout(resizeTocJsBlock(tocJsBlock), DELAY);
-  }
-  if (window.innerWidth <= 768) {
-    // only add mobile menu if it doesn't already exist.
-    let groupMobileId = document.querySelector('#group-content-menu-accordion');
-    let groupMenuId = document.querySelector('#group-content-menu');
-    if (groupMobileId === null) {
-      groupMobileMenu();
-      if (groupMenuId) {
-        groupMenuId.classList.add('d-none');
-      }
+    const tocJsBlocks = document.querySelectorAll(".toc-js");
+    if (tocJsBlocks.length > 0) {
+        const tocJsBlock = tocJsBlocks[0];
+        clearTimeout(tocJsTimeout);
+        tocJsTimeout = setTimeout(resizeTocJsBlock(tocJsBlock), DELAY);
+    }
+    if (window.innerWidth <= 768) {
+        // only add mobile menu if it doesn't already exist.
+        let groupMobileId = document.querySelector('#group-content-menu-accordion');
+        let groupMenuId = document.querySelector('#group-content-menu');
+        if (groupMobileId === null) {
+            groupMobileMenu();
+            if (groupMenuId) {
+                groupMenuId.classList.add('d-none');
+            }
+        } else {
+
+            groupMenuId.classList.add('d-none');
+            groupMobileId.classList.remove('d-none');
+            groupMobileId.classList.add('d-flex');
+        }
+
+        mobileBreadcrumbs();
     } else {
+        // add back desktop menu if mobile menu was added.
+        let groupMobileId = document.querySelector('#group-content-menu-accordion');
+        let groupMenuId = document.querySelector('#group-content-menu');
+        if (groupMobileId !== null) {
+            groupMobileId.classList.remove('d-flex');
+            groupMobileId.classList.add('d-none');
+            groupMenuId.classList.remove('d-none');
+            groupMenuId.classList.add('d-flex');
+        }
 
-      groupMenuId.classList.add('d-none');
-      groupMobileId.classList.remove('d-none');
-      groupMobileId.classList.add('d-flex');
+        if (condensedCrumbs) {
+            resetBreadCrumbs();
+        }
     }
-
-    mobileBreadcrumbs();
-  } else {
-    // add back desktop menu if mobile menu was added.
-    let groupMobileId = document.querySelector('#group-content-menu-accordion');
-    let groupMenuId = document.querySelector('#group-content-menu');
-    if (groupMobileId !== null) {
-      groupMobileId.classList.remove('d-flex');
-      groupMobileId.classList.add('d-none');
-      groupMenuId.classList.remove('d-none');
-      groupMenuId.classList.add('d-flex');
-    }
-
-    if (condensedCrumbs) {
-      resetBreadCrumbs();
-    }
-  }
 });
 
 /**
@@ -346,21 +347,21 @@ window.addEventListener('resize', (event) => {
  * @param menu
  */
 function resizeMenu(menu) {
-  menu.style.width = "auto";
-  let menuUlMaxLength = 0;
-  menu.querySelectorAll('li').forEach(menuLi => {
-    menuLi.setAttribute('style', 'white-space:nowrap;');
-    let largestItem = Math.ceil(menuLi.clientWidth / fontSize);
-    if (largestItem < smallestEm) {
-      menuUlMaxLength = smallestEm;
-    } else if (largestItem > largestEm) {
-      menuUlMaxLength = largestEm;
-    } else {
-      menuUlMaxLength = largestItem;
-    }
-    menuLi.setAttribute('style', '');
-  });
-  menu.style.width = `${menuUlMaxLength}em`;
+    menu.style.width = "auto";
+    let menuUlMaxLength = 0;
+    menu.querySelectorAll('li').forEach(menuLi => {
+        menuLi.setAttribute('style', 'white-space:nowrap;');
+        let largestItem = Math.ceil(menuLi.clientWidth / fontSize);
+        if (largestItem < smallestEm) {
+            menuUlMaxLength = smallestEm;
+        } else if (largestItem > largestEm) {
+            menuUlMaxLength = largestEm;
+        } else {
+            menuUlMaxLength = largestItem;
+        }
+        menuLi.setAttribute('style', '');
+    });
+    menu.style.width = `${menuUlMaxLength}em`;
 }
 
 /**
@@ -370,46 +371,46 @@ function resizeMenu(menu) {
  * @return boolean
  */
 function resizeTocJsBlock(block) {
-  let closestParentBlock = block.closest('.block[class*="toc-js"]');
-  const parentBlockStyle = window.getComputedStyle(closestParentBlock);
-  const finalPadding = parseFloat(parentBlockStyle.paddingLeft) + parseFloat(parentBlockStyle.paddingRight);
-  const finalMargin = parseFloat(parentBlockStyle.marginLeft) + parseFloat(parentBlockStyle.marginRight);
-  const finalWidth = closestParentBlock.clientWidth - finalMargin - finalPadding;
-  block.style.width = `${finalWidth}px`;
-  return true;
+    let closestParentBlock = block.closest('.block[class*="toc-js"]');
+    const parentBlockStyle = window.getComputedStyle(closestParentBlock);
+    const finalPadding = parseFloat(parentBlockStyle.paddingLeft) + parseFloat(parentBlockStyle.paddingRight);
+    const finalMargin = parseFloat(parentBlockStyle.marginLeft) + parseFloat(parentBlockStyle.marginRight);
+    const finalWidth = closestParentBlock.clientWidth - finalMargin - finalPadding;
+    block.style.width = `${finalWidth}px`;
+    return true;
 }
 
 /**
  * Condense breadcrumbs list when >= 3 pages deep
  */
 function mobileBreadcrumbs() {
-  if (!breadcrumbs) {
-    breadcrumbs = document.querySelector('nav ol.breadcrumb');
-    if (breadcrumbs !== null) {
-      originalBreadcrumbs = breadcrumbs.cloneNode(true);
-      truncateCrumbs();
-    }
-  }
-  if (!originalBreadcrumbs && breadcrumbs !== null) {
-    originalBreadcrumbs = breadcrumbs.cloneNode(true);
-  }
-  if (breadcrumbs) {
-    const numCrumbs = breadcrumbs.children.length;
-    if (numCrumbs >= 3) {
-      if (!condensedCrumbs) {
-        createCondensedCrumbs(breadcrumbs);
-      } else {
-        // if originalBreadCrumbs has a parentNode then it is in the DOM, if not breadcrumbs is in DOM
-        if (originalBreadcrumbs.parentNode) {
-          originalBreadcrumbs.after(condensedCrumbs);
-          originalBreadcrumbs.remove();
-        } else {
-          breadcrumbs.after(condensedCrumbs);
+    if (!breadcrumbs) {
+        breadcrumbs = document.querySelector('nav ol.breadcrumb');
+        if (breadcrumbs !== null) {
+            originalBreadcrumbs = breadcrumbs.cloneNode(true);
+            truncateCrumbs();
         }
-      }
-      breadcrumbs.remove();
     }
-  }
+    if (!originalBreadcrumbs && breadcrumbs !== null) {
+        originalBreadcrumbs = breadcrumbs.cloneNode(true);
+    }
+    if (breadcrumbs) {
+        const numCrumbs = breadcrumbs.children.length;
+        if (numCrumbs >= 3) {
+            if (!condensedCrumbs) {
+                createCondensedCrumbs(breadcrumbs);
+            } else {
+                // if originalBreadCrumbs has a parentNode then it is in the DOM, if not breadcrumbs is in DOM
+                if (originalBreadcrumbs.parentNode) {
+                    originalBreadcrumbs.after(condensedCrumbs);
+                    originalBreadcrumbs.remove();
+                } else {
+                    breadcrumbs.after(condensedCrumbs);
+                }
+            }
+            breadcrumbs.remove();
+        }
+    }
 }
 
 /**
@@ -418,14 +419,14 @@ function mobileBreadcrumbs() {
  * @param {<ol> of breadcrumbs} breadcrumbs
  */
 function truncateCrumbs() {
-  const TEXT_LIMIT = 30;
-  [...breadcrumbs.children].forEach(crumb => {
-    if (crumb.children[0] && crumb.children[0].textContent.length > TEXT_LIMIT) {
-      crumb.children[0].textContent = `${crumb.children[0].textContent.substring(0, TEXT_LIMIT)}...`;
-    } else if (crumb.children.length === 0 && crumb.textContent.trim().length > TEXT_LIMIT) {
-      crumb.textContent = `${crumb.textContent.trim().substring(0, TEXT_LIMIT)}...`;
-    }
-  });
+    const TEXT_LIMIT = 30;
+    [...breadcrumbs.children].forEach(crumb => {
+        if (crumb.children[0] && crumb.children[0].textContent.length > TEXT_LIMIT) {
+            crumb.children[0].textContent = `${crumb.children[0].textContent.substring(0, TEXT_LIMIT)}...`;
+        } else if (crumb.children.length === 0 && crumb.textContent.trim().length > TEXT_LIMIT) {
+            crumb.textContent = `${crumb.textContent.trim().substring(0, TEXT_LIMIT)}...`;
+        }
+    });
 }
 
 /**
@@ -434,29 +435,29 @@ function truncateCrumbs() {
  * @param {<ol> of breadcrumbs} breadcrumbs
  */
 function createCondensedCrumbs(breadcrumbs) {
-  condensedCrumbs = document.createElement('ol');
-  condensedCrumbs.classList = ['breadcrumb breadcrumb-condensed'];
-  condensedCrumbs.appendChild(breadcrumbs.children[breadcrumbs.children.length - 2].cloneNode(true));
+    condensedCrumbs = document.createElement('ol');
+    condensedCrumbs.classList = ['breadcrumb breadcrumb-condensed'];
+    condensedCrumbs.appendChild(breadcrumbs.children[breadcrumbs.children.length - 2].cloneNode(true));
 
-  const expandCrumb = createCrumb('(expand)', breadcrumbs.children[0].classList, expandBreadCrumbs);
-  condensedCrumbs.children[0].before(expandCrumb);
-  const condenseCrumb = createCrumb('(condense)', [], condenseBreadCrumbs);
-  breadcrumbs.appendChild(condenseCrumb);
+    const expandCrumb = createCrumb('(expand)', breadcrumbs.children[0].classList, expandBreadCrumbs);
+    condensedCrumbs.children[0].before(expandCrumb);
+    const condenseCrumb = createCrumb('(condense)', [], condenseBreadCrumbs);
+    breadcrumbs.appendChild(condenseCrumb);
 
-  breadcrumbs.after(condensedCrumbs)
+    breadcrumbs.after(condensedCrumbs)
 }
 
 function createCrumb(textContent, classList, onclick) {
-  const crumb = document.createElement('li');
-  crumb.classList = classList;
+    const crumb = document.createElement('li');
+    crumb.classList = classList;
 
-  // create <a> tag with onclick event
-  crumb.appendChild(document.createElement('a'));
-  crumb.children[0].textContent = textContent;
-  crumb.children[0].href = '';
-  crumb.children[0].onclick = onclick;
+    // create <a> tag with onclick event
+    crumb.appendChild(document.createElement('a'));
+    crumb.children[0].textContent = textContent;
+    crumb.children[0].href = '';
+    crumb.children[0].onclick = onclick;
 
-  return crumb;
+    return crumb;
 }
 
 /**
@@ -465,14 +466,14 @@ function createCrumb(textContent, classList, onclick) {
  * @param {event} e click event
  */
 function expandBreadCrumbs(e) {
-  // not always called from an event
-  if (e) {
-    e.preventDefault();
-  }
+    // not always called from an event
+    if (e) {
+        e.preventDefault();
+    }
 
-  condensedCrumbs.after(breadcrumbs);
-  condensedCrumbs.remove();
-};
+    condensedCrumbs.after(breadcrumbs);
+    condensedCrumbs.remove();
+}
 
 /**
  * Shows condensed breadcrumb list and hides regular breadcrumb list
@@ -480,22 +481,35 @@ function expandBreadCrumbs(e) {
  * @param {event} e click event
  */
 function condenseBreadCrumbs(e) {
-  // not always called from an event
-  if (e) {
-    e.preventDefault();
-  }
+    // not always called from an event
+    if (e) {
+        e.preventDefault();
+    }
 
-  breadcrumbs.after(condensedCrumbs);
-  breadcrumbs.remove();
-};
+    breadcrumbs.after(condensedCrumbs);
+    breadcrumbs.remove();
+}
 
 /**
  * Sets breadcrumbs back to their original settings for desktop view
  */
 function resetBreadCrumbs() {
-  if (originalBreadcrumbs) {
+    if (originalBreadcrumbs) {
 
-    condensedCrumbs.after(originalBreadcrumbs);
-    condensedCrumbs.remove();
-  }
+        condensedCrumbs.after(originalBreadcrumbs);
+        condensedCrumbs.remove();
+    }
+}
+
+/**
+ * Check if user requests reduced motion and pause all videos.
+ */
+function reducedMotionCheck() {
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const videoList = document.getElementsByTagName("video");
+    if (motionQuery.matches) {
+        for (let i = 0; i < videoList.length; i++) {
+            videoList[i].pause();
+        }
+    }
 }
