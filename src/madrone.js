@@ -508,6 +508,11 @@ function reducedMotionCheck() {
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const videoList = document.getElementsByTagName("video");
     if (motionQuery.matches) {
+        // If the AOS library is loaded we probably have an animation.
+        if (typeof AOS !== "undefined") {
+            // This will trigger all animations to be disabled and everything should show up.
+            AOS.init({disable: true});
+        }
         for (let i = 0; i < videoList.length; i++) {
             videoList[i].pause();
         }
