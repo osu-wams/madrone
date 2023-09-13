@@ -51,7 +51,6 @@ function madrone_preprocess_html(&$variables) {
     'madroneThemeColorDark',
   ];
 
-  $variables['head_title'][] = 'Oregon State University';
   // Check if the footer doesn't have any blocks and creates an empty element
   // to force the footer to always render.
   if (empty($variables['page']['footer'])) {
