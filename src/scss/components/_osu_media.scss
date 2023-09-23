@@ -61,6 +61,16 @@ figure.figure {
   }
 }
 
+// Ensure that Video's maintain aspect ratio.
+article.media--view-mode-video-720 {
+  iframe:where(.media-oembed-content) {
+    aspect-ratio: 16 / 9;
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
 .osu-media-card {
   background-color: $page-bg-default;
   border-radius: 10px;
