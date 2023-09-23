@@ -15,11 +15,6 @@ a {
     color: $bucktoothwhite;
   }
 
-  &.nav-link:hover,
-  &.nav-link:focus {
-    background: $paddletailblack;
-  }
-
   &.button {
     @extend .btn;
     @extend .rounded-pill;
