@@ -20,12 +20,23 @@
           display: none;
         }
 
-        .dropbutton-action a {
-          color: $body-color;
+        .dropbutton-action {
+          &:first-child {
+            background: unset;
+            margin-inline: unset;
+            padding-inline: unset;
+          }
+
+          & a {
+
+            color: $body-color;
+          }
         }
 
         .secondary-action {
           display: block;
+          margin: unset;
+          padding: unset;
         }
       }
     }

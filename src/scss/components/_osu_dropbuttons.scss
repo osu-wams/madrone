@@ -1,28 +1,10 @@
 .dropbutton-wrapper {
   .dropbutton-widget {
-    background-color: $osuorange;
-    color: $bucktoothwhite;
-    padding: 0.25em 0.5em;
-    padding-right: 2.5em !important;
-
-    &:hover,
-    &:focus-within,
-    &:focus {
-      background-color: $bucktoothwhite;
-      color: $paddletailblack;
-
-      .dropbutton {
-        .dropbutton-action {
-          a {
-            color: $paddletailblack;
-          }
-        }
-      }
-    }
-
     .dropbutton {
+      position: relative;
+
       .dropbutton-toggle {
-        height: 2em;
+        height: 2rem;
         width: 2em;
 
         & > button {
@@ -34,9 +16,23 @@
       }
 
       .dropbutton-action {
-        * {
-          color: $bucktoothwhite;
-          white-space: nowrap;
+        &:first-child {
+          background: $osuorange;
+          margin-inline-end: 2.3rem;
+          padding-inline: 1rem;
+
+          & a {
+            color: $bucktoothwhite;
+          }
+        }
+
+        &.secondary-action {
+          background: $bucktoothwhite;
+          padding-inline-start: 1rem;
+
+          & a {
+            color: $paddletailblack;
+          }
         }
 
         a {

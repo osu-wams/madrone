@@ -15633,29 +15633,30 @@ a.button:focus,
   box-shadow: none;
 }
 
-.dropbutton-wrapper .dropbutton-widget {
-  background-color: #d73f09;
-  color: #fff;
-  padding: 0.25em 0.5em;
-  padding-right: 2.5em !important;
-}
-.dropbutton-wrapper .dropbutton-widget:hover, .dropbutton-wrapper .dropbutton-widget:focus-within, .dropbutton-wrapper .dropbutton-widget:focus {
-  background-color: #fff;
-  color: #212529;
-}
-.dropbutton-wrapper .dropbutton-widget:hover .dropbutton .dropbutton-action a, .dropbutton-wrapper .dropbutton-widget:focus-within .dropbutton .dropbutton-action a, .dropbutton-wrapper .dropbutton-widget:focus .dropbutton .dropbutton-action a {
-  color: #212529;
+.dropbutton-wrapper .dropbutton-widget .dropbutton {
+  position: relative;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle {
-  height: 2em;
+  height: 2rem;
   width: 2em;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:hover, .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:focus-within {
   box-shadow: inset 0 0 0 2px #d73f09;
 }
-.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action * {
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child {
+  background: #d73f09;
+  margin-inline-end: 2.3rem;
+  padding-inline: 1rem;
+}
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a {
   color: #fff;
-  white-space: nowrap;
+}
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action.secondary-action {
+  background: #fff;
+  padding-inline-start: 1rem;
+}
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action.secondary-action a {
+  color: #212529;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a {
   text-decoration-color: #d73f09;
@@ -15694,6 +15695,12 @@ a.button:focus,
 .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-toggle {
   display: none;
 }
+.block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child,
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action:first-child {
+  background: unset;
+  margin-inline: unset;
+  padding-inline: unset;
+}
 .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action a,
 .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action a {
   color: #423e3c;
@@ -15701,6 +15708,8 @@ a.button:focus,
 .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .secondary-action,
 .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .secondary-action {
   display: block;
+  margin: unset;
+  padding: unset;
 }
 
 .block--type-osu-card.block--view-mode-full-image .block-field-blockblock-contentosu-cardfield-osu-card-image img {
