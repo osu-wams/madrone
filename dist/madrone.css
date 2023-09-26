@@ -15634,31 +15634,46 @@ a.button:focus,
 }
 
 .dropbutton-wrapper .dropbutton-widget .dropbutton {
+  overflow: unset;
   position: relative;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle {
   height: 2rem;
   width: 2em;
 }
-.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:hover, .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:focus-within {
-  box-shadow: inset 0 0 0 2px #d73f09;
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button {
+  border: 1px solid #d73f09;
+}
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:hover {
+  box-shadow: inset 0 0 0 1px #d73f09;
+}
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:focus-within {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #d73f09;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child {
   background: #d73f09;
   margin-inline-end: 2.3rem;
-  padding-inline: 1rem;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a {
   color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  width: 100%;
+}
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a:hover {
+  background-color: #212529;
+}
+.dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #d73f09;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action.secondary-action {
   background: #fff;
-  padding-inline-start: 1rem;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action.secondary-action a {
   color: #212529;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a {
+  padding-inline: 1rem;
   text-decoration-color: #d73f09;
   text-decoration-thickness: 13%;
 }
@@ -15701,9 +15716,23 @@ a.button:focus,
   margin-inline: unset;
   padding-inline: unset;
 }
+.block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a,
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action:first-child a {
+  text-decoration: underline;
+  text-decoration-color: #d73f09;
+  text-decoration-thickness: 13%;
+}
+.block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a:hover, .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a:focus,
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action:first-child a:hover,
+.block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action:first-child a:focus {
+  background-color: unset;
+  box-shadow: none;
+  text-decoration: none;
+}
 .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action a,
 .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action a {
   color: #423e3c;
+  padding-inline: 0;
 }
 .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .secondary-action,
 .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .secondary-action {

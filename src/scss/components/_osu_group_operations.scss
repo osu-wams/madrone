@@ -1,3 +1,5 @@
+@import "../abstracts/osu_variables";
+
 .block-group-operations {
   margin-bottom: 1rem;
 
@@ -25,11 +27,25 @@
             background: unset;
             margin-inline: unset;
             padding-inline: unset;
+
+            a {
+              text-decoration: underline;
+              text-decoration-color: rgba($osuorange, 1);
+              text-decoration-thickness: 13%;
+
+              &:hover,
+              &:focus {
+                background-color: unset;
+                box-shadow: none;
+                text-decoration: none;
+              }
+            }
+
           }
 
           & a {
-
             color: $body-color;
+            padding-inline: 0;
           }
         }
 

@@ -1,6 +1,9 @@
+@import "../abstracts/osu_variables";
+
 .dropbutton-wrapper {
   .dropbutton-widget {
     .dropbutton {
+      overflow: unset;
       position: relative;
 
       .dropbutton-toggle {
@@ -8,9 +11,14 @@
         width: 2em;
 
         & > button {
-          &:hover,
+          border: 1px solid $osuorange;
+
+          &:hover {
+            box-shadow: inset 0 0 0 1px rgba($osuorange, 1);
+          }
+
           &:focus-within {
-            box-shadow: inset 0 0 0 2px rgba($osuorange, 1);
+            box-shadow: 0 0 0 2px $bucktoothwhite, 0 0 0 5px $osuorange;
           }
         }
       }
@@ -19,16 +27,25 @@
         &:first-child {
           background: $osuorange;
           margin-inline-end: 2.3rem;
-          padding-inline: 1rem;
 
           & a {
             color: $bucktoothwhite;
+            text-decoration: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out;
+            width: 100%;
+
+            &:hover {
+              background-color: $paddletailblack;
+            }
+
+            &:focus {
+              box-shadow: 0 0 0 2px $bucktoothwhite, 0 0 0 5px $osuorange;
+            }
           }
         }
 
         &.secondary-action {
           background: $bucktoothwhite;
-          padding-inline-start: 1rem;
 
           & a {
             color: $paddletailblack;
@@ -36,6 +53,7 @@
         }
 
         a {
+          padding-inline: 1rem;
           text-decoration-color: rgba($osuorange, 1);
           text-decoration-thickness: 13%;
 
