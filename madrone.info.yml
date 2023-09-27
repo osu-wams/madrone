@@ -3,7 +3,7 @@ description: 'OSU Theme of the future'
 core_version_requirement: ^9 || ^10
 type: theme
 dependencies:
-version: '1.2.11'
+version: '1.2.12'
 base theme: stable9
 logo: logo.svg
 screenshot: madrone.png
