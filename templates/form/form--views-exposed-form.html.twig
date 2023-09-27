@@ -12,6 +12,8 @@
 #}
 {% set form_classes = [
   'mt-3'
+  'd-flex',
+  'justify-content-center',
 ] %}
 <form{{ attributes.removeAttribute('region').addClass(form_classes) }}>
   {{ children }}
