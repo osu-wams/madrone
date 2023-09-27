@@ -1,45 +1,59 @@
+@import "../abstracts/osu_variables";
+
 .dropbutton-wrapper {
   .dropbutton-widget {
-    background-color: $osuorange;
-    color: $bucktoothwhite;
-    padding: 0.25em 0.5em;
-    padding-right: 2.5em !important;
-
-    &:hover,
-    &:focus-within,
-    &:focus {
-      background-color: $bucktoothwhite;
-      color: $paddletailblack;
-
-      .dropbutton {
-        .dropbutton-action {
-          a {
-            color: $paddletailblack;
-          }
-        }
-      }
-    }
-
     .dropbutton {
+      overflow: unset;
+      position: relative;
+
       .dropbutton-toggle {
-        height: 2em;
+        height: 2rem;
         width: 2em;
 
         & > button {
-          &:hover,
+          border: 1px solid $osuorange;
+
+          &:hover {
+            box-shadow: inset 0 0 0 1px rgba($osuorange, 1);
+          }
+
           &:focus-within {
-            box-shadow: inset 0 0 0 2px rgba($osuorange, 1);
+            box-shadow: 0 0 0 2px $bucktoothwhite, 0 0 0 5px $osuorange;
           }
         }
       }
 
       .dropbutton-action {
-        * {
-          color: $bucktoothwhite;
-          white-space: nowrap;
+        &:first-child {
+          background: $osuorange;
+          margin-inline-end: 2.3rem;
+
+          & a {
+            color: $bucktoothwhite;
+            text-decoration: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out;
+            width: 100%;
+
+            &:hover {
+              background-color: $paddletailblack;
+            }
+
+            &:focus {
+              box-shadow: 0 0 0 2px $bucktoothwhite, 0 0 0 5px $osuorange;
+            }
+          }
+        }
+
+        &.secondary-action {
+          background: $bucktoothwhite;
+
+          & a {
+            color: $paddletailblack;
+          }
         }
 
         a {
+          padding-inline: 1rem;
           text-decoration-color: rgba($osuorange, 1);
           text-decoration-thickness: 13%;
 

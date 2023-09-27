@@ -1,3 +1,5 @@
+@import "../abstracts/osu_variables";
+
 .block-group-operations {
   margin-bottom: 1rem;
 
@@ -20,12 +22,37 @@
           display: none;
         }
 
-        .dropbutton-action a {
-          color: $body-color;
+        .dropbutton-action {
+          &:first-child {
+            background: unset;
+            margin-inline: unset;
+            padding-inline: unset;
+
+            a {
+              text-decoration: underline;
+              text-decoration-color: rgba($osuorange, 1);
+              text-decoration-thickness: 13%;
+
+              &:hover,
+              &:focus {
+                background-color: unset;
+                box-shadow: none;
+                text-decoration: none;
+              }
+            }
+
+          }
+
+          & a {
+            color: $body-color;
+            padding-inline: 0;
+          }
         }
 
         .secondary-action {
           display: block;
+          margin: unset;
+          padding: unset;
         }
       }
     }
