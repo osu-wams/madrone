@@ -16324,8 +16324,8 @@ a.tabledrag-handle .handle {
   color: #d73f09;
 }
 
-.views-exposed-form .form--inline > div {
-  display: inline-block;
+.views-exposed-form .form--inline > div.form-actions {
+  margin-block-start: 2.5rem;
 }
 
 .node--unpublished,

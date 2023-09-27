@@ -1,3 +1,5 @@
 .views-exposed-form .form--inline > div {
-  display: inline-block;
+  &.form-actions {
+    margin-block-start: 2.5rem;
+  }
 }
