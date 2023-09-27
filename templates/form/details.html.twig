@@ -17,12 +17,10 @@
 #}
 <details{{ attributes }}>
   {%- if title -%}
-    {%
-      set summary_classes = [
-        required ? 'js-form-required',
-        required ? 'form-required',
-      ]
-    %}
+    {% set summary_classes = [
+      required ? 'js-form-required',
+      required ? 'form-required',
+    ] %}
     <summary{{ summary_attributes.addClass(summary_classes) }}>{{ title }}</summary>
   {%- endif -%}
   <div class="details-wrapper">
