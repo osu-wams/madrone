@@ -248,6 +248,32 @@ function menuItemHoverEvent(event) {
         // prevent menu from hiding if the mouse leaves only for a moment
         clearTimeout(this.mouseLeaveTimeout);
     } else {
+        // If the menu might open off-screen move it, so it won't overflow.
+        // Get the Window Width.
+        const windowWidth = window.innerWidth;
+        // The full size of the menu item, this is the li.
+        const menuWidth = this.offsetWidth;
+        // Find the next UL in the menu tree down.
+        const menuChild = this.querySelector('ul');
+        if (menuChild) {
+            // Get the Full width of the new child menu item.
+            const menuChildWidth = menuChild.offsetWidth;
+            // Calculate how far right the new menu item might go.
+            const menuRight = menuChildWidth + menuChild.getBoundingClientRect().left;
+            // Ensure that the menu item will not go beyond the screen size.
+            if (menuRight > (windowWidth + window.scrollX)) {
+                if (menuChild.classList.contains('menu--level-2')) {
+                    // Let's set the first nested menu to line up with the parents right side.
+                    const menuParentRight = menuChild.closest('li').getBoundingClientRect().right;
+                    menuChild.style.left = 'auto';
+                    menuChild.style.right = `${windowWidth-menuParentRight}px`;
+
+                } else {
+                    menuChild.style.left = `-${menuChildWidth}px`;
+                    menuChild.style.right = 'auto';
+                }
+            }
+        }
         this.classList.add('group-menu-hover');
     }
 }
@@ -357,7 +383,7 @@ function resizeMenu(menu) {
         } else if (largestItem > largestEm) {
             menuUlMaxLength = largestEm;
         } else {
-            menuUlMaxLength = largestItem;
+            menuUlMaxLength = largestItem + 1;
         }
         menuLi.setAttribute('style', '');
     });
