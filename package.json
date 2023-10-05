@@ -9,7 +9,7 @@
     "gulp-cli": "^2.3.0",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "postcss": "^8.4.7",
+    "postcss": "^8.4.31",
     "prettier": "^3.0.0",
     "sass": "^1.45.0",
     "stylelint": "^15.10.2",
