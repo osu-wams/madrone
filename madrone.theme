@@ -232,24 +232,11 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
       break;
 
-    // For new sections setup some defaults for spacing.
-    case 'layout_builder_configure_section':
-      $is_new_section = $form['actions']['submit']['#value']->getUntranslatedString() === 'Add section';
-      if ($is_new_section) {
-        $form['layout_settings']['ui']['tab_content']['layout']['container_type']['#default_value'] = 'container-fluid';
-        $form['layout_settings']['ui']['tab_content']['layout']['remove_gutters']['#default_value'] = 0;
-        $form['layout_settings']['ui']['tab_content']['appearance']['spacing']['padding']['#default_value'] = 2;
-      }
-      break;
-
     // For New Blocks.
     case 'layout_builder_add_block':
       // Set label to a value and uncheck the display checkbox.
       $form['settings']['label']['#default_value'] = 'In-line Block';
       $form['settings']['label_display']['#default_value'] = FALSE;
-      // For updates to Bootstrap Layout Builder Blocks.
-      $form['ui']['tab_content']['appearance']['spacing']['padding']['#default_value'] = 1;
-      $form['ui']['tab_content']['appearance']['spacing']['margin']['#default_value'] = 1;
       break;
   }
   // Check if we are in a layout builder form.
