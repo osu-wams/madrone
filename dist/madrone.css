@@ -14912,7 +14912,12 @@ blockquote {
   font-family: Georgia, "DejaVu Serif", serif;
   font-size: 1.25rem;
   margin-block: 1.5rem;
-  padding: 2.5em 3.75em;
+  padding: 1.5em 1.25em;
+}
+@media screen and (min-width: 992px) {
+  blockquote {
+    padding: 2.5em 3.75em;
+  }
 }
 
 code {

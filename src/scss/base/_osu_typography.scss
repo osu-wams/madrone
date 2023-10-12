@@ -56,7 +56,10 @@ blockquote {
   font-family: Georgia, 'DejaVu Serif', serif;
   font-size: 1.25rem;
   margin-block: 1.5rem;
-  padding: 2.5em 3.75em;
+  padding: 1.5em 1.25em;
+  @media screen and (min-width: 992px) {
+    padding: 2.5em 3.75em;
+  }
 }
 
 code {
@@ -86,7 +89,7 @@ main .block-page-title-block {
       .vertical-tabs__menu,
       .pager__items
     )
-    > li:not([style*='list-style: none']) {
+  > li:not([style*='list-style: none']) {
     &::marker {
       color: rgba($body-color, 1);
       content: '\f054\2000';
@@ -107,7 +110,7 @@ main .block-page-title-block {
         .vertical-tabs__menu,
         .pager__items
       )
-      > li {
+    > li {
       &::marker {
         color: $bucktoothwhite;
       }
