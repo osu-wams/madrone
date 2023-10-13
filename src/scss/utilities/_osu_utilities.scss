@@ -232,3 +232,8 @@
   --osu-bg-overaly-to-color: transparent;
   --osu-bg-overlay-deg: 0deg;
 }
+
+.white-text-orange-bg {
+  background-color: $osuorange-hsl;
+  color: $bucktoothwhite-hsl;
+}
