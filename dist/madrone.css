@@ -14810,6 +14810,11 @@ textarea.form-control-lg {
   --osu-bg-overlay-deg: 0deg;
 }
 
+.white-text-orange-bg {
+  background-color: hsl(15.7, 92%, 43.9%);
+  color: hsl(0, 0%, 100%);
+}
+
 a {
   text-decoration-color: #d73f09;
   text-decoration-thickness: 10%;
