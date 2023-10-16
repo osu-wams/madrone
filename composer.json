@@ -12,6 +12,7 @@
     ],
     "scripts": {
         "cs": "phpcs",
+        "cs-checkstyle": "phpcs -q --report=checkstyle",
         "phpcs": "phpcs",
         "cbf": "phpcbf",
         "phpcbf": "phpcbf",
