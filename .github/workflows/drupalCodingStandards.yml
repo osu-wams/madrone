@@ -26,6 +26,6 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --no-progress --optimize-autoloader
       - name: Run phpcs
-        run: composer phpcs -q --report=checkstyle | cs2pr
+        run: ./vendor/bin/phpcs -q --report=checkstyle | cs2pr
       - uses: guix77/phpcs-drupal-action@v1.0.1
       - uses: DirtDiglett/actions-twigcs@1.0.0
