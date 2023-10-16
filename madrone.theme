@@ -433,8 +433,10 @@ function hide_main_navigation(): bool {
  * Get the logo path for the provided Companion option.
  *
  * @param string $companion_logo
+ *   The Theme option from madrone_companion_logo.
  *
  * @return array
+ *   An associative array for the Logo Path and Link Path.
  */
 function get_companion_logo(string $companion_logo): array {
   return match ($companion_logo) {
