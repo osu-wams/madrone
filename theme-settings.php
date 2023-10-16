@@ -21,10 +21,30 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#type' => 'fieldset',
     '#title' => t('Madrone Utilities'),
   ];
+
+  // Site Logo Options.
+  $form['madrone_settings']['madrone_utilities']['madrone_companion_logo'] = [
+    '#type' => 'select',
+    '#title' => t('Companion Logos'),
+    '#disabled' => TRUE,
+    '#description' => t('Companion Logos to be used only on approval by OSU Marketing'),
+    '#options' => [
+      'osu' => t('OSU'),
+      'cascades' => t('Cascades'),
+    ],
+    '#default_value' => theme_get_setting('madrone_companion_logo'),
+  ];
+
   $form['madrone_settings']['madrone_utilities']['madrone_monsido_site_id'] = [
     '#type' => 'textfield',
     '#title' => t('Monsido Site Id'),
     '#default_value' => theme_get_setting('madrone_monsido_site_id'),
     '#description' => t("Site Id for monsido analytics"),
   ];
+  $administrative_roles = ["dx_administrator", "administrator"];
+  $current_roles = \Drupal::currentUser()->getAccount()->getRoles(TRUE);
+
+  if (count(array_intersect($current_roles, $administrative_roles)) > 0) {
+    $form['madrone_settings']['madrone_utilities']['madrone_companion_logo']['#disabled'] = FALSE;
+  }
 }
