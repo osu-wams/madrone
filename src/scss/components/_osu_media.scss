@@ -49,6 +49,12 @@ figure.figure {
   }
 }
 
+.figure-caption {
+  .osu-text-bucktoothwhite & {
+    color: $bucktoothwhite-hsl;
+  }
+}
+
 .media--view-mode-media-card-caption {
   .field--name-name {
     color: $body-color !important;
