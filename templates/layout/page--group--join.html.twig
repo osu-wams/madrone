@@ -55,7 +55,7 @@
   {{ page.highlighted }}
   {{ page.help }}
 
-  {% set page_sidebar_content = page.sidebar|render|striptags('<img><video><drupal-render-placeholder>')|trim %}
+  {% set page_sidebar_content = page.sidebar|render|striptags('<img><video><drupal-render-placeholder>')|trim is not empty %}
 
   {% set content_classes = [
     'layout-content',
@@ -68,7 +68,7 @@
         {{ page.content }}
       </div>
 
-      {% if page_sidebar_content is not empty %}
+      {% if page_sidebar_content %}
         <aside class="layout-sidebar px-4 px-lg-2 px-xxl-3 col-12 col-lg-3 col-xxl-2 flex-fill"
                role="complementary">
           {{ page.sidebar }}
