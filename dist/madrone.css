@@ -14837,7 +14837,7 @@ hr {
 }
 
 h1, .h1 {
-  color: #d73f09;
+  color: hsl(15.7, 92%, 43.9%);
   font-family: "Stratum2Web", serif;
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 500;
@@ -14860,7 +14860,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  color: #d73f09;
+  color: hsl(15.7, 92%, 43.9%);
   font-family: "Open Sans", sans-serif;
   font-size: calc(1.3rem + 0.6vw);
   font-weight: 500;
@@ -14883,7 +14883,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  color: #d73f09;
+  color: hsl(15.7, 92%, 43.9%);
   font-size: calc(1.275rem + 0.3vw);
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -14974,6 +14974,9 @@ p:last-child {
   margin-bottom: 0;
 }
 
+.osu-text-bucktoothwhite h1, .osu-text-bucktoothwhite .h1, .osu-text-bucktoothwhite h3, .osu-text-bucktoothwhite .h3, .osu-text-bucktoothwhite h5, .osu-text-bucktoothwhite .h5 {
+  color: hsl(0, 0%, 100%);
+}
 .osu-text-bucktoothwhite > * a:not(.layout-builder__link--add, .btn, a.button) {
   color: #fff;
   text-decoration-color: #fff;

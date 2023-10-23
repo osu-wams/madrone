@@ -1,7 +1,7 @@
 @import '../abstracts/osu_variables';
 
 h1 {
-  color: rgba($osuorange, 1);
+  color: $osuorange-hsl;
   font-family: 'Stratum2Web', serif;
   @include font-size(3rem);
   font-weight: 500;
@@ -14,7 +14,7 @@ h2 {
 }
 
 h3 {
-  color: rgba($osuorange, 1);
+  color: $osuorange-hsl;
   font-family: 'Open Sans', sans-serif;
   @include font-size(1.75rem);
   font-weight: 500;
@@ -27,7 +27,7 @@ h4 {
 }
 
 h5 {
-  color: $osuorange;
+  color: $osuorange-hsl;
   @include font-size(1.5rem);
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -132,14 +132,20 @@ p:last-child {
 }
 
 // Only force link color if the parent block has a dark bg set.
-.osu-text-bucktoothwhite > * {
-  a:not(.layout-builder__link--add, .btn) {
-    color: $bucktoothwhite;
-    text-decoration-color: $bucktoothwhite;
+.osu-text-bucktoothwhite {
+  h1, h3, h5 {
+    color: $bucktoothwhite-hsl;
+  }
 
-    &:active {
-      background-color: $bucktoothwhite;
-      color: $paddletailblack;
+  & > * {
+    a:not(.layout-builder__link--add, .btn) {
+      color: $bucktoothwhite;
+      text-decoration-color: $bucktoothwhite;
+
+      &:active {
+        background-color: $bucktoothwhite;
+        color: $paddletailblack;
+      }
     }
   }
 }
