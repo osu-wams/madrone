@@ -14778,11 +14778,10 @@ textarea.form-control-lg {
   content: "";
   inset: 0;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
 }
 .osu-bg-overlay-dark > div,
 .osu-bg-before-dark > div {
-  position: relative;
   z-index: 1;
 }
 
