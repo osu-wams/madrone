@@ -5,6 +5,8 @@ global-styling:
   js:
     dist/madrone.js: { }
   dependencies:
+    - core/drupal
+    - core/jquery
     - core/once
 
 bootstrap:
