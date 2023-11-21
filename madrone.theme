@@ -17,7 +17,7 @@ function madrone_preprocess(&$variables, $hook) {
   catch (Exception $exception) {
     $variables['is_front'] = FALSE;
   }
-  $variables['hide_title_front'] = theme_get_setting('madrone_front_title') ? TRUE : FALSE;
+  $variables['hide_title_front'] = (bool) theme_get_setting('madrone_front_title');
   $variables['#cache']['contexts'][] = 'url.path.is_front';
   $variables['monsido_site_id'] = theme_get_setting('madrone_monsido_site_id');
 }
@@ -50,7 +50,10 @@ function madrone_preprocess_html(&$variables) {
     $theme_color_dark,
     'madroneThemeColorDark',
   ];
-
+  $madrone_use_osu_metatag = theme_get_setting('mardone_metatag_osu', 'madrone');
+  if ($madrone_use_osu_metatag) {
+    $variables['head_title'][] = 'Oregon State University';
+  }
   // Check if the footer doesn't have any blocks and creates an empty element
   // to force the footer to always render.
   if (empty($variables['page']['footer'])) {
