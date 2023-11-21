@@ -21,7 +21,13 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#type' => 'fieldset',
     '#title' => t('Madrone Utilities'),
   ];
-
+  // Monsido Site ID.
+  $form['madrone_settings']['madrone_utilities']['madrone_monsido_site_id'] = [
+    '#type' => 'textfield',
+    '#title' => t('Monsido Site Id'),
+    '#default_value' => theme_get_setting('madrone_monsido_site_id'),
+    '#description' => t("Site Id for monsido analytics"),
+  ];
   // Site Logo Options.
   $form['madrone_settings']['madrone_utilities']['madrone_companion_logo'] = [
     '#type' => 'select',
@@ -34,17 +40,11 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     ],
     '#default_value' => theme_get_setting('madrone_companion_logo'),
   ];
-  // Monsido Site ID.
-  $form['madrone_settings']['madrone_utilities']['madrone_monsido_site_id'] = [
-    '#type' => 'textfield',
-    '#title' => t('Monsido Site Id'),
-    '#default_value' => theme_get_setting('madrone_monsido_site_id'),
-    '#description' => t("Site Id for monsido analytics"),
-  ];
-
+  // Metatag Title.
   $form['madrone_settings']['madrone_utilities']['mardone_metatag_osu'] = [
     '#type' => 'checkbox',
     '#title' => t('Use OSU metatag'),
+    '#disabled' => TRUE,
     '#default_value' => theme_get_setting('mardone_metatag_osu'),
     '#description' => t("Append <em>Oregon State University</em> to the end of every metatag title."),
   ];
@@ -54,5 +54,6 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
 
   if (count(array_intersect($current_roles, $administrative_roles)) > 0) {
     $form['madrone_settings']['madrone_utilities']['madrone_companion_logo']['#disabled'] = FALSE;
+    $form['madrone_settings']['madrone_utilities']['mardone_metatag_osu']['#disabled'] = FALSE;
   }
 }
