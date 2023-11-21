@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * @file
+ */
+
+/**
  * Set the metatag and site logo.
  */
 function madrone_post_update_add_header_metatag(&$sandbox) {

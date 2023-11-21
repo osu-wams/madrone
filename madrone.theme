@@ -444,15 +444,15 @@ function get_companion_logo(string $companion_logo): array {
     'cascades' => [
       'logo-name' => 'cascades',
       'logo-path' => '/' . Drupal::theme()
-          ->getActiveTheme()
-          ->getPath() . '/assets/osucascades.svg',
+        ->getActiveTheme()
+        ->getPath() . '/assets/osucascades.svg',
       'link-path' => 'https://osucascades.edu/',
     ],
     default => [
       'logo-name' => 'default',
       'logo-path' => '/' . Drupal::theme()
-          ->getActiveTheme()
-          ->getPath() . '/logo.svg',
+        ->getActiveTheme()
+        ->getPath() . '/logo.svg',
       'link-path' => 'https://oregonstate.edu/',
     ]
   };
