@@ -118,6 +118,7 @@ function madrone_preprocess_block(&$variables) {
       if ($variables['base_plugin_id'] == 'system_branding_block') {
         $themeCompanionLogo = theme_get_setting('madrone_companion_logo') ?? 'osu';
         $themeCompanionLogoData = get_companion_logo($themeCompanionLogo);
+        $variables['companion_logo_name'] = $themeCompanionLogoData['logo-name'];
         $variables['companion_logo_path'] = $themeCompanionLogoData['logo-path'];
         $variables['companion_logo_link'] = $themeCompanionLogoData['link-path'];
         $themeCrestPath = '/' . Drupal::theme()
@@ -441,12 +442,14 @@ function hide_main_navigation(): bool {
 function get_companion_logo(string $companion_logo): array {
   return match ($companion_logo) {
     'cascades' => [
+      'logo-name' => 'cascades',
       'logo-path' => '/' . Drupal::theme()
         ->getActiveTheme()
         ->getPath() . '/assets/osucascades.svg',
       'link-path' => 'https://osucascades.edu/',
     ],
     default => [
+      'logo-name' => 'default',
       'logo-path' => '/' . Drupal::theme()
         ->getActiveTheme()
         ->getPath() . '/logo.svg',

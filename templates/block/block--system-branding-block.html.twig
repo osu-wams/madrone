@@ -72,7 +72,7 @@
               <a class="site-name__group-link text-decoration-none osu-text-osuorange fw-bolder"
                  href="{{ group_path }}">{{ group_name }}</a>
             </div>
-          {% else %}
+          {% elseif companion_logo_name == 'default' %}
             <a class="site-name__site-link text-decoration-none osu-text-osuorange fw-bolder"
                href="{{ path('<front>') }}"
                rel="home">{{ site_name }}</a>
