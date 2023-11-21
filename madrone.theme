@@ -125,8 +125,8 @@ function madrone_preprocess_block(&$variables) {
         $variables['companion_logo_path'] = $themeCompanionLogoData['logo-path'];
         $variables['companion_logo_link'] = $themeCompanionLogoData['link-path'];
         $themeCrestPath = '/' . Drupal::theme()
-            ->getActiveTheme()
-            ->getPath() . '/assets/osu-logo-crest-only.svg';
+          ->getActiveTheme()
+          ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
         if (array_key_exists('group_path', $variables['content']) &&
           array_key_exists('group_name', $variables['content'])) {
@@ -447,15 +447,15 @@ function get_companion_logo(string $companion_logo): array {
     'cascades' => [
       'logo-name' => 'cascades',
       'logo-path' => '/' . Drupal::theme()
-          ->getActiveTheme()
-          ->getPath() . '/assets/osucascades.svg',
+        ->getActiveTheme()
+        ->getPath() . '/assets/osucascades.svg',
       'link-path' => 'https://osucascades.edu/',
     ],
     default => [
       'logo-name' => 'default',
       'logo-path' => '/' . Drupal::theme()
-          ->getActiveTheme()
-          ->getPath() . '/logo.svg',
+        ->getActiveTheme()
+        ->getPath() . '/logo.svg',
       'link-path' => 'https://oregonstate.edu/',
     ]
   };
