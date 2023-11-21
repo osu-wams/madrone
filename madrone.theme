@@ -50,7 +50,7 @@ function madrone_preprocess_html(&$variables) {
     $theme_color_dark,
     'madroneThemeColorDark',
   ];
-  $madrone_use_osu_metatag = theme_get_setting('mardone_metatag_osu', 'madrone');
+  $madrone_use_osu_metatag = theme_get_setting('mardone_metatag_osu');
   if ($madrone_use_osu_metatag) {
     $variables['head_title'][] = 'Oregon State University';
   }
