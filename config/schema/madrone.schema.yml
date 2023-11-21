@@ -1,0 +1,13 @@
+madrone.settings:
+  type: theme_settings
+  label: 'Madrone settings'
+  mapping:
+    madrone_companion_logo:
+      type: string
+      label: 'Companion Logo'
+    madrone_monsido_site_id:
+      type: string
+      label: 'Monsido Site ID'
+    mardone_metatag_osu:
+      type: integer
+      label: 'Use OSU Metatag'
