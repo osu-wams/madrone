@@ -15066,6 +15066,11 @@ footer .region-footer a:active {
   font-weight: 900;
   letter-spacing: 1rem;
 }
+@media screen and (max-width: 767px) {
+  .madrone-primary-menu > .block-superfish ul:not([class$=accordion]) {
+    display: none;
+  }
+}
 .madrone-primary-menu > .block-superfish ul.sf-menu {
   line-height: 1.75rem;
 }
@@ -15113,7 +15118,10 @@ footer .region-footer a:active {
 .madrone-primary-menu > .block-superfish ul.sf-menu li {
   float: none;
 }
-.madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent.sfHover > a {
+.madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent.sfHover > ul, .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent:hover > ul {
+  opacity: 1;
+}
+.madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent.sfHover > a, .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent:hover > a {
   background-color: #fff;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent > a::after, .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent > span::after {
@@ -15126,6 +15134,7 @@ footer .region-footer a:active {
   letter-spacing: normal;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent > ul {
+  opacity: 0;
   top: 3.5em;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):hover > a,
