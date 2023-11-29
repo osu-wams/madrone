@@ -24,29 +24,23 @@
  * @see template_preprocess_views_view_grid()
  */
 #}
-{%
-  set classes = [
-    'views-view-grid',
-    options.alignment,
-    'cols-' ~ options.columns,
-    'clearfix',
-  ]
-%}
+{% set classes = [
+  'views-view-grid',
+  options.alignment,
+  'cols-' ~ options.columns,
+  'clearfix',
+] %}
 {% if options.row_class_default %}
-  {%
-    set row_classes = [
-      'views-row',
-      options.alignment == 'horizontal' ? 'clearfix',
-    ]
-  %}
+  {% set row_classes = [
+    'views-row',
+    options.alignment == 'horizontal' ? 'clearfix',
+  ] %}
 {% endif %}
 {% if options.col_class_default %}
-  {%
-    set col_classes = [
-      'views-col',
-      options.alignment == 'vertical' ? 'clearfix',
-    ]
-  %}
+  {% set col_classes = [
+    'views-col',
+    options.alignment == 'vertical' ? 'clearfix',
+  ] %}
 {% endif %}
 {% if title %}
   <h3>{{ title }}</h3>
