@@ -1,15 +1,16 @@
-version: '3.8'
-
 services:
   drupal:
-    image: docker.io/osuwams/drupal:9-apache-dev
+    image: docker.io/osuwams/drupal:10-apache-dev
     environment:
       - DRUPAL_DBHOST=database
       - DRUPAL_DBUSER=drupal
       - DRUPAL_DBPASS=drupal
       - DRUPAL_DBNAME=drupal
+      - DRUPAL_MEMCACHE=true
       - DRUPAL_MEMCACHEHOST=cache
-      - DRUPAL_THEME_DEVEL=true
+      #- DRUPAL_THEME_DEVEL=true
+      #- XDEBUG_MODE=debug,develop
+      #- XDEBUG_CONFIG="xdebug.start_with_request=trigger xdebug.idekey=PHPSTORM"
     ports:
       - 8080:80
     volumes:
@@ -20,7 +21,7 @@ services:
       - CAP_DAC_OVERRIDE
     restart: unless-stopped
   database:
-    image: docker.io/library/mariadb:10.7
+    image: docker.io/library/mariadb:10.11
     volumes:
       - drupal-db:/var/lib/mysql/drupal
     environment:
@@ -31,8 +32,6 @@ services:
     restart: unless-stopped
   cache:
     image: docker.io/library/memcached:latest
-    networks:
-      - internal
     restart: unless-stopped
 
 volumes:
