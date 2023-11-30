@@ -1,6 +1,7 @@
 @import "../abstracts/osu_variables";
 
-.nav-tabs {
+.nav-tabs,
+.nav-pills {
   .nav-link:not(.active):hover,
   .nav-link:not(.active):focus {
     background-color: $paddletailblack;
