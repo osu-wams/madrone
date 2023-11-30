@@ -15833,9 +15833,7 @@ a.button:focus,
 }
 
 .nav-tabs .nav-link:not(.active):hover,
-.nav-tabs .nav-link:not(.active):focus,
-.nav-pills .nav-link:not(.active):hover,
-.nav-pills .nav-link:not(.active):focus {
+.nav-tabs .nav-link:not(.active):focus {
   background-color: #212529;
 }
 
