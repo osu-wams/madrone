@@ -236,3 +236,11 @@
   background-color: $osuorange-hsl;
   color: $bucktoothwhite-hsl;
 }
+
+.osu-nav-link-hover--dark {
+  --bs-nav-link-hover-color: #{$paddletailblack};
+}
+
+.osu-nav-link-hover--light {
+  --bs-nav-link-hover-color: #{$bucktoothwhite};
+}
