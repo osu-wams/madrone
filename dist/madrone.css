@@ -14814,6 +14814,14 @@ textarea.form-control-lg {
   color: hsl(0, 0%, 100%);
 }
 
+.osu-nav-link-hover--dark {
+  --bs-nav-link-hover-color: #212529;
+}
+
+.osu-nav-link-hover--light {
+  --bs-nav-link-hover-color: #fff;
+}
+
 a {
   text-decoration-color: #d73f09;
   text-decoration-thickness: 10%;

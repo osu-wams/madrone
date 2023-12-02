@@ -31,7 +31,8 @@ We call a macro which calls itself to render the full tree.
     'menu',
     'menu--' ~ menu_name|clean_class,
     menu_level == 0 ? 'nav' : 'dropdown-menu',
-    'gap-1'
+    'gap-1',
+    'osu-nav-link-hover--dark'
   ] %}
   {% if items %}
     <ul{{ attributes.addClass(menu_classes) }}>
