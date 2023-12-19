@@ -124,6 +124,7 @@ function madrone_preprocess_block(&$variables) {
         $variables['companion_logo_name'] = $themeCompanionLogoData['logo-name'];
         $variables['companion_logo_path'] = $themeCompanionLogoData['logo-path'];
         $variables['companion_logo_link'] = $themeCompanionLogoData['link-path'];
+        $variables['companion_logo_alt'] = $themeCompanionLogoData['alt-text'];
         $themeCrestPath = '/' . Drupal::theme()
           ->getActiveTheme()
           ->getPath() . '/assets/osu-logo-crest-only.svg';
@@ -450,6 +451,7 @@ function get_companion_logo(string $companion_logo): array {
         ->getActiveTheme()
         ->getPath() . '/assets/osucascades.svg',
       'link-path' => 'https://osucascades.edu/',
+      'alt-text' => 'OSU-Cascades homepage',
     ],
     default => [
       'logo-name' => 'default',
@@ -457,6 +459,7 @@ function get_companion_logo(string $companion_logo): array {
         ->getActiveTheme()
         ->getPath() . '/logo.svg',
       'link-path' => 'https://oregonstate.edu/',
+      'alt-text' => 'Oregon State University homepage',
     ]
   };
 }
