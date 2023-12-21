@@ -65,36 +65,13 @@
     <main class="d-flex flex-wrap flex-fill gx-3 gx-lg-0" role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       <div{{ content_attributes.addClass(content_classes) }}>
-        <div class="row">
-          <div class="col-12 col-md-6" style="padding: 4rem;">
-            <h3>
-              404 <br/>
-              Page Not Found
-            </h3>
-            <p>
-              Hold up, eager beaver—it's building season. And you've run into Benny's dam.
-            </p>
-
-            <h4>Options</h4>
-
-            <ul>
-              <li>Use the <a href="https://search.oregonstate.edu/">site search</a> to find what you're looking for</li>
-              <li>Looking for someone? Search the <a href="http://directory.oregonstate.edu/">OSU directory</a></li>
-              <li>Use your browser's <em>Back</em> button to return to the previous page</li>
-              <li>Go to the <a href="https://oregonstate.edu/">Oregon State homepage</a> to browse for the page you're
-                looking for
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-12 col-md-6 align-center" style="padding: 4rem;">
-            <img class="" src="{{ base_path }}{{ active_theme_path() }}/assets/404.svg"
-                 alt="{{ 'Mountain scene with 404 text'|t }}"/>
-          </div>
+        <div class="container">
+          {{ page.content }}
         </div>
       </div>
+
       {% if page_sidebar_content %}
-        <aside class="layout-sidebar ps-4 pe-4 ps-lg-2 pe-lg-2 ps-xxl-3 pe-xxl-3 col-lg-3 col-xxl-2 flex-fill"
+        <aside class="layout-sidebar px-4 px-lg-2 px-xxl-3 col-12 col-lg-3 col-xxl-2 flex-fill"
                role="complementary">
           {{ page.sidebar }}
         </aside>
@@ -106,5 +83,6 @@
   <footer class="container-fluid g-0 mt-auto" role="contentinfo">
     {{ page.footer }}
   </footer>
+
 
 </div>{# /.layout-container #}
