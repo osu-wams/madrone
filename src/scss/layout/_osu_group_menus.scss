@@ -1,6 +1,12 @@
 @import '../abstracts/osu_variables';
 
 .block-group-content-menu {
+  ul:not(.group-mobile-menu) {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
   .menu--level-0,
   .menu--level-1 {
     background-color: $neutral-200;
@@ -19,9 +25,9 @@
       .group-menu-hover {
         a,
         span {
-          cursor: pointer;
           background-color: $bucktoothwhite;
           color: $paddletailblack;
+          cursor: pointer;
         }
       }
     }
