@@ -30,7 +30,9 @@
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
   'col-9',
-  'col-lg-8'
+  'col-lg-8',
+  companion_logo_name == 'default' ? 'osu-logo' : 'osu-logo osu-logo--companion',
+  group_name ? 'osu-logo--in-group',
 ] %}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
@@ -41,7 +43,7 @@
   {% block content %}
     <div{{ content_attributes.addClass('block__content', 'd-flex', 'align-items-center') }}>
       {% if site_logo %}
-        <div class="d-none d-lg-flex pe-2">
+        <div class="d-none d-lg-flex pe-2 osu-logo--wide">
           <div class="ms-2 py-2">
             <a id="osu-logo-wide" class="text-decoration-none d-inline-block" href="{{ companion_logo_link }}">
               <img class="" src="{{ companion_logo_path }}"
@@ -49,7 +51,7 @@
             </a>
           </div>
         </div>
-        <div class="d-flex d-lg-none">
+        <div class="d-flex d-lg-none osu-logo--crest">
           <div class="py-2 px-2">
             <a id="osu-logo-crest" class="text-decoration-none" href="{{ companion_logo_link }}">
               <img class="" src="{{ base_path }}{{ active_theme_path() }}/assets/osu-logo-crest-only.svg"
@@ -59,7 +61,7 @@
         </div>
       {% endif %}
       {% if site_logo and site_name %}
-        <div class="align-self-stretch border-start border-neutral-200"></div>
+        <div class="align-self-stretch border-start border-neutral-200 osu-logo--spacer"></div>
       {% endif %}
       {% if site_name %}
         <div class="block__content__site-name d-flex flex-column ms-4">

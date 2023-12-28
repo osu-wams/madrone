@@ -16366,6 +16366,16 @@ a.tabledrag-handle .handle {
   margin-block-start: 2.5rem;
 }
 
+.osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--wide {
+  display: flex !important;
+}
+.osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--crest {
+  display: none !important;
+}
+.osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--spacer {
+  display: none !important;
+}
+
 .node--unpublished,
 .group--unpublished {
   background-color: #ffdedf;
