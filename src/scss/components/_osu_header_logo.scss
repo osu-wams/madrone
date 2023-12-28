@@ -1,0 +1,17 @@
+.osu-logo {
+  &--companion:not(.osu-logo--in-group) {
+    .block__content {
+      .osu-logo--wide {
+        display: flex !important;
+      }
+
+      .osu-logo--crest {
+        display: none !important;
+      }
+
+      .osu-logo--spacer {
+        display: none !important;
+      }
+    }
+  }
+}
