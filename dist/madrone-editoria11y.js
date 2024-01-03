@@ -1,5 +1,6 @@
+// @phpcs:ignoreFile
+const currentHostName = window.location.origin;
 document.addEventListener('ed11yRunCustomTests', () => {
-
   // 1. Write your custom test.
   // This can be anything you want.
   //
@@ -10,6 +11,9 @@ document.addEventListener('ed11yRunCustomTests', () => {
 
   // Hard Dev links should be avoided.
   Ed11y.findElements('devLinks', 'a[href*="dev.oregonstate.edu"]');
+
+  // Full Links to site
+  Ed11y.findElements('sameSiteFullLinks', `a[href*="${currentHostName}"]`);
 
   // 2. Create a message for your tooltip.
   // You'll need a title and some contents,
@@ -28,18 +32,29 @@ document.addEventListener('ed11yRunCustomTests', () => {
           </em></p>
           ${decodeSafelink(href)}
           `,
-  };
+  }
 
   Ed11y.M.devLink = {
     title: 'URL is hard linking to Development site',
-    tip: (href) => `
-    <p>The URL for this link is using a full URL to the Development Site, Relative links should be used.</p>
-    <p>The specified URL is:<br>
-    <em>${Ed11y.sanitizeForHTML(href)}</em>
-    </p>
-    ${decodeDevLink(href)}
-    `,
-  };
+    tip: (href) =>
+      `<p>The URL for this link is using a full URL to the Development Site, Relative links should be used.</p>
+       <p>The specified URL is:<br>
+        <em>${Ed11y.sanitizeForHTML(href)}</em>
+       </p>
+    ${getPathFromUrl(href)}`,
+  }
+
+  Ed11y.M.sameSiteFullLink = {
+    title: 'Manual Check: did you mean to use a full link?',
+    tip: (href) =>
+      `<p>Using a Fully Qualified Domain Name when linking internally is discouraged.</p>
+       <p>The specified URL is:<br/>
+       <em>${Ed11y.sanitizeForHTML(href)}</em>
+       </p>
+       <p>Generally when linking to pages/files within the same site it is best to use the tools provided in the
+           content editor to generate links correctly.</p>
+        ${getPathFromUrl(href)}`,
+  }
 
   // 3. Push each item you want flagged to Ed11y.results.
   //
@@ -59,7 +74,7 @@ document.addEventListener('ed11yRunCustomTests', () => {
       position: 'beforebegin',
       dismissalKey: false,
     })
-  })
+  });
 
   Ed11y.elements.devLinks?.forEach((el) => {
     Ed11y.results.push({
@@ -69,7 +84,19 @@ document.addEventListener('ed11yRunCustomTests', () => {
       position: 'beforebegin',
       dismissalKey: false,
     })
-  })
+  });
+
+  Ed11y.elements.sameSiteFullLinks?.forEach((el) => {
+    let sameSiteHref = el.getAttribute('href');
+    let dismissKey = Ed11y.dismissalKey(sameSiteHref);
+    Ed11y.results.push({
+      element: el,
+      test: 'sameSiteFullLink',
+      content: Ed11y.M.sameSiteFullLink.tip(sameSiteHref),
+      position: 'beforebegin',
+      dismissalKey: dismissKey,
+    })
+  });
 
   // 4. When you are done with all your custom tests,
   // dispatch an "ed11yResume" event:
@@ -95,12 +122,12 @@ function decodeSafelink(url) {
 }
 
 /**
- * Decodes a developer link URL and returns the relative URL as a string.
+ * Takes a full URL link and returns the relative URL as a string.
  *
  * @param {string} url - The developer link URL to decode.
  * @return {string} - The decoded relative URL.
  */
-function decodeDevLink(url) {
+function getPathFromUrl(url) {
   const pathname = new URL(url).pathname;
   return `<p>The relative URL may be:<br><em style='word-wrap: break-word;'>${Ed11y.sanitizeForHTML(pathname)}</em>`
 }
