@@ -22,38 +22,41 @@ document.addEventListener('ed11yRunCustomTests', () => {
   // Be sure to use the same key as the test name below.
   Ed11y.M.outlookSafeLink = {
     title: 'URL is Safe Link encoded',
-    tip: (href) =>
-      `<p>The URL for this link has been copied from an email.
-              It includes the original recipient's email address,
-              and will bounce all clicks through the Outlook Safelinks server.</p>
-          <p>The specified URL is:<br>
-          <em style='word-break: break-all;font-size:90%;line-height: 1.2;display: block;'>
-             ${Ed11y.sanitizeForHTML(href)}
-          </em></p>
-          ${decodeSafelink(href)}
-          `,
+    tip: (href) => `
+        <p>The URL for this link has been copied from an email. It includes the original recipient's email address,
+        and will bounce all clicks through the Outlook Safelinks server.
+         </p>
+        <p>The specified URL is:<br>
+            <em style='word-break: break-all;font-size:90%;line-height: 1.2;display: block;'>
+                ${Ed11y.sanitizeForHTML(href)}
+            </em>
+        </p>
+        ${decodeSafelink(href)}
+    `,
   }
 
   Ed11y.M.devLink = {
     title: 'URL is hard linking to Development site',
-    tip: (href) =>
-      `<p>The URL for this link is using a full URL to the Development Site, Relative links should be used.</p>
-       <p>The specified URL is:<br>
-        <em>${Ed11y.sanitizeForHTML(href)}</em>
-       </p>
-    ${getPathFromUrl(href)}`,
+    tip: (href) => `
+        <p>The URL for this link is using a full URL to the Development Site, Relative links should be used.</p>
+        <p>The specified URL is:<br>
+            <em>${Ed11y.sanitizeForHTML(href)}</em>
+        </p>
+        ${getPathFromUrl(href)}
+    `,
   }
 
   Ed11y.M.sameSiteFullLink = {
     title: 'Manual Check: did you mean to use a full link?',
-    tip: (href) =>
-      `<p>Using a Fully Qualified Domain Name when linking internally is discouraged.</p>
-       <p>The specified URL is:<br/>
-       <em>${Ed11y.sanitizeForHTML(href)}</em>
-       </p>
-       <p>Generally when linking to pages/files within the same site it is best to use the tools provided in the
+    tip: (href) => `
+        <p>Using a Fully Qualified Domain Name when linking internally is discouraged.</p>
+        <p>The specified URL is:<br/>
+            <em>${Ed11y.sanitizeForHTML(href)}</em>
+        </p>
+        <p>Generally when linking to pages/files within the same site it is best to use the tools provided in the
            content editor to generate links correctly.</p>
-        ${getPathFromUrl(href)}`,
+        ${getPathFromUrl(href)}
+    `,
   }
 
   // 3. Push each item you want flagged to Ed11y.results.
