@@ -15318,6 +15318,11 @@ footer .region-footer a:active {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .block-group-content-menu ul:not(.group-mobile-menu) {
+    display: none;
+  }
+}
 .block-group-content-menu .menu--level-0,
 .block-group-content-menu .menu--level-1 {
   background-color: #e9e5e4;
@@ -15336,9 +15341,9 @@ footer .region-footer a:active {
   .block-group-content-menu .menu--level-0 .group-menu-hover span,
   .block-group-content-menu .menu--level-1 .group-menu-hover a,
   .block-group-content-menu .menu--level-1 .group-menu-hover span {
-    cursor: pointer;
     background-color: #fff;
     color: #212529;
+    cursor: pointer;
   }
 }
 .block-group-content-menu .menu--level-0 ul,
@@ -16364,6 +16369,16 @@ a.tabledrag-handle .handle {
 
 .views-exposed-form .form--inline > div.form-actions {
   margin-block-start: 2.5rem;
+}
+
+.osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--wide {
+  display: flex !important;
+}
+.osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--crest {
+  display: none !important;
+}
+.osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--spacer {
+  display: none !important;
 }
 
 .node--unpublished,

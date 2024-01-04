@@ -4,6 +4,7 @@ global-styling:
       dist/madrone.css: { }
   js:
     dist/madrone.js: { }
+    dist/madrone-editoria11y.js: { }
   dependencies:
     - core/drupal
     - core/jquery
