@@ -16368,7 +16368,7 @@ a.tabledrag-handle .handle {
 }
 
 .views-exposed-form .form--inline > div.form-actions {
-  margin-block-start: 2.5rem;
+  align-self: end;
 }
 
 .osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--wide {
