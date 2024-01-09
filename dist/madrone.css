@@ -15895,18 +15895,42 @@ article.align-center.media--type-document > .field {
   max-width: max-content;
 }
 
+article.media.align-left {
+  float: none;
+  margin-inline-end: 1rem !important;
+}
+@media screen and (min-width: 768px) {
+  article.media.align-left {
+    float: left;
+  }
+}
 article.media.align-right {
+  float: none;
   margin-inline-start: 1rem !important;
 }
-article.media.align-left {
-  margin-inline-end: 1rem !important;
+@media screen and (min-width: 768px) {
+  article.media.align-right {
+    float: right;
+  }
 }
 
+figure.figure.align-left {
+  float: none;
+  margin-inline-end: 1rem !important;
+}
+@media screen and (min-width: 768px) {
+  figure.figure.align-left {
+    float: left;
+  }
+}
 figure.figure.align-right {
+  float: none;
   margin-inline-start: 1rem !important;
 }
-figure.figure.align-left {
-  margin-inline-end: 1rem !important;
+@media screen and (min-width: 768px) {
+  figure.figure.align-right {
+    float: right;
+  }
 }
 
 .osu-text-bucktoothwhite .figure-caption {
