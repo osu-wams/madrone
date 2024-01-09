@@ -14702,7 +14702,7 @@ textarea.form-control-lg {
   transition: all 250ms ease;
 }
 .osu-hover-pop:hover {
-  box-shadow: 0 0 9px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.25) !important;
 }
 
 .osu-text-decoration {
@@ -15895,18 +15895,42 @@ article.align-center.media--type-document > .field {
   max-width: max-content;
 }
 
+article.media.align-left {
+  float: none;
+  margin-inline-end: 1rem !important;
+}
+@media screen and (min-width: 768px) {
+  article.media.align-left {
+    float: left;
+  }
+}
 article.media.align-right {
+  float: none;
   margin-inline-start: 1rem !important;
 }
-article.media.align-left {
-  margin-inline-end: 1rem !important;
+@media screen and (min-width: 768px) {
+  article.media.align-right {
+    float: right;
+  }
 }
 
+figure.figure.align-left {
+  float: none;
+  margin-inline-end: 1rem !important;
+}
+@media screen and (min-width: 768px) {
+  figure.figure.align-left {
+    float: left;
+  }
+}
 figure.figure.align-right {
+  float: none;
   margin-inline-start: 1rem !important;
 }
-figure.figure.align-left {
-  margin-inline-end: 1rem !important;
+@media screen and (min-width: 768px) {
+  figure.figure.align-right {
+    float: right;
+  }
 }
 
 .osu-text-bucktoothwhite .figure-caption {
@@ -16368,7 +16392,7 @@ a.tabledrag-handle .handle {
 }
 
 .views-exposed-form .form--inline > div.form-actions {
-  margin-block-start: 2.5rem;
+  align-self: end;
 }
 
 .osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--wide {
