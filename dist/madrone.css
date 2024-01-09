@@ -16130,6 +16130,23 @@ article.media--view-mode-video-720 iframe:where(.media-oembed-content) {
   text-decoration-color: #fff;
 }
 
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  width: 4rem;
+}
+.carousel .carousel-caption {
+  background-color: #f7f5f5;
+  bottom: 2.45rem;
+}
+.carousel .carousel-indicators {
+  background-color: hsl(15.7, 92%, 43.9%);
+  list-style-type: none;
+}
+.carousel ~ .more-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 body.cke_editable_themed {
   padding: 1rem;
 }
