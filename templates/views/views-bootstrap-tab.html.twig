@@ -1,0 +1,28 @@
+{% set classes = [
+  'views-view-bootstrap-tab'
+] %}
+
+{% if title is not empty %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<div id="views-bootstrap-tab-{{ id }}" {{ attributes.addClass(classes) }}>
+  <ul class="nav nav-{{ tab_type }} {% if justified %}nav-justified{% endif %}">
+    {% for key, tab in tabs %}
+      {% set tab_classes = ['nav-item'] %}
+      <li class="{{ tab_classes|join(' ') }}" role="presentation">
+        <button data-bs-target="{{ "#tab-#{  id }-#{ key }" }}" type="button" role="tab"
+                aria-controls="tab-{{ id }}-{{ key }}" aria-selected="{{ loop.first ? 'true': 'false' }}"
+                class="nav-link {{ loop.first ? 'active' }}" data-bs-toggle="tab">{{ tab }}</button>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="tab-content">
+    {% for key, row in rows %}
+      {% set row_classes = ['tab-pane', 'fade', loop.first ? 'show active'] %}
+      <div class="{{ row_classes|join(' ') }}" id="tab-{{ id }}-{{ key }}" role="tabpanel"
+           aria-labelledby="tab-{{ id }}-{{ key }}-tab" {{ row.attributes }}>
+        {{ row.content }}
+      </div>
+    {% endfor %}
+  </div>
+</div>
