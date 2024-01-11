@@ -10,7 +10,7 @@
     {% for key, tab in tabs %}
       {% set tab_classes = ['nav-item'] %}
       <li class="{{ tab_classes|join(' ') }}" role="presentation">
-        <button data-bs-target="{{ "#tab-#{  id }-#{ key }" }}" type="button" role="tab"
+        <button id="tab-{{ id }}-{{ key }}-tab" data-bs-target="{{ "#tab-#{  id }-#{ key }" }}" type="button" role="tab"
                 aria-controls="tab-{{ id }}-{{ key }}" aria-selected="{{ loop.first ? 'true': 'false' }}"
                 class="nav-link {{ loop.first ? 'active' }}" data-bs-toggle="tab">{{ tab }}</button>
       </li>
