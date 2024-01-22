@@ -16467,6 +16467,18 @@ a.tabledrag-handle .handle {
   display: none !important;
 }
 
+.card-group {
+  gap: 1.5rem;
+}
+.card-group .card {
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color) !important;
+  border-radius: 0.625rem !important;
+}
+.card-group .card img {
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+
 .node--unpublished,
 .group--unpublished {
   background-color: #ffdedf;
