@@ -1,0 +1,51 @@
+@import "../abstracts/osu_variables";
+.views-view-bootstrap-tab {
+  .nav-tabs {
+    border-color: $osuorange-hsl;
+    flex-wrap: nowrap;
+    -ms-overflow-style: none; // IE and Edge
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; // Firefox
+
+    &::-webkit-scrollbar {
+      display: none; //Chrome
+    }
+
+    @media (min-width: 992px) {
+      justify-content: center;
+      margin-inline: 2rem;
+      overflow: visible;
+    }
+
+    @media (min-width: 1400px) {
+      margin-inline: 4rem;
+    }
+  }
+
+  .nav-item {
+    margin-inline-end: 0.25rem;
+    scroll-snap-align: end;
+    width: max-content;
+  }
+
+  .nav-link {
+    border: 0 transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin-bottom: 0 !important;
+    transition: all 0.2s ease-out;
+    width: max-content;
+
+    &:hover,
+    &.active {
+      background-color: $osuorange-hsl;
+      color: $bucktoothwhite-hsl;
+    }
+
+    &:focus-visible {
+      box-shadow: none;
+      outline: 2px solid $paddletailblack-hsl;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.carousel {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 4rem;
+  }
+
+  .carousel-caption {
+    background-color: $neutral-100;
+    bottom: 2.45rem;
+  }
+
+  .carousel-indicators {
+    background-color: $osuorange-hsl;
+    list-style-type: none;
+  }
+
+  & ~ .more-link {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}

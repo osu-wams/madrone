@@ -1,0 +1,13 @@
+.card-group {
+  gap: 1.5rem;
+
+  .card {
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color) !important;
+    border-radius: .625rem !important;
+
+    img {
+      border-top-left-radius: .625rem;
+      border-top-right-radius: .625rem;
+    }
+  }
+}

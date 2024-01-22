@@ -48,30 +48,38 @@
 ] %}
 {# Sets Unique ID for Accordion from Paragraph ID. #}
 {% set paragraph_id = 'accordion-' ~ paragraph.id.value %}
+{% set accordion_header_element = paragraph.field_p_accordion_heading.value is not empty ? 'h3' : 'h2' %}
 
 {% block paragraph %}
+  {% macro accordion_id(paragraph_id, key) %}
+    {{- paragraph_id }}-{{ key + 1 -}}
+  {% endmacro %}
+
+  {% import _self as macros %}
+
   <div{{ attributes.addClass(classes) }}>
     {% if paragraph.field_p_accordion_heading.value %}
-      <h3 class="accordion-section-header">{{ paragraph.field_p_accordion_heading.value }}</h3>
+      <h2 class="accordion-section-header">{{ paragraph.field_p_accordion_heading.value }}</h2>
     {% endif %}
     <div class="accordion" id="{{ paragraph_id }}">
       {% for key, item in content.field_osu_paragraph_item %}
-        {% if key|first != '#' %}
-          <div class="accordion-item">
-            <div class="accordion-header" id="heading-{{ paragraph_id }}-{{ key + 1 }}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#{{ paragraph_id }}-{{ key + 1 }}"
-                      aria-expanded="true"
-                      aria-controls="{{ paragraph_id }}-{{ key + 1 }}">{{ item['#paragraph'].field_p_accordion_title.value }}</button>
-            </div>
-            <div id="{{ paragraph_id }}-{{ key + 1 }}" class="accordion-collapse collapse accordion-body"
-                 aria-labelledby="heading-{{ paragraph_id }}-{{ key + 1 }}"
-                 data-bs-parent="#{{ paragraph_id }}">
-              {{ item['#paragraph'].field_p_accordion_body.processed }}
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
+      {% if key|first != '#' %}
+      <div class="accordion-item">
+        <{{ accordion_header_element }} class="accordion-header"
+        id="heading-{{ macros.accordion_id(paragraph_id, key) }}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#{{ macros.accordion_id(paragraph_id, key) }}"
+                aria-expanded="true"
+                aria-controls="{{ macros.accordion_id(paragraph_id, key) }}">{{ item['#paragraph'].field_p_accordion_title.value }}</button>
+      </{{ accordion_header_element }}>
+      <div id="{{ macros.accordion_id(paragraph_id, key) }}" class="accordion-collapse collapse accordion-body"
+           aria-labelledby="heading-{{ macros.accordion_id(paragraph_id, key) }}"
+           data-bs-parent="#{{ paragraph_id }}">
+        {{ item['#paragraph'].field_p_accordion_body.processed }}
+      </div>
     </div>
+    {% endif %}
+    {% endfor %}
+  </div>
   </div>
 {% endblock paragraph %}

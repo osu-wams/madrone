@@ -5066,8 +5066,8 @@ textarea.form-control-lg {
   --bs-list-group-border-color: var(--bs-border-color);
   --bs-list-group-border-width: var(--bs-border-width);
   --bs-list-group-border-radius: var(--bs-border-radius);
-  --bs-list-group-item-padding-x: 1rem;
-  --bs-list-group-item-padding-y: 0.5rem;
+  --bs-list-group-item-padding-x: 1.5rem;
+  --bs-list-group-item-padding-y: 2rem;
   --bs-list-group-action-color: var(--bs-secondary-color);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
   --bs-list-group-action-hover-bg: var(--bs-tertiary-bg);
@@ -16130,6 +16130,68 @@ article.media--view-mode-video-720 iframe:where(.media-oembed-content) {
   text-decoration-color: #fff;
 }
 
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  width: 4rem;
+}
+.carousel .carousel-caption {
+  background-color: #f7f5f5;
+  bottom: 2.45rem;
+}
+.carousel .carousel-indicators {
+  background-color: hsl(15.7, 92%, 43.9%);
+  list-style-type: none;
+}
+.carousel ~ .more-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.views-view-bootstrap-tab .nav-tabs {
+  border-color: hsl(15.7, 92%, 43.9%);
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.views-view-bootstrap-tab .nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 992px) {
+  .views-view-bootstrap-tab .nav-tabs {
+    justify-content: center;
+    margin-inline: 2rem;
+    overflow: visible;
+  }
+}
+@media (min-width: 1400px) {
+  .views-view-bootstrap-tab .nav-tabs {
+    margin-inline: 4rem;
+  }
+}
+.views-view-bootstrap-tab .nav-item {
+  margin-inline-end: 0.25rem;
+  scroll-snap-align: end;
+  width: max-content;
+}
+.views-view-bootstrap-tab .nav-link {
+  border: 0 transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  margin-bottom: 0 !important;
+  transition: all 0.2s ease-out;
+  width: max-content;
+}
+.views-view-bootstrap-tab .nav-link:hover, .views-view-bootstrap-tab .nav-link.active {
+  background-color: hsl(15.7, 92%, 43.9%);
+  color: hsl(0, 0%, 100%);
+}
+.views-view-bootstrap-tab .nav-link:focus-visible {
+  box-shadow: none;
+  outline: 2px solid hsl(210, 10.8%, 14.5%);
+}
+
 body.cke_editable_themed {
   padding: 1rem;
 }
@@ -16403,6 +16465,18 @@ a.tabledrag-handle .handle {
 }
 .osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--spacer {
   display: none !important;
+}
+
+.card-group {
+  gap: 1.5rem;
+}
+.card-group .card {
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color) !important;
+  border-radius: 0.625rem !important;
+}
+.card-group .card img {
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
 }
 
 .node--unpublished,
