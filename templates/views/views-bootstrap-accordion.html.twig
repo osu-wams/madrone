@@ -17,9 +17,10 @@
       or (i == len and options.collapse.last is defined and options.collapse.last > 0)
       or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)
       ) ? 'true' : 'false' %}
+    {% set collapse_button_class = collapse_class_boolean == 'false' ? "collapsed" %}
     <div class="accordion-item">
       <h2 class="accordion-header" id="heading{{ key }}">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        <button class="accordion-button {{ collapse_button_class }}" type="button" data-bs-toggle="collapse"
                 data-bs-target="#{{ id }}-collapse-{{ key }}" aria-expanded="{{ collapse_class_boolean }}"
                 aria-controls="{{ id }}-collapse-{{ key }}">
           {{ row.title }}
