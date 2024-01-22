@@ -4,7 +4,7 @@
   'views-view-bootstrap-media'
 ] %}
 <div{{ attributes.addClass(classes) }} id="{{ id }}">
-  {% for key, row in rows -%}
+  {% for row in rows -%}
     <div class="d-flex">
       <div class="flex-shrink-0">
         {% if row.image %}
