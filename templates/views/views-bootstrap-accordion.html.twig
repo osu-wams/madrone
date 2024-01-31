@@ -7,16 +7,8 @@
   {% set len = rows|length %}
   {% for key, row in rows -%}
     {% set i = i + 1 %}
-    {% set collapse_class = (
-      (i == 1 and options.collapse.first is defined and options.collapse.first > 0)
-      or (i == len and options.collapse.last is defined and options.collapse.last > 0)
-      or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)
-      ) ? 'collapse show' : 'collapse' %}
-    {% set collapse_class_boolean = (
-      (i == 1 and options.collapse.first is defined and options.collapse.first > 0)
-      or (i == len and options.collapse.last is defined and options.collapse.last > 0)
-      or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)
-      ) ? 'true' : 'false' %}
+    {% set collapse_class = ((i == 1 and options.collapse.first is defined and options.collapse.first > 0) or (i == len and options.collapse.last is defined and options.collapse.last > 0) or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)) ? 'collapse show' : 'collapse' %}
+    {% set collapse_class_boolean = ((i == 1 and options.collapse.first is defined and options.collapse.first > 0) or (i == len and options.collapse.last is defined and options.collapse.last > 0) or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)) ? 'true' : 'false' %}
     {% set collapse_button_class = collapse_class_boolean == 'false' ? "collapsed" %}
     <div class="accordion-item">
       <h2 class="accordion-header" id="heading{{ key }}">
