@@ -32,17 +32,17 @@ article.align-center.media--type-document > .field {
 article.media {
   &.align-left {
     float: none;
-    margin-inline-end: 1rem !important;
     @media screen and (min-width: 768px) {
       float: left;
+      margin-inline-end: 1rem !important;
     }
   }
 
   &.align-right {
     float: none;
-    margin-inline-start: 1rem !important;
     @media screen and (min-width: 768px) {
       float: right;
+      margin-inline-start: 1rem !important;
     }
   }
 }
@@ -50,17 +50,17 @@ article.media {
 figure.figure {
   &.align-left {
     float: none;
-    margin-inline-end: 1rem !important;
     @media screen and (min-width: 768px) {
       float: left;
+      margin-inline-end: 1rem !important;
     }
   }
 
   &.align-right {
     float: none;
-    margin-inline-start: 1rem !important;
     @media screen and (min-width: 768px) {
       float: right;
+      margin-inline-start: 1rem !important;
     }
   }
 }
