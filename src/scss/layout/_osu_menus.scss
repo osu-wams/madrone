@@ -1,3 +1,5 @@
+@import "../abstracts/osu_variables";
+
 $menu-depth: 0.5;
 @for $i from 2 to 10 {
   .madrone-sidebar ul.menu--level-#{$i} li {
@@ -21,4 +23,21 @@ $menu-depth: 0.5;
     }
   }
   $menu-depth: $menu-depth + 0.25;
+}
+
+.menu:not(.sf-menu, .menu--group-menu) {
+  .nav-item {
+    .nav-link {
+      &:hover,
+      &:focus {
+        background-color: $bucktoothwhite-hsl;
+        color: $neutral-700;
+      }
+
+      &:active {
+        background-color: $paddletailblack-hsl;
+        color: $bucktoothwhite-hsl;
+      }
+    }
+  }
 }

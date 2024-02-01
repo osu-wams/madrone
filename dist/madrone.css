@@ -15319,6 +15319,15 @@ footer .region-footer a:active {
   color: white;
 }
 
+.menu:not(.sf-menu, .menu--group-menu) .nav-item .nav-link:hover, .menu:not(.sf-menu, .menu--group-menu) .nav-item .nav-link:focus {
+  background-color: hsl(0, 0%, 100%);
+  color: #423e3c;
+}
+.menu:not(.sf-menu, .menu--group-menu) .nav-item .nav-link:active {
+  background-color: hsl(210, 10.8%, 14.5%);
+  color: hsl(0, 0%, 100%);
+}
+
 @media screen and (max-width: 768px) {
   .block-group-content-menu ul:not(.group-mobile-menu) {
     display: none;

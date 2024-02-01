@@ -29,6 +29,7 @@ We call a macro which calls itself to render the full tree.
   {% import _self as menus %}
   {% set menu_classes = [
     'menu',
+    'menu--group-menu',
     'menu--' ~ menu_name|clean_class,
     'nav',
     'nav-pills'
