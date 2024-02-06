@@ -32,15 +32,17 @@
   'block-' ~ plugin_id|clean_class,
   hide_main_navigation ? 'madrone-group-nav' : 'madrone-global-nav'
 ] %}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    <div{{ content_attributes.addClass('block__content') }}>
-      {{ content }}
-    </div>
-  {% endblock %}
-</div>
+{% if hide_main_navigation %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      <div{{ content_attributes.addClass('block__content') }}>
+        {{ content }}
+      </div>
+    {% endblock %}
+  </div>
+{% endif %}
