@@ -1,5 +1,9 @@
 @import '../abstracts/osu_variables';
 
+.madrone-hide-superfish {
+  display: none !important;
+}
+
 .madrone-primary-menu > .block-superfish {
   .sf-accordion-toggle {
     display: flex;
