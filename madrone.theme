@@ -11,14 +11,6 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_preprocess().
  */
 function madrone_preprocess(&$variables, $hook) {
-  try {
-    $variables['is_front'] = Drupal::service('path.matcher')->isFrontPage();
-  }
-  catch (Exception $exception) {
-    $variables['is_front'] = FALSE;
-  }
-  $variables['hide_title_front'] = (bool) theme_get_setting('madrone_front_title');
-  $variables['#cache']['contexts'][] = 'url.path.is_front';
   $variables['monsido_site_id'] = theme_get_setting('madrone_monsido_site_id');
 }
 
@@ -93,8 +85,13 @@ function madrone_preprocess_node(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function madrone_preprocess_block(&$variables) {
-  // Variable true if current page is a group page. Used to hide main nav.
-  $variables['hide_main_navigation'] = hide_main_navigation();
+  $block_type = $variables['elements']['#plugin_id'];
+  if (!empty($block_type) && ($block_type === 'group_content_menu:group' || $block_type === 'superfish:main')) {
+    $variables['#cache']['contexts'][] = 'url.path';
+    $variables['#cache']['contexts'][] = 'url.query_args';
+    // Variable true if current page is a group page. Used to hide main nav.
+    $variables['hide_main_navigation'] = hide_main_navigation();
+  }
   // Adding a base_path variable to block template.
   $variables['base_path'] = base_path();
   // Adding region specific templates.

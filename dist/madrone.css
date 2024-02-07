@@ -15056,6 +15056,10 @@ footer .region-footer a:active {
   --bs-gutter-x: 2rem;
 }
 
+.madrone-hide-superfish {
+  display: none !important;
+}
+
 .madrone-primary-menu > .block-superfish .sf-accordion-toggle {
   display: flex;
   flex-direction: column;
