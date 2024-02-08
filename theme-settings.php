@@ -28,6 +28,15 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#default_value' => theme_get_setting('madrone_monsido_site_id'),
     '#description' => t("Site Id for monsido analytics"),
   ];
+
+  // Theme options for 404 page.
+  $form['madrone_settings']['madrone_utilities']['madrone_use_default_404'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Use Theme provided 404 page'),
+    '#default_value' => theme_get_setting('madrone_use_default_404'),
+    '#description' => t("Check to use the Theme provided 404, uncheck if you want to use your own node."),
+  ];
+
   // Site Logo Options.
   $form['madrone_settings']['madrone_utilities']['madrone_companion_logo'] = [
     '#type' => 'select',
