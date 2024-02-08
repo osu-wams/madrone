@@ -8,6 +8,9 @@ madrone.settings:
     madrone_monsido_site_id:
       type: string
       label: 'Monsido Site ID'
+    madrone_use_default_404:
+      type: integer
+      label: 'Use Theme provided 404 page'
     mardone_metatag_osu:
       type: integer
       label: 'Use OSU Metatag'

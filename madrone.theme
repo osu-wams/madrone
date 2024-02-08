@@ -123,8 +123,8 @@ function madrone_preprocess_block(&$variables) {
         $variables['companion_logo_link'] = $themeCompanionLogoData['link-path'];
         $variables['companion_logo_alt'] = $themeCompanionLogoData['alt-text'];
         $themeCrestPath = '/' . Drupal::theme()
-          ->getActiveTheme()
-          ->getPath() . '/assets/osu-logo-crest-only.svg';
+            ->getActiveTheme()
+            ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
         if (array_key_exists('group_path', $variables['content']) &&
           array_key_exists('group_name', $variables['content'])) {
@@ -212,6 +212,21 @@ function madrone_preprocess_field(&$variables) {
         $variables['items'][$index]['content']['#options']['attributes']['class'][] = 'btn-primary';
       }
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function madrone_preprocess_page(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $status_codes = [
+    'system.403' => 403,
+    'system.404' => 404,
+  ];
+  if (isset($status_codes[$route_name])) {
+    $is_default_404 = theme_get_setting('madrone_use_default_404') ?? TRUE;
+    $variables['madrone_use_default_404'] = $is_default_404;
   }
 }
 
@@ -445,16 +460,16 @@ function get_companion_logo(string $companion_logo): array {
     'cascades' => [
       'logo-name' => 'cascades',
       'logo-path' => '/' . Drupal::theme()
-        ->getActiveTheme()
-        ->getPath() . '/assets/osucascades.svg',
+          ->getActiveTheme()
+          ->getPath() . '/assets/osucascades.svg',
       'link-path' => 'https://osucascades.edu/',
       'alt-text' => 'OSU-Cascades homepage',
     ],
     default => [
       'logo-name' => 'default',
       'logo-path' => '/' . Drupal::theme()
-        ->getActiveTheme()
-        ->getPath() . '/logo.svg',
+          ->getActiveTheme()
+          ->getPath() . '/logo.svg',
       'link-path' => 'https://oregonstate.edu/',
       'alt-text' => 'Oregon State University homepage',
     ]
