@@ -3,7 +3,6 @@
 .views-view-bootstrap-tab {
   .nav-tabs {
     border-color: $osuorange-hsl;
-    border-width: 0;
     flex-wrap: nowrap;
     -ms-overflow-style: none; // IE and Edge
     overflow-x: auto;
@@ -15,7 +14,6 @@
     }
 
     @media (min-width: 992px) {
-      border-width: .15em;
       justify-content: center;
       margin-inline: 2rem;
       overflow: visible;
@@ -33,24 +31,15 @@
   }
 
   .nav-link {
-    border: 0;
+    border: 0 transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-    transition: background-color 0.2s ease-out;
+    margin-bottom: 0 !important;
+    transition: all 0.2s ease-out;
     width: max-content;
 
+    &:hover,
     &.active {
-      border-bottom: .15em solid $osuorange-hsl;
-      margin-bottom: 0;
-      @media screen and (min-width: 990px) {
-        border-block-start: .15em solid $osuorange;
-        border-bottom: 0;
-        border-inline: .15em solid $osuorange;
-        margin-bottom: -.14em;
-      }
-    }
-
-    &:hover {
       background-color: $osuorange-hsl;
       color: $bucktoothwhite-hsl;
     }
