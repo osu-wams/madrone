@@ -1,0 +1,42 @@
+madrone.mobile:
+  label: mobile
+  mediaQuery: '(min-width: 0px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+madrone.tablet:
+  label: tablet
+  mediaQuery: '(min-width: 576px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+madrone.desktop:
+  label: desktop
+  mediaQuery: '(min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+madrone.wide:
+  label: wide
+  mediaQuery: '(min-width: 992px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+madrone.ultra_wide:
+  label: ultra wide
+  mediaQuery: '(min-width: 1200px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+madrone.xl:
+  label: xl
+  mediaQuery: '(min-width: 1400px)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x

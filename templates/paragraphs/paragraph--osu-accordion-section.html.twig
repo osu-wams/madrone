@@ -48,7 +48,8 @@
 ] %}
 {# Sets Unique ID for Accordion from Paragraph ID. #}
 {% set paragraph_id = 'accordion-' ~ paragraph.id.value %}
-{% set accordion_header_element = paragraph.field_p_accordion_heading.value is not empty ? 'h3' : 'h2' %}
+{# this variable was used in a commit to try and provide symantically correct HTML headings. Twigcs is unhappy with it #}
+{# {% set accordion_header_element = paragraph.field_p_accordion_heading.value is not empty ? 'h3' : 'h2' %} #}
 
 {% block paragraph %}
   {% macro accordion_id(paragraph_id, key) %}
