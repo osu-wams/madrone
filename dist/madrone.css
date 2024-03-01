@@ -16372,6 +16372,13 @@ body.cke_editable_themed {
   top: -0.25rem;
 }
 
+button.video-content__controls {
+  bottom: 5rem;
+  --bs-btn-border-radius: 5px;
+  left: calc(100vw - 10rem);
+  width: 8rem;
+}
+
 .madrone-content .osu-bg-page-default nav ul.menu li a {
   color: #212529 !important;
   background-color: #f7f5f5 !important;

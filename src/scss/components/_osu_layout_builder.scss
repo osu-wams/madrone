@@ -111,6 +111,7 @@
     padding-inline: 3rem;
   }
 }
+
 // Adding an X to a few buttons that are missed in themeing. Might need to remove in the future.
 .editor-link-dialog,
 .editor-file-dialog {
@@ -127,4 +128,11 @@
     position: relative;
     top: -0.25rem;
   }
+}
+
+button.video-content__controls {
+  bottom: 5rem;
+  --bs-btn-border-radius: 5px;
+  left: calc(100vw - 10rem);
+  width: 8rem;
 }
