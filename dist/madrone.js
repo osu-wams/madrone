@@ -1,3 +1,4 @@
+// @phpcs:ignoreFile
 const fontSize = 16;
 const smallestEm = 12;
 const largestEm = 27;
@@ -135,7 +136,13 @@ window.addEventListener('load', () => {
   document.querySelectorAll('.simple-popup-blocks-global .spb-popup-main-wrapper').forEach(osuSpb => {
     osuSpb.style.setProperty('--spb-width', osuSpb.style.getPropertyValue('width'));
     osuSpb.style.setProperty('--spb-margin-left', osuSpb.style.getPropertyValue('margin-left'));
-  })
+  });
+
+  // Bootstrap Layout Builder Background Video.
+  document.querySelectorAll('button.video-content__controls').forEach(videoContentControl => {
+    videoContentControl.addEventListener('click', lbVideoControl)
+  });
+
 });
 
 /**
@@ -533,14 +540,42 @@ function resetBreadCrumbs() {
 function reducedMotionCheck() {
   const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const videoList = document.getElementsByTagName("video");
+  const videoButtonControls = document.querySelectorAll('button.video-content__controls')
   if (motionQuery.matches) {
     // If the AOS library is loaded we probably have an animation.
     if (typeof AOS !== "undefined") {
       // This will trigger all animations to be disabled and everything should show up.
       AOS.init({disable: true});
     }
-    for (let i = 0; i < videoList.length; i++) {
-      videoList[i].pause();
+    // Pause all videos.
+    videoList.forEach(video => {
+      video.pause();
+    })
+    // Update video control button text to match current state.
+    videoButtonControls.forEach(buttonControls => {
+      buttonControls.innerText = "⏵ Play"
+    })
+  }
+}
+
+/**
+ * Controls the video playback by pausing or playing the video element.
+ *
+ * @param {Event} event - The event object that triggered the method.
+ *
+ * @return {void}
+ */
+function lbVideoControl(event) {
+  event.preventDefault();
+  let parent = this.parentElement;
+  let videoElem = parent ? parent.previousElementSibling : null;
+  if (videoElem && videoElem.tagName === 'VIDEO') {
+    if (videoElem.paused === false) {
+      videoElem.pause();
+      this.innerText = "⏵ Play";
+    } else {
+      videoElem.play();
+      this.innerText = "⏸ Pause";
     }
   }
 }
