@@ -16372,6 +16372,24 @@ body.cke_editable_themed {
   top: -0.25rem;
 }
 
+button.video-content__controls {
+  bottom: 5rem;
+  --bs-btn-border-radius: 5px;
+  left: calc(100vw - 10rem);
+  width: 8rem;
+}
+
+.bg-video.bg-image.background-local-video video,
+.bg-video.bg-image.background-local-video button.video-content__controls {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .bg-video.bg-image.background-local-video video,
+  .bg-video.bg-image.background-local-video button.video-content__controls {
+    display: initial;
+  }
+}
+
 .madrone-content .osu-bg-page-default nav ul.menu li a {
   color: #212529 !important;
   background-color: #f7f5f5 !important;
