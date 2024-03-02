@@ -136,3 +136,13 @@ button.video-content__controls {
   left: calc(100vw - 10rem);
   width: 8rem;
 }
+
+.bg-video.bg-image.background-local-video {
+  & video,
+  button.video-content__controls {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: initial;
+    }
+  }
+}

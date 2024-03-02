@@ -16379,6 +16379,17 @@ button.video-content__controls {
   width: 8rem;
 }
 
+.bg-video.bg-image.background-local-video video,
+.bg-video.bg-image.background-local-video button.video-content__controls {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .bg-video.bg-image.background-local-video video,
+  .bg-video.bg-image.background-local-video button.video-content__controls {
+    display: initial;
+  }
+}
+
 .madrone-content .osu-bg-page-default nav ul.menu li a {
   color: #212529 !important;
   background-color: #f7f5f5 !important;
