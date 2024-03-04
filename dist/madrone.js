@@ -572,10 +572,10 @@ function lbVideoControl(event) {
   if (videoElem && videoElem.tagName === 'VIDEO') {
     if (videoElem.paused === false) {
       videoElem.pause();
-      this.innerText = "⏵ Play";
+      this.innerHTML = "<i class=\"fa-solid fa-play\"></i> Play";
     } else {
       videoElem.play();
-      this.innerText = "⏸ Pause";
+      this.innerHTML = "<i class=\"fa-solid fa-pause\"></i> Pause";
     }
   }
 }
