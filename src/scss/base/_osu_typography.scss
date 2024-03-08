@@ -88,7 +88,8 @@ main .block-page-title-block {
       .list-unstyled,
       .contextual-links,
       .vertical-tabs__menu,
-      .pager__items
+      .pager__items,
+      .select2-selection__rendered
     )
   > li:not([style*='list-style: none']) {
     &::marker {

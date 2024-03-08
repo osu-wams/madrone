@@ -1,0 +1,9 @@
+@import "../abstracts/osu_variables";
+
+.webform-submission-form {
+  fieldset.form-composite.webform-type-radios {
+    legend {
+      font-size: $font-size-base;
+    }
+  }
+}
