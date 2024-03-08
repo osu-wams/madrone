@@ -133,6 +133,9 @@
 
         a:not(.sf-depth-1),
         span:not(.sf-depth-1) {
+          display: flex;
+          justify-content: space-between;
+
           &:hover,
           &:active,
           &:focus {
