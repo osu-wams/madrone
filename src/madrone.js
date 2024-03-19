@@ -548,12 +548,12 @@ function reducedMotionCheck() {
       AOS.init({disable: true});
     }
     // Pause all videos.
-    videoList.forEach(video => {
-      video.pause();
-    })
+    for (let item of videoList) {
+      item.pause();
+    }
     // Update video control button text to match current state.
     videoButtonControls.forEach(buttonControls => {
-      buttonControls.innerText = "⏵ Play"
+      buttonControls.innerHTML =  "<i class=\"fa-solid fa-play\"></i> Play";
     })
   }
 }
