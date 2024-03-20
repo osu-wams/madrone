@@ -11,8 +11,8 @@ a {
   }
 
   &:active:not(#osu-logo-wide, #osu-logo-crest) {
-    background-color: $paddletailblack-lab;
-    color: $bucktoothwhite-lab;
+    background-color: $paddletailblack-hsl;
+    color: $bucktoothwhite-hsl;
   }
 
   &.button {

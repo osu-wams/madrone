@@ -14831,8 +14831,8 @@ a:hover, a:focus {
   text-decoration: none;
 }
 a:active:not(#osu-logo-wide, #osu-logo-crest) {
-  background-color: lab(14.44 -0.72 -3.26);
-  color: lab(100 0 0);
+  background-color: hsl(210, 10.8%, 14.5%);
+  color: hsl(0, 0%, 100%);
 }
 hr {
   margin-block: 3rem;
