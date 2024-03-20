@@ -1,3 +1,4 @@
+@import "../abstracts/osu_variables";
 .block-system-branding-block a {
   @include font-size(1.5rem);
 
@@ -8,7 +9,7 @@
     &:active,
     &:focus {
       text-decoration-line: underline !important;
-      text-decoration-color: $osuorange !important;
+      text-decoration-color: $osuorange-hsl !important;
       text-decoration-thickness: 13% !important;
     }
   }

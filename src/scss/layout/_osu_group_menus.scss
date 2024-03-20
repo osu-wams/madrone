@@ -25,8 +25,8 @@
       .group-menu-hover {
         a,
         span {
-          background-color: $bucktoothwhite;
-          color: $paddletailblack;
+          background-color: $bucktoothwhite-hsl;
+          color: $paddletailblack-hsl;
           cursor: pointer;
         }
       }
@@ -43,7 +43,7 @@
       z-index: 499;
 
       li {
-        background-color: $bucktoothwhite;
+        background-color: $bucktoothwhite-hsl;
         position: relative;
       }
 
@@ -58,7 +58,7 @@
     @media (hover: hover) and (pointer: fine) {
       .group-menu-hover {
         > ul {
-          background-color: $bucktoothwhite;
+          background-color: $bucktoothwhite-hsl;
           transform: scaleY(1);
           transform-origin: top;
           transition: transform 0.2s ease-in-out;
@@ -90,11 +90,11 @@
     @media (hover: hover) and (pointer: fine) {
       .group-menu-hover > a,
       .group-menu-hover > span {
-        background-color: $osuorange;
-        color: $bucktoothwhite;
+        background-color: $osuorange-hsl;
+        color: $bucktoothwhite-hsl;
 
         &::after {
-          color: $bucktoothwhite;
+          color: $bucktoothwhite-hsl;
         }
       }
     }
@@ -104,8 +104,8 @@
     // override nav-link class
     a.nav-link:hover,
     span.nav-link:hover {
-      background-color: $bucktoothwhite;
-      color: $paddletailblack;
+      background-color: $bucktoothwhite-hsl;
+      color: $paddletailblack-hsl;
     }
 
     li a.group-mobile-main-a {
@@ -154,8 +154,8 @@
 
       > a,
       > span {
-        background-color: $bucktoothwhite !important;
-        color: $paddletailblack !important;
+        background-color: $bucktoothwhite-hsl !important;
+        color: $paddletailblack-hsl !important;
       }
     }
   }

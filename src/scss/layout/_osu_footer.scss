@@ -1,8 +1,9 @@
+@import "../abstracts/osu_variables";
 footer {
   .region-footer {
     a {
-      color: $bucktoothwhite;
-      text-decoration-color: $bucktoothwhite;
+      color: $bucktoothwhite-hsl;
+      text-decoration-color: $bucktoothwhite-hsl;
 
       &:hover,
       &:focus {
@@ -10,8 +11,8 @@ footer {
       }
 
       &:active {
-        background-color: $bucktoothwhite;
-        color: $paddletailblack;
+        background-color: $bucktoothwhite-hsl;
+        color: $paddletailblack-hsl;
       }
     }
   }

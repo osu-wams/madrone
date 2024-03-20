@@ -1,7 +1,7 @@
 @import '../abstracts/osu_variables';
 // Theme Defaults
 a {
-  text-decoration-color: rgba($osuorange, 1);
+  text-decoration-color: $osuorange-hsl;
   text-decoration-thickness: 10%;
   text-underline-offset: 2px;
 
@@ -11,8 +11,8 @@ a {
   }
 
   &:active:not(#osu-logo-wide, #osu-logo-crest) {
-    background-color: $paddletailblack;
-    color: $bucktoothwhite;
+    background-color: $paddletailblack-hsl;
+    color: $bucktoothwhite-hsl;
   }
 
   &.button {
