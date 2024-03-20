@@ -47,7 +47,7 @@
           }
 
           ul {
-            background-color: $bucktoothwhite;
+            background-color: $bucktoothwhite-hsl;
           }
         }
       }
@@ -77,7 +77,7 @@
             }
 
             & > a {
-              background-color: $bucktoothwhite;
+              background-color: $bucktoothwhite-hsl;
             }
           }
 
@@ -107,14 +107,14 @@
           &:focus {
             > a,
             > span {
-              background-color: $osuorange;
-              color: $bucktoothwhite;
+              background-color: $osuorange-hsl;
+              color: $bucktoothwhite-hsl;
               transition: none !important;
             }
 
             > a.menuparent::after,
             > span.menuparent::after {
-              color: $bucktoothwhite;
+              color: $bucktoothwhite-hsl;
             }
           }
 
@@ -145,7 +145,7 @@
           &:hover,
           &:active,
           &:focus {
-            background-color: $bucktoothwhite;
+            background-color: $bucktoothwhite-hsl;
             color: $neutral-700;
           }
 

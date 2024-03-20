@@ -30,7 +30,7 @@
 
             a {
               text-decoration: underline;
-              text-decoration-color: rgba($osuorange, 1);
+              text-decoration-color: $osuorange-hsl;
               text-decoration-thickness: 13%;
 
               &:hover,

@@ -6,12 +6,12 @@
   }
 
   .spb_overlay {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(0 0 0 / 0.6);
   }
 
   .spb-popup-main-wrapper {
-    background-color: $bucktoothwhite;
-    border: 0.025rem solid $osuorange;
+    background-color: $bucktoothwhite-hsl;
+    border: 0.025rem solid $osuorange-hsl;
     border-radius: 0.25rem;
     padding: 1.3rem 2rem;
 
@@ -31,9 +31,9 @@
 
       > .spb_close,
       > .spb_minimize {
-        border-color: $osuorange;
+        border-color: $osuorange-hsl;
         border-radius: 0.25rem;
-        color: $osuorange;
+        color: $osuorange-hsl;
       }
     }
   }

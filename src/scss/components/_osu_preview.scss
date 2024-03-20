@@ -1,5 +1,6 @@
+@import "../abstracts/osu_variables";
 .node-preview-container {
-  background-color: $bucktoothwhite;
+  background-color: $bucktoothwhite-hsl;
 
   .node-preview-form-select {
     .node-preview-backlink {

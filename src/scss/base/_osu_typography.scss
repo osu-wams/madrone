@@ -92,7 +92,7 @@ main .block-page-title-block {
     )
   > li:not([style*='list-style: none']) {
     &::marker {
-      color: rgba($body-color, 1);
+      color: $body-color;
       content: '\f054\2000';
       display: inline-block;
       font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
@@ -113,7 +113,7 @@ main .block-page-title-block {
       )
     > li {
       &::marker {
-        color: $bucktoothwhite;
+        color: $bucktoothwhite-hsl;
       }
     }
   }
@@ -140,12 +140,12 @@ p:last-child {
 
   & > * {
     a:not(.layout-builder__link--add, .btn) {
-      color: $bucktoothwhite;
-      text-decoration-color: $bucktoothwhite;
+      color: $bucktoothwhite-hsl;
+      text-decoration-color: $bucktoothwhite-hsl;
 
       &:active {
-        background-color: $bucktoothwhite;
-        color: $paddletailblack;
+        background-color: $bucktoothwhite-hsl;
+        color: $paddletailblack-hsl;
       }
     }
   }
