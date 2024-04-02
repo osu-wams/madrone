@@ -6,9 +6,11 @@
     min-height: $height-val;
   }
   @each $breakpoint, $width in $grid-breakpoints {
-    @media (min-width: $width) {
-      .osu-min-h-#{$breakpoint}-#{$height-name} {
-        min-height: $height-val;
+    @if $width != 0 {
+      @media (min-width: $width) {
+        .osu-min-h-#{$breakpoint}-#{$height-name} {
+          min-height: $height-val;
+        }
       }
     }
   }

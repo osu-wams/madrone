@@ -14534,11 +14534,6 @@ textarea.form-control-lg {
   min-height: 100px;
 }
 
-@media (min-width: 0) {
-  .osu-min-h-xs-100 {
-    min-height: 100px;
-  }
-}
 @media (min-width: 576px) {
   .osu-min-h-sm-100 {
     min-height: 100px;
@@ -14568,11 +14563,6 @@ textarea.form-control-lg {
   min-height: 200px;
 }
 
-@media (min-width: 0) {
-  .osu-min-h-xs-200 {
-    min-height: 200px;
-  }
-}
 @media (min-width: 576px) {
   .osu-min-h-sm-200 {
     min-height: 200px;
@@ -14602,11 +14592,6 @@ textarea.form-control-lg {
   min-height: 300px;
 }
 
-@media (min-width: 0) {
-  .osu-min-h-xs-300 {
-    min-height: 300px;
-  }
-}
 @media (min-width: 576px) {
   .osu-min-h-sm-300 {
     min-height: 300px;
@@ -14636,11 +14621,6 @@ textarea.form-control-lg {
   min-height: 400px;
 }
 
-@media (min-width: 0) {
-  .osu-min-h-xs-400 {
-    min-height: 400px;
-  }
-}
 @media (min-width: 576px) {
   .osu-min-h-sm-400 {
     min-height: 400px;
@@ -14670,11 +14650,6 @@ textarea.form-control-lg {
   min-height: 500px;
 }
 
-@media (min-width: 0) {
-  .osu-min-h-xs-500 {
-    min-height: 500px;
-  }
-}
 @media (min-width: 576px) {
   .osu-min-h-sm-500 {
     min-height: 500px;
@@ -14704,11 +14679,6 @@ textarea.form-control-lg {
   min-height: 600px;
 }
 
-@media (min-width: 0) {
-  .osu-min-h-xs-600 {
-    min-height: 600px;
-  }
-}
 @media (min-width: 576px) {
   .osu-min-h-sm-600 {
     min-height: 600px;
@@ -14738,11 +14708,6 @@ textarea.form-control-lg {
   min-height: 700px;
 }
 
-@media (min-width: 0) {
-  .osu-min-h-xs-700 {
-    min-height: 700px;
-  }
-}
 @media (min-width: 576px) {
   .osu-min-h-sm-700 {
     min-height: 700px;
@@ -14772,11 +14737,6 @@ textarea.form-control-lg {
   min-height: 800px;
 }
 
-@media (min-width: 0) {
-  .osu-min-h-xs-800 {
-    min-height: 800px;
-  }
-}
 @media (min-width: 576px) {
   .osu-min-h-sm-800 {
     min-height: 800px;
