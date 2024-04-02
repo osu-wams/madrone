@@ -5,6 +5,15 @@
   .osu-min-h-#{$height-name} {
     min-height: $height-val;
   }
+  @each $breakpoint, $width in $grid-breakpoints {
+    @if $width != 0 {
+      @media (min-width: $width) {
+        .osu-min-h-#{$breakpoint}-#{$height-name} {
+          min-height: $height-val;
+        }
+      }
+    }
+  }
 }
 
 // For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use
