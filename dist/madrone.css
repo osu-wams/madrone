@@ -15152,7 +15152,8 @@ main .block-page-title-block > .block__content > h1, main .block-page-title-bloc
 .list-unstyled,
 .contextual-links,
 .vertical-tabs__menu,
-.pager__items) > li:not([style*="list-style: none"])::marker {
+.pager__items,
+.select2-selection__rendered) > li:not([style*="list-style: none"])::marker {
   color: #423e3c;
   content: "\f054 ";
   display: inline-block;
@@ -16714,6 +16715,10 @@ a.tabledrag-handle .handle {
 .card-group .card img {
   border-top-left-radius: 0.625rem;
   border-top-right-radius: 0.625rem;
+}
+
+.webform-submission-form fieldset.form-composite.webform-type-radios legend {
+  font-size: 1.125rem;
 }
 
 .node--unpublished,
