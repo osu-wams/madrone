@@ -15375,6 +15375,11 @@ footer .region-footer a:active {
   font-weight: 900;
   letter-spacing: normal;
 }
+.madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1),
+.madrone-primary-menu > .block-superfish ul.sf-menu li span:not(.sf-depth-1) {
+  display: flex;
+  justify-content: space-between;
+}
 .madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1):hover, .madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1):active, .madrone-primary-menu > .block-superfish ul.sf-menu li a:not(.sf-depth-1):focus,
 .madrone-primary-menu > .block-superfish ul.sf-menu li span:not(.sf-depth-1):hover,
 .madrone-primary-menu > .block-superfish ul.sf-menu li span:not(.sf-depth-1):active,
