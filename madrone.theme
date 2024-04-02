@@ -169,11 +169,13 @@ function madrone_preprocess_input(&$variables) {
       $variables['attributes']['class'][] = 'form-control';
       $variables['attributes']['class'][] = 'form-control-color';
       break;
+
     case 'entity_autocomplete':
       $variables['attributes']['class'][] = 'form-control';
       $variables['attributes']['class'][] = 'my-3';
       $variables['attributes']['size'] = 30;
       break;
+
     case 'checkbox':
     case 'radio':
       $variables['attributes']['class'][] = 'form-check-input';
