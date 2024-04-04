@@ -16705,6 +16705,10 @@ a.tabledrag-handle .handle {
   display: none !important;
 }
 
+.block__content__site-name .site-name__group-link--wrapper {
+  padding-top: 0.1rem;
+}
+
 .card-group {
   gap: 1.5rem;
 }
