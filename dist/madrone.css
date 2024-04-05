@@ -16574,11 +16574,10 @@ body.cke_editable_themed {
 }
 
 .media-library-widget-modal button.ui-dialog-titlebar-close:after {
-  content: "X";
+  content: "×";
   position: relative;
-  top: -0.25rem;
+  top: -0.55rem;
 }
-
 button.video-content__controls {
   bottom: 5rem;
   --bs-btn-border-radius: 5px;
