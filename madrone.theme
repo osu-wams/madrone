@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess().
@@ -123,8 +124,8 @@ function madrone_preprocess_block(&$variables) {
         $variables['companion_logo_link'] = $themeCompanionLogoData['link-path'];
         $variables['companion_logo_alt'] = $themeCompanionLogoData['alt-text'];
         $themeCrestPath = '/' . Drupal::theme()
-          ->getActiveTheme()
-          ->getPath() . '/assets/osu-logo-crest-only.svg';
+            ->getActiveTheme()
+            ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
         if (array_key_exists('group_path', $variables['content']) &&
           array_key_exists('group_name', $variables['content'])) {
@@ -466,18 +467,50 @@ function get_companion_logo(string $companion_logo): array {
     'cascades' => [
       'logo-name' => 'cascades',
       'logo-path' => '/' . Drupal::theme()
-        ->getActiveTheme()
-        ->getPath() . '/assets/osucascades.svg',
+          ->getActiveTheme()
+          ->getPath() . '/assets/osucascades.svg',
       'link-path' => 'https://osucascades.edu/',
       'alt-text' => 'OSU-Cascades homepage',
     ],
     default => [
       'logo-name' => 'default',
       'logo-path' => '/' . Drupal::theme()
-        ->getActiveTheme()
-        ->getPath() . '/logo.svg',
+          ->getActiveTheme()
+          ->getPath() . '/logo.svg',
       'link-path' => 'https://oregonstate.edu/',
       'alt-text' => 'Oregon State University homepage',
     ]
   };
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function madrone_preprocess_views_view_fields__media_library(&$variables) {
+  // Add classes to media rendered entity field, so it can be targeted for
+  // styling. Adding this class in a template is very difficult to do.
+  if (isset($variables['fields']['media_library_select_form']->wrapper_attributes)) {
+    $variables['fields']['media_library_select_form']->wrapper_attributes->addClass('media-library-item__click-to-select-checkbox');
+  }
+  if (isset($variables['fields']['rendered_entity']->wrapper_attributes)) {
+    $variables['fields']['rendered_entity']->wrapper_attributes->addClass('media-library-item__click-to-select-trigger');
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function madrone_theme_suggestions_views_view_table_alter(array &$suggestions, array &$variables) {
+  if (isset($variables['view']) && $variables['view'] instanceof ViewExecutable) {
+    $id = $variables['view']->current_display;
+
+    if (!in_array('views_view_table__' . $id, $suggestions)) {
+      $suggestions[] = 'views_view_table__' . $id;
+    }
+    /** @var \Drupal\views\ViewExecutable $views */
+    $views = $variables['view'];
+    if (isset($views->field['media_library_select_form'])) {
+      $suggestions[] = 'views_view_table__media_library';
+    }
+  }
 }
