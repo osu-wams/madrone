@@ -32,6 +32,10 @@
  */
 #}
 {% set classes = [
+  'table',
+  'table-striped',
+  'table-bordered',
+  'table-hover',
   'views-table',
   'views-view-table',
   'cols-' ~ header|length,
@@ -52,7 +56,7 @@
     </caption>
   {% endif %}
   {% if header %}
-    <thead>
+    <thead class="table-dark">
     <tr>
       {% for key, column in header %}
         {% if column.default_classes %}
