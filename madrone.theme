@@ -514,3 +514,20 @@ function madrone_theme_suggestions_views_view_table_alter(array &$suggestions, a
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Taken from Claro theme:
+ *
+ * @todo Do this in the relevant template once
+ *   https://www.drupal.org/project/drupal/issues/3088856 is resolved
+ */
+function madrone_preprocess_links__media_library_menu(&$variables) {
+  foreach ($variables['links'] as &$link) {
+    // Add a class to the Media Library menu items.
+    $link['attributes']->addClass('media-library-menu__item', 'nav-item');
+    $link['link']['#options']['attributes']['class'][] = 'media-library-menu__link';
+    $link['link']['#options']['attributes']['class'][] = 'nav-link';
+  }
+}
