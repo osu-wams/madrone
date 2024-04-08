@@ -17,12 +17,10 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'media-library-item',
-    'media-library-item--grid',
-  ]
-%}
+{% set classes = [
+  'media-library-item',
+  'media-library-item--grid',
+] %}
 <div{{ attributes.addClass(classes) }}>
   {{ content }}
 </div>
