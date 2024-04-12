@@ -16573,12 +16573,6 @@ body.cke_editable_themed {
   top: -0.55rem;
 }
 
-.media-library-widget-modal button.ui-dialog-titlebar-close:after {
-  content: "X";
-  position: relative;
-  top: -0.25rem;
-}
-
 button.video-content__controls {
   bottom: 5rem;
   --bs-btn-border-radius: 5px;
@@ -16724,6 +16718,104 @@ a.tabledrag-handle .handle {
 
 .webform-submission-form fieldset.form-composite.webform-type-radios legend {
   font-size: 1.125rem;
+}
+
+.media-library-widget-modal {
+  --osu-border-radius: .625em;
+  max-width: 90vw;
+}
+.media-library-widget-modal .media-library-wrapper {
+  display: flex;
+}
+.media-library-widget-modal button.ui-dialog-titlebar-close:after {
+  content: "×";
+  position: relative;
+  top: -0.55rem;
+}
+.media-library-widget-modal .views-exposed-form .form-wrapper {
+  align-self: end;
+}
+.media-library-widget-modal .media-library-views-form__rows {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid {
+  background-color: var(--bs-body-bg);
+  border-radius: var(--osu-border-radius);
+  flex: 1 0 20%;
+  margin: 0.5rem 1rem;
+  position: relative;
+  width: 20%;
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid:before {
+  border: 1px solid var(--bs-secondary);
+  border-radius: 0.5em;
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  width: 100%;
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid.is-hover:before, .media-library-widget-modal .media-library-views-form__rows .media-library-item--grid.is-focus:before {
+  border-color: var(--bs-gray-dark);
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid.media-library-item--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  --bs-secondary: var(--bs-gray-600);
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid .media-library-item__click-to-select-trigger {
+  cursor: pointer;
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid .media-library-item__click-to-select-checkbox {
+  left: 0.75rem;
+  position: absolute;
+  top: 0.25rem;
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid .media-library-item__preview-wrapper .field--name-thumbnail {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid .media-library-item__preview-wrapper .field--name-thumbnail .image-style-medium {
+  height: 11.25rem;
+  object-fit: contain;
+  object-position: center center;
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid .media-library-item__preview-wrapper .media-library-item__attributes {
+  background-color: var(--bs-gray-dark);
+  border-bottom-left-radius: var(--osu-border-radius);
+  border-bottom-right-radius: var(--osu-border-radius);
+  color: var(--bs-secondary);
+  padding: 0.5rem 1.5rem;
+}
+.media-library-widget-modal .media-library-views-form__rows .media-library-item--grid .media-library-item__preview-wrapper .media-library-item__attributes .media-library-item__name {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+.media-library-widget-modal .media-library-item--table {
+  vertical-align: middle;
+}
+.media-library-widget-modal .media-library-item--table.media-library-item--disabled {
+  pointer-events: none;
+  --bs-table-color-state: var(--bs-secondary-color);
+}
+.media-library-widget-modal .media-library-item--table.media-library-item--disabled a {
+  color: var(--bs-secondary-color);
+  text-decoration-color: var(--bs-secondary-color);
+}
+.media-library-widget-modal .media-library-item--table td {
+  padding: 0.625rem 1rem;
+}
+.media-library-widget-modal .media-library-item--table img {
+  max-width: 6.25rem;
 }
 
 .node--unpublished,

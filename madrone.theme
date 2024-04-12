@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess().
@@ -480,4 +481,53 @@ function get_companion_logo(string $companion_logo): array {
       'alt-text' => 'Oregon State University homepage',
     ]
   };
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function madrone_preprocess_views_view_fields__media_library(&$variables) {
+  // Add classes to media rendered entity field, so it can be targeted for
+  // styling. Adding this class in a template is very difficult to do.
+  if (isset($variables['fields']['media_library_select_form']->wrapper_attributes)) {
+    $variables['fields']['media_library_select_form']->wrapper_attributes->addClass('media-library-item__click-to-select-checkbox');
+  }
+  if (isset($variables['fields']['rendered_entity']->wrapper_attributes)) {
+    $variables['fields']['rendered_entity']->wrapper_attributes->addClass('media-library-item__click-to-select-trigger');
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function madrone_theme_suggestions_views_view_table_alter(array &$suggestions, array &$variables) {
+  if (isset($variables['view']) && $variables['view'] instanceof ViewExecutable) {
+    $id = $variables['view']->current_display;
+
+    if (!in_array('views_view_table__' . $id, $suggestions)) {
+      $suggestions[] = 'views_view_table__' . $id;
+    }
+    /** @var \Drupal\views\ViewExecutable $views */
+    $views = $variables['view'];
+    if (isset($views->field['media_library_select_form'])) {
+      $suggestions[] = 'views_view_table__media_library';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Taken from Claro theme:
+ *
+ * @todo Do this in the relevant template once
+ *   https://www.drupal.org/project/drupal/issues/3088856 is resolved
+ */
+function madrone_preprocess_links__media_library_menu(&$variables) {
+  foreach ($variables['links'] as &$link) {
+    // Add a class to the Media Library menu items.
+    $link['attributes']->addClass('media-library-menu__item', 'nav-item');
+    $link['link']['#options']['attributes']['class'][] = 'media-library-menu__link';
+    $link['link']['#options']['attributes']['class'][] = 'nav-link';
+  }
 }

@@ -122,14 +122,6 @@
   }
 }
 
-.media-library-widget-modal {
-  button.ui-dialog-titlebar-close:after {
-    content: 'X';
-    position: relative;
-    top: -0.25rem;
-  }
-}
-
 button.video-content__controls {
   bottom: 5rem;
   --bs-btn-border-radius: 5px;
