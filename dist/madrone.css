@@ -14980,8 +14980,12 @@ textarea.form-control-lg {
   position: absolute;
   z-index: 0;
 }
-.osu-bg-overlay-dark > div.block__content,
-.osu-bg-before-dark > div.block__content {
+.osu-bg-overlay-dark div.block-layout-builder[class*=block-inline-],
+.osu-bg-overlay-dark div.layout-builder__add-block,
+.osu-bg-overlay-dark div.block-block-content,
+.osu-bg-before-dark div.block-layout-builder[class*=block-inline-],
+.osu-bg-before-dark div.layout-builder__add-block,
+.osu-bg-before-dark div.block-block-content {
   position: relative;
   z-index: 1;
 }
