@@ -15,6 +15,9 @@ document.addEventListener('ed11yRunCustomTests', () => {
   // Full Links to site
   Ed11y.findElements('sameSiteFullLinks', `a[href*="${currentHostName}"]`);
 
+  // Check to ensure there's at least 1 heading level that is not hidden
+  Ed11y.findElements('headingLevel1', 'h1:not([class*="hidden"])');
+
   // 2. Create a message for your tooltip.
   // You'll need a title and some contents,
   // as a value for the key you create for your test.
@@ -59,6 +62,14 @@ document.addEventListener('ed11yRunCustomTests', () => {
     `,
   }
 
+  Ed11y.M.missingHeadingLevel1 = {
+    title: 'Missing Heading Level 1',
+    tip: () => `
+        <p>You goober, you didn't add a heading level.
+         </p>
+    `,
+  }
+
   // 3. Push each item you want flagged to Ed11y.results.
   //
   // You must provide:
@@ -100,6 +111,16 @@ document.addEventListener('ed11yRunCustomTests', () => {
       dismissalKey: dismissKey,
     })
   });
+
+  if (Ed11y.elements.headingLevel1.length === 0) {
+    Ed11y.results.push({
+      element: document.querySelector("main"),
+      test: 'missingHeadingLevel1',
+      content: Ed11y.M.missingHeadingLevel1.tip(),
+      position: 'afterbegin',
+      dismissalKey: false,
+    })
+  }
 
   // 4. When you are done with all your custom tests,
   // dispatch an "ed11yResume" event:
