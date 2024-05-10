@@ -65,8 +65,19 @@ document.addEventListener('ed11yRunCustomTests', () => {
   Ed11y.M.missingHeadingLevel1 = {
     title: 'Missing Heading Level 1',
     tip: () => `
-        <p>You goober, you didn't add a heading level.
-         </p>
+    <p>It seems you've not added an H1 level heading on your page. The Page Title typically serves as the H1 heading.</p>
+    <p>If you've chosen to hide the Page Title, please ensure to add the <em>Page Title</em> block in Layout Builder.</p>
+    <p>Remember, having one H1 heading is important for good SEO practices, accessibility, and content organization.</p>
+    `
+  }
+
+  Ed11y.M.multipleHeadingLevel1 = {
+    title: 'Multiple Heading Level 1',
+    tip: () => `
+<p>You have more than <strong>one</strong> heading level 1 <strong>(h1)</strong> on your page. Typically, your page title is the Heading level 1 of a page, and you should not need to be adding more.</p>
+<p>This can cause confusion for your site visitors, particularly for those using assistive technologies like screen readers. The H1 heading is typically used to present the most important heading on the page, usually the main content heading.</p>
+<p>Having more than one H1 can dilute SEO value and cause confusion for search engines trying to understand the content of your page. It can also make the structure of your content less clear for users.</p>
+<p>Providing one clear, descriptive H1 heading helps to improve your site's accessibility, SEO ranking, and usability. Please ensure there is only one heading level 1 on the page.</p>
     `,
   }
 
@@ -119,6 +130,18 @@ document.addEventListener('ed11yRunCustomTests', () => {
       content: Ed11y.M.missingHeadingLevel1.tip(),
       position: 'afterbegin',
       dismissalKey: false,
+    })
+  }
+
+  if (Ed11y.elements.headingLevel1.length > 1) {
+    Ed11y.elements.headingLevel1.forEach(el => {
+      Ed11y.results.push({
+        element: el,
+        test: 'multipleHeadingLevel1',
+        content: Ed11y.M.multipleHeadingLevel1.tip(),
+        position: 'beforebegin',
+        dismissalKey: false,
+      })
     })
   }
 
