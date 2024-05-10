@@ -65,9 +65,18 @@ document.addEventListener('ed11yRunCustomTests', () => {
   Ed11y.M.missingHeadingLevel1 = {
     title: 'Missing Heading Level 1',
     tip: () => `
-    <p>It seems you've not added an H1 level heading on your page. The Page Title typically serves as the H1 heading.</p>
-    <p>If you've chosen to hide the Page Title, please ensure to add the <em>Page Title</em> block in Layout Builder.</p>
-    <p>Remember, having one H1 heading is important for good SEO practices, accessibility, and content organization.</p>
+<p>It seems you've not added a level 1 heading(h1) on your page. The Page Title typically serves as the level 1 heading.</p>
+<p>If you've chosen to hide the Page Title, please ensure to add the <em>Title</em> block in Layout Builder. To add the Title block to your page in Layout Builder:
+<ol>
+<li>Filter by block name <em>Title</em></li>
+<li>Set label to <em>- Hidden -</em></li>
+<li>Change the Formatter to <em>Text field formatter</em></li>
+<li>Set the Field wrapper to <em>H1</em></li>
+<li>Add/adjust your spacing as needed.</li>
+</ol>
+If the Page Title does not serve your needs for a level 1 heading, please ensure that you have a custom one created in the Text Editor.
+</p>
+<p>Remember, having one level 1 heading is important for good SEO practices, accessibility, and content organization.</p>
     `
   }
 
