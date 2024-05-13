@@ -149,6 +149,14 @@ function madrone_preprocess_block(&$variables) {
       $variables['view_mode'] = $variables['elements']['#configuration']['view_mode'];
     }
   }
+  // Add a variable if we are on the front page or not.
+  try {
+    $variables['is_front'] = Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $exception) {
+    $variables['is_front'] = FALSE;
+  }
+  $variables['#cache']['contexts'][] = 'url.path.is_front';
 }
 
 /**

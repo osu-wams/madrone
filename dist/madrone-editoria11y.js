@@ -36,7 +36,7 @@ document.addEventListener('ed11yRunCustomTests', () => {
         </p>
         ${decodeSafelink(href)}
     `,
-  }
+  };
 
   Ed11y.M.devLink = {
     title: 'URL is hard linking to Development site',
@@ -47,7 +47,7 @@ document.addEventListener('ed11yRunCustomTests', () => {
         </p>
         ${getPathFromUrl(href)}
     `,
-  }
+  };
 
   Ed11y.M.sameSiteFullLink = {
     title: 'Manual Check: did you mean to use a full link?',
@@ -60,7 +60,7 @@ document.addEventListener('ed11yRunCustomTests', () => {
            content editor to generate links correctly.</p>
         ${getPathFromUrl(href)}
     `,
-  }
+  };
 
   Ed11y.M.missingHeadingLevel1 = {
     title: 'Missing Heading Level 1',
@@ -77,8 +77,8 @@ document.addEventListener('ed11yRunCustomTests', () => {
 If the Page Title does not serve your needs for a level 1 heading, please ensure that you have a custom one created in the Text Editor.
 </p>
 <p>Remember, having one level 1 heading is important for good SEO practices, accessibility, and content organization.</p>
-    `
-  }
+    `,
+  };
 
   Ed11y.M.multipleHeadingLevel1 = {
     title: 'Multiple Heading Level 1',
@@ -88,7 +88,7 @@ If the Page Title does not serve your needs for a level 1 heading, please ensure
 <p>Multiple level 1 headings can dilute SEO value and cause confusion for search engines trying to understand the content of your page. It can also make the structure of your content less clear for users.</p>
 <p>Providing one clear, descriptive level 1 heading helps to improve your site's accessibility, SEO ranking, and usability. Please ensure there is only one heading level 1 on the page.</p>
     `,
-  }
+  };
 
   // 3. Push each item you want flagged to Ed11y.results.
   //
@@ -107,7 +107,7 @@ If the Page Title does not serve your needs for a level 1 heading, please ensure
       content: Ed11y.M.outlookSafeLink.tip(el.getAttribute('href')),
       position: 'beforebegin',
       dismissalKey: false,
-    })
+    });
   });
 
   Ed11y.elements.devLinks?.forEach((el) => {
@@ -117,7 +117,7 @@ If the Page Title does not serve your needs for a level 1 heading, please ensure
       content: Ed11y.M.devLink.tip(el.getAttribute('href')),
       position: 'beforebegin',
       dismissalKey: false,
-    })
+    });
   });
 
   Ed11y.elements.sameSiteFullLinks?.forEach((el) => {
@@ -129,20 +129,29 @@ If the Page Title does not serve your needs for a level 1 heading, please ensure
       content: Ed11y.M.sameSiteFullLink.tip(sameSiteHref),
       position: 'beforebegin',
       dismissalKey: dismissKey,
-    })
+    });
   });
-
-  if (Ed11y.elements.headingLevel1.length === 0) {
+  // Adds logic to ensure that we don't have a theme level h1 set.
+  let siteBrandingLinkHasH1 = document.querySelector('#block-madrone-sitebranding .block__content__site-name a:has(h1)');
+  let containsSiteFrontClass = siteBrandingLinkHasH1 && siteBrandingLinkHasH1.classList.contains('site-name__site-front');
+  let containsGroupFrontClass = siteBrandingLinkHasH1 && siteBrandingLinkHasH1.classList.contains('site-name__group-front');
+  if (Ed11y.elements.headingLevel1.length === 0 && !(siteBrandingLinkHasH1 && (containsSiteFrontClass || containsGroupFrontClass))) {
     Ed11y.results.push({
-      element: document.querySelector("main"),
+      element: document.querySelector('main'),
       test: 'missingHeadingLevel1',
       content: Ed11y.M.missingHeadingLevel1.tip(),
       position: 'afterbegin',
       dismissalKey: false,
-    })
+    });
   }
+  // Base conditions.
+  let hasMoreThanOneH1 = Ed11y.elements.headingLevel1.length > 1;
+  let hasAtLeastOneH1 = Ed11y.elements.headingLevel1.length >= 1;
+  let siteBrandingLinkHasClass = containsSiteFrontClass || containsGroupFrontClass;
 
-  if (Ed11y.elements.headingLevel1.length > 1) {
+  // Combine conditions
+  let hasExtraH1 = hasAtLeastOneH1 && siteBrandingLinkHasH1 && siteBrandingLinkHasClass;
+  if (hasMoreThanOneH1 || hasExtraH1) {
     Ed11y.elements.headingLevel1.forEach(el => {
       Ed11y.results.push({
         element: el,
@@ -150,8 +159,8 @@ If the Page Title does not serve your needs for a level 1 heading, please ensure
         content: Ed11y.M.multipleHeadingLevel1.tip(),
         position: 'beforebegin',
         dismissalKey: false,
-      })
-    })
+      });
+    });
   }
 
   // 4. When you are done with all your custom tests,
@@ -172,7 +181,7 @@ function decodeSafelink(url) {
   let decoded = params.get('url');
   if (!!decoded) {
     decoded = Ed11y.sanitizeForHTML(decoded);
-    return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+    return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`;
   }
   return '';
 }
@@ -185,5 +194,5 @@ function decodeSafelink(url) {
  */
 function getPathFromUrl(url) {
   const pathname = new URL(url).pathname;
-  return `<p>The relative URL may be:<br><em style='word-wrap: break-word;'>${Ed11y.sanitizeForHTML(pathname)}</em>`
+  return `<p>The relative URL may be:<br><em style='word-wrap: break-word;'>${Ed11y.sanitizeForHTML(pathname)}</em>`;
 }

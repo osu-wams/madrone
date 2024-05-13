@@ -16704,6 +16704,13 @@ a.tabledrag-handle .handle {
   display: none !important;
 }
 
+.block__content__site-name h1, .block__content__site-name .h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: inherit;
+  font-weight: bold;
+  line-height: inherit;
+  margin-bottom: 0;
+}
 .block__content__site-name .site-name__group-link--wrapper {
   padding-top: 0.1rem;
 }
