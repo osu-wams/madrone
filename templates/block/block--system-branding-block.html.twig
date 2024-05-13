@@ -65,19 +65,23 @@
       {% endif %}
       {% if site_name %}
         <div class="block__content__site-name d-flex flex-column ms-3 py-2-5 lh-sm">
-          {% if group_name and group_path %}
+          {% if content.group_name_link %}
             <div class="site-name__site-link--wrapper">
               <a class="site-name__site-link--with-group fs-6" href="{{ path('<front>') }}"
                  rel="home">{{ site_name }}</a>
             </div>
             <div class="site-name__group-link--wrapper">
-              <a class="site-name__group-link text-decoration-none osu-text-osuorange fw-bolder"
-                 href="{{ group_path }}">{{ group_name }}</a>
+              {{ content.group_name_link }}
             </div>
           {% elseif companion_logo_name == 'default' %}
-            <a class="site-name__site-link text-decoration-none osu-text-osuorange fw-bolder"
-               href="{{ path('<front>') }}"
-               rel="home">{{ site_name }}</a>
+            <a
+              class="site-name__site-link text-decoration-none osu-text-osuorange fw-bolder {% if is_front %}site-name__site-front{% endif %}"
+              href="{{ path('<front>') }}"
+              rel="home">
+              {% if is_front %}<h1>{% endif %}
+                {{ site_name }}
+                {% if is_front %}</h1>{% endif %}
+            </a>
           {% endif %}
         </div>
       {% endif %}
