@@ -25,6 +25,19 @@
  * @see template_preprocess_block()
  */
 #}
+{% macro site_link(is_front, site_name) %}
+  <a
+    class="site-name__site-link text-decoration-none osu-text-osuorange fw-bolder {% if is_front %}site-name__site-front{% endif %}"
+    href="{{ path('<front>') }}"
+    rel="home">
+    {% if is_front %}<h1>{% endif %}
+      {{ site_name }}
+      {% if is_front %}</h1>{% endif %}
+  </a>
+{% endmacro %}
+
+{% import _self as macros %}
+
 {% set classes = [
   'block',
   'block-' ~ configuration.provider|clean_class,
@@ -74,14 +87,15 @@
               {{ content.group_name_link }}
             </div>
           {% elseif companion_logo_name == 'default' %}
-            <a
-              class="site-name__site-link text-decoration-none osu-text-osuorange fw-bolder {% if is_front %}site-name__site-front{% endif %}"
-              href="{{ path('<front>') }}"
-              rel="home">
-              {% if is_front %}<h1>{% endif %}
-                {{ site_name }}
-                {% if is_front %}</h1>{% endif %}
-            </a>
+            {% if parent_site_name and parent_site_url %}
+              <div class="site-name__parent-site-link--wrapper">
+                <a class="site-name__parent-site fs-6" href="{{ parent_site_url }}"
+                   rel="home">{{ parent_site_name }}</a>
+              </div>
+              {{ macros.site_link(is_front, site_name) }}
+            {% else %}
+              {{ macros.site_link(is_front, site_name) }}
+            {% endif %}
           {% endif %}
         </div>
       {% endif %}
