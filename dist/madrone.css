@@ -16748,7 +16748,6 @@ a.tabledrag-handle .handle {
 }
 .media-library-widget-modal .media-library-views-form__rows {
   display: flex;
-  flex-basis: 100%;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -16757,8 +16756,8 @@ a.tabledrag-handle .handle {
   border-radius: var(--osu-border-radius);
   flex: 1 0 20%;
   margin: 0.5rem 1rem;
+  max-width: 50%;
   position: relative;
-  width: 20%;
 }
 .media-library-widget-modal .media-library-views-form__rows .media-library-item--grid:before {
   border: 1px solid var(--bs-secondary);
