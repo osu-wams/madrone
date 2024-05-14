@@ -1,4 +1,12 @@
 .block__content__site-name {
+  h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: inherit;
+    margin-bottom: 0;
+  }
+
   .site-name__group-link--wrapper {
     padding-top: .1rem;
   }
