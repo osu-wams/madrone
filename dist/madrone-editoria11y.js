@@ -84,7 +84,7 @@ If the Page Title does not serve your needs for a level 1 heading, please ensure
     title: 'Multiple Heading Level 1',
     tip: () => `
 <p>You have <strong>multiple level 1 headings(h1)</strong> on your page. Typically, your page title is the level 1 heading of a page. You need to change the other level 1 headings to heading 2. You can learn more about heading structure for webpages on the <a href="https://drupal.oregonstate.edu/site-building-guide/elements">Site Building Guide</a> or <a href ="https://accessibility.oregonstate.edu/headings">the Accessibility website.</a></p>
-<p>This can cause confusion for your site visitors, particularly for those using assistive technologies like screen readers. The  level 1 heading is denote what your entire webpage is about.</p>
+<p>This can cause confusion for your site visitors, particularly for those using assistive technologies like screen readers. The level 1 heading is to denote what your entire webpage is about.</p>
 <p>Multiple level 1 headings can dilute SEO value and cause confusion for search engines trying to understand the content of your page. It can also make the structure of your content less clear for users.</p>
 <p>Providing one clear, descriptive level 1 heading helps to improve your site's accessibility, SEO ranking, and usability. Please ensure there is only one heading level 1 on the page.</p>
     `,
