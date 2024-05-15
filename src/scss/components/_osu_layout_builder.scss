@@ -142,24 +142,25 @@ button.video-content__controls {
 }
 
 // Make the columns truly "stretch" when placing blocks.
-.osu-align-items-stretch.layout-builder__layout {
-  > div[class*="col"] {
-    display: flex;
-    flex-direction: column;
-
-    > div[class*="block-layout-builder"],
-    > div[class*="block-block-content"] {
+.osu-align-items-stretch {
+  &.layout-builder__layout {
+    > div[class*=col] {
       display: flex;
-      flex: 1 1 auto;
       flex-direction: column;
 
-      > div.block__content {
+      > div[class*="block-"] {
         display: flex;
-        flex: 1 1 auto;
+        flex: 1 0 auto;
         flex-direction: column;
 
-        > div {
-          flex: 1 1 auto;
+        > div.block__content {
+          display: flex;
+          flex: 1 0 auto;
+          flex-direction: column;
+
+          > div {
+            flex: 1 0 auto;
+          }
         }
       }
     }

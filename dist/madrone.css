@@ -16599,21 +16599,18 @@ button.video-content__controls {
   display: flex;
   flex-direction: column;
 }
-.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-layout-builder],
-.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-block-content] {
+.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-] {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   flex-direction: column;
 }
-.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-layout-builder] > div.block__content,
-.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-block-content] > div.block__content {
+.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-] > div.block__content {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   flex-direction: column;
 }
-.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-layout-builder] > div.block__content > div,
-.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-block-content] > div.block__content > div {
-  flex: 1 1 auto;
+.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-] > div.block__content > div {
+  flex: 1 0 auto;
 }
 
 .madrone-content .osu-bg-page-default nav ul.menu li a {
