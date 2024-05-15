@@ -16,7 +16,7 @@ document.addEventListener('ed11yRunCustomTests', () => {
   Ed11y.findElements('sameSiteFullLinks', `a[href*="${currentHostName}"]`);
 
   // Check to ensure there's at least 1 heading level that is not hidden
-  Ed11y.findElements('headingLevel1', 'h1:not([class*="hidden"])');
+  Ed11y.findElements('headingLevel1', 'h1:not(.hidden, h1.hidden > span > h1)');
 
   // 2. Create a message for your tooltip.
   // You'll need a title and some contents,
