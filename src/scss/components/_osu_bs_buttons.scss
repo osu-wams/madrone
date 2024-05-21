@@ -1,0 +1,18 @@
+@import "../abstracts/osu_variables";
+
+.btn-primary {
+  --bs-btn-active-bg: #{$paddletailblack};
+  --bs-btn-active-border-color: #{$osuorange};
+  --bs-btn-active-color: #{$bucktoothwhite};
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #{$osuorange};
+  --bs-btn-border-color: #{$osuorange};
+  --bs-btn-color: #{$bucktoothwhite};
+  --bs-btn-disabled-bg: #d73f09;
+  --bs-btn-disabled-border-color: #d73f09;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-focus-shadow-rgb: 221, 92, 46;
+  --bs-btn-hover-bg: #{$paddletailblack};
+  --bs-btn-hover-border-color: #{$paddletailblack};
+  --bs-btn-hover-color: #{$bucktoothwhite};
+}

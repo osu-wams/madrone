@@ -14967,8 +14967,8 @@ textarea.form-control-lg {
 
 .osu-bg-overlay-dark,
 .osu-bg-before-dark {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
-  --osu-bg-overaly-to-color: hsl(210 11% 15% / 0.75);
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
+  --osu-bg-overaly-to-color: hsla(210, 11%, 15%, 0.75);
   --osu-bg-overlay-deg: 0deg;
   position: relative;
 }
@@ -14983,33 +14983,35 @@ textarea.form-control-lg {
 .osu-bg-overlay-dark div.block-layout-builder[class*=block-inline-],
 .osu-bg-overlay-dark div.layout-builder__add-block,
 .osu-bg-overlay-dark div.block-block-content,
+.osu-bg-overlay-dark > div.block__content,
 .osu-bg-before-dark div.block-layout-builder[class*=block-inline-],
 .osu-bg-before-dark div.layout-builder__add-block,
-.osu-bg-before-dark div.block-block-content {
+.osu-bg-before-dark div.block-block-content,
+.osu-bg-before-dark > div.block__content {
   position: relative;
   z-index: 1;
 }
 
 .osu-bg-before-dark-to-left {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
   --osu-bg-overaly-to-color: transparent;
   --osu-bg-overlay-deg: 90deg;
 }
 
 .osu-bg-before-dark-to-right {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
   --osu-bg-overaly-to-color: transparent;
   --osu-bg-overlay-deg: 270deg;
 }
 
 .osu-bg-before-dark-to-top {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
   --osu-bg-overaly-to-color: transparent;
   --osu-bg-overlay-deg: 180deg;
 }
 
 .osu-bg-before-dark-to-bottom {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
   --osu-bg-overaly-to-color: transparent;
   --osu-bg-overlay-deg: 0deg;
 }
@@ -15758,7 +15760,7 @@ form.header-search-block-form input {
   --bs-btn-hover-border-color: #212529;
   --bs-btn-focus-shadow-rgb: 221, 92, 46;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #d73f09;
+  --bs-btn-active-bg: #212529;
   --bs-btn-active-border-color: #d73f09;
   --bs-btn-active-shadow: none;
   --bs-btn-disabled-color: #fff;
@@ -15895,6 +15897,23 @@ form.header-search-block-form input {
 a.button:focus,
 .osu-btn-primary:active:focus {
   box-shadow: none;
+}
+
+.btn-primary {
+  --bs-btn-active-bg: #212529;
+  --bs-btn-active-border-color: #d73f09;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #d73f09;
+  --bs-btn-border-color: #d73f09;
+  --bs-btn-color: #fff;
+  --bs-btn-disabled-bg: #d73f09;
+  --bs-btn-disabled-border-color: #d73f09;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-focus-shadow-rgb: 221, 92, 46;
+  --bs-btn-hover-bg: #212529;
+  --bs-btn-hover-border-color: #212529;
+  --bs-btn-hover-color: #fff;
 }
 
 .dropbutton-wrapper .dropbutton-widget .dropbutton {

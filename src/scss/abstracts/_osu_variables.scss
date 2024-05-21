@@ -220,6 +220,9 @@ $body-color-hsl: $neutral-700-hsl;
 $body-bg: $page-bg-default;
 $body-bg-hsl: $neutral-100-hsl;
 $primary: $osuorange;
+$primary-hover: $paddletailblack;
+$primary-focus: $osuorange;
+$primary-active: $paddletailblack;
 $secondary: $bucktoothwhite;
 $danger: $lava-400;
 $success: $pine-400;
@@ -341,3 +344,6 @@ $enable-negative-margins: true;
 // List Groups
 $list-group-item-padding-y: 2rem;
 $list-group-item-padding-x: 1.5rem;
+
+// Custom Colors
+$osu-bg-gradient: hsl(210 11% 15% / 0.75);
