@@ -1,5 +1,4 @@
 @import "../abstracts/osu_variables";
-
 .btn-primary {
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
@@ -14,5 +13,125 @@
   --bs-btn-focus-shadow-rgb: 221, 92, 46;
   --bs-btn-hover-bg: #{$paddletailblack};
   --bs-btn-hover-border-color: #{$paddletailblack};
+  --bs-btn-hover-color: #{$bucktoothwhite};
+}
+
+.btn-secondary {
+  --bs-btn-active-bg: #{$paddletailblack};
+  --bs-btn-active-border-color: #{$osuorange};
+  --bs-btn-active-color: #{$bucktoothwhite};
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #{$bucktoothwhite};
+  --bs-btn-border-color: #{$paddletailblack};
+  --bs-btn-color: #{$body-color};
+  --bs-btn-disabled-bg: #fff;
+  --bs-btn-disabled-border-color: #fff;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-focus-shadow-rgb: 221, 92, 46;
+  --bs-btn-hover-bg: #{$bucktoothwhite};
+  --bs-btn-hover-border-color: #{$osuorange};
+  --bs-btn-hover-color: #{$body-color};
+}
+
+.btn-success {
+  --bs-btn-active-bg: #{$paddletailblack};
+  --bs-btn-active-border-color: #{$osuorange};
+  --bs-btn-active-color: #{$bucktoothwhite};
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #4a773c;
+  --bs-btn-border-color: #4a773c;
+  --bs-btn-color: #fff;
+  --bs-btn-disabled-bg: #4a773c;
+  --bs-btn-disabled-border-color: #4a773c;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-focus-shadow-rgb: 101, 139, 89;
+  --bs-btn-hover-bg: #3f6533;
+  --bs-btn-hover-border-color: #3b5f30;
+  --bs-btn-hover-color: #fff;
+}
+
+.btn-info {
+  --bs-btn-active-bg: #{$paddletailblack};
+  --bs-btn-active-border-color: #{$osuorange};
+  --bs-btn-active-color: #{$bucktoothwhite};
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #006a8e;
+  --bs-btn-border-color: #006a8e;
+  --bs-btn-color: #fff;
+  --bs-btn-disabled-bg: #006a8e;
+  --bs-btn-disabled-border-color: #006a8e;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-focus-shadow-rgb: 38, 128, 159;
+  --bs-btn-hover-bg: #005a79;
+  --bs-btn-hover-border-color: #005572;
+  --bs-btn-hover-color: #fff;
+}
+
+.btn-warning {
+  --bs-btn-active-bg: #{$paddletailblack};
+  --bs-btn-active-border-color: #{$osuorange};
+  --bs-btn-active-color: #{$bucktoothwhite};
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #ffb500;
+  --bs-btn-border-color: #ffb500;
+  --bs-btn-color: #000;
+  --bs-btn-disabled-bg: #ffb500;
+  --bs-btn-disabled-border-color: #ffb500;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-focus-shadow-rgb: 217, 154, 0;
+  --bs-btn-hover-bg: #ffc026;
+  --bs-btn-hover-border-color: #ffbc1a;
+  --bs-btn-hover-color: #000;
+}
+
+.btn-danger {
+  --bs-btn-active-bg: #{$paddletailblack};
+  --bs-btn-active-border-color: #{$osuorange};
+  --bs-btn-active-color: #{$bucktoothwhite};
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #c72127;
+  --bs-btn-border-color: #c72127;
+  --bs-btn-color: #fff;
+  --bs-btn-disabled-bg: #c72127;
+  --bs-btn-disabled-border-color: #c72127;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-focus-shadow-rgb: 207, 66, 71;
+  --bs-btn-hover-bg: #a91c21;
+  --bs-btn-hover-border-color: #9f1a1f;
+  --bs-btn-hover-color: #fff;
+}
+
+// Should be like our Grey
+.btn-light {
+  --bs-btn-active-bg: #{$paddletailblack};
+  --bs-btn-active-border-color: #{$osuorange};
+  --bs-btn-active-color: #{$bucktoothwhite};
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #{$neutral-100};
+  --bs-btn-border-color: #{$paddletailblack};
+  --bs-btn-color: #{$body-color};
+  --bs-btn-disabled-bg: #f7f5f5;
+  --bs-btn-disabled-border-color: #f7f5f5;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-focus-shadow-rgb: 210, 208, 208;
+  --bs-btn-hover-bg: #{$osuorange};
+  --bs-btn-hover-border-color: #{$osuorange};
+  --bs-btn-hover-color: #{$bucktoothwhite};
+}
+
+.btn-dark {
+  --bs-btn-active-bg: #{$paddletailblack};
+  --bs-btn-active-border-color: #{$osuorange};
+  --bs-btn-active-color: #{$bucktoothwhite};
+  --bs-btn-active-shadow: none;
+  --bs-btn-bg: #{$paddletailblack};
+  --bs-btn-border-color: #{$paddletailblack};
+  --bs-btn-color: #{$bucktoothwhite};
+  --bs-btn-disabled-bg: #212529;
+  --bs-btn-disabled-border-color: #212529;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-focus-shadow-rgb: 66, 70, 73;
+  --bs-btn-hover-bg: #{$osuorange};
+  --bs-btn-hover-border-color: #{$osuorange};
   --bs-btn-hover-color: #{$bucktoothwhite};
 }

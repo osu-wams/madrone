@@ -38,9 +38,9 @@
       $osuorange,
       $osuorange,
       $bucktoothwhite,
-      $bucktoothwhite,
+      $paddletailblack,
       $osuorange,
-      $body-color
+      $bucktoothwhite
   );
 }
 
@@ -66,10 +66,14 @@
       $bucktoothwhite,
       $osuorange,
       $body-color,
-      $osuorange,
+      $paddletailblack,
       $osuorange,
       $bucktoothwhite
   );
+}
+
+.osu-btn-lava {
+  @include button-variant($lava-400, $lava-400, $bucktoothwhite);
 }
 
 .osu-btn-pine {
