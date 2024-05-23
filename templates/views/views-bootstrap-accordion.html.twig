@@ -7,7 +7,7 @@
 {% endif %}
 <div id="{{ id }}" {{ attributes.addClass(classes) }}>
   {% set i = 0 %}
-  {% set len = rows | length %}
+  {% set len = rows|length %}
   {% for key, row in rows %}
     {% set i = i + 1 %}
     {% set collapse_var = false %}

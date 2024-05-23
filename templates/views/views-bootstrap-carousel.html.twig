@@ -23,7 +23,8 @@
 #}
 {{ attach_library('views_bootstrap/components') }}
 
-<div id="{{ id }}" class="views-view-bootstrap-carousel carousel slide" data-ride="carousel"{% if ride %} data-bs-ride="carousel" {% endif %}
+<div id="{{ id }}" class="views-view-bootstrap-carousel carousel slide"
+     data-ride="carousel"{% if ride %} data-bs-ride="carousel" {% endif %}
      data-bs-interval="{{ interval }}" data-bs-pause="{% if pause %}hover{% else %}false{% endif %}"
      data-wrap="{{ wrap }}">
 
@@ -34,7 +35,7 @@
         {% if key % columns == 0 %}
           {% set indicator_classes = [loop.first ? 'active'] %}
           <li class="{{ indicator_classes|join(' ') }}" data-bs-target="#{{ id }}"
-              data-bs-slide-to="{{ key/columns }}"></li>
+              data-bs-slide-to="{{ key / columns }}"></li>
         {% endif %}
       {% endfor %}
     </ol>
@@ -44,11 +45,11 @@
   <div class="carousel-inner">
     {% for row in rows %}
       {% set row_classes = ['carousel-item', loop.first ? 'active'] %}
-      {% if (loop.index-1) % columns == 0 %}
+      {% if (loop.index - 1) % columns == 0 %}
         {% set row_classes = ['carousel-item', 'row', loop.first ? 'active'] %}
         <div {{ row.attributes.addClass(row_classes) }}>
       {% endif %}
-      <div class="col-{{ breakpoints }}-{{ 12/columns }}">
+      <div class="col-{{ breakpoints }}-{{ 12 / columns }}">
         {% if display == 'fields' %}
           {{ row.image }}
           {% if row.title or row.description %}
