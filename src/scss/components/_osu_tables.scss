@@ -33,7 +33,6 @@
   }
 }
 
-.cke_editable_themed table:not(.osu-table):not(.osu-table-orange),
-.madrone-content table:not(.osu-table):not(.osu-table-orange) {
+table:not(.table, .osu-table, .osu-table-orange) {
   @extend .osu-table;
 }
