@@ -13,49 +13,66 @@
  *   resumes the cycling of the carousel on mouseleave.
  * - wrap: Whether the carousel should cycle continuously or have
  *   hard stops.
+ * - columns: The amount of columns in a single slide.
+ * - breakpoints: The min-width of the multicolumn view.
  *
  * @see template_preprocess_views_bootstrap_carousel()
  *
  * @ingroup themeable
  */
 #}
+{{ attach_library('views_bootstrap/components') }}
 
-<div id="{{ id }}" class="views-view-bootstrap-carousel carousel {{ effect }}"
-     data-bs-interval="{{ interval }}"
-  {% if ride %} data-bs-ride="carousel" {% endif %}
-     data-bs-pause="{% if pause %}hover{% else %}false{% endif %}"
->
-  {# Show indicators if set in view. #}
+<div id="{{ id }}" class="views-view-bootstrap-carousel carousel slide"
+     data-ride="carousel"{% if ride %} data-bs-ride="carousel" {% endif %}
+     data-bs-interval="{{ interval }}" data-bs-pause="{% if pause %}hover{% else %}false{% endif %}"
+     data-wrap="{{ wrap }}">
+
+  {# Carousel indicators #}
   {% if indicators %}
     <ol class="carousel-indicators">
       {% for key, row in rows %}
-        {% set indicator_classes = [loop.first ? 'active'] %}
-        <li class="{{ indicator_classes|join(' ') }}" data-bs-target="#{{ id }}" data-bs-slide-to="{{ key }}"></li>
+        {% if key % columns == 0 %}
+          {% set indicator_classes = [loop.first ? 'active'] %}
+          <li class="{{ indicator_classes|join(' ') }}" data-bs-target="#{{ id }}"
+              data-bs-slide-to="{{ key / columns }}"></li>
+        {% endif %}
       {% endfor %}
     </ol>
   {% endif %}
 
-  {# Carousel body. #}
+  {# Carousel rows #}
   <div class="carousel-inner">
     {% for row in rows %}
       {% set row_classes = ['carousel-item', loop.first ? 'active'] %}
-      <div class="{{ row_classes|join(' ') }}">
-        {{ row.image }}
-        {% if row.title or row.description %}
-          {% if use_caption %}
-            <div class="carousel-caption d-none d-md-block">
+      {% if (loop.index - 1) % columns == 0 %}
+        {% set row_classes = ['carousel-item', 'row', loop.first ? 'active'] %}
+        <div {{ row.attributes.addClass(row_classes) }}>
+      {% endif %}
+      <div class="col-{{ breakpoints }}-{{ 12 / columns }}">
+        {% if display == 'fields' %}
+          {{ row.image }}
+          {% if row.title or row.description %}
+            {% if use_caption %}
+              <div class="carousel-caption d-none d-md-block">
+            {% endif %}
+            {% if row.title %}
+              <h3>{{ row.title }}</h3>
+            {% endif %}
+            {% if row.description %}
+              <p>{{ row.description }}</p>
+            {% endif %}
+            {% if use_caption %}
+              </div>
+            {% endif %}
           {% endif %}
-          {% if row.title %}
-            <h3>{{ row.title }}</h3>
-          {% endif %}
-          {% if row.description %}
-            <p>{{ row.description }}</p>
-          {% endif %}
-          {% if use_caption %}
-            </div>
-          {% endif %}
+        {% else %}
+          {{ row.content }}
         {% endif %}
       </div>
+      {% if loop.index % columns == 0 %}
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
   {# Controls #}

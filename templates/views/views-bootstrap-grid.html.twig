@@ -14,17 +14,16 @@
 #}
 {% set classes = [
   'views-view-grid',
-  'views-views-bootstrap-grid'
+  'views-views-bootstrap-grid',
+  'row'
 ] %}
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
 <div id="{{ id }}" {{ attributes.addClass(classes) }}>
-  <div class="row">
-    {% for row in rows %}
-      <div {{ row_attributes.addClass(options.row_class) }}>
-        {{ row }}
-      </div>
-    {% endfor %}
-  </div>
+  {% for row in rows %}
+    <div{{ row.attributes }}>
+      {{- row.content -}}
+    </div>
+  {% endfor %}
 </div>

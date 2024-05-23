@@ -10,23 +10,34 @@
  * @ingroup views_templates
  */
 #}
-
-<div class="views-view-bootstrap-card card-group">
-  {% for row in rows -%}
-    <div class="card">
-      {# Show image #}
-      {% if row.image %}
-        {{ row.image }}
-      {% endif %}
-      {% if row.content %}
+{% set classes = [
+  'views-view-bootstrap-card'
+] %}
+<div {{ attributes.addClass(classes) }}>
+  <div class="row">
+    {% for key, row in rows %}
+    <div class="col">
+      <div {{ row.attributes }}>
+        {# Show image #}
+        {% if row.image %}
+          <span class="card-img-top">{{ row.image }}</span>
+        {% endif %}
         <div class="card-body">
           {% if row.title %}
             <h5 class="card-title">{{ row.title }}</h5>
           {% endif %}
-
-          {{ row.content }}
+          {% if row.content %}
+            <div class="card-body">
+              {{- row.content -}}
+            </div>
+          {% endif %}
         </div>
-      {% endif %}
+      </div>
     </div>
-  {%- endfor %}
+    {% if (key + 1) % columns == 0 %}
+  </div>
+  <div class="row">
+    {% endif %}
+    {%- endfor %}
+  </div>
 </div>

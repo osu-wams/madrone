@@ -1,17 +1,15 @@
-{# @todo: add more control to images and positoning #}
-
 {% set classes = [
   'views-view-bootstrap-media'
 ] %}
 <div{{ attributes.addClass(classes) }} id="{{ id }}">
-  {% for row in rows -%}
-    <div class="d-flex">
-      <div class="flex-shrink-0">
+  {% for key, row in rows -%}
+    <div class="d-flex {{ alignment }}">
+      <div class="flex-shrink-0 {{ order_image }}">
         {% if row.image %}
           {{ row.image }}
         {% endif %}
       </div>
-      <div class="flex-grow-1 ms-3">
+      <div class="flex-grow-1 ms-3 {{ order_body }}">
         {% if row.heading %}
           {{ row.heading }}
         {% endif %}
