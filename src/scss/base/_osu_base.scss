@@ -10,7 +10,7 @@ a {
     text-decoration: none;
   }
 
-  &:active:not(#osu-logo-wide, #osu-logo-crest) {
+  &:active:not(.button, #osu-logo-wide, #osu-logo-crest) {
     background-color: $paddletailblack-hsl;
     color: $bucktoothwhite-hsl;
   }

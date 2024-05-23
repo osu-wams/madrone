@@ -1,3 +1,5 @@
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../abstracts/osu_variables";
 // Bootstrap Buttons
 // Only the first two colors are required to make a new button variant.
 // The order of the buttons is:
@@ -16,58 +18,62 @@
 // see https://getbootstrap.com/docs/5.3/components/buttons/#sass-mixins
 .osu-btn-primary {
   @include button-variant(
-    $osuorange,
-    $osuorange,
-    $bucktoothwhite,
-    $paddletailblack,
-    $paddletailblack,
-    $bucktoothwhite,
-    $osuorange,
-    $osuorange,
-    $bucktoothwhite
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $paddletailblack,
+      $paddletailblack,
+      $bucktoothwhite,
+      $paddletailblack,
+      $osuorange,
+      $bucktoothwhite
   );
 }
 
 .osu-btn-light {
   @include button-variant(
-    $neutral-100,
-    $paddletailblack,
-    $body-color,
-    $osuorange,
-    $osuorange,
-    $bucktoothwhite,
-    $bucktoothwhite,
-    $osuorange,
-    $body-color
+      $neutral-100,
+      $paddletailblack,
+      $body-color,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $paddletailblack,
+      $osuorange,
+      $bucktoothwhite
   );
 }
 
 .osu-btn-dark {
   @include button-variant(
-    $paddletailblack,
-    $paddletailblack,
-    $bucktoothwhite,
-    $osuorange,
-    $osuorange,
-    $bucktoothwhite,
-    $paddletailblack,
-    $osuorange,
-    $bucktoothwhite
+      $paddletailblack,
+      $paddletailblack,
+      $bucktoothwhite,
+      $osuorange,
+      $osuorange,
+      $bucktoothwhite,
+      $paddletailblack,
+      $osuorange,
+      $bucktoothwhite
   );
 }
 
 .osu-btn-white {
   @include button-variant(
-    $bucktoothwhite,
-    $paddletailblack,
-    $body-color,
-    $bucktoothwhite,
-    $osuorange,
-    $body-color,
-    $osuorange,
-    $osuorange,
-    $bucktoothwhite
+      $bucktoothwhite,
+      $paddletailblack,
+      $body-color,
+      $bucktoothwhite,
+      $osuorange,
+      $body-color,
+      $paddletailblack,
+      $osuorange,
+      $bucktoothwhite
   );
+}
+
+.osu-btn-lava {
+  @include button-variant($lava-400, $lava-400, $bucktoothwhite);
 }
 
 .osu-btn-pine {
@@ -85,9 +91,9 @@
 
 .osu-btn-stratosphere {
   @include button-variant(
-    $stratosphere-400,
-    $stratosphere-400,
-    $bucktoothwhite
+      $stratosphere-400,
+      $stratosphere-400,
+      $bucktoothwhite
   );
 }
 

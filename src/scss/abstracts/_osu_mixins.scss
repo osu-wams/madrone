@@ -1,1 +1,14 @@
 // Custom Mixins
+
+// Mixin to create `.osu-bg-before-dark-to-` classes with different direction, degree, and color.
+// This mixin reduces duplication and makes the code clearer.
+// @param $direction The direction of the gradient overlay ('left', 'right', 'top', 'bottom')
+// @param $degree The degree of the gradient overlay (0deg, 90deg, 180deg, 270deg)
+// @param $fromColor The from color of all gradient overlays
+@mixin osu-bg-before-dark-to($direction, $degree, $fromColor) {
+  .osu-bg-before-dark-to-#{$direction} {
+    --osu-bg-overaly-from-color: #{$fromColor};
+    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-deg: #{$degree};
+  }
+}

@@ -1,5 +1,6 @@
 @import '../../../node_modules/bootstrap/scss/variables';
 @import '../abstracts/osu_variables';
+@import '../abstracts/osu_mixins';
 // Create osu-min-h-xx classes for min-height
 @each $height-name, $height-val in $min-heights {
   .osu-min-h-#{$height-name} {
@@ -198,8 +199,8 @@
 
 .osu-bg-overlay-dark,
 .osu-bg-before-dark {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
-  --osu-bg-overaly-to-color: hsl(210 11% 15% / 0.75);
+  --osu-bg-overaly-from-color: #{$osu-bg-gradient};
+  --osu-bg-overaly-to-color: #{$osu-bg-gradient};
   --osu-bg-overlay-deg: 0deg;
   position: relative;
 
@@ -214,35 +215,17 @@
 
   div.block-layout-builder[class*='block-inline-'],
   div.layout-builder__add-block,
-  div.block-block-content {
+  div.block-block-content,
+  > div.block__content {
     position: relative;
     z-index: 1;
   }
 }
 
-.osu-bg-before-dark-to-left {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
-  --osu-bg-overaly-to-color: transparent;
-  --osu-bg-overlay-deg: 90deg;
-}
-
-.osu-bg-before-dark-to-right {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
-  --osu-bg-overaly-to-color: transparent;
-  --osu-bg-overlay-deg: 270deg;
-}
-
-.osu-bg-before-dark-to-top {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
-  --osu-bg-overaly-to-color: transparent;
-  --osu-bg-overlay-deg: 180deg;
-}
-
-.osu-bg-before-dark-to-bottom {
-  --osu-bg-overaly-from-color: hsl(210 11% 15% / 0.75);
-  --osu-bg-overaly-to-color: transparent;
-  --osu-bg-overlay-deg: 0deg;
-}
+@include osu-bg-before-dark-to("left", 90deg, $osu-bg-gradient);
+@include osu-bg-before-dark-to("right", 270deg, $osu-bg-gradient);
+@include osu-bg-before-dark-to("top", 180deg, $osu-bg-gradient);
+@include osu-bg-before-dark-to("bottom", 0deg, $osu-bg-gradient);
 
 .white-text-orange-bg {
   background-color: $osuorange-hsl;
