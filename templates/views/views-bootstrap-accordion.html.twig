@@ -2,29 +2,47 @@
   'views-view-bootstrap-accordion'
 ] %}
 
-<div id="{{ id }}" {{ attributes.addClass(classes, 'accordion') }}>
+{% if group_title %}
+  <h3>{{ group_title }}</h3>
+{% endif %}
+<div id="{{ id }}" {{ attributes.addClass(classes) }}>
   {% set i = 0 %}
-  {% set len = rows|length %}
-  {% for key, row in rows -%}
+  {% set len = rows | length %}
+  {% for key, row in rows %}
     {% set i = i + 1 %}
-    {% set collapse_class = ((i == 1 and options.collapse.first is defined and options.collapse.first > 0) or (i == len and options.collapse.last is defined and options.collapse.last > 0) or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)) ? 'collapse show' : 'collapse' %}
-    {% set collapse_class_boolean = ((i == 1 and options.collapse.first is defined and options.collapse.first > 0) or (i == len and options.collapse.last is defined and options.collapse.last > 0) or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)) ? 'true' : 'false' %}
-    {% set collapse_button_class = collapse_class_boolean == 'false' ? "collapsed" %}
+    {% set collapse_var = false %}
+    {% if behavior == 'specify' %}
+      {% if i == 1 and 'first' in collapse and collapse['first'] %}
+        {% set collapse_var = true %}
+      {% elseif i == len and 'last' in collapse and collapse['last'] %}
+        {% set collapse_var = true %}
+      {% elseif i != 1 and i != len and 'middle' in collapse and collapse['middle'] %}
+        {% set collapse_var = true %}
+      {% endif %}
+    {% elseif behavior == 'closed' %}
+      {% set collapse_var = false %}
+    {% elseif behavior == 'first' %}
+      {% set collapse_var = (i == 1) ? true : false %}
+    {% elseif behavior == 'all' %}
+      {% set collapse_var = true %}
+    {% endif %}
+    {% set collapse_class = (collapse_var) ? 'show' %}
+    {% set collapse_class_boolean = (collapse_var) ? 'true' : 'false' %}
+    {% set button_classes = (not collapse_var) ? 'collapsed' %}
     <div class="accordion-item">
       <h2 class="accordion-header" id="heading{{ key }}">
-        <button class="accordion-button {{ collapse_button_class }}" type="button" data-bs-toggle="collapse"
+        <button class="accordion-button {{ button_classes }}" type="button" data-bs-toggle="collapse"
                 data-bs-target="#{{ id }}-collapse-{{ key }}" aria-expanded="{{ collapse_class_boolean }}"
                 aria-controls="{{ id }}-collapse-{{ key }}">
           {{ row.title }}
         </button>
       </h2>
-
-      <div id="{{ id }}-collapse-{{ key }}" class="accordion-collapse {{ collapse_class }}"
+      <div id="{{ id }}-collapse-{{ key }}" class="accordion-collapse collapse {{ collapse_class }}"
            aria-labelledby="heading{{ key }}" data-bs-parent="#{{ id }}">
         <div class="accordion-body">
           {{ row.content }}
         </div>
       </div>
     </div>
-  {%- endfor %}
+  {% endfor %}
 </div>

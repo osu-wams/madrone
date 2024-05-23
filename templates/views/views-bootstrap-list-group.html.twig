@@ -18,14 +18,18 @@
   'views-view-bootstrap-list-group',
   'list-group'
 ] %}
-
-<ul id="{{ id }}" {{ attributes.addClass(classes) }}>
-  {% for row in rows %}
-    <li class="list-group-item">
-      {% if row.title %}
-        <h4 class="list-group-item-heading">{{ row.title }}</h4>
-      {% endif %}
-      <p class="list-group-item-text">{{ row.content }}</p>
-    </li>
-  {% endfor %}
-</ul>
+{% if group_title %}
+<div{{ create_attribute({'class': div_classes}) }}>{% endif %}
+  {% if group_title %}
+  <div{{ create_attribute({'class': heading_classes}) }}><h4>{{ group_title }}</h4></div>{% endif %}
+  <ul id="{{ id }}" {{ attributes.addClass(classes) }}>
+    {% for key, row in rows %}
+      <li {{ row.attributes }}>
+        {% if row.title %}
+          <h4 class="list-group-item-heading">{{ row.title }}</h4>
+        {% endif %}
+        <p class="list-group-item-text">{{ row.content }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  {% if group_title %}</div>{% endif %}
