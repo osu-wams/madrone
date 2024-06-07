@@ -15108,6 +15108,12 @@ h6, .h6 {
 .display-1 {
   font-family: "Stratum2Web", serif;
   line-height: 1;
+  font-size: calc(1.725rem + 5.7vw);
+}
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 6rem;
+  }
 }
 
 .display-3 {
