@@ -36,13 +36,18 @@
   <div{{ attributes.setAttribute('id', region_id).addClass(region_class).removeClass(classes) }}>
     {{ content }}
   </div>
-  <div class="madrone-copyright align-self-center">
+{#  <div class="sitemap-wrapper align-self-sm-center">#}
+{#    <p><a href="/sitemap.xml">{{ 'Sitemap'|t }}</a></p>#}
+{#  </div>#}
+  <div class="madrone-copyright align-self-sm-center">
     <p>
       <a class="osu-link-white"
          href="https://oregonstate.edu/copyright">{{ 'Copyright'|t }}</a> &#169; {{ 'now'|date('Y') }}
       Oregon State University <span class="d-none d-sm-inline">|</span><span class="d-sm-none"><br/></span>
       <a class="osu-link-white"
          href="https://oregonstate.edu/official-web-disclaimer">{{ 'Privacy Disclaimer and Accessibility Information'|t }}</a>
+      <span class="d-none d-sm-inline">|</span><span class="d-sm-none"><br/></span>
+      <a href="/sitemap.xml">{{ 'Sitemap'|t }}</a>
     </p>
   </div>
 </div>
