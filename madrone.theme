@@ -43,9 +43,14 @@ function madrone_preprocess_html(&$variables) {
     $theme_color_dark,
     'madroneThemeColorDark',
   ];
+  $parent_site_name = theme_get_setting('parent_site_name');
+  if ($parent_site_name) {
+    $variables['head_title']['title'] .= " | $parent_site_name";
+  }
+  // Ensure that we add Oregon State University last.
   $madrone_use_osu_metatag = theme_get_setting('mardone_metatag_osu');
   if ($madrone_use_osu_metatag) {
-    $variables['head_title'][] = 'Oregon State University';
+    $variables['head_title']['uni_title'] = 'Oregon State University';
   }
   // Check if the footer doesn't have any blocks and creates an empty element
   // to force the footer to always render.
@@ -127,11 +132,10 @@ function madrone_preprocess_block(&$variables) {
           ->getActiveTheme()
           ->getPath() . '/assets/osu-logo-crest-only.svg';
         $variables['crest_logo'] = $themeCrestPath;
-        if (array_key_exists('group_path', $variables['content']) &&
-          array_key_exists('group_name', $variables['content'])) {
-          $variables['group_name'] = $variables['content']['group_name']['#markup'];
-          $variables['group_path'] = $variables['content']['group_path']['#uri'];
-        }
+        $parent_site_name = theme_get_setting('parent_site_name');
+        $parent_site_url = theme_get_setting('parent_site_url');
+        $variables['parent_site_name'] = $parent_site_name;
+        $variables['parent_site_url'] = $parent_site_url;
         if ($region == 'header') {
           if (array_key_exists('class', $variables['attributes']) &&
             in_array('contextual-region', $variables['attributes']['class'])) {
@@ -206,7 +210,6 @@ function madrone_preprocess_input(&$variables) {
       $variables['attributes']['class'][] = 'form-control';
       $variables['attributes']['class'][] = 'my-3';
       break;
-
   }
   $variables['type'] = $input_type;
 }
@@ -282,7 +285,6 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $form['#attributes']['class'][] = 'container';
     }
   }
-
 }
 
 /**

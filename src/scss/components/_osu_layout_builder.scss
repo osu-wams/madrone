@@ -122,6 +122,7 @@
   }
 }
 
+// Add styling for our video pause button.
 button.video-content__controls {
   bottom: 5rem;
   --bs-btn-border-radius: 5px;
@@ -129,12 +130,39 @@ button.video-content__controls {
   width: 8rem;
 }
 
+// Make it so the video doesn't render on mobile if there is also a bg image.
 .bg-video.bg-image.background-local-video {
   & video,
   button.video-content__controls {
     display: none;
     @media screen and (min-width: 768px) {
       display: initial;
+    }
+  }
+}
+
+// Make the columns truly "stretch" when placing blocks.
+.osu-align-items-stretch {
+  &.layout-builder__layout {
+    > div[class*=col] {
+      display: flex;
+      flex-direction: column;
+
+      > div[class*="block-"] {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+
+        > div.block__content {
+          display: flex;
+          flex: 1 0 auto;
+          flex-direction: column;
+
+          > div {
+            flex: 1 0 auto;
+          }
+        }
+      }
     }
   }
 }

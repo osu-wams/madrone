@@ -21,6 +21,36 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#type' => 'fieldset',
     '#title' => t('Madrone Utilities'),
   ];
+  // Parent Site option.
+  $form['madrone_settings']['madrone_utilities']['madrone_parent_site'] = [
+    '#type' => 'details',
+    '#title' => t('Parent Site'),
+    '#open' => TRUE,
+  ];
+  // Parent Site name.
+  $form['madrone_settings']['madrone_utilities']['madrone_parent_site']['parent_site_name'] = [
+    '#type' => 'textfield',
+    '#title' => t('Parent Site Name'),
+    '#default_value' => theme_get_setting('parent_site_name'),
+    '#description' => t("Enter the name of the parent site."),
+    '#states' => [
+      'required' => [
+        ':input[name="parent_site_url"]' => ['filled' => TRUE],
+      ],
+    ],
+  ];
+  // Parent site link. Has jQuery selector to force required.
+  $form['madrone_settings']['madrone_utilities']['madrone_parent_site']['parent_site_url'] = [
+    '#type' => 'url',
+    '#title' => t('Parent Site URL'),
+    '#default_value' => theme_get_setting('parent_site_url'),
+    '#description' => t("Enter the URL of the parent site."),
+    '#states' => [
+      'required' => [
+        ':input[name="parent_site_name"]' => ['filled' => TRUE],
+      ],
+    ],
+  ];
   // Monsido Site ID.
   $form['madrone_settings']['madrone_utilities']['madrone_monsido_site_id'] = [
     '#type' => 'textfield',

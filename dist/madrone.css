@@ -15201,12 +15201,12 @@ p:last-child {
     font-size: 1.5rem;
   }
 }
-.block-system-branding-block a.site-name__site-link--with-group {
+.block-system-branding-block a.site-name__parent-site, .block-system-branding-block a.site-name__site-link--with-group {
   text-decoration: none;
 }
-.block-system-branding-block a.site-name__site-link--with-group:hover, .block-system-branding-block a.site-name__site-link--with-group:active, .block-system-branding-block a.site-name__site-link--with-group:focus {
-  text-decoration-line: underline !important;
+.block-system-branding-block a.site-name__parent-site:hover, .block-system-branding-block a.site-name__parent-site:active, .block-system-branding-block a.site-name__parent-site:focus, .block-system-branding-block a.site-name__site-link--with-group:hover, .block-system-branding-block a.site-name__site-link--with-group:active, .block-system-branding-block a.site-name__site-link--with-group:focus {
   text-decoration-color: hsl(15.7, 92%, 43.9%) !important;
+  text-decoration-line: underline !important;
   text-decoration-thickness: 13% !important;
 }
 .block-system-branding-block a img {
@@ -16740,6 +16740,24 @@ button.video-content__controls {
   }
 }
 
+.osu-align-items-stretch.layout-builder__layout > div[class*=col] {
+  display: flex;
+  flex-direction: column;
+}
+.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-] {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-] > div.block__content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+.osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-] > div.block__content > div {
+  flex: 1 0 auto;
+}
+
 .madrone-content .osu-bg-page-default nav ul.menu li a {
   color: hsl(210, 10.8%, 14.5%) !important;
   background-color: #f7f5f5 !important;
@@ -16893,7 +16911,6 @@ a.tabledrag-handle .handle {
 }
 .media-library-widget-modal .media-library-views-form__rows {
   display: flex;
-  flex-basis: 100%;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -16902,8 +16919,8 @@ a.tabledrag-handle .handle {
   border-radius: var(--osu-border-radius);
   flex: 1 0 20%;
   margin: 0.5rem 1rem;
+  max-width: 50%;
   position: relative;
-  width: 20%;
 }
 .media-library-widget-modal .media-library-views-form__rows .media-library-item--grid:before {
   border: 1px solid var(--bs-secondary);
