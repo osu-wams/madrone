@@ -8,7 +8,6 @@ services:
       - DRUPAL_DBNAME=drupal
       - DRUPAL_MEMCACHE=true
       - DRUPAL_MEMCACHEHOST=cache
-      #- DRUPAL_THEME_DEVEL=true
       #- XDEBUG_MODE=debug,develop
       #- XDEBUG_CONFIG="xdebug.start_with_request=trigger xdebug.idekey=PHPSTORM"
     ports:
