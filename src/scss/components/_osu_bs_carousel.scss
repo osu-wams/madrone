@@ -1,4 +1,5 @@
 @import "../abstracts/osu_variables";
+
 .carousel {
   .carousel-control-prev,
   .carousel-control-next {
@@ -6,8 +7,10 @@
   }
 
   .carousel-caption {
-    background-color: $neutral-100;
+    background-color: hsl(0 11.11% 96.47% / 90%);
     bottom: 2.45rem;
+    color: $body-color;
+    padding-inline: 2rem;
   }
 
   .carousel-indicators {
