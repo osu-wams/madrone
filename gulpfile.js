@@ -24,7 +24,8 @@ function copyBSScripts() {
 function buildScripts() {
   return gulp.src([
     './src/madrone.js',
-    './src/madrone-editoria11y.js'
+    './src/madrone-editoria11y.js',
+    './src/messages.js'
   ])
     .pipe(gulp.dest('dist/'))
 }

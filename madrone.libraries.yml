@@ -14,6 +14,10 @@ bootstrap:
   js:
     dist/bootstrap.bundle.js: { }
 
+messages:
+  js:
+    dist/messages.js: { }
+
 fonts:
   css:
     theme:
