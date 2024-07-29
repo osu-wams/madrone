@@ -28,3 +28,8 @@ libraries:
   - madrone/fonts
   - madrone/bootstrap
   - madrone/global-styling
+  - core/drupal.message
+
+libraries-extend:
+  core/drupal.message:
+    - madrone/messages
