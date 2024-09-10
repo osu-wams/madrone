@@ -16,7 +16,7 @@
         "phpcs": "phpcs",
         "cbf": "phpcbf",
         "phpcbf": "phpcbf",
-        "twigcs": "twigcs --twig-version=2",
+        "twigcs": "twigcs",
         "post-install-cmd": [
             "vendor/bin/cghooks add"
         ],
