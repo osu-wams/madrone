@@ -25,10 +25,10 @@
   <ul id="{{ id }}" {{ attributes.addClass(classes) }}>
     {% for key, row in rows %}
       <li {{ row.attributes }}>
-        {% if row.title %}
-          <h4 class="list-group-item-heading">{{ row.title }}</h4>
-        {% endif %}
-        <p class="list-group-item-text">{{ row.content }}</p>
+          {% if row.title %}
+              <h4 class="list-group-item-heading">{{ row.title }}</h4>
+          {% endif %}
+          <div class="list-group-item-text">{{ row.content }}</div>
       </li>
     {% endfor %}
   </ul>
