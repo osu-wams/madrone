@@ -30,15 +30,15 @@
 
   {# Carousel indicators #}
   {% if indicators %}
-    <ol class="carousel-indicators">
+    <div class="carousel-indicators">
       {% for key, row in rows %}
         {% if key % columns == 0 %}
           {% set indicator_classes = [loop.first ? 'active'] %}
-          <li class="{{ indicator_classes|join(' ') }}" data-bs-target="#{{ id }}"
-              data-bs-slide-to="{{ key / columns }}"></li>
+          <button class="{{ indicator_classes|join(' ') }}" data-bs-target="#{{ id }}"
+                  data-bs-slide-to="{{ key / columns }}" aria-label="{{ 'Slide'|t ~ ' ' ~ loop.index }}"></button>
         {% endif %}
       {% endfor %}
-    </ol>
+    </div>
   {% endif %}
 
   {# Carousel rows #}
