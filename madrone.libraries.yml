@@ -22,4 +22,4 @@ fonts:
   css:
     theme:
       '//fonts.googleapis.com/css?family=Open Sans:300,400,500,600,700': { type: external }
-      '//cdn.icomoon.io/155267/OregonStateBrandIcons/style-cf.css?8rsof6': { type: external, minified: false }
+      '//cdn.icomoon.io/155267/OregonStateBrandIcons/style-cf.css?6642o2': { type: external, minified: false }
