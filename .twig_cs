@@ -7,6 +7,7 @@ $templates = TemplateFinder::create()
   ->in(__DIR__ . '/templates');
 return Config::create()
   ->setName('madrone')
-  ->setSeverity('warning')
+  ->setSeverity('error')
+  ->setDisplay('blocking')
   ->setRuleSet(FriendsOfTwig\Twigcs\Ruleset\Official::class)
   ->setFinder($templates);
