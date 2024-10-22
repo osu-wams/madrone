@@ -89,7 +89,8 @@ article.media--view-mode-video-720 {
     aspect-ratio: 16 / 9;
     display: block;
     height: auto;
-    width: 100%;
+    max-width: 100%;
+    width: 1280px;
   }
 }
 

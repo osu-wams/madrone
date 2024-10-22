@@ -142,7 +142,16 @@ window.addEventListener('load', () => {
   document.querySelectorAll('button.video-content__controls').forEach(videoContentControl => {
     videoContentControl.addEventListener('click', lbVideoControl)
   });
-
+  // Find all the Kaltura video's on a page so we can strong-arm our own styles.
+  document.querySelectorAll('.media--type-kaltura iframe.media-oembed-content').forEach(iframe => {
+    iframe.addEventListener('load', () => {
+      const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      const kPlayer = iframeDocument.querySelector('div#kplayer.playerv3');
+      if (kPlayer) {
+        kPlayer.style.cssText = 'position: absolute; inset: 0; width: 100%; height: 100%; margin: 0;';
+      }
+    });
+  });
 });
 
 /**
