@@ -10,3 +10,10 @@
     --#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text-emphasis);
   }
 }
+
+// sitewide alert styles
+
+.sitewide-alert {
+  border-radius: 0 !important;
+  // height: 300px;
+}
