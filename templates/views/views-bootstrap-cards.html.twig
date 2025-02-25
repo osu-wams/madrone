@@ -13,12 +13,39 @@
 {% set classes = [
   'views-view-bootstrap-card'
 ] %}
-<div {{ attributes.addClass(classes) }}>
-  <div class="row">
-    {% for key, row in rows %}
-    <div class="col">
-      <div {{ row.attributes }}>
-        {# Show image #}
+{% if use_card_group %}
+  {% set counter = 0 %}
+  {% for row in rows %}
+    {% if counter == 0 %}
+      <div{{ attributes.addClass(classes) }}>
+    {% endif %}
+    {# begin card #}
+    <div{{ row.attributes.addClass(classes) }}>
+      {% if row.image %}
+        <span class="card-img-top">{{ row.image }}</span>
+      {% endif %}
+      <div class="card-body">
+        {% if row.title %}
+          <h5 class="card-title">{{ row.title }}</h5>
+        {% endif %}
+        {% if row.content %}
+          <div class="card-text">
+            {{- row.content -}}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    {% set counter = counter + 1 %}
+    {% if counter == columns or loop.last %}
+      </div>
+      {% set counter = 0 %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+<div{{ row_attributes }}>
+  {% for key, row in rows %}
+    <div{{ col_attributes }}>
+      <div{{ row.attributes }}>
         {% if row.image %}
           <span class="card-img-top">{{ row.image }}</span>
         {% endif %}
@@ -34,10 +61,9 @@
         </div>
       </div>
     </div>
-    {% if (key + 1) % columns == 0 %}
-  </div>
-  <div class="row">
+    {% if (key + 1) % columns == 0 and not loop.last %}
+      </div><div{{ row_attributes }}>
     {% endif %}
-    {%- endfor %}
+  {% endfor %}
   </div>
-</div>
+{% endif %}

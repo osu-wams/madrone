@@ -22,10 +22,8 @@
  */
 #}
 {{ attach_library('views_bootstrap/components') }}
-
-<div id="{{ id }}" class="views-view-bootstrap-carousel carousel slide"
-     data-ride="carousel"{% if ride %} data-bs-ride="carousel" {% endif %}
-     data-bs-interval="{{ interval }}" data-bs-pause="{% if pause %}hover{% else %}false{% endif %}"
+<div id="{{ id }}" class="carousel {{ effect }}" {% if ride %} data-bs-ride="{{ ride }}"
+  data-bs-interval="{{ interval }}"{% endif %} data-bs-pause="{% if pause %}hover{% else %}false{% endif %}"
      data-wrap="{{ wrap }}">
 
   {# Carousel indicators #}
@@ -44,17 +42,21 @@
   {# Carousel rows #}
   <div class="carousel-inner">
     {% for row in rows %}
-      {% set row_classes = ['carousel-item', loop.first ? 'active'] %}
+      {#
+      Create the carousel-item and row container before the first column in each row.
+      #}
       {% if (loop.index - 1) % columns == 0 %}
-        {% set row_classes = ['carousel-item', 'row', loop.first ? 'active'] %}
+        {% set row_classes = ['carousel-item', loop.first ? 'active'] %}
         <div {{ row.attributes.addClass(row_classes) }}>
+        <div class="row">
       {% endif %}
-      <div class="col-{{ breakpoints }}-{{ 12 / columns }}">
+      {# Create columns. #}
+      <div class="{{ breakpoints }} position-relative">
         {% if display == 'fields' %}
           {{ row.image }}
           {% if row.title or row.description %}
             {% if use_caption %}
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption {{ caption_breakpoints }}">
             {% endif %}
             {% if row.title %}
               <h3>{{ row.title }}</h3>
@@ -70,7 +72,12 @@
           {{ row.content }}
         {% endif %}
       </div>
-      {% if loop.index % columns == 0 %}
+      {#
+      Close the row and carousel-item divs for the last column in the row or
+      the last item in the list of items.
+      #}
+      {% if (loop.index is divisible by columns) or (loop.index == rows|length) %}
+        </div>
         </div>
       {% endif %}
     {% endfor %}

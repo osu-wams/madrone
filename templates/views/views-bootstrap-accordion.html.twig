@@ -40,7 +40,13 @@
       <div id="{{ id }}-collapse-{{ key }}" class="accordion-collapse collapse {{ collapse_class }}"
            aria-labelledby="heading{{ key }}" data-bs-parent="#{{ id }}">
         <div class="accordion-body">
-          {{ row.content }}
+          {% if output == 'grouped' %}
+            {% for content in row.content %}
+              {{ content }}
+            {% endfor %}
+          {% else %}
+            {{ row.content }}
+          {% endif %}
         </div>
       </div>
     </div>
