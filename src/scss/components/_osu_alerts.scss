@@ -1,7 +1,7 @@
 @import '../../../node_modules/bootstrap/scss/variables';
 @import '../abstracts/osu_variables';
 
-// Generate contextual modifier classes for colorizing the alert
+// Generate contextual modifier classes for colorizing the alert. this is the default Bootstrap option that is used for Drupal messages when an authenticated user is viewing the website on a public facing page and recieves a status from Drupal
 @each $state in map-keys($osu-alerts) {
   .osu-alert-#{$state} {
     --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text-emphasis);
@@ -11,9 +11,83 @@
   }
 }
 
-// sitewide alert styles
-
+// sitewide alert styles for the sitewide alert module. this is for the styling of the alerts that appear at the top of the page only and can be placed and configured
 .sitewide-alert {
-  border-radius: 0 !important;
-  // height: 300px;
+  padding: .8rem;
+
+  .field--name-message::before {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
+    font-size: 2rem;
+    font-weight: 900;
+    padding-inline-end: .8rem;
+  }
+
+  .field--name-message {
+    align-items: center;
+    display: flex;
+  }
+
+  button.close {
+    background: transparent;
+    border-radius: 0.2rem;
+    border: 1px solid;
+    border-color: inherit;
+    color: inherit;
+    line-height: 1.5;
+    padding-block: 0.3rem;
+    padding-inline: 0.6rem;
+
+    &:hover p {
+      text-decoration: underline;
+    }
+  }
+
+  a {
+    text-decoration-color: inherit;
+    color: inherit;
+  }
+
+  .close-x {
+    @media (min-width: 768px) {
+      line-height: 1;
+      font-size: 2rem;
+    }
+  }
+}
+
+.alert-osu-info {
+  background-color: $moondust;
+  color: $paddletailblack;
+
+  .field--name-message::before {
+    content: '\f05a'/ "the letter i for information";
+  }
+}
+
+.alert-osu-success {
+  background-color: $pine-400;
+  color: $bucktoothwhite;
+
+  .field--name-message::before {
+    content: '\f058'/ "Checkmark indicating success";
+  }
+}
+
+.alert-osu-warning {
+  background-color: $luminance-400;
+  color: $paddletailblack;
+
+  .field--name-message::before {
+    content: '\f071'/ "Caution symbol";
+  }
+
+}
+
+.alert-osu-danger {
+  background-color: $lava-500;
+  color: $bucktoothwhite;
+
+  .field--name-message::before {
+    content: '\f06a'/ "Warning of danger";
+  }
 }

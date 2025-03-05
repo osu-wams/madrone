@@ -21,14 +21,21 @@
  * @ingroup themeable
  */
 #}
-<div {{ attributes }}>
+{% set classes = [
+  'd-flex',
+  'justify-content-between',
+  'gap-3'
+] %}
+
+<div {{ attributes.addClass(classes).removeClass('alert') }}>
   {% if content -%}
-    <span>{{- content -}}</span>
+    <div class="alert-wrapper d-md-flex">{{- content -}}</div>
   {%- endif %}
   {% if is_dismissible -%}
   {# The dismiss (close) button must have the class js-dismiss-button in order to work. #}
-    <button class="btn close js-dismiss-button" aria-label="{{ 'close'|t }}">
-      <span aria-hidden="true">×</span>
+    <button class="close js-dismiss-button align-self-start" aria-label="{{ 'close'|t }}">
+      <span class="close-x" aria-hidden="true">×</span>
+      <p class="d-none d-md-block fs-7">Dismiss</p>
     </button>
   {%- endif %}
 </div>

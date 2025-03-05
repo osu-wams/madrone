@@ -15742,7 +15742,72 @@ form.header-search-block-form input {
 }
 
 .sitewide-alert {
-  border-radius: 0 !important;
+  padding: 0.8rem;
+}
+.sitewide-alert .field--name-message::before {
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+  font-size: 2rem;
+  font-weight: 900;
+  padding-inline-end: 0.8rem;
+}
+.sitewide-alert .field--name-message {
+  align-items: center;
+  display: flex;
+}
+.sitewide-alert button.close {
+  background: transparent;
+  border-radius: 0.2rem;
+  border: 1px solid;
+  border-color: inherit;
+  color: inherit;
+  line-height: 1.5;
+  padding-block: 0.3rem;
+  padding-inline: 0.6rem;
+}
+.sitewide-alert button.close:hover p {
+  text-decoration: underline;
+}
+.sitewide-alert a {
+  text-decoration-color: inherit;
+  color: inherit;
+}
+@media (min-width: 768px) {
+  .sitewide-alert .close-x {
+    line-height: 1;
+    font-size: 2rem;
+  }
+}
+
+.alert-osu-info {
+  background-color: #c6dae7;
+  color: #212529;
+}
+.alert-osu-info .field--name-message::before {
+  content: "\f05a"/"the letter i for information";
+}
+
+.alert-osu-success {
+  background-color: #4a773c;
+  color: #fff;
+}
+.alert-osu-success .field--name-message::before {
+  content: "\f058"/"Checkmark indicating success";
+}
+
+.alert-osu-warning {
+  background-color: #ffb500;
+  color: #212529;
+}
+.alert-osu-warning .field--name-message::before {
+  content: "\f071"/"Caution symbol";
+}
+
+.alert-osu-danger {
+  background-color: #a7262b;
+  color: #fff;
+}
+.alert-osu-danger .field--name-message::before {
+  content: "\f06a"/"Warning of danger";
 }
 
 .accordion-button:hover {
