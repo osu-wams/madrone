@@ -15709,6 +15709,13 @@ form.header-search-block-form input {
   background-image: none !important;
 }
 
+body.maintenance-page header img {
+  height: 80px;
+}
+body.maintenance-page main div.row div.col-12 {
+  min-height: calc(100vh - 486px);
+}
+
 .osu-alert-success {
   --bs-alert-color: var(--bs-success-text-emphasis);
   --bs-alert-bg: var(--bs-success-bg-subtle);

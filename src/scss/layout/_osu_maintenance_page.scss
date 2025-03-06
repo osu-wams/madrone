@@ -1,0 +1,17 @@
+@import "../abstracts/osu_variables";
+
+body.maintenance-page {
+  header {
+    img {
+      height: 80px;
+    }
+  }
+
+  main {
+    div.row {
+      div.col-12 {
+        min-height: calc(100vh - 486px);
+      }
+    }
+  }
+}

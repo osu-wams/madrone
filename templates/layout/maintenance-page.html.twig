@@ -1,0 +1,71 @@
+<div class="layout-container min-vh-100 d-flex flex-column m-0">
+  <header class="container-fluid osu-bg-page-alt-1 g-0" role="banner">
+    <div class="d-flex align-items-center">
+      {% if logo %}
+        <div class="d-none d-lg-flex pe-2 osu-logo--wide">
+          <div class="ms-2 py-2">
+            <a id="osu-logo-wide" class="text-decoration-none d-inline-block" href="https://oregonstate.edu">
+              <img height="80" class="" src="{{ logo }}"
+                   alt="{{ "Oregon State University"|t }}"/>
+            </a>
+          </div>
+        </div>
+        <div class="d-flex d-lg-none osu-logo--crest">
+          <div class="py-2 px-2">
+            <a id="osu-logo-crest" class="text-decoration-none" href="https://oregonstate.edu">
+              <img height="80" class="" src="{{ base_path }}{{ active_theme_path() }}/assets/osu-logo-crest-only.svg"
+                   alt="{{ "Oregon State University"|t }}"/>
+            </a>
+          </div>
+        </div>
+      {% endif %}
+      {% if logo and site_name %}
+        <div class="align-self-stretch border-start border-neutral-200 osu-logo--spacer"></div>
+      {% endif %}
+      {% if site_name %}
+        <div class="block__content__site-name d-flex flex-column ms-3 py-2-5 lh-sm">
+          {% if site_name %}
+            <a class="site-name__site-link text-decoration-none osu-text-osuorange fw-bolder fs-5"
+               href="{{ path('<front>') }}"
+               rel="home">
+              {{ site_name }}
+            </a>
+          {% endif %}
+
+        </div>
+      {% endif %}
+    </div>
+  </header>
+  {{ page.primary_menu }}
+  {{ page.full_top }}
+  {{ page.breadcrumb }}
+  {{ page.highlighted }}
+  {{ page.help }}
+  <div class="flex-fill position-relative">
+    <main class="container gx-3 gx-lg-0" role="main">
+      {% if title %}
+        <h1 class="text-center my-3 mx-auto ">{{ title }}</h1>
+      {% endif %}
+      <div class="row">
+        <div class="col-12">
+          <p class="text-center">
+            {{ page.content }}
+          </p>
+        </div>
+      </div>
+    </main>
+
+    {% if page_sidebar_content %}
+      <aside class="layout-sidebar px-4 px-lg-2 px-xxl-3 col-12 col-lg-3 flex-fill"
+             role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+  </div>
+  {{ page.pre_footer }}
+
+  <footer class="container-fluid g-0 mt-auto" role="contentinfo">
+    {{ page.footer }}
+  </footer>
+
+</div>
