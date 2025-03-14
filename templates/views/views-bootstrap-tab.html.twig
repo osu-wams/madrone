@@ -52,7 +52,14 @@
         {% set tabs_attributes = tabs_attributes.removeClass('active') %}
       {% endif %}
       <div{{ tabs_attributes.setAttribute('id', "tab-" ~ tabid ~ '-' ~ key).setAttribute('role', 'tabpanel') }}>
-        {{ row.content }}
+        {% if row.content is not empty %}
+          {{ row.content }}
+        {% endif %}
+        {% if row.content_tabs is not empty %}
+          {% for tc_key, tab_content in row.content_tabs %}
+            {{ tab_content }}
+          {% endfor %}
+        {% endif %}
       </div>
     {% endfor %}
   </div>
