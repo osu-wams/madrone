@@ -63,5 +63,9 @@
     </footer>
   {% endif %}
 
-  {{ feed_icons }}
+  {% if feed_icons %}
+    <div class="feed-icons">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
 </div>
