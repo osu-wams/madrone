@@ -81,16 +81,18 @@
             }
           }
 
-          // chevron top level
-          & > a::after,
-          & > span::after {
-            color: $neutral-700;
-            content: '\2000\f078';
-            display: inline-block;
-            font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
-            font-size: 12px;
-            font-weight: 900;
-            letter-spacing: normal;
+          &:not(.sf-no-children) {
+            // chevron top level
+            & > a::after,
+            & > span::after {
+              color: $neutral-700;
+              content: '\2000\f078';
+              display: inline-block;
+              font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
+              font-size: 12px;
+              font-weight: 900;
+              letter-spacing: normal;
+            }
           }
 
           // Push menu down on first child ul.
