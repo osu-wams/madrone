@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 use Drupal\views\ViewExecutable;
 
 /**
@@ -479,7 +480,7 @@ function get_companion_logo(string $companion_logo): array {
       'logo-path' => '/' . Drupal::theme()
         ->getActiveTheme()
         ->getPath() . '/assets/osucascades.svg',
-      'link-path' => 'https://osucascades.edu/',
+      'link-path' => Url::fromRoute('<front>')->toString(),
       'alt-text' => 'OSU-Cascades homepage',
     ],
     default => [
