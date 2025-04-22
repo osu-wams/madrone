@@ -92,6 +92,7 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   $current_roles = \Drupal::currentUser()->getAccount()->getRoles(TRUE);
 
   if (count(array_intersect($current_roles, $administrative_roles)) > 0) {
+    $form['logo']['#access'] = TRUE;
     $form['madrone_settings']['madrone_utilities']['madrone_companion_logo']['#disabled'] = FALSE;
     $form['madrone_settings']['madrone_utilities']['mardone_metatag_osu']['#disabled'] = FALSE;
   }

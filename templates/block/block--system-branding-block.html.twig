@@ -44,7 +44,7 @@
   'block-' ~ plugin_id|clean_class,
   'col-9',
   'col-lg-8',
-  companion_logo_name == 'default' ? 'osu-logo' : 'osu-logo osu-logo--companion',
+  companion_logo_name == 'default' ? 'osu-logo' : companion_logo_name == 'custom-upload' ? 'logo--user-upload' : 'osu-logo osu-logo--companion',
   group_name ? 'osu-logo--in-group',
 ] %}
 <div{{ attributes.addClass(classes) }}>
@@ -73,7 +73,7 @@
           </div>
         </div>
       {% endif %}
-      {% if site_logo and site_name %}
+      {% if (site_logo or companion_logo_name == 'custom-upload') and site_name %}
         <div class="align-self-stretch border-start border-neutral-200 osu-logo--spacer"></div>
       {% endif %}
       {% if site_name %}
@@ -96,6 +96,8 @@
             {% else %}
               {{ macros.site_link(is_front, site_name) }}
             {% endif %}
+          {% elseif companion_logo_name == 'custom-upload' %}
+            {{ macros.site_link(is_front, site_name) }}
           {% endif %}
         </div>
       {% endif %}
