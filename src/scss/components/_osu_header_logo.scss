@@ -15,3 +15,23 @@
     }
   }
 }
+
+.logo--user-upload {
+  .block__content {
+    align-items: start !important;
+    flex-direction: column;
+
+    .osu-logo--wide {
+      display: flex !important;
+    }
+
+    .osu-logo--crest {
+      display: none !important;
+    }
+
+    @media screen and (min-width: 768px) {
+      align-items: center !important;
+      flex-direction: row;
+    }
+  }
+}

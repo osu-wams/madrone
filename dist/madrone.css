@@ -16939,6 +16939,23 @@ a.tabledrag-handle .handle {
   display: none !important;
 }
 
+.logo--user-upload .block__content {
+  align-items: start !important;
+  flex-direction: column;
+}
+.logo--user-upload .block__content .osu-logo--wide {
+  display: flex !important;
+}
+.logo--user-upload .block__content .osu-logo--crest {
+  display: none !important;
+}
+@media screen and (min-width: 768px) {
+  .logo--user-upload .block__content {
+    align-items: center !important;
+    flex-direction: row;
+  }
+}
+
 .block__content__site-name h1, .block__content__site-name .h1 {
   font-family: "Open Sans", sans-serif;
   font-size: inherit;
