@@ -15030,6 +15030,10 @@ hr {
   --bs-gutter-y: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
 h1, .h1 {
   color: hsl(15.7, 92%, 43.9%);
   font-family: "Stratum2Web", serif;

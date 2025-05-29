@@ -33,3 +33,9 @@ hr {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
 }
+
+
+// Drupal's Hidden gets overridden by Bootstrap.
+.hidden {
+  display: none !important;
+}

@@ -311,8 +311,8 @@ function madrone_theme_suggestions_block_alter(array &$suggestions, array $varia
       // Get the region the block is in.
       $region = $block->getRegion();
       $suggestions[] = 'block__' . $region;
-      $suggestions[] = 'block__' . $region . '__' . 'plugin_id' . '__' . $variables['elements']['#plugin_id'];
-      $suggestions[] = 'block__' . $region . '__' . 'id' . '__' . $variables['elements']['#id'];
+      $suggestions[] = 'block__' . $region . '__plugin_id__' . $variables['elements']['#plugin_id'];
+      $suggestions[] = 'block__' . $region . '__id__' . $variables['elements']['#id'];
     }
   }
 }
@@ -346,7 +346,7 @@ function madrone_theme_suggestions_form_alter(array &$suggestions, array $variab
  */
 function madrone_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
   if (array_key_exists('#id', $variables['element']) && $variables['element']['#id'] === 'admin-toolbar-search-input') {
-    $suggestions[] = $variables['theme_hook_original'] . '__' . 'admin_toolbar_search';
+    $suggestions[] = $variables['theme_hook_original'] . '__admin_toolbar_search';
   }
 }
 
