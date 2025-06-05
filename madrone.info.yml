@@ -24,6 +24,8 @@ regions_hidden:
   - header
 ckeditor_stylesheets:
   - dist/madrone.css
+# Will work on adding a custom cke5 stylesheet in the future.
+ckeditor5-stylesheets: false
 libraries:
   - madrone/fonts
   - madrone/bootstrap
