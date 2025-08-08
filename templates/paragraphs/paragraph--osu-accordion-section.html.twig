@@ -73,10 +73,12 @@
                       aria-expanded="true"
                       aria-controls="{{ macros.accordion_id(paragraph_id, key) }}">{{ item['#paragraph'].field_p_accordion_title.value }}</button>
             </h3>
-            <div id="{{ macros.accordion_id(paragraph_id, key) }}" class="accordion-collapse collapse accordion-body"
+            <div id="{{ macros.accordion_id(paragraph_id, key) }}" class="accordion-collapse collapse"
                  aria-labelledby="heading-{{ macros.accordion_id(paragraph_id, key) }}"
                  data-bs-parent="#{{ paragraph_id }}">
-              {{ item['#paragraph'].field_p_accordion_body.processed }}
+              <div class="accordion-body">
+                {{ item['#paragraph'].field_p_accordion_body.processed }}
+              </div>
             </div>
           </div>
         {% endif %}
