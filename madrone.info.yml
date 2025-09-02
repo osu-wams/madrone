@@ -20,6 +20,7 @@ regions:
   page_bottom: Page Bottom
   pre_footer: Full width above the Footer
   footer: Footer
+  tb_megamenu_blocks: Mega Menu Blocks (Hidden)
 regions_hidden:
   - header
 ckeditor_stylesheets:
