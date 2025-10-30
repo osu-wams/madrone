@@ -20,7 +20,7 @@ services:
       - CAP_DAC_OVERRIDE
     restart: unless-stopped
   database:
-    image: docker.io/library/mariadb:10.11
+    image: docker.io/library/mysql:8.0
     volumes:
       - drupal-db:/var/lib/mysql/drupal
     environment:
