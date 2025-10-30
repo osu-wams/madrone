@@ -22,7 +22,7 @@ services:
   database:
     image: docker.io/library/mysql:8.0
     volumes:
-      - drupal-db:/var/lib/mysql/drupal
+      - drupal-db:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: drupal
