@@ -16297,6 +16297,17 @@ a.button:focus,
   background-color: hsl(210, 10.8%, 14.5%);
 }
 
+.field-group-tabs-wrapper {
+  background-color: #fff;
+}
+.field-group-tabs-wrapper .horizontal-tab-button a:focus-visible {
+  outline: 2px solid hsl(15.7, 92%, 43.9%);
+  outline-offset: -2px;
+}
+.field-group-tabs-wrapper .details-wrapper {
+  padding-block-end: 2rem;
+}
+
 .field--name-field-tags.field--label-inline .field__items,
 .field--name-field-osu-organizations.field--label-inline .field__items {
   flex-direction: row;

@@ -1,8 +1,23 @@
 @import "../abstracts/osu_variables";
 
 .nav-tabs {
+
   .nav-link:not(.active):hover,
   .nav-link:not(.active):focus {
     background-color: $paddletailblack-hsl;
   }
+}
+
+// STYLES FOR NAV TABS PRODUCED BY DISPLAY SUITE
+.field-group-tabs-wrapper {
+  background-color: $bucktoothwhite;
+
+  .horizontal-tab-button a:focus-visible {
+    outline: 2px solid $osuorange-hsl;
+    outline-offset: -2px;
+  }
+
+  .details-wrapper {
+    	padding-block-end: 2rem;
+    }
 }
