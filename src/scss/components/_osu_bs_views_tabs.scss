@@ -15,12 +15,12 @@
 
     @media (min-width: 992px) {
       justify-content: center;
-      margin-inline: 2rem;
+      // margin-inline: 2rem; need to test
       overflow: visible;
     }
 
     @media (min-width: 1400px) {
-      margin-inline: 4rem;
+      // margin-inline: 4rem; need to test
     }
   }
 
@@ -31,17 +31,34 @@
   }
 
   .nav-link {
-    border: 0 transparent;
+    background-color: $neutral-100;
+    border: 2px solid transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
+    color: $neutral-700;
     margin-bottom: 0 !important;
-    transition: all 0.2s ease-out;
     width: max-content;
 
-    &:hover,
+    &:hover {
+      border-bottom-color: transparent;
+
+      @media (min-width:992px) {
+        border-inline: 2px solid $osuorange;
+        border-top: 2px solid $osuorange;
+      }
+    }
+
     &.active {
-      background-color: $osuorange-hsl;
-      color: $bucktoothwhite-hsl;
+      background-color: $neutral-100;
+      border-bottom: 2px solid $osuorange-hsl;
+
+      @media (min-width:992px) {
+        border-bottom: 4px solid transparent;
+        border-top: 2px solid $osuorange;
+        border-inline: 2px solid $osuorange;
+        margin-bottom: -2.5px !important;
+      }
+
     }
 
     &:focus-visible {
