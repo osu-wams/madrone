@@ -122,6 +122,16 @@
   }
 }
 
+// Fix for CLS for background videos
+.background-local-video {
+  @for $i from 1 through 8 {
+    $h: $i * 100;
+    &:has(.osu-min-h-#{$h}) {
+      min-height: #{$h}px;
+    }
+  }
+}
+
 // Add styling for our video pause button.
 button.video-content__controls {
   bottom: 5rem;
