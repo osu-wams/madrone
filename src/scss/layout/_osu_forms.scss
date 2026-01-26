@@ -1,10 +1,11 @@
 @import "../abstracts/osu_variables";
+
 .form-item {
   .form-label.form-required::after {
-    content: '*';
     color: $lava-400;
-    position: relative;
+    content: '*';
     left: 0.5em;
+    position: relative;
   }
 
   & > .required:focus {
@@ -26,6 +27,10 @@ form.header-search-block-form {
   input {
     background-image: none !important;
   }
+}
+
+form.header-search-block-form input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 
 .layout-builder-form {
