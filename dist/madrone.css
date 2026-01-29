@@ -15732,10 +15732,10 @@ footer .region-footer a:active {
 }
 
 .form-item .form-label.form-required::after {
-  content: "*";
   color: #c72127;
-  position: relative;
+  content: "*";
   left: 0.5em;
+  position: relative;
 }
 .form-item > .required:focus {
   border-color: #c72127;
@@ -15751,6 +15751,10 @@ select option:checked {
 form.search-form input,
 form.header-search-block-form input {
   background-image: none !important;
+}
+
+form.header-search-block-form input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 
 .layout-builder-form .layout-builder__message .messages,
