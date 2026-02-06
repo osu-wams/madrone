@@ -51,13 +51,13 @@
 
     messageWrapper.innerHTML = `
     <div class="messages__header">
-      <h2 id="${id}-title" class="messages__title">
+      <h2 class="messages__title visually-hidden" id="${id}-title">
         ${messagesTypes[type]}
       </h2>
     </div>
-    <div class="messages__content d-flex align-items-center">
-    <i class="${alertIconClass} me-2"></i>
-      ${text}
+    <div class="messages__content d-flex gap-2 align-items-center">
+    <i class="${alertIconClass}"></i>
+      <span>${text}</span>
     </div>
     <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
   `;
