@@ -9,5 +9,7 @@ composer.lock
 
 # Ignore IDE settings
 /.idea
+/.vim
+/.vscode
 # Docker composer overrides
 docker-compose.override.yml

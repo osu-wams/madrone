@@ -51,7 +51,7 @@
                 ]
             },
             "pre-push": [
-                "vendor/bin/twigcs --twig-version=1",
+                "vendor/bin/twigcs --twig-version=2",
                 "vendor/bin/phpcs -n"
             ],
             "pre-commit": [
