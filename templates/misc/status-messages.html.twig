@@ -45,9 +45,9 @@
       'error': 'fas fa-2x fa-times-circle',
     } %}
     {% set icon_wrapper_classes = {
-      'status': 'd-flex align-items-center',
-      'warning': 'd-flex align-items-center',
-      'error': 'd-flex align-items-center',
+      'status': 'd-flex gap-2 align-items-center',
+      'warning': 'd-flex gap-2 align-items-center',
+      'error': 'd-flex gap-2 align-items-center',
     } %}
     <div
       aria-label="{{ status_headings[type] }}"{{ attributes.addClass(status_classes, status_colors[type], dismiss_class)|without('role', 'aria-label').setAttribute('role', role[type]) }}>
@@ -57,7 +57,6 @@
       <div
         class="{{ icon_wrapper_classes[type] }}">
         <i class="{{ icon_classes[type] }}"></i>
-
         {% if messages|length > 1 %}
           <ul>
             {% for message in messages %}
@@ -65,7 +64,7 @@
             {% endfor %}
           </ul>
         {% else %}
-          <p class="mb-0 ms-2">{{ messages|first }}</p>
+          <span>{{ messages|first }}</span>
         {% endif %}
       </div>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
