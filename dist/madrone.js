@@ -146,6 +146,8 @@ window.addEventListener('load', () => {
   document.querySelectorAll('.media--type-kaltura iframe.media-oembed-content').forEach(iframe => {
     if (iframe.contentWindow && iframe.contentWindow.document.readyState === 'complete') {
       const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      // Add overflow hidden to Kaltura player iframe
+      iframeDocument.documentElement.style.cssText = "overflow: hidden;";
       const kalturaPlayerIframe = iframeDocument.querySelector('iframe#kaltura_player');
       if (kalturaPlayerIframe) {
         kalturaPlayerIframe.style.cssText = 'position: absolute; inset: 0; width: 100%; height: 100%; margin: 0;';
