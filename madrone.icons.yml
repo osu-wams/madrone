@@ -1,0 +1,50 @@
+osuicons:
+  enabled: true
+  label: OSU Icons
+  description: "OSU Icons powered by IcoMoon"
+  links:
+    - https://icomoon.io/
+  extractor: font
+  config:
+    sources:
+      - icons/osu_icons/osu_icons.codepoints
+  library: "madrone/osu_icons"
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 4
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+    color:
+      title: "Brand Color"
+      type: "string"
+      default: "dark"
+      enum:
+        - "primary"
+        - "light"
+        - "dark"
+        - "white"
+        - "pine"
+        - "luminance"
+        - "rogue-wave"
+        - "stratosphere"
+  template: >-
+    {% set classes = [
+      "osu-icon",
+      icon_id|clean_class,
+      'fa-' ~ size ~ 'x',
+      color
+      ]%}
+    <span {{ attributes.addClass(classes) }}></span>
+  preview: >-
+    <span class="osu-icon preview {{ icon_id|clean_class }} fa-2x {{ color|default(dark) }}"></span>

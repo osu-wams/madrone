@@ -26,9 +26,11 @@ regions_hidden:
 ckeditor_stylesheets:
   - dist/madrone.css
 # Will work on adding a custom cke5 stylesheet in the future.
-ckeditor5-stylesheets: false
+ckeditor5-stylesheets:
+  - https://cdn.icomoon.io/155267/OregonStateBrandIcons/style-cf.css?8rsof6
 libraries:
   - madrone/fonts
+  - madrone/osu_icons
   - madrone/bootstrap
   - madrone/global-styling
   - core/drupal.message
