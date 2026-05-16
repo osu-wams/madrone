@@ -1,0 +1,8 @@
+@import 'scss/abstracts/osu_mixins';
+
+@include osu-font-face('Stratum2Web', 'Stratum2WebThin', 200);
+@include osu-font-face('Stratum2Web', 'Stratum2WebLight', 300);
+@include osu-font-face('Stratum2Web', 'Stratum2WebRegular', 400);
+@include osu-font-face('Stratum2Web', 'Stratum2WebMedium', 500);
+@include osu-font-face('Stratum2Web', 'Stratum2WebBold', 700);
+@include osu-font-face('Stratum2Web', 'Stratum2WebBlack', 900);

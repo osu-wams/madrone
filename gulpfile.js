@@ -6,7 +6,10 @@ var sourcemaps = require('gulp-sourcemaps');
 
 
 function buildStyles() {
-  return gulp.src('./src/madrone.scss')
+  return gulp.src([
+    './src/madrone.scss',
+    './src/madrone-ckeditor-styles.scss'
+  ])
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('./'))

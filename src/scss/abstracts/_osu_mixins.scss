@@ -12,3 +12,15 @@
     --osu-bg-overlay-deg: #{$degree};
   }
 }
+
+// Font Family Mixin
+@mixin osu-font-face($name, $path, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src:
+      url("../fonts/#{$path}.woff") format("woff"),
+      url("../fonts/#{$path}.woff2") format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
