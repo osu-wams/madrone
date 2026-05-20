@@ -27,6 +27,7 @@ ckeditor_stylesheets:
   - dist/madrone.css
 # Will work on adding a custom cke5 stylesheet in the future.
 ckeditor5-stylesheets:
+  - dist/madrone-ckeditor-styles.css
   - https://cdn.icomoon.io/155267/OregonStateBrandIcons/style-cf.css?8rsof6
 libraries:
   - madrone/fonts
