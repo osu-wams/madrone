@@ -7,54 +7,8 @@
 @import '../node_modules/bootstrap/scss/maps';
 @import '../node_modules/bootstrap/scss/mixins';
 @import '../node_modules/bootstrap/scss/utilities';
-
-@font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebThin.woff') format('woff'),
-  url('../fonts/Stratum2WebThin.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebLight.woff') format('woff'),
-  url('../fonts/Stratum2WebLight.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebRegular.woff') format('woff'),
-  url('../fonts/Stratum2WebRegular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebMedium.woff') format('woff'),
-  url('../fonts/Stratum2WebMedium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebBold.woff') format('woff'),
-  url('../fonts/Stratum2WebBold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Stratum2Web';
-  src: url('../fonts/Stratum2WebBlack.woff') format('woff'),
-  url('../fonts/Stratum2WebBlack.woff2') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
+@import 'scss/abstracts/osu_mixins';
+@import 'scss/base/osu_fonts';
 
 $utilities: map-merge-multiple(
     $utilities,
@@ -461,7 +415,6 @@ $utilities: map-merge-multiple(
 );
 
 @import '../node_modules/bootstrap/scss/bootstrap';
-@import 'scss/abstracts/osu_mixins';
 @import 'scss/utilities/osu_utilities';
 
 @import 'scss/base/osu_base';

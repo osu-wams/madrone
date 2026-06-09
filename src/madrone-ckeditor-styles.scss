@@ -1,0 +1,63 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import 'scss/abstracts/osu_variables';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/variables-dark';
+@import '../node_modules/bootstrap/scss/maps';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/utilities';
+@import '../node_modules/bootstrap/scss/root';
+.ck-content {
+  @import '../node_modules/bootstrap/scss/bootstrap';
+
+  @import 'scss/abstracts/osu_mixins';
+  @import 'scss/base/osu_fonts';
+
+  @import 'scss/utilities/osu_utilities';
+  @import 'scss/base/osu_base';
+
+  @import 'scss/base/osu_base';
+  @import 'scss/base/osu_typography';
+
+  @import 'scss/layout/osu_header';
+  @import 'scss/layout/osu_footer';
+  @import 'scss/layout/osu_breadcrumbs';
+  @import 'scss/layout/superfish';
+  @import 'scss/layout/osu_menus';
+  @import 'scss/layout/osu_group_menus';
+  @import 'scss/layout/osu_forms';
+  @import 'scss/layout/osu_maintenance_page';
+  @import 'scss/components/osu_alerts';
+  @import 'scss/components/osu_accordion';
+  @import 'scss/components/osu_buttons';
+  @import 'scss/components/osu_bs_buttons';
+  @import 'scss/components/osu_dropbuttons';
+  @import 'scss/components/osu_group_operations';
+  @import 'scss/components/osu_cards';
+  @import 'scss/components/osu_fields';
+  @import 'scss/components/osu_menubar';
+  @import 'scss/components/osu_nav_tabs';
+  @import 'scss/components/osu_tags';
+  @import 'scss/components/osu_pager';
+  @import 'scss/components/osu_media';
+  @import 'scss/components/osu_stories__landing_stories';
+  @import 'scss/components/osu_stories__related_stories';
+  @import 'scss/components/osu_stories__author';
+  @import 'scss/components/osu_messages';
+  @import 'scss/components/osu_modals';
+  @import 'scss/components/osu_preview';
+  @import 'scss/components/osu_tables';
+  @import 'scss/components/osu_bs_carousel';
+  @import 'scss/components/osu_bs_views_tabs';
+  @import 'scss/components/osu_ckeditor';
+  @import 'scss/components/osu_tocjs';
+  @import 'scss/components/osu_layout_builder';
+  @import 'scss/components/osu_layout_builder_menus';
+  @import 'scss/components/osu_tabledrag';
+  @import 'scss/components/osu_simple_popup_blocks';
+  @import 'scss/components/osu_views_exposed_forms';
+  @import 'scss/components/osu_header_logo';
+  @import 'scss/components/osu_site_name';
+  @import 'scss/components/osu_bs_views_card_group';
+  @import 'scss/components/osu_webform';
+  @import 'scss/components/osu_media_library';
+}

@@ -1,7 +1,6 @@
-/*.log
 /mix-manifest.json
-/node_modules/
 composer.lock
+/node_modules/
 /vendor/
 # Ignore compiled assets.
 # /dist/
@@ -14,3 +13,6 @@ composer.lock
 /.vscode
 # Docker composer overrides
 docker-compose.override.yml
+# Ignore logs and caches
+/*.log
+/*.cache
