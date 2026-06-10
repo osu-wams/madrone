@@ -12314,6 +12314,96 @@ a > .ck-content code {
 .ck-content .osu-border-white-bottom {
   border-bottom-color: #fff !important;
 }
+.ck-content .osu-border-library {
+  border-color: #70637e !important;
+}
+.ck-content .osu-border-library-left {
+  border-left-color: #70637e !important;
+}
+.ck-content .osu-border-library-top {
+  border-top-color: #70637e !important;
+}
+.ck-content .osu-border-library-right {
+  border-right-color: #70637e !important;
+}
+.ck-content .osu-border-library-bottom {
+  border-bottom-color: #70637e !important;
+}
+.ck-content .osu-border-hop-bine {
+  border-color: #aa9d2e !important;
+}
+.ck-content .osu-border-hop-bine-left {
+  border-left-color: #aa9d2e !important;
+}
+.ck-content .osu-border-hop-bine-top {
+  border-top-color: #aa9d2e !important;
+}
+.ck-content .osu-border-hop-bine-right {
+  border-right-color: #aa9d2e !important;
+}
+.ck-content .osu-border-hop-bine-bottom {
+  border-bottom-color: #aa9d2e !important;
+}
+.ck-content .osu-border-till {
+  border-color: #b7a99a !important;
+}
+.ck-content .osu-border-till-left {
+  border-left-color: #b7a99a !important;
+}
+.ck-content .osu-border-till-top {
+  border-top-color: #b7a99a !important;
+}
+.ck-content .osu-border-till-right {
+  border-right-color: #b7a99a !important;
+}
+.ck-content .osu-border-till-bottom {
+  border-bottom-color: #b7a99a !important;
+}
+.ck-content .osu-border-basalt-blush {
+  border-color: #98606f !important;
+}
+.ck-content .osu-border-basalt-blush-left {
+  border-left-color: #98606f !important;
+}
+.ck-content .osu-border-basalt-blush-top {
+  border-top-color: #98606f !important;
+}
+.ck-content .osu-border-basalt-blush-right {
+  border-right-color: #98606f !important;
+}
+.ck-content .osu-border-basalt-blush-bottom {
+  border-bottom-color: #98606f !important;
+}
+.ck-content .osu-border-marionberry {
+  border-color: #610733 !important;
+}
+.ck-content .osu-border-marionberry-left {
+  border-left-color: #610733 !important;
+}
+.ck-content .osu-border-marionberry-top {
+  border-top-color: #610733 !important;
+}
+.ck-content .osu-border-marionberry-right {
+  border-right-color: #610733 !important;
+}
+.ck-content .osu-border-marionberry-bottom {
+  border-bottom-color: #610733 !important;
+}
+.ck-content .osu-border-parchment {
+  border-color: #f1edce !important;
+}
+.ck-content .osu-border-parchment-left {
+  border-left-color: #f1edce !important;
+}
+.ck-content .osu-border-parchment-top {
+  border-top-color: #f1edce !important;
+}
+.ck-content .osu-border-parchment-right {
+  border-right-color: #f1edce !important;
+}
+.ck-content .osu-border-parchment-bottom {
+  border-bottom-color: #f1edce !important;
+}
 .ck-content .osu-opacity-90 {
   background-color: rgba(255, 255, 255, 0.95);
 }

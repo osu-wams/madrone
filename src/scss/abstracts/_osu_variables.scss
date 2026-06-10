@@ -1,19 +1,28 @@
 // All OSU colors
 $osuorange: #d73f09;
-$osuorange-rgb: rgb(215 63 9);
 $osuorange-hsl: hsl(15.7 92% 43.9%);
 $osuorange-lab: lab(49.53 57.43 58.79);
 $osuorange-oklch: oklch(0.587 0.196 36);
 $bucktoothwhite: #fff;
-$bucktoothwhite-rgb: rgb(255 255 255);
 $bucktoothwhite-hsl: hsl(0 0% 100%);
 $bucktoothwhite-lab: lab(100 0 0);
 $bucktoothwhite-oklch: oklch(1 0 0);
 $paddletailblack: #212529;
-$paddletailblack-rgb: rgb(33 37 41);
 $paddletailblack-hsl: hsl(210 10.8% 14.5%);
 $paddletailblack-lab: lab(14.44 -0.72 -3.26);
 $paddletailblack-oklch: oklch(.262 .009 248);
+$hop-bine: #aa9d2e;
+$hop-bine-oklch: oklch(0.687 0.128 102);
+$till: #b7a99a;
+$till-oklch: oklch(0.743 0.027 69);
+$library: #70637e;
+$library-oklch: oklch(0.522 0.045 307);
+$basalt-blush: #98606f;
+$basald-blush-oklch: oklch(0.555 0.075 2);
+$marionberry: #610733;
+$marionberry-oklch: oklch(0.325 0.125 359);
+$parchment: #f1edce;
+$parchment-oklch: oklch(0.941 0.041 101);
 $neutral-100: #f7f5f5;
 $neutral-100-hsl: hsl(0 11.11% 96.47%);
 $neutral-200: #e9e5e4;
@@ -139,6 +148,12 @@ $osu-bg-colors: (
   'crater': $crater,
   'osuorange': $osuorange,
   'light-grey': $lightGrey,
+  'library': $library,
+  'hop-bine': $hop-bine,
+  'till': $till,
+  'basalt-blush': $basalt-blush,
+  'marionberry': $marionberry,
+  'parchment': $parchment,
 );
 
 // Map for border colors
@@ -149,6 +164,12 @@ $osu-border-colors: (
   'moondust': $moondust,
   'dark': $paddletailblack,
   'white': $bucktoothwhite,
+  'library': $library,
+  'hop-bine': $hop-bine,
+  'till': $till,
+  'basalt-blush': $basalt-blush,
+  'marionberry': $marionberry,
+  'parchment': $parchment,
 );
 
 // Map for all colors
@@ -156,6 +177,12 @@ $osu-colors-all: (
   'osuorange': $osuorange,
   'paddletailblack': $paddletailblack,
   'bucktoothwhite': $bucktoothwhite,
+  'library': $library,
+  'hop-bine': $hop-bine,
+  'till': $till,
+  'basalt-blush': $basalt-blush,
+  'marionberry': $marionberry,
+  'parchment': $parchment,
   'neutral-100': $neutral-100,
   'neutral-200': $neutral-200,
   'neutral-300': $neutral-300,
@@ -356,3 +383,4 @@ $list-group-item-padding-x: 1.5rem;
 
 // Custom Colors
 $osu-bg-gradient: hsl(210 11% 15% / 0.75);
+
