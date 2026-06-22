@@ -12314,21 +12314,6 @@ a > .ck-content code {
 .ck-content .osu-border-white-bottom {
   border-bottom-color: #fff !important;
 }
-.ck-content .osu-border-library {
-  border-color: #70637e !important;
-}
-.ck-content .osu-border-library-left {
-  border-left-color: #70637e !important;
-}
-.ck-content .osu-border-library-top {
-  border-top-color: #70637e !important;
-}
-.ck-content .osu-border-library-right {
-  border-right-color: #70637e !important;
-}
-.ck-content .osu-border-library-bottom {
-  border-bottom-color: #70637e !important;
-}
 .ck-content .osu-border-hop-bine {
   border-color: #aa9d2e !important;
 }
