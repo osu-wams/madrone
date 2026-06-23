@@ -1,19 +1,26 @@
 // All OSU colors
 $osuorange: #d73f09;
-$osuorange-rgb: rgb(215 63 9);
 $osuorange-hsl: hsl(15.7 92% 43.9%);
 $osuorange-lab: lab(49.53 57.43 58.79);
 $osuorange-oklch: oklch(0.587 0.196 36);
 $bucktoothwhite: #fff;
-$bucktoothwhite-rgb: rgb(255 255 255);
 $bucktoothwhite-hsl: hsl(0 0% 100%);
 $bucktoothwhite-lab: lab(100 0 0);
 $bucktoothwhite-oklch: oklch(1 0 0);
 $paddletailblack: #212529;
-$paddletailblack-rgb: rgb(33 37 41);
 $paddletailblack-hsl: hsl(210 10.8% 14.5%);
 $paddletailblack-lab: lab(14.44 -0.72 -3.26);
 $paddletailblack-oklch: oklch(.262 .009 248);
+$hop-bine: #aa9d2e;
+$hop-bine-oklch: oklch(0.687 0.128 102);
+$till: #b7a99a;
+$till-oklch: oklch(0.743 0.027 69);
+$basalt-blush: #98606f;
+$basald-blush-oklch: oklch(0.555 0.075 2);
+$marionberry: #610733;
+$marionberry-oklch: oklch(0.325 0.125 359);
+$parchment: #f1edce;
+$parchment-oklch: oklch(0.941 0.041 101);
 $neutral-100: #f7f5f5;
 $neutral-100-hsl: hsl(0 11.11% 96.47%);
 $neutral-200: #e9e5e4;
@@ -96,8 +103,8 @@ $stratosphere-200: #c6dae7;
 $stratosphere-200-hsl: hsl(203.64, 40.74%, 84.12%);
 $stratosphere-300: #2490b5;
 $stratosphere-300-hsl: hsl(195.31, 66.82%, 42.55%);
-$stratosphere-400: #006a8e;
-$stratosphere-400-hsl: hsl(195.21, 100%, 27.84%);
+$stratosphere-400: #006082;
+$stratosphere-400-hsl: hsl(195.69, 100%, 25.49%);
 $stratosphere-500: #005875;
 $stratosphere-500-hsl: hsl(194.87, 100%, 22.94%);
 $stratosphere-600: #003b5c;
@@ -139,6 +146,11 @@ $osu-bg-colors: (
   'crater': $crater,
   'osuorange': $osuorange,
   'light-grey': $lightGrey,
+  'hop-bine': $hop-bine,
+  'till': $till,
+  'basalt-blush': $basalt-blush,
+  'marionberry': $marionberry,
+  'parchment': $parchment,
 );
 
 // Map for border colors
@@ -149,6 +161,11 @@ $osu-border-colors: (
   'moondust': $moondust,
   'dark': $paddletailblack,
   'white': $bucktoothwhite,
+  'hop-bine': $hop-bine,
+  'till': $till,
+  'basalt-blush': $basalt-blush,
+  'marionberry': $marionberry,
+  'parchment': $parchment,
 );
 
 // Map for all colors
@@ -156,6 +173,11 @@ $osu-colors-all: (
   'osuorange': $osuorange,
   'paddletailblack': $paddletailblack,
   'bucktoothwhite': $bucktoothwhite,
+  'hop-bine': $hop-bine,
+  'till': $till,
+  'basalt-blush': $basalt-blush,
+  'marionberry': $marionberry,
+  'parchment': $parchment,
   'neutral-100': $neutral-100,
   'neutral-200': $neutral-200,
   'neutral-300': $neutral-300,

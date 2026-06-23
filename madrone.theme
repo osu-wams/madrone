@@ -5,6 +5,8 @@
  * Functions to support theming in the Tailwind CSS theme.
  */
 
+declare(strict_types=1);
+
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Drupal\views\ViewExecutable;
@@ -72,7 +74,7 @@ function madrone_preprocess_html(&$variables) {
 function madrone_preprocess_node(&$variables) {
   // Ran into an issue when using views with display as content view modes
   // rather than using fields.
-  $date = $variables['node']->getCreatedTime();
+  $date = (int) $variables['node']->getCreatedTime();
   /** @var \Drupal\date_ap_style\ApStyleDateFormatter $date_ap */
   $date_ap = Drupal::service('date_ap_style.formatter');
   $variables['date'] = $date_ap->formatTimestamp($date, ['always_display_year' => TRUE]);
@@ -428,11 +430,8 @@ function madrone_preprocess_superfish_menu_items(&$variables) {
   foreach ($variables['menu_items'] as &$menu_item) {
     /** @var \Drupal\Core\Template\Attribute $menu_item_attributes */
     $menu_item_attributes = $menu_item['attributes'];
-    /** @var \Drupal\Core\Template\AttributeValueBase $menu_item_classes */
-    $menu_item_classes = $menu_item_attributes->getClass();
     // Add the nav-item to all the li's of superfish menu.
-    $menu_item_classes[] = 'nav-item';
-    $menu_item_attributes->setAttribute('class', $menu_item_classes);
+    $menu_item_attributes->addClass('nav-item');
     // Add the nav-link class to all links in superfish.
     $menu_item['link']['#options']['attributes']['class'][] = 'nav-link';
     $menu_item['link_menuparent']['#options']['attributes']['class'][] = 'nav-link';
