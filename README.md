@@ -56,5 +56,5 @@
 - Just build JS
   - ```gulp buildScripts```
 - When logged in, you typically need to run admin -> flush all caches when
-  changing template files. This menu shows up under the drupal icon of nice
+  changing template files. This menu shows up under the Drupal icon of nice
   menus
