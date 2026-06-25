@@ -14,17 +14,7 @@ osuicons:
       title: "Size"
       type: "integer"
       default: 4
-      enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-        - 10
+      enum: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     color:
       title: "Color"
       type: "string"
@@ -48,3 +38,52 @@ osuicons:
     <span {{ attributes.addClass(classes) }}></span>
   preview: >-
     <span class="osu-icon preview {{ icon_id|clean_class }} fa-2x {{ color|default(dark) }}"></span>
+
+font_awesome:
+  enabled: true
+  label: "Font Awesome"
+  description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
+  links:
+    - https://fontawesome.com/icons
+    - https://docs.fontawesome.com/web/add-icons/svg-sprites
+  version: 7.2.0
+  license:
+    name: Font Awesome Free License
+    url: https://github.com/FortAwesome/Font-Awesome/blob/7.x/LICENSE.txt
+    gpl-compatible: true
+  extractor: svg_sprite
+  config:
+    sources:
+      - icons/fontawesome-free/sprites/brands.svg
+      - icons/fontawesome-free/sprites/regular.svg
+      - icons/fontawesome-free/sprites/solid.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >-
+    <svg xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-{{ icon_id|clean_class }}"
+      height="{{ size|default(32) }}"
+      width="{{ size|default(32) }}"
+      fill="{{ color|default('currentColor') }}"
+      style="color: {{ color|default('currentColor') }}"
+      {% if alt is empty %}
+        aria-hidden="true"
+        focusable="false"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
+    >
+      <use href="{{ source }}#{{ icon_id }}"/>
+    </svg>
+
