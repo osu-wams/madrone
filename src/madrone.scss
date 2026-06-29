@@ -34,8 +34,12 @@ $utilities: map-merge-multiple(
       'background-color': (
         property: background-color,
         class: bg,
+        local-vars: (
+          "bg-opacity": 1
+        ),
         values:
         map-merge-multiple(
+            map-get(map-get($utilities, 'background-color'), 'values'),
             $osu-colors-all,
             (
               'transparent': transparent

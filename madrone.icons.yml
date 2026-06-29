@@ -26,7 +26,7 @@ osuicons:
         - 9
         - 10
     color:
-      title: "Brand Color"
+      title: "Color"
       type: "string"
       default: "dark"
       enum:
