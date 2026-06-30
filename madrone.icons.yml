@@ -15,6 +15,7 @@ osuicons:
       type: "string"
       default: "md"
       enum:
+        - "XS"
         - "SM"
         - "MD"
         - "LG"
@@ -37,6 +38,7 @@ osuicons:
   template: >-
     {% set size = size == 64 ? 'MD' : size %}
     {% set size_map = {
+    'XS': 1,
     'SM': 2,
     'MD': 3,
     'LG': 4,
@@ -78,6 +80,7 @@ font_awesome:
       type: "string"
       default: "md"
       enum:
+        - "XS"
         - "SM"
         - "MD"
         - "LG"
@@ -104,6 +107,7 @@ font_awesome:
   template: >-
     {% set size = size == 64 ? 'MD' : size %}
     {% set size_map = {
+      'XS': 16,
       'SM': 32,
       'MD': 48,
       'LG': 64,
