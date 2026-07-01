@@ -36,15 +36,18 @@
   <div{{ attributes.setAttribute('id', region_id).addClass(region_class).removeClass(classes) }}>
     {{ content }}
   </div>
-  <div class="madrone-copyright align-self-sm-center">
+  <div class="madrone-copyright align-self-sm-center fs-7">
     <p>
       <a class="osu-link-white"
          href="https://oregonstate.edu/copyright">{{ 'Copyright'|t }}</a> &#169; {{ 'now'|date('Y') }}
       Oregon State University <span class="d-none d-sm-inline">|</span><span class="d-sm-none"><br/></span>
       <a class="osu-link-white"
-         href="https://oregonstate.edu/official-web-disclaimer">{{ 'Privacy Disclaimer and Accessibility Information'|t }}</a>
+         href="https://oregonstate.edu/official-web-disclaimer">{{ 'Privacy Disclaimer'|t }}</a>
       <span class="d-none d-sm-inline">|</span><span class="d-sm-none"><br/></span>
-      <a href="https://eoa.oregonstate.edu/about-us/policies-guidance-and-memos"
+      <a class="osu-link-white"
+         href="https://accessibility.oregonstate.edu/accessibility-statement">{{ 'Accessibility Statement'|t }}</a>
+      <span class="d-none d-sm-inline">|</span><span class="d-sm-none"><br/></span>
+      <a class="text-nowrap" href="https://eoa.oregonstate.edu/about-us/policies-guidance-and-memos"
          title="Notice of Non-Discrimination and Title IX Statement">Non-discrimination Statement</a>
       <span class="d-none d-sm-inline">|</span><span class="d-sm-none"><br/></span>
       <a href="/sitemap.xml">{{ 'Sitemap'|t }}</a>
