@@ -7814,6 +7814,10 @@ textarea.form-control-lg {
   border-color: #002235 !important;
 }
 
+.border-star-canvas {
+  border-color: #003b5c !important;
+}
+
 .border-primary-subtle {
   border-color: var(--bs-primary-border-subtle) !important;
 }
@@ -9791,6 +9795,11 @@ textarea.form-control-lg {
   background-color: #002235 !important;
 }
 
+.bg-star-canvas {
+  --bs-bg-opacity: 1;
+  background-color: #003b5c !important;
+}
+
 .bg-opacity-10 {
   --bs-bg-opacity: 0.1;
 }
@@ -10177,6 +10186,10 @@ textarea.form-control-lg {
 
 .osu-bg-parchment {
   background-color: #f1edce !important;
+}
+
+.osu-bg-star-canvas {
+  background-color: #003b5c !important;
 }
 
 .osu-bg-menu {
@@ -15182,6 +15195,26 @@ textarea.form-control-lg {
 
 .osu-border-parchment-bottom {
   border-bottom-color: #f1edce !important;
+}
+
+.osu-border-star-canvas {
+  border-color: #003b5c !important;
+}
+
+.osu-border-star-canvas-left {
+  border-left-color: #003b5c !important;
+}
+
+.osu-border-star-canvas-top {
+  border-top-color: #003b5c !important;
+}
+
+.osu-border-star-canvas-right {
+  border-right-color: #003b5c !important;
+}
+
+.osu-border-star-canvas-bottom {
+  border-bottom-color: #003b5c !important;
 }
 
 .osu-opacity-90 {
