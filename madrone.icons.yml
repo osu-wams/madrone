@@ -48,10 +48,12 @@ osuicons:
     } %}
     {% set classes = [
       "osu-icon",
-      icon_id|clean_class,
+      icon_id,
       'fa-' ~ size_map[size|default('MD')] ~ 'x',
       color
       ]%}
+    <pre>
+    </pre>
     <span {{ attributes.addClass(classes) }}></span>
   preview: >-
     <span class="osu-icon preview {{ icon_id|clean_class }} fa-2x {{ color|default(dark) }}"></span>

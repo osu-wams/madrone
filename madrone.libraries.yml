@@ -26,7 +26,7 @@ fonts:
 osu_icons:
   css:
     component:
-      'https://cdn.icomoon.io/155267/OregonStateBrandIcons/style-cf.css?8rsof6': { type: external, minified: false }
+      'https://cdn.icomoon.io/155267/OregonStateBrandIcons/style.css?iy1fl8': { type: external, minified: false }
 
 ckeditor5-stylesheets:
   css:
