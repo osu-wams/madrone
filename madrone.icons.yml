@@ -12,19 +12,16 @@ osuicons:
   settings:
     size:
       title: "Size"
-      type: "integer"
-      default: 4
+      type: "string"
+      default: "md"
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-        - 10
+        - "XS"
+        - "SM"
+        - "MD"
+        - "LG"
+        - "XL"
+        - "2XL"
+        - "3XL"
     color:
       title: "Color"
       type: "string"
@@ -39,12 +36,95 @@ osuicons:
         - "rogue-wave"
         - "stratosphere"
   template: >-
+    {% set size = size == 64 ? 'MD' : size %}
+    {% set size_map = {
+    'XS': 1,
+    'SM': 2,
+    'MD': 3,
+    'LG': 4,
+    'XL': 5,
+    '2XL': 7,
+    '3XL': 9
+    } %}
     {% set classes = [
       "osu-icon",
       icon_id|clean_class,
-      'fa-' ~ size ~ 'x',
+      'fa-' ~ size_map[size|default('MD')] ~ 'x',
       color
       ]%}
     <span {{ attributes.addClass(classes) }}></span>
   preview: >-
     <span class="osu-icon preview {{ icon_id|clean_class }} fa-2x {{ color|default(dark) }}"></span>
+
+font_awesome:
+  enabled: true
+  label: "Font Awesome"
+  description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
+  links:
+    - https://fontawesome.com/icons
+    - https://docs.fontawesome.com/web/add-icons/svg-sprites
+  version: 7.2.0
+  license:
+    name: Font Awesome Free License
+    url: https://github.com/FortAwesome/Font-Awesome/blob/7.x/LICENSE.txt
+    gpl-compatible: true
+  extractor: svg_sprite
+  config:
+    sources:
+      - icons/fontawesome-free/sprites/brands.svg
+      - icons/fontawesome-free/sprites/regular.svg
+      - icons/fontawesome-free/sprites/solid.svg
+  settings:
+    size:
+      title: "Size"
+      type: "string"
+      default: "md"
+      enum:
+        - "XS"
+        - "SM"
+        - "MD"
+        - "LG"
+        - "XL"
+        - "2XL"
+        - "3XL"
+    color:
+      title: "Color"
+      type: "string"
+      default: "dark"
+      enum:
+        - "primary"
+        - "light"
+        - "dark"
+        - "white"
+        - "pine"
+        - "luminance"
+        - "rogue-wave"
+        - "stratosphere"
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >-
+    {% set size = size == 64 ? 'MD' : size %}
+    {% set size_map = {
+      'XS': 16,
+      'SM': 32,
+      'MD': 48,
+      'LG': 64,
+      'XL': 80,
+      '2XL': 112,
+      '3XL': 144,
+    } %}
+    <svg xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-{{ icon_id|clean_class }} {{ color }}"
+      height="{{ size_map[size|default('MD')] }}"
+      width="{{ size_map[size|default('MD')] }}"
+      {% if alt is empty %}
+        aria-hidden="true"
+        focusable="false"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
+    >
+      <use href="{{ source }}#{{ icon_id }}"/>
+    </svg>
