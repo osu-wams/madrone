@@ -47,14 +47,17 @@ function madrone_preprocess_html(&$variables) {
     'madroneThemeColorDark',
   ];
   $parent_site_name = theme_get_setting('parent_site_name');
+
   if ($parent_site_name) {
-    $variables['head_title']['title'] .= " | $parent_site_name";
+    $variables['head_title']['title'] .= " | {$parent_site_name}";
   }
   // Ensure that we add Oregon State University last.
   $madrone_use_osu_metatag = theme_get_setting('mardone_metatag_osu');
+
   if ($madrone_use_osu_metatag) {
     $variables['head_title']['uni_title'] = 'Oregon State University';
   }
+
   // Check if the footer doesn't have any blocks and creates an empty element
   // to force the footer to always render.
   if (empty($variables['page']['footer'])) {
@@ -78,9 +81,10 @@ function madrone_preprocess_node(&$variables) {
   /** @var \Drupal\date_ap_style\ApStyleDateFormatter $date_ap */
   $date_ap = Drupal::service('date_ap_style.formatter');
   $variables['date'] = $date_ap->formatTimestamp($date, ['always_display_year' => TRUE]);
+
   if ($variables['elements']['#view_mode'] === 'full'
     && !array_key_exists('view', $variables)
-    && (!is_null($variables['elements']['_layout_builder']) && count($variables['elements']['_layout_builder']) == 1)) {
+    && ($variables['elements']['_layout_builder'] !== NULL && count($variables['elements']['_layout_builder']) === 1)) {
     if (array_key_exists('class', $variables['attributes'])) {
       array_push($variables['attributes']['class'], 'container', 'mb-2');
     }
@@ -95,6 +99,7 @@ function madrone_preprocess_node(&$variables) {
  */
 function madrone_preprocess_block(&$variables) {
   $block_type = $variables['elements']['#plugin_id'];
+
   if (!empty($block_type) && ($block_type === 'group_content_menu:group' || $block_type === 'superfish:main')) {
     $variables['#cache']['contexts'][] = 'url.path';
     $variables['#cache']['contexts'][] = 'url.query_args';
@@ -103,30 +108,36 @@ function madrone_preprocess_block(&$variables) {
   }
   // Adding a base_path variable to block template.
   $variables['base_path'] = base_path();
+
   // Adding region specific templates.
   if (!empty($variables['elements']['#id'])) {
     /** @var \Drupal\block\BlockInterface $block */
     $block = Drupal::entityTypeManager()
       ->getStorage('block')
       ->load($variables['elements']['#id']);
+
     if ($block) {
       $region = $block->getRegion();
-      if ($variables['base_plugin_id'] == 'search_form_block') {
-        if ($region == 'header') {
+
+      if ($variables['base_plugin_id'] === 'search_form_block') {
+        if ($region === 'header') {
           $variables['content']['keys']['#madrone_is_header_search_submit'] = TRUE;
           $variables['content']['actions']['submit']['#madrone_is_header_search_submit'] = TRUE;
-          if (in_array('contextual-region', $variables['attributes']['class'])) {
+
+          if (in_array('contextual-region', $variables['attributes']['class'], TRUE)) {
             $variables['attributes']['class'] = array_diff($variables['attributes']['class'], ['contextual-region']);
           }
         }
-        elseif ($region == 'mobile_header') {
+        elseif ($region === 'mobile_header') {
           $variables['content']['keys']['#madrone_is_mobile_search_submit'] = TRUE;
           $variables['content']['actions']['submit']['#madrone_is_mobile_search_submit'] = TRUE;
         }
       }
-      if ($variables['base_plugin_id'] == 'system_branding_block') {
+
+      if ($variables['base_plugin_id'] === 'system_branding_block') {
         $themeCompanionLogo = theme_get_setting('madrone_companion_logo') ?? 'osu';
         $customLogo = theme_get_setting('logo', 'madrone');
+
         if ($customLogo['use_default'] === FALSE) {
           $variables['companion_logo_name'] = 'custom-upload';
           $variables['companion_logo_path'] = $customLogo['url'];
@@ -149,9 +160,10 @@ function madrone_preprocess_block(&$variables) {
         $parent_site_url = theme_get_setting('parent_site_url');
         $variables['parent_site_name'] = $parent_site_name;
         $variables['parent_site_url'] = $parent_site_url;
-        if ($region == 'header') {
-          if (array_key_exists('class', $variables['attributes']) &&
-            in_array('contextual-region', $variables['attributes']['class'])) {
+
+        if ($region === 'header') {
+          if (array_key_exists('class', $variables['attributes'])
+            && in_array('contextual-region', $variables['attributes']['class'], TRUE)) {
             $variables['attributes']['class'] = array_diff($variables['attributes']['class'], ['contextual-region']);
           }
         }
@@ -159,13 +171,16 @@ function madrone_preprocess_block(&$variables) {
       $variables['content']['#attributes']['region'] = $region;
     }
   }
+
   // Add bundle and view_mode variables for content blocks.
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['bundle'] = $variables['elements']['content']['#block_content']->bundle();
+
     if (isset($variables['elements']['#configuration']['view_mode'])) {
       $variables['view_mode'] = $variables['elements']['#configuration']['view_mode'];
     }
   }
+
   // Add a variable if we are on the front page or not.
   try {
     $variables['is_front'] = Drupal::service('path.matcher')->isFrontPage();
@@ -190,29 +205,35 @@ function madrone_preprocess_form_element(&$variables) {
  */
 function madrone_preprocess_input(&$variables) {
   $input_type = $variables['element']['#type'];
+
   switch ($input_type) {
     case 'color':
       $variables['attributes']['class'][] = 'form-control';
       $variables['attributes']['class'][] = 'form-control-color';
+
       break;
 
     case 'entity_autocomplete':
       $variables['attributes']['class'][] = 'form-control';
       $variables['attributes']['class'][] = 'my-3';
       $variables['attributes']['size'] = 30;
+
       break;
 
     case 'checkbox':
     case 'radio':
       $variables['attributes']['class'][] = 'form-check-input';
+
       break;
 
     case 'range':
       $variables['attributes']['class'][] = 'form-range';
+
       break;
 
     case 'search':
       $variables['attributes']['class'][] = 'form-control';
+
       break;
 
     // Intentionally leaving blank to not include classes.
@@ -222,6 +243,7 @@ function madrone_preprocess_input(&$variables) {
     default:
       $variables['attributes']['class'][] = 'form-control';
       $variables['attributes']['class'][] = 'my-3';
+
       break;
   }
   $variables['type'] = $input_type;
@@ -232,9 +254,11 @@ function madrone_preprocess_input(&$variables) {
  */
 function madrone_preprocess_field(&$variables) {
   $element = $variables['element'];
+
   if (isset($element['#field_name'])) {
     $field_name = $element['#field_name'];
     $bundle = $element['#bundle'];
+
     // Add classes to our two fields for Story content type to make the
     // links button.
     if ($bundle === 'story' && ($field_name === 'field_osu_organizations' || $field_name === 'field_tags')) {
@@ -250,11 +274,12 @@ function madrone_preprocess_field(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function madrone_preprocess_page(&$variables) {
-  $route_name = \Drupal::routeMatch()->getRouteName();
+  $route_name = Drupal::routeMatch()->getRouteName();
   $status_codes = [
     'system.403' => 403,
     'system.404' => 404,
   ];
+
   if (isset($status_codes[$route_name])) {
     $is_default_404 = theme_get_setting('madrone_use_default_404') ?? TRUE;
     $variables['madrone_use_default_404'] = $is_default_404;
@@ -268,20 +293,24 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['actions']['submit']) && (count($form['actions'])) <= 2) {
     $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
   }
+
   switch ($form_id) {
     case 'search_block_form':
       $form['keys']['#attributes']['placeholder'] = t('Search');
       $form['keys']['#attributes']['size'] = 25;
+
       break;
 
     case 'search_form':
       $form['basic']['keys']['#attributes']['placeholder'] = t('Search');
       $form['basic']['submit']['#attributes']['class'][] = 'button--primary';
       $form['advanced']['submit']['#attributes']['class'][] = 'button--primary';
+
       break;
 
     case 'views_exposed_form':
       $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
+
       break;
 
     // For New Blocks.
@@ -289,11 +318,13 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       // Set label to a value and uncheck the display checkbox.
       $form['settings']['label']['#default_value'] = 'In-line Block';
       $form['settings']['label_display']['#default_value'] = FALSE;
+
       break;
   }
   // Check if we are in a layout builder form.
   $route_object = Drupal::routeMatch()->getRouteObject();
-  if (!is_null($route_object)) {
+
+  if ($route_object !== NULL) {
     if ($route_object->getOption('_layout_builder')) {
       $form['#attributes']['class'][] = 'container';
     }
@@ -309,6 +340,7 @@ function madrone_theme_suggestions_block_alter(array &$suggestions, array $varia
     $block = Drupal::entityTypeManager()
       ->getStorage('block')
       ->load($variables['elements']['#id']);
+
     if ($block) {
       // Get the region the block is in.
       $region = $block->getRegion();
@@ -326,6 +358,7 @@ function madrone_theme_suggestions_input_alter(array &$suggestions, array $varia
   if ($variables['element']['#madrone_is_header_search_submit'] ?? FALSE) {
     $suggestions[] = $variables['theme_hook_original'] . '__header_search';
   }
+
   if ($variables['element']['#madrone_is_mobile_search_submit'] ?? FALSE) {
     $suggestions[] = $variables['theme_hook_original'] . '__mobile_search';
   }
@@ -337,6 +370,7 @@ function madrone_theme_suggestions_input_alter(array &$suggestions, array $varia
 function madrone_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $form_id = $variables['element']['#form_id'];
   $suggestions[] = 'form__' . $form_id;
+
   if (isset($variables['element']['#attributes']['region'])) {
     $region = $variables['element']['#attributes']['region'];
     $suggestions[] = 'form__' . $region . '__' . $form_id;
@@ -369,11 +403,13 @@ function madrone_theme_suggestions_menu_alter(array &$suggestions, array $variab
 function madrone_theme_suggestions_filter_caption_alter(array &$suggestions, array $variables) {
   $classes = explode(' ', $variables['classes']);
   $view_mode = '';
+
   foreach ($classes as $class) {
     if (str_contains($class, 'view-mode--')) {
       $view_mode = substr($class, strlen('view-mode--'));
     }
   }
+
   if (!empty($view_mode)) {
     $suggestions[] = $variables['theme_hook_original'] . '__' . $view_mode;
   }
@@ -384,6 +420,7 @@ function madrone_theme_suggestions_filter_caption_alter(array &$suggestions, arr
  */
 function madrone_preprocess_menu_local_task(&$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'nav-link';
+
   if (!empty($variables['element']['#active'])) {
     $variables['link']['#options']['attributes']['class'][] = 'active';
   }
@@ -419,8 +456,8 @@ function madrone_theme_suggestions_image_alter(array &$suggestions, array $varia
  */
 function madrone_preprocess_superfish(&$variables) {
   $superfish_menu_classes = explode(' ', $variables['menu_classes']);
-  $superfish_menu_classes[] = "nav";
-  $variables['menu_classes'] = implode(" ", $superfish_menu_classes);
+  $superfish_menu_classes[] = 'nav';
+  $variables['menu_classes'] = implode(' ', $superfish_menu_classes);
 }
 
 /**
@@ -452,8 +489,10 @@ function hide_main_navigation(): bool {
       /** @var \Drupal\osu_groups\OsuGroupsHandler $osu_groups */
       $osu_groups = Drupal::service('osu_groups.group_handler');
       $group_content = $osu_groups->getGroupContentFromNode($node);
+
       if ($group_content) {
         $group = $group_content->getGroup();
+
         if ($group->hasField('field_hide_global_navigation')) {
           return (bool) $group->get('field_hide_global_navigation')
             ->first()
@@ -512,6 +551,7 @@ function madrone_preprocess_views_view_fields__media_library(&$variables) {
   if (isset($variables['fields']['media_library_select_form']->wrapper_attributes)) {
     $variables['fields']['media_library_select_form']->wrapper_attributes->addClass('media-library-item__click-to-select-checkbox');
   }
+
   if (isset($variables['fields']['rendered_entity']->wrapper_attributes)) {
     $variables['fields']['rendered_entity']->wrapper_attributes->addClass('media-library-item__click-to-select-trigger');
   }
@@ -524,11 +564,12 @@ function madrone_theme_suggestions_views_view_table_alter(array &$suggestions, a
   if (isset($variables['view']) && $variables['view'] instanceof ViewExecutable) {
     $id = $variables['view']->current_display;
 
-    if (!in_array('views_view_table__' . $id, $suggestions)) {
+    if (!in_array('views_view_table__' . $id, $suggestions, TRUE)) {
       $suggestions[] = 'views_view_table__' . $id;
     }
     /** @var \Drupal\views\ViewExecutable $views */
     $views = $variables['view'];
+
     if (isset($views->field['media_library_select_form'])) {
       $suggestions[] = 'views_view_table__media_library';
     }
