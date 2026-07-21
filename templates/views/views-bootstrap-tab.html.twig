@@ -18,6 +18,7 @@
   <div{{ create_attribute({'class': option_classes, 'role': 'tablist'}) }}{{ aria_attr }}>
     {% set attributes = create_attribute().addClass('nav-link') %}
     {% for key, tab in tabs %}
+      {% set key = key|striptags|trim|clean_class %}
       {% if loop.first %}
         {% set attributes = attributes.addClass('active') %}
         {% set selected = 'true' %}
