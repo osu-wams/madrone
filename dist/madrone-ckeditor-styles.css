@@ -12745,6 +12745,16 @@ a > .ck-content code {
 .ck-content .block-system-branding-block a img {
   height: 80px;
 }
+@media (min-width: 992px) {
+  .ck-content .block-system-branding-block a img {
+    height: 70px;
+  }
+}
+@media (min-width: 1400px) {
+  .ck-content .block-system-branding-block a img {
+    height: 80px;
+  }
+}
 .ck-content .header-search-block-form > div {
   height: 100%;
 }

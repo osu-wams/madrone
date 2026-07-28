@@ -18,6 +18,14 @@
 
   img {
     height: 80px;
+
+    @media (min-width: 992px) {
+      height: 70px;
+    }
+
+    @media (min-width: 1400px) {
+      height: 80px;
+    }
   }
 }
 

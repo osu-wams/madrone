@@ -16,4 +16,5 @@
   'h-100',
   'border-0'
 ] %}
+{% set attributes = attributes.setAttribute('size', 20) %}
 <input{{ attributes.addClass(input_classes) }}/>{{ children }}

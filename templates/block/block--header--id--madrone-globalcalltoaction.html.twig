@@ -26,28 +26,20 @@
  */
 #}
 {% set classes = [
-  'block',
-  'block-' ~ configuration.provider|clean_class,
-  'block-' ~ plugin_id|clean_class,
-  'col-3',
-  'col-lg-auto',
-  'd-flex',
-  'justify-content-end',
-  'align-items-center',
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+	'col-lg-auto',
 ] %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    <div{{ content_attributes.addClass('block__content', 'h-100', 'border-start', 'border-neutral-200', 'd-none', 'd-xl-block') }}>
-      {{ content }}
-    </div>
-    <div class="border-start border-neutral-200 d-flex d-xl-none align-items-center h-100 p-4">
-      <a href="{{ path('search.view') }}"><span class="sr-only">Open Search Page</span><i
-          class="fa fa-2x fa-search osu-text-icon" aria-hidden="true"></i></a>
-    </div>
-  {% endblock %}
+	{{ title_prefix }}
+	{% if label %}
+		<h2{{ title_attributes }}>{{ label }}</h2>
+	{% endif %}
+	{{ title_suffix }}
+	{% block content %}
+		<div{{ content_attributes.addClass('block__content') }}>
+			{{ content }}
+		</div>
+	{% endblock %}
 </div>

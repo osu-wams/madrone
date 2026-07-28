@@ -15577,6 +15577,16 @@ p:last-child {
 .block-system-branding-block a img {
   height: 80px;
 }
+@media (min-width: 992px) {
+  .block-system-branding-block a img {
+    height: 70px;
+  }
+}
+@media (min-width: 1400px) {
+  .block-system-branding-block a img {
+    height: 80px;
+  }
+}
 
 .header-search-block-form > div {
   height: 100%;
