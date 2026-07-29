@@ -15376,10 +15376,6 @@ a:active:not(.button, #osu-logo-wide, #osu-logo-crest) {
   background-color: hsl(210, 10.8%, 14.5%);
   color: hsl(0, 0%, 100%);
 }
-hr {
-  margin-block: 3rem;
-}
-
 .no-gutters {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
