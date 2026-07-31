@@ -40,7 +40,8 @@
         "drupol/phpcsfixer-configs-drupal": "^2.2",
         "friendsofphp/php-cs-fixer": "^3.95",
         "friendsoftwig/twigcs": "^6.6",
-        "squizlabs/php_codesniffer": "^4.0"
+        "squizlabs/php_codesniffer": "^4.0",
+        "vincentlanglet/twig-cs-fixer": "^4.0"
     },
     "extra": {
         "hooks": {
