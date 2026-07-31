@@ -23,7 +23,7 @@
 #}
 {{ attach_library('views_bootstrap/components') }}
 <div id="{{ id }}" class="carousel {{ effect }}" {% if ride %} data-bs-ride="{{ ride }}"
-  data-bs-interval="{{ interval }}"{% endif %} data-bs-pause="{% if pause %}hover{% else %}false{% endif %}"
+     data-bs-interval="{{ interval }}"{% endif %} data-bs-pause="{% if pause %}hover{% else %}false{% endif %}"
      data-wrap="{{ wrap }}">
 
   {# Carousel indicators #}
@@ -32,8 +32,7 @@
       {% for key, row in rows %}
         {% if key % columns == 0 %}
           {% set indicator_classes = [loop.first ? 'active'] %}
-          <button class="{{ indicator_classes|join(' ') }}" data-bs-target="#{{ id }}"
-                  data-bs-slide-to="{{ key / columns }}" aria-label="{{ 'Slide'|t ~ ' ' ~ loop.index }}"></button>
+          <button class="{{ indicator_classes|join(' ') }}" data-bs-target="#{{ id }}" data-bs-slide-to="{{ key / columns }}" aria-label="{{ 'Slide'|t ~ ' ' ~ loop.index }}"></button>
         {% endif %}
       {% endfor %}
     </div>
@@ -43,27 +42,27 @@
   <div class="carousel-inner">
     {% for row in rows %}
       {#
-      Create the carousel-item and row container before the first column in each row.
-      #}
+       Create the carousel-item and row container before the first column in each row.
+       #}
       {% if (loop.index - 1) % columns == 0 %}
         {% set row_classes = ['carousel-item', loop.first ? 'active'] %}
         <div {{ row.attributes.addClass(row_classes) }}>
-        <div class="row">
+          <div class="row">
       {% endif %}
       {# Create columns. #}
       <div class="{{ breakpoints }} position-relative">
         {% if display == 'fields' %}
           {{ row.image }}
           {% if row.title or row.description %}
-            {% if use_caption %}
-              <div class="carousel-caption {{ caption_breakpoints }}">
-            {% endif %}
-            {% if row.title %}
-              <h3>{{ row.title }}</h3>
-            {% endif %}
-            {% if row.description %}
-              <p>{{ row.description }}</p>
-            {% endif %}
+        {% if use_caption %}
+            <div class="carousel-caption {{ caption_breakpoints }}">
+          {% endif %}
+              {% if row.title %}
+                <h3>{{ row.title }}</h3>
+              {% endif %}
+              {% if row.description %}
+                <div class="carousel-description">{{ row.description }}</div>
+              {% endif %}
             {% if use_caption %}
               </div>
             {% endif %}
@@ -73,11 +72,11 @@
         {% endif %}
       </div>
       {#
-      Close the row and carousel-item divs for the last column in the row or
-      the last item in the list of items.
-      #}
+       Close the row and carousel-item divs for the last column in the row or
+       the last item in the list of items.
+       #}
       {% if (loop.index is divisible by columns) or (loop.index == rows|length) %}
-        </div>
+          </div>
         </div>
       {% endif %}
     {% endfor %}

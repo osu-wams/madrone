@@ -1,9 +1,9 @@
 {% set classes = [
-  'views-view-bootstrap-accordion'
+  'views-view-bootstrap-accordion',
 ] %}
-
+{% set accordion_header_element = group_title ? 'h3' : 'h2' %}
 {% if group_title %}
-  <h3>{{ group_title }}</h3>
+  <h2>{{ group_title }}</h2>
 {% endif %}
 <div id="{{ id }}" {{ attributes.addClass(classes) }}>
   {% set i = 0 %}
@@ -29,16 +29,15 @@
     {% set collapse_class = (collapse_var) ? 'show' %}
     {% set collapse_class_boolean = (collapse_var) ? 'true' : 'false' %}
     {% set button_classes = (not collapse_var) ? 'collapsed' %}
+    {% set clean_key = ('key-' ~ key)|striptags|trim|clean_class %}
+
     <div class="accordion-item">
-      <h2 class="accordion-header" id="heading{{ key }}">
-        <button class="accordion-button {{ button_classes }}" type="button" data-bs-toggle="collapse"
-                data-bs-target="#{{ id }}-collapse-{{ key }}" aria-expanded="{{ collapse_class_boolean }}"
-                aria-controls="{{ id }}-collapse-{{ key }}">
+      <{{ accordion_header_element }} class="accordion-header" id="heading{{ clean_key }}">
+        <button class="accordion-button {{ button_classes }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ id }}-collapse-{{ clean_key }}" aria-expanded="{{ collapse_class_boolean }}" aria-controls="{{ id }}-collapse-{{ clean_key }}">
           {{ row.title }}
         </button>
-      </h2>
-      <div id="{{ id }}-collapse-{{ key }}" class="accordion-collapse collapse {{ collapse_class }}"
-           aria-labelledby="heading{{ key }}" data-bs-parent="#{{ id }}">
+      </{{ accordion_header_element }}>
+      <div id="{{ id }}-collapse-{{ clean_key }}" class="accordion-collapse collapse {{ collapse_class }}" aria-labelledby="heading{{ clean_key }}" data-bs-parent="#{{ id }}">
         <div class="accordion-body">
           {% if output == 'grouped' %}
             {% for content in row.content %}

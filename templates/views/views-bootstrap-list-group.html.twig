@@ -16,12 +16,12 @@
 {% set classes = [
   'views-view-list-group',
   'views-view-bootstrap-list-group',
-  'list-group'
+  'list-group',
 ] %}
 {% if group_title %}
-<div{{ create_attribute({'class': div_classes}) }}>{% endif %}
+<div{{ create_attribute({class: div_classes}) }}>{% endif %}
   {% if group_title %}
-  <div{{ create_attribute({'class': heading_classes}) }}><h4>{{ group_title }}</h4></div>{% endif %}
+  <div{{ create_attribute({class: heading_classes}) }}><h4>{{ group_title }}</h4></div>{% endif %}
   <ul id="{{ id }}" {{ attributes.addClass(classes) }}>
     {% for key, row in rows %}
       <li {{ row.attributes }}>
