@@ -5,6 +5,8 @@
  * Theme settings can be found here.
  */
 
+declare(strict_types=1);
+
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -76,6 +78,7 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#options' => [
       'osu' => t('OSU'),
       'cascades' => t('Cascades'),
+      'prax' => t('PRAx'),
     ],
     '#default_value' => theme_get_setting('madrone_companion_logo'),
   ];
