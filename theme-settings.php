@@ -2,14 +2,10 @@
 
 /**
  * @file
+ * Theme settings can be found here.
  */
 
 declare(strict_types=1);
-
-/**
- * @file
- * Theme settings can be found here.
- */
 
 use Drupal\Core\Form\FormStateInterface;
 
