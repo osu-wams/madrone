@@ -5,6 +5,8 @@
  * Theme settings can be found here.
  */
 
+declare(strict_types=1);
+
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -71,8 +73,8 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   $form['madrone_settings']['madrone_utilities']['madrone_companion_logo'] = [
     '#type' => 'select',
     '#title' => t('Companion Logos'),
-    '#disabled' => TRUE,
     '#description' => t('Companion Logos to be used only on approval by OSU Marketing'),
+    '#disabled' => TRUE,
     '#options' => [
       'osu' => t('OSU'),
       'cascades' => t('Cascades'),
@@ -83,9 +85,18 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   $form['madrone_settings']['madrone_utilities']['mardone_metatag_osu'] = [
     '#type' => 'checkbox',
     '#title' => t('Use OSU metatag'),
+    '#description' => t("Append <em>Oregon State University</em> to the end of every metatag title."),
     '#disabled' => TRUE,
     '#default_value' => theme_get_setting('mardone_metatag_osu'),
-    '#description' => t("Append <em>Oregon State University</em> to the end of every metatag title."),
+  ];
+
+  // Dark Header.
+  $form['madrone_settings']['madrone_utilities']['madrone_dark_header'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Use OSU Dark Header'),
+    '#description' => t("Dark Header option only to be used on approval by OSU."),
+    '#disabled' => TRUE,
+    '#default_value' => theme_get_setting('madrone_dark_header'),
   ];
 
   $administrative_roles = ["dx_administrator", "administrator"];
@@ -95,5 +106,6 @@ function madrone_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     $form['logo']['#access'] = TRUE;
     $form['madrone_settings']['madrone_utilities']['madrone_companion_logo']['#disabled'] = FALSE;
     $form['madrone_settings']['madrone_utilities']['mardone_metatag_osu']['#disabled'] = FALSE;
+    $form['madrone_settings']['madrone_utilities']['madrone_dark_header']['#disabled'] = FALSE;
   }
 }
