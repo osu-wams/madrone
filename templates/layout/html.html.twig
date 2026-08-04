@@ -23,8 +23,11 @@
  * @see template_preprocess_html()
  */
 #}
+{% set html_classes = [
+  madrone_dark_header ? 'madrone_header--dark' : ''
+]%}
 <!DOCTYPE html>
-<html{{ html_attributes }}>
+<html{{ html_attributes.addClass(html_classes) }}>
 <head>
   <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
