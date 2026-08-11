@@ -7083,7 +7083,7 @@ a > .ck-content code {
 .ck-content .d-inline-flex {
   display: inline-flex !important;
 }
-.ck-content .d-none {
+.ck-content .d-none, .ck-content .osu-d-none {
   display: none !important;
 }
 .ck-content .shadow {
@@ -12518,6 +12518,15 @@ a > .ck-content code {
   --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
   --osu-bg-overaly-to-color: transparent;
   --osu-bg-overlay-deg: 0deg;
+}
+.ck-content .osu-bg-before-dark-1 {
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
+}
+.ck-content .osu-bg-before-dark-2 {
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.85);
+}
+.ck-content .osu-bg-before-dark-3 {
+  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.95);
 }
 .ck-content .white-text-orange-bg {
   background-color: hsl(15.7, 92%, 43.9%);

@@ -382,3 +382,8 @@ $list-group-item-padding-x: 1.5rem;
 
 // Custom Colors
 $osu-bg-gradient: hsl(210 11% 15% / 0.75);
+$gradients: (
+  '1': hsl(210 11% 15% / 0.75),
+  '2': hsl(210 11% 15% / 0.85),
+  '3': hsl(210 11% 15% / 0.95),
+);
