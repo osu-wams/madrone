@@ -12743,14 +12743,9 @@ a > .ck-content code {
   text-decoration-thickness: 13% !important;
 }
 .ck-content .block-system-branding-block a img {
-  height: 80px;
+  height: 60px;
 }
 @media (min-width: 992px) {
-  .ck-content .block-system-branding-block a img {
-    height: 70px;
-  }
-}
-@media (min-width: 1400px) {
   .ck-content .block-system-branding-block a img {
     height: 80px;
   }

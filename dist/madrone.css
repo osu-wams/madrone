@@ -15575,14 +15575,9 @@ p:last-child {
   text-decoration-thickness: 13% !important;
 }
 .block-system-branding-block a img {
-  height: 80px;
+  height: 60px;
 }
 @media (min-width: 992px) {
-  .block-system-branding-block a img {
-    height: 70px;
-  }
-}
-@media (min-width: 1400px) {
   .block-system-branding-block a img {
     height: 80px;
   }
