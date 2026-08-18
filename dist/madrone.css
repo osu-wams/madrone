@@ -15601,6 +15601,61 @@ p:last-child {
     color: #1f1d1c;
   }
 }
+.madrone_header--dark .madrone-primary-menu > .block-superfish {
+  background-color: #1f1d1c;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish li.sf-depth-1 > a,
+.madrone_header--dark .madrone-primary-menu > .block-superfish li.sf-depth-1 > span {
+  color: #e9e5e4;
+  height: 100%;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish li.sf-depth-1 > a:active,
+.madrone_header--dark .madrone-primary-menu > .block-superfish li.sf-depth-1 > span:active {
+  background-color: #1f1d1c !important;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish li.sf-depth-1 > a :focus-within,
+.madrone_header--dark .madrone-primary-menu > .block-superfish li.sf-depth-1 > span :focus-within {
+  outline: #d73f09;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish li.sf-depth-1.sfHover > a {
+  color: #423e3c;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent:not(.sf-no-children) > a::after {
+  color: #e9e5e4;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.sfHover.menuparent:not(.sf-no-children) > a::after,
+.madrone_header--dark .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1 > a:hover::after {
+  color: inherit !important;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish {
+  /*.block-superfish ul.sf-menu li.sf-depth-1.menuparent:hover > a {*/
+  /*	color: magenta;*/
+  /*}*/
+  /*li.sfHover a{*/
+  /*	background-color: blue;*/
+  /*	color: purple;*/
+  /*}*/
+  /*li.sfHover {*/
+  /*	background-color: green;*/
+  /*	color: yellow;*/
+  /* color for the title of the menu on mobile. the title isn't always there, but something that should be styled*/
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a {
+  color: #e9e5e4;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:hover {
+  color: #423e3c;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a:active {
+  color: #1f1d1c !important;
+  background-color: #f7f5f5 !important;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish .sf-menu.sf-accordion a.sf-depth-1 {
+  color: #e9e6e4;
+}
+.madrone_header--dark .madrone-primary-menu > .block-superfish .sf-menu.sf-accordion a.sf-depth-1:hover {
+  color: pink;
+}
 
 .block-system-branding-block a {
   font-size: calc(1.275rem + 0.3vw);

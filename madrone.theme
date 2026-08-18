@@ -484,6 +484,7 @@ function hide_main_navigation(): bool {
  *   An associative array for the Logo Path and Link Path.
  */
 function get_companion_logo(string $companion_logo): array {
+  $dark_header = theme_get_setting('madrone_dark_header');
   return match ($companion_logo) {
     'cascades' => [
       'logo-name' => 'cascades',
@@ -497,7 +498,11 @@ function get_companion_logo(string $companion_logo): array {
       'logo-name' => 'default',
       'logo-path' => '/' . Drupal::theme()
         ->getActiveTheme()
-        ->getPath() . '/logo.svg',
+        ->getPath() . (
+          $dark_header
+          ? '/assets/osu-logo-dark-header.svg'
+          : '/logo.svg'
+        ),
       'link-path' => 'https://oregonstate.edu/',
       'alt-text' => 'Oregon State University homepage',
     ]
