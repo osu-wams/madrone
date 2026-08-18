@@ -381,9 +381,9 @@ $list-group-item-padding-y: 2rem;
 $list-group-item-padding-x: 1.5rem;
 
 // Custom Colors
-$osu-bg-gradient: hsl(210 11% 15% / 0.75);
+$osu-bg-gradient: oklch(0.266 0.009 248 / 0.75);
 $gradients: (
-  '1': hsl(210 11% 15% / 0.75),
-  '2': hsl(210 11% 15% / 0.85),
-  '3': hsl(210 11% 15% / 0.95),
+  '1': oklch(0 0 0 / 0.75),
+  '2': oklch(0 0 0 / 0.85),
+  '3': oklch(0 0 0 / 0.95),
 );
