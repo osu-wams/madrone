@@ -7275,7 +7275,7 @@ a > .ck-content code {
 .ck-content .d-inline-flex {
   display: inline-flex !important;
 }
-.ck-content .d-none {
+.ck-content .d-none, .ck-content .osu-d-none {
   display: none !important;
 }
 .ck-content .shadow {
@@ -14539,8 +14539,8 @@ a > .ck-content code {
 }
 .ck-content .osu-bg-overlay-dark,
 .ck-content .osu-bg-before-dark {
-  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
-  --osu-bg-overaly-to-color: hsla(210, 11%, 15%, 0.75);
+  --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
+  --osu-bg-overaly-to-color: oklch(26.6% 0.009 248deg / 0.75);
   --osu-bg-overlay-deg: 0deg;
   position: relative;
 }
@@ -14563,25 +14563,42 @@ a > .ck-content code {
   position: relative;
   z-index: 1;
 }
-.ck-content .osu-bg-before-dark-to-left {
-  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
-  --osu-bg-overaly-to-color: transparent;
-  --osu-bg-overlay-deg: 90deg;
+@media (min-width: 768px) {
+  .ck-content .osu-bg-before-dark-to-left {
+    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-deg: 90deg;
+  }
 }
-.ck-content .osu-bg-before-dark-to-right {
-  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
-  --osu-bg-overaly-to-color: transparent;
-  --osu-bg-overlay-deg: 270deg;
+@media (min-width: 768px) {
+  .ck-content .osu-bg-before-dark-to-right {
+    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-deg: 270deg;
+  }
 }
-.ck-content .osu-bg-before-dark-to-top {
-  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
-  --osu-bg-overaly-to-color: transparent;
-  --osu-bg-overlay-deg: 180deg;
+@media (min-width: 768px) {
+  .ck-content .osu-bg-before-dark-to-top {
+    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-deg: 180deg;
+  }
 }
-.ck-content .osu-bg-before-dark-to-bottom {
-  --osu-bg-overaly-from-color: hsla(210, 11%, 15%, 0.75);
-  --osu-bg-overaly-to-color: transparent;
-  --osu-bg-overlay-deg: 0deg;
+@media (min-width: 768px) {
+  .ck-content .osu-bg-before-dark-to-bottom {
+    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-deg: 0deg;
+  }
+}
+.ck-content .osu-bg-before-dark-1 {
+  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.75);
+}
+.ck-content .osu-bg-before-dark-2 {
+  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.85);
+}
+.ck-content .osu-bg-before-dark-3 {
+  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.95);
 }
 .ck-content .white-text-orange-bg {
   background-color: hsl(15.7, 92%, 43.9%);

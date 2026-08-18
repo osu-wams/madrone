@@ -36,11 +36,6 @@
   background-color: rgb(255 255 255 / 0.95);
 }
 
-// Display flex
-.osu-d-flex {
-  @extend .d-flex;
-}
-
 .osu-d-table-caption {
   display: table-caption;
 }
@@ -53,75 +48,6 @@
   caption-side: bottom;
 }
 
-// Wrapper classes for flex alignment
-.osu-align-items-start {
-  @extend .align-items-start;
-}
-
-.osu-align-items-center {
-  @extend .align-items-center;
-}
-
-.osu-align-items-end {
-  @extend .align-items-end;
-}
-
-.osu-align-items-baseline {
-  @extend .align-items-baseline;
-}
-
-.osu-align-items-stretch {
-  @extend .align-items-stretch;
-}
-
-.osu-align-self-start {
-  @extend .align-self-start;
-}
-
-.osu-align-self-center {
-  @extend .align-self-center;
-}
-
-.osu-align-self-end {
-  @extend .align-self-end;
-}
-
-.osu-justify-content-start {
-  @extend .justify-content-start;
-}
-
-.osu-justify-content-center {
-  @extend .justify-content-center;
-}
-
-.osu-justify-content-between {
-  @extend .justify-content-between;
-}
-
-.osu-justify-content-end {
-  @extend .justify-content-end;
-}
-
-// Enhancements for Navigation Blocks
-.osu-nav-column ul.nav-pills {
-  @extend .flex-column;
-}
-
-.osu-nav-fill ul.nav-pills {
-  @extend .nav-fill;
-}
-
-.osu-nav-justified ul.nav-pills {
-  @extend .nav-justified;
-}
-
-.osu-nav-centered ul.nav-pills {
-  @extend .justify-content-center;
-}
-
-.osu-nav-end ul.nav-pills {
-  @extend .justify-content-end;
-}
 
 // Shh, tis a secret
 .osu-hover-pop {
@@ -200,6 +126,7 @@
   border-radius: $border-radius-pill;
 }
 
+// Overlay's in a psudo element.
 .osu-bg-overlay-dark,
 .osu-bg-before-dark {
   --osu-bg-overaly-from-color: #{$osu-bg-gradient};
@@ -229,6 +156,13 @@
 @include osu-bg-before-dark-to("right", 270deg, $osu-bg-gradient);
 @include osu-bg-before-dark-to("top", 180deg, $osu-bg-gradient);
 @include osu-bg-before-dark-to("bottom", 0deg, $osu-bg-gradient);
+
+// Custop properties require interporated sass variables.
+@each $level, $color in $gradients {
+  .osu-bg-before-dark-#{$level} {
+    --osu-bg-overaly-from-color: #{$color};
+  }
+}
 
 .white-text-orange-bg {
   background-color: $osuorange-hsl;
