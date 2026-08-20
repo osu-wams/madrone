@@ -2113,15 +2113,15 @@ a > .ck-content code {
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
-  --bs-table-color: var(--bs-emphasis-color);
+  --bs-table-color: oklch(36.7% 0.006 49deg);
   --bs-table-bg: #fff;
   --bs-table-border-color: #e9e5e4;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: var(--bs-emphasis-color);
+  --bs-table-striped-color: oklch(36.7% 0.006 49deg);
   --bs-table-striped-bg: #f9f9f9;
-  --bs-table-active-color: var(--bs-emphasis-color);
+  --bs-table-active-color: oklch(36.7% 0.006 49deg);
   --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
-  --bs-table-hover-color: var(--bs-emphasis-color);
+  --bs-table-hover-color: oklch(36.7% 0.006 49deg);
   --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
   width: 100%;
   margin-bottom: 1rem;
@@ -4694,7 +4694,7 @@ a > .ck-content code {
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-  --bs-accordion-btn-focus-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  --bs-accordion-btn-focus-box-shadow: 0 2px 3px oklch(0% 0 0deg / 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #fff;
@@ -14487,20 +14487,20 @@ a > .ck-content code {
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.25) !important;
 }
 .ck-content .osu-text-decoration {
-  text-decoration-color: hsl(15.7, 92%, 43.9%) !important;
+  text-decoration-color: hsl(16, 92%, 44%) !important;
 }
 .ck-content .osu-text-decoration-bucktoothwhite {
   text-decoration-color: hsl(0, 0%, 100%) !important;
 }
 .ck-content .osu-link {
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 13%;
 }
 .ck-content .osu-link:hover, .ck-content .osu-link:focus {
   text-decoration: none;
 }
 .ck-content .osu-link:active {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 .ck-content .osu-link-white {
@@ -14512,14 +14512,14 @@ a > .ck-content code {
 }
 .ck-content .osu-link-white:active {
   background-color: hsl(0, 0%, 100%) !important;
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
 }
 .ck-content .osu-link-orange {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
   text-decoration: none;
 }
 .ck-content .osu-link-orange:hover, .ck-content .osu-link-orange:active, .ck-content .osu-link-orange:focus {
-  text-decoration-color: hsl(15.7, 92%, 43.9%) !important;
+  text-decoration-color: hsl(16, 92%, 44%) !important;
   text-decoration-line: underline !important;
   text-decoration-thickness: 13% !important;
 }
@@ -14601,11 +14601,11 @@ a > .ck-content code {
   --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.95);
 }
 .ck-content .white-text-orange-bg {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
   color: hsl(0, 0%, 100%);
 }
 .ck-content .osu-nav-link-hover--dark {
-  --bs-nav-link-hover-color: hsl(210, 10.8%, 14.5%);
+  --bs-nav-link-hover-color: hsl(210, 11%, 15%);
 }
 .ck-content .osu-nav-link-hover--light {
   --bs-nav-link-hover-color: hsl(0, 0%, 100%);
@@ -14657,7 +14657,7 @@ a > .ck-content code {
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0% 100%);
 }
 .ck-content a {
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 10%;
   text-underline-offset: 2px;
 }
@@ -14665,7 +14665,7 @@ a > .ck-content code {
   text-decoration: none;
 }
 .ck-content a:active:not(.button, #osu-logo-wide, #osu-logo-crest) {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 .ck-content .no-gutters {
@@ -14676,7 +14676,7 @@ a > .ck-content code {
   display: none !important;
 }
 .ck-content a {
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 10%;
   text-underline-offset: 2px;
 }
@@ -14684,7 +14684,7 @@ a > .ck-content code {
   text-decoration: none;
 }
 .ck-content a:active:not(.button, #osu-logo-wide, #osu-logo-crest) {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 .ck-content .no-gutters {
@@ -14695,7 +14695,7 @@ a > .ck-content code {
   display: none !important;
 }
 .ck-content h1, .ck-content .h1 {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
   font-family: "Stratum2Web", serif;
   font-size: calc(1.425rem + 2.1vw);
 }
@@ -14720,7 +14720,7 @@ a > .ck-content code {
   font-weight: 600;
 }
 .ck-content h3, .ck-content .h3 {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
   font-family: "Open Sans", sans-serif;
   font-size: calc(1.3rem + 0.6vw);
 }
@@ -14745,7 +14745,7 @@ a > .ck-content code {
   font-weight: 600;
 }
 .ck-content h5, .ck-content .h5 {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
   font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
@@ -14845,7 +14845,7 @@ a > .ck-content code {
 }
 .ck-content .osu-text-bucktoothwhite > * a:not(.layout-builder__link--add, .btn):active {
   background-color: hsl(0, 0%, 100%);
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .ck-content .block-system-branding-block a {
   font-size: calc(1.275rem + 0.3vw);
@@ -14859,7 +14859,7 @@ a > .ck-content code {
   text-decoration: none;
 }
 .ck-content .block-system-branding-block a.site-name__parent-site:hover, .ck-content .block-system-branding-block a.site-name__parent-site:active, .ck-content .block-system-branding-block a.site-name__parent-site:focus, .ck-content .block-system-branding-block a.site-name__site-link--with-group:hover, .ck-content .block-system-branding-block a.site-name__site-link--with-group:active, .ck-content .block-system-branding-block a.site-name__site-link--with-group:focus {
-  text-decoration-color: hsl(15.7, 92%, 43.9%) !important;
+  text-decoration-color: hsl(16, 92%, 44%) !important;
   text-decoration-line: underline !important;
   text-decoration-thickness: 13% !important;
 }
@@ -14885,7 +14885,7 @@ a > .ck-content code {
 }
 .ck-content footer .region-footer a:active {
   background-color: hsl(0, 0%, 100%);
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .ck-content .breadcrumb {
   margin-top: 10px;
@@ -15001,7 +15001,7 @@ a > .ck-content code {
 .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):hover > span, .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active > a,
 .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active > span, .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus > a,
 .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus > span {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
   color: hsl(0, 0%, 100%);
   transition: none !important;
 }
@@ -15171,7 +15171,7 @@ a > .ck-content code {
   color: #423e3c;
 }
 .ck-content .menu:not(.sf-menu, .menu--group-menu) .nav-item .nav-link:active {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 @media screen and (max-width: 768px) {
@@ -15198,7 +15198,7 @@ a > .ck-content code {
   .ck-content .block-group-content-menu .menu--level-1 .group-menu-hover a,
   .ck-content .block-group-content-menu .menu--level-1 .group-menu-hover span {
     background-color: hsl(0, 0%, 100%);
-    color: hsl(210, 10.8%, 14.5%);
+    color: hsl(210, 11%, 15%);
     cursor: pointer;
   }
 }
@@ -15252,7 +15252,7 @@ a > .ck-content code {
 @media (hover: hover) and (pointer: fine) {
   .ck-content .block-group-content-menu .menu--level-2 .group-menu-hover > a,
   .ck-content .block-group-content-menu .menu--level-2 .group-menu-hover > span {
-    background-color: hsl(15.7, 92%, 43.9%);
+    background-color: hsl(16, 92%, 44%);
     color: hsl(0, 0%, 100%);
   }
   .ck-content .block-group-content-menu .menu--level-2 .group-menu-hover > a::after,
@@ -15263,7 +15263,7 @@ a > .ck-content code {
 .ck-content .block-group-content-menu .group-mobile-menu a.nav-link:hover,
 .ck-content .block-group-content-menu .group-mobile-menu span.nav-link:hover {
   background-color: hsl(0, 0%, 100%);
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .ck-content .block-group-content-menu .group-mobile-menu li a.group-mobile-main-a {
   font-weight: 600;
@@ -15322,7 +15322,7 @@ a > .ck-content code {
 .ck-content .block-group-content-menu .group-mobile-menu .group-menu-clicked > a,
 .ck-content .block-group-content-menu .group-mobile-menu .group-menu-clicked > span {
   background-color: hsl(0, 0%, 100%) !important;
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
 }
 .ck-content .form-item .form-label.form-required::after {
   color: #c72127;
@@ -15738,16 +15738,16 @@ a > .ck-content code {
   width: 2em;
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button {
-  border: 1px solid hsl(15.7, 92%, 43.9%);
+  border: 1px solid hsl(16, 92%, 44%);
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:hover {
-  box-shadow: inset 0 0 0 1px hsl(15.7, 92%, 43.9%);
+  box-shadow: inset 0 0 0 1px hsl(16, 92%, 44%);
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:focus-within {
-  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px hsl(15.7, 92%, 43.9%);
+  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px hsl(16, 92%, 44%);
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child {
-  background: hsl(15.7, 92%, 43.9%);
+  background: hsl(16, 92%, 44%);
   margin-inline-end: 2.3rem;
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a {
@@ -15757,27 +15757,27 @@ a > .ck-content code {
   width: 100%;
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a:hover {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a:focus {
-  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px hsl(15.7, 92%, 43.9%);
+  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px hsl(16, 92%, 44%);
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action.secondary-action {
   background: hsl(0, 0%, 100%);
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action.secondary-action a {
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a {
   padding-inline: 1rem;
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 13%;
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:hover, .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:focus, .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:focus-within {
   text-decoration: none;
 }
 .ck-content .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:active {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 .ck-content .block-group-operations {
@@ -15814,7 +15814,7 @@ a > .ck-content code {
 .ck-content .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a,
 .ck-content .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action:first-child a {
   text-decoration: underline;
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 13%;
 }
 .ck-content .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a:hover, .ck-content .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a:focus,
@@ -15870,14 +15870,14 @@ a > .ck-content code {
   color: #212529 !important;
 }
 .osu-bg-page-alt-2 .ck-content .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-page-alt-2 .ck-content .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .osu-bg-osuorange .ck-content .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .osu-bg-osuorange .ck-content .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
   background-color: #fff;
-  color: hsl(15.7, 92%, 43.9%) !important;
+  color: hsl(16, 92%, 44%) !important;
 }
 .osu-bg-osuorange .ck-content .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-osuorange .ck-content .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
 }
 .ck-content .block-inline-blockosu-menu-bar-item > .block__content > div {
   transition: 400ms background-color ease, 400ms color ease;
@@ -15899,13 +15899,13 @@ a > .ck-content code {
 }
 .ck-content .nav-tabs .nav-link:not(.active):hover,
 .ck-content .nav-tabs .nav-link:not(.active):focus {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
 }
 .ck-content .field-group-tabs-wrapper {
   background-color: #fff;
 }
 .ck-content .field-group-tabs-wrapper .horizontal-tab-button a:focus-visible {
-  outline: 2px solid hsl(15.7, 92%, 43.9%);
+  outline: 2px solid hsl(16, 92%, 44%);
   outline-offset: -2px;
 }
 .ck-content .field-group-tabs-wrapper .details-wrapper {
@@ -16175,7 +16175,7 @@ a > .ck-content code {
   bottom: 2.45rem;
 }
 .ck-content .carousel .carousel-indicators {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
   list-style-type: none;
 }
 .ck-content .carousel ~ .more-link {
@@ -16183,7 +16183,7 @@ a > .ck-content code {
   text-align: center;
 }
 .ck-content .views-view-bootstrap-tab .nav-tabs {
-  border-color: hsl(15.7, 92%, 43.9%);
+  border-color: hsl(16, 92%, 44%);
   flex-wrap: nowrap;
   -ms-overflow-style: none;
   overflow-x: auto;
@@ -16219,12 +16219,12 @@ a > .ck-content code {
   width: max-content;
 }
 .ck-content .views-view-bootstrap-tab .nav-link:hover, .ck-content .views-view-bootstrap-tab .nav-link.active {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
   color: hsl(0, 0%, 100%);
 }
 .ck-content .views-view-bootstrap-tab .nav-link:focus-visible {
   box-shadow: none;
-  outline: 2px solid hsl(210, 10.8%, 14.5%);
+  outline: 2px solid hsl(210, 11%, 15%);
 }
 .ck-content body.cke_editable_themed {
   padding: 1rem;
@@ -16254,7 +16254,7 @@ a > .ck-content code {
   content: "" !important;
 }
 .ck-content .toc-js ul li.toc-active {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
 }
 .ck-content .toc-js ul li.toc-active a {
   color: hsl(0, 0%, 100%);
@@ -16291,7 +16291,7 @@ a > .ck-content code {
 }
 .ck-content #drupal-off-canvas:not(.drupal-off-canvas-reset) .messages.messages.messages--error p,
 .ck-content #drupal-off-canvas-wrapper .messages.messages.messages--error p {
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .ck-content #drupal-off-canvas:not(.drupal-off-canvas-reset) .inline-block-list li,
 .ck-content #drupal-off-canvas-wrapper .inline-block-list li {
@@ -16426,26 +16426,26 @@ a > .ck-content code {
   flex: 1 0 auto;
 }
 .ck-content .madrone-content .osu-bg-page-default nav ul.menu li a {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: #f7f5f5 !important;
 }
 .ck-content .madrone-content .osu-bg-page-default nav ul.menu li a:hover {
   color: hsl(0, 0%, 100%) !important;
-  background-color: hsl(15.7, 92%, 43.9%) !important;
+  background-color: hsl(16, 92%, 44%) !important;
 }
 .ck-content .madrone-content .osu-bg-page-alt-1 nav ul.menu li a {
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .ck-content .madrone-content .osu-bg-page-alt-1 nav ul.menu li a:hover {
   color: #f7f5f5;
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
 }
 .ck-content .madrone-content .osu-bg-page-alt-2 nav ul.menu li a {
-  background-color: hsl(210, 10.8%, 14.5%) !important;
+  background-color: hsl(210, 11%, 15%) !important;
   color: hsl(0, 0%, 100%) !important;
 }
 .ck-content .madrone-content .osu-bg-page-alt-2 nav ul.menu li a:hover {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: #f7f5f5 !important;
 }
 .ck-content .madrone-content nav ul.menu {
@@ -16459,27 +16459,27 @@ a > .ck-content code {
   display: none;
 }
 .ck-content .madrone-content nav.osu-bg-page-default ul.menu li a {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: #f7f5f5 !important;
 }
 .ck-content .madrone-content nav.osu-bg-page-default ul.menu li a:hover {
   color: hsl(0, 0%, 100%) !important;
-  background-color: hsl(15.7, 92%, 43.9%) !important;
+  background-color: hsl(16, 92%, 44%) !important;
 }
 .ck-content .madrone-content nav.osu-bg-page-alt-1 ul.menu li a {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: hsl(0, 0%, 100%) !important;
 }
 .ck-content .madrone-content nav.osu-bg-page-alt-1 ul.menu li a:hover {
   color: hsl(0, 0%, 100%) !important;
-  background-color: hsl(15.7, 92%, 43.9%) !important;
+  background-color: hsl(16, 92%, 44%) !important;
 }
 .ck-content .madrone-content nav.osu-bg-page-alt-2 ul.menu li a {
-  background-color: hsl(210, 10.8%, 14.5%) !important;
+  background-color: hsl(210, 11%, 15%) !important;
   color: hsl(0, 0%, 100%) !important;
 }
 .ck-content .madrone-content nav.osu-bg-page-alt-2 ul.menu li a:hover {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: hsl(0, 0%, 100%) !important;
 }
 .ck-content body div.tabledrag-changed-warning {
@@ -16495,7 +16495,7 @@ a > .ck-content code {
 }
 .ck-content .simple-popup-blocks-global .spb-popup-main-wrapper {
   background-color: hsl(0, 0%, 100%);
-  border: 0.025rem solid hsl(15.7, 92%, 43.9%);
+  border: 0.025rem solid hsl(16, 92%, 44%);
   border-radius: 0.25rem;
   padding: 1.3rem 2rem;
 }
@@ -16512,9 +16512,9 @@ a > .ck-content code {
 }
 .ck-content .simple-popup-blocks-global .spb-popup-main-wrapper .spb-controls > .spb_close,
 .ck-content .simple-popup-blocks-global .spb-popup-main-wrapper .spb-controls > .spb_minimize {
-  border-color: hsl(15.7, 92%, 43.9%);
+  border-color: hsl(16, 92%, 44%);
   border-radius: 0.25rem;
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
 }
 .ck-content .views-exposed-form .form--inline > div.form-actions {
   align-self: end;
