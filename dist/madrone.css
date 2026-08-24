@@ -2105,15 +2105,15 @@ progress {
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
-  --bs-table-color: var(--bs-emphasis-color);
+  --bs-table-color: oklch(36.7% 0.006 49deg);
   --bs-table-bg: #fff;
   --bs-table-border-color: #e9e5e4;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: var(--bs-emphasis-color);
+  --bs-table-striped-color: oklch(36.7% 0.006 49deg);
   --bs-table-striped-bg: #f9f9f9;
-  --bs-table-active-color: var(--bs-emphasis-color);
+  --bs-table-active-color: oklch(36.7% 0.006 49deg);
   --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
-  --bs-table-hover-color: var(--bs-emphasis-color);
+  --bs-table-hover-color: oklch(36.7% 0.006 49deg);
   --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
   width: 100%;
   margin-bottom: 1rem;
@@ -4835,7 +4835,7 @@ textarea.form-control-lg {
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-  --bs-accordion-btn-focus-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  --bs-accordion-btn-focus-box-shadow: 0 2px 3px oklch(0% 0 0deg / 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #fff;
@@ -16173,7 +16173,7 @@ textarea.form-control-lg {
 }
 
 .osu-text-decoration {
-  text-decoration-color: hsl(15.7, 92%, 43.9%) !important;
+  text-decoration-color: hsl(16, 92%, 44%) !important;
 }
 
 .osu-text-decoration-bucktoothwhite {
@@ -16181,14 +16181,14 @@ textarea.form-control-lg {
 }
 
 .osu-link {
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 13%;
 }
 .osu-link:hover, .osu-link:focus {
   text-decoration: none;
 }
 .osu-link:active {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -16201,15 +16201,15 @@ textarea.form-control-lg {
 }
 .osu-link-white:active {
   background-color: hsl(0, 0%, 100%) !important;
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
 }
 
 .osu-link-orange {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
   text-decoration: none;
 }
 .osu-link-orange:hover, .osu-link-orange:active, .osu-link-orange:focus {
-  text-decoration-color: hsl(15.7, 92%, 43.9%) !important;
+  text-decoration-color: hsl(16, 92%, 44%) !important;
   text-decoration-line: underline !important;
   text-decoration-thickness: 13% !important;
 }
@@ -16300,12 +16300,12 @@ textarea.form-control-lg {
 }
 
 .white-text-orange-bg {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
   color: hsl(0, 0%, 100%);
 }
 
 .osu-nav-link-hover--dark {
-  --bs-nav-link-hover-color: hsl(210, 10.8%, 14.5%);
+  --bs-nav-link-hover-color: hsl(210, 11%, 15%);
 }
 
 .osu-nav-link-hover--light {
@@ -16373,7 +16373,7 @@ textarea.form-control-lg {
 }
 
 a {
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 10%;
   text-underline-offset: 2px;
 }
@@ -16381,7 +16381,7 @@ a:hover, a:focus {
   text-decoration: none;
 }
 a:active:not(.button, #osu-logo-wide, #osu-logo-crest) {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 .no-gutters {
@@ -16394,7 +16394,7 @@ a:active:not(.button, #osu-logo-wide, #osu-logo-crest) {
 }
 
 h1, .h1 {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
   font-family: "Stratum2Web", serif;
   font-size: calc(1.425rem + 2.1vw);
 }
@@ -16421,7 +16421,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
   font-family: "Open Sans", sans-serif;
   font-size: calc(1.3rem + 0.6vw);
 }
@@ -16448,7 +16448,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
   font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
@@ -16559,7 +16559,7 @@ p:last-child {
 }
 .osu-text-bucktoothwhite > * a:not(.layout-builder__link--add, .btn, a.button):active {
   background-color: hsl(0, 0%, 100%);
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 
 .block-system-branding-block a {
@@ -16574,7 +16574,7 @@ p:last-child {
   text-decoration: none;
 }
 .block-system-branding-block a.site-name__parent-site:hover, .block-system-branding-block a.site-name__parent-site:active, .block-system-branding-block a.site-name__parent-site:focus, .block-system-branding-block a.site-name__site-link--with-group:hover, .block-system-branding-block a.site-name__site-link--with-group:active, .block-system-branding-block a.site-name__site-link--with-group:focus {
-  text-decoration-color: hsl(15.7, 92%, 43.9%) !important;
+  text-decoration-color: hsl(16, 92%, 44%) !important;
   text-decoration-line: underline !important;
   text-decoration-thickness: 13% !important;
 }
@@ -16602,7 +16602,7 @@ footer .region-footer a:hover, footer .region-footer a:focus {
 }
 footer .region-footer a:active {
   background-color: hsl(0, 0%, 100%);
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 
 .breadcrumb {
@@ -16722,7 +16722,7 @@ footer .region-footer a:active {
 .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):hover > span, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active > a,
 .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):active > span, .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus > a,
 .madrone-primary-menu > .block-superfish ul.sf-menu li ul li:not(.sf-depth-1):focus > span {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
   color: hsl(0, 0%, 100%);
   transition: none !important;
 }
@@ -16901,7 +16901,7 @@ footer .region-footer a:active {
   color: #423e3c;
 }
 .menu:not(.sf-menu, .menu--group-menu) .nav-item .nav-link:active {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -16929,7 +16929,7 @@ footer .region-footer a:active {
   .block-group-content-menu .menu--level-1 .group-menu-hover a,
   .block-group-content-menu .menu--level-1 .group-menu-hover span {
     background-color: hsl(0, 0%, 100%);
-    color: hsl(210, 10.8%, 14.5%);
+    color: hsl(210, 11%, 15%);
     cursor: pointer;
   }
 }
@@ -16983,7 +16983,7 @@ footer .region-footer a:active {
 @media (hover: hover) and (pointer: fine) {
   .block-group-content-menu .menu--level-2 .group-menu-hover > a,
   .block-group-content-menu .menu--level-2 .group-menu-hover > span {
-    background-color: hsl(15.7, 92%, 43.9%);
+    background-color: hsl(16, 92%, 44%);
     color: hsl(0, 0%, 100%);
   }
   .block-group-content-menu .menu--level-2 .group-menu-hover > a::after,
@@ -16994,7 +16994,7 @@ footer .region-footer a:active {
 .block-group-content-menu .group-mobile-menu a.nav-link:hover,
 .block-group-content-menu .group-mobile-menu span.nav-link:hover {
   background-color: hsl(0, 0%, 100%);
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .block-group-content-menu .group-mobile-menu li a.group-mobile-main-a {
   font-weight: 600;
@@ -17053,7 +17053,7 @@ footer .region-footer a:active {
 .block-group-content-menu .group-mobile-menu .group-menu-clicked > a,
 .block-group-content-menu .group-mobile-menu .group-menu-clicked > span {
   background-color: hsl(0, 0%, 100%) !important;
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
 }
 
 .form-item .form-label.form-required::after {
@@ -17501,16 +17501,16 @@ a.button:focus,
   width: 2em;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button {
-  border: 1px solid hsl(15.7, 92%, 43.9%);
+  border: 1px solid hsl(16, 92%, 44%);
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:hover {
-  box-shadow: inset 0 0 0 1px hsl(15.7, 92%, 43.9%);
+  box-shadow: inset 0 0 0 1px hsl(16, 92%, 44%);
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-toggle > button:focus-within {
-  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px hsl(15.7, 92%, 43.9%);
+  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px hsl(16, 92%, 44%);
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child {
-  background: hsl(15.7, 92%, 43.9%);
+  background: hsl(16, 92%, 44%);
   margin-inline-end: 2.3rem;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a {
@@ -17520,27 +17520,27 @@ a.button:focus,
   width: 100%;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a:hover {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action:first-child a:focus {
-  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px hsl(15.7, 92%, 43.9%);
+  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px hsl(16, 92%, 44%);
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action.secondary-action {
   background: hsl(0, 0%, 100%);
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action.secondary-action a {
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a {
   padding-inline: 1rem;
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 13%;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:hover, .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:focus, .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:focus-within {
   text-decoration: none;
 }
 .dropbutton-wrapper .dropbutton-widget .dropbutton .dropbutton-action a:active {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -17578,7 +17578,7 @@ a.button:focus,
 .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a,
 .block-group-operations .dropbutton-multiple .dropbutton-widget .dropbutton .dropbutton-action:first-child a {
   text-decoration: underline;
-  text-decoration-color: hsl(15.7, 92%, 43.9%);
+  text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 13%;
 }
 .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a:hover, .block-group-operations .dropbutton-single .dropbutton-widget .dropbutton .dropbutton-action:first-child a:focus,
@@ -17637,14 +17637,14 @@ a.button:focus,
   color: #212529 !important;
 }
 .osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-page-alt-2 .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within, .osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:hover {
   background-color: #fff;
-  color: hsl(15.7, 92%, 43.9%) !important;
+  color: hsl(16, 92%, 44%) !important;
 }
 .osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:focus-within a, .osu-bg-osuorange .block-inline-blockosu-menu-bar-item > .block__content > div:hover a {
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
 }
 .block-inline-blockosu-menu-bar-item > .block__content > div {
   transition: 400ms background-color ease, 400ms color ease;
@@ -17667,14 +17667,14 @@ a.button:focus,
 
 .nav-tabs .nav-link:not(.active):hover,
 .nav-tabs .nav-link:not(.active):focus {
-  background-color: hsl(210, 10.8%, 14.5%);
+  background-color: hsl(210, 11%, 15%);
 }
 
 .field-group-tabs-wrapper {
   background-color: #fff;
 }
 .field-group-tabs-wrapper .horizontal-tab-button a:focus-visible {
-  outline: 2px solid hsl(15.7, 92%, 43.9%);
+  outline: 2px solid hsl(16, 92%, 44%);
   outline-offset: -2px;
 }
 .field-group-tabs-wrapper .details-wrapper {
@@ -17970,7 +17970,7 @@ article.media--view-mode-video-720 iframe:where(.media-oembed-content) {
   bottom: 2.45rem;
 }
 .carousel .carousel-indicators {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
   list-style-type: none;
 }
 .carousel ~ .more-link {
@@ -17979,7 +17979,7 @@ article.media--view-mode-video-720 iframe:where(.media-oembed-content) {
 }
 
 .views-view-bootstrap-tab .nav-tabs {
-  border-color: hsl(15.7, 92%, 43.9%);
+  border-color: hsl(16, 92%, 44%);
   flex-wrap: nowrap;
   -ms-overflow-style: none;
   overflow-x: auto;
@@ -18015,12 +18015,12 @@ article.media--view-mode-video-720 iframe:where(.media-oembed-content) {
   width: max-content;
 }
 .views-view-bootstrap-tab .nav-link:hover, .views-view-bootstrap-tab .nav-link.active {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
   color: hsl(0, 0%, 100%);
 }
 .views-view-bootstrap-tab .nav-link:focus-visible {
   box-shadow: none;
-  outline: 2px solid hsl(210, 10.8%, 14.5%);
+  outline: 2px solid hsl(210, 11%, 15%);
 }
 
 body.cke_editable_themed {
@@ -18054,7 +18054,7 @@ body.cke_editable_themed {
   content: "" !important;
 }
 .toc-js ul li.toc-active {
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
 }
 .toc-js ul li.toc-active a {
   color: hsl(0, 0%, 100%);
@@ -18100,7 +18100,7 @@ body.cke_editable_themed {
 
 #drupal-off-canvas:not(.drupal-off-canvas-reset) .messages.messages.messages--error p,
 #drupal-off-canvas-wrapper .messages.messages.messages--error p {
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 #drupal-off-canvas:not(.drupal-off-canvas-reset) .inline-block-list li,
 #drupal-off-canvas-wrapper .inline-block-list li {
@@ -18245,26 +18245,26 @@ button.video-content__controls {
 }
 
 .madrone-content .osu-bg-page-default nav ul.menu li a {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: #f7f5f5 !important;
 }
 .madrone-content .osu-bg-page-default nav ul.menu li a:hover {
   color: hsl(0, 0%, 100%) !important;
-  background-color: hsl(15.7, 92%, 43.9%) !important;
+  background-color: hsl(16, 92%, 44%) !important;
 }
 .madrone-content .osu-bg-page-alt-1 nav ul.menu li a {
-  color: hsl(210, 10.8%, 14.5%);
+  color: hsl(210, 11%, 15%);
 }
 .madrone-content .osu-bg-page-alt-1 nav ul.menu li a:hover {
   color: #f7f5f5;
-  background-color: hsl(15.7, 92%, 43.9%);
+  background-color: hsl(16, 92%, 44%);
 }
 .madrone-content .osu-bg-page-alt-2 nav ul.menu li a {
-  background-color: hsl(210, 10.8%, 14.5%) !important;
+  background-color: hsl(210, 11%, 15%) !important;
   color: hsl(0, 0%, 100%) !important;
 }
 .madrone-content .osu-bg-page-alt-2 nav ul.menu li a:hover {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: #f7f5f5 !important;
 }
 .madrone-content nav ul.menu {
@@ -18278,27 +18278,27 @@ button.video-content__controls {
   display: none;
 }
 .madrone-content nav.osu-bg-page-default ul.menu li a {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: #f7f5f5 !important;
 }
 .madrone-content nav.osu-bg-page-default ul.menu li a:hover {
   color: hsl(0, 0%, 100%) !important;
-  background-color: hsl(15.7, 92%, 43.9%) !important;
+  background-color: hsl(16, 92%, 44%) !important;
 }
 .madrone-content nav.osu-bg-page-alt-1 ul.menu li a {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: hsl(0, 0%, 100%) !important;
 }
 .madrone-content nav.osu-bg-page-alt-1 ul.menu li a:hover {
   color: hsl(0, 0%, 100%) !important;
-  background-color: hsl(15.7, 92%, 43.9%) !important;
+  background-color: hsl(16, 92%, 44%) !important;
 }
 .madrone-content nav.osu-bg-page-alt-2 ul.menu li a {
-  background-color: hsl(210, 10.8%, 14.5%) !important;
+  background-color: hsl(210, 11%, 15%) !important;
   color: hsl(0, 0%, 100%) !important;
 }
 .madrone-content nav.osu-bg-page-alt-2 ul.menu li a:hover {
-  color: hsl(210, 10.8%, 14.5%) !important;
+  color: hsl(210, 11%, 15%) !important;
   background-color: hsl(0, 0%, 100%) !important;
 }
 
@@ -18317,7 +18317,7 @@ a.tabledrag-handle .handle {
 }
 .simple-popup-blocks-global .spb-popup-main-wrapper {
   background-color: hsl(0, 0%, 100%);
-  border: 0.025rem solid hsl(15.7, 92%, 43.9%);
+  border: 0.025rem solid hsl(16, 92%, 44%);
   border-radius: 0.25rem;
   padding: 1.3rem 2rem;
 }
@@ -18334,9 +18334,9 @@ a.tabledrag-handle .handle {
 }
 .simple-popup-blocks-global .spb-popup-main-wrapper .spb-controls > .spb_close,
 .simple-popup-blocks-global .spb-popup-main-wrapper .spb-controls > .spb_minimize {
-  border-color: hsl(15.7, 92%, 43.9%);
+  border-color: hsl(16, 92%, 44%);
   border-radius: 0.25rem;
-  color: hsl(15.7, 92%, 43.9%);
+  color: hsl(16, 92%, 44%);
 }
 
 .views-exposed-form .form--inline > div.form-actions {
