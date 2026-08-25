@@ -2,7 +2,7 @@
 $osuorange: #d73f09;
 $osuorange-hsl: hsl(16 92% 44%);
 $osuorange-lab: lab(49.53 57.43 58.79);
-$osuorange-oklch: oklch(0.587 0.196 36);
+$osuorange-oklch: oklch(0.5868 0.1962 36.16);
 $bucktoothwhite: #fff;
 $bucktoothwhite-hsl: hsl(0 0% 100%);
 $bucktoothwhite-lab: lab(100 0 0);
@@ -10,7 +10,7 @@ $bucktoothwhite-oklch: oklch(1 0 0);
 $paddletailblack: #212529;
 $paddletailblack-hsl: hsl(210 11% 15%);
 $paddletailblack-lab: lab(14.44 -0.72 -3.26);
-$paddletailblack-oklch: oklch(0.262 0.009 248);
+$paddletailblack-oklch: oklch(0.2621 0.0095 248.19);
 $hop-bine: #aa9d2e;
 $hop-bine-oklch: oklch(0.687 0.128 102);
 $till: #b7a99a;
@@ -53,77 +53,112 @@ $neutral-900-hsl: hsl(20 5% 12%);
 $neutral-900-oklch: oklch(0.233 0.004 49);
 $lava-100: #ffdedf;
 $lava-100-hsl: hsl(358.18 100% 93.53%);
+$lava-100-oklch: oklch(0.9282 0.0366 15.75);
 $lava-200: #ee878a;
 $lava-200-hsl: hsl(358.25 75.18% 73.14%);
+$lava-200-oklch: oklch(0.735 0.126 19);
 $lava-300: #e54349;
 $lava-300-hsl: hsl(357.78 75.7% 58.04%);
+$lava-300-oklch: oklch(0.62 0.198 23);
 $lava-400: #c72127;
 $lava-400-hsl: hsl(357.83 71.55% 45.49%);
+$lava-400-oklch: oklch(0.536 0.199 26);
 $lava-500: #a7262b;
 $lava-500-hsl: hsl(357.67 62.93% 40.2%);
+$lava-500-oklch: oklch(0.481 0.165 24);
 $lava-600: #8c0e13;
 $lava-600-hsl: hsl(357.62 81.82% 30.2%);
+$lava-600-oklch: oklch(0.409 0.158 27);
 $lava-700: #590003;
 $lava-700-hsl: hsl(357.98 100% 17.45%);
+$lava-700-oklch: oklch(0.292 0.119 28);
 $luminance-100: #fff2d5;
 $luminance-100-hsl: hsl(41.43, 100%, 91.76%);
+$luminance-100-oklch: oklch(0.9639 0.0404 86.73);
 $luminance-200: #fddb8b;
 $luminance-200-hsl: hsl(42.11, 96.61%, 76.86%);
+$luminance-200-oklch: oklch(0.9028 0.1059 87.27);
 $luminance-300: #ffce57;
 $luminance-300-hsl: hsl(42.5, 100%, 67.06%);
+$luminance-300-oklch: oklch(0.873 0.1448 86.36);
 $luminance-400: #ffb500;
 $luminance-400-hsl: hsl(42.59, 100%, 50%);
+$luminance-400-oklch: oklch(0.8216 0.1707 78.98);
 $luminance-500: #e59900;
 $luminance-500-hsl: hsl(40.09, 100%, 44.9%);
+$luminance-500-oklch: oklch(0.7404 0.1571 73.72);
 $luminance-600: #d3832b;
 $luminance-600-hsl: hsl(31.43, 66.14%, 49.8%);
+$luminance-600-oklch: oklch(0.6802 0.1383 63.29);
 $luminance-700: #915513;
 $luminance-700-hsl: hsl(31.43, 76.83%, 32.16%);
+$luminance-700-oklch: oklch(0.5082 0.1089 61.86);
 $pine-100: #edf3e3;
 $pine-100-hsl: hsl(82.5, 40%, 92.16%);
+$pine-100-oklch: oklch(0.9553 0.0221 123.63);
 $pine-200: #c4d6a4;
 $pine-200-hsl: hsl(81.6, 37.88%, 74.12%);
+$pine-200-oklch: oklch(0.8498 0.0697 123.95);
 $pine-300: #73a663;
 $pine-300-hsl: hsl(105.67, 27.35%, 51.96%);
+$pine-300-oklch: oklch(0.6723 0.1094 138.47);
 $pine-400: #4a773c;
 $pine-400-hsl: hsl(105.76, 32.96%, 35.1%);
+$pine-400-oklch: oklch(0.5215 0.1009 138.64);
 $pine-500: #3c692e;
 $pine-500-hsl: hsl(105.76, 39.07%, 29.61%);
+$pine-500-oklch: oklch(0.4734 0.1017 138.76);
 $pine-600: #254a1a;
 $pine-600-hsl: hsl(106.25, 48%, 19.61%);
+$pine-600-oklch: oklch(0.3691 0.0867 139.08);
 $pine-700: #142e0c;
 $pine-700-hsl: hsl(105.88, 58.62%, 11.37%);
+$pine-700-oklch: oklch(0.2711 0.0657 139.01);
 $rogue_wave-100: #ecf5f6;
 $rogue_wave-100-hsl: hsl(186, 35.71%, 94.51%);
+$rogue_wave-100-oklch: oklch(0.9637 0.0097 204.91);
 $rogue_wave-200: #b8dde1;
 $rogue_wave-200-hsl: hsl(185.85, 40.59%, 80.2%);
+$rogue_wave-200-oklch: oklch(0.8722 0.0392 204.51);
 $rogue_wave-300: #20a6bd;
 $rogue_wave-300-hsl: hsl(188.79, 71.04%, 43.33%);
+$rogue_wave-300-oklch: oklch(0.6684 0.1108 212.88);
 $rogue_wave-400: #00859b;
 $rogue_wave-400-hsl: hsl(188.52, 100%, 30.39%);
+$rogue_wave-400-oklch: oklch(0.567427 0.100087 214.6996);
 $rogue_wave-500: #007082;
 $rogue_wave-500-hsl: hsl(188.31, 100%, 25.49%);
+$rogue_wave-500-oklch: oklch(0.5012 0.088 213.86);
 $rogue_wave-600: #0d5257;
 $rogue_wave-600-hsl: hsl(184.05, 74%, 19.61%);
+$rogue_wave-600-oklch: oklch(0.4014 0.0638 202.51);
 $rogue_wave-700: #043033;
 $rogue_wave-700-hsl: hsl(183.83, 85.45%, 10.78%);
+$rogue_wave-700-oklch: oklch(0.2827 0.0453 201.9);
 $stratosphere-100: #ecf1f4;
 $stratosphere-100-hsl: hsl(202.5, 26.67%, 94.12%);
+$stratosphere-100-oklch: oklch(0.9552 0.0067 233.64);
 $stratosphere-200: #c6dae7;
 $stratosphere-200-hsl: hsl(203.64, 40.74%, 84.12%);
+$stratosphere-200-oklch: oklch(0.8774 0.028 236.21);
 $stratosphere-300: #2490b5;
 $stratosphere-300-hsl: hsl(195.31, 66.82%, 42.55%);
+$stratosphere-300-oklch: oklch(0.6114 0.1075 226.49);
 $stratosphere-400: #006082;
 $stratosphere-400-hsl: hsl(195.69, 100%, 25.49%);
+$stratosphere-400-oklch: oklch(0.4589 0.0929 231.37);
 $stratosphere-500: #005875;
 $stratosphere-500-hsl: hsl(194.87, 100%, 22.94%);
+$stratosphere-500-hsl: oklch(0.4306 0.085 229.18);
 $stratosphere-600: #003b5c;
 $stratosphere-600-hsl: hsl(201.52, 100%, 18.04%);
+$stratosphere-600-oklch: oklch(0.3371 0.0792 241.48);
 $stratosphere-700: #002235;
 $stratosphere-700-hsl: hsl(201.51, 100%, 10.39%);
+$stratosphere-700-oklch: oklch(0.2392 0.053 237.97);
 $table-alt-row: #f9f9f9;
 
-$moondust: $stratosphere-200;
+$moondust: $stratosphere-200-oklch;
 $crater: #8e9089;
 $lightGrey: #e0e0e0;
 
@@ -145,7 +180,8 @@ $osu-colors-text: (
   'osuorange': $osuorange,
   'bucktoothwhite': $bucktoothwhite,
   'icon': $neutral-550,
-  'star-canvas': $stratosphere-600,
+  'rogue-wave': $rogue_wave-400,
+  'star-canvas': $stratosphere-600-oklch,
 );
 
 // Map for Background Colors
@@ -162,7 +198,7 @@ $osu-bg-colors: (
   'basalt-blush': $basalt-blush,
   'marionberry': $marionberry,
   'parchment': $parchment,
-  'star-canvas': $stratosphere-600,
+  'star-canvas': $stratosphere-600-oklch,
 );
 
 // Map for border colors
