@@ -1,17 +1,6 @@
 $utilities: map-merge-multiple(
     $utilities,
     (
-      'color':
-      map-merge(
-          map-get($utilities, 'color'),
-          (
-            values:
-            map-merge(
-                map-get(map-get($utilities, 'color'), 'values'),
-                $osu-colors-text
-            )
-          )
-      ),
       'osu-text-colors': (
         property: color,
         class: osu-text,

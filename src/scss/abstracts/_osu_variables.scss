@@ -177,11 +177,12 @@ $osu-alerts: (
 // Map array for text color classes
 $osu-colors-text: (
   'body': $neutral-700,
-  'osuorange': $osuorange,
+  'osuorange': $osuorange-oklch,
   'bucktoothwhite': $bucktoothwhite,
   'icon': $neutral-550,
   'rogue-wave': $rogue_wave-400,
   'star-canvas': $stratosphere-600-oklch,
+  'marionberry': $marionberry-oklch,
 );
 
 // Map for Background Colors
@@ -296,23 +297,33 @@ $border-sides: (
 );
 
 // Override Boostrap
+$theme-colors: (
+  "primary": $osuorange,
+  "secondary": $bucktoothwhite,
+  "success": $pine-400,
+  "info": $stratosphere-400,
+  "warning": $luminance-400,
+  "danger": $lava-400,
+  "light": $neutral-100,
+  "dark": $paddletailblack,
+  'body': $neutral-700,
+  'osuorange': $osuorange,
+  'bucktoothwhite': $bucktoothwhite,
+  'icon': $neutral-550,
+  'rogue-wave': $rogue_wave-400,
+  'star-canvas': $stratosphere-600,
+  'marionberry': $marionberry,
+);
+
 $body-color: $neutral-700;
 $body-color-hsl: $neutral-700-hsl;
 $body-color-oklch: $neutral-700-oklch;
 $body-bg: $page-bg-default;
 $body-bg-hsl: $neutral-100-hsl;
 $body-bg-oklch: $neutral-100-oklch;
-$primary: $osuorange;
 $primary-hover: $paddletailblack;
 $primary-focus: $osuorange;
 $primary-active: $paddletailblack;
-$secondary: $bucktoothwhite;
-$danger: $lava-400;
-$success: $pine-400;
-$warning: $luminance-400;
-$info: $stratosphere-400;
-$light: $neutral-100;
-$dark: $paddletailblack;
 $code-color: $osuorange;
 $line-height-base: 1.8;
 
