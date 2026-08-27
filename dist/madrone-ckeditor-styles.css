@@ -10021,19 +10021,19 @@ a > .ck-content code {
   z-index: 3 !important;
 }
 .ck-content .osu-text-body {
-  color: #423e3c !important;
+  color: oklch(36.7% 0.006 49deg) !important;
 }
 .ck-content .osu-text-osuorange {
   color: oklch(58.68% 0.1962 36.16deg) !important;
 }
 .ck-content .osu-text-bucktoothwhite {
-  color: #fff !important;
+  color: oklch(100% 0 0deg) !important;
 }
 .ck-content .osu-text-icon {
-  color: #7b746f !important;
+  color: oklch(56.4% 0.012 58deg) !important;
 }
 .ck-content .osu-text-rogue-wave {
-  color: #00859b !important;
+  color: oklch(56.7427% 0.100087 214.6996deg) !important;
 }
 .ck-content .osu-text-star-canvas {
   color: oklch(33.71% 0.0792 241.48deg) !important;

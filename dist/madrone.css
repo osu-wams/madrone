@@ -11058,7 +11058,7 @@ textarea.form-control-lg {
 }
 
 .osu-text-body {
-  color: #423e3c !important;
+  color: oklch(36.7% 0.006 49deg) !important;
 }
 
 .osu-text-osuorange {
@@ -11066,15 +11066,15 @@ textarea.form-control-lg {
 }
 
 .osu-text-bucktoothwhite {
-  color: #fff !important;
+  color: oklch(100% 0 0deg) !important;
 }
 
 .osu-text-icon {
-  color: #7b746f !important;
+  color: oklch(56.4% 0.012 58deg) !important;
 }
 
 .osu-text-rogue-wave {
-  color: #00859b !important;
+  color: oklch(56.7427% 0.100087 214.6996deg) !important;
 }
 
 .osu-text-star-canvas {

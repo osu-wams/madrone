@@ -176,11 +176,11 @@ $osu-alerts: (
 
 // Map array for text color classes
 $osu-colors-text: (
-  'body': $neutral-700,
+  'body': $neutral-700-oklch,
   'osuorange': $osuorange-oklch,
-  'bucktoothwhite': $bucktoothwhite,
-  'icon': $neutral-550,
-  'rogue-wave': $rogue_wave-400,
+  'bucktoothwhite': $bucktoothwhite-oklch,
+  'icon': $neutral-550-oklch,
+  'rogue-wave': $rogue_wave-400-oklch,
   'star-canvas': $stratosphere-600-oklch,
   'marionberry': $marionberry-oklch,
 );
