@@ -2,23 +2,6 @@
 @import '../abstracts/osu_variables';
 @import '../abstracts/osu_mixins';
 
-// Create osu-min-h-xx classes for min-height
-@each $height-name, $height-val in $min-heights {
-  .osu-min-h-#{$height-name} {
-    min-height: $height-val;
-  }
-
-  @each $breakpoint, $width in $grid-breakpoints {
-    @if $width !=0 {
-      @media (min-width: $width) {
-        .osu-min-h-#{$breakpoint}-#{$height-name} {
-          min-height: $height-val;
-        }
-      }
-    }
-  }
-}
-
 // For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use
 @each $border-color-name, $border-color-value in $osu-border-colors {
   .osu-border-#{$border-color-name} {
@@ -36,19 +19,6 @@
   background-color: rgb(255 255 255 / 0.95);
 }
 
-.osu-d-table-caption {
-  display: table-caption;
-}
-
-.osu-caption-top {
-  caption-side: top;
-}
-
-.osu-caption-bottom {
-  caption-side: bottom;
-}
-
-
 // Shh, tis a secret
 .osu-hover-pop {
   transition: all 250ms ease;
@@ -59,15 +29,15 @@
 }
 
 .osu-text-decoration {
-  text-decoration-color: $osuorange-hsl !important;
+  text-decoration-color: $osuorange-oklch !important;
 }
 
 .osu-text-decoration-bucktoothwhite {
-  text-decoration-color: $bucktoothwhite-hsl !important;
+  text-decoration-color: $bucktoothwhite-oklch !important;
 }
 
 .osu-link {
-  text-decoration-color: $osuorange-hsl;
+  text-decoration-color: $osuorange-oklch;
   text-decoration-thickness: 13%;
 
   &:hover,
@@ -76,33 +46,33 @@
   }
 
   &:active {
-    background-color: $paddletailblack-hsl;
-    color: $bucktoothwhite-hsl;
+    background-color: $paddletailblack-oklch;
+    color: $bucktoothwhite-oklch;
   }
 }
 
 .osu-link-white {
-  color: $bucktoothwhite-hsl !important;
-  text-decoration-color: $bucktoothwhite-hsl !important;
+  color: $bucktoothwhite-oklch !important;
+  text-decoration-color: $bucktoothwhite-oklch !important;
 
   &:hover {
     text-decoration: none !important;
   }
 
   &:active {
-    background-color: $bucktoothwhite-hsl !important;
-    color: $paddletailblack-hsl !important;
+    background-color: $bucktoothwhite-oklch !important;
+    color: $paddletailblack-oklch !important;
   }
 }
 
 .osu-link-orange {
-  color: $osuorange-hsl;
+  color: $osuorange-oklch;
   text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
-    text-decoration-color: $osuorange-hsl !important;
+    text-decoration-color: $osuorange-oklch !important;
     text-decoration-line: underline !important;
     text-decoration-thickness: 13% !important;
   }
@@ -165,16 +135,16 @@
 }
 
 .white-text-orange-bg {
-  background-color: $osuorange-hsl;
-  color: $bucktoothwhite-hsl;
+  background-color: $osuorange-oklch;
+  color: $bucktoothwhite-oklch;
 }
 
 .osu-nav-link-hover--dark {
-  --bs-nav-link-hover-color: #{$paddletailblack-hsl};
+  --bs-nav-link-hover-color: #{$paddletailblack-oklch};
 }
 
 .osu-nav-link-hover--light {
-  --bs-nav-link-hover-color: #{$bucktoothwhite-hsl};
+  --bs-nav-link-hover-color: #{$bucktoothwhite-oklch};
 }
 
 // Create corner clip cut classes.

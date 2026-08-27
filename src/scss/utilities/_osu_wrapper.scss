@@ -76,3 +76,36 @@
 .osu-nav-end ul.nav-pills {
   @extend .justify-content-end;
 }
+// Shim classes for the older text colors
+.primary {
+  @extend .text-primary;
+}
+
+.light {
+  @extend .text-light;
+}
+
+.dark {
+  @extend .text-dark;
+}
+
+.white {
+  @extend .text-white;
+}
+
+.stratosphere {
+  @extend .text-info;
+}
+
+.pine {
+  @extend .text-success;
+}
+
+.luminance {
+  @extend .text-warning;
+}
+
+.rogue-wave {
+  @extend .text-rogue-wave;
+}
+

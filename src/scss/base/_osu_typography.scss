@@ -59,6 +59,7 @@ blockquote {
   font-size: 1.25rem;
   margin-block: 1.5rem;
   padding: 1.5em 1.25em;
+
   @media screen and (min-width: 992px) {
     padding: 2.5em 3.75em;
   }
@@ -70,8 +71,8 @@ code {
 }
 
 main .block-page-title-block {
-  > .block__content {
-    > h1 {
+  >.block__content {
+    >h1 {
       margin-block: 1rem;
       margin-inline: auto;
       max-width: 62rem;
@@ -83,17 +84,15 @@ main .block-page-title-block {
 }
 
 .block-system-main-block {
-  ul:not(
-      .nav,
-      .navbar,
-      .list-unstyled,
-      .contextual-links,
-      .vertical-tabs__menu,
-      .pager__items,
-      .select2-selection__rendered,
-      .horizontal-tabs-list
-    )
-  > li:not([style*='list-style: none']) {
+
+  ul:not(.nav,
+    .navbar,
+    .list-unstyled,
+    .contextual-links,
+    .vertical-tabs__menu,
+    .pager__items,
+    .select2-selection__rendered,
+    .horizontal-tabs-list)>li:not([style*='list-style: none']) {
     &::marker {
       color: $body-color;
       content: '\f054\2000';
@@ -106,15 +105,13 @@ main .block-page-title-block {
 
   // Force the unordered list marker to be white when using the light color text.
   .osu-text-bucktoothwhite {
-    ul:not(
-        .nav,
-        .navbar,
-        .list-unstyled,
-        .contextual-links,
-        .vertical-tabs__menu,
-        .pager__items
-      )
-    > li {
+
+    ul:not(.nav,
+      .navbar,
+      .list-unstyled,
+      .contextual-links,
+      .vertical-tabs__menu,
+      .pager__items)>li {
       &::marker {
         color: $bucktoothwhite-hsl;
       }
@@ -137,11 +134,14 @@ p:last-child {
 
 // Only force link color if the parent block has a dark bg set.
 .osu-text-bucktoothwhite {
-  h1, h3, h5 {
+
+  h1,
+  h3,
+  h5 {
     color: $bucktoothwhite-hsl;
   }
 
-  & > * {
+  &>* {
     a:not(.layout-builder__link--add, .btn) {
       color: $bucktoothwhite-hsl;
       text-decoration-color: $bucktoothwhite-hsl;
@@ -153,3 +153,4 @@ p:last-child {
     }
   }
 }
+
