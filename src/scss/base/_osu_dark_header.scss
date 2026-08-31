@@ -54,77 +54,110 @@
         .global-cta-wrapper .cta-buttons a {
             background-color: $neutral-100;
             border-color: transparent;
-            border-block-end: 1.5px solid #d73f09;
-            border-inline-end: 1.5px solid #d73f09;
+            border-block-end: 1.5px solid $osuorange;
+            border-inline-end: 1.5px solid $osuorange;
             color: $neutral-900;
         }
     }
 
+    //MENU
     .madrone-primary-menu>.block-superfish {
-        background-color: #1f1d1c;
+        background-color: $neutral-900;
 
-        li.sf-depth-1>a,
-        li.sf-depth-1>span {
-            color: #e9e5e4;
-            height: 100%;
+        ul.sf-menu {
+            li {
+                &.sf-depth-1 {
 
-            &:active {
-                background-color: #1f1d1c !important;
+                    >a,
+                    >span {
+                        color: $neutral-200;
+                        height: 100%;
+
+                        &:hover,
+                        &:focus-within {
+                            color: $neutral-700
+                        }
+
+                        &:active {
+                            background-color: $neutral-900 !important;
+                            color: $neutral-200;
+                        }
+
+                        :focus-within {
+                            outline: $osuorange;
+                        }
+                    }
+
+                    // Chevron colors
+                    &.menuparent:not(.sf-no-children)>a::after {
+                        color: $neutral-200;
+                    }
+
+                    // hover state for top level links
+                    &.sfHover>a,
+                    &.menuparent:hover>a {
+                        color: $neutral-700;
+
+                        &::after {
+                            color: $neutral-700;
+                        }
+                    }
+
+                    &.sfHover.menuparent:not(.sf-no-children)>a::after,
+                    >a:hover::after {
+                        color: inherit !important;
+                    }
+                }
+
+                //lower levels styling
+                ul li:not(.sf-depth-1) {
+
+                    a {
+                        // I don't know how I should scope this. this negatively impacts the mobile stying. the mobile styling is opposite. so it starts with a dark background, so the active state needs to be the opposite. The desktop flyout menus start as white.
+                        &:active {
+                            background-color: $neutral-900 !important;
+                            color: $neutral-200;
+
+                            &::after {
+                                color: $neutral-200 !important;
+                            }
+                        }
+                    }
+                }
+
             }
-
-            :focus-within {
-                outline: #d73f09;
-            }
         }
 
-        li.sf-depth-1.sfHover>a {
-            color: #423e3c;
-
-        }
-
-        ul.sf-menu li.sf-depth-1.menuparent:not(.sf-no-children)>a::after {
-            color: #e9e5e4;
-        }
-
-        ul.sf-menu li.sf-depth-1.sfHover.menuparent:not(.sf-no-children)>a::after,
-        ul.sf-menu li.sf-depth-1>a:hover::after {
-            color: inherit !important;
-        }
-
-        /*.block-superfish ul.sf-menu li.sf-depth-1.menuparent:hover > a {*/
-        /*	color: magenta;*/
-        /*}*/
-
-        /*li.sfHover a{*/
-        /*	background-color: blue;*/
-        /*	color: purple;*/
-        /*}*/
-
-        /*li.sfHover {*/
-        /*	background-color: green;*/
-        /*	color: yellow;*/
-
-        /* color for the title of the menu on mobile. the title isn't always there, but something that should be styled*/
+        // color for the title of the menu on mobile. the title isn't always there, but something that should be styled
         .sf-accordion-toggle>a {
-            color: #e9e5e4;
-
-            &:hover {
-                color: #423e3c;
-            }
+            color: $neutral-200;
 
             &:active {
-                color: #1f1d1c !important;
-                background-color: #f7f5f5 !important;
+                color: $neutral-900 !important;
+                background-color: $neutral-100 !important;
             }
-
-
         }
 
-        .sf-menu.sf-accordion a.sf-depth-1 {
-            color: #e9e6e4;
+        // mobile styling
+        .sf-menu.sf-accordion {
+            a.sf-depth-1 {
+                // I may need to do this differently? not sure.
+                &:active {
+                    background-color: $neutral-900 !important;
+                    color: $neutral-100 !important;
+                }
+            }
 
-            &:hover {
-                color: pink;
+            ul li {
+                // chevrons lower levels for just mobile. it goes from dark to light.
+                >a.menuparent::after,
+                >span.menuparent::after {
+                    color: $neutral-200;
+                }
+            }
+// this styles any link that is nested. the original scss sheet uses a different select of not:sf-depth-1. not sure if I should actually mirror that.
+            .sf-has-clone-parent a {
+                color: $neutral-200;
             }
         }
     }
