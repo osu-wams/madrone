@@ -10,5 +10,6 @@ $spacers: map-merge($spacers,
     ));
 
 $font-sizes: map-merge($font-sizes,
-    (7: $font-size-base * 0.8));
-
+    (7: $font-size-base * 0.8,
+      8: $font-size-base * 0.7,
+    ));

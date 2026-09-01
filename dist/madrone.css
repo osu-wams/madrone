@@ -9924,6 +9924,10 @@ textarea.form-control-lg {
   font-size: 0.9rem !important;
 }
 
+.fs-8 {
+  font-size: 0.7875rem !important;
+}
+
 .fst-italic {
   font-style: italic !important;
 }
@@ -16434,6 +16438,41 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.line-truncate-1 {
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.line-truncate-2 {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line-truncate-3 {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.line-truncate-4 {
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.line-truncate-5 {
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
 .osu-border-light-grey {
   border-color: #e0e0e0 !important;
 }

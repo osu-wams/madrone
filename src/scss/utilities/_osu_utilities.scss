@@ -2,6 +2,18 @@
 @import '../abstracts/osu_variables';
 @import '../abstracts/osu_mixins';
 
+// For extra bootstrap utilities.
+$line-truncate: 1, 2, 3, 4, 5;
+
+@each $line in $line-truncate {
+  .line-truncate-#{$line} {
+    display: -webkit-box;
+    line-clamp: $line;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
 // For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use
 @each $border-color-name, $border-color-value in $osu-border-colors {
   .osu-border-#{$border-color-name} {
