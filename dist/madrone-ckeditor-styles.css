@@ -15760,6 +15760,50 @@ a > .ck-content code {
   position: relative;
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0% 100%);
 }
+@media (min-width: 992px) {
+  .ck-content .overlay-column-end {
+    --cut: 2.5rem;
+    border-top: 2px solid #d73f09;
+    margin-top: calc(var(--cut) * -1);
+    z-index: 1;
+    clip-path: polygon(calc(var(--cut) - 1px) 0, 100% 0, 100% 100%, 0 100%, 0 calc(var(--cut)));
+    position: relative;
+  }
+  .ck-content .overlay-column-end:before {
+    --cut-shifted: calc(var(--cut) - 4px);
+    content: "";
+    position: absolute;
+    height: var(--cut);
+    width: var(--cut);
+    clip-path: polygon(var(--cut-shifted) 0%, 100% 0, 100% 0px, 1px 100%, 0% 100%, 0% var(--cut-shifted));
+    background: #d73f09;
+  }
+}
+.ck-content .osu-hover-scale-img img,
+.ck-content .osu-hover-scale-icon .fa-solid,
+.ck-content .osu-hover-scale-icon, .ck-content .fas {
+  transition: transform 0.2s ease-in-out;
+}
+.ck-content .osu-hover-scale-img:hover img,
+.ck-content .osu-hover-scale-icon:hover .fa-solid,
+.ck-content .osu-hover-scale-icon:hover .fas {
+  transform: scale(1.05);
+}
+.ck-content .osu-minimal-link,
+.ck-content .osu-minimal-link > a {
+  text-decoration: none;
+}
+.ck-content .osu-minimal-link:active,
+.ck-content .osu-minimal-link > a:active {
+  background-color: transparent !important;
+  text-decoration: underline;
+}
+.ck-content .osu-bg-before-dark-ellipse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
+}
 .ck-content a {
   text-decoration-color: hsl(16, 92%, 44%);
   text-decoration-thickness: 10%;
