@@ -15647,6 +15647,7 @@ a > .ck-content code {
   --osu-bg-overaly-to-color: oklch(26.6% 0.009 248deg / 0.75);
   --osu-bg-overlay-deg: 0deg;
   position: relative;
+  isolation: isolate;
 }
 .ck-content .osu-bg-overlay-dark:before,
 .ck-content .osu-bg-before-dark:before {
@@ -15654,7 +15655,7 @@ a > .ck-content code {
   content: "";
   inset: 0;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
 }
 .ck-content .osu-bg-overlay-dark div.block-layout-builder[class*=block-inline-],
 .ck-content .osu-bg-overlay-dark div.layout-builder__add-block,
@@ -15697,12 +15698,15 @@ a > .ck-content code {
 }
 .ck-content .osu-bg-before-dark-1 {
   --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.75);
+  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.75);
 }
 .ck-content .osu-bg-before-dark-2 {
   --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.85);
+  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.85);
 }
 .ck-content .osu-bg-before-dark-3 {
   --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.95);
+  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.95);
 }
 .ck-content .white-text-orange-bg {
   background-color: oklch(58.68% 0.1962 36.16deg);
@@ -17492,27 +17496,8 @@ a > .ck-content code {
 .ck-content #drupal-modal .form-item {
   width: initial !important;
 }
-.ck-content .w-100 > .row.layout-builder__layout,
-.ck-content .container-fluid > .row.layout-builder__layout,
-.ck-content .container-sm > .row.layout-builder__layout,
-.ck-content .container-md > .row.layout-builder__layout,
-.ck-content .container-lg > .row.layout-builder__layout,
-.ck-content .container-xl > .row.layout-builder__layout,
-.ck-content .container-xxl > .row.layout-builder__layout {
+.ck-content .w-100 > .row.layout-builder__layout {
   margin-inline: 0;
-}
-.ck-content .container-fluid > .row.layout-builder__layout, .ck-content .container-sm > .row.layout-builder__layout, .ck-content .container-md > .row.layout-builder__layout, .ck-content .container-lg > .row.layout-builder__layout, .ck-content .container-xl > .row.layout-builder__layout, .ck-content .container-xxl > .row.layout-builder__layout {
-  padding-inline: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .ck-content .container-fluid > .row.layout-builder__layout, .ck-content .container-sm > .row.layout-builder__layout, .ck-content .container-md > .row.layout-builder__layout, .ck-content .container-lg > .row.layout-builder__layout, .ck-content .container-xl > .row.layout-builder__layout, .ck-content .container-xxl > .row.layout-builder__layout {
-    padding-inline: 2rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .ck-content .container-fluid > .row.layout-builder__layout, .ck-content .container-sm > .row.layout-builder__layout, .ck-content .container-md > .row.layout-builder__layout, .ck-content .container-lg > .row.layout-builder__layout, .ck-content .container-xl > .row.layout-builder__layout, .ck-content .container-xxl > .row.layout-builder__layout {
-    padding-inline: 3rem;
-  }
 }
 .ck-content .editor-link-dialog button.ui-dialog-titlebar-close:after,
 .ck-content .editor-file-dialog button.ui-dialog-titlebar-close:after {
