@@ -1,3 +1,5 @@
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../abstracts/osu_variables';
 // Custom Mixins
 
 // Mixin to create `.osu-bg-before-dark-to-` classes with different direction, degree, and color.
@@ -6,10 +8,12 @@
 // @param $degree The degree of the gradient overlay (0deg, 90deg, 180deg, 270deg)
 // @param $fromColor The from color of all gradient overlays
 @mixin osu-bg-before-dark-to($direction, $degree, $fromColor) {
-  .osu-bg-before-dark-to-#{$direction} {
-    --osu-bg-overaly-from-color: #{$fromColor};
-    --osu-bg-overaly-to-color: transparent;
-    --osu-bg-overlay-deg: #{$degree};
+  @include media-breakpoint-up(md) {
+    .osu-bg-before-dark-to-#{$direction} {
+      --osu-bg-overaly-from-color: #{$fromColor};
+      --osu-bg-overaly-to-color: transparent;
+      --osu-bg-overlay-deg: #{$degree};
+    }
   }
 }
 
@@ -17,10 +21,10 @@
 @mixin osu-font-face($name, $path, $weight: 400, $style: normal) {
   @font-face {
     font-family: "#{$name}";
-    src:
-      url("../fonts/#{$path}.woff") format("woff"),
-      url("../fonts/#{$path}.woff2") format("woff2");
+    src: url("../fonts/#{$path}.woff") format("woff"),
+    url("../fonts/#{$path}.woff2") format("woff2");
     font-weight: $weight;
     font-style: $style;
   }
 }
+

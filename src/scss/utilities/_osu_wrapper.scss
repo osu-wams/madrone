@@ -1,0 +1,111 @@
+// Wrappter class for Display flex
+.osu-d-flex {
+  @extend .d-flex;
+}
+
+.osu-d-none {
+  @extend .d-none;
+}
+
+// Wrapper classes for flex alignment
+.osu-align-items-start {
+  @extend .align-items-start;
+}
+
+.osu-align-items-center {
+  @extend .align-items-center;
+}
+
+.osu-align-items-end {
+  @extend .align-items-end;
+}
+
+.osu-align-items-baseline {
+  @extend .align-items-baseline;
+}
+
+.osu-align-items-stretch {
+  @extend .align-items-stretch;
+}
+
+.osu-align-self-start {
+  @extend .align-self-start;
+}
+
+.osu-align-self-center {
+  @extend .align-self-center;
+}
+
+.osu-align-self-end {
+  @extend .align-self-end;
+}
+
+.osu-justify-content-start {
+  @extend .justify-content-start;
+}
+
+.osu-justify-content-center {
+  @extend .justify-content-center;
+}
+
+.osu-justify-content-between {
+  @extend .justify-content-between;
+}
+
+.osu-justify-content-end {
+  @extend .justify-content-end;
+}
+
+// Enhancements for Navigation Blocks
+.osu-nav-column ul.nav-pills {
+  @extend .flex-column;
+}
+
+.osu-nav-fill ul.nav-pills {
+  @extend .nav-fill;
+}
+
+.osu-nav-justified ul.nav-pills {
+  @extend .nav-justified;
+}
+
+.osu-nav-centered ul.nav-pills {
+  @extend .justify-content-center;
+}
+
+.osu-nav-end ul.nav-pills {
+  @extend .justify-content-end;
+}
+// Shim classes for the older text colors
+.primary {
+  @extend .text-primary;
+}
+
+.light {
+  @extend .text-light;
+}
+
+.dark {
+  @extend .text-dark;
+}
+
+.white {
+  @extend .text-white;
+}
+
+.stratosphere {
+  @extend .text-info;
+}
+
+.pine {
+  @extend .text-success;
+}
+
+.luminance {
+  @extend .text-warning;
+}
+
+.rogue-wave {
+  @extend .text-rogue-wave;
+}
+

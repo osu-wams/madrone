@@ -1,19 +1,16 @@
 @import '../../../node_modules/bootstrap/scss/variables';
 @import '../abstracts/osu_variables';
 @import '../abstracts/osu_mixins';
-// Create osu-min-h-xx classes for min-height
-@each $height-name, $height-val in $min-heights {
-  .osu-min-h-#{$height-name} {
-    min-height: $height-val;
-  }
-  @each $breakpoint, $width in $grid-breakpoints {
-    @if $width != 0 {
-      @media (min-width: $width) {
-        .osu-min-h-#{$breakpoint}-#{$height-name} {
-          min-height: $height-val;
-        }
-      }
-    }
+
+// For extra bootstrap utilities.
+$line-truncate: 1, 2, 3, 4, 5;
+
+@each $line in $line-truncate {
+  .line-truncate-#{$line} {
+    display: -webkit-box;
+    line-clamp: $line;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
   }
 }
 
@@ -22,6 +19,7 @@
   .osu-border-#{$border-color-name} {
     border-color: #{$border-color-value} !important;
   }
+
   @each $border-side in $border-sides {
     .osu-border-#{$border-color-name}-#{$border-side} {
       border-#{$border-side}-color: #{$border-color-value} !important;
@@ -31,93 +29,6 @@
 
 .osu-opacity-90 {
   background-color: rgb(255 255 255 / 0.95);
-}
-
-// Display flex
-.osu-d-flex {
-  @extend .d-flex;
-}
-
-.osu-d-table-caption {
-  display: table-caption;
-}
-
-.osu-caption-top {
-  caption-side: top;
-}
-
-.osu-caption-bottom {
-  caption-side: bottom;
-}
-
-// Wrapper classes for flex alignment
-.osu-align-items-start {
-  @extend .align-items-start;
-}
-
-.osu-align-items-center {
-  @extend .align-items-center;
-}
-
-.osu-align-items-end {
-  @extend .align-items-end;
-}
-
-.osu-align-items-baseline {
-  @extend .align-items-baseline;
-}
-
-.osu-align-items-stretch {
-  @extend .align-items-stretch;
-}
-
-.osu-align-self-start {
-  @extend .align-self-start;
-}
-
-.osu-align-self-center {
-  @extend .align-self-center;
-}
-
-.osu-align-self-end {
-  @extend .align-self-end;
-}
-
-.osu-justify-content-start {
-  @extend .justify-content-start;
-}
-
-.osu-justify-content-center {
-  @extend .justify-content-center;
-}
-
-.osu-justify-content-between {
-  @extend .justify-content-between;
-}
-
-.osu-justify-content-end {
-  @extend .justify-content-end;
-}
-
-// Enhancements for Navigation Blocks
-.osu-nav-column ul.nav-pills {
-  @extend .flex-column;
-}
-
-.osu-nav-fill ul.nav-pills {
-  @extend .nav-fill;
-}
-
-.osu-nav-justified ul.nav-pills {
-  @extend .nav-justified;
-}
-
-.osu-nav-centered ul.nav-pills {
-  @extend .justify-content-center;
-}
-
-.osu-nav-end ul.nav-pills {
-  @extend .justify-content-end;
 }
 
 // Shh, tis a secret
@@ -130,15 +41,15 @@
 }
 
 .osu-text-decoration {
-  text-decoration-color: $osuorange-hsl !important;
+  text-decoration-color: $osuorange-oklch !important;
 }
 
 .osu-text-decoration-bucktoothwhite {
-  text-decoration-color: $bucktoothwhite-hsl !important;
+  text-decoration-color: $bucktoothwhite-oklch !important;
 }
 
 .osu-link {
-  text-decoration-color: $osuorange-hsl;
+  text-decoration-color: $osuorange-oklch;
   text-decoration-thickness: 13%;
 
   &:hover,
@@ -147,33 +58,33 @@
   }
 
   &:active {
-    background-color: $paddletailblack-hsl;
-    color: $bucktoothwhite-hsl;
+    background-color: $paddletailblack-oklch;
+    color: $bucktoothwhite-oklch;
   }
 }
 
 .osu-link-white {
-  color: $bucktoothwhite-hsl !important;
-  text-decoration-color: $bucktoothwhite-hsl !important;
+  color: $bucktoothwhite-oklch !important;
+  text-decoration-color: $bucktoothwhite-oklch !important;
 
   &:hover {
     text-decoration: none !important;
   }
 
   &:active {
-    background-color: $bucktoothwhite-hsl !important;
-    color: $paddletailblack-hsl !important;
+    background-color: $bucktoothwhite-oklch !important;
+    color: $paddletailblack-oklch !important;
   }
 }
 
 .osu-link-orange {
-  color: $osuorange-hsl;
+  color: $osuorange-oklch;
   text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
-    text-decoration-color: $osuorange-hsl !important;
+    text-decoration-color: $osuorange-oklch !important;
     text-decoration-line: underline !important;
     text-decoration-thickness: 13% !important;
   }
@@ -197,6 +108,7 @@
   border-radius: $border-radius-pill;
 }
 
+// Overlay's in a psudo element.
 .osu-bg-overlay-dark,
 .osu-bg-before-dark {
   --osu-bg-overaly-from-color: #{$osu-bg-gradient};
@@ -216,7 +128,7 @@
   div.block-layout-builder[class*='block-inline-'],
   div.layout-builder__add-block,
   div.block-block-content,
-  > div.block__content {
+  >div.block__content {
     position: relative;
     z-index: 1;
   }
@@ -227,15 +139,100 @@
 @include osu-bg-before-dark-to("top", 180deg, $osu-bg-gradient);
 @include osu-bg-before-dark-to("bottom", 0deg, $osu-bg-gradient);
 
+// Custop properties require interporated sass variables.
+@each $level, $color in $gradients {
+  .osu-bg-before-dark-#{$level} {
+    --osu-bg-overaly-from-color: #{$color};
+  }
+}
+
 .white-text-orange-bg {
-  background-color: $osuorange-hsl;
-  color: $bucktoothwhite-hsl;
+  background-color: $osuorange-oklch;
+  color: $bucktoothwhite-oklch;
 }
 
 .osu-nav-link-hover--dark {
-  --bs-nav-link-hover-color: #{$paddletailblack-hsl};
+  --bs-nav-link-hover-color: #{$paddletailblack-oklch};
 }
 
 .osu-nav-link-hover--light {
-  --bs-nav-link-hover-color: #{$bucktoothwhite-hsl};
+  --bs-nav-link-hover-color: #{$bucktoothwhite-oklch};
+}
+
+// Create corner clip cut classes.
+@each $name, $value in $spacers {
+  .osu-corner-clip-#{$name} {
+    --cut: #{$value};
+  }
+}
+
+// Corner clip classes, not really easy to create a @each.
+.osu-corner-clip-top-left {
+  position: relative;
+  clip-path: polygon(0% var(--cut), var(--cut) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.osu-corner-clip-top-right {
+  position: relative;
+  clip-path: polygon(0% 0%, calc(100% - var(--cut)) 0%, 100% var(--cut), 100% 100%, 0% 100%);
+}
+
+.osu-corner-clip-bottom-left {
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, var(--cut) 100%, 0% calc(100% - var(--cut)));
+}
+
+.osu-corner-clip-bottom-right {
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0% 100%);
+}
+
+@media (min-width: 992px) {
+	.overlay-column-end {
+		--cut: 2.5rem;
+		border-top: 2px solid #d73f09;
+		margin-top: calc(var(--cut)*-1);
+		z-index: 1;
+		clip-path: polygon(calc(var(--cut) - 1px) 0, 100% 0, 100% 100%, 0 100%, 0 calc(var(--cut)));
+		position: relative;
+
+		&:before {
+			--cut-shifted: calc(var(--cut) - 4px);
+			content: '';
+			position: absolute;
+			height: var(--cut);
+			width: var(--cut);
+			clip-path: polygon(var(--cut-shifted) 0%, 100% 0, 100% 0px, 1px 100%, 0% 100%, 0% var(--cut-shifted));
+			background: #d73f09;
+	}
+}
+}
+
+.osu-hover-scale-img img,
+.osu-hover-scale-icon .fa-solid,
+.osu-hover-scale-icon, .fas {
+	transition: transform 0.2s ease-in-out;
+}
+
+.osu-hover-scale-img:hover img,
+.osu-hover-scale-icon:hover .fa-solid,
+.osu-hover-scale-icon:hover .fas {
+	transform: scale(1.05);
+}
+
+.osu-minimal-link,
+.osu-minimal-link > a {
+	text-decoration: none;
+
+	&:active {
+		background-color: transparent !important;
+		text-decoration: underline;
+}
+}
+
+.osu-bg-before-dark-ellipse::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(ellipse at top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
 }

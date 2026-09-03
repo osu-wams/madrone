@@ -1,0 +1,15 @@
+@import '../../../node_modules/bootstrap/scss/variables';
+// Map Overrides for bootstrap.
+
+// Update the spacers.
+$spacers: map-merge($spacers,
+    ('2-5': $spacer * 0.75,
+      '4-5': $spacer * 2,
+      6: $spacer * 5,
+      7: $spacer * 8,
+    ));
+
+$font-sizes: map-merge($font-sizes,
+    (7: $font-size-base * 0.8,
+      8: $font-size-base * 0.7,
+    ));
