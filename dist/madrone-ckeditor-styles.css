@@ -17396,45 +17396,6 @@ a > .ck-content code {
 .ck-content .cke_editable_themed .scayt-misspell-word {
   border-bottom-style: dotted !important;
 }
-.ck-content .toc-js.sticky.is-sticked {
-  position: initial;
-}
-@media screen and (min-width: 992px) {
-  .ck-content .toc-js.sticky.is-sticked {
-    position: fixed;
-  }
-}
-.ck-content .toc-js ul {
-  padding-left: 0;
-}
-.ck-content .toc-js ul li {
-  padding-block: 0.4rem;
-  padding-inline: 1rem;
-}
-.ck-content .toc-js ul li::marker {
-  content: "" !important;
-}
-.ck-content .toc-js ul li.toc-active {
-  background-color: hsl(16, 92%, 44%);
-}
-.ck-content .toc-js ul li.toc-active a {
-  color: hsl(0, 0%, 100%);
-}
-.ck-content .toc-h2 {
-  margin-left: 0.65rem;
-}
-.ck-content .toc-h3 {
-  margin-left: 1rem;
-}
-.ck-content .toc-h4 {
-  margin-left: 1.25rem;
-}
-.ck-content .toc-h5 {
-  margin-left: 1.6rem;
-}
-.ck-content .toc-h6 {
-  margin-left: 1.9rem;
-}
 .ck-content .layout-builder {
   background-color: transparent;
 }

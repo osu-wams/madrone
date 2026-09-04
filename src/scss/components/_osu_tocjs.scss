@@ -1,50 +1,45 @@
 @import "../abstracts/osu_variables";
+
 .toc-js {
-  &.sticky.is-sticked {
-    position: initial;
-    @media screen and (min-width: 992px) {
-      position: fixed;
-    }
+  .toc-h3 {
+    margin-left: 0.5rem;
+  }
+
+  .toc-h4 {
+    margin-left: 0.50rem;
+  }
+
+  .toc-h5 {
+    margin-left: 0.5rem;
+  }
+
+  .toc-h6 {
+    margin-left: 0.5rem;
   }
 
   ul {
     padding-left: 0;
+    list-style: none;
 
     li {
-      padding-block: 0.4rem;
-      padding-inline: 1rem;
-
       &::marker {
         content: '' !important;
       }
-
-      &.toc-active {
-        background-color: $osuorange-hsl;
-
-        a {
-          color: $bucktoothwhite-hsl;
-        }
-      }
     }
   }
-}
 
-.toc-h2 {
-  margin-left: 0.65rem;
-}
+  a {
+    padding-block: 0.4rem;
+    padding-inline: 1rem;
+  }
 
-.toc-h3 {
-  margin-left: 1rem;
-}
+  li {
+    padding-block: 0.4rem;
+    padding-inline: 1rem;
 
-.toc-h4 {
-  margin-left: 1.25rem;
-}
-
-.toc-h5 {
-  margin-left: 1.6rem;
-}
-
-.toc-h6 {
-  margin-left: 1.9rem;
+    &.toc-active>a {
+      background-color: $osuorange-oklch;
+      color: $bucktoothwhite-oklch;
+    }
+  }
 }
