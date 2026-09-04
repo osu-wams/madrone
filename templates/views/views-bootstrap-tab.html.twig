@@ -27,7 +27,8 @@
         {% set selected = 'false' %}
       {% endif %}
       {% set tab_id = 'tab-' ~ tabid ~ '-' ~ clean_key %}
-        <button {{ attributes }} id="{{ tab_id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ tab_id }}" type="button" role="tab" aria-controls="{{ tab_id }}" aria-selected="{{ selected }}">{{ tab }}</button>
+      <button {{ attributes }} id="{{ tab_id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ tab_id }}" type="button"
+                               role="tab" aria-controls="{{ tab_id }}" aria-selected="{{ selected }}">{{ tab }}</button>
     {% endfor %}
   </div>
 {% endset %}

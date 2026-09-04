@@ -21,9 +21,9 @@
   <h3>{{ title }}</h3>
 {% endif %}
 <div id="{{ id }}" {{ attributes.addClass(classes) }}>
-    {% for row in rows %}
-      <div{{ row.attributes }}>
-        {{- row.content -}}
-      </div>
-    {% endfor %}
+  {% for row in rows %}
+    <div{{ row.attributes }}>
+      {{- row.content -}}
+    </div>
+  {% endfor %}
 </div>
