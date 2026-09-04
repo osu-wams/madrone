@@ -34,9 +34,7 @@
 
   <div class="accordion-item">
     <{{ accordion_header_element }} class="accordion-header" id="{{ heading_id }}">
-    <button class="accordion-button {{ button_classes }}" type="button" data-bs-toggle="collapse"
-            data-bs-target="#{{ id }}-collapse-{{ clean_key }}" aria-expanded="{{ collapse_class_boolean }}"
-            aria-controls="{{ id }}-collapse-{{ clean_key }}">
+    <button class="accordion-button {{ button_classes }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ id }}-collapse-{{ clean_key }}" aria-expanded="{{ collapse_class_boolean }}" aria-controls="{{ id }}-collapse-{{ clean_key }}">
       {{ row.title }}
     </button>
   </{{ accordion_header_element }}>
