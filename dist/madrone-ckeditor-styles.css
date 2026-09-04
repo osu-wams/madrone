@@ -16020,7 +16020,12 @@ a > .ck-content code {
   text-decoration-thickness: 13% !important;
 }
 .ck-content .block-system-branding-block a img {
-  height: 80px;
+  height: 60px;
+}
+@media (min-width: 992px) {
+  .ck-content .block-system-branding-block a img {
+    height: 80px;
+  }
 }
 .ck-content .header-search-block-form > div {
   height: 100%;
