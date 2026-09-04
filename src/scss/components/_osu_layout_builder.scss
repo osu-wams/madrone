@@ -20,7 +20,7 @@
     width: 100%;
   }
 
-  .form-radios > div {
+  .form-radios>div {
     width: initial;
   }
 }
@@ -48,7 +48,7 @@
     width: 100%;
   }
 
-  .form-radios > div {
+  .form-radios>div {
     width: initial;
   }
 
@@ -91,26 +91,27 @@
 .node-layout-builder-form {
   @extend .container;
 }
-
-// The row class has negative margins. Adding margin 0 inline to the layout builder section row stops the
-// content from overflowing.
-
-.w-100,
-.container-fluid {
-  & > .row.layout-builder__layout {
+// From Bootstraps documentation about Edge-to-edge design removing the .container
+// and the .container-fluid classes with a decending row class reequire the
+// removal of the inline margin to remove the overflow.
+// See https://getbootstrap.com/docs/5.3/layout/gutters/#no-gutters
+.w-100 {
+  &>.row.layout-builder__layout {
     margin-inline: 0;
   }
 }
 
-.container-fluid > .row.layout-builder__layout {
-  padding-inline: 1rem;
-  @media screen and (min-width: 768px) {
-    padding-inline: 2rem;
-  }
-  @media screen and (min-width: 992px) {
-    padding-inline: 3rem;
-  }
-}
+// Removed this for now as we might want to re-evaluate the paddings on
+// the Bootstrap Layout Builder Full container type is used.
+//.container-fluid > .row.layout-builder__layout {
+//  padding-inline: 1rem;
+//  @media screen and (min-width: 768px) {
+//    padding-inline: 2rem;
+//  }
+//  @media screen and (min-width: 992px) {
+//    padding-inline: 3rem;
+//  }
+//}
 
 // Adding an X to a few buttons that are missed in themeing. Might need to remove in the future.
 .editor-link-dialog,
@@ -126,6 +127,7 @@
 .background-local-video {
   @for $i from 1 through 8 {
     $h: $i * 100;
+
     &:has(.osu-min-h-#{$h}) {
       min-height: #{$h}px;
     }
@@ -142,9 +144,11 @@ button.video-content__controls {
 
 // Make it so the video doesn't render on mobile if there is also a bg image.
 .bg-video.bg-image.background-local-video {
+
   & video,
   button.video-content__controls {
     display: none;
+
     @media screen and (min-width: 768px) {
       display: initial;
     }
@@ -154,21 +158,21 @@ button.video-content__controls {
 // Make the columns truly "stretch" when placing blocks.
 .osu-align-items-stretch {
   &.layout-builder__layout {
-    > div[class*=col] {
+    >div[class*=col] {
       display: flex;
       flex-direction: column;
 
-      > div[class*="block-"] {
+      >div[class*="block-"] {
         display: flex;
         flex: 1 0 auto;
         flex-direction: column;
 
-        > div.block__content {
+        >div.block__content {
           display: flex;
           flex: 1 0 auto;
           flex-direction: column;
 
-          > div {
+          >div {
             flex: 1 0 auto;
           }
         }

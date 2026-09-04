@@ -16790,6 +16790,7 @@ textarea.form-control-lg {
   --osu-bg-overaly-to-color: oklch(26.6% 0.009 248deg / 0.75);
   --osu-bg-overlay-deg: 0deg;
   position: relative;
+  isolation: isolate;
 }
 .osu-bg-overlay-dark:before,
 .osu-bg-before-dark:before {
@@ -16797,7 +16798,7 @@ textarea.form-control-lg {
   content: "";
   inset: 0;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
 }
 .osu-bg-overlay-dark div.block-layout-builder[class*=block-inline-],
 .osu-bg-overlay-dark div.layout-builder__add-block,
@@ -16841,14 +16842,17 @@ textarea.form-control-lg {
 }
 .osu-bg-before-dark-1 {
   --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.75);
+  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.75);
 }
 
 .osu-bg-before-dark-2 {
   --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.85);
+  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.85);
 }
 
 .osu-bg-before-dark-3 {
   --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.95);
+  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.95);
 }
 
 .white-text-orange-bg {
@@ -18864,28 +18868,8 @@ body.cke_editable_themed {
   width: initial !important;
 }
 
-.w-100 > .row.layout-builder__layout,
-.container-fluid > .row.layout-builder__layout,
-.container-sm > .row.layout-builder__layout,
-.container-md > .row.layout-builder__layout,
-.container-lg > .row.layout-builder__layout,
-.container-xl > .row.layout-builder__layout,
-.container-xxl > .row.layout-builder__layout {
+.w-100 > .row.layout-builder__layout {
   margin-inline: 0;
-}
-
-.container-fluid > .row.layout-builder__layout, .container-sm > .row.layout-builder__layout, .container-md > .row.layout-builder__layout, .container-lg > .row.layout-builder__layout, .container-xl > .row.layout-builder__layout, .container-xxl > .row.layout-builder__layout {
-  padding-inline: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .container-fluid > .row.layout-builder__layout, .container-sm > .row.layout-builder__layout, .container-md > .row.layout-builder__layout, .container-lg > .row.layout-builder__layout, .container-xl > .row.layout-builder__layout, .container-xxl > .row.layout-builder__layout {
-    padding-inline: 2rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .container-fluid > .row.layout-builder__layout, .container-sm > .row.layout-builder__layout, .container-md > .row.layout-builder__layout, .container-lg > .row.layout-builder__layout, .container-xl > .row.layout-builder__layout, .container-xxl > .row.layout-builder__layout {
-    padding-inline: 3rem;
-  }
 }
 
 .editor-link-dialog button.ui-dialog-titlebar-close:after,

@@ -115,6 +115,7 @@ $line-truncate: 1, 2, 3, 4, 5;
   --osu-bg-overaly-to-color: #{$osu-bg-gradient};
   --osu-bg-overlay-deg: 0deg;
   position: relative;
+  isolation: isolate;
 
 
   &:before {
@@ -122,7 +123,7 @@ $line-truncate: 1, 2, 3, 4, 5;
     content: '';
     inset: 0;
     position: absolute;
-    z-index: 0;
+    z-index: -1;
   }
 
   div.block-layout-builder[class*='block-inline-'],
@@ -143,6 +144,7 @@ $line-truncate: 1, 2, 3, 4, 5;
 @each $level, $color in $gradients {
   .osu-bg-before-dark-#{$level} {
     --osu-bg-overaly-from-color: #{$color};
+    --osu-bg-overaly-to-color: #{$color};
   }
 }
 
