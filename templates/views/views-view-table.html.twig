@@ -90,7 +90,7 @@
       {% for column in row.columns %}
         {% if column.default_classes %}
           {% set column_classes = [
-            'views-field'
+            'views-field',
           ] %}
           {% for field in column.fields %}
             {% set column_classes = column_classes|merge(['views-field-' ~ field]) %}

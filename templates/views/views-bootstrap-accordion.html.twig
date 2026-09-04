@@ -30,14 +30,15 @@
     {% set collapse_class_boolean = (collapse_var) ? 'true' : 'false' %}
     {% set button_classes = (not collapse_var) ? 'collapsed' %}
     {% set clean_key = ('key-' ~ key)|striptags|trim|clean_class %}
+    {% set heading_id = id ~ '-heading-' ~ clean_key %}
 
     <div class="accordion-item">
-      <{{ accordion_header_element }} class="accordion-header" id="heading{{ clean_key }}">
+      <{{ accordion_header_element }} class="accordion-header" id="{{ heading_id }}">
         <button class="accordion-button {{ button_classes }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ id }}-collapse-{{ clean_key }}" aria-expanded="{{ collapse_class_boolean }}" aria-controls="{{ id }}-collapse-{{ clean_key }}">
           {{ row.title }}
         </button>
       </{{ accordion_header_element }}>
-      <div id="{{ id }}-collapse-{{ clean_key }}" class="accordion-collapse collapse {{ collapse_class }}" aria-labelledby="heading{{ clean_key }}" data-bs-parent="#{{ id }}">
+      <div id="{{ id }}-collapse-{{ clean_key }}" class="accordion-collapse collapse {{ collapse_class }}" aria-labelledby="{{ heading_id }}" data-bs-parent="#{{ id }}">
         <div class="accordion-body">
           {% if output == 'grouped' %}
             {% for content in row.content %}

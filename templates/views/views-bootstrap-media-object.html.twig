@@ -4,20 +4,20 @@
 <div{{ attributes.addClass(classes) }} id="{{ id }}">
   {% for key, row in rows -%}
     <div class="d-flex {{ alignment }}">
-      <div class="flex-shrink-0 {{ order_image }}">
-        {% if row.image %}
-          {{ row.image }}
-        {% endif %}
-      </div>
-      <div class="flex-grow-1 ms-3 {{ order_body }}">
-        {% if row.heading %}
-          {{ row.heading }}
-        {% endif %}
+        <div class="flex-shrink-0 {{ order_image }}">
+            {% if row.image %}
+                {{ row.image }}
+            {% endif %}
+        </div>
+        <div class="flex-grow-1 ms-3 {{ order_body }}">
+            {% if row.heading %}
+                {{ row.heading }}
+            {% endif %}
 
-        {% if row.body %}
-          {{ row.body }}
-        {% endif %}
-      </div>
+            {% if row.body %}
+                {{ row.body }}
+            {% endif %}
+        </div>
     </div>
-  {%- endfor %}
+    {%- endfor %}
 </div>
