@@ -13,8 +13,12 @@
  *   resumes the cycling of the carousel on mouseleave.
  * - wrap: Whether the carousel should cycle continuously or have
  *   hard stops.
- * - columns: The amount of columns in a single slide.
- * - breakpoints: The min-width of the multicolumn view.
+ * - columns: The number of items displayed per slide on larger screens.
+ * - breakpoints: Bootstrap column classes for responsive behavior. On screens
+ *   below the selected breakpoint, displays 1 item per slide at full width
+ *   (col-12). At the breakpoint and above, displays the number of columns
+ *   specified. For example, 'col-12 col-md-4' shows 1 item on mobile and
+ *   3 items (12/4=3) on medium screens and larger.
  *
  * @see template_preprocess_views_bootstrap_carousel()
  *
