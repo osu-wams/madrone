@@ -1,20 +1,21 @@
-// only changes to ckeditor with the included styles.
-body.cke_editable_themed {
-  padding: 1rem;
+@import "../abstracts/_osu_variables";
+// Only changes to ckeditor with the included styles.
+// Base overrides for ckeditor.
+&{
+  --ck-content-font-family: #{$font-family-base};
+  --ck-content-font-size: #{$font-size-base};
+  --ck-content-line-height: #{$line-height-base};
+  --ck-content-font-color: #{$body-color};
 }
-
-.cke_reset_all .cke_dialog_body * {
-  font: 0.8125rem/1.538em BlinkMacSystemFont,
-  -apple-system,
-  'Segoe UI',
-  Roboto,
-  Oxygen-Sans,
-  Ubuntu,
-  Cantarell,
-  'Helvetica Neue',
-  sans-serif;
-}
-
-.cke_editable_themed .scayt-misspell-word {
-  border-bottom-style: dotted !important;
+// Bootstrap tables have a broad target for some of the child elements.
+// .ck-content .table > :not(caption) > * > *
+// The issue is this .table class gets applied to the figure in ckeditor that
+// wrapps the table when editing and causes the ckeditor button widgets
+// to create new lines above/below the table to lose their styling.
+.table .ck svg {
+  padding: unset;
+  color: unset;
+  background-color: unset;
+  border-width: unset;
+  box-shadow: unset;
 }

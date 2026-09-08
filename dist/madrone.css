@@ -18744,18 +18744,6 @@ article.media--view-mode-video-720 iframe:where(.media-oembed-content) {
   outline: 2px solid hsl(210, 11%, 15%);
 }
 
-body.cke_editable_themed {
-  padding: 1rem;
-}
-
-.cke_reset_all .cke_dialog_body * {
-  font: 0.8125rem/1.538em BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-
-.cke_editable_themed .scayt-misspell-word {
-  border-bottom-style: dotted !important;
-}
-
 .toc-js .toc-h3 {
   margin-left: 0.5rem;
 }
