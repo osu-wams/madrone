@@ -7,6 +7,7 @@
 @import '../node_modules/bootstrap/scss/mixins';
 @import '../node_modules/bootstrap/scss/utilities';
 @import '../node_modules/bootstrap/scss/root';
+
 .ck-content {
   @import 'madrone-utilities';
   @import '../node_modules/bootstrap/scss/bootstrap';
@@ -59,3 +60,4 @@
   @import 'scss/components/osu_webform';
   @import 'scss/components/osu_media_library';
 }
+@import 'scss/components/osu_layout_builder_ckeditor_fixes';

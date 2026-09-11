@@ -17782,4 +17782,8 @@ a > .ck-content code {
 .ck-content .media-library-widget-modal .media-library-item--table img {
   max-width: 6.25rem;
 }
+
+.ck-table-bogus-paragraph {
+  color: hotpink !important;
+}
 /*# sourceMappingURL=madrone-ckeditor-styles.css.map */
