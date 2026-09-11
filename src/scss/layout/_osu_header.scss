@@ -17,11 +17,15 @@
   }
 
   img {
-    height: 60px;
+    height: 60px; //if the height doesn't start at 60px any companion logo will make the search button wrap on smaller mobile devices
 
-    @media (min-width: 992px) {
+    @media (min-width: 360px) {
       height: 80px;
     }
+
+    // @media (min-width: 992px) {
+    //   height: 80px;
+    // }
   }
 }
 
