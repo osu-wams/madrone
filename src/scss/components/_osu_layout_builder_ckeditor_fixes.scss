@@ -1,0 +1,12 @@
+// CKeditor in Drupal has very specific styling.
+// This fixes table header row font colors.
+// @TODO still need to fix the head color text;
+
+// Drupal adds #drupal-off-canvas [data-drupal-ck-style-fence]
+// to any ckeditor style sheet, we need to style the span in tables and looking
+// the selector
+// #drupal-off-canvas-wrapper [data-drupal-ck-style-fence] .ck.ck-content * {
+// We can probalby make someting better
+.ck-table-bogus-paragraph {
+  color: hotpink !important;
+}

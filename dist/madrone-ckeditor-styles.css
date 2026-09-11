@@ -2136,7 +2136,8 @@ a > .ck-content code {
     --bs-gutter-y: 8rem;
   }
 }
-.ck-content .table, .ck-content .osu-table-orange, .ck-content .osu-table, .ck-content table:not(.table, .osu-table, .osu-table-orange) {
+.ck-content .table, .ck-content .osu-table-orange, .ck-content .osu-table,
+.ck-content table:not([class*=osu-table]) {
   --bs-table-color-type: initial;
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
@@ -2156,17 +2157,20 @@ a > .ck-content code {
   vertical-align: top;
   border-color: var(--bs-table-border-color);
 }
-.ck-content .table > :not(caption) > * > *, .ck-content .osu-table-orange > :not(caption) > * > *, .ck-content .osu-table > :not(caption) > * > *, .ck-content table:not(.table, .osu-table, .osu-table-orange) > :not(caption) > * > * {
+.ck-content .table > :not(caption) > * > *, .ck-content .osu-table-orange > :not(caption) > * > *, .ck-content .osu-table > :not(caption) > * > *,
+.ck-content table:not([class*=osu-table]) > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
   background-color: var(--bs-table-bg);
   border-bottom-width: var(--bs-border-width);
   box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
 }
-.ck-content .table > tbody, .ck-content .osu-table-orange > tbody, .ck-content .osu-table > tbody, .ck-content table:not(.table, .osu-table, .osu-table-orange) > tbody {
+.ck-content .table > tbody, .ck-content .osu-table-orange > tbody, .ck-content .osu-table > tbody,
+.ck-content table:not([class*=osu-table]) > tbody {
   vertical-align: inherit;
 }
-.ck-content .table > thead, .ck-content .osu-table-orange > thead, .ck-content .osu-table > thead, .ck-content table:not(.table, .osu-table, .osu-table-orange) > thead {
+.ck-content .table > thead, .ck-content .osu-table-orange > thead, .ck-content .osu-table > thead,
+.ck-content table:not([class*=osu-table]) > thead {
   vertical-align: bottom;
 }
 .ck-content .table-group-divider {
@@ -2178,10 +2182,12 @@ a > .ck-content code {
 .ck-content .table-sm > :not(caption) > * > * {
   padding: 0.25rem 0.25rem;
 }
-.ck-content .table-bordered > :not(caption) > *, .ck-content .osu-table-orange > :not(caption) > *, .ck-content .osu-table > :not(caption) > *, .ck-content table:not(.table, .osu-table, .osu-table-orange) > :not(caption) > * {
+.ck-content .table-bordered > :not(caption) > *, .ck-content .osu-table-orange > :not(caption) > *, .ck-content .osu-table > :not(caption) > *,
+.ck-content table:not([class*=osu-table]) > :not(caption) > * {
   border-width: var(--bs-border-width) 0;
 }
-.ck-content .table-bordered > :not(caption) > * > *, .ck-content .osu-table-orange > :not(caption) > * > *, .ck-content .osu-table > :not(caption) > * > *, .ck-content table:not(.table, .osu-table, .osu-table-orange) > :not(caption) > * > * {
+.ck-content .table-bordered > :not(caption) > * > *, .ck-content .osu-table-orange > :not(caption) > * > *, .ck-content .osu-table > :not(caption) > * > *,
+.ck-content table:not([class*=osu-table]) > :not(caption) > * > * {
   border-width: 0 var(--bs-border-width);
 }
 .ck-content .table-borderless > :not(caption) > * > * {
@@ -2190,7 +2196,8 @@ a > .ck-content code {
 .ck-content .table-borderless > :not(:first-child) {
   border-top-width: 0;
 }
-.ck-content .table-striped > tbody > tr:nth-of-type(odd) > *, .ck-content .osu-table-orange > tbody > tr:nth-of-type(odd) > *, .ck-content .osu-table > tbody > tr:nth-of-type(odd) > *, .ck-content table:not(.table, .osu-table, .osu-table-orange) > tbody > tr:nth-of-type(odd) > * {
+.ck-content .table-striped > tbody > tr:nth-of-type(odd) > *, .ck-content .osu-table-orange > tbody > tr:nth-of-type(odd) > *, .ck-content .osu-table > tbody > tr:nth-of-type(odd) > *,
+.ck-content table:not([class*=osu-table]) > tbody > tr:nth-of-type(odd) > * {
   --bs-table-color-type: var(--bs-table-striped-color);
   --bs-table-bg-type: var(--bs-table-striped-bg);
 }
@@ -2202,7 +2209,8 @@ a > .ck-content code {
   --bs-table-color-state: var(--bs-table-active-color);
   --bs-table-bg-state: var(--bs-table-active-bg);
 }
-.ck-content .table-hover > tbody > tr:hover > *, .ck-content .osu-table-orange > tbody > tr:hover > *, .ck-content .osu-table > tbody > tr:hover > *, .ck-content table:not(.table, .osu-table, .osu-table-orange) > tbody > tr:hover > * {
+.ck-content .table-hover > tbody > tr:hover > *, .ck-content .osu-table-orange > tbody > tr:hover > *, .ck-content .osu-table > tbody > tr:hover > *,
+.ck-content table:not([class*=osu-table]) > tbody > tr:hover > * {
   --bs-table-color-state: var(--bs-table-hover-color);
   --bs-table-bg-state: var(--bs-table-hover-bg);
 }
@@ -2297,7 +2305,8 @@ a > .ck-content code {
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
 }
-.ck-content .table-dark, .ck-content .osu-table > thead, .ck-content table:not(.table, .osu-table, .osu-table-orange) > thead {
+.ck-content .table-dark, .ck-content .osu-table > thead,
+.ck-content table:not([class*=osu-table]) > thead {
   --bs-table-color: #fff;
   --bs-table-bg: #212529;
   --bs-table-border-color: rgb(30.3529411765%, 31.6078431373%, 32.862745098%);
@@ -17319,7 +17328,8 @@ a > .ck-content code {
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
 }
-.ck-content .osu-table > thead a, .ck-content table:not(.table, .osu-table, .osu-table-orange) > thead a {
+.ck-content .osu-table > thead a,
+.ck-content table:not([class*=osu-table]) > thead a {
   color: #fff;
   text-decoration-color: #fff;
 }
@@ -17387,14 +17397,19 @@ a > .ck-content code {
   box-shadow: none;
   outline: 2px solid hsl(210, 11%, 15%);
 }
-.ck-content body.cke_editable_themed {
-  padding: 1rem;
+.ck-content {
+  --ck-content-font-family: Open Sans, sans-serif;
+  --ck-content-font-size: 1.125rem;
+  --ck-content-line-height: 1.8;
+  --ck-content-font-color: #423e3c;
 }
-.ck-content .cke_reset_all .cke_dialog_body * {
-  font: 0.8125rem/1.538em BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-.ck-content .cke_editable_themed .scayt-misspell-word {
-  border-bottom-style: dotted !important;
+.ck-content .table .ck svg, .ck-content .osu-table .ck svg,
+.ck-content table:not([class*=osu-table]) .ck svg, .ck-content .osu-table-orange .ck svg {
+  padding: unset;
+  color: unset;
+  background-color: unset;
+  border-width: unset;
+  box-shadow: unset;
 }
 .ck-content .layout-builder {
   background-color: transparent;
@@ -17766,5 +17781,9 @@ a > .ck-content code {
 }
 .ck-content .media-library-widget-modal .media-library-item--table img {
   max-width: 6.25rem;
+}
+
+.ck-table-bogus-paragraph {
+  color: hotpink !important;
 }
 /*# sourceMappingURL=madrone-ckeditor-styles.css.map */
