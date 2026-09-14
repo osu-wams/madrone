@@ -1,5 +1,6 @@
 @import "../abstracts/osu_variables";
 .btn-primary {
+   @extend .btn;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -17,6 +18,7 @@
 }
 
 .btn-secondary {
+   @extend .btn;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -34,6 +36,7 @@
 }
 
 .btn-success {
+   @extend .btn;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -51,6 +54,7 @@
 }
 
 .btn-info {
+   @extend .btn;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -68,6 +72,7 @@
 }
 
 .btn-warning {
+   @extend .btn;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -85,6 +90,7 @@
 }
 
 .btn-danger {
+   @extend .btn;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -103,6 +109,7 @@
 
 // Should be like our Grey
 .btn-light {
+   @extend .btn;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -120,6 +127,7 @@
 }
 
 .btn-dark {
+   @extend .btn;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};

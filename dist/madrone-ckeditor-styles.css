@@ -2703,7 +2703,7 @@ a > .ck-content code {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.ck-content .btn-check[disabled] + .btn, .ck-content .node-preview-container .node-preview-form-select .btn-check[disabled] + .node-preview-backlink, .ck-content .btn-check[disabled] + a.button, .ck-content .btn-check:disabled + .btn, .ck-content .node-preview-container .node-preview-form-select .btn-check:disabled + .node-preview-backlink, .ck-content .btn-check:disabled + a.button {
+.ck-content .btn-check[disabled] + .btn, .ck-content .node-preview-container .node-preview-form-select .btn-check[disabled] + .node-preview-backlink, .ck-content .btn-check[disabled] + .btn-dark, .ck-content .btn-check[disabled] + .btn-light, .ck-content .btn-check[disabled] + .btn-danger, .ck-content .btn-check[disabled] + .btn-warning, .ck-content .btn-check[disabled] + .btn-info, .ck-content .btn-check[disabled] + .btn-success, .ck-content .btn-check[disabled] + .btn-secondary, .ck-content .btn-check[disabled] + .btn-primary, .ck-content .btn-check[disabled] + a.button, .ck-content .btn-check:disabled + .btn, .ck-content .node-preview-container .node-preview-form-select .btn-check:disabled + .node-preview-backlink, .ck-content .btn-check:disabled + .btn-dark, .ck-content .btn-check:disabled + .btn-light, .ck-content .btn-check:disabled + .btn-danger, .ck-content .btn-check:disabled + .btn-warning, .ck-content .btn-check:disabled + .btn-info, .ck-content .btn-check:disabled + .btn-success, .ck-content .btn-check:disabled + .btn-secondary, .ck-content .btn-check:disabled + .btn-primary, .ck-content .btn-check:disabled + a.button {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2898,11 +2898,11 @@ a > .ck-content code {
 .ck-content .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.ck-content .input-group .btn, .ck-content .input-group .node-preview-container .node-preview-form-select .node-preview-backlink, .ck-content .node-preview-container .node-preview-form-select .input-group .node-preview-backlink, .ck-content .input-group a.button {
+.ck-content .input-group .btn, .ck-content .input-group .node-preview-container .node-preview-form-select .node-preview-backlink, .ck-content .node-preview-container .node-preview-form-select .input-group .node-preview-backlink, .ck-content .input-group .btn-dark, .ck-content .input-group .btn-light, .ck-content .input-group .btn-danger, .ck-content .input-group .btn-warning, .ck-content .input-group .btn-info, .ck-content .input-group .btn-success, .ck-content .input-group .btn-secondary, .ck-content .input-group .btn-primary, .ck-content .input-group a.button {
   position: relative;
   z-index: 2;
 }
-.ck-content .input-group .btn:focus, .ck-content .input-group .node-preview-container .node-preview-form-select .node-preview-backlink:focus, .ck-content .node-preview-container .node-preview-form-select .input-group .node-preview-backlink:focus, .ck-content .input-group a.button:focus {
+.ck-content .input-group .btn:focus, .ck-content .input-group .node-preview-container .node-preview-form-select .node-preview-backlink:focus, .ck-content .node-preview-container .node-preview-form-select .input-group .node-preview-backlink:focus, .ck-content .input-group .btn-dark:focus, .ck-content .input-group .btn-light:focus, .ck-content .input-group .btn-danger:focus, .ck-content .input-group .btn-warning:focus, .ck-content .input-group .btn-info:focus, .ck-content .input-group .btn-success:focus, .ck-content .input-group .btn-secondary:focus, .ck-content .input-group .btn-primary:focus, .ck-content .input-group a.button:focus {
   z-index: 5;
 }
 .ck-content .input-group-text {
@@ -2924,6 +2924,14 @@ a > .ck-content code {
 .ck-content .input-group-lg > .input-group-text,
 .ck-content .input-group-lg > .btn,
 .ck-content .node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
+.ck-content .input-group-lg > .btn-dark,
+.ck-content .input-group-lg > .btn-light,
+.ck-content .input-group-lg > .btn-danger,
+.ck-content .input-group-lg > .btn-warning,
+.ck-content .input-group-lg > .btn-info,
+.ck-content .input-group-lg > .btn-success,
+.ck-content .input-group-lg > .btn-secondary,
+.ck-content .input-group-lg > .btn-primary,
 .ck-content .input-group-lg > a.button {
   padding: 1rem 1.5rem;
   font-size: calc(1.265625rem + 0.1875vw);
@@ -2934,6 +2942,14 @@ a > .ck-content code {
   .ck-content .input-group-lg > .input-group-text,
   .ck-content .input-group-lg > .btn,
   .ck-content .node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
+  .ck-content .input-group-lg > .btn-dark,
+  .ck-content .input-group-lg > .btn-light,
+  .ck-content .input-group-lg > .btn-danger,
+  .ck-content .input-group-lg > .btn-warning,
+  .ck-content .input-group-lg > .btn-info,
+  .ck-content .input-group-lg > .btn-success,
+  .ck-content .input-group-lg > .btn-secondary,
+  .ck-content .input-group-lg > .btn-primary,
   .ck-content .input-group-lg > a.button {
     font-size: 1.40625rem;
   }
@@ -2943,6 +2959,14 @@ a > .ck-content code {
 .ck-content .input-group-lg > .input-group-text,
 .ck-content .input-group-lg > .btn,
 .ck-content .node-preview-container .node-preview-form-select .input-group-lg > .node-preview-backlink,
+.ck-content .input-group-lg > .btn-dark,
+.ck-content .input-group-lg > .btn-light,
+.ck-content .input-group-lg > .btn-danger,
+.ck-content .input-group-lg > .btn-warning,
+.ck-content .input-group-lg > .btn-info,
+.ck-content .input-group-lg > .btn-success,
+.ck-content .input-group-lg > .btn-secondary,
+.ck-content .input-group-lg > .btn-primary,
 .ck-content .input-group-lg > a.button {
   border-radius: var(--bs-border-radius-lg);
 }
@@ -2951,6 +2975,14 @@ a > .ck-content code {
 .ck-content .input-group-sm > .input-group-text,
 .ck-content .input-group-sm > .btn,
 .ck-content .node-preview-container .node-preview-form-select .input-group-sm > .node-preview-backlink,
+.ck-content .input-group-sm > .btn-dark,
+.ck-content .input-group-sm > .btn-light,
+.ck-content .input-group-sm > .btn-danger,
+.ck-content .input-group-sm > .btn-warning,
+.ck-content .input-group-sm > .btn-info,
+.ck-content .input-group-sm > .btn-success,
+.ck-content .input-group-sm > .btn-secondary,
+.ck-content .input-group-sm > .btn-primary,
 .ck-content .input-group-sm > a.button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
@@ -3142,7 +3174,7 @@ a > .ck-content code {
 .ck-content .input-group > .form-floating:not(:focus-within).is-invalid {
   z-index: 4;
 }
-.ck-content .btn, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .ck-content a.button {
+.ck-content .btn, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .ck-content .btn-dark, .ck-content .btn-light, .ck-content .btn-danger, .ck-content .btn-warning, .ck-content .btn-info, .ck-content .btn-success, .ck-content .btn-secondary, .ck-content .btn-primary, .ck-content a.button {
   --bs-btn-padding-x: 1.5rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -3176,44 +3208,44 @@ a > .ck-content code {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .ck-content .btn, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .ck-content a.button {
+  .ck-content .btn, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .ck-content .btn-dark, .ck-content .btn-light, .ck-content .btn-danger, .ck-content .btn-warning, .ck-content .btn-info, .ck-content .btn-success, .ck-content .btn-secondary, .ck-content .btn-primary, .ck-content a.button {
     transition: none;
   }
 }
-.ck-content .btn:hover, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:hover, .ck-content a.button:hover {
+.ck-content .btn:hover, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:hover, .ck-content .btn-dark:hover, .ck-content .btn-light:hover, .ck-content .btn-danger:hover, .ck-content .btn-warning:hover, .ck-content .btn-info:hover, .ck-content .btn-success:hover, .ck-content .btn-secondary:hover, .ck-content .btn-primary:hover, .ck-content a.button:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .ck-content .btn:hover, .btn-check + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:hover, .btn-check + .ck-content a.button:hover {
+.btn-check + .ck-content .btn:hover, .btn-check + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:hover, .btn-check + .ck-content .btn-dark:hover, .btn-check + .ck-content .btn-light:hover, .btn-check + .ck-content .btn-danger:hover, .btn-check + .ck-content .btn-warning:hover, .btn-check + .ck-content .btn-info:hover, .btn-check + .ck-content .btn-success:hover, .btn-check + .ck-content .btn-secondary:hover, .btn-check + .ck-content .btn-primary:hover, .btn-check + .ck-content a.button:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.ck-content .btn:focus-visible, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:focus-visible, .ck-content a.button:focus-visible {
+.ck-content .btn:focus-visible, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:focus-visible, .ck-content .btn-dark:focus-visible, .ck-content .btn-light:focus-visible, .ck-content .btn-danger:focus-visible, .ck-content .btn-warning:focus-visible, .ck-content .btn-info:focus-visible, .ck-content .btn-success:focus-visible, .ck-content .btn-secondary:focus-visible, .ck-content .btn-primary:focus-visible, .ck-content a.button:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .ck-content .btn, .btn-check:focus-visible + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .btn-check:focus-visible + .ck-content a.button {
+.btn-check:focus-visible + .ck-content .btn, .btn-check:focus-visible + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .btn-check:focus-visible + .ck-content .btn-dark, .btn-check:focus-visible + .ck-content .btn-light, .btn-check:focus-visible + .ck-content .btn-danger, .btn-check:focus-visible + .ck-content .btn-warning, .btn-check:focus-visible + .ck-content .btn-info, .btn-check:focus-visible + .ck-content .btn-success, .btn-check:focus-visible + .ck-content .btn-secondary, .btn-check:focus-visible + .ck-content .btn-primary, .btn-check:focus-visible + .ck-content a.button {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .ck-content .btn, .btn-check:checked + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .btn-check:checked + .ck-content a.button, :not(.btn-check) + .ck-content .btn:active, :not(.btn-check) + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:active, :not(.btn-check) + .ck-content a.button:active, .ck-content .btn:first-child:active, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:first-child:active, .ck-content a.button:first-child:active, .ck-content .btn.active, .ck-content .node-preview-container .node-preview-form-select .active.node-preview-backlink, .ck-content a.active.button, .ck-content .btn.show, .ck-content .node-preview-container .node-preview-form-select .show.node-preview-backlink, .ck-content a.show.button {
+.btn-check:checked + .ck-content .btn, .btn-check:checked + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .btn-check:checked + .ck-content .btn-dark, .btn-check:checked + .ck-content .btn-light, .btn-check:checked + .ck-content .btn-danger, .btn-check:checked + .ck-content .btn-warning, .btn-check:checked + .ck-content .btn-info, .btn-check:checked + .ck-content .btn-success, .btn-check:checked + .ck-content .btn-secondary, .btn-check:checked + .ck-content .btn-primary, .btn-check:checked + .ck-content a.button, :not(.btn-check) + .ck-content .btn:active, :not(.btn-check) + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:active, :not(.btn-check) + .ck-content .btn-dark:active, :not(.btn-check) + .ck-content .btn-light:active, :not(.btn-check) + .ck-content .btn-danger:active, :not(.btn-check) + .ck-content .btn-warning:active, :not(.btn-check) + .ck-content .btn-info:active, :not(.btn-check) + .ck-content .btn-success:active, :not(.btn-check) + .ck-content .btn-secondary:active, :not(.btn-check) + .ck-content .btn-primary:active, :not(.btn-check) + .ck-content a.button:active, .ck-content .btn:first-child:active, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:first-child:active, .ck-content .btn-dark:first-child:active, .ck-content .btn-light:first-child:active, .ck-content .btn-danger:first-child:active, .ck-content .btn-warning:first-child:active, .ck-content .btn-info:first-child:active, .ck-content .btn-success:first-child:active, .ck-content .btn-secondary:first-child:active, .ck-content .btn-primary:first-child:active, .ck-content a.button:first-child:active, .ck-content .btn.active, .ck-content .node-preview-container .node-preview-form-select .active.node-preview-backlink, .ck-content .active.btn-dark, .ck-content .active.btn-light, .ck-content .active.btn-danger, .ck-content .active.btn-warning, .ck-content .active.btn-info, .ck-content .active.btn-success, .ck-content .active.btn-secondary, .ck-content .active.btn-primary, .ck-content a.active.button, .ck-content .btn.show, .ck-content .node-preview-container .node-preview-form-select .show.node-preview-backlink, .ck-content .show.btn-dark, .ck-content .show.btn-light, .ck-content .show.btn-danger, .ck-content .show.btn-warning, .ck-content .show.btn-info, .ck-content .show.btn-success, .ck-content .show.btn-secondary, .ck-content .show.btn-primary, .ck-content a.show.button {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .ck-content .btn:focus-visible, .btn-check:checked + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:focus-visible, .btn-check:checked + .ck-content a.button:focus-visible, :not(.btn-check) + .ck-content .btn:active:focus-visible, :not(.btn-check) + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:active:focus-visible, :not(.btn-check) + .ck-content a.button:active:focus-visible, .ck-content .btn:first-child:active:focus-visible, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:first-child:active:focus-visible, .ck-content a.button:first-child:active:focus-visible, .ck-content .btn.active:focus-visible, .ck-content .node-preview-container .node-preview-form-select .active.node-preview-backlink:focus-visible, .ck-content a.active.button:focus-visible, .ck-content .btn.show:focus-visible, .ck-content .node-preview-container .node-preview-form-select .show.node-preview-backlink:focus-visible, .ck-content a.show.button:focus-visible {
+.btn-check:checked + .ck-content .btn:focus-visible, .btn-check:checked + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:focus-visible, .btn-check:checked + .ck-content .btn-dark:focus-visible, .btn-check:checked + .ck-content .btn-light:focus-visible, .btn-check:checked + .ck-content .btn-danger:focus-visible, .btn-check:checked + .ck-content .btn-warning:focus-visible, .btn-check:checked + .ck-content .btn-info:focus-visible, .btn-check:checked + .ck-content .btn-success:focus-visible, .btn-check:checked + .ck-content .btn-secondary:focus-visible, .btn-check:checked + .ck-content .btn-primary:focus-visible, .btn-check:checked + .ck-content a.button:focus-visible, :not(.btn-check) + .ck-content .btn:active:focus-visible, :not(.btn-check) + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:active:focus-visible, :not(.btn-check) + .ck-content .btn-dark:active:focus-visible, :not(.btn-check) + .ck-content .btn-light:active:focus-visible, :not(.btn-check) + .ck-content .btn-danger:active:focus-visible, :not(.btn-check) + .ck-content .btn-warning:active:focus-visible, :not(.btn-check) + .ck-content .btn-info:active:focus-visible, :not(.btn-check) + .ck-content .btn-success:active:focus-visible, :not(.btn-check) + .ck-content .btn-secondary:active:focus-visible, :not(.btn-check) + .ck-content .btn-primary:active:focus-visible, :not(.btn-check) + .ck-content a.button:active:focus-visible, .ck-content .btn:first-child:active:focus-visible, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:first-child:active:focus-visible, .ck-content .btn-dark:first-child:active:focus-visible, .ck-content .btn-light:first-child:active:focus-visible, .ck-content .btn-danger:first-child:active:focus-visible, .ck-content .btn-warning:first-child:active:focus-visible, .ck-content .btn-info:first-child:active:focus-visible, .ck-content .btn-success:first-child:active:focus-visible, .ck-content .btn-secondary:first-child:active:focus-visible, .ck-content .btn-primary:first-child:active:focus-visible, .ck-content a.button:first-child:active:focus-visible, .ck-content .btn.active:focus-visible, .ck-content .node-preview-container .node-preview-form-select .active.node-preview-backlink:focus-visible, .ck-content .active.btn-dark:focus-visible, .ck-content .active.btn-light:focus-visible, .ck-content .active.btn-danger:focus-visible, .ck-content .active.btn-warning:focus-visible, .ck-content .active.btn-info:focus-visible, .ck-content .active.btn-success:focus-visible, .ck-content .active.btn-secondary:focus-visible, .ck-content .active.btn-primary:focus-visible, .ck-content a.active.button:focus-visible, .ck-content .btn.show:focus-visible, .ck-content .node-preview-container .node-preview-form-select .show.node-preview-backlink:focus-visible, .ck-content .show.btn-dark:focus-visible, .ck-content .show.btn-light:focus-visible, .ck-content .show.btn-danger:focus-visible, .ck-content .show.btn-warning:focus-visible, .ck-content .show.btn-info:focus-visible, .ck-content .show.btn-success:focus-visible, .ck-content .show.btn-secondary:focus-visible, .ck-content .show.btn-primary:focus-visible, .ck-content a.show.button:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked:focus-visible + .ck-content .btn, .btn-check:checked:focus-visible + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .btn-check:checked:focus-visible + .ck-content a.button {
+.btn-check:checked:focus-visible + .ck-content .btn, .btn-check:checked:focus-visible + .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, .btn-check:checked:focus-visible + .ck-content .btn-dark, .btn-check:checked:focus-visible + .ck-content .btn-light, .btn-check:checked:focus-visible + .ck-content .btn-danger, .btn-check:checked:focus-visible + .ck-content .btn-warning, .btn-check:checked:focus-visible + .ck-content .btn-info, .btn-check:checked:focus-visible + .ck-content .btn-success, .btn-check:checked:focus-visible + .ck-content .btn-secondary, .btn-check:checked:focus-visible + .ck-content .btn-primary, .btn-check:checked:focus-visible + .ck-content a.button {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.ck-content .btn:disabled, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:disabled, .ck-content a.button:disabled, .ck-content .btn.disabled, .ck-content .node-preview-container .node-preview-form-select .disabled.node-preview-backlink, .ck-content a.disabled.button, fieldset:disabled .ck-content .btn, fieldset:disabled .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, fieldset:disabled .ck-content a.button {
+.ck-content .btn:disabled, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink:disabled, .ck-content .btn-dark:disabled, .ck-content .btn-light:disabled, .ck-content .btn-danger:disabled, .ck-content .btn-warning:disabled, .ck-content .btn-info:disabled, .ck-content .btn-success:disabled, .ck-content .btn-secondary:disabled, .ck-content .btn-primary:disabled, .ck-content a.button:disabled, .ck-content .btn.disabled, .ck-content .node-preview-container .node-preview-form-select .disabled.node-preview-backlink, .ck-content .disabled.btn-dark, .ck-content .disabled.btn-light, .ck-content .disabled.btn-danger, .ck-content .disabled.btn-warning, .ck-content .disabled.btn-info, .ck-content .disabled.btn-success, .ck-content .disabled.btn-secondary, .ck-content .disabled.btn-primary, .ck-content a.disabled.button, fieldset:disabled .ck-content .btn, fieldset:disabled .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink, fieldset:disabled .ck-content .btn-dark, fieldset:disabled .ck-content .btn-light, fieldset:disabled .ck-content .btn-danger, fieldset:disabled .ck-content .btn-warning, fieldset:disabled .ck-content .btn-info, fieldset:disabled .ck-content .btn-success, fieldset:disabled .ck-content .btn-secondary, fieldset:disabled .ck-content .btn-primary, fieldset:disabled .ck-content a.button {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -3721,20 +3753,20 @@ a > .ck-content code {
 .ck-content .btn-link:hover {
   color: var(--bs-btn-hover-color);
 }
-.ck-content .btn-lg, .ck-content .btn-group-lg > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .ck-content .btn-group-lg > a.button {
+.ck-content .btn-lg, .ck-content .btn-group-lg > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .ck-content .btn-group-lg > .btn-dark, .ck-content .btn-group-lg > .btn-light, .ck-content .btn-group-lg > .btn-danger, .ck-content .btn-group-lg > .btn-warning, .ck-content .btn-group-lg > .btn-info, .ck-content .btn-group-lg > .btn-success, .ck-content .btn-group-lg > .btn-secondary, .ck-content .btn-group-lg > .btn-primary, .ck-content .btn-group-lg > a.button {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1.5rem;
   --bs-btn-font-size: calc(1.265625rem + 0.1875vw);
 }
 @media (min-width: 1200px) {
-  .ck-content .btn-lg, .ck-content .btn-group-lg > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .ck-content .btn-group-lg > a.button {
+  .ck-content .btn-lg, .ck-content .btn-group-lg > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .ck-content .btn-group-lg > .btn-dark, .ck-content .btn-group-lg > .btn-light, .ck-content .btn-group-lg > .btn-danger, .ck-content .btn-group-lg > .btn-warning, .ck-content .btn-group-lg > .btn-info, .ck-content .btn-group-lg > .btn-success, .ck-content .btn-group-lg > .btn-secondary, .ck-content .btn-group-lg > .btn-primary, .ck-content .btn-group-lg > a.button {
     --bs-btn-font-size: 1.40625rem;
   }
 }
-.ck-content .btn-lg, .ck-content .btn-group-lg > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .ck-content .btn-group-lg > a.button {
+.ck-content .btn-lg, .ck-content .btn-group-lg > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink, .ck-content .btn-group-lg > .btn-dark, .ck-content .btn-group-lg > .btn-light, .ck-content .btn-group-lg > .btn-danger, .ck-content .btn-group-lg > .btn-warning, .ck-content .btn-group-lg > .btn-info, .ck-content .btn-group-lg > .btn-success, .ck-content .btn-group-lg > .btn-secondary, .ck-content .btn-group-lg > .btn-primary, .ck-content .btn-group-lg > a.button {
   --bs-btn-border-radius: 1.5rem;
 }
-.ck-content .btn-sm, .ck-content .btn-group-sm > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink, .ck-content .btn-group-sm > a.button {
+.ck-content .btn-sm, .ck-content .btn-group-sm > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink, .ck-content .btn-group-sm > .btn-dark, .ck-content .btn-group-sm > .btn-light, .ck-content .btn-group-sm > .btn-danger, .ck-content .btn-group-sm > .btn-warning, .ck-content .btn-group-sm > .btn-info, .ck-content .btn-group-sm > .btn-success, .ck-content .btn-group-sm > .btn-secondary, .ck-content .btn-group-sm > .btn-primary, .ck-content .btn-group-sm > a.button {
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 1.5rem;
   --bs-btn-font-size: 0.984375rem;
@@ -4083,46 +4115,142 @@ a > .ck-content code {
   display: inline-flex;
   vertical-align: middle;
 }
-.ck-content .btn-group > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink, .ck-content .btn-group > a.button,
+.ck-content .btn-group > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink, .ck-content .btn-group > .btn-dark, .ck-content .btn-group > .btn-light, .ck-content .btn-group > .btn-danger, .ck-content .btn-group > .btn-warning, .ck-content .btn-group > .btn-info, .ck-content .btn-group > .btn-success, .ck-content .btn-group > .btn-secondary, .ck-content .btn-group > .btn-primary, .ck-content .btn-group > a.button,
 .ck-content .btn-group-vertical > .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink,
+.ck-content .btn-group-vertical > .btn-dark,
+.ck-content .btn-group-vertical > .btn-light,
+.ck-content .btn-group-vertical > .btn-danger,
+.ck-content .btn-group-vertical > .btn-warning,
+.ck-content .btn-group-vertical > .btn-info,
+.ck-content .btn-group-vertical > .btn-success,
+.ck-content .btn-group-vertical > .btn-secondary,
+.ck-content .btn-group-vertical > .btn-primary,
 .ck-content .btn-group-vertical > a.button {
   position: relative;
   flex: 1 1 auto;
 }
-.ck-content .btn-group > .btn-check:checked + .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group > .btn-check:checked + .node-preview-backlink, .ck-content .btn-group > .btn-check:checked + a.button,
+.ck-content .btn-group > .btn-check:checked + .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group > .btn-check:checked + .node-preview-backlink, .ck-content .btn-group > .btn-check:checked + .btn-dark, .ck-content .btn-group > .btn-check:checked + .btn-light, .ck-content .btn-group > .btn-check:checked + .btn-danger, .ck-content .btn-group > .btn-check:checked + .btn-warning, .ck-content .btn-group > .btn-check:checked + .btn-info, .ck-content .btn-group > .btn-check:checked + .btn-success, .ck-content .btn-group > .btn-check:checked + .btn-secondary, .ck-content .btn-group > .btn-check:checked + .btn-primary, .ck-content .btn-group > .btn-check:checked + a.button,
 .ck-content .btn-group > .btn-check:focus + .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > .btn-check:focus + .node-preview-backlink,
+.ck-content .btn-group > .btn-check:focus + .btn-dark,
+.ck-content .btn-group > .btn-check:focus + .btn-light,
+.ck-content .btn-group > .btn-check:focus + .btn-danger,
+.ck-content .btn-group > .btn-check:focus + .btn-warning,
+.ck-content .btn-group > .btn-check:focus + .btn-info,
+.ck-content .btn-group > .btn-check:focus + .btn-success,
+.ck-content .btn-group > .btn-check:focus + .btn-secondary,
+.ck-content .btn-group > .btn-check:focus + .btn-primary,
 .ck-content .btn-group > .btn-check:focus + a.button,
 .ck-content .btn-group > .btn:hover,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:hover,
+.ck-content .btn-group > .btn-dark:hover,
+.ck-content .btn-group > .btn-light:hover,
+.ck-content .btn-group > .btn-danger:hover,
+.ck-content .btn-group > .btn-warning:hover,
+.ck-content .btn-group > .btn-info:hover,
+.ck-content .btn-group > .btn-success:hover,
+.ck-content .btn-group > .btn-secondary:hover,
+.ck-content .btn-group > .btn-primary:hover,
 .ck-content .btn-group > a.button:hover,
 .ck-content .btn-group > .btn:focus,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:focus,
+.ck-content .btn-group > .btn-dark:focus,
+.ck-content .btn-group > .btn-light:focus,
+.ck-content .btn-group > .btn-danger:focus,
+.ck-content .btn-group > .btn-warning:focus,
+.ck-content .btn-group > .btn-info:focus,
+.ck-content .btn-group > .btn-success:focus,
+.ck-content .btn-group > .btn-secondary:focus,
+.ck-content .btn-group > .btn-primary:focus,
 .ck-content .btn-group > a.button:focus,
 .ck-content .btn-group > .btn:active,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:active,
+.ck-content .btn-group > .btn-dark:active,
+.ck-content .btn-group > .btn-light:active,
+.ck-content .btn-group > .btn-danger:active,
+.ck-content .btn-group > .btn-warning:active,
+.ck-content .btn-group > .btn-info:active,
+.ck-content .btn-group > .btn-success:active,
+.ck-content .btn-group > .btn-secondary:active,
+.ck-content .btn-group > .btn-primary:active,
 .ck-content .btn-group > a.button:active,
 .ck-content .btn-group > .btn.active,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > .active.node-preview-backlink,
+.ck-content .btn-group > .active.btn-dark,
+.ck-content .btn-group > .active.btn-light,
+.ck-content .btn-group > .active.btn-danger,
+.ck-content .btn-group > .active.btn-warning,
+.ck-content .btn-group > .active.btn-info,
+.ck-content .btn-group > .active.btn-success,
+.ck-content .btn-group > .active.btn-secondary,
+.ck-content .btn-group > .active.btn-primary,
 .ck-content .btn-group > a.active.button,
 .ck-content .btn-group-vertical > .btn-check:checked + .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .btn-check:checked + .node-preview-backlink,
+.ck-content .btn-group-vertical > .btn-check:checked + .btn-dark,
+.ck-content .btn-group-vertical > .btn-check:checked + .btn-light,
+.ck-content .btn-group-vertical > .btn-check:checked + .btn-danger,
+.ck-content .btn-group-vertical > .btn-check:checked + .btn-warning,
+.ck-content .btn-group-vertical > .btn-check:checked + .btn-info,
+.ck-content .btn-group-vertical > .btn-check:checked + .btn-success,
+.ck-content .btn-group-vertical > .btn-check:checked + .btn-secondary,
+.ck-content .btn-group-vertical > .btn-check:checked + .btn-primary,
 .ck-content .btn-group-vertical > .btn-check:checked + a.button,
 .ck-content .btn-group-vertical > .btn-check:focus + .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .btn-check:focus + .node-preview-backlink,
+.ck-content .btn-group-vertical > .btn-check:focus + .btn-dark,
+.ck-content .btn-group-vertical > .btn-check:focus + .btn-light,
+.ck-content .btn-group-vertical > .btn-check:focus + .btn-danger,
+.ck-content .btn-group-vertical > .btn-check:focus + .btn-warning,
+.ck-content .btn-group-vertical > .btn-check:focus + .btn-info,
+.ck-content .btn-group-vertical > .btn-check:focus + .btn-success,
+.ck-content .btn-group-vertical > .btn-check:focus + .btn-secondary,
+.ck-content .btn-group-vertical > .btn-check:focus + .btn-primary,
 .ck-content .btn-group-vertical > .btn-check:focus + a.button,
 .ck-content .btn-group-vertical > .btn:hover,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:hover,
+.ck-content .btn-group-vertical > .btn-dark:hover,
+.ck-content .btn-group-vertical > .btn-light:hover,
+.ck-content .btn-group-vertical > .btn-danger:hover,
+.ck-content .btn-group-vertical > .btn-warning:hover,
+.ck-content .btn-group-vertical > .btn-info:hover,
+.ck-content .btn-group-vertical > .btn-success:hover,
+.ck-content .btn-group-vertical > .btn-secondary:hover,
+.ck-content .btn-group-vertical > .btn-primary:hover,
 .ck-content .btn-group-vertical > a.button:hover,
 .ck-content .btn-group-vertical > .btn:focus,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:focus,
+.ck-content .btn-group-vertical > .btn-dark:focus,
+.ck-content .btn-group-vertical > .btn-light:focus,
+.ck-content .btn-group-vertical > .btn-danger:focus,
+.ck-content .btn-group-vertical > .btn-warning:focus,
+.ck-content .btn-group-vertical > .btn-info:focus,
+.ck-content .btn-group-vertical > .btn-success:focus,
+.ck-content .btn-group-vertical > .btn-secondary:focus,
+.ck-content .btn-group-vertical > .btn-primary:focus,
 .ck-content .btn-group-vertical > a.button:focus,
 .ck-content .btn-group-vertical > .btn:active,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:active,
+.ck-content .btn-group-vertical > .btn-dark:active,
+.ck-content .btn-group-vertical > .btn-light:active,
+.ck-content .btn-group-vertical > .btn-danger:active,
+.ck-content .btn-group-vertical > .btn-warning:active,
+.ck-content .btn-group-vertical > .btn-info:active,
+.ck-content .btn-group-vertical > .btn-success:active,
+.ck-content .btn-group-vertical > .btn-secondary:active,
+.ck-content .btn-group-vertical > .btn-primary:active,
 .ck-content .btn-group-vertical > a.button:active,
 .ck-content .btn-group-vertical > .btn.active,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .active.node-preview-backlink,
+.ck-content .btn-group-vertical > .active.btn-dark,
+.ck-content .btn-group-vertical > .active.btn-light,
+.ck-content .btn-group-vertical > .active.btn-danger,
+.ck-content .btn-group-vertical > .active.btn-warning,
+.ck-content .btn-group-vertical > .active.btn-info,
+.ck-content .btn-group-vertical > .active.btn-success,
+.ck-content .btn-group-vertical > .active.btn-secondary,
+.ck-content .btn-group-vertical > .active.btn-primary,
 .ck-content .btn-group-vertical > a.active.button {
   z-index: 1;
 }
@@ -4137,26 +4265,58 @@ a > .ck-content code {
 .ck-content .btn-group {
   border-radius: 1.5rem;
 }
-.ck-content .btn-group > :not(.btn-check:first-child) + .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group > :not(.btn-check:first-child) + .node-preview-backlink, .ck-content .btn-group > :not(.btn-check:first-child) + a.button,
+.ck-content .btn-group > :not(.btn-check:first-child) + .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group > :not(.btn-check:first-child) + .node-preview-backlink, .ck-content .btn-group > :not(.btn-check:first-child) + .btn-dark, .ck-content .btn-group > :not(.btn-check:first-child) + .btn-light, .ck-content .btn-group > :not(.btn-check:first-child) + .btn-danger, .ck-content .btn-group > :not(.btn-check:first-child) + .btn-warning, .ck-content .btn-group > :not(.btn-check:first-child) + .btn-info, .ck-content .btn-group > :not(.btn-check:first-child) + .btn-success, .ck-content .btn-group > :not(.btn-check:first-child) + .btn-secondary, .ck-content .btn-group > :not(.btn-check:first-child) + .btn-primary, .ck-content .btn-group > :not(.btn-check:first-child) + a.button,
 .ck-content .btn-group > .btn-group:not(:first-child) {
   margin-left: calc(-1 * var(--bs-border-width));
 }
-.ck-content .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > a.button:not(:last-child):not(.dropdown-toggle),
+.ck-content .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > .btn-dark:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > .btn-light:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > .btn-danger:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > .btn-warning:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > .btn-info:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > .btn-success:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > .btn-secondary:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > .btn-primary:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group > a.button:not(:last-child):not(.dropdown-toggle),
 .ck-content .btn-group > .btn.dropdown-toggle-split:first-child,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > .dropdown-toggle-split.node-preview-backlink:first-child,
+.ck-content .btn-group > .dropdown-toggle-split.btn-dark:first-child,
+.ck-content .btn-group > .dropdown-toggle-split.btn-light:first-child,
+.ck-content .btn-group > .dropdown-toggle-split.btn-danger:first-child,
+.ck-content .btn-group > .dropdown-toggle-split.btn-warning:first-child,
+.ck-content .btn-group > .dropdown-toggle-split.btn-info:first-child,
+.ck-content .btn-group > .dropdown-toggle-split.btn-success:first-child,
+.ck-content .btn-group > .dropdown-toggle-split.btn-secondary:first-child,
+.ck-content .btn-group > .dropdown-toggle-split.btn-primary:first-child,
 .ck-content .btn-group > a.dropdown-toggle-split.button:first-child,
 .ck-content .btn-group > .btn-group:not(:last-child) > .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > .btn-group:not(:last-child) > .node-preview-backlink,
+.ck-content .btn-group > .btn-group:not(:last-child) > .btn-dark,
+.ck-content .btn-group > .btn-group:not(:last-child) > .btn-light,
+.ck-content .btn-group > .btn-group:not(:last-child) > .btn-danger,
+.ck-content .btn-group > .btn-group:not(:last-child) > .btn-warning,
+.ck-content .btn-group > .btn-group:not(:last-child) > .btn-info,
+.ck-content .btn-group > .btn-group:not(:last-child) > .btn-success,
+.ck-content .btn-group > .btn-group:not(:last-child) > .btn-secondary,
+.ck-content .btn-group > .btn-group:not(:last-child) > .btn-primary,
 .ck-content .btn-group > .btn-group:not(:last-child) > a.button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.ck-content .btn-group > .btn:nth-child(n+3), .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:nth-child(n+3), .ck-content .btn-group > a.button:nth-child(n+3),
+.ck-content .btn-group > .btn:nth-child(n+3), .ck-content .node-preview-container .node-preview-form-select .btn-group > .node-preview-backlink:nth-child(n+3), .ck-content .btn-group > .btn-dark:nth-child(n+3), .ck-content .btn-group > .btn-light:nth-child(n+3), .ck-content .btn-group > .btn-danger:nth-child(n+3), .ck-content .btn-group > .btn-warning:nth-child(n+3), .ck-content .btn-group > .btn-info:nth-child(n+3), .ck-content .btn-group > .btn-success:nth-child(n+3), .ck-content .btn-group > .btn-secondary:nth-child(n+3), .ck-content .btn-group > .btn-primary:nth-child(n+3), .ck-content .btn-group > a.button:nth-child(n+3),
 .ck-content .btn-group > :not(.btn-check) + .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > :not(.btn-check) + .node-preview-backlink,
+.ck-content .btn-group > :not(.btn-check) + .btn-dark,
+.ck-content .btn-group > :not(.btn-check) + .btn-light,
+.ck-content .btn-group > :not(.btn-check) + .btn-danger,
+.ck-content .btn-group > :not(.btn-check) + .btn-warning,
+.ck-content .btn-group > :not(.btn-check) + .btn-info,
+.ck-content .btn-group > :not(.btn-check) + .btn-success,
+.ck-content .btn-group > :not(.btn-check) + .btn-secondary,
+.ck-content .btn-group > :not(.btn-check) + .btn-primary,
 .ck-content .btn-group > :not(.btn-check) + a.button,
 .ck-content .btn-group > .btn-group:not(:first-child) > .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group > .btn-group:not(:first-child) > .node-preview-backlink,
+.ck-content .btn-group > .btn-group:not(:first-child) > .btn-dark,
+.ck-content .btn-group > .btn-group:not(:first-child) > .btn-light,
+.ck-content .btn-group > .btn-group:not(:first-child) > .btn-danger,
+.ck-content .btn-group > .btn-group:not(:first-child) > .btn-warning,
+.ck-content .btn-group > .btn-group:not(:first-child) > .btn-info,
+.ck-content .btn-group > .btn-group:not(:first-child) > .btn-success,
+.ck-content .btn-group > .btn-group:not(:first-child) > .btn-secondary,
+.ck-content .btn-group > .btn-group:not(:first-child) > .btn-primary,
 .ck-content .btn-group > .btn-group:not(:first-child) > a.button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -4171,11 +4331,11 @@ a > .ck-content code {
 .dropstart .ck-content .dropdown-toggle-split::before {
   margin-right: 0;
 }
-.ck-content .btn-sm + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn + .dropdown-toggle-split, .ck-content .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink + .dropdown-toggle-split, .ck-content .btn-group-sm > a.button + .dropdown-toggle-split {
+.ck-content .btn-sm + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn + .dropdown-toggle-split, .ck-content .node-preview-container .node-preview-form-select .btn-group-sm > .node-preview-backlink + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn-dark + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn-light + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn-danger + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn-warning + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn-info + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn-success + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn-secondary + .dropdown-toggle-split, .ck-content .btn-group-sm > .btn-primary + .dropdown-toggle-split, .ck-content .btn-group-sm > a.button + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
-.ck-content .btn-lg + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn + .dropdown-toggle-split, .ck-content .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink + .dropdown-toggle-split, .ck-content .btn-group-lg > a.button + .dropdown-toggle-split {
+.ck-content .btn-lg + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn + .dropdown-toggle-split, .ck-content .node-preview-container .node-preview-form-select .btn-group-lg > .node-preview-backlink + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn-dark + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn-light + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn-danger + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn-warning + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn-info + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn-success + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn-secondary + .dropdown-toggle-split, .ck-content .btn-group-lg > .btn-primary + .dropdown-toggle-split, .ck-content .btn-group-lg > a.button + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
@@ -4184,27 +4344,51 @@ a > .ck-content code {
   align-items: flex-start;
   justify-content: center;
 }
-.ck-content .btn-group-vertical > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink, .ck-content .btn-group-vertical > a.button,
+.ck-content .btn-group-vertical > .btn, .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink, .ck-content .btn-group-vertical > .btn-dark, .ck-content .btn-group-vertical > .btn-light, .ck-content .btn-group-vertical > .btn-danger, .ck-content .btn-group-vertical > .btn-warning, .ck-content .btn-group-vertical > .btn-info, .ck-content .btn-group-vertical > .btn-success, .ck-content .btn-group-vertical > .btn-secondary, .ck-content .btn-group-vertical > .btn-primary, .ck-content .btn-group-vertical > a.button,
 .ck-content .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.ck-content .btn-group-vertical > .btn:not(:first-child), .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:first-child), .ck-content .btn-group-vertical > a.button:not(:first-child),
+.ck-content .btn-group-vertical > .btn:not(:first-child), .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:first-child), .ck-content .btn-group-vertical > .btn-dark:not(:first-child), .ck-content .btn-group-vertical > .btn-light:not(:first-child), .ck-content .btn-group-vertical > .btn-danger:not(:first-child), .ck-content .btn-group-vertical > .btn-warning:not(:first-child), .ck-content .btn-group-vertical > .btn-info:not(:first-child), .ck-content .btn-group-vertical > .btn-success:not(:first-child), .ck-content .btn-group-vertical > .btn-secondary:not(:first-child), .ck-content .btn-group-vertical > .btn-primary:not(:first-child), .ck-content .btn-group-vertical > a.button:not(:first-child),
 .ck-content .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: calc(-1 * var(--bs-border-width));
 }
-.ck-content .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle),
+.ck-content .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > .btn-dark:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > .btn-light:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > .btn-danger:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > .btn-warning:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > .btn-info:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > .btn-success:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > .btn-secondary:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > .btn-primary:not(:last-child):not(.dropdown-toggle), .ck-content .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle),
 .ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .btn-group:not(:last-child) > .node-preview-backlink,
+.ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn-dark,
+.ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn-light,
+.ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn-danger,
+.ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn-warning,
+.ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn-info,
+.ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn-success,
+.ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn-secondary,
+.ck-content .btn-group-vertical > .btn-group:not(:last-child) > .btn-primary,
 .ck-content .btn-group-vertical > .btn-group:not(:last-child) > a.button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.ck-content .btn-group-vertical > .btn:nth-child(n+3), .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:nth-child(n+3), .ck-content .btn-group-vertical > a.button:nth-child(n+3),
+.ck-content .btn-group-vertical > .btn:nth-child(n+3), .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .node-preview-backlink:nth-child(n+3), .ck-content .btn-group-vertical > .btn-dark:nth-child(n+3), .ck-content .btn-group-vertical > .btn-light:nth-child(n+3), .ck-content .btn-group-vertical > .btn-danger:nth-child(n+3), .ck-content .btn-group-vertical > .btn-warning:nth-child(n+3), .ck-content .btn-group-vertical > .btn-info:nth-child(n+3), .ck-content .btn-group-vertical > .btn-success:nth-child(n+3), .ck-content .btn-group-vertical > .btn-secondary:nth-child(n+3), .ck-content .btn-group-vertical > .btn-primary:nth-child(n+3), .ck-content .btn-group-vertical > a.button:nth-child(n+3),
 .ck-content .btn-group-vertical > :not(.btn-check) + .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > :not(.btn-check) + .node-preview-backlink,
+.ck-content .btn-group-vertical > :not(.btn-check) + .btn-dark,
+.ck-content .btn-group-vertical > :not(.btn-check) + .btn-light,
+.ck-content .btn-group-vertical > :not(.btn-check) + .btn-danger,
+.ck-content .btn-group-vertical > :not(.btn-check) + .btn-warning,
+.ck-content .btn-group-vertical > :not(.btn-check) + .btn-info,
+.ck-content .btn-group-vertical > :not(.btn-check) + .btn-success,
+.ck-content .btn-group-vertical > :not(.btn-check) + .btn-secondary,
+.ck-content .btn-group-vertical > :not(.btn-check) + .btn-primary,
 .ck-content .btn-group-vertical > :not(.btn-check) + a.button,
 .ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn,
 .ck-content .node-preview-container .node-preview-form-select .btn-group-vertical > .btn-group:not(:first-child) > .node-preview-backlink,
+.ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn-dark,
+.ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn-light,
+.ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn-danger,
+.ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn-warning,
+.ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn-info,
+.ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn-success,
+.ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn-secondary,
+.ck-content .btn-group-vertical > .btn-group:not(:first-child) > .btn-primary,
 .ck-content .btn-group-vertical > .btn-group:not(:first-child) > a.button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -5207,7 +5391,7 @@ a > .ck-content code {
 .ck-content .badge:empty {
   display: none;
 }
-.ck-content .btn .badge, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink .badge, .ck-content a.button .badge {
+.ck-content .btn .badge, .ck-content .node-preview-container .node-preview-form-select .node-preview-backlink .badge, .ck-content .btn-dark .badge, .ck-content .btn-light .badge, .ck-content .btn-danger .badge, .ck-content .btn-warning .badge, .ck-content .btn-info .badge, .ck-content .btn-success .badge, .ck-content .btn-secondary .badge, .ck-content .btn-primary .badge, .ck-content a.button .badge {
   position: relative;
   top: -1px;
 }
@@ -7198,7 +7382,7 @@ a > .ck-content code {
   background-color: currentcolor;
   opacity: 0.5;
 }
-.ck-content .placeholder.btn::before, .ck-content .node-preview-container .node-preview-form-select .placeholder.node-preview-backlink::before, .ck-content a.placeholder.button::before {
+.ck-content .placeholder.btn::before, .ck-content .node-preview-container .node-preview-form-select .placeholder.node-preview-backlink::before, .ck-content .placeholder.btn-dark::before, .ck-content .placeholder.btn-light::before, .ck-content .placeholder.btn-danger::before, .ck-content .placeholder.btn-warning::before, .ck-content .placeholder.btn-info::before, .ck-content .placeholder.btn-success::before, .ck-content .placeholder.btn-secondary::before, .ck-content .placeholder.btn-primary::before, .ck-content a.placeholder.button::before {
   display: inline-block;
   content: "";
 }
