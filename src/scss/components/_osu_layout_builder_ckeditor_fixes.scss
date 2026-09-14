@@ -7,6 +7,6 @@
 // the selector
 // #drupal-off-canvas-wrapper [data-drupal-ck-style-fence] .ck.ck-content * {
 // We can probalby make someting better
-.ck-table-bogus-paragraph {
-  color: hotpink !important;
+table tr span.ck-table-bogus-paragraph {
+  color: inherit;
 }

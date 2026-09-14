@@ -50,6 +50,7 @@
   @import 'scss/components/osu_bs_views_tabs';
   @import 'scss/components/osu_ckeditor';
   @import 'scss/components/osu_layout_builder';
+  @import 'scss/components/osu_layout_builder_ckeditor_fixes';
   @import 'scss/components/osu_layout_builder_menus';
   @import 'scss/components/osu_tabledrag';
   @import 'scss/components/osu_simple_popup_blocks';
@@ -60,4 +61,3 @@
   @import 'scss/components/osu_webform';
   @import 'scss/components/osu_media_library';
 }
-@import 'scss/components/osu_layout_builder_ckeditor_fixes';
