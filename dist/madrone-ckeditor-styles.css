@@ -17411,6 +17411,12 @@ a > .ck-content code {
   border-width: unset;
   box-shadow: unset;
 }
+.ck-content table tr span.ck-table-bogus-paragraph {
+  color: inherit;
+}
+.ck-content figure.table table:not([class*=caption-top]) + figcaption, .ck-content figure.osu-table table:not([class*=caption-top]) + figcaption, .ck-content figure.osu-table-orange table:not([class*=caption-top]) + figcaption {
+  caption-side: bottom;
+}
 .ck-content .layout-builder {
   background-color: transparent;
 }
@@ -17542,9 +17548,6 @@ a > .ck-content code {
 }
 .ck-content .osu-align-items-stretch.layout-builder__layout > div[class*=col] > div[class*=block-] > div.block__content > div {
   flex: 1 0 auto;
-}
-.ck-content table tr span.ck-table-bogus-paragraph {
-  color: inherit;
 }
 .ck-content .madrone-content .osu-bg-page-default nav ul.menu li a {
   color: hsl(210, 11%, 15%) !important;

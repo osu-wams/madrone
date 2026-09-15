@@ -1,12 +1,14 @@
 @import "../abstracts/_osu_variables";
+
 // Only changes to ckeditor with the included styles.
 // Base overrides for ckeditor.
-&{
+& {
   --ck-content-font-family: #{$font-family-base};
   --ck-content-font-size: #{$font-size-base};
   --ck-content-line-height: #{$line-height-base};
   --ck-content-font-color: #{$body-color};
 }
+
 // Bootstrap tables have a broad target for some of the child elements.
 // .ck-content .table > :not(caption) > * > *
 // The issue is this .table class gets applied to the figure in ckeditor that
@@ -18,4 +20,21 @@
   background-color: unset;
   border-width: unset;
   box-shadow: unset;
+}
+
+// CKeditor in Drupal has very specific styling.
+// This fixes table header row font colors.
+// Drupal adds #drupal-off-canvas [data-drupal-ck-style-fence]
+// to any ckeditor style sheet, we need to style the span in tables and looking
+// the selector
+table tr span.ck-table-bogus-paragraph {
+  color: inherit;
+}
+
+// CKEditor has the Table caption in a figcaption during editing.
+// This updates the default style to match bootstrap.
+// This also takes into account the caption-top class for tables to ensure
+// when a user selects the captop-top option this is respected.
+figure.table table:not([class*="caption-top"])+figcaption {
+  caption-side: bottom;
 }
