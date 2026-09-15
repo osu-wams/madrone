@@ -17821,6 +17821,20 @@ a > .ck-content code {
 .ck-content .cke_editable_themed .scayt-misspell-word {
   border-bottom-style: dotted !important;
 }
+.ck-content p a[class*=osu-btn] {
+  background: var(--bs-btn-bg);
+  color: var(--bs-btn-color);
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+}
+.ck-content .drupal-icon svg use {
+  color: revert;
+}
+.ck-content h2, .ck-content .h2, .ck-content h4, .ck-content .h4, .ck-content h6, .ck-content .h6 {
+  color: #423e3c !important;
+}
+.ck-content h1, .ck-content .h1, .ck-content h3, .ck-content .h3, .ck-content h5, .ck-content .h5 {
+  color: #d73f09 !important;
+}
 .ck-content .layout-builder {
   background-color: transparent;
 }

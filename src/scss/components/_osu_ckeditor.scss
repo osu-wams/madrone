@@ -5,17 +5,37 @@ body.cke_editable_themed {
 
 .cke_reset_all .cke_dialog_body * {
   font: 0.8125rem/1.538em BlinkMacSystemFont,
-  -apple-system,
-  'Segoe UI',
-  Roboto,
-  Oxygen-Sans,
-  Ubuntu,
-  Cantarell,
-  'Helvetica Neue',
-  sans-serif;
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    sans-serif;
 }
 
 .cke_editable_themed .scayt-misspell-word {
   border-bottom-style: dotted !important;
 }
 
+// fixes LB sidebar preview for buttons so the color changes with selection
+p a[class*="osu-btn"] {
+  background: var(--bs-btn-bg);
+  color: var(--bs-btn-color);
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+}
+
+// fixes LB sidebar preview for Font Awesome icons. Brand icons don't need a fix because they receive the brand color classes, which are in the ck style fence
+.drupal-icon svg use {
+  color: revert;
+}
+
+// hard coding the colors for the headings, since that's how it is in the theme and these rarely change
+ h2, h4, h6 {
+  color: $neutral-700 !important;
+}
+
+h1, h3, h5 {
+  color: $osuorange !important;
+}

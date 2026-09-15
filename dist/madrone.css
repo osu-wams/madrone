@@ -19181,6 +19181,24 @@ body.cke_editable_themed {
   border-bottom-style: dotted !important;
 }
 
+p a[class*=osu-btn] {
+  background: var(--bs-btn-bg);
+  color: var(--bs-btn-color);
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+}
+
+.drupal-icon svg use {
+  color: revert;
+}
+
+h2, .h2, h4, .h4, h6, .h6 {
+  color: #423e3c !important;
+}
+
+h1, .h1, h3, .h3, h5, .h5 {
+  color: #d73f09 !important;
+}
+
 .toc-js .toc-h3 {
   margin-left: 0.5rem;
 }
