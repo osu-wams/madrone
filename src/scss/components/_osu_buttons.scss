@@ -16,7 +16,13 @@
 // disabled border color,
 // disabled color
 // see https://getbootstrap.com/docs/5.3/components/buttons/#sass-mixins
+
+%osu-btn-baseline {
+  @extend .btn;
+}
+
 .osu-btn-primary {
+  @extend %osu-btn-baseline;
   @include button-variant(
       $osuorange,
       $osuorange,
@@ -31,6 +37,7 @@
 }
 
 .osu-btn-light {
+  @extend %osu-btn-baseline;
   @include button-variant(
       $neutral-100,
       $paddletailblack,
@@ -45,6 +52,7 @@
 }
 
 .osu-btn-dark {
+  @extend %osu-btn-baseline;
   @include button-variant(
       $paddletailblack,
       $paddletailblack,
@@ -59,6 +67,7 @@
 }
 
 .osu-btn-white {
+  @extend %osu-btn-baseline;
   @include button-variant(
       $bucktoothwhite,
       $paddletailblack,
@@ -73,23 +82,28 @@
 }
 
 .osu-btn-lava {
+  @extend %osu-btn-baseline;
   @include button-variant($lava-400, $lava-400, $bucktoothwhite);
 }
 
 .osu-btn-pine {
+  @extend %osu-btn-baseline;
   @include button-variant($pine-400, $pine-400, $bucktoothwhite);
 }
 
 .osu-btn-luminance {
+  @extend %osu-btn-baseline;
   @include button-variant($luminance-400, $luminance-400, $body-color);
 }
 
 // Button has to have black text for WCAG AA.
 .osu-btn-rogue-wave {
+  @extend %osu-btn-baseline;
   @include button-variant($rogue_wave-400, $rogue_wave-400);
 }
 
 .osu-btn-stratosphere {
+  @extend %osu-btn-baseline;
   @include button-variant(
       $stratosphere-400,
       $stratosphere-400,

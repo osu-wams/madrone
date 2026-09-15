@@ -1,6 +1,10 @@
 @import "../abstracts/osu_variables";
+%osu-btn-baseline {
+  @extend .btn;
+}
+
 .btn-primary {
-   @extend .btn;
+   @extend %osu-btn-baseline;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -18,7 +22,7 @@
 }
 
 .btn-secondary {
-   @extend .btn;
+   @extend %osu-btn-baseline;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -36,7 +40,7 @@
 }
 
 .btn-success {
-   @extend .btn;
+   @extend %osu-btn-baseline;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -54,7 +58,7 @@
 }
 
 .btn-info {
-   @extend .btn;
+   @extend %osu-btn-baseline;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -72,7 +76,7 @@
 }
 
 .btn-warning {
-   @extend .btn;
+   @extend %osu-btn-baseline;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -90,7 +94,7 @@
 }
 
 .btn-danger {
-   @extend .btn;
+   @extend %osu-btn-baseline;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -109,7 +113,7 @@
 
 // Should be like our Grey
 .btn-light {
-   @extend .btn;
+   @extend %osu-btn-baseline;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
@@ -127,7 +131,7 @@
 }
 
 .btn-dark {
-   @extend .btn;
+   @extend %osu-btn-baseline;
   --bs-btn-active-bg: #{$paddletailblack};
   --bs-btn-active-border-color: #{$osuorange};
   --bs-btn-active-color: #{$bucktoothwhite};
