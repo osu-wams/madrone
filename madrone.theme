@@ -502,7 +502,7 @@ function get_companion_logo(string $companion_logo): array {
           $dark_header
           ? '/assets/osu-logo-dark-header.svg'
           : '/logo.svg'
-        ),
+      ),
       'link-path' => 'https://oregonstate.edu/',
       'alt-text' => 'Oregon State University homepage',
     ]

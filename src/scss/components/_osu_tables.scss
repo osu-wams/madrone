@@ -1,13 +1,17 @@
 @import "../abstracts/osu_variables";
 // Use only on thead for an orange table.
 @include table-variant('osuorange', $osuorange);
-.osu-table {
+// Create a base style to use.
+%osu-table-layout {
   @extend .table;
   @extend .table-bordered;
   @extend .table-hover;
   @extend .table-striped;
+}
+%base-osu-table {
+  @extend %osu-table-layout;
 
-  & > thead {
+  &>thead {
     @extend .table-dark;
 
     a {
@@ -17,13 +21,15 @@
   }
 }
 
-.osu-table-orange {
-  @extend .table;
-  @extend .table-bordered;
-  @extend .table-hover;
-  @extend .table-striped;
+.osu-table,
+table:not([class*="osu-table"]) {
+  @extend %base-osu-table;
+}
 
-  & > thead {
+.osu-table-orange {
+  @extend %osu-table-layout;
+
+  &>thead {
     @extend .table-osuorange;
 
     a {
@@ -31,8 +37,4 @@
       text-decoration-color: $bucktoothwhite;
     }
   }
-}
-
-table:not(.table, .osu-table, .osu-table-orange) {
-  @extend .osu-table;
 }

@@ -2114,7 +2114,8 @@ progress {
     --bs-gutter-y: 8rem;
   }
 }
-.table, .osu-table-orange, .osu-table, table:not(.table, .osu-table, .osu-table-orange), table:not(.table, .osu-table, table:not(.table, .osu-table, .osu-table-orange), .osu-table-orange) {
+.table, .osu-table-orange, .osu-table,
+table:not([class*=osu-table]) {
   --bs-table-color-type: initial;
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
@@ -2134,17 +2135,20 @@ progress {
   vertical-align: top;
   border-color: var(--bs-table-border-color);
 }
-.table > :not(caption) > * > *, .osu-table-orange > :not(caption) > * > *, .osu-table > :not(caption) > * > *, table:not(.table, .osu-table, .osu-table-orange) > :not(caption) > * > * {
+.table > :not(caption) > * > *, .osu-table-orange > :not(caption) > * > *, .osu-table > :not(caption) > * > *,
+table:not([class*=osu-table]) > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
   background-color: var(--bs-table-bg);
   border-bottom-width: var(--bs-border-width);
   box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
 }
-.table > tbody, .osu-table-orange > tbody, .osu-table > tbody, table:not(.table, .osu-table, .osu-table-orange) > tbody {
+.table > tbody, .osu-table-orange > tbody, .osu-table > tbody,
+table:not([class*=osu-table]) > tbody {
   vertical-align: inherit;
 }
-.table > thead, .osu-table-orange > thead, .osu-table > thead, table:not(.table, .osu-table, .osu-table-orange) > thead {
+.table > thead, .osu-table-orange > thead, .osu-table > thead,
+table:not([class*=osu-table]) > thead {
   vertical-align: bottom;
 }
 
@@ -2160,10 +2164,12 @@ progress {
   padding: 0.25rem 0.25rem;
 }
 
-.table-bordered > :not(caption) > *, .osu-table-orange > :not(caption) > *, .osu-table > :not(caption) > *, table:not(.table, .osu-table, .osu-table-orange) > :not(caption) > * {
+.table-bordered > :not(caption) > *, .osu-table-orange > :not(caption) > *, .osu-table > :not(caption) > *,
+table:not([class*=osu-table]) > :not(caption) > * {
   border-width: var(--bs-border-width) 0;
 }
-.table-bordered > :not(caption) > * > *, .osu-table-orange > :not(caption) > * > *, .osu-table > :not(caption) > * > *, table:not(.table, .osu-table, .osu-table-orange) > :not(caption) > * > * {
+.table-bordered > :not(caption) > * > *, .osu-table-orange > :not(caption) > * > *, .osu-table > :not(caption) > * > *,
+table:not([class*=osu-table]) > :not(caption) > * > * {
   border-width: 0 var(--bs-border-width);
 }
 
@@ -2174,7 +2180,8 @@ progress {
   border-top-width: 0;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) > *, .osu-table-orange > tbody > tr:nth-of-type(odd) > *, .osu-table > tbody > tr:nth-of-type(odd) > *, table:not(.table, .osu-table, .osu-table-orange) > tbody > tr:nth-of-type(odd) > * {
+.table-striped > tbody > tr:nth-of-type(odd) > *, .osu-table-orange > tbody > tr:nth-of-type(odd) > *, .osu-table > tbody > tr:nth-of-type(odd) > *,
+table:not([class*=osu-table]) > tbody > tr:nth-of-type(odd) > * {
   --bs-table-color-type: var(--bs-table-striped-color);
   --bs-table-bg-type: var(--bs-table-striped-bg);
 }
@@ -2189,7 +2196,8 @@ progress {
   --bs-table-bg-state: var(--bs-table-active-bg);
 }
 
-.table-hover > tbody > tr:hover > *, .osu-table-orange > tbody > tr:hover > *, .osu-table > tbody > tr:hover > *, table:not(.table, .osu-table, .osu-table-orange) > tbody > tr:hover > * {
+.table-hover > tbody > tr:hover > *, .osu-table-orange > tbody > tr:hover > *, .osu-table > tbody > tr:hover > *,
+table:not([class*=osu-table]) > tbody > tr:hover > * {
   --bs-table-color-state: var(--bs-table-hover-color);
   --bs-table-bg-state: var(--bs-table-hover-bg);
 }
@@ -2292,7 +2300,8 @@ progress {
   border-color: var(--bs-table-border-color);
 }
 
-.table-dark, .osu-table > thead, table:not(.table, .osu-table, .osu-table-orange) > thead {
+.table-dark, .osu-table > thead,
+table:not([class*=osu-table]) > thead {
   --bs-table-color: #fff;
   --bs-table-bg: #212529;
   --bs-table-border-color: rgb(30.3529411765%, 31.6078431373%, 32.862745098%);
@@ -18672,7 +18681,8 @@ article.media--view-mode-video-720 iframe:where(.media-oembed-content) {
   border-color: var(--bs-table-border-color);
 }
 
-.osu-table > thead a, table:not(.table, .osu-table, .osu-table-orange) > thead a {
+.osu-table > thead a,
+table:not([class*=osu-table]) > thead a {
   color: #fff;
   text-decoration-color: #fff;
 }
@@ -18742,18 +18752,6 @@ article.media--view-mode-video-720 iframe:where(.media-oembed-content) {
 .views-view-bootstrap-tab .nav-link:focus-visible {
   box-shadow: none;
   outline: 2px solid hsl(210, 11%, 15%);
-}
-
-body.cke_editable_themed {
-  padding: 1rem;
-}
-
-.cke_reset_all .cke_dialog_body * {
-  font: 0.8125rem/1.538em BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-
-.cke_editable_themed .scayt-misspell-word {
-  border-bottom-style: dotted !important;
 }
 
 .toc-js .toc-h3 {
