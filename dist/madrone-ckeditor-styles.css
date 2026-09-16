@@ -16031,7 +16031,7 @@ a > .ck-content code {
 .ck-content .block-system-branding-block a img {
   height: 60px;
 }
-@media (min-width: 992px) {
+@media (min-width: 360px) {
   .ck-content .block-system-branding-block a img {
     height: 80px;
   }

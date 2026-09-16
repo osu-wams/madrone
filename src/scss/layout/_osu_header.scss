@@ -17,9 +17,9 @@
   }
 
   img {
-    height: 60px;
+    height: 60px; //if the height doesn't start at 60px any companion logo will make the search button wrap on smaller mobile devices that are less than 360. it's not a lot of traffic, but enough.
 
-    @media (min-width: 992px) {
+    @media (min-width: 360px) {
       height: 80px;
     }
   }

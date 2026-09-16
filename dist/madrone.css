@@ -17306,7 +17306,7 @@ p:last-child {
 .block-system-branding-block a img {
   height: 60px;
 }
-@media (min-width: 992px) {
+@media (min-width: 360px) {
   .block-system-branding-block a img {
     height: 80px;
   }
