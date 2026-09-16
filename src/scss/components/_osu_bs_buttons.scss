@@ -1,4 +1,11 @@
 @import "../abstracts/osu_variables";
+
+// Adding a placeholder that extends the button class.
+// This allows for a single class to achieve our desired look for buttons.
+// Normally this look is acheived with .btn and .btn-primary.
+// The CKEditor link styles add and remove classes with a toggle for editors.
+// If the styles have a class in common, it will remove the shared class and apply the new class.
+// This was resulting in unexpected behavior in the CKEditor.
 %osu-btn-baseline {
   @extend .btn;
 }

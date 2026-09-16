@@ -1,4 +1,4 @@
-// only changes to ckeditor with the included styles.
+// Only changes to ckeditor with the included styles.
 body.cke_editable_themed {
   padding: 1rem;
 }
@@ -19,19 +19,21 @@ body.cke_editable_themed {
   border-bottom-style: dotted !important;
 }
 
-// fixes LB sidebar preview for buttons so the color changes with selection
+// Fixes LB sidebar preview for buttons so the color changes with selection.
 p a[class*="osu-btn"] {
   background: var(--bs-btn-bg);
   color: var(--bs-btn-color);
   padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
 }
 
-// fixes LB sidebar preview for Font Awesome icons. Brand icons don't need a fix because they receive the brand color classes, which are in the ck style fence
+// Fixes LB sidebar preview for Font Awesome icons.
+// Brand icons don't need a fix because they receive the brand color classes, which are in the CK style fence.
 .drupal-icon svg use {
   color: revert;
 }
 
-// hard coding the colors for the headings, since that's how it is in the theme and these rarely change
+// Fixes LB sidebar preview for headings.
+// Hard coding the colors for the headings, since that's how it is in the theme and these rarely change.
  h2, h4, h6 {
   color: $neutral-700 !important;
 }
