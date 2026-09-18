@@ -266,3 +266,12 @@ button.video-content__controls {
     }
   }
 }
+
+// Fix <hr> in Layout Builder sidebar. With the CK reset in Core, they don't appear at all.
+// While the theme code sets an hr with a border-top, the #drupal-off-canvas injects a height
+// and a border property after this code loads that overrides if we match the theme code.
+
+hr {
+  border-top: 1px solid #423e3c !important;
+  height: 1px !important;
+}

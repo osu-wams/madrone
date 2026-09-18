@@ -19419,6 +19419,11 @@ button.video-content__controls {
   flex: 1 0 auto;
 }
 
+hr {
+  border-top: 1px solid #423e3c !important;
+  height: 1px !important;
+}
+
 .madrone-content .osu-bg-page-default nav ul.menu li a {
   color: hsl(210, 11%, 15%) !important;
   background-color: #f7f5f5 !important;
