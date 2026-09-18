@@ -17476,12 +17476,51 @@ a > .ck-content code {
   background-color: #383a40;
 }
 .ck-content .ui-dialog .ui-resizable-w {
-  background-color: #727579;
+  background-color: transparent;
   left: 0;
-  width: 5px;
+  width: 2rem;
+  border-left: 3px solid rgb(65, 165, 255);
+}
+.ck-content .ui-dialog .ui-resizable-w::before {
+  background-color: rgb(65, 165, 255);
+  transition: transform 0.2s ease-in;
+  display: block;
+  width: 16px;
+}
+.ck-content .ui-dialog .ui-resizable-w::after {
+  border-left-color: #212529;
+  border-right-color: #212529;
+  left: 5px;
+}
+.ck-content .ui-dialog .ui-resizable-w:hover::before, .ck-content .ui-dialog .ui-resizable-w:focus-within::before {
+  transform: scale(1.05);
 }
 .ck-content #drupal-modal .form-item {
   width: initial !important;
+}
+.ck-content .ui-icons-widget-modal #drupal-modal {
+  min-height: fit-content !important;
+  transition: min-height 150ms ease-in;
+}
+.ck-content .ui-icons-widget-modal #drupal-modal:has(.ui-menu-item) {
+  min-height: 40vh !important;
+}
+.ck-content .ui-icons-widget-modal #drupal-modal details[data-drupal-selector=edit-icon-icon-settings] select,
+.ck-content .ui-icons-widget-modal #drupal-modal input[data-drupal-selector=edit-icon-icon-settings-font-awesome-alt] {
+  margin: 0 !important;
+  padding: 5px 10px !important;
+}
+.ck-content .ui-icons-widget-modal #drupal-modal details[data-drupal-selector=edit-icon-icon-settings] .form-item {
+  padding-bottom: 10px;
+}
+.ck-content .ui-icons-widget-modal #drupal-modal details[data-drupal-selector=edit-icon-icon-settings] .form-label {
+  margin-bottom: 0 !important;
+}
+.ck-content .ui-icons-widget-modal .ui-icons-input-wrapper {
+  align-items: center;
+}
+.ck-content .ui-icons-widget-modal .ui-icons-input-wrapper .ui-icons-preview.form-item {
+  border: none;
 }
 .ck-content .w-100 > .row.layout-builder__layout {
   margin-inline: 0;

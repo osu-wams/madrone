@@ -78,14 +78,75 @@
 }
 
 // Thicken resizable mouse grabber for Off Canvas Dialog - DRUP8-1036.
+// Changes the color of the resizer to make it more noticeable.
+// Increased the width of the resizer and made the background transparent for ease of use.
 .ui-dialog .ui-resizable-w {
-  background-color: #727579;
+  background-color: transparent;
   left: 0;
-  width: 5px;
+  width: 2rem;
+  border-left: 3px solid rgb(65 165 255);
+
+
+  &::before {
+    background-color: rgb(65 165 255);
+    transition: transform .2s ease-in;
+    display: block;
+    width: 16px;
+  }
+
+  &::after{
+    border-left-color: #212529;
+    border-right-color: #212529;
+    left:5px
+  }
+
+  &:hover,
+  &:focus-within {
+    &::before {
+      transform: scale(1.05);
+    }
+  }
 }
 
 #drupal-modal .form-item {
   width: initial !important;
+}
+
+// The UI Icons modal in LB has terrible UX.
+// This grows the modal when you search so that you can more easily see the results.
+.ui-icons-widget-modal {
+  #drupal-modal {
+    min-height: fit-content !important;
+    transition: min-height 150ms ease-in;
+
+    &:has(.ui-menu-item) {
+      min-height: 40vh !important;
+    }
+
+    details[data-drupal-selector="edit-icon-icon-settings"] select,
+    input[data-drupal-selector="edit-icon-icon-settings-font-awesome-alt"] {
+      margin: 0 !important;
+      padding: 5px 10px !important;
+
+    }
+
+    details[data-drupal-selector="edit-icon-icon-settings"] .form-item {
+      padding-bottom: 10px;
+    }
+
+    details[data-drupal-selector="edit-icon-icon-settings"] .form-label {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  // Fixes the icon preview from being offset with extra padding.
+  .ui-icons-input-wrapper {
+    align-items: center;
+
+    .ui-icons-preview.form-item {
+      border:none;
+    }
+  }
 }
 
 .node-layout-builder-form {
