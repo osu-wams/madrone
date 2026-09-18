@@ -94,10 +94,10 @@
     width: 16px;
   }
 
-  &::after{
+  &::after {
     border-left-color: #212529;
     border-right-color: #212529;
-    left:5px
+    left: 5px
   }
 
   &:hover,
@@ -144,8 +144,32 @@
     align-items: center;
 
     .ui-icons-preview.form-item {
-      border:none;
+      border: none;
     }
+  }
+
+  // Adds a missing x to the close button.
+  .ui-dialog-titlebar-close::before,
+  .ui-dialog-titlebar-close::after {
+    content: '';
+    position: absolute;
+    top: 53%;
+    left: 53%;
+    width: 13px;
+    /* Length of the line */
+    height: 2px;
+    /* Thickness of the line */
+    background-color: #212529;
+  }
+
+  /* Rotate the first line 45 degrees */
+  .ui-dialog-titlebar-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  /* Rotate the second line -45 degrees to cross it */
+  .ui-dialog-titlebar-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
 

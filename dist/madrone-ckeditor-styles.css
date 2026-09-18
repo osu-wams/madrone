@@ -17522,6 +17522,30 @@ a > .ck-content code {
 .ck-content .ui-icons-widget-modal .ui-icons-input-wrapper .ui-icons-preview.form-item {
   border: none;
 }
+.ck-content .ui-icons-widget-modal .ui-dialog-titlebar-close::before,
+.ck-content .ui-icons-widget-modal .ui-dialog-titlebar-close::after {
+  content: "";
+  position: absolute;
+  top: 53%;
+  left: 53%;
+  width: 13px;
+  /* Length of the line */
+  height: 2px;
+  /* Thickness of the line */
+  background-color: #212529;
+}
+.ck-content .ui-icons-widget-modal {
+  /* Rotate the first line 45 degrees */
+}
+.ck-content .ui-icons-widget-modal .ui-dialog-titlebar-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ck-content .ui-icons-widget-modal {
+  /* Rotate the second line -45 degrees to cross it */
+}
+.ck-content .ui-icons-widget-modal .ui-dialog-titlebar-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
 .ck-content .w-100 > .row.layout-builder__layout {
   margin-inline: 0;
 }
