@@ -19274,13 +19274,77 @@ table:not([class*=osu-table]) > thead a {
 }
 
 .ui-dialog .ui-resizable-w {
-  background-color: #727579;
+  background-color: transparent;
   left: 0;
-  width: 5px;
+  width: 2rem;
+  border-left: 3px solid rgb(65, 165, 255);
+}
+.ui-dialog .ui-resizable-w::before {
+  background-color: rgb(65, 165, 255);
+  transition: transform 0.2s ease-in;
+  display: block;
+  width: 16px;
+}
+.ui-dialog .ui-resizable-w::after {
+  border-left-color: #212529;
+  border-right-color: #212529;
+  left: 5px;
+}
+.ui-dialog .ui-resizable-w:hover::before, .ui-dialog .ui-resizable-w:focus-within::before {
+  transform: scale(1.05);
 }
 
 #drupal-modal .form-item {
   width: initial !important;
+}
+
+.ui-icons-widget-modal #drupal-modal {
+  min-height: fit-content !important;
+  transition: min-height 150ms ease-in;
+}
+.ui-icons-widget-modal #drupal-modal:has(.ui-menu-item) {
+  min-height: 40vh !important;
+}
+.ui-icons-widget-modal #drupal-modal details[data-drupal-selector=edit-icon-icon-settings] select,
+.ui-icons-widget-modal #drupal-modal input[data-drupal-selector=edit-icon-icon-settings-font-awesome-alt] {
+  margin: 0 !important;
+  padding: 5px 10px !important;
+}
+.ui-icons-widget-modal #drupal-modal details[data-drupal-selector=edit-icon-icon-settings] .form-item {
+  padding-bottom: 10px;
+}
+.ui-icons-widget-modal #drupal-modal details[data-drupal-selector=edit-icon-icon-settings] .form-label {
+  margin-bottom: 0 !important;
+}
+.ui-icons-widget-modal .ui-icons-input-wrapper {
+  align-items: center;
+}
+.ui-icons-widget-modal .ui-icons-input-wrapper .ui-icons-preview.form-item {
+  border: none;
+}
+.ui-icons-widget-modal .ui-dialog-titlebar-close::before,
+.ui-icons-widget-modal .ui-dialog-titlebar-close::after {
+  content: "";
+  position: absolute;
+  top: 53%;
+  left: 53%;
+  width: 13px;
+  /* Length of the line */
+  height: 2px;
+  /* Thickness of the line */
+  background-color: #212529;
+}
+.ui-icons-widget-modal {
+  /* Rotate the first line 45 degrees */
+}
+.ui-icons-widget-modal .ui-dialog-titlebar-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ui-icons-widget-modal {
+  /* Rotate the second line -45 degrees to cross it */
+}
+.ui-icons-widget-modal .ui-dialog-titlebar-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .w-100 > .row.layout-builder__layout {
