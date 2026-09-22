@@ -16077,15 +16077,15 @@ a > .ck-content code {
 }
 .ck-content .osu-bg-overlay-dark,
 .ck-content .osu-bg-before-dark {
-  --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-  --osu-bg-overaly-to-color: oklch(26.6% 0.009 248deg / 0.75);
+  --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+  --osu-bg-overlay-to-color: oklch(26.6% 0.009 248deg / 0.75);
   --osu-bg-overlay-deg: 0deg;
   position: relative;
   isolation: isolate;
 }
 .ck-content .osu-bg-overlay-dark:before,
 .ck-content .osu-bg-before-dark:before {
-  background: linear-gradient(var(--osu-bg-overlay-deg), var(--osu-bg-overaly-from-color), var(--osu-bg-overaly-to-color));
+  background: linear-gradient(var(--osu-bg-overlay-deg), var(--osu-bg-overlay-from-color), var(--osu-bg-overlay-to-color));
   content: "";
   inset: 0;
   position: absolute;
@@ -16104,43 +16104,43 @@ a > .ck-content code {
 }
 @media (min-width: 768px) {
   .ck-content .osu-bg-before-dark-to-left {
-    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overlay-to-color: transparent;
     --osu-bg-overlay-deg: 90deg;
   }
 }
 @media (min-width: 768px) {
   .ck-content .osu-bg-before-dark-to-right {
-    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overlay-to-color: transparent;
     --osu-bg-overlay-deg: 270deg;
   }
 }
 @media (min-width: 768px) {
   .ck-content .osu-bg-before-dark-to-top {
-    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overlay-to-color: transparent;
     --osu-bg-overlay-deg: 180deg;
   }
 }
 @media (min-width: 768px) {
   .ck-content .osu-bg-before-dark-to-bottom {
-    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overlay-to-color: transparent;
     --osu-bg-overlay-deg: 0deg;
   }
 }
 .ck-content .osu-bg-before-dark-1 {
-  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.75);
-  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.75);
+  --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.75);
+  --osu-bg-overlay-to-color: transparent;
 }
 .ck-content .osu-bg-before-dark-2 {
-  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.85);
-  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.85);
+  --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.85);
+  --osu-bg-overlay-to-color: transparent;
 }
 .ck-content .osu-bg-before-dark-3 {
-  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.95);
-  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.95);
+  --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.95);
+  --osu-bg-overlay-to-color: transparent;
 }
 .ck-content .white-text-orange-bg {
   background-color: oklch(58.68% 0.1962 36.16deg);
@@ -16219,7 +16219,8 @@ a > .ck-content code {
 }
 .ck-content .osu-hover-scale-img img,
 .ck-content .osu-hover-scale-icon .fa-solid,
-.ck-content .osu-hover-scale-icon, .ck-content .fas {
+.ck-content .osu-hover-scale-icon,
+.ck-content .fas {
   transition: transform 0.2s ease-in-out;
 }
 .ck-content .osu-hover-scale-img:hover img,
@@ -16241,6 +16242,11 @@ a > .ck-content code {
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: -1;
+  isolation: isolate;
+}
+.ck-content .osu-ls-wide {
+  letter-spacing: 0.15em;
 }
 .ck-content a {
   text-decoration-color: hsl(16, 92%, 44%);

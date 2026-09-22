@@ -17220,15 +17220,15 @@ textarea.form-control-lg {
 
 .osu-bg-overlay-dark,
 .osu-bg-before-dark {
-  --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-  --osu-bg-overaly-to-color: oklch(26.6% 0.009 248deg / 0.75);
+  --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+  --osu-bg-overlay-to-color: oklch(26.6% 0.009 248deg / 0.75);
   --osu-bg-overlay-deg: 0deg;
   position: relative;
   isolation: isolate;
 }
 .osu-bg-overlay-dark:before,
 .osu-bg-before-dark:before {
-  background: linear-gradient(var(--osu-bg-overlay-deg), var(--osu-bg-overaly-from-color), var(--osu-bg-overaly-to-color));
+  background: linear-gradient(var(--osu-bg-overlay-deg), var(--osu-bg-overlay-from-color), var(--osu-bg-overlay-to-color));
   content: "";
   inset: 0;
   position: absolute;
@@ -17248,45 +17248,45 @@ textarea.form-control-lg {
 
 @media (min-width: 768px) {
   .osu-bg-before-dark-to-left {
-    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overlay-to-color: transparent;
     --osu-bg-overlay-deg: 90deg;
   }
 }
 @media (min-width: 768px) {
   .osu-bg-before-dark-to-right {
-    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overlay-to-color: transparent;
     --osu-bg-overlay-deg: 270deg;
   }
 }
 @media (min-width: 768px) {
   .osu-bg-before-dark-to-top {
-    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overlay-to-color: transparent;
     --osu-bg-overlay-deg: 180deg;
   }
 }
 @media (min-width: 768px) {
   .osu-bg-before-dark-to-bottom {
-    --osu-bg-overaly-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overaly-to-color: transparent;
+    --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
+    --osu-bg-overlay-to-color: transparent;
     --osu-bg-overlay-deg: 0deg;
   }
 }
 .osu-bg-before-dark-1 {
-  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.75);
-  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.75);
+  --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.75);
+  --osu-bg-overlay-to-color: transparent;
 }
 
 .osu-bg-before-dark-2 {
-  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.85);
-  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.85);
+  --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.85);
+  --osu-bg-overlay-to-color: transparent;
 }
 
 .osu-bg-before-dark-3 {
-  --osu-bg-overaly-from-color: oklch(0% 0 0deg / 0.95);
-  --osu-bg-overaly-to-color: oklch(0% 0 0deg / 0.95);
+  --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.95);
+  --osu-bg-overlay-to-color: transparent;
 }
 
 .white-text-orange-bg {
@@ -17383,7 +17383,8 @@ textarea.form-control-lg {
 }
 .osu-hover-scale-img img,
 .osu-hover-scale-icon .fa-solid,
-.osu-hover-scale-icon, .fas {
+.osu-hover-scale-icon,
+.fas {
   transition: transform 0.2s ease-in-out;
 }
 
@@ -17408,6 +17409,12 @@ textarea.form-control-lg {
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: -1;
+  isolation: isolate;
+}
+
+.osu-ls-wide {
+  letter-spacing: 0.15em;
 }
 
 a {
