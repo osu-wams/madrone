@@ -16219,7 +16219,8 @@ a > .ck-content code {
 }
 .ck-content .osu-hover-scale-img img,
 .ck-content .osu-hover-scale-icon .fa-solid,
-.ck-content .osu-hover-scale-icon, .ck-content .fas {
+.ck-content .osu-hover-scale-icon,
+.ck-content .fas {
   transition: transform 0.2s ease-in-out;
 }
 .ck-content .osu-hover-scale-img:hover img,

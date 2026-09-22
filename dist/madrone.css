@@ -17383,7 +17383,8 @@ textarea.form-control-lg {
 }
 .osu-hover-scale-img img,
 .osu-hover-scale-icon .fa-solid,
-.osu-hover-scale-icon, .fas {
+.osu-hover-scale-icon,
+.fas {
   transition: transform 0.2s ease-in-out;
 }
 
