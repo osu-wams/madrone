@@ -10,8 +10,8 @@
 @mixin osu-bg-before-dark-to($direction, $degree, $fromColor) {
   @include media-breakpoint-up(md) {
     .osu-bg-before-dark-to-#{$direction} {
-      --osu-bg-overaly-from-color: #{$fromColor};
-      --osu-bg-overaly-to-color: transparent;
+      --osu-bg-overlay-from-color: #{$fromColor};
+      --osu-bg-overlay-to-color: transparent;
       --osu-bg-overlay-deg: #{$degree};
     }
   }
