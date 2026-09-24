@@ -16979,6 +16979,14 @@ a > .ck-content code {
 .ck-content .sitewide-alert {
   padding: 0.8rem;
 }
+.ck-content .sitewide-alert p {
+  font-size: 0.9rem;
+}
+@media (width > 768px) {
+  .ck-content .sitewide-alert p {
+    font-size: inherit;
+  }
+}
 .ck-content .sitewide-alert .field--name-message::before {
   font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
   font-size: 2rem;

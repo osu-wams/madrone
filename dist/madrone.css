@@ -18279,6 +18279,14 @@ body.maintenance-page main div.row div.col-12 {
 .sitewide-alert {
   padding: 0.8rem;
 }
+.sitewide-alert p {
+  font-size: 0.9rem;
+}
+@media (width > 768px) {
+  .sitewide-alert p {
+    font-size: inherit;
+  }
+}
 .sitewide-alert .field--name-message::before {
   font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
   font-size: 2rem;

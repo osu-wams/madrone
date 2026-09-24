@@ -11,9 +11,16 @@
   }
 }
 
-// sitewide alert styles for the sitewide alert module. this is for the styling of the alerts that appear at the top of the page only and can be placed and configured
+// sitewide alert styles for the sitewide alert module. this is for the styling of the alerts that appear at the top of the page only
 .sitewide-alert {
   padding: .8rem;
+
+  p {
+    font-size: .9rem;
+    @media (width > 768px) {
+      font-size: inherit;
+    }
+  }
 
   .field--name-message::before {
     font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
