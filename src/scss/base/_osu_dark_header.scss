@@ -62,10 +62,14 @@
 
     //MENU
     .madrone-primary-menu>.block-superfish {
+        // Swaps the background color for the entire desktop menu.
         background-color: $neutral-900;
 
         ul.sf-menu {
             li {
+
+                // Changes top level menu links to contrast with dark
+                // background.
                 &.sf-depth-1 {
 
                     >a,
@@ -93,7 +97,7 @@
                         color: $neutral-200;
                     }
 
-                    // hover state for top level links
+                    // Hover state for top level links.
                     &.sfHover>a,
                     &.menuparent:hover>a {
                         color: $neutral-700;
@@ -109,10 +113,10 @@
                     }
                 }
 
-                //lower levels styling
+                //Lower levels styling
                 ul li:not(.sf-depth-1) {
-
                     a {
+
                         // I don't know how I should scope this. this negatively impacts the mobile stying. the mobile styling is opposite. so it starts with a dark background, so the active state needs to be the opposite. The desktop flyout menus start as white.
                         &:active {
                             background-color: $neutral-900 !important;
@@ -128,7 +132,8 @@
             }
         }
 
-        // color for the title of the menu on mobile. the title isn't always there, but something that should be styled
+        // Color for the title of the menu on mobile.
+        // The title isn't always there, but something that should be styled.
         .sf-accordion-toggle>a {
             color: $neutral-200;
 
@@ -141,7 +146,7 @@
         // mobile styling
         .sf-menu.sf-accordion {
             a.sf-depth-1 {
-                // I may need to do this differently? not sure.
+
                 &:active {
                     background-color: $neutral-900 !important;
                     color: $neutral-100 !important;
@@ -149,15 +154,17 @@
             }
 
             ul li {
-                // chevrons lower levels for just mobile. it goes from dark to light.
+
+                // Chevrons lower levels for just mobile
+                // it goes from dark to light.
                 >a.menuparent::after,
                 >span.menuparent::after {
                     color: $neutral-200;
                 }
-            }
-// this styles any link that is nested. the original scss sheet uses a different select of not:sf-depth-1. not sure if I should actually mirror that.
-            .sf-has-clone-parent a {
-                color: $neutral-200;
+
+                a:not(.sf-depth-1) {
+                    color: $neutral-100 !important;
+                }
             }
         }
     }
