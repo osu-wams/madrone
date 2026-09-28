@@ -8,6 +8,11 @@
 // @param $degree The degree of the gradient overlay (0deg, 90deg, 180deg, 270deg)
 // @param $fromColor The from color of all gradient overlays
 @mixin osu-bg-before-dark-to($direction, $degree, $fromColor) {
+  .osu-bg-before-dark-to-#{$direction} {
+      --osu-bg-overlay-from-color: #{$fromColor};
+      --osu-bg-overlay-to-color: #{$fromColor};
+      --osu-bg-overlay-deg: #{$degree};
+    }
   @include media-breakpoint-up(md) {
     .osu-bg-before-dark-to-#{$direction} {
       --osu-bg-overlay-from-color: #{$fromColor};
