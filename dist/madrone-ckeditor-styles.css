@@ -16229,17 +16229,17 @@ a > .ck-content code {
   transform: scale(1.05);
 }
 .ck-content .osu-minimal-link,
-.ck-content .osu-minimal-link > a {
+.ck-content .osu-minimal-link a {
   text-decoration: none;
 }
 .ck-content .osu-minimal-link:active,
-.ck-content .osu-minimal-link > a:active {
+.ck-content .osu-minimal-link a:active {
   background-color: transparent !important;
   text-decoration: underline;
 }
 .ck-content .osu-minimal-link:focus, .ck-content .osu-minimal-link:focus-within,
-.ck-content .osu-minimal-link > a:focus,
-.ck-content .osu-minimal-link > a:focus-within {
+.ck-content .osu-minimal-link a:focus,
+.ck-content .osu-minimal-link a:focus-within {
   outline-color: #d73f09;
 }
 .ck-content .osu-bg-before-dark-ellipse::before {

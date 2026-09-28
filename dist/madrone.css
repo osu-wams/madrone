@@ -17395,17 +17395,17 @@ textarea.form-control-lg {
 }
 
 .osu-minimal-link,
-.osu-minimal-link > a {
+.osu-minimal-link a {
   text-decoration: none;
 }
 .osu-minimal-link:active,
-.osu-minimal-link > a:active {
+.osu-minimal-link a:active {
   background-color: transparent !important;
   text-decoration: underline;
 }
 .osu-minimal-link:focus, .osu-minimal-link:focus-within,
-.osu-minimal-link > a:focus,
-.osu-minimal-link > a:focus-within {
+.osu-minimal-link a:focus,
+.osu-minimal-link a:focus-within {
   outline-color: #d73f09;
 }
 
