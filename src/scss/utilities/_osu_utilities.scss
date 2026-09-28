@@ -231,6 +231,10 @@ $line-truncate: 1, 2, 3, 4, 5;
     background-color: transparent !important;
     text-decoration: underline;
   }
+  &:focus,
+  &:focus-within {
+    outline-color: $osuorange;
+  }
 }
 
 .osu-bg-before-dark-ellipse::before {

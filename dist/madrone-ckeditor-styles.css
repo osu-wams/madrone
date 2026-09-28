@@ -16237,6 +16237,11 @@ a > .ck-content code {
   background-color: transparent !important;
   text-decoration: underline;
 }
+.ck-content .osu-minimal-link:focus, .ck-content .osu-minimal-link:focus-within,
+.ck-content .osu-minimal-link > a:focus,
+.ck-content .osu-minimal-link > a:focus-within {
+  outline-color: #d73f09;
+}
 .ck-content .osu-bg-before-dark-ellipse::before {
   content: "";
   position: absolute;
