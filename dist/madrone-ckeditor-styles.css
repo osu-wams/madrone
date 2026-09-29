@@ -16519,6 +16519,7 @@ a > .ck-content code {
   line-height: 3rem;
   padding-left: 1rem;
   text-decoration: none;
+  color: #1f1d1c;
 }
 .ck-content .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a::before {
   content: "\f0c9";
@@ -16534,6 +16535,11 @@ a > .ck-content code {
 }
 .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu {
   line-height: 1.75rem;
+}
+.ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li a,
+.ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li span {
+  color: #1f1d1c;
+  font-weight: 500;
 }
 .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li a,
 .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li span {
@@ -16586,7 +16592,7 @@ a > .ck-content code {
   background-color: hsl(0, 0%, 100%);
 }
 .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent:not(.sf-no-children) > a::after, .ck-content .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent:not(.sf-no-children) > span::after {
-  color: #423e3c;
+  color: #1f1d1c;
   content: " \f078";
   display: inline-block;
   font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
@@ -16792,6 +16798,8 @@ a > .ck-content code {
 .ck-content .block-group-content-menu .menu--level-1 li span {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 1rem;
+  color: #1f1d1c;
+  font-weight: 500;
 }
 @media (hover: hover) and (pointer: fine) {
   .ck-content .block-group-content-menu .menu--level-0 .group-menu-hover a,

@@ -4,18 +4,19 @@
   display: none !important;
 }
 
-.madrone-primary-menu > .block-superfish {
+.madrone-primary-menu>.block-superfish {
   .sf-accordion-toggle {
     display: flex;
     flex-direction: column;
     height: 3.5rem;
     justify-content: center;
 
-    & > a {
+    &>a {
       font-weight: 600;
       line-height: 3rem;
       padding-left: 1rem;
       text-decoration: none;
+      color: $neutral-900;
 
       &::before {
         content: '\f0c9';
@@ -36,6 +37,15 @@
 
     &.sf-menu {
       line-height: 1.75rem;
+
+      li {
+        a,
+        span {
+          color: $neutral-900;
+          font-weight: 500;
+        }
+      }
+
 
       &.sf-horizontal {
         li {
@@ -58,6 +68,7 @@
         float: unset;
 
         $sf-depth: 0;
+
         @for $i from 1 through 9 {
           li.sf-depth-#{$i} {
             left: #{$sf-depth}rem;
@@ -70,22 +81,24 @@
         float: none;
 
         &.sf-depth-1.menuparent {
+
           &.sfHover,
           &:hover {
-            & > ul {
+            &>ul {
               opacity: 1;
             }
 
-            & > a {
+            &>a {
               background-color: $bucktoothwhite-hsl;
             }
           }
 
           &:not(.sf-no-children) {
+
             // chevron top level
-            & > a::after,
-            & > span::after {
-              color: $neutral-700;
+            &>a::after,
+            &>span::after {
+              color: $neutral-900;
               content: '\2000\f078';
               display: inline-block;
               font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
@@ -96,7 +109,7 @@
           }
 
           // Push menu down on first child ul.
-          & > ul {
+          &>ul {
             opacity: 0;
             top: 3.5em;
           }
@@ -104,18 +117,20 @@
 
         // chevron lower levels
         ul li:not(.sf-depth-1) {
+
           &:hover,
           &:active,
           &:focus {
-            > a,
-            > span {
+
+            >a,
+            >span {
               background-color: $osuorange-hsl;
               color: $bucktoothwhite-hsl;
               transition: none !important;
             }
 
-            > a.menuparent::after,
-            > span.menuparent::after {
+            >a.menuparent::after,
+            >span.menuparent::after {
               color: $bucktoothwhite-hsl;
             }
           }
@@ -147,6 +162,7 @@
 
         a,
         span {
+
           &:hover,
           &:active,
           &:focus {

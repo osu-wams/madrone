@@ -17801,6 +17801,7 @@ footer .region-footer a:active {
   line-height: 3rem;
   padding-left: 1rem;
   text-decoration: none;
+  color: #1f1d1c;
 }
 .madrone-primary-menu > .block-superfish .sf-accordion-toggle > a::before {
   content: "\f0c9";
@@ -17816,6 +17817,11 @@ footer .region-footer a:active {
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu {
   line-height: 1.75rem;
+}
+.madrone-primary-menu > .block-superfish ul.sf-menu li a,
+.madrone-primary-menu > .block-superfish ul.sf-menu li span {
+  color: #1f1d1c;
+  font-weight: 500;
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li a,
 .madrone-primary-menu > .block-superfish ul.sf-menu.sf-horizontal li span {
@@ -17868,7 +17874,7 @@ footer .region-footer a:active {
   background-color: hsl(0, 0%, 100%);
 }
 .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent:not(.sf-no-children) > a::after, .madrone-primary-menu > .block-superfish ul.sf-menu li.sf-depth-1.menuparent:not(.sf-no-children) > span::after {
-  color: #423e3c;
+  color: #1f1d1c;
   content: " \f078";
   display: inline-block;
   font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
@@ -18084,6 +18090,8 @@ footer .region-footer a:active {
 .block-group-content-menu .menu--level-1 li span {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 1rem;
+  color: #1f1d1c;
+  font-weight: 500;
 }
 @media (hover: hover) and (pointer: fine) {
   .block-group-content-menu .menu--level-0 .group-menu-hover a,
