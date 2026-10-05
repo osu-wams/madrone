@@ -154,8 +154,8 @@ $utilities: map-merge-multiple(
         property: caption-side,
         class: osu-caption,
         values: (
-        'top': 'top',
-        'bottom': 'bottom'
+        'top': top,
+        'bottom': bottom
         )
       )
     )
