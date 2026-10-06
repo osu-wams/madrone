@@ -5,6 +5,8 @@
 }
 
 .madrone-primary-menu > .block-superfish {
+  // Mobile only toggle that displays Main Navigation text and triggers expansion
+  // of main menu
   .sf-accordion-toggle {
     display: flex;
     flex-direction: column;

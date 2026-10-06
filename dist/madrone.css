@@ -17715,8 +17715,8 @@ p:last-child {
 .madrone_header--dark .madrone-primary-menu > .block-superfish .sf-menu.sf-accordion ul li > span.menuparent::after {
   color: #e9e5e4;
 }
-.madrone_header--dark .madrone-primary-menu > .block-superfish .sf-menu.sf-accordion .sf-has-clone-parent a {
-  color: #e9e5e4;
+.madrone_header--dark .madrone-primary-menu > .block-superfish .sf-menu.sf-accordion ul li a:not(.sf-depth-1) {
+  color: #f7f5f5 !important;
 }
 
 .block-system-branding-block a {
