@@ -145,22 +145,34 @@ $border-color-value in $osu-border-colors {
 @include osu-bg-before-dark-to("top", 180deg, $osu-bg-gradient);
 @include osu-bg-before-dark-to("bottom", 0deg, $osu-bg-gradient);
 
-// Custom properties require interporated sass variables.
+// Custom properties require interpolated sass variables.
 @each $level,
 $color in $gradients {
   .osu-bg-before-dark-#{$level} {
     --osu-bg-overlay-from-color: #{$color};
     --osu-bg-overlay-to-color: #{$color};
   }
+}
 
+// Mixin to create `.osu-bg-before-dark-to-` classes with different direction, degree, and color.
+// This mixin reduces duplication and makes the code clearer.
+// @param $direction The direction of the gradient overlay ('left', 'right', 'top', 'bottom')
+// @param $degree The degree of the gradient overlay (0deg, 90deg, 180deg, 270deg)
+// @param $fromColor The from color of all gradient overlays
+@mixin osu-bg-before-dark-to($direction, $degree, $fromColor) {
+  .osu-bg-before-dark-to-#{$direction} {
+      --osu-bg-overlay-from-color: #{$fromColor};
+      --osu-bg-overlay-to-color: #{$fromColor};
+      --osu-bg-overlay-deg: #{$degree};
+    }
   @include media-breakpoint-up(md) {
-    .osu-bg-before-dark-#{$level} {
-      --osu-bg-overlay-from-color: #{$color};
+    .osu-bg-before-dark-to-#{$direction} {
+      --osu-bg-overlay-from-color: #{$fromColor};
       --osu-bg-overlay-to-color: transparent;
+      --osu-bg-overlay-deg: #{$degree};
     }
   }
 }
-
 
 .white-text-orange-bg {
   background-color: $osuorange-oklch;

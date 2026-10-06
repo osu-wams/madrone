@@ -17255,7 +17255,7 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .osu-bg-before-dark-to-left {
     --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: transparent !important;
     --osu-bg-overlay-deg: 90deg;
   }
 }
@@ -17268,7 +17268,7 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .osu-bg-before-dark-to-right {
     --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: transparent !important;
     --osu-bg-overlay-deg: 270deg;
   }
 }
@@ -17281,7 +17281,7 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .osu-bg-before-dark-to-top {
     --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: transparent !important;
     --osu-bg-overlay-deg: 180deg;
   }
 }
@@ -17294,7 +17294,7 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .osu-bg-before-dark-to-bottom {
     --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: transparent !important;
     --osu-bg-overlay-deg: 0deg;
   }
 }
@@ -17303,34 +17303,16 @@ textarea.form-control-lg {
   --osu-bg-overlay-to-color: oklch(0% 0 0deg / 0.75);
 }
 
-@media (min-width: 768px) {
-  .osu-bg-before-dark-1 {
-    --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
-  }
-}
 .osu-bg-before-dark-2 {
   --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.85);
   --osu-bg-overlay-to-color: oklch(0% 0 0deg / 0.85);
 }
 
-@media (min-width: 768px) {
-  .osu-bg-before-dark-2 {
-    --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.85);
-    --osu-bg-overlay-to-color: transparent;
-  }
-}
 .osu-bg-before-dark-3 {
   --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.95);
   --osu-bg-overlay-to-color: oklch(0% 0 0deg / 0.95);
 }
 
-@media (min-width: 768px) {
-  .osu-bg-before-dark-3 {
-    --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.95);
-    --osu-bg-overlay-to-color: transparent;
-  }
-}
 .white-text-orange-bg {
   background-color: oklch(58.68% 0.1962 36.16deg);
   color: oklch(100% 0 0deg);
