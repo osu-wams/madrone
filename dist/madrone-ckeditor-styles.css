@@ -10647,10 +10647,10 @@ a > .ck-content code {
   display: table-caption !important;
 }
 .ck-content .osu-caption-top {
-  caption-side: "top" !important;
+  caption-side: top !important;
 }
 .ck-content .osu-caption-bottom {
-  caption-side: "bottom" !important;
+  caption-side: bottom !important;
 }
 @media (min-width: 576px) {
   .ck-content .float-sm-start {
