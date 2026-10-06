@@ -224,12 +224,16 @@ $line-truncate: 1, 2, 3, 4, 5;
 }
 
 .osu-minimal-link,
-.osu-minimal-link>a {
+.osu-minimal-link a {
   text-decoration: none;
 
   &:active {
     background-color: transparent !important;
     text-decoration: underline;
+  }
+  &:focus,
+  &:focus-within {
+    outline-color: $osuorange;
   }
 }
 
