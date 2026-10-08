@@ -3,9 +3,12 @@
 declare(strict_types=1);
 
 use drupol\PhpCsFixerConfigsDrupal\Config\Drupal8;
+use PhpCsFixer\Finder;
+use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
 
-$finder = PhpCsFixer\Finder::create()
+$finder = Finder::create()
   ->in(__DIR__)
+  ->name('*.php')
   ->name('*.module')
   ->name('*.inc')
   ->name('*.install')
@@ -13,20 +16,18 @@ $finder = PhpCsFixer\Finder::create()
   ->name('*.theme')
   ->notPath('*.md')
   ->notPath('*.yml')
-  ->notPath('tests/')
-  ->notPath('node_modules')
-;
+  ->exclude('tests')
+  ->exclude('node_modules');
 
 $config = new Drupal8();
 
-$config->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect());
+$config->setParallelConfig(ParallelConfigFactory::detect());
 $config->setFinder($finder);
 
-$rules = [
-  'declare_strict_types' => true,
-  'blank_line_after_opening_tag' => true,
-  'ordered_imports' => true,
-];
+$rules = $config->getRules();
+$rules['declare_strict_types'] = true;
+$rules['blank_line_after_opening_tag'] = true;
+$rules['ordered_imports'] = true;
 
 $config->setRules($rules);
 
