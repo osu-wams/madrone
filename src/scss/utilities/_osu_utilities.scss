@@ -273,6 +273,14 @@ $line-truncate: 1, 2, 3, 4, 5;
 }
 
 // View Modes
-.media--view-mode-osu-orange-bottom img {
-  border-block-end: 2px solid $osuorange;
+// The orange bottom view mode is turned on by default.
+// This adds a small orange border to the image if there is no caption. 
+.media--view-mode-osu-orange-bottom img{
+  border-block-end: 3px solid $osuorange;
+}
+
+// The orange bottom view mode has a custom Twig template that will add a bottom orange border if there is a caption.
+// This rule removes the border bottom if there is a caption, as 2 borders look silly.
+.view-mode--osu_orange_bottom:has(.media--view-mode-osu-orange-bottom) img {
+  border-block-end: none;
 }

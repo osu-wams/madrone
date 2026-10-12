@@ -16249,7 +16249,10 @@ a > .ck-content code {
   }
 }
 .ck-content .media--view-mode-osu-orange-bottom img {
-  border-block-end: 2px solid #d73f09;
+  border-block-end: 3px solid #d73f09;
+}
+.ck-content .view-mode--osu_orange_bottom:has(.media--view-mode-osu-orange-bottom) img {
+  border-block-end: none;
 }
 .ck-content a {
   text-decoration-color: hsl(16, 92%, 44%);

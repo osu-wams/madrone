@@ -17418,7 +17418,11 @@ textarea.form-control-lg {
   }
 }
 .media--view-mode-osu-orange-bottom img {
-  border-block-end: 2px solid #d73f09;
+  border-block-end: 3px solid #d73f09;
+}
+
+.view-mode--osu_orange_bottom:has(.media--view-mode-osu-orange-bottom) img {
+  border-block-end: none;
 }
 
 a {
