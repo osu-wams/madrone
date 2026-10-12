@@ -16,7 +16,7 @@
   @include media-breakpoint-up(md) {
     .osu-bg-before-dark-to-#{$direction} {
       --osu-bg-overlay-from-color: #{$fromColor};
-      --osu-bg-overlay-to-color: transparent;
+      --osu-bg-overlay-to-color: transparent !important;
       --osu-bg-overlay-deg: #{$degree};
     }
   }
