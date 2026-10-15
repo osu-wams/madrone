@@ -3,7 +3,11 @@
 @import '../abstracts/osu_mixins';
 
 // For extra bootstrap utilities.
-$line-truncate: 1, 2, 3, 4, 5;
+$line-truncate: 1,
+2,
+3,
+4,
+5;
 
 @each $line in $line-truncate {
   .line-truncate-#{$line} {
@@ -15,7 +19,8 @@ $line-truncate: 1, 2, 3, 4, 5;
 }
 
 // For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use
-@each $border-color-name, $border-color-value in $osu-border-colors {
+@each $border-color-name,
+$border-color-value in $osu-border-colors {
   .osu-border-#{$border-color-name} {
     border-color: #{$border-color-value} !important;
   }
@@ -141,12 +146,21 @@ $line-truncate: 1, 2, 3, 4, 5;
 @include osu-bg-before-dark-to("bottom", 0deg, $osu-bg-gradient);
 
 // Custom properties require interporated sass variables.
-@each $level, $color in $gradients {
+@each $level,
+$color in $gradients {
   .osu-bg-before-dark-#{$level} {
     --osu-bg-overlay-from-color: #{$color};
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: #{$color};
+  }
+
+  @include media-breakpoint-up(md) {
+    .osu-bg-before-dark-#{$level} {
+      --osu-bg-overlay-from-color: #{$color};
+      --osu-bg-overlay-to-color: transparent;
+    }
   }
 }
+
 
 .white-text-orange-bg {
   background-color: $osuorange-oklch;
@@ -162,7 +176,8 @@ $line-truncate: 1, 2, 3, 4, 5;
 }
 
 // Create corner clip cut classes.
-@each $name, $value in $spacers {
+@each $name,
+$value in $spacers {
   .osu-corner-clip-#{$name} {
     --cut: #{$value};
   }
