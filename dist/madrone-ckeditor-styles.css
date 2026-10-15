@@ -16110,7 +16110,7 @@ a > .ck-content code {
 @media (min-width: 768px) {
   .ck-content .osu-bg-before-dark-to-left {
     --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: transparent !important;
     --osu-bg-overlay-deg: 90deg;
   }
 }
@@ -16122,7 +16122,7 @@ a > .ck-content code {
 @media (min-width: 768px) {
   .ck-content .osu-bg-before-dark-to-right {
     --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: transparent !important;
     --osu-bg-overlay-deg: 270deg;
   }
 }
@@ -16134,7 +16134,7 @@ a > .ck-content code {
 @media (min-width: 768px) {
   .ck-content .osu-bg-before-dark-to-top {
     --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: transparent !important;
     --osu-bg-overlay-deg: 180deg;
   }
 }
@@ -16146,7 +16146,7 @@ a > .ck-content code {
 @media (min-width: 768px) {
   .ck-content .osu-bg-before-dark-to-bottom {
     --osu-bg-overlay-from-color: oklch(26.6% 0.009 248deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
+    --osu-bg-overlay-to-color: transparent !important;
     --osu-bg-overlay-deg: 0deg;
   }
 }
