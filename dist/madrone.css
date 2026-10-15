@@ -16907,6 +16907,15 @@ textarea.form-control-lg {
   -webkit-box-orient: vertical;
 }
 
+.osu-ls-wide {
+  letter-spacing: 0.15em;
+}
+
+.white-text-orange-bg {
+  background-color: oklch(58.68% 0.1962 36.16deg);
+  color: oklch(100% 0 0deg);
+}
+
 .osu-border-light-grey {
   border-color: #e0e0e0 !important;
 }
@@ -17147,15 +17156,28 @@ textarea.form-control-lg {
   border-bottom-color: #003b5c !important;
 }
 
-.osu-opacity-90 {
-  background-color: rgba(255, 255, 255, 0.95);
-}
-
 .osu-hover-pop {
   transition: all 250ms ease;
 }
 .osu-hover-pop:hover {
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.25) !important;
+}
+
+.osu-hover-scale-img img,
+.osu-hover-scale-icon .fa-solid,
+.osu-hover-scale-icon,
+.fas {
+  transition: transform 0.2s ease-in-out;
+}
+
+.osu-hover-scale-img:hover img,
+.osu-hover-scale-icon:hover .fa-solid,
+.osu-hover-scale-icon:hover .fas {
+  transform: scale(1.05);
+}
+
+.osu-opacity-90 {
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .osu-text-decoration {
@@ -17198,6 +17220,24 @@ textarea.form-control-lg {
   text-decoration-color: oklch(58.68% 0.1962 36.16deg) !important;
   text-decoration-line: underline !important;
   text-decoration-thickness: 13% !important;
+}
+
+.osu-nav-link-hover--dark {
+  --bs-nav-link-hover-color: oklch(26.21% 0.0095 248.19deg);
+}
+
+.osu-nav-link-hover--light {
+  --bs-nav-link-hover-color: oklch(100% 0 0deg);
+}
+
+.osu-minimal-link,
+.osu-minimal-link > a {
+  text-decoration: none;
+}
+.osu-minimal-link:active,
+.osu-minimal-link > a:active {
+  background-color: transparent !important;
+  text-decoration: underline;
 }
 
 .osu-img-full img {
@@ -17300,48 +17340,26 @@ textarea.form-control-lg {
 }
 .osu-bg-before-dark-1 {
   --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.75);
-  --osu-bg-overlay-to-color: oklch(0% 0 0deg / 0.75);
+  --osu-bg-overlay-to-color: transparent;
 }
 
-@media (min-width: 768px) {
-  .osu-bg-before-dark-1 {
-    --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.75);
-    --osu-bg-overlay-to-color: transparent;
-  }
-}
 .osu-bg-before-dark-2 {
   --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.85);
-  --osu-bg-overlay-to-color: oklch(0% 0 0deg / 0.85);
+  --osu-bg-overlay-to-color: transparent;
 }
 
-@media (min-width: 768px) {
-  .osu-bg-before-dark-2 {
-    --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.85);
-    --osu-bg-overlay-to-color: transparent;
-  }
-}
 .osu-bg-before-dark-3 {
   --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.95);
-  --osu-bg-overlay-to-color: oklch(0% 0 0deg / 0.95);
+  --osu-bg-overlay-to-color: transparent;
 }
 
-@media (min-width: 768px) {
-  .osu-bg-before-dark-3 {
-    --osu-bg-overlay-from-color: oklch(0% 0 0deg / 0.95);
-    --osu-bg-overlay-to-color: transparent;
-  }
-}
-.white-text-orange-bg {
-  background-color: oklch(58.68% 0.1962 36.16deg);
-  color: oklch(100% 0 0deg);
-}
-
-.osu-nav-link-hover--dark {
-  --bs-nav-link-hover-color: oklch(26.21% 0.0095 248.19deg);
-}
-
-.osu-nav-link-hover--light {
-  --bs-nav-link-hover-color: oklch(100% 0 0deg);
+.osu-bg-before-dark-ellipse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: -1;
+  isolation: isolate;
 }
 
 .osu-corner-clip-0 {
@@ -17423,45 +17441,12 @@ textarea.form-control-lg {
     background: #d73f09;
   }
 }
-.osu-hover-scale-img img,
-.osu-hover-scale-icon .fa-solid,
-.osu-hover-scale-icon,
-.fas {
-  transition: transform 0.2s ease-in-out;
+.media--view-mode-osu-orange-bottom img {
+  border-block-end: 3px solid #d73f09;
 }
 
-.osu-hover-scale-img:hover img,
-.osu-hover-scale-icon:hover .fa-solid,
-.osu-hover-scale-icon:hover .fas {
-  transform: scale(1.05);
-}
-
-.osu-minimal-link,
-.osu-minimal-link a {
-  text-decoration: none;
-}
-.osu-minimal-link:active,
-.osu-minimal-link a:active {
-  background-color: transparent !important;
-  text-decoration: underline;
-}
-.osu-minimal-link:focus, .osu-minimal-link:focus-within,
-.osu-minimal-link a:focus,
-.osu-minimal-link a:focus-within {
-  outline-color: #d73f09;
-}
-
-.osu-bg-before-dark-ellipse::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
-  z-index: -1;
-  isolation: isolate;
-}
-
-.osu-ls-wide {
-  letter-spacing: 0.15em;
+.view-mode--osu_orange_bottom:has(.media--view-mode-osu-orange-bottom) img {
+  border-block-end: none;
 }
 
 a {

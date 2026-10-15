@@ -2,12 +2,23 @@
 @import '../abstracts/osu_variables';
 @import '../abstracts/osu_mixins';
 
+// Table of Contents
+
+// Bootstrap utilities
+//    Text utilties
+//    Border utilities
+// Hover effects
+// Links
+// Images
+// Background overlays
+// Clip corners
+// View modes
+
+
 // For extra bootstrap utilities.
-$line-truncate: 1,
-2,
-3,
-4,
-5;
+
+// Text utilities
+$line-truncate: 1, 2, 3, 4, 5;
 
 @each $line in $line-truncate {
   .line-truncate-#{$line} {
@@ -17,6 +28,16 @@ $line-truncate: 1,
     -webkit-box-orient: vertical;
   }
 }
+
+.osu-ls-wide {
+  letter-spacing: .15em;
+}
+
+.white-text-orange-bg {
+  background-color: $osuorange-oklch;
+  color: $bucktoothwhite-oklch;
+}
+
 
 // For Bootstrap Layout Builder we need a border-side-color for each color and side we wish to use
 @each $border-color-name,
@@ -32,10 +53,7 @@ $border-color-value in $osu-border-colors {
   }
 }
 
-.osu-opacity-90 {
-  background-color: rgb(255 255 255 / 0.95);
-}
-
+// HOVER EFFECTS
 // Shh, tis a secret
 .osu-hover-pop {
   transition: all 250ms ease;
@@ -45,6 +63,25 @@ $border-color-value in $osu-border-colors {
   }
 }
 
+.osu-hover-scale-img img,
+.osu-hover-scale-icon .fa-solid,
+.osu-hover-scale-icon,
+.fas {
+  transition: transform 0.2s ease-in-out;
+}
+
+.osu-hover-scale-img:hover img,
+.osu-hover-scale-icon:hover .fa-solid,
+.osu-hover-scale-icon:hover .fas {
+  transform: scale(1.05);
+}
+
+.osu-opacity-90 {
+  background-color: rgb(255 255 255 / 0.95);
+}
+
+
+// LINK STYLES
 .osu-text-decoration {
   text-decoration-color: $osuorange-oklch !important;
 }
@@ -95,6 +132,26 @@ $border-color-value in $osu-border-colors {
   }
 }
 
+.osu-nav-link-hover--dark {
+  --bs-nav-link-hover-color: #{$paddletailblack-oklch};
+}
+
+.osu-nav-link-hover--light {
+  --bs-nav-link-hover-color: #{$bucktoothwhite-oklch};
+}
+
+.osu-minimal-link,
+.osu-minimal-link>a {
+  text-decoration: none;
+
+  &:active {
+    background-color: transparent !important;
+    text-decoration: underline;
+  }
+}
+
+
+// IMAGES
 .osu-img-full img {
   width: 100%;
 }
@@ -113,7 +170,8 @@ $border-color-value in $osu-border-colors {
   border-radius: $border-radius-pill;
 }
 
-// Overlay's in a psudo element.
+// BACKGROUND OVERLAYS
+// Overlays in a pseudo element.
 .osu-bg-overlay-dark,
 .osu-bg-before-dark {
   --osu-bg-overlay-from-color: #{$osu-bg-gradient};
@@ -150,31 +208,20 @@ $border-color-value in $osu-border-colors {
 $color in $gradients {
   .osu-bg-before-dark-#{$level} {
     --osu-bg-overlay-from-color: #{$color};
-    --osu-bg-overlay-to-color: #{$color};
-  }
-
-  @include media-breakpoint-up(md) {
-    .osu-bg-before-dark-#{$level} {
-      --osu-bg-overlay-from-color: #{$color};
-      --osu-bg-overlay-to-color: transparent;
-    }
+    --osu-bg-overlay-to-color: transparent;
   }
 }
 
-
-.white-text-orange-bg {
-  background-color: $osuorange-oklch;
-  color: $bucktoothwhite-oklch;
+.osu-bg-before-dark-ellipse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: -1; //adding negative z-index to match the behavior of all the other osu-bg-before classes.
+  isolation: isolate;
 }
 
-.osu-nav-link-hover--dark {
-  --bs-nav-link-hover-color: #{$paddletailblack-oklch};
-}
-
-.osu-nav-link-hover--light {
-  --bs-nav-link-hover-color: #{$bucktoothwhite-oklch};
-}
-
+// CLIP CORNERS
 // Create corner clip cut classes.
 @each $name,
 $value in $spacers {
@@ -204,10 +251,13 @@ $value in $spacers {
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0% 100%);
 }
 
+// Shifts a LB column to overlap the previous section, adds a diagonal border, and
+// adds a border to the column. Requested for the homepage, but added to Madrone for
+// use elsewhere.
 @media (min-width: 992px) {
   .overlay-column-end {
     --cut: 2.5rem;
-    border-top: 2px solid #d73f09;
+    border-top: 2px solid $osuorange;
     margin-top: calc(var(--cut)*-1);
     z-index: 1;
     clip-path: polygon(calc(var(--cut) - 1px) 0, 100% 0, 100% 100%, 0 100%, 0 calc(var(--cut)));
@@ -220,47 +270,20 @@ $value in $spacers {
       height: var(--cut);
       width: var(--cut);
       clip-path: polygon(var(--cut-shifted) 0%, 100% 0, 100% 0px, 1px 100%, 0% 100%, 0% var(--cut-shifted));
-      background: #d73f09;
+      background: $osuorange;
     }
   }
 }
 
-.osu-hover-scale-img img,
-.osu-hover-scale-icon .fa-solid,
-.osu-hover-scale-icon,
-.fas {
-  transition: transform 0.2s ease-in-out;
+// View Modes
+// The orange bottom view mode is turned on by default.
+// This adds a small orange border to the image if there is no caption.
+.media--view-mode-osu-orange-bottom img{
+  border-block-end: 3px solid $osuorange;
 }
 
-.osu-hover-scale-img:hover img,
-.osu-hover-scale-icon:hover .fa-solid,
-.osu-hover-scale-icon:hover .fas {
-  transform: scale(1.05);
-}
-
-.osu-minimal-link,
-.osu-minimal-link a {
-  text-decoration: none;
-
-  &:active {
-    background-color: transparent !important;
-    text-decoration: underline;
-  }
-  &:focus,
-  &:focus-within {
-    outline-color: $osuorange;
-  }
-}
-
-.osu-bg-before-dark-ellipse::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
-  z-index: -1; //adding negative z-index to match the behavior of all the other osu-bg-before classes.
-  isolation: isolate;
-}
-
-.osu-ls-wide {
-  letter-spacing: .15em;
+// The orange bottom view mode has a custom Twig template that will add a bottom orange border if there is a caption.
+// This rule removes the border bottom if there is a caption, as 2 borders look silly.
+.view-mode--osu_orange_bottom:has(.media--view-mode-osu-orange-bottom) img {
+  border-block-end: none;
 }
