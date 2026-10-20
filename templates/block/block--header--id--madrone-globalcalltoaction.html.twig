@@ -29,18 +29,18 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-	'col-lg-auto',
-	'global-cta-wrapper',
+  'col-lg-auto',
+  'global-cta-wrapper',
 ] %}
 <div{{ attributes.addClass(classes) }}>
-	{{ title_prefix }}
-	{% if label %}
-		<h2{{ title_attributes }}>{{ label }}</h2>
-	{% endif %}
-	{{ title_suffix }}
-	{% block content %}
-		<div{{ content_attributes.addClass('block__content') }}>
-			{{ content }}
-		</div>
-	{% endblock %}
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    <div{{ content_attributes.addClass('block__content') }}>
+      {{ content }}
+    </div>
+  {% endblock %}
 </div>

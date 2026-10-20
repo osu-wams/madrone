@@ -11,6 +11,6 @@
  */
 #}
 {% set classes = [
-  'input--' ~ type|clean_class
+  'input--' ~ type|clean_class,
 ] %}
 <input{{ attributes.addClass(classes) }}/>{{ children }}
