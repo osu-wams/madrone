@@ -26,28 +26,28 @@
       'messages--' ~ type,
     ] %}
     {% set role = {
-      'status': 'status',
-      'error': 'alert',
-      'warning': 'alert',
+      status: 'status',
+      error: 'alert',
+      warning: 'alert',
     } %}
     {% set status_colors = {
-      'status': 'alert osu-alert-success',
-      'warning': 'alert osu-alert-warning',
-      'error': 'alert osu-alert-danger',
+      status: 'alert osu-alert-success',
+      warning: 'alert osu-alert-warning',
+      error: 'alert osu-alert-danger',
     } %}
     {% set dismiss_class = [
       'alert-dismissible',
       'fade',
       'show'] %}
     {% set icon_classes = {
-      'status': 'fas fa-2x fa-check-circle',
-      'warning': 'fas fa-2x fa-exclamation-circle',
-      'error': 'fas fa-2x fa-times-circle',
+      status: 'fas fa-2x fa-check-circle',
+      warning: 'fas fa-2x fa-exclamation-circle',
+      error: 'fas fa-2x fa-times-circle',
     } %}
     {% set icon_wrapper_classes = {
-      'status': 'd-flex gap-2 align-items-center',
-      'warning': 'd-flex gap-2 align-items-center',
-      'error': 'd-flex gap-2 align-items-center',
+      status: 'd-flex gap-2 align-items-center',
+      warning: 'd-flex gap-2 align-items-center',
+      error: 'd-flex gap-2 align-items-center',
     } %}
     <div
       aria-label="{{ status_headings[type] }}"{{ attributes.addClass(status_classes, status_colors[type], dismiss_class)|without('role', 'aria-label').setAttribute('role', role[type]) }}>
