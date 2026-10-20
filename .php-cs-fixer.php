@@ -2,24 +2,18 @@
 
 declare(strict_types=1);
 
-use drupol\PhpCsFixerConfigsDrupal\Config\Drupal8;
+use drupol\PhpCsFixerConfigsDrupal\Config\Drupal;
 use PhpCsFixer\Finder;
 use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
 
 $finder = Finder::create()
   ->in(__DIR__)
-  ->name('*.php')
-  ->name('*.module')
-  ->name('*.inc')
-  ->name('*.install')
-  ->name('*.profile')
-  ->name('*.theme')
   ->notPath('*.md')
   ->notPath('*.yml')
   ->exclude('tests')
   ->exclude('node_modules');
 
-$config = new Drupal8();
+$config = new Drupal();
 
 $config->setParallelConfig(ParallelConfigFactory::detect());
 $config->setFinder($finder);

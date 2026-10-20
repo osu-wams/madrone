@@ -14,7 +14,8 @@
         "cs-checkstyle": "phpcs -q --report=checkstyle",
         "phpcs": "phpcs",
         "phpcbf": "phpcbf",
-        "twigcs": "twigcs",
+        "twigcs": "twig-cs-fixer lint -c .twig-cs-fixer.php",
+        "twigcs-fix": "twig-cs-fixer lint -c .twig-cs-fixer.php --fix",
         "post-install-cmd": [
             "vendor/bin/cghooks add"
         ],
