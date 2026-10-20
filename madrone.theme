@@ -79,7 +79,7 @@ function madrone_preprocess_node(&$variables) {
   // Ran into an issue when using views with display as content view modes
   // rather than using fields.
   $date = (int) $variables['node']->getCreatedTime();
-  /** @var \Drupal\date_ap_style\ApStyleDateFormatter $date_ap */
+  /** @var Drupal\date_ap_style\ApStyleDateFormatter $date_ap */
   $date_ap = Drupal::service('date_ap_style.formatter');
   $variables['date'] = $date_ap->formatTimestamp($date, ['always_display_year' => TRUE]);
 
@@ -112,7 +112,7 @@ function madrone_preprocess_block(&$variables) {
 
   // Adding region specific templates.
   if (!empty($variables['elements']['#id'])) {
-    /** @var \Drupal\block\BlockInterface $block */
+    /** @var Drupal\block\BlockInterface $block */
     $block = Drupal::entityTypeManager()
       ->getStorage('block')
       ->load($variables['elements']['#id']);
@@ -337,7 +337,7 @@ function madrone_form_alter(&$form, FormStateInterface $form_state, $form_id) {
  */
 function madrone_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   if (!empty($variables['elements']['#id'])) {
-    /** @var \Drupal\block\BlockInterface $block */
+    /** @var Drupal\block\BlockInterface $block */
     $block = Drupal::entityTypeManager()
       ->getStorage('block')
       ->load($variables['elements']['#id']);
@@ -466,7 +466,7 @@ function madrone_preprocess_superfish(&$variables) {
  */
 function madrone_preprocess_superfish_menu_items(&$variables) {
   foreach ($variables['menu_items'] as &$menu_item) {
-    /** @var \Drupal\Core\Template\Attribute $menu_item_attributes */
+    /** @var Drupal\Core\Template\Attribute $menu_item_attributes */
     $menu_item_attributes = $menu_item['attributes'];
     // Add the nav-item to all the li's of superfish menu.
     $menu_item_attributes->addClass('nav-item');
@@ -487,7 +487,7 @@ function madrone_preprocess_superfish_menu_items(&$variables) {
 function hide_main_navigation(): bool {
   if (Drupal::service('module_handler')->moduleExists('osu_groups')) {
     if ($node = Drupal::routeMatch()->getParameter('node')) {
-      /** @var \Drupal\osu_groups\OsuGroupsHandler $osu_groups */
+      /** @var Drupal\osu_groups\OsuGroupsHandler $osu_groups */
       $osu_groups = Drupal::service('osu_groups.group_handler');
       $group_content = $osu_groups->getGroupContentFromNode($node);
 
@@ -524,6 +524,7 @@ function hide_main_navigation(): bool {
  */
 function get_companion_logo(string $companion_logo): array {
   $dark_header = theme_get_setting('madrone_dark_header');
+
   return match ($companion_logo) {
     'cascades' => [
       'logo-name' => 'cascades',
@@ -547,7 +548,7 @@ function get_companion_logo(string $companion_logo): array {
           $dark_header
           ? '/assets/osu-logo-dark-header.svg'
           : '/logo.svg'
-      ),
+        ),
       'link-path' => 'https://oregonstate.edu/',
       'alt-text' => 'Oregon State University homepage',
     ]
@@ -579,7 +580,7 @@ function madrone_theme_suggestions_views_view_table_alter(array &$suggestions, a
     if (!in_array('views_view_table__' . $id, $suggestions, TRUE)) {
       $suggestions[] = 'views_view_table__' . $id;
     }
-    /** @var \Drupal\views\ViewExecutable $views */
+    /** @var ViewExecutable $views */
     $views = $variables['view'];
 
     if (isset($views->field['media_library_select_form'])) {
