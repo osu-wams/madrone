@@ -544,11 +544,12 @@ function get_companion_logo(string $companion_logo): array {
       'logo-name' => 'default',
       'logo-path' => '/' . Drupal::theme()
         ->getActiveTheme()
-        ->getPath() . (
+        ->getPath()
+        . (
           $dark_header
           ? '/assets/osu-logo-dark-header.svg'
           : '/logo.svg'
-      ),
+        ),
       'link-path' => 'https://oregonstate.edu/',
       'alt-text' => 'Oregon State University homepage',
     ]
@@ -580,7 +581,7 @@ function madrone_theme_suggestions_views_view_table_alter(array &$suggestions, a
     if (!in_array('views_view_table__' . $id, $suggestions, TRUE)) {
       $suggestions[] = 'views_view_table__' . $id;
     }
-    /** @var \Drupal\views\View\Executable $views */
+    /** @var \Drupal\views\ViewExecutable $views */
     $views = $variables['view'];
 
     if (isset($views->field['media_library_select_form'])) {
