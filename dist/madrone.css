@@ -19156,6 +19156,11 @@ table:not([class*=osu-table]) > thead a {
   text-decoration-color: #fff;
 }
 
+table.sticky-enabled thead th {
+  position: sticky;
+  top: var(--drupal-displace-offset-top, 0);
+}
+
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
   width: 4rem;
