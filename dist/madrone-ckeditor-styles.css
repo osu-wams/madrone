@@ -17794,6 +17794,10 @@ a > .ck-content code {
   color: #fff;
   text-decoration-color: #fff;
 }
+.ck-content table.sticky-enabled thead th {
+  position: sticky;
+  top: var(--drupal-displace-offset-top, 0);
+}
 .ck-content .carousel .carousel-control-prev,
 .ck-content .carousel .carousel-control-next {
   width: 4rem;

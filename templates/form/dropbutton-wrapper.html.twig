@@ -10,11 +10,9 @@
  */
 #}
 {% if children %}
-  {% apply spaceless %}
     <div class="dropbutton-wrapper">
       <div class="dropbutton-widget">
-        {{ children }}
+        {{- children -}}
       </div>
     </div>
-  {% endapply %}
-{% endif %}
+{%- endif %}

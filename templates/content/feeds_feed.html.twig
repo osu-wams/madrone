@@ -3,7 +3,7 @@
   'feeds_feed--feed-type-' ~ feed.bundle|clean_class,
   feed.isActive() ? 'feeds_feed-active',
   view_mode ? 'feeds_feed--view-mode-' ~ view_mode|clean_class,
-  'container'
+  'container',
 ] %}
 
 <article{{ attributes.addClass(classes) }}>

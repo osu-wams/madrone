@@ -14,21 +14,18 @@
   'input--' ~ type|clean_class,
   'my-3',
   'py-2',
-  attributes.multiple ? 'px-1' : 'px-3 pe-4'
+  attributes.multiple ? 'px-1' : 'px-3 pe-4',
 ] %}
-{% apply spaceless %}
-  <select{{ attributes.addClass(select_classes) }}>
-    {% for option in options %}
-      {% if option.type == 'optgroup' %}
-        <optgroup label="{{ option.label }}">
-          {% for sub_option in option.options %}
-            <option
-              value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>
-          {% endfor %}
-        </optgroup>
-      {% elseif option.type == 'option' %}
-        <option class="px-3" value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
-      {% endif %}
-    {% endfor %}
-  </select>
-{% endapply %}
+<select{{ attributes.addClass(select_classes) }}>
+  {% for option in options %}
+    {% if option.type == 'optgroup' %}
+      <optgroup label="{{ option.label }}">
+        {% for sub_option in option.options %}
+          <option value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>
+        {% endfor %}
+      </optgroup>
+    {% elseif option.type == 'option' %}
+      <option class="px-3" value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
+    {% endif %}
+  {% endfor %}
+</select>

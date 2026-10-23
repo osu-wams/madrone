@@ -33,14 +33,14 @@ We call a macro which calls itself to render the full tree.
     'nav',
     'nav-pills',
     'flex-column',
-    'osu-nav-link-hover--dark'
+    'osu-nav-link-hover--dark',
   ] %}
   {% set submenu_classes = [
-    'menu--' ~ menu_name|clean_class ~ '__submenu'
+    'menu--' ~ menu_name|clean_class ~ '__submenu',
   ] %}
   {% set menu_levels = [
     'menu--level-' ~ (menu_level + 1),
-    'nav'
+    'nav',
   ] %}
   {% if items %}
     {% if menu_level == 0 %}
