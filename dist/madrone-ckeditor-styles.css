@@ -17814,7 +17814,7 @@ a > .ck-content code {
   margin-top: 2rem;
   text-align: center;
 }
-.ck-content .views-view-bootstrap-tab .nav-tabs {
+.ck-content .views-bootstrap-tabs .nav-tabs {
   border-color: hsl(16, 92%, 44%);
   flex-wrap: nowrap;
   -ms-overflow-style: none;
@@ -17822,27 +17822,27 @@ a > .ck-content code {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
-.ck-content .views-view-bootstrap-tab .nav-tabs::-webkit-scrollbar {
+.ck-content .views-bootstrap-tabs .nav-tabs::-webkit-scrollbar {
   display: none;
 }
 @media (min-width: 992px) {
-  .ck-content .views-view-bootstrap-tab .nav-tabs {
+  .ck-content .views-bootstrap-tabs .nav-tabs {
     justify-content: center;
     margin-inline: 2rem;
     overflow: visible;
   }
 }
 @media (min-width: 1400px) {
-  .ck-content .views-view-bootstrap-tab .nav-tabs {
+  .ck-content .views-bootstrap-tabs .nav-tabs {
     margin-inline: 4rem;
   }
 }
-.ck-content .views-view-bootstrap-tab .nav-item {
+.ck-content .views-bootstrap-tabs .nav-item {
   margin-inline-end: 0.25rem;
   scroll-snap-align: end;
   width: max-content;
 }
-.ck-content .views-view-bootstrap-tab .nav-link {
+.ck-content .views-bootstrap-tabs .nav-link {
   border: 0 transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
@@ -17850,11 +17850,11 @@ a > .ck-content code {
   transition: all 0.2s ease-out;
   width: max-content;
 }
-.ck-content .views-view-bootstrap-tab .nav-link:hover, .ck-content .views-view-bootstrap-tab .nav-link.active {
+.ck-content .views-bootstrap-tabs .nav-link:hover, .ck-content .views-bootstrap-tabs .nav-link.active {
   background-color: hsl(16, 92%, 44%);
   color: hsl(0, 0%, 100%);
 }
-.ck-content .views-view-bootstrap-tab .nav-link:focus-visible {
+.ck-content .views-bootstrap-tabs .nav-link:focus-visible {
   box-shadow: none;
   outline: 2px solid hsl(210, 11%, 15%);
 }
