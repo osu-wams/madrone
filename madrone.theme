@@ -489,7 +489,7 @@ function hide_main_navigation(): bool {
     if ($node = Drupal::routeMatch()->getParameter('node')) {
       /** @var Drupal\osu_groups\OsuGroupsHandler $osu_groups */
       $osu_groups = Drupal::service('osu_groups.group_handler');
-      $group_content = $osu_groups->getGroupContentFromNode($node);
+      $group_content = $osu_groups->getGroupRelationshipFromNode($node);
 
       if ($group_content) {
         $group = $group_content->getGroup();
