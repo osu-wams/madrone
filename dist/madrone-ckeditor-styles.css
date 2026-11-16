@@ -18196,6 +18196,10 @@ a > .ck-content code {
 .ck-content .osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--wide {
   display: flex !important;
 }
+.ck-content .osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--wide img {
+  max-width: 100%;
+  min-width: 150px;
+}
 .ck-content .osu-logo--companion:not(.osu-logo--in-group) .block__content .osu-logo--crest {
   display: none !important;
 }

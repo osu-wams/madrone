@@ -3,6 +3,11 @@
     .block__content {
       .osu-logo--wide {
         display: flex !important;
+
+        img {
+          max-width: 100%;
+          min-width: 150px;
+        }
       }
 
       .osu-logo--crest {
