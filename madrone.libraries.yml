@@ -17,6 +17,8 @@ bootstrap:
 messages:
   js:
     dist/messages.js: { }
+  dependencies:
+    - core/drupal
 
 fonts:
   css:
